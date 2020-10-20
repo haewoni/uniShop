@@ -82,7 +82,7 @@ END;
 
 CREATE TABLE jumun_detail(
 		jumun_d_no                    		NUMBER(10)		 NOT NULL,
-		jumun_d_product_name          		VARCHAR2(30)		 NULL ,
+		jumun_d_product_name          		VARCHAR2(60)		 NULL ,
 		jumun_d_product_size          		VARCHAR2(10)		 NULL ,
 		jumun_d_product_color         		VARCHAR2(10)		 NULL ,
 		jumun_d_product_price         		NUMBER(10)		 NULL ,
