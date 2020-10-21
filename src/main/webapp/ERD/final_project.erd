@@ -333,7 +333,7 @@
                     <green>255</green>
                     <blue>206</blue>
                   </backgroundColor>
-                  <sql></sql>
+                  <sql>INSERT INTO question (question_no, question_title, question_category, question_date, question_status, question_content, member_id) VALUES (question_no, question_title, question_category, question_date, question_status, question_content, member_id);</sql>
                 </source>
                 <target class="net.java.amateras.db.visual.model.TableModel" reference="../../.."/>
                 <foreignKeyName>question_FK_1</foreignKeyName>
@@ -1147,8 +1147,8 @@
             <constraint>
               <height>-1</height>
               <width>-1</width>
-              <x>17</x>
-              <y>69</y>
+              <x>16</x>
+              <y>159</y>
             </constraint>
             <sourceConnections>
               <net.java.amateras.db.visual.model.ForeignKeyModel reference="../../.."/>
