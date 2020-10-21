@@ -1,3 +1,4 @@
+------------------------------ DELETE ------------------------------
 --product아이템 1개삭제
 delete from prouduct where product_no = 1;
 
