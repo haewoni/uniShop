@@ -87,6 +87,39 @@ COMMIT;
 
 --product
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2) 
+VALUES 
+('432614', '플란넬체크셔츠(긴팔)', '양면 기모 소재를 사용하여 부드러운 감촉을 느낄 수 있는 플란넬 체크 셔츠.
+· 면 소재 100%의 플란넬 원단 사용.
+· 스코틀랜드의 브리티시 전통을 베이스로 한 체크디자인을 유니클로의 컬러 팔레트로 표현하여 모던한 체크 무늬를 표현.', 
+29900, 'F', 'T', 'SH', '432614_1.png', '432614_2.png');
+ 
+
+INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2) 
+VALUES 
+('429667', '보아후리스크루넥가디건(긴팔)', '추운 날씨에 레이어드 아이템으로 제격인 보아 후리스 크루넥 가디건.
+· 가벼우면서도 따뜻한 감촉을 느낄 수 있는 보아 후리스 소재 사용.
+· 개폐가 가능한 스냅 버튼으로 변경.
+· 소매 밑단 부분은 파이핑 처리.', 
+39900, 'F', 'T', 'OT', '429667_1.png', '429667_2.png');
+
+INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2) 
+VALUES 
+('431976', '스웨트셔츠(긴팔)', '깔끔한 인상을 주면서도 캐주얼한 스타일에 제격인 스웨트 셔츠.
+· 표면감이 부드러운 코튼 소재의 더블페이스 니트 원단 채용.
+· 어깨에서 허리 부분으로 이어지는 부분은 트렌디한 둥근 실루엣으로 설정.
+· 베이직한 크루넥 타입.
+· 다소 짧은 기장감으로 캐주얼한 스타일에 제격!', 
+29900, 'F', 'T', 'SH', '431976_1.png', '431976_2.png');
+
+INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2) 
+VALUES 
+('424873', 'U크루넥T(반팔)20SS', '베이직한 디자인이면서도 부드러운 착용감을 자랑하는 크루넥 T셔츠.
+유니클로 파리 아티스틱 디렉터 크리스토퍼 르메르(Christophe Lemaire)가 혁신적인 소재와 현대적인 디자인으로 재해석한 Uniqlo U 컬렉션입니다.
+· 부드러운 감촉을 느낄 수 있는 면 소재 100% 사용하였습니다.
+· 네크라인의 립 폭은 굵게 디자인.', 
+19900, 'F', 'T', 'SH', '424873_1.png', '424873_2.png');
+
+INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2) 
 VALUES ('415693', '감탄팬츠(울트라라이트)', '모든 씬에서 착용하기 좋은 고기능의 감탄팬츠. · 아담 스콧 선수와 공동 개발. · 여름 모직과 같은 질감. · 이지케어 가공 처리. · 초속건, 초경량 사양.', 49900, 'M', 'B', 'LP', '415693_1.png', '415693_2.png');
 
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2) 
