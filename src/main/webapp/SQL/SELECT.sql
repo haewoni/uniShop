@@ -1,5 +1,17 @@
 ------------------------------ SELECT ------------------------------
 /*
+* Q@A 
+*/
+select * from question where member_id ='uni1';
+
+/*
+* MEMBER SELECT
+*/
+SELECT *
+FROM MEMBER
+WHERE member_id='uni1';
+
+/*
  * 1. 멤버한사람의 카트아이템리스트
  * 2. 카트아이템 1개의 제품정보
  * 3. 멤버한사람의 카트정보출력(제품정보)

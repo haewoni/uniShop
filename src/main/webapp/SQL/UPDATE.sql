@@ -8,6 +8,10 @@ set MEMBER_ID = 'uni99',
     MEMBER_EMAIL = 'uni99@gmail.com'
 where MEMBER_ID ='uni100';
 
+ UPDATE MEMBER
+ SET member_password='5555', member_name='정길산', member_phone='010-1111-9999', member_email='uni5@naver.com'
+ WHERE member_id='uni5';
+
 -- PRODUCT UPDATE
 update PRODUCT 
 set PRODUCT_NO='999999',
@@ -38,6 +42,14 @@ where JUMUN_NO=999 AND PRODUCT_NO='999999';
 -- uni3 카트에 있는 제품 수량증가
 update CART set CART_QTY=CART_QTY + 1 
 		where MEMBER_ID='uni3' and CART_NO=5;
+        
+-- QUESTION UPDATE
+update question set question_content='무료이벤트으으으으' where question_no=14;
+
+--ADDRESS UPDATE
+ UPDATE ADDRESS
+ SET address_zipcode='15672', address_name='남의집', address_country='대한민국', address_city='포천', address_address1='포천로 99', address_address2='대박빌딩 406호'
+ WHERE member_id='uni1';
         
 
 

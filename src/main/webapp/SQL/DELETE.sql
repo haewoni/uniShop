@@ -1,4 +1,8 @@
 ------------------------------ DELETE ------------------------------
+--member 삭제
+ DELETE FROM MEMBER
+ WHERE member_id='uni5';
+ 
 --product아이템 1개삭제
 delete from prouduct where product_no = 1;
 
@@ -17,3 +21,9 @@ delete cart c where c.cart_no=1;
 delete from jumun_detail where jumun_d_no=1;
 delete from jumun where jumun_no=1;
 
+--QUESTION DELETE
+delete question where question_no=14;
+
+--ADDRESS DELETE
+ DELETE FROM ADDRESS
+ WHERE member_id='uni1';
