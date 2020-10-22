@@ -6,7 +6,7 @@
 		SELECT * FROM ADDRESS
 	</select>
 	<select id="selectByNo" 
-			parameterType="java.lang.Integer" 
+			parameterType="java.lang.String" 
 			resultType="com.itwill.unishop.domain.Address">
 		SELECT * FROM ADDRESS
 		WHERE address_no=#{address_no}
@@ -17,11 +17,9 @@
 			SELECT address_no_seq.nextval FROM DUAL
 		</selectKey>
 		insert into address 
-		values( #{address_no},#{address_zipcode},#{address_name},
-		 		#{address_country},#{address_city},
-		 		#{address_address1},#{address_address2})
+		values( #{address_no},#{address_zipcode},#{address_name},#{address_country},#{address_city},#{address_address1},#{address_address2})
 	</insert>
-	<delete id="deleteAddress" parameterType="java.lang.Integer">
+	<delete id="deleteAddress" parameterType="java.lang.String">
 		delete from guest where address_no = #{address_no}
 	</delete>
 	<update id="updateAddress" parameterType="com.itwill.unishop.domain.Address">
