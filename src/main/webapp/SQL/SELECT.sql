@@ -76,4 +76,6 @@ join product p on jd.product_no=p.product_no
 where j.jumun_no=3001; 
 
 
-/**********************************************************/
+/*************************PRODUCT*******************************/
+select * from product
+order by product_no;
