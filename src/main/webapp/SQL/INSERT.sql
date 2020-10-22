@@ -282,7 +282,21 @@ VALUES ('431464', 'U데님펜슬롱스커트', '스트레치 소재로 움직임
 
 commit;
 
+--wishlist
 
+select p.product_no,p.product_name,p.product_price, p.product_image_1
+from wishlist w
+join product p
+on w.product_no = p.product_no
+where w.member_id = 'uni2';
+
+--insert
+insert into wishlist values(wishlist_wish_no_seq.nextval, 'uni4', '424420');
+
+--delete
+delete wishlist where product_no='424420' and member_id='uni4';
+
+commit;
 
 --cart
 INSERT INTO cart (cart_no, CART_QTY, CART_TOT_PRICE, CART_PRODUCT_SIZE, CART_PRODUCT_COLOR, MEMBER_ID, PRODUCT_NO) 
