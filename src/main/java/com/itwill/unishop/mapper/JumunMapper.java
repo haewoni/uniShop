@@ -1,12 +1,19 @@
 package com.itwill.unishop.mapper;
 
+import java.util.List;
+
+import com.itwill.unishop.domain.Jumun;
+
 public interface JumunMapper {
-	/*
-	 * 인터페이스의 풀네임은 UserMapper.xml의 namespace와일치
-	 * 메쏘드이름은 	   UserMapper.xml 파일의 id와일치
-	 * 메쏘드인자타입은     UserMapper.xml 파일의 parameterType 와일치
-	 * 메쏘드리턴타입은     UserMapper.xml 파일의 resultType 와일치
-	 */
 	
+	public int insertJumun(Jumun jumun);
+	
+	public List<Jumun> selectAll();
+	
+	public Jumun selectById(String member_id);
+	
+	public Jumun updateJumunByNo(Jumun jumun);
+	
+	public int deleteJumunByNo(Integer jumun_no);
 	
 }
