@@ -77,5 +77,25 @@ where j.jumun_no=3001;
 
 
 /*************************PRODUCT*******************************/
-select * from product
-order by product_no;
+select * from product;
+--1. Product_no 로 select
+select*
+from product 
+where product_no=415693;
+--2. SELECT BY Product_L_DIV
+select p.product_l_div,p.product_m_div,p.product_s_div,p.product_name,p.product_desc,p.product_no,p.product_price,p.product_image_1,p.product_image_2
+from product p
+where product_l_div='M';
+--3. SELECT BY L_DIV & M_DIV
+select p.product_l_div,p.product_m_div,p.product_s_div,p.product_name,p.product_desc,p.product_no,p.product_price,p.product_image_1,p.product_image_2
+from product p
+where product_l_div='F' and product_m_div='T';
+--4. SELECT BY L_DIV & M_DIV & S_DIV 
+select p.product_l_div,p.product_m_div,p.product_s_div,p.product_name,p.product_desc,p.product_no,p.product_price,p.product_image_1,p.product_image_2
+from product p
+where product_l_div='F' and product_m_div='T' and p.product_s_div='SH';
+--5. SELECT BY PRODUCT_NAME
+select*
+from product 
+where product_name='스웨트셔츠(긴팔)';
+
