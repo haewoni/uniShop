@@ -1,5 +1,5 @@
 package com.itwill.unishop.repository;
 
-public interface Member_Repository {
+public interface MemberRepository {
 
 }
