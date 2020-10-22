@@ -16,16 +16,16 @@ VALUES ('uni4', '4444', '신지수', '010-1111-5678', 'uni4@gmail.com');
 
 --address
 INSERT INTO address (address_no, address_zipcode, address_name, address_country, address_city, address_address1, address_address2, member_id) 
-VALUES (address_address_no_seq.nextval, '1111', '우리집', '대한민국', '서울', '양천구 목동 저편한세상', '101동 101호', 'uni1');
+VALUES (address_address_no_seq.nextval, '1111', '우리집', '대한민국', '서울', '양천구 목동 저편한세상', '101동 101호');
 
 INSERT INTO address (address_no, address_zipcode, address_name, address_country, address_city, address_address1, address_address2, member_id) 
-VALUES (address_address_no_seq.nextval, '1111', '집', '대한민국', '서울', '양천구 목동 저편한세상', '101동 1003호', 'uni2');
+VALUES (address_address_no_seq.nextval, '1111', '집', '대한민국', '서울', '양천구 목동 저편한세상', '101동 1003호');
 
 INSERT INTO address (address_no, address_zipcode, address_name, address_country, address_city, address_address1, address_address2, member_id) 
-VALUES (address_address_no_seq.nextval, '3333', '스윗홈', '대한민국', '김포', '김포구 김동 라베니체', '301동 301호', 'uni3');
+VALUES (address_address_no_seq.nextval, '3333', '스윗홈', '대한민국', '김포', '김포구 김동 라베니체', '301동 301호');
 
 INSERT INTO address (address_no, address_zipcode, address_name, address_country, address_city, address_address1, address_address2, member_id) 
-VALUES (address_address_no_seq.nextval, '5555', 'home', '대한민국', '부산', '동래구 부산동 아이파크', '202동 903호', 'uni4');
+VALUES (address_address_no_seq.nextval, '5555', 'home', '대한민국', '부산', '동래구 부산동 아이파크', '202동 903호');
 
 commit;
 
@@ -282,19 +282,8 @@ VALUES ('431464', 'U데님펜슬롱스커트', '스트레치 소재로 움직임
 
 commit;
 
---wishlist
-
-select p.product_no,p.product_name,p.product_price, p.product_image_1
-from wishlist w
-join product p
-on w.product_no = p.product_no
-where w.member_id = 'uni2';
-
---insert
-insert into wishlist values(wishlist_wish_no_seq.nextval, 'uni4', '424420');
-
---delete
-delete wishlist where product_no='424420' and member_id='uni4';
+--WISHLIST
+INSERT INTO wishList (wish_no, member_id, product_no) VALUES (wishlist_wish_no_seq.nextval, 'uni4', '424420');
 
 commit;
 

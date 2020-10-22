@@ -27,3 +27,6 @@ delete question where question_no=14;
 --ADDRESS DELETE
  DELETE FROM ADDRESS
  WHERE member_id='uni1';
+
+--WISHLIST DELETE
+delete wishlist where product_no='424420' and member_id='uni4';
