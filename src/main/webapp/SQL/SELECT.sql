@@ -49,7 +49,18 @@ on j.jumun_no=jd.jumun_no
 join product p
 on jd.product_no=p.product_no
 where j.user_id='uni2' and j.jumun_no=3001;
- 
+
+--wishlist
+/*
+ * 1.멤버의 찜리스트
+ */
+select p.product_no,p.product_name,p.product_price, p.product_image_1
+from wishlist w
+join product p
+on w.product_no = p.product_no
+where w.member_id = 'uni2'; 
+
+
 /************************ 관리자***************************/
 --1. 모든멤버의 특정날짜의 주문전체목록 
  select j.* from 
