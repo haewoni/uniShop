@@ -13,4 +13,21 @@
 		<property name="username" value="${jdbc.username}"/>
 		<property name="password" value="${jdbc.password}"/>
 	</bean>
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<!-- 매퍼 주입 방식입니다. -->
+	<bean id="memberMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+		<property name="mapperInterface" value="com.itwill.unishop.mapper.MemberMapper"/>
+	</bean>
+	<!-- 
+	<bean id="memberDao" class="com.itwill.unishop.MemberDaoImpl">
+		<constructor-arg ref="memberMapper"/>
+	</bean>
+	<bean id="memberService" class="com.itwill.guest.MemberServiceImpl">
+		<property name="memberDao" ref="memberDao"/>
+	</bean>
+	-->
 </beans>

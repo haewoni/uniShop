@@ -6,24 +6,21 @@ public class Member {
 	private String member_name;
 	private String member_phone;
 	private String member_email;
-	private Address address;
+	private int address_no;
 	public Member() {
 		
 	}
-	
-
 	public Member(String member_id, String member_password, String member_name, String member_phone,
-			String member_email, Address address) {
+			String member_email, int address_no) {
 		super();
 		this.member_id = member_id;
 		this.member_password = member_password;
 		this.member_name = member_name;
 		this.member_phone = member_phone;
 		this.member_email = member_email;
-		this.address = address;
+		this.address_no = address_no;
 	}
-
-
+	
 	public String getMember_id() {
 		return member_id;
 	}
@@ -54,16 +51,18 @@ public class Member {
 	public void setMember_email(String member_email) {
 		this.member_email = member_email;
 	}
-	public Address getAddress() {
-		return address;
+	public int getAddress_no() {
+		return address_no;
 	}
-	public void setAddress(Address address) {
-		this.address = address;
+	public void setAddress_no(int address_no) {
+		this.address_no = address_no;
 	}
 	@Override
 	public String toString() {
 		return "Member [member_id=" + member_id + ", member_password=" + member_password + ", member_name="
-				+ member_name + ", member_phone=" + member_phone + ", member_email=" + member_email + ", address="
-				+ address + "]";
+				+ member_name + ", member_phone=" + member_phone + ", member_email=" + member_email + ", address_no="
+				+ address_no + "]";
 	}
+	
+	
 }
