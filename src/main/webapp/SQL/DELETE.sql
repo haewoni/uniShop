@@ -4,7 +4,7 @@
  WHERE member_id='uni5';
  
 --product아이템 1개삭제
-delete from prouduct where product_no = 1;
+delete from product where product_no = 1;
 
 --카트아이템 1개삭제
 delete from cart where cart_no = 1;
