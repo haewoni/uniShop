@@ -1,7 +1,6 @@
 DROP TABLE div_code CASCADE CONSTRAINTS;
 DROP TABLE review CASCADE CONSTRAINTS;
 DROP TABLE question CASCADE CONSTRAINTS;
-DROP TABLE address CASCADE CONSTRAINTS;
 DROP TABLE cart CASCADE CONSTRAINTS;
 DROP TABLE wishList CASCADE CONSTRAINTS;
 DROP TABLE jumun_detail CASCADE CONSTRAINTS;
@@ -9,13 +8,32 @@ DROP TABLE product CASCADE CONSTRAINTS;
 DROP TABLE jumun CASCADE CONSTRAINTS;
 DROP TABLE delivery CASCADE CONSTRAINTS;
 DROP TABLE member CASCADE CONSTRAINTS;
+DROP TABLE address CASCADE CONSTRAINTS;
+
+CREATE TABLE address(
+		address_no                    		NUMBER(10)		 NOT NULL,
+		address_zipcode               		VARCHAR2(10)		 NULL ,
+		address_name                  		VARCHAR2(50)		 NULL ,
+		address_country               		VARCHAR2(50)		 NULL ,
+		address_city                  		VARCHAR2(50)		 NULL ,
+		address_address1              		VARCHAR2(50)		 NULL ,
+		address_address2              		VARCHAR2(50)		 NULL 
+);
+
+DROP SEQUENCE address_address_no_SEQ;
+
+CREATE SEQUENCE address_address_no_SEQ NOMAXVALUE NOCACHE NOORDER NOCYCLE;
+
+
+
 
 CREATE TABLE member(
 		member_id                     		VARCHAR2(50)		 NOT NULL,
 		member_password               		VARCHAR2(50)		 NULL ,
 		member_name                   		VARCHAR2(50)		 NULL ,
 		member_phone                  		VARCHAR2(50)		 NULL ,
-		member_email                  		VARCHAR2(50)		 NULL 
+		member_email                  		VARCHAR2(50)		 NULL ,
+		address_no                    		NUMBER(10)		 NULL 
 );
 
 
@@ -43,7 +61,6 @@ CREATE TABLE jumun(
 DROP SEQUENCE jumun_jumun_no_SEQ;
 
 CREATE SEQUENCE jumun_jumun_no_SEQ NOMAXVALUE NOCACHE NOORDER NOCYCLE;
-
 
 
 CREATE TABLE product(
@@ -101,24 +118,6 @@ DROP SEQUENCE cart_cart_no_SEQ;
 CREATE SEQUENCE cart_cart_no_SEQ NOMAXVALUE NOCACHE NOORDER NOCYCLE;
 
 
-
-CREATE TABLE address(
-		address_no                    		NUMBER(10)		 NOT NULL,
-		address_zipcode               		VARCHAR2(10)		 NULL ,
-		address_name                  		VARCHAR2(50)		 NULL ,
-		address_country               		VARCHAR2(50)		 NULL ,
-		address_city                  		VARCHAR2(50)		 NULL ,
-		address_address1              		VARCHAR2(50)		 NULL ,
-		address_address2              		VARCHAR2(50)		 NULL ,
-		member_id                     		VARCHAR2(50)		 NOT NULL
-);
-
-DROP SEQUENCE address_address_no_SEQ;
-
-CREATE SEQUENCE address_address_no_SEQ NOMAXVALUE NOCACHE NOORDER NOCYCLE;
-
-
-
 CREATE TABLE question(
 		question_no                   		NUMBER(10)		 NOT NULL,
 		question_title                		VARCHAR2(50)		 NULL ,
@@ -132,7 +131,6 @@ CREATE TABLE question(
 DROP SEQUENCE question_question_no_SEQ;
 
 CREATE SEQUENCE question_question_no_SEQ NOMAXVALUE NOCACHE NOORDER NOCYCLE;
-
 
 
 CREATE TABLE review(
@@ -151,7 +149,6 @@ DROP SEQUENCE review_review_no_SEQ;
 CREATE SEQUENCE review_review_no_SEQ NOMAXVALUE NOCACHE NOORDER NOCYCLE;
 
 
-
 CREATE TABLE div_code(
 		code_no                       		NUMBER(10)		 NOT NULL,
 		product_L_div                 		VARCHAR2(10)		 NOT NULL,
@@ -167,8 +164,10 @@ DROP SEQUENCE div_code_code_no_SEQ;
 CREATE SEQUENCE div_code_code_no_SEQ NOMAXVALUE NOCACHE NOORDER NOCYCLE;
 
 
+ALTER TABLE address ADD CONSTRAINT IDX_address_PK PRIMARY KEY (address_no);
 
 ALTER TABLE member ADD CONSTRAINT IDX_member_PK PRIMARY KEY (member_id);
+ALTER TABLE member ADD CONSTRAINT IDX_member_FK0 FOREIGN KEY (address_no) REFERENCES address (address_no);
 
 ALTER TABLE delivery ADD CONSTRAINT IDX_delivery_PK PRIMARY KEY (delivery_no);
 
@@ -189,9 +188,6 @@ ALTER TABLE wishList ADD CONSTRAINT IDX_wishList_FK1 FOREIGN KEY (product_no) RE
 ALTER TABLE cart ADD CONSTRAINT IDX_cart_PK PRIMARY KEY (cart_no);
 ALTER TABLE cart ADD CONSTRAINT IDX_cart_FK0 FOREIGN KEY (member_id) REFERENCES member (member_id);
 ALTER TABLE cart ADD CONSTRAINT IDX_cart_FK1 FOREIGN KEY (product_no) REFERENCES product (product_no);
-
-ALTER TABLE address ADD CONSTRAINT IDX_address_PK PRIMARY KEY (address_no);
-ALTER TABLE address ADD CONSTRAINT IDX_address_FK0 FOREIGN KEY (member_id) REFERENCES member (member_id);
 
 ALTER TABLE question ADD CONSTRAINT IDX_question_PK PRIMARY KEY (question_no);
 ALTER TABLE question ADD CONSTRAINT IDX_question_FK0 FOREIGN KEY (member_id) REFERENCES member (member_id);

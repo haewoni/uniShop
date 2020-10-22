@@ -1,3 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.itwill.unishop.mapper.MemberMapper"></mapper>
+<mapper namespace="com.itwill.unishop.mapper.MemberMapper">
+	<!-- resultMap -->
+	<resultMap id="memberWithAddressResultMap" type="com.itwill.unishop.domain.Member"  autoMapping="true">
+		<association property="address" javaType="com.itwill.unishop.domain.Address" autoMapping="true">
+			 <result column="address_no" property="address_no"/>
+		</association>
+	</resultMap>
+	
+	<!-- select -->
+	<select id="selectMemberById" parameterType="string" resultType="com.itwill.unishop.domain.Member">
+		SELECT member_id, member_name, member_email, member_phone
+		FROM MEMBER
+		WHERE member_id=#{member_id};
+	</select>
+	<select id="">
+	
+	</select>
+	
+	<!-- insert -->
+	<insert id="insertMember" parameterType="com.itwill.unishop.domain.Member">
+		INSERT INTO member (member_id, member_password, member_name, member_phone, member_email) 
+		VALUES (#{member_id}, #{member_password}, #{member_name}, #{member_phone}, #{member_email});
+	</insert>
+	
+	<!-- update -->
+	
+	
+	
+	<!-- delete -->
+</mapper>
