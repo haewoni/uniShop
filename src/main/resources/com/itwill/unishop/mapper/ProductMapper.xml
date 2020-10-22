@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itwill.unishop.mapper.ProductMapper">
+	<!-- SELECT ALL -->
+	<select id="selectProductAll" resultType="com.itwill.unishop.domain.Product">
+		select * from product;
+	</select>
+	
+	<!-- SELECT BY PRODUCT_NO -->
+	<select id="selectProductByNo" 
+			parameterType="java.lang.String"
+			resultType="com.itwill.unishop.domain.Product">
+			select * from product
+			where product_no=#{product_no};
+	</select>
+	
+	<!-- SELECT BY L_DIV -->
+	<select id="selectProductByL" 
+			parameterType="java.lang.String"
+			resultType="com.itwill.unishop.domain.Product">
+			select p.product_l_div,p.product_m_div,p.product_s_div,p.product_name,p.product_desc,p.product_no,p.product_price,p.product_image_1,p.product_image_2
+			from product p
+			where product_l_div=#{product_l_div};			
+	</select>
+	
+	<!-- SELECT BY L_DIV & M_DIV -->
+	<select id="selectProductByLM" 
+			parameterType="java.lang.String"
+			resultType="com.itwill.unishop.domain.Product">
+			select p.product_l_div,p.product_m_div,p.product_s_div,p.product_name,p.product_desc,p.product_no,p.product_price,p.product_image_1,p.product_image_2
+			from product p
+			where product_l_div=#{product_l_div} and product_m_div=#{product_m_div};						
+	</select>
+	
+	<!-- SELECT BY L_DIV & M_DIV & S_DIV -->
+	<select id="selectProductByLMS" 
+			parameterType="java.lang.String"
+			resultType="com.itwill.unishop.domain.Product">
+			select p.product_l_div,p.product_m_div,p.product_s_div,p.product_name,p.product_desc,p.product_no,p.product_price,p.product_image_1,p.product_image_2
+			from product p
+			where product_l_div=#{product_l_div} and product_m_div=#{product_m_div} and p.product_s_div=#{product_s_div};
+	</select>
+	
+	<!-- SELECT BY PRODUCT_NAME -->
+	<select id="selectProductByName" 
+			parameterType="java.lang.String"
+			resultType="com.itwill.unishop.domain.Product">
+			select*
+			from product 
+			where product_name=#{product_name};
+	</select>
+	
+	<!-- INSERT -->
+	<insert id="insertProduct"
+			parameterType="com.itwill.unishop.domain.Product">
+			INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2) 
+			VALUES (#{product_no}, #{product_name}, #{product_desc}, #{product_price}, #{product_L_div}, #{product_M_div}, #{product_S_div}, #{product_image_1}, #{product_image_2});					
+>
+	
+	
+	</insert>
+
+
+
+
+</mapper>
