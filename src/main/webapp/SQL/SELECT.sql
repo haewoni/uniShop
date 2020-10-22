@@ -36,18 +36,19 @@ select * from cart c join product p on c.product_no=p.product_no where c.cart_it
  --1. 멤버 한사람의 특정날짜의 주문전체목록
  select j.* from 
  member m join jumun j
- on m.member_id = j.member_id and m.member_id='uni1' and to_char(j.jumun_date,'YYYY/MM/DD')='2020/10/20' ;
+ on m.member_id = j.member_id and m.member_id='uni1' and to_char(j.jumun_date,'YYYY/MM/DD')='2020/10/22' ;
 --2. 멤버 한사람의 특정날짜의 주문한개 
  select j.* from 
  member m join jumun j
- on m.member_id = j.member_id and m.member_id='uni2' and to_char(j.jumun_date,'YYYY/MM/DD')='2020/10/20' 
- where j.jumun_no=3001; 
+ on m.member_id = j.member_id and m.member_id='uni2' and to_char(j.jumun_date,'YYYY/MM/DD')='2020/10/22' 
+ where j.jumun_no=2; 
 -- 4. 주문한개의  제품여러개 정보들(주문상세,제품)
 select jd.*,p.* from jumun j 
 join jumun_detail jd 
 on j.jumun_no=jd.jumun_no
 join product p
 on jd.product_no=p.product_no
+<<<<<<< HEAD
 where j.user_id='uni2' and j.jumun_no=3001;
 
 --wishlist
@@ -61,19 +62,23 @@ on w.product_no = p.product_no
 where w.member_id = 'uni2'; 
 
 
+=======
+where member_id='uni3' and j.jumun_no=3;
+ 
+>>>>>>> refs/heads/suhwan93
 /************************ 관리자***************************/
 --1. 모든멤버의 특정날짜의 주문전체목록 
  select j.* from 
  member m join jumun j
- on m.member_id = j.member_id and to_char(j.jumun_date,'YYYY/MM/DD')='2020/10/20' ;
+ on m.member_id = j.member_id and to_char(j.jumun_date,'YYYY/MM/DD')='2020/10/22' ;
 -- 3-1. 주문한건의  멤버의 정보
  select * from member m
  join jumun j
- on m.member_id=j.member_id where j.jumun_no=3003;
+ on m.member_id=j.member_id where j.jumun_no=3;
 -- 3-2. 특정멤버의 주문정보출력
  select * from member m
  inner join jumun j
- on m.member_id=j.member_id where m.member_id='uni3'; 
+ on m.member_id=j.member_id where m.member_id='uni1'; 
 -- 3-2. 특정멤버의 정보를 주문정보를 포함해서출력
  select * from member m
  left outer join jumun j
@@ -84,7 +89,7 @@ select u.*,p.* from member m
 join jumun j on m.member_id=j.member_id
 join jumun_detail jd on j.jumun_no=jd.jumun_no
 join product p on jd.product_no=p.product_no
-where j.jumun_no=3001; 
+where j.jumun_no=1; 
 
 
 /*************************PRODUCT*******************************/
