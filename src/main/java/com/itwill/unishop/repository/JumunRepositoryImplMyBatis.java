@@ -20,13 +20,7 @@ public class JumunRepositoryImplMyBatis implements JumunRepository{
 	
 	
 	public JumunRepositoryImplMyBatis() {
-		InputStream in = null;
-		try {
-			in = Resources.getResourceAsStream("mybatis-config.xml");
-			this.sqlSessionFactory = new SqlSessionFactoryBuilder().build(in);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		
 	}
 	
 	
@@ -35,8 +29,7 @@ public class JumunRepositoryImplMyBatis implements JumunRepository{
 	
 	@Override
 	public int insertJumun(Jumun jumun) {
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		JumunMapper jumunMapper = sqlSession.getMapper(JumunMapper.class);
+	
 		int insertRowCount = 0;
 		insertRowCount = jumunMapper.insertJumun(jumun);
 		return insertRowCount;
@@ -45,25 +38,21 @@ public class JumunRepositoryImplMyBatis implements JumunRepository{
 	@Override
 	public ArrayList<Jumun> selectAll() {
 		ArrayList<Jumun> jumunList = new ArrayList<Jumun>();
-		jumunList = (ArrayList<Jumun>) sqlSessionFactory.openSession(true)
-									 .getMapper(JumunMapper.class)
-							 		 .selectAll();
+		
 		return jumunList;
 	}
 
 	@Override
 	public Jumun selectById(String member_id) {
 		Jumun jumun = new Jumun();
-		jumun = sqlSessionFactory.openSession(true)
-								 .getMapper(JumunMapper.class)
-								 .selectById(member_id);
+	
 		return jumun;
 	}
 
 	@Override
 	public int updateJumun(Jumun jumun) {
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		JumunMapper jumunMapper = sqlSession.getMapper(JumunMapper.class);
+	
+		
 		int updateRowCount = 0;
 		updateRowCount = jumunMapper.updateJumun(jumun);
 		return updateRowCount;
@@ -71,8 +60,8 @@ public class JumunRepositoryImplMyBatis implements JumunRepository{
 
 	@Override
 	public int deleteJumunByNo(int jumun_no) {
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		JumunMapper jumunMapper = sqlSession.getMapper(JumunMapper.class);
+		
+	
 		int deleteRowCount = jumunMapper.deleteJumunByNo(jumun_no);
 		return deleteRowCount;
 	}
