@@ -6,7 +6,7 @@ import com.itwill.unishop.domain.Address;
 
 public interface AddressMapper {
 
-	public List<Address> selectAll(String address_no);
+	public List<Address> selectAll();
 	
 	public Address selectByNo(String address_no);
 	

@@ -24,8 +24,8 @@ public class DeliveryRepositoryImpl implements DeliveryRepository{
 		return rowcount;
 	}
 	@Override
-	public int updateDelivery(String delivery_no) {
-		int rowcount = deliveryMapper.updateDelivery(delivery_no);
+	public int updateDelivery(Delivery delivery) {
+		int rowcount = deliveryMapper.updateDelivery(delivery);
 		return rowcount;
 	}
 	@Override
