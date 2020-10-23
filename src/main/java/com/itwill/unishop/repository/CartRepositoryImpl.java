@@ -12,20 +12,20 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import com.itwill.unishop.domain.Cart;
 import com.itwill.unishop.mapper.CartMapper;
 
-public class CartDaoImplMyBatisMapperInterface implements CartDao{
+public class CartRepositoryImpl implements CartRepository {
 
 	private SqlSessionFactory sqlSessionFactory;
-	
-	public CartDaoImplMyBatisMapperInterface() {
+
+	public CartRepositoryImpl() {
 		InputStream in = null;
 		try {
-			in = Resources.getResourceAsStream("mybatis-config.xml");
+			in = Resources.getResourceAsStream("application-config.xml");
 			this.sqlSessionFactory = new SqlSessionFactoryBuilder().build(in);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Override
 	public int insertCart(Cart cart) throws Exception {
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
@@ -41,7 +41,7 @@ public class CartDaoImplMyBatisMapperInterface implements CartDao{
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		CartMapper cartMapper = sqlSession.getMapper(CartMapper.class);
 		List<Cart> cartList2 = cartMapper.selectAll(member_id);
-		cartList1 = (ArrayList<Cart>)cartList2;
+		cartList1 = (ArrayList<Cart>) cartList2;
 		return cartList1;
 	}
 
@@ -62,7 +62,4 @@ public class CartDaoImplMyBatisMapperInterface implements CartDao{
 		return deleteRowCount;
 	}
 
-	
-	
-	
 }

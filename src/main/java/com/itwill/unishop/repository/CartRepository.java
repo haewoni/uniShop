@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.itwill.unishop.domain.Cart;
 
-public interface CartDao {
+public interface CartRepository {
 
 	public int insertCart(Cart cart) throws Exception;
 	
