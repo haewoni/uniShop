@@ -6,14 +6,14 @@ import com.itwill.unishop.domain.Jumun;
 
 public interface JumunRepository {
 	
-	public int insertJumun(Jumun jumun) throws Exception;
+	public int insertJumun(Jumun jumun);
 	
-	public ArrayList<Jumun> selectAll() throws Exception;
+	public ArrayList<Jumun> selectAll();
 	
-	public Jumun selectById(String member_id) throws Exception;
+	public Jumun selectById(String member_id);
 	
-	public Jumun updateJumunByNo(Jumun jumun) throws Exception;
+	public int updateJumun(Jumun jumun);
 	
-	public int deleteJumunByNo(Integer jumun_no) throws Exception;
+	public int deleteJumunByNo(int jumun_no);
 	
 }

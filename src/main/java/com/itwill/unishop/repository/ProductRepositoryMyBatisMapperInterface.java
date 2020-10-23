@@ -22,7 +22,7 @@ public class ProductRepositoryMyBatisMapperInterface implements ProductRepositor
 					new SqlSessionFactoryBuilder()
 					.build(in);
 		}catch (Exception e) {
-			e.printStackTrace();
+			e.printStackTrace();  
 		}
 	}
 	
