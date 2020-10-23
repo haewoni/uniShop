@@ -22,6 +22,10 @@
 		<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
 		<property name="mapperInterface" value="com.itwill.unishop.mapper.MemberMapper"/>
 	</bean>
+	<bean id="deliveryMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+		<property name="mapperInterface" value="com.itwill.unishop.mapper.DeliveryMapper"/>
+	</bean>
 	<!-- 
 	<bean id="memberDao" class="com.itwill.unishop.MemberDaoImpl">
 		<constructor-arg ref="memberMapper"/>
