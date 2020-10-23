@@ -4,8 +4,11 @@ import java.util.ArrayList;
 
 import com.itwill.unishop.domain.Delivery;
 import com.itwill.unishop.domain.Product;
+import com.itwill.unishop.mapper.JumunMapper;
 
 public interface ProductRepository {
+	
+	//private JumunMapper mapper;
 	
 	public ArrayList<Product> selectAll();
 	
