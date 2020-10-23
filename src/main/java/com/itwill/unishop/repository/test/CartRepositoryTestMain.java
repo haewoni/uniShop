@@ -3,6 +3,7 @@ package com.itwill.unishop.repository.test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.itwill.unishop.domain.Cart;
 import com.itwill.unishop.repository.CartRepository;
 import com.itwill.unishop.repository.MemberRepository;
 
@@ -12,7 +13,12 @@ public class CartRepositoryTestMain {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring/application-config.xml");
 		CartRepository cartRepository = (CartRepository) applicationContext.getBean("cartRepository");
 		System.out.println(cartRepository.selectCartAll("uni1"));
-				
+		//Cart insertCart = new Cart(-1,4,5000,"M","BLUE","uni1","431464");
+		//System.out.println(cartRepository.insertCart(insertCart));
+		//Cart updateCart = new Cart(10,16,5000,"M","BLUE","uni1","431464");
+		//System.out.println(cartRepository.updateCart(updateCart));
+		//System.out.println(cartRepository.deleteCart(11));
+		
 	}
 
 }

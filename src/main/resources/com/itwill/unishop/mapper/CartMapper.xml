@@ -19,16 +19,16 @@ namespace="com.itwill.unishop.mapper.CartMapper">
 			SELECT cart_cart_no_seq.nextval FROM DUAL
 		</selectKey>
 		insert into cart
-		select cart_cart_no_seq.nextval, #{cart_qty}, #{cart_qty}*product_price, #{cart_product_size}, #{cart_product_color}, #{member_id}, #{product_no}
+		select #{cart_no}, #{cart_qty}, #{cart_qty}*product_price, #{cart_product_size}, #{cart_product_color}, #{member_id}, #{product_no}
 		from product
-		where product_no=#{product_no};
+		where product_no=#{product_no}
 	</insert>
 	<delete id="deleteCart" parameterType="java.lang.Integer">
 		delete from cart where cart_no = #{cart_no}
 	</delete>
 	<update id="updateCart" parameterType="com.itwill.unishop.domain.Cart">
 		update cart set cart_qty=#{cart_qty}, cart_tot_price=#{cart_qty}*(select product_price from cart c join product p on c.product_no=p.product_no where cart_no=#{cart_no})   
-		where cart_no = #{cart_no};
+		where cart_no = #{cart_no}
 	</update>
 	
 </mapper>
