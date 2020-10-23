@@ -2,11 +2,14 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<context:property-placeholder location="classpath:db/jdbc.properties"/>
+	<context:component-scan base-package="com.itwill.unishop"/>
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName" value="${jdbc.driverClassName}"/>
 		<property name="url" value="${jdbc.url}"/>
@@ -16,8 +19,6 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
 	</bean>
-	
-	<!-- 매퍼 주입 방식입니다. -->
 	<bean id="memberMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
 		<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
 		<property name="mapperInterface" value="com.itwill.unishop.mapper.MemberMapper"/>
@@ -31,11 +32,8 @@
 		<property name="mapperInterface" value="com.itwill.unishop.mapper.CartMapper"/>
 	</bean>
 	<!-- 
-	<bean id="memberDao" class="com.itwill.unishop.MemberDaoImpl">
-		<constructor-arg ref="memberMapper"/>
-	</bean>
 	<bean id="memberService" class="com.itwill.guest.MemberServiceImpl">
-		<property name="memberDao" ref="memberDao"/>
+		<property name="memberRepository" ref="memberRepository"/>
 	</bean>
-	-->
+	 -->
 </beans>

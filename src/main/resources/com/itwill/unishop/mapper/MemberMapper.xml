@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itwill.unishop.mapper.MemberMapper">
+	<!-- resultMap -->
+	<resultMap id="memberWithAddressResultMap" type="com.itwill.unishop.domain.Member"  autoMapping="true">
+		<association property="address_no" javaType="_int" autoMapping="true">
+			 <result column="address_no" property="address_no"/>
+		</association>
+	</resultMap>
+	
+	<!-- select -->
+	<select id="selectMemberById" parameterType="string" resultType="com.itwill.unishop.domain.Member">
+		SELECT member_id, member_name, member_email, member_phone
+		FROM MEMBER
+		WHERE member_id=#{member_id}
+	</select>
+	<select id="selectAddressById" parameterType="string" resultMap="memberWithAddressResultMap">
+		SELECT address_name, address_country, address_city, address_zipcode, address_address1, address_address2
+		FROM address
+		JOIN member
+		ON member.address_no=address.address_no
+		WHERE member.member_id=#{member_id}
+	</select> 
+	
+	<!-- insert -->
+	<insert id="insertMember" parameterType="com.itwill.unishop.domain.Member">
+		INSERT INTO member (member_id, member_password, member_name, member_phone, member_email) 
+		VALUES (#{member_id}, #{member_password}, #{member_name}, #{member_phone}, #{member_email})
+	</insert>
+	
+	<!-- update -->
+	<update id="updateMember" parameterType="com.itwill.unishop.domain.Member" >
+		update member set member_password=#{member_password},member_name=#{member_name},member_email=#{member_phone}
+		where member_id=#{member_id}
+	</update>
+	
+	<!-- delete -->
+	<delete id="deleteMember" parameterType="string">
+		delete member where member_id=#{member_id}
+	</delete>
+</mapper>
