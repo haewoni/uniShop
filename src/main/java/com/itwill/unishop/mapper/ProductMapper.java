@@ -1,14 +1,12 @@
 package com.itwill.unishop.mapper;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.itwill.unishop.domain.Product;
-import com.itwill.unishop.domain.Question;
 
 public interface ProductMapper {
 	
-public ArrayList<Product> selectAll();
+	public List<Product> selectAll();
 	
 	public Product selectByNo(String product_no);
 	
