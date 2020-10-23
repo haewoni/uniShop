@@ -8,7 +8,7 @@ public interface DeliveryMapper {
 	
 	public int insertDelivery(Delivery delivery);
 	
-	public int updateDelivery(String delivery_no);
+	public int updateDelivery(Delivery delivery);
 	
 	public int deleteDelivery(String delivery_no);
 	

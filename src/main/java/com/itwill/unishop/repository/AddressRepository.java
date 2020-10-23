@@ -6,7 +6,7 @@ import com.itwill.unishop.domain.Address;
 
 public interface AddressRepository {
 	
-	public ArrayList<Address> selectAll(String address_no);
+	public ArrayList<Address> selectAll();
 	
 	public Address selectByNo(String address_no);
 	

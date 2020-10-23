@@ -6,7 +6,7 @@ import com.itwill.unishop.domain.Question;
 
 public interface QuestionRepository {
 	
-	public ArrayList<Question> selectAll(String question_no);
+	public ArrayList<Question> selectAll();
 	
 	public Question selectByNo(String question_no);
 	
