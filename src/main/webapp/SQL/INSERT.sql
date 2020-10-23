@@ -1,33 +1,33 @@
 ------------------------------ INSERT ------------------------------
---member
-INSERT INTO member (member_id, member_password, member_name, member_phone, member_email) 
-VALUES ('uni1', '1111', '신혜원', '010-1234-5678', 'uni1@gmail.com');
-
-INSERT INTO member (member_id, member_password, member_name, member_phone, member_email) 
-VALUES ('uni2', '2222', '신지원', '010-5555-5678', 'uni2@gmail.com');
-
-INSERT INTO member (member_id, member_password, member_name, member_phone, member_email) 
-VALUES ('uni3', '3333', '김민정', '010-1111-5666', 'uni3@gmail.com');
-
-INSERT INTO member (member_id, member_password, member_name, member_phone, member_email) 
-VALUES ('uni4', '4444', '신지수', '010-1111-5678', 'uni4@gmail.com');
-
-
-
 --address
-INSERT INTO address (address_no, address_zipcode, address_name, address_country, address_city, address_address1, address_address2, member_id) 
+INSERT INTO address (address_no, address_zipcode, address_name, address_country, address_city, address_address1, address_address2) 
 VALUES (address_address_no_seq.nextval, '1111', '우리집', '대한민국', '서울', '양천구 목동 저편한세상', '101동 101호');
 
-INSERT INTO address (address_no, address_zipcode, address_name, address_country, address_city, address_address1, address_address2, member_id) 
+INSERT INTO address (address_no, address_zipcode, address_name, address_country, address_city, address_address1, address_address2) 
 VALUES (address_address_no_seq.nextval, '1111', '집', '대한민국', '서울', '양천구 목동 저편한세상', '101동 1003호');
 
-INSERT INTO address (address_no, address_zipcode, address_name, address_country, address_city, address_address1, address_address2, member_id) 
+INSERT INTO address (address_no, address_zipcode, address_name, address_country, address_city, address_address1, address_address2) 
 VALUES (address_address_no_seq.nextval, '3333', '스윗홈', '대한민국', '김포', '김포구 김동 라베니체', '301동 301호');
 
-INSERT INTO address (address_no, address_zipcode, address_name, address_country, address_city, address_address1, address_address2, member_id) 
+INSERT INTO address (address_no, address_zipcode, address_name, address_country, address_city, address_address1, address_address2) 
 VALUES (address_address_no_seq.nextval, '5555', 'home', '대한민국', '부산', '동래구 부산동 아이파크', '202동 903호');
 
 commit;
+
+
+--member
+INSERT INTO member (member_id, member_password, member_name, member_phone, member_email,address_no) 
+VALUES ('uni1', '1111', '신혜원', '010-1234-5678', 'uni1@gmail.com',1);
+
+INSERT INTO member (member_id, member_password, member_name, member_phone, member_email,address_no) 
+VALUES ('uni2', '2222', '신지원', '010-5555-5678', 'uni2@gmail.com',2);
+
+INSERT INTO member (member_id, member_password, member_name, member_phone, member_email,address_no) 
+VALUES ('uni3', '3333', '김민정', '010-1111-5666', 'uni3@gmail.com',3);
+
+INSERT INTO member (member_id, member_password, member_name, member_phone, member_email,address_no) 
+VALUES ('uni4', '4444', '신지수', '010-1111-5678', 'uni4@gmail.com',4);
+
 
 
 --question
@@ -47,13 +47,13 @@ INSERT INTO question (question_no, question_title, question_category, question_d
 VALUES (question_question_no_seq.nextval, '세일관련 질문이요', '이벤트', sysdate, '처리중', '신상품 세일 이벤트 한다는데 최대 몇 % 세일인가요???', 'uni3');
 
 INSERT INTO question (question_no, question_title, question_category, question_date, question_status, question_content, member_id) 
-VALUES (question_question_no_seq.nextval, '배송 질문이요', '배송', '2020-09-12', '처리완료', '5일전에 주문했는데 아직까지 배송이 안옵니다. 어떤 문제가 생긴거죠???', 'uni3');
+VALUES (question_question_no_seq.nextval, '배송 질문이요', '배송', '2020-09-12', '완료', '5일전에 주문했는데 아직까지 배송이 안옵니다. 어떤 문제가 생긴거죠???', 'uni3');
 
 INSERT INTO question (question_no, question_title, question_category, question_date, question_status, question_content, member_id) 
 VALUES (question_question_no_seq.nextval, '사이즈 문의', '상품', sysdate, '처리중', '평소에 m사이즈 코트를 입는데 쇼트코트는 어떤 사이즈로 구매하면 되나요??', 'uni4');
 
 INSERT INTO question (question_no, question_title, question_category, question_date, question_status, question_content, member_id) 
-VALUES (question_question_no_seq.nextval, '환분문의', '교환/환불', '2020-08-29', '처리완료', '제가 원하는 색상은 없어서 다른 색상으로 주문하긴 했는데 마음에 들지 않아요.. 환불하려는데 어떻게 하면 되나요??', 'uni4');
+VALUES (question_question_no_seq.nextval, '환분문의', '교환/환불', '2020-08-29', '완료', '제가 원하는 색상은 없어서 다른 색상으로 주문하긴 했는데 마음에 들지 않아요.. 환불하려는데 어떻게 하면 되나요??', 'uni4');
 
 commit;
 
@@ -283,7 +283,7 @@ VALUES ('431464', 'U데님펜슬롱스커트', '스트레치 소재로 움직임
 commit;
 
 --WISHLIST
-INSERT INTO wishList (wish_no, member_id, product_no) VALUES (wishlist_wish_no_seq.nextval, 'uni4', '424420');
+INSERT INTO wishList (wish_no, member_id, product_no) VALUES (wishlist_wish_no_seq.nextval, 'uni4', '431464');
 
 commit;
 
