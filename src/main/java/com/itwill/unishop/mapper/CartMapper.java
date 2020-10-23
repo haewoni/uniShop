@@ -6,7 +6,7 @@ import com.itwill.unishop.domain.Cart;
 
 public interface CartMapper {
 	
-	public List<Cart> selectAll(String member_id);
+	public List<Cart> selectCartAll(String member_id);
 	
 	public int insertCart(Cart cart);
 	

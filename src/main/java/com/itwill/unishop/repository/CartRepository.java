@@ -7,11 +7,11 @@ import com.itwill.unishop.domain.Cart;
 
 public interface CartRepository {
 
-	public int insertCart(Cart cart) throws Exception;
+	public int insertCart(Cart cart);
 	
-	public ArrayList<Cart> selectAll(String member_id) throws Exception;
+	public ArrayList<Cart> selectCartAll(String member_id);
 	
-	public int updateCart(Cart UpdateCart) throws Exception;
+	public int updateCart(Cart UpdateCart);
 	
-	public int deleteCart(int cart_no) throws Exception;
+	public int deleteCart(int cart_no);
 }

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper 
 namespace="com.itwill.unishop.mapper.CartMapper">
-	<select id="selectAll" 
+	<select id="selectCartAll" 
 	parameterType="string"
 	resultType="com.itwill.unishop.domain.Cart">
 		SELECT * FROM CART WHERE member_id=#{member_id}
