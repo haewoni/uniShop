@@ -29,7 +29,7 @@ public class ProductRepositoryMyBatisMapperInterface implements ProductRepositor
 	@Override
 	public ArrayList<Product> selectAll() {
 		ArrayList<Product> productList = new ArrayList<Product>();
-		productList = sqlSessionFactory.openSession(true)
+		productList = (ArrayList<Product>) sqlSessionFactory.openSession(true)
 										.getMapper(ProductMapper.class)
 										.selectAll();
 		return productList;
