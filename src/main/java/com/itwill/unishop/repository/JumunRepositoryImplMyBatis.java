@@ -8,13 +8,15 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.itwill.unishop.domain.Jumun;
 import com.itwill.unishop.mapper.JumunMapper;
+import com.itwill.unishop.mapper.Jumun_DetailMapper;
 
 public class JumunRepositoryImplMyBatis implements JumunRepository{
-
-	private SqlSessionFactory sqlSessionFactory;
+	@Autowired
+	private JumunMapper jumunMapper;
 	
 	
 	public JumunRepositoryImplMyBatis() {
@@ -43,7 +45,7 @@ public class JumunRepositoryImplMyBatis implements JumunRepository{
 	@Override
 	public ArrayList<Jumun> selectAll() {
 		ArrayList<Jumun> jumunList = new ArrayList<Jumun>();
-		jumunList = sqlSessionFactory.openSession(true)
+		jumunList = (ArrayList<Jumun>) sqlSessionFactory.openSession(true)
 									 .getMapper(JumunMapper.class)
 							 		 .selectAll();
 		return jumunList;
@@ -55,7 +57,7 @@ public class JumunRepositoryImplMyBatis implements JumunRepository{
 		jumun = sqlSessionFactory.openSession(true)
 								 .getMapper(JumunMapper.class)
 								 .selectById(member_id);
-		return null;
+		return jumun;
 	}
 
 	@Override
@@ -63,7 +65,7 @@ public class JumunRepositoryImplMyBatis implements JumunRepository{
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		JumunMapper jumunMapper = sqlSession.getMapper(JumunMapper.class);
 		int updateRowCount = 0;
-		updateRowCount = jumunMapper.updateJumunByNo(jumun);
+		updateRowCount = jumunMapper.updateJumun(jumun);
 		return updateRowCount;
 	}
 

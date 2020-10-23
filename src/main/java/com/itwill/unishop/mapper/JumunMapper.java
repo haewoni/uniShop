@@ -1,6 +1,6 @@
 package com.itwill.unishop.mapper;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import com.itwill.unishop.domain.Jumun;
 
@@ -8,12 +8,12 @@ public interface JumunMapper {
 	
 	public int insertJumun(Jumun jumun);
 	
-	public ArrayList<Jumun> selectAll();
+	public List<Jumun> selectAll();
 	
 	public Jumun selectById(String member_id);
 	
-	public int updateJumunByNo(Jumun jumun);
+	public int updateJumun(Jumun jumun);
 	
-	public int deleteJumunByNo(Integer jumun_no);
+	public int deleteJumunByNo(int jumun_no);
 	
 }
