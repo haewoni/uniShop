@@ -3,11 +3,15 @@ package com.itwill.unishop.repository;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
 import com.itwill.unishop.domain.Delivery;
 import com.itwill.unishop.mapper.DeliveryMapper;
 
+@Repository("deliveryRepository")
 public class DeliveryRepositoryImpl implements DeliveryRepository{
-	
+	@Autowired
 	private DeliveryMapper deliveryMapper;
 	
 	public DeliveryRepositoryImpl() throws Exception{
