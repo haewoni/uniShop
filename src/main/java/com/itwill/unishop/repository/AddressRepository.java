@@ -1,12 +1,12 @@
-package com.itwill.unishop.mapper;
+package com.itwill.unishop.repository;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import com.itwill.unishop.domain.Address;
 
-public interface AddressMapper {
-
-	public List<Address> selectAll(String address_no);
+public interface AddressRepository {
+	
+	public ArrayList<Address> selectAll(String address_no);
 	
 	public Address selectByNo(String address_no);
 	
@@ -15,5 +15,4 @@ public interface AddressMapper {
 	public int deleteAddress(String address_no);
 	
 	public int updateAddress(Address updateaddress);
-
 }
