@@ -14,9 +14,7 @@ public class Jumun {
 	private String member_id;
 	private String delivery_no;
 	
-	public Jumun() {
-		
-	}
+	
 	public Jumun(int jumun_no, Date jumun_date, String jumun_status, int jumun_tot_price, String card_no,
 			String card_expire_date, String card_cvc, String card_member_name, String member_id, String delivery_no) {
 		super();
@@ -30,6 +28,9 @@ public class Jumun {
 		this.card_member_name = card_member_name;
 		this.member_id = member_id;
 		this.delivery_no = delivery_no;
+	}
+	public Jumun() {
+		// TODO Auto-generated constructor stub
 	}
 	public int getJumun_no() {
 		return jumun_no;

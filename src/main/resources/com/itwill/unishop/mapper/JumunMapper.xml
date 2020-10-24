@@ -10,7 +10,7 @@
 			select jumun_no_SEQ.nextval from dual
 		</selectKey>
 		insert into JUMUN 
-		values (#{jumun_no}, #{jumun_date}, #{jumun_status},
+		values (#{jumun_jumun_no_SEQ.nextval}, #{jumun_date}, #{jumun_status},
 				#{jumun_tot_price}, #{card_no}, #{card_expire_date},
 				#{card_cvc}, #{card_member_name}, #{member_id},
 				#{delivery_no})
@@ -27,7 +27,7 @@
 			resultType="com.itwill.unishop.domain.Jumun">
 		select jumun_no, jumun_date, jumun_status, jumun_tot_price
 		from JUMUN
-		where member_id=#{member_id};
+		where member_id=#{member_id}
 	</select>
 	
 	
@@ -35,7 +35,8 @@
 	<!-- update -->
 	<update id="updateJumun" parameterType="com.itwill.unishop.domain.Jumun"> 
 		update JUMUN 
-		set jumun_date=#{jumun_date},
+		set jumun_no=#{jumun_no},
+			jumun_date=#{jumun_date},
 		    jumun_status=#{jumun_status},
 		    jumun_tot_price=#{jumun_tot_price},
 		    card_no=#{card_no},
@@ -43,15 +44,16 @@
 		    card_cvc=#{card_cvc},
 		    card_member_name=#{card_member_name},
 		    delivery_no=#{delivery_no}
-		where jumun_no=#{jumun_no} and member_id=#{member_id};  
+		where jumun_no=#{jumun_no} and member_id=#{member_id}
 	</update>
 	
 	
 	
 	<!-- delete -->
-	<delete id="deleteJumunByNo" parameterType="java.lang.Integer"> 
-		delete from JUMUN 
+	<delete id="deleteJumunByNo" parameterType="_int"> 
+		delete from JUMUN
 		where jumun_no=#{jumun_no}
+		
 	</delete>
 	
 	
