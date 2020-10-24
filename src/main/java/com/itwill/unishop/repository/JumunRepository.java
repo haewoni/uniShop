@@ -1,6 +1,6 @@
 package com.itwill.unishop.repository;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import com.itwill.unishop.domain.Jumun;
 
@@ -8,7 +8,7 @@ public interface JumunRepository {
 	
 	public int insertJumun(Jumun jumun);
 	
-	public ArrayList<Jumun> selectAll();
+	public List<Jumun> selectAll();
 	
 	public Jumun selectById(String member_id);
 	

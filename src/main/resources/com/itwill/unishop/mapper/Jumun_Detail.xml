@@ -29,7 +29,7 @@
 			   jumun_d_product_color, jumun_d_product_price, jumun_d_product_qty,
 			   jumun_no, product_no
 		from JUMUN_DETAIL
-		where jumun_no=#{jumun_no};
+		where jumun_no=#{jumun_no}
 	</select>
 	
 	
@@ -42,7 +42,7 @@
 		    JUMUN_D_PRODUCT_COLOR=#{JUMUN_D_PRODUCT_COLOR},
 		    JUMUN_D_PRODUCT_PRICE=#{JUMUN_D_PRODUCT_PRICE},
 		    JUMUN_D_PRODUCT_QTY=#{JUMUN_D_PRODUCT_QTY}
-		where JUMUN_NO=#{JUMUN_NO} AND PRODUCT_NO=#{PRODUCT_NO};
+		where JUMUN_NO=#{JUMUN_NO} AND PRODUCT_NO=#{PRODUCT_NO}
 	</update>
 	
 	
@@ -51,7 +51,7 @@
 	<delete id="deleteJumunDetail"
 			parameterType="java.lang.Integer">
 		delete from JUMUN_DETAIL 
-		where jumun_d_no=#{jumun_d_no};
+		where jumun_d_no=#{jumun_d_no}
 	</delete>
 	
 	
