@@ -12,7 +12,4 @@ public interface MemberRepository {
 	
 	public int deleteMember(String member_id);
 	
-	
-	
-	
 }
