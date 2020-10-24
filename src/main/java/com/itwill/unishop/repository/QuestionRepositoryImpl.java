@@ -10,7 +10,7 @@ import com.itwill.unishop.domain.Question;
 import com.itwill.unishop.mapper.QuestionMapper;
 
 @Repository("questionRepository")
-public class QuestionRepositoryImpl implements QuestionRepository{
+public class QuestionRepositoryImpl implements QuestionRepository, QuestionMapper{
 	@Autowired
 	private QuestionMapper questionMapper;
 	

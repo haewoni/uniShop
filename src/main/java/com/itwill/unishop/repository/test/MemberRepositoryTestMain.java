@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.itwill.unishop.repository.MemberRepository;
 
-public class MemberDaoTestMain {
+public class MemberRepositoryTestMain {
 
 	public static void main(String[] args) {
 		ApplicationContext applicationContext=new ClassPathXmlApplicationContext("spring/application-config.xml");
