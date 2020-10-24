@@ -20,7 +20,7 @@
 		update member set member_password=#{member_password},member_name=#{member_name},member_email=#{member_phone},
 				member_address_name=#{member_address_name},member_address_zipcode=#{member_address_zipcode},
 				member_address_country=#{member_address_country},member_address_city=#{member_address_city},
-				member_address1=#{member_address1},member_address2=#{member_address_2}
+				member_address1=#{member_address1},member_address2=#{member_address2}
 		where member_id=#{member_id}
 	</update>
 	

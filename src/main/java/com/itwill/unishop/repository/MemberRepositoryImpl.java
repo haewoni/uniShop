@@ -9,7 +9,7 @@ import com.itwill.unishop.domain.Address;
 import com.itwill.unishop.domain.Member;
 import com.itwill.unishop.mapper.MemberMapper;
 
-@Repository("memberRepository")
+@Repository
 public class MemberRepositoryImpl implements MemberRepository{
 	@Autowired
 	private MemberMapper memberMapper;
