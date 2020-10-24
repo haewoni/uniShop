@@ -31,10 +31,6 @@
 		<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
 		<property name="mapperInterface" value="com.itwill.unishop.mapper.CartMapper"/>
 	</bean>
-	<bean id="addressMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
-		<property name="mapperInterface" value="com.itwill.unishop.mapper.AddressMapper"/>
-	</bean>
 	<bean id="questionMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
 		<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
 		<property name="mapperInterface" value="com.itwill.unishop.mapper.QuestionMapper"/>

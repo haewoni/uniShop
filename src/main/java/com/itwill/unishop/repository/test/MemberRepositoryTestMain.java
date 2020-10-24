@@ -26,6 +26,7 @@ public class MemberRepositoryTestMain {
 		//Member update = memberRepository.updateMember(updateMember)
 		//System.out.println(memberRepository.updateMember(member));
 		//System.out.println(memberRepository.deleteMember("jongjong"));
+		System.out.println(memberRepository.selectMemberById("uni1"));		
 	}
 
 }

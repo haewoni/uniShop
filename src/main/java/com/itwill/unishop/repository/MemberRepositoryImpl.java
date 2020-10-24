@@ -1,11 +1,8 @@
 package com.itwill.unishop.repository;
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.itwill.unishop.domain.Address;
 import com.itwill.unishop.domain.Member;
 import com.itwill.unishop.mapper.MemberMapper;
 
