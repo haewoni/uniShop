@@ -8,24 +8,6 @@ DROP TABLE product CASCADE CONSTRAINTS;
 DROP TABLE jumun CASCADE CONSTRAINTS;
 DROP TABLE delivery CASCADE CONSTRAINTS;
 DROP TABLE member CASCADE CONSTRAINTS;
-DROP TABLE address CASCADE CONSTRAINTS;
-
-CREATE TABLE address(
-		address_no                    		NUMBER(10)		 NOT NULL,
-		address_zipcode               		VARCHAR2(10)		 NULL ,
-		address_name                  		VARCHAR2(50)		 NULL ,
-		address_country               		VARCHAR2(50)		 NULL ,
-		address_city                  		VARCHAR2(50)		 NULL ,
-		address_address1              		VARCHAR2(50)		 NULL ,
-		address_address2              		VARCHAR2(50)		 NULL 
-);
-
-DROP SEQUENCE address_address_no_SEQ;
-
-CREATE SEQUENCE address_address_no_SEQ NOMAXVALUE NOCACHE NOORDER NOCYCLE;
-
-
-
 
 CREATE TABLE member(
 		member_id                     		VARCHAR2(50)		 NOT NULL,
@@ -33,7 +15,12 @@ CREATE TABLE member(
 		member_name                   		VARCHAR2(50)		 NULL ,
 		member_phone                  		VARCHAR2(50)		 NULL ,
 		member_email                  		VARCHAR2(50)		 NULL ,
-		address_no                    		NUMBER(10)		 NULL 
+		address_name                  		VARCHAR2(50)		 NULL ,
+		address_zipcode               		VARCHAR2(50)		 NULL ,
+		address_country               		VARCHAR2(70)		 NULL ,
+		address_city                  		VARCHAR2(70)		 NULL ,
+		address_address1              		VARCHAR2(100)		 NULL ,
+		address_address2              		VARCHAR2(100)		 NULL 
 );
 
 
@@ -72,7 +59,10 @@ CREATE TABLE product(
 		product_M_div                 		VARCHAR2(10)		 NULL ,
 		product_S_div                 		VARCHAR2(10)		 NULL ,
 		product_image_1               		VARCHAR2(30)		 NULL ,
-		product_image_2               		VARCHAR2(30)		 NULL 
+		product_image_2               		VARCHAR2(30)		 NULL ,
+		product_image_3               		VARCHAR2(30)		 NULL ,
+		product_image_4               		VARCHAR2(30)		 NULL ,
+		product_image_5               		VARCHAR2(30)		 NULL 
 );
 
 
@@ -80,7 +70,6 @@ CREATE TABLE jumun_detail(
 		jumun_d_no                    		NUMBER(10)		 NOT NULL,
 		jumun_d_product_name          		VARCHAR2(60)		 NULL ,
 		jumun_d_product_size          		VARCHAR2(10)		 NULL ,
-		jumun_d_product_color         		VARCHAR2(10)		 NULL ,
 		jumun_d_product_price         		NUMBER(10)		 NULL ,
 		jumun_d_product_qty           		VARCHAR2(10)		 NULL ,
 		jumun_no                      		NUMBER(10)		 NOT NULL,
@@ -108,7 +97,6 @@ CREATE TABLE cart(
 		cart_qty                      		NUMBER(10)		 NULL ,
 		cart_tot_price                		NUMBER(10)		 NULL ,
 		cart_product_size             		VARCHAR2(10)		 NULL ,
-		cart_product_color            		VARCHAR2(10)		 NULL ,
 		member_id                     		VARCHAR2(50)		 NOT NULL,
 		product_no                    		VARCHAR2(30)		 NOT NULL
 );
@@ -116,6 +104,7 @@ CREATE TABLE cart(
 DROP SEQUENCE cart_cart_no_SEQ;
 
 CREATE SEQUENCE cart_cart_no_SEQ NOMAXVALUE NOCACHE NOORDER NOCYCLE;
+
 
 
 CREATE TABLE question(
@@ -149,6 +138,7 @@ DROP SEQUENCE review_review_no_SEQ;
 CREATE SEQUENCE review_review_no_SEQ NOMAXVALUE NOCACHE NOORDER NOCYCLE;
 
 
+
 CREATE TABLE div_code(
 		code_no                       		NUMBER(10)		 NOT NULL,
 		product_L_div                 		VARCHAR2(10)		 NOT NULL,
@@ -164,10 +154,8 @@ DROP SEQUENCE div_code_code_no_SEQ;
 CREATE SEQUENCE div_code_code_no_SEQ NOMAXVALUE NOCACHE NOORDER NOCYCLE;
 
 
-ALTER TABLE address ADD CONSTRAINT IDX_address_PK PRIMARY KEY (address_no);
 
 ALTER TABLE member ADD CONSTRAINT IDX_member_PK PRIMARY KEY (member_id);
-ALTER TABLE member ADD CONSTRAINT IDX_member_FK0 FOREIGN KEY (address_no) REFERENCES address (address_no);
 
 ALTER TABLE delivery ADD CONSTRAINT IDX_delivery_PK PRIMARY KEY (delivery_no);
 
@@ -197,4 +185,7 @@ ALTER TABLE review ADD CONSTRAINT IDX_review_FK0 FOREIGN KEY (member_id) REFEREN
 ALTER TABLE review ADD CONSTRAINT IDX_review_FK1 FOREIGN KEY (product_no) REFERENCES product (product_no);
 
 ALTER TABLE div_code ADD CONSTRAINT IDX_div_code_PK PRIMARY KEY (code_no);
+
+commit;
+
 
