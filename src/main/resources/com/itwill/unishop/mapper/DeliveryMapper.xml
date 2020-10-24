@@ -12,15 +12,11 @@ namespace="com.itwill.unishop.mapper.DeliveryMapper">
 		WHERE delivery_no=#{delivery_no}
 	</select>
 	<insert id="insertDelivery" parameterType="com.itwill.unishop.domain.Delivery">
-		<selectKey resultType="java.lang.Integer"
-			keyProperty="delivery_no" order="BEFORE">
-			SELECT delivery_no_seq.nextval FROM DUAL
-		</selectKey>
-		insert into delivery 
+		insert into delivery (delivery_no, delivery_name, delivery_time, delivery_fee)
 		values(#{delivery_no},#{delivery_name},#{delivery_time},#{delivery_fee})
 	</insert>
 	<delete id="deleteDelivery" parameterType="java.lang.String">
-		delete from delivery where delevery_no = #{delivery_no}
+		delete from delivery where delivery_no = #{delivery_no}
 	</delete>
 	<update id="updateDelivery" parameterType="com.itwill.unishop.domain.Delivery">
 		update delivery set delivery_name=#{delivery_name}, delivery_time=#{delivery_time}, delivery_fee=#{delivery_fee} 

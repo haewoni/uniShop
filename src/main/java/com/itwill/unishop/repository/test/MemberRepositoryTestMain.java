@@ -5,11 +5,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.itwill.unishop.repository.MemberRepository;
 
-public class MemberDaoTestMain {
+public class MemberRepositoryTestMain {
 
 	public static void main(String[] args) {
 		ApplicationContext applicationContext=new ClassPathXmlApplicationContext("spring/application-config.xml");
-		MemberRepository memberRepository=(MemberRepository)applicationContext.getBean("memberRepositoryImpl");
+		MemberRepository memberRepository=(MemberRepository)applicationContext.getBean("memberRepository");
 		System.out.println(memberRepository.selectMemberById("uni1"));		
 	}
 

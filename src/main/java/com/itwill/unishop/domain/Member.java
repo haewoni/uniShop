@@ -34,6 +34,16 @@ public class Member {
 		this.member_address1 = member_address1;
 		this.member_address2 = member_address2;
 	}
+	
+	public Member(String member_id, String member_password, String member_name, String member_phone,
+			String member_email) {
+		super();
+		this.member_id = member_id;
+		this.member_password = member_password;
+		this.member_name = member_name;
+		this.member_phone = member_phone;
+		this.member_email = member_email;
+	}
 
 	public String getMember_id() {
 		return member_id;
