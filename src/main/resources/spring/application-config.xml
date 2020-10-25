@@ -52,6 +52,11 @@
 		<property name="mapperInterface" value="com.itwill.unishop.mapper.Jumun_DetailMapper"/>
 	</bean>
 	<!-- 
+	<bean id="memberRepository" class="com.itwill.unishop.repository.MemberRepositoryImpl">
+		
+	</bean>
+	 -->
+	<!-- 
 	<bean id="memberService" class="com.itwill.guest.MemberServiceImpl">
 		<property name="memberRepository" ref="memberRepository"/>
 	</bean>
