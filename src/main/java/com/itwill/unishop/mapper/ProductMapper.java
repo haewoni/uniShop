@@ -1,22 +1,24 @@
 package com.itwill.unishop.mapper;
 
-import java.util.List;
+import java.util.ArrayList;
+
+import org.apache.ibatis.annotations.Param;
 
 import com.itwill.unishop.domain.Product;
 
 public interface ProductMapper {
 	
-	public List<Product> selectAll();
+	public ArrayList<Product> selectAll();
 	
 	public Product selectByNo(String product_no);
 	
 	public Product selectByName(String product_name);
 	
-	public Product selectByDivL(String product_l_div);
+	public ArrayList<Product> selectByDivL(String product_l_div);
 
-	public Product selectByDivLM(String product_l_div,String product_m_div);
+	public ArrayList<Product> selectByDivLM(@Param("product_L_div") String product_L_div,@Param("product_M_div")String product_M_div);
 	
-	public Product selectByDivLMS(String product_l_div,String product_m_div,String product_s_div);
+	public ArrayList<Product> selectByDivLMS(@Param("product_L_div") String product_L_div,@Param("product_M_div")String product_M_div,@Param("product_S_div")String product_S_div);
 	
 	public int insertProduct(Product product);
 	

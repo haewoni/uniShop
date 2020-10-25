@@ -2,13 +2,10 @@ package com.itwill.unishop.repository;
 
 import java.util.ArrayList;
 
-import com.itwill.unishop.domain.Delivery;
 import com.itwill.unishop.domain.Product;
-import com.itwill.unishop.mapper.JumunMapper;
 
 public interface ProductRepository {
 	
-	//private JumunMapper mapper;
 	
 	public ArrayList<Product> selectAll();
 	
@@ -16,11 +13,11 @@ public interface ProductRepository {
 	
 	public Product selectByName(String product_name);
 	
-	public Product selectByDivL(String product_l_div);
+	public ArrayList<Product> selectByDivL(String product_l_div);
 
-	public Product selectByDivLM(String product_l_div,String product_m_div);
+	public ArrayList<Product> selectByDivLM(String product_l_div,String product_m_div);
 	
-	public Product selectByDivLMS(String product_l_div,String product_m_div,String product_s_div);
+	public ArrayList<Product> selectByDivLMS(String product_l_div,String product_m_div,String product_s_div);
 	
 	public int insertProduct(Product product);
 	
