@@ -1,0 +1,47 @@
+패키지
+
+<Repository패키지>
+=>테이블명Repository (인터페이스) ex) MemberRepository
+=>테이블명RepositoryImpl (인터페이스 상속) ex) MemberRepositoryImpl
+
+<Service패키지>
+=>테이블명Service (인터페이스) ex) MemberService
+=>테이블명ServiceImpl (인터페이스 상속) MemberServiceImpl
+
+<Controller패키지>
+=>테이블명Controller (클래스파일)
+ex)MemberController 
+
+컨트롤러 클래스파일 내의 메소드명
+=>테이블명_기능()
+ex)
+member_update_from() 수정화면보여주기폼컨트롤러
+member_update_action_get() 수정액션작업컨트롤러(GET방식일 경우)
+member_update_action_post() (POST방식일 경우)
+member_delete_action_get() 삭제작업컨드롤러(GET방식)
+member_delete_action_post() 삭제작업컨드롤러(post방식)
+member_view() (디테일 정보 띄우기)
+member_list() (리스트 띄우기)
+
+메소드명
+
+<insert>
+insert테이블명
+ex) insertMember
+
+<select>
+selectAll테이블명 (리스트 뿌리기)
+select테이블명By (한개 뿌리기)
+
+ex) selectAllMember
+
+    selectMemberByID (pk로 접근)
+
+<update>
+update테이블명
+ex)  1) updateMember
+     2) updateMemberBy Pk 혹은 FK
+<delete>
+delete테이블명
+ex) 1) deleteMemeber
+    2) deleteMemberBy Pk 혹은 FK
