@@ -4,7 +4,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.itwill.unishop.domain.Product;
-import com.itwill.unishop.repository.AddressRepository;
 import com.itwill.unishop.repository.ProductRepository;
 
 
