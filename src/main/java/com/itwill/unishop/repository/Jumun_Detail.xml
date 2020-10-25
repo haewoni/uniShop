@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itwill.unishop.mapper.Jumun_Detail">
+
+
+	<!-- create -->
+	<insert id="insertJumunDetail"
+			parameterType="com.itwill.unishop.domain.Jumun_Detail">
+		<selectKey resultType="java.lang.Integer"
+				   keyProperty="jumun_d_no" order="BEFORE">
+			select jumun_d_no_seq.nextval FROM dual
+		</selectKey>
+		insert into JUMUN_DETAIL
+		values (#{jumun_d_no}, #{jumun_d_product_name}, #{jumun_d_product_size},
+				#{jumun_d_product_color}, #{jumun_d_product_price},
+				#{jumun_d_product_qty}, #{jumun_no}, #{product_no}) 
+	</insert>
+	
+	
+	<!-- read -->
+	<select id="selectAll" resultType="com.itwill.unishop.domain.Jumun_Detail"> 
+		select * from JUMUN_DETAIL
+	</select>
+	
+	<select id="selectByNo"
+			parameterType="java.lang.Integer"
+			resultType="com.itwill.unishop.domain.Jumun_Detail">
+		select jumun_d_no, jumun_d_product_name, jumun_d_product_size,
+			   jumun_d_product_color, jumun_d_product_price, jumun_d_product_qty,
+			   jumun_no, product_no
+		from JUMUN_DETAIL
+		where jumun_no=#{jumun_no}
+	</select>
+	
+	
+	<!-- update -->
+	<update id="updateJumunDetail"
+			parameterType="com.itwill.unishop.domain.Jumun_Detail">
+		update JUMUN_DETAIL 
+		set JUMUN_D_PRODUCT_NAME=#{JUMUN_D_PRODUCT_NAME},
+		    JUMUN_D_PRODUCT_SIZE=#{JUMUN_D_PRODUCT_SIZE},
+		    JUMUN_D_PRODUCT_COLOR=#{JUMUN_D_PRODUCT_COLOR},
+		    JUMUN_D_PRODUCT_PRICE=#{JUMUN_D_PRODUCT_PRICE},
+		    JUMUN_D_PRODUCT_QTY=#{JUMUN_D_PRODUCT_QTY}
+		where JUMUN_NO=#{JUMUN_NO} AND PRODUCT_NO=#{PRODUCT_NO}
+	</update>
+	
+	
+	
+	<!-- delete -->
+	<delete id="deleteJumunDetail"
+			parameterType="java.lang.Integer">
+		delete from JUMUN_DETAIL 
+		where jumun_d_no=#{jumun_d_no}
+	</delete>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</mapper>

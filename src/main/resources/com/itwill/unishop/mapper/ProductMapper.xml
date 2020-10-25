@@ -3,7 +3,7 @@
 <mapper namespace="com.itwill.unishop.mapper.ProductMapper">
 	<!-- SELECT ALL -->
 	<select id="selectAll" resultType="com.itwill.unishop.domain.Product">
-		select * from product;
+		select * from product
 	</select>
 	
 	<!-- SELECT BY PRODUCT_NO -->
@@ -11,7 +11,7 @@
 			parameterType="java.lang.String"
 			resultType="com.itwill.unishop.domain.Product">
 			select * from product
-			where product_no=#{product_no};
+			where product_no=#{product_no}
 	</select>
 		
 	<!-- SELECT BY PRODUCT_NAME -->
@@ -20,7 +20,7 @@
 			resultType="com.itwill.unishop.domain.Product">
 			select*
 			from product 
-			where product_name=#{product_name};
+			where product_name=#{product_name}
 	</select>
 	
 	<!-- SELECT BY L_DIV -->
@@ -29,39 +29,39 @@
 			resultType="com.itwill.unishop.domain.Product">
 			select p.product_l_div,p.product_m_div,p.product_s_div,p.product_name,p.product_desc,p.product_no,p.product_price,p.product_image_1,p.product_image_2
 			from product p
-			where product_l_div=#{product_l_div};			
+			where product_l_div=#{product_l_div}			
 	</select>
 	
 	<!-- SELECT BY L_DIV & M_DIV -->
 	<select id="selectByDivLM" 
-			parameterType="java.lang.String"
+			parameterType="map"
 			resultType="com.itwill.unishop.domain.Product">
 			select p.product_l_div,p.product_m_div,p.product_s_div,p.product_name,p.product_desc,p.product_no,p.product_price,p.product_image_1,p.product_image_2
 			from product p
-			where product_l_div=#{product_l_div} and product_m_div=#{product_m_div};						
+			where product_L_div =#{product_L_div} and product_M_div =#{product_M_div}					
 	</select>
 	
 	<!-- SELECT BY L_DIV & M_DIV & S_DIV -->
 	<select id="selectByDivLMS" 
-			parameterType="java.lang.String"
+			parameterType="map"
 			resultType="com.itwill.unishop.domain.Product">
 			select p.product_l_div,p.product_m_div,p.product_s_div,p.product_name,p.product_desc,p.product_no,p.product_price,p.product_image_1,p.product_image_2
 			from product p
-			where product_l_div=#{product_l_div} and product_m_div=#{product_m_div} and p.product_s_div=#{product_s_div};
+			where product_L_div =#{product_L_div} and product_M_div =#{product_M_div} and p.product_S_div=#{product_S_div}
 	</select>
 
 	
 	<!-- INSERT -->
 	<insert id="insertProduct"
 			parameterType="com.itwill.unishop.domain.Product">
-			insert into product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2) 
-			values (#{product_no}, #{product_name}, #{product_desc}, #{product_price}, #{product_L_div}, #{product_M_div}, #{product_S_div}, #{product_image_1}, #{product_image_2});					
+			insert into product  
+			values (#{product_no}, #{product_name}, #{product_desc}, #{product_price}, #{product_L_div}, #{product_M_div}, #{product_S_div}, #{product_image_1}, #{product_image_2}, #{product_image_3},#{product_image_4}, #{product_image_5})					
 	</insert>
 
 	<!-- DELETE -->
 	<delete id="deleteProduct"
 			parameterType="java.lang.String">
-			delete from product where product_no = #{product_no};
+			delete from product where product_no = #{product_no}
 	</delete>
 
 
