@@ -1,11 +1,11 @@
 package com.itwill.unishop.service.test;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.itwill.unishop.service.QuestionService;
 
 public class QuestionServiceTestMain {
-	public static void main(String[] args) throws Exception{
-		QuestionService questionService=new QuestionService();
-		System.out.println(questionService.selectAll());
-		System.out.println(questionService.selectByNo("1"));
-	}
+	ApplicationContext applicationContext=new ClassPathXmlApplicationContext("spring/application-config.xml");
+	QuestionService questionService=(QuestionService)applicationContext.getBean("questionServiceImpl");
 }
