@@ -12,10 +12,10 @@ public class DeliveryRepositoryTestMain {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring/application-config.xml");
 		DeliveryRepository deliveryRepository = (DeliveryRepository) applicationContext.getBean("deliveryRepository");
 		System.out.println(deliveryRepository.selectAll());
-		System.out.println(deliveryRepository.insertDelivery(new Delivery("tes","테스트","0~1일",7000)));
-		Delivery delivery = new Delivery("tes","변경","5~6일",7000);
-		System.out.println(deliveryRepository.updateDelivery(delivery));
-		System.out.println(deliveryRepository.deleteDelivery("tes"));
+		//System.out.println(deliveryRepository.insertDelivery(new Delivery("tes","테스트","0~1일",7000)));
+		//Delivery delivery = new Delivery("tes","변경","5~6일",7000);
+		//System.out.println(deliveryRepository.updateDelivery(delivery));
+		//System.out.println(deliveryRepository.deleteDelivery("tes"));
 	}
 
 }

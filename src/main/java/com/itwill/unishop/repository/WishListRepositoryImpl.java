@@ -1,66 +1,41 @@
 package com.itwill.unishop.repository;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 
-import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
-import com.itwill.unishop.domain.Review;
 import com.itwill.unishop.domain.WishList;
-import com.itwill.unishop.mapper.ReviewMapper;
 import com.itwill.unishop.mapper.WishListMapper;
+@Repository("wishListRepository")
+public class WishListRepositoryImpl implements WishListRepository{
 
-public class WishListRepositoryImpl {
-
-	private SqlSessionFactory sqlSessionFactory;
+	@Autowired
+	private WishListMapper wishListMapper;
 	
-	public WishListRepositoryImpl() {
-		InputStream in = null;
-		
-		try {
-			in = Resources.getResourceAsStream("mybatis-config.xml");
-			this.sqlSessionFactory = new SqlSessionFactoryBuilder().build(in);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-	
+	@Override
 	public int insertWishList(WishList wishList) throws Exception {
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		WishListMapper wishListMapper = sqlSession.getMapper(WishListMapper.class);
+		
 		int insertCount = 0;
 		insertCount = wishListMapper.insertWishList(wishList);
 		return insertCount;
 	};
-	
-	public WishList selectWishListByNo(int no) throws Exception {
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		WishListMapper wishListMapper = sqlSession.getMapper(WishListMapper.class);
+	@Override
+	public WishList selectWishListByNo(String no) throws Exception {
+		
 		WishList wishListOne = wishListMapper.selectWishListByNo(no);
 		return wishListOne;
 	};
-	
+	@Override
 	public ArrayList<WishList> selectWishListAll() throws Exception {
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		WishListMapper wishListMapper = sqlSession.getMapper(WishListMapper.class);
+		
 		ArrayList<WishList> wishList = (ArrayList<WishList>)wishListMapper.selectWishListAll();
 		return wishList;
 	};
-	
-	public int updateWishListById(WishList wishList) throws Exception {
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		WishListMapper wishListMapper = sqlSession.getMapper( WishListMapper.class);
-		int updateCount = wishListMapper.updateWishListById(wishList);
-		return updateCount;
-	};
-	
+
+	@Override
 	public int deleteWishListById(int no) throws Exception {
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		WishListMapper wishListMapper = sqlSession.getMapper( WishListMapper.class);
+		
 		int deleteCount = wishListMapper.deleteWishListById(no);
 		return deleteCount;
 	};
