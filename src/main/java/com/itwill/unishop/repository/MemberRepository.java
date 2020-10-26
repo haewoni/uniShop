@@ -8,6 +8,8 @@ public interface MemberRepository {
 	
 	public int insertMember(Member newMember);
 	
+	//public 
+	
 	public int updateMember(Member updateMember);
 	
 	public int deleteMember(String member_id);
