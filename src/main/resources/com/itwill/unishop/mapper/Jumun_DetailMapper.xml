@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.itwill.unishop.mapper.Jumun_Detail">
+<mapper namespace="com.itwill.unishop.mapper.Jumun_DetailMapper">
 
 
 	<!-- create -->
@@ -8,12 +8,13 @@
 			parameterType="com.itwill.unishop.domain.Jumun_Detail">
 		<selectKey resultType="java.lang.Integer"
 				   keyProperty="jumun_d_no" order="BEFORE">
-			select jumun_d_no_seq.nextval FROM dual
+			select JUMUN_DETAIL_JUMUN_D_NO_SEQ.nextval from dual
 		</selectKey>
-		insert into JUMUN_DETAIL
+		insert into Jumun_Detail
 		values (#{jumun_d_no}, #{jumun_d_product_name}, #{jumun_d_product_size},
-				#{jumun_d_product_color}, #{jumun_d_product_price},
-				#{jumun_d_product_qty}, #{jumun_no}, #{product_no}) 
+				#{jumun_d_product_price}, #{jumun_d_product_qty}, 
+				#{jumun_no}, #{product_no})
+		 
 	</insert>
 	
 	
@@ -26,8 +27,7 @@
 			parameterType="java.lang.Integer"
 			resultType="com.itwill.unishop.domain.Jumun_Detail">
 		select jumun_d_no, jumun_d_product_name, jumun_d_product_size,
-			   jumun_d_product_color, jumun_d_product_price, jumun_d_product_qty,
-			   jumun_no, product_no
+			   jumun_d_product_price, jumun_d_product_qty, jumun_no, product_no
 		from JUMUN_DETAIL
 		where jumun_no=#{jumun_no}
 	</select>
@@ -36,13 +36,13 @@
 	<!-- update -->
 	<update id="updateJumunDetail"
 			parameterType="com.itwill.unishop.domain.Jumun_Detail">
+		
 		update JUMUN_DETAIL 
-		set JUMUN_D_PRODUCT_NAME=#{JUMUN_D_PRODUCT_NAME},
-		    JUMUN_D_PRODUCT_SIZE=#{JUMUN_D_PRODUCT_SIZE},
-		    JUMUN_D_PRODUCT_COLOR=#{JUMUN_D_PRODUCT_COLOR},
-		    JUMUN_D_PRODUCT_PRICE=#{JUMUN_D_PRODUCT_PRICE},
-		    JUMUN_D_PRODUCT_QTY=#{JUMUN_D_PRODUCT_QTY}
-		where JUMUN_NO=#{JUMUN_NO} AND PRODUCT_NO=#{PRODUCT_NO}
+		set jumun_d_product_name=#{jumun_d_product_name},
+		    jumun_d_product_size=#{jumun_d_product_size},
+		    jumun_d_product_price=#{jumun_d_product_price},
+		    jumun_d_product_qty=#{jumun_d_product_qty}
+		where jumun_no=#{jumun_no} AND product_no=#{product_no}
 	</update>
 	
 	

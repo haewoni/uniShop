@@ -7,10 +7,10 @@
 	<insert id="insertJumun" parameterType="com.itwill.unishop.domain.Jumun">
 		<selectKey resultType="java.lang.Integer"
 			keyProperty="jumun_no" order="BEFORE">
-			select jumun_no_SEQ.nextval from dual
+			select jumun_jumun_no_SEQ.nextval from dual
 		</selectKey>
 		insert into JUMUN 
-		values (#{jumun_jumun_no_SEQ.nextval}, #{jumun_date}, #{jumun_status},
+		values (#{jumun_no}, #{jumun_date}, #{jumun_status},
 				#{jumun_tot_price}, #{card_no}, #{card_expire_date},
 				#{card_cvc}, #{card_member_name}, #{member_id},
 				#{delivery_no})

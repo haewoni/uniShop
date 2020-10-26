@@ -10,7 +10,7 @@ public interface Jumun_DetailRepository {
 	
 	public List<Jumun_Detail> selectAll();
 	
-	public Jumun_Detail selectByNo(int jumun_no);
+	public List<Jumun_Detail> selectByNo(int jumun_no);
 	
 	public int updateJumunDetail(Jumun_Detail jumun_Detail);
 	
