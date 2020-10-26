@@ -1,35 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.itwill.unishop.mapper.ReviewMapper">
-	<insert id="insert" parameterType="com.itwill.unishop.domain.Review">
+	<insert id="insertReview" parameterType="com.itwill.unishop.domain.Review">
 		INSERT INTO review (review_no, review_name, review_email, review_title,
 		                    review_rating, review_content, member_id, product_no)
 		     VALUES (#{review_no}, #{review_name}, #{review_email}, #{review_title},
 		             #{review_rating}, #{review_content}, #{member_id}, #{product_no})
 	</insert>
-	<select id="selectByNo" resultType="com.itwill.unishop.domain.Review">
+	<select id="selectReviewByNo" parameterType="java.lang.Integer"  resultType="com.itwill.unishop.domain.Review">
 			select review_no, review_name, review_email, review_title,
 			       review_rating, review_content, member_id, product_no
 			  from review
 			 where review_no = #{review_no}      
 	</select>
-	<select id="selectAll" resultType="com.itwill.unishop.domain.Review">
+	<select id="selectReviewAll" resultType="com.itwill.unishop.domain.Review">
 			select * from review
 	</select>
-	<update id="update" parameterType="com.itwill.unishop.domain.Review">
+	<update id="updateReviewById" parameterType="com.itwill.unishop.domain.Review">
 		update review 
-		   set review_no = #{review_no},
-		       review_name = #{review_name}, 
+		   set review_name = #{review_name}, 
 		       review_email = #{review_email}, 
 		       review_title = #{review_title}, 
-		       review_rating = #{review_rating}
-		       review_content = #{review_content}
-		       review_rating = #{review_rating}
-		       member_id = #{member_id}
+		       review_rating = #{review_rating},
+		       review_content = #{review_content},
+		       member_id = #{member_id},
 		       product_no = #{product_no}
 		 where review_no = #{review_no}         
 	</update>
-	<delete id="delete" parameterType="com.itwill.unishop.domain.Review">
+	<delete id="deleteReviewById" parameterType="com.itwill.unishop.domain.Review">
 		delete from review where review_no = #{review_no} 
 	</delete>
 </mapper>
