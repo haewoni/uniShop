@@ -1,21 +1,24 @@
 package com.itwill.unishop.service.test;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.itwill.unishop.domain.Jumun_Detail;
-import com.itwill.unishop.service.Jumun_DetailServiceImpl;
+import com.itwill.unishop.service.Jumun_DetailService;
 
 public class Jumun_DetailServiceTestMain {
 
 	public static void main(String[] args) {
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring/application-config.xml");
+		Jumun_DetailService jumun_DetailService = (Jumun_DetailService) applicationContext.getBean("jumun_DetailServiceImpl");
 		
-		Jumun_DetailServiceImpl jumun_DetailServiceImpl = new Jumun_DetailServiceImpl();
-		
-		System.out.println(jumun_DetailServiceImpl.insertJumunDetail(
-				new Jumun_Detail(-9999, "PALACE", "L", 199000, "3", 4, "432733")));
-		System.out.println(jumun_DetailServiceImpl.updateJumunDetail(
-				new Jumun_Detail(-9999, "BAPE", "M", 120000, "2", 5, "433113")));
-		System.out.println(jumun_DetailServiceImpl.selectAll());
-		System.out.println(jumun_DetailServiceImpl.selectByNo(3));
-		System.out.println(jumun_DetailServiceImpl.deleteJumunDetail(2));
+		System.out.println(jumun_DetailService.insertJumunDetail(
+				new Jumun_Detail(-9999, "PALACE", "L", 199000, "3", 3, "432733")));
+		System.out.println(jumun_DetailService.updateJumunDetail(
+				new Jumun_Detail(-9999, "BAPE", "M", 120000, "1", 3, "432733")));
+		System.out.println(jumun_DetailService.selectAll());
+		System.out.println(jumun_DetailService.selectByNo(3));
+		System.out.println(jumun_DetailService.deleteJumunDetail(2));
 		
 	}
 
