@@ -32,7 +32,7 @@ public class Jumun_DetailRepositoryImpl implements Jumun_DetailRepository {
 	}
 
 	@Override
-	public Jumun_Detail selectByNo(int jumun_no) {
+	public List<Jumun_Detail> selectByNo(int jumun_no) {
 		return jumun_DetailMapper.selectByNo(jumun_no);
 	}
 

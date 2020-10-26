@@ -10,7 +10,7 @@ public interface JumunRepository {
 	
 	public List<Jumun> selectAll();
 	
-	public Jumun selectById(String member_id);
+	public List<Jumun> selectById(String member_id);
 	
 	public int updateJumun(Jumun jumun);
 	

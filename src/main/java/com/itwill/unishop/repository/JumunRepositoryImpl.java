@@ -33,7 +33,7 @@ public class JumunRepositoryImpl implements JumunRepository{
 	}
 
 	@Override
-	public Jumun selectById(String member_id) {
+	public List<Jumun> selectById(String member_id) {
 		return jumunMapper.selectById(member_id);
 	}
 
