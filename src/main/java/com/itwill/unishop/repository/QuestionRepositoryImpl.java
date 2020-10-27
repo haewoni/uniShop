@@ -37,14 +37,14 @@ public class QuestionRepositoryImpl implements QuestionRepository, QuestionMappe
 		return rowcount;
 	}
 	@Override
-	public int deleteQuestion(String question_no) {
+	public int deleteQuestion(int question_no) {
 		int rowcount = questionMapper.deleteQuestion(question_no);
 		return rowcount;
 	}
 
 	@Override
-	public int updateQuestion(String question_no) {
-		int rowcount = questionMapper.updateQuestion(question_no);
+	public int updateQuestion(Question updateQuestion) {
+		int rowcount = questionMapper.updateQuestion(updateQuestion);
 		return rowcount;
 	}
 

@@ -12,9 +12,9 @@ public interface QuestionMapper {
 	
 	public int insertQuestion(Question question);
 	
-	public int deleteQuestion(String question_no);
+	public int deleteQuestion(int question_no);
 	
-	public int updateQuestion(String question_no);
+	public int updateQuestion(Question updatequestion);
 
 
 }

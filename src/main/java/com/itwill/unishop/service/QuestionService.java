@@ -27,9 +27,9 @@ public interface QuestionService {
 	/*
 	 * 질문 지우기
 	 */
-	public int deleteQuestion(String question_no);
+	public int deleteQuestion(int question_no);
 	/*
 	 * 질문 수정하기
 	 */
-	public int updateQuestion(String question_no);
+	public int updateQuestion(Question updateQuestion);
 }
