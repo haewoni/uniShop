@@ -12,11 +12,19 @@ public class MemberRepositoryImpl implements MemberRepository{
 	private MemberMapper memberMapper;
 
 	@Override
+	public Member loginMember(String member_id, String member_password) {
+		return memberMapper.loginMember(member_id, member_password);
+	}
+	@Override
 	public Member selectMemberById(String member_id) {
 		Member member = memberMapper.selectMemberById(member_id);
 		return member;
 	}
-
+	
+	@Override
+	public Member selectAddressById(String member_id) {
+		return memberMapper.selectAddressById(member_id);
+	}
 	@Override
 	public int insertMember(Member newMember) {
 		int rowcount = memberMapper.insertMember(newMember);
@@ -34,5 +42,6 @@ public class MemberRepositoryImpl implements MemberRepository{
 		int rowcount = memberMapper.deleteMember(member_id);
 		return rowcount;
 	}
+
 
 }
