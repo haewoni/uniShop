@@ -8,11 +8,11 @@ public interface QuestionRepository {
 	
 	public ArrayList<Question> selectAll();
 	
-	public Question selectByNo(String question_no);
+	public Question selectById(String member_id);
 	
 	public int insertQuestion(Question question);
 	
-	public int deleteQuestion(String question_no);
+	public int deleteQuestion(int question_no);
 	
-	public int updateQuestion(String question_no);
+	public int updateQuestion(Question updateQuestion);
 }

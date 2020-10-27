@@ -26,8 +26,8 @@ public class QuestionRepositoryImpl implements QuestionRepository, QuestionMappe
 	}
 
 	@Override
-	public Question selectByNo(String question_no) {
-		Question question = questionMapper.selectByNo(question_no);
+	public Question selectById(String member_id) {
+		Question question = questionMapper.selectById(member_id);
 		return question;
 	}
 	
@@ -37,14 +37,14 @@ public class QuestionRepositoryImpl implements QuestionRepository, QuestionMappe
 		return rowcount;
 	}
 	@Override
-	public int deleteQuestion(String question_no) {
+	public int deleteQuestion(int question_no) {
 		int rowcount = questionMapper.deleteQuestion(question_no);
 		return rowcount;
 	}
 
 	@Override
-	public int updateQuestion(String question_no) {
-		int rowcount = questionMapper.updateQuestion(question_no);
+	public int updateQuestion(Question updateQuestion) {
+		int rowcount = questionMapper.updateQuestion(updateQuestion);
 		return rowcount;
 	}
 

@@ -5,7 +5,10 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import com.itwill.unishop.domain.Product;
+import com.itwill.unishop.domain.Member;
+import com.itwill.unishop.repository.MemberRepository;
 import com.itwill.unishop.repository.ProductRepository;
 
 @Service
