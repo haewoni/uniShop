@@ -17,13 +17,22 @@ import com.itwill.unishop.repository.MemberRepository;
 public class MemberServiceImpl implements MemberService{
 	@Autowired
 	private MemberRepository memberRepository;
-	
+
+	//회원의 정보 뽑아내기
 	@Override
 	public Member selectMemberById(String member_id) {
-		
+
 		return memberRepository.selectMemberById(member_id);
 	}
 
+	//회원 주소검색
+	@Override
+	public Member selectAddressById(String member_id) {
+
+		return memberRepository.selectAddressById(member_id);
+	}
+
+	//회원가입
 	@Override
 	public int insertMember(Member newMember) throws ExistedMemberException{
 		if(memberRepository.isExistMember(newMember.getMember_id())==1) {
@@ -32,24 +41,7 @@ public class MemberServiceImpl implements MemberService{
 		return memberRepository.insertMember(newMember);
 	}
 
-	@Override
-	public int updateMember(Member updateMember) {
-		
-		return memberRepository.updateMember(updateMember);
-	}
-
-	@Override
-	public int deleteMember(String member_id) {
-		
-		return memberRepository.deleteMember(member_id);
-	}
-
-	@Override
-	public Member selectAddressById(String member_id) {
-		
-		return memberRepository.selectAddressById(member_id);
-	}
-
+	//회원 로그인
 	@Override
 	public Member loginMember(String member_id, String member_password)
 			throws PasswordMismatchException, MemberNotFoundException {
@@ -57,13 +49,23 @@ public class MemberServiceImpl implements MemberService{
 		if(member==null) {
 			throw new MemberNotFoundException("등록되지 않은 회원입니다.");
 		}
-		if(member.isMatchPassword(member_password)) {
+		if(!member.isMatchPassword(member_password)) {
 			throw new PasswordMismatchException("비밀번호가 일치하지 않습니다.");
 		}
 		return member;
 	}
 
+	//회원정보 수정
+	@Override
+	public int updateMember(Member updateMember) {
 
-	
-	
+		return memberRepository.updateMember(updateMember);
+	}
+	//회원삭제
+	@Override
+	public int deleteMember(String member_id) {
+
+		return memberRepository.deleteMember(member_id);
+	}
+
 }
