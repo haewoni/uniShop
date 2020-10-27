@@ -22,8 +22,8 @@ public class QuestionServiceImpl implements QuestionService{
 	}
 
 	@Override
-	public Question selectByNo(String question_no) {
-		Question question = questionRepository.selectByNo(question_no);
+	public Question selectById(String member_id) {
+		Question question = questionRepository.selectById(member_id);
 		return question;
 	}
 

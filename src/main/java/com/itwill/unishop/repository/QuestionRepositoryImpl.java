@@ -26,8 +26,8 @@ public class QuestionRepositoryImpl implements QuestionRepository, QuestionMappe
 	}
 
 	@Override
-	public Question selectByNo(String question_no) {
-		Question question = questionMapper.selectByNo(question_no);
+	public Question selectById(String member_id) {
+		Question question = questionMapper.selectById(member_id);
 		return question;
 	}
 	
