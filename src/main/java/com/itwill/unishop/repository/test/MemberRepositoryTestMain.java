@@ -25,9 +25,12 @@ public class MemberRepositoryTestMain {
 		//System.out.println(memberRepository.updateMember(new Member("jongjong","123456","이종호","010-9999-9999","qwer@gmail.com","집","12345","대한민국","서울","서울시 양천구 신목동","강서고 105호")));
 		//Member update = memberRepository.updateMember(updateMember)
 		//System.out.println(memberRepository.updateMember(member));
+		//삭제
 		//System.out.println(memberRepository.deleteMember("jongjong"));
-		//System.out.println(memberRepository.selectMemberById("uni1"));	
-		System.out.println(memberRepository.loginMember("uni1", "1111"));
+		//System.out.println(memberRepository.selectMemberById("uni1"));
+		//주소 찾아보기
+		//System.out.println(memberRepository.selectAddressById("uni1"));
+		//System.out.println(memberRepository.isExistMember("uni5"));
 	}
 
 }

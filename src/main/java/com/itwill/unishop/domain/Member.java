@@ -133,6 +133,13 @@ public class Member {
 		this.member_address2 = member_address2;
 	}
 
+	public boolean isMatchPassword(String password) {
+		boolean isMatchPassword = false;
+		if (this.member_password.equals(password)) {
+			isMatchPassword = true;
+		}
+		return isMatchPassword;
+	}
 	@Override
 	public String toString() {
 		return "Member [member_id=" + member_id + ", member_password=" + member_password + ", member_name="
