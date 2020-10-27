@@ -8,10 +8,11 @@ public interface MemberRepository {
 	
 	public int insertMember(Member newMember);
 	
-	//public 
+	public Member selectAddressById(String member_id);
 	
 	public int updateMember(Member updateMember);
 	
 	public int deleteMember(String member_id);
 	
+	public Member loginMember(String member_id, String member_password);
 }

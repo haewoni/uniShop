@@ -1,9 +1,11 @@
 package com.itwill.unishop.service.test;
 
 import org.springframework.context.ApplicationContext;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.itwill.unishop.domain.Delivery;
+
 import com.itwill.unishop.service.DeliveryService;
 import com.itwill.unishop.service.DeliveryServiceImpl;
 
@@ -19,6 +21,8 @@ public class DeliveryServiceTestMain {
 		System.out.println(deliveryService.selectByNo("TEST"));
 		System.out.println(deliveryService.selectAll());
 		System.out.println(deliveryService.deleteDelivery("TEST"));
+
+
 	}
 
 }
