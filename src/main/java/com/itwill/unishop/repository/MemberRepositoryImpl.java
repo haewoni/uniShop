@@ -10,11 +10,7 @@ import com.itwill.unishop.mapper.MemberMapper;
 public class MemberRepositoryImpl implements MemberRepository{
 	@Autowired
 	private MemberMapper memberMapper;
-
-	@Override
-	public Member loginMember(String member_id, String member_password) {
-		return memberMapper.loginMember(member_id, member_password);
-	}
+	
 	@Override
 	public Member selectMemberById(String member_id) {
 		Member member = memberMapper.selectMemberById(member_id);
@@ -43,5 +39,9 @@ public class MemberRepositoryImpl implements MemberRepository{
 		return rowcount;
 	}
 
+	@Override
+	public int isExistMember(String member_id) {
+		return memberMapper.isExistMember(member_id);
+	}
 
 }

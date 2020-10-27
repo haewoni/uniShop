@@ -9,11 +9,10 @@
 		WHERE member_id=#{member_id}
 	</select>
 	
-	<!-- login -->
-	<select id="loginMember" parameterType="string" resultType="com.itwill.unishop.domain.Member">
-		select member_id, member_password
-		from member
-		where member_id=#{member_id} and member_password=#{member_password}
+	<select id="isExistMember" parameterType="string" resultType="_int">
+		select count(member_id) 
+		from member 
+		where member_id=#{member_id}
 	</select>
 	
 	<!-- address 뽑기 -->
@@ -22,6 +21,16 @@
 		from member
 		where member_id = #{member_id}
 	</select>
+	
+	<!-- address 업뎃 -->
+	<update id="updateAddress" parameterType="com.itwill.unishop.domain.Member">
+	update member 
+	set member_address_name=#{member_address_name},member_address_zipcode=#{member_address_zipcode},
+	member_address_country=#{member_address_country},member_address_city=#{member_address_city},
+	member_address1=#{member_address1},member_address2=#{member_address2}
+	where member_id=#{member_id}
+	</update>
+	
 	<!-- insert -->
 	<insert id="insertMember" parameterType="com.itwill.unishop.domain.Member">
 		INSERT INTO member (member_id, member_password, member_name, member_phone, member_email) 
@@ -29,7 +38,7 @@
 	</insert>
 	
 	<!-- update -->
-	<update id="updateMember" parameterType="com.itwill.unishop.domain.Member" >
+	<update id="updateMember" parameterType="com.itwill.unishop.domain.Member">
 		update member set member_password=#{member_password},member_name=#{member_name},member_email=#{member_phone},
 				member_address_name=#{member_address_name},member_address_zipcode=#{member_address_zipcode},
 				member_address_country=#{member_address_country},member_address_city=#{member_address_city},
