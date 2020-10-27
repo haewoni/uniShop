@@ -10,14 +10,14 @@
 	</select>
 	
 	<!-- login -->
-	<select id="loginMember" parameterType="com.itwill.unishop.domain.Member">
+	<select id="loginMember" parameterType="string" resultType="com.itwill.unishop.domain.Member">
 		select member_id, member_password
 		from member
 		where member_id=#{member_id} and member_password=#{member_password}
 	</select>
 	
 	<!-- address 뽑기 -->
-	<select id="selectAddressById">
+	<select id="selectAddressById" parameterType="String" resultType="com.itwill.unishop.domain.Member">
 		select member_address_name, member_address_zipcode, member_address_country, member_address1, member_address2
 		from member
 		where member_id = #{member_id}

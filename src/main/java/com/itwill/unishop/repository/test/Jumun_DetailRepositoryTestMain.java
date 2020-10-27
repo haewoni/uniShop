@@ -17,6 +17,7 @@ public class Jumun_DetailRepositoryTestMain {
 		/********************** insert **********************/
 //		Jumun_Detail jumun_Detail = new Jumun_Detail(-9999, "test", "2XL", 158000, "2", 3, "429179");
 //		System.out.println(jumun_DetailRepository.insertJumunDetail(jumun_Detail));
+
 				
 		
 		
@@ -33,7 +34,7 @@ public class Jumun_DetailRepositoryTestMain {
 		/********************** update **********************/
 //		Jumun_Detail jumun_Detail = new Jumun_Detail(-9999, "Overr", "XL", 99000, "1", 3, "425213");
 //		System.out.println(jumun_DetailRepository.updateJumunDetail(jumun_Detail));
-		// jumun_no 가 3번이면서 product_no가 425213 둘 다 충족하는것을 찾아 제품명,사이즈,가격,수량 을 update 합니다.
+//		 jumun_no 가 3번이면서 product_no가 425213 둘 다 충족하는것을 찾아 제품명,사이즈,가격,수량 을 update 합니다.
 		
 		
 		/********************** delete **********************/
