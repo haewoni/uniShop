@@ -41,10 +41,15 @@ public class CartRepositoryImpl implements CartRepository {
 	}
 
 	@Override
-	public int deleteCart(int cart_no) {
+	public int deleteCartByCartNo(int cart_no) {
 
-		int deleteRowCount = cartMapper.deleteCart(cart_no);
+		int deleteRowCount = cartMapper.deleteCartByCartNo(cart_no);
 		return deleteRowCount;
 	}
-
+	
+	@Override
+	public int deleteCartByMemberId(String member_id) {
+		int deleteRowCount = cartMapper.deleteCartByMemberId(member_id);
+		return deleteRowCount;
+	}
 }

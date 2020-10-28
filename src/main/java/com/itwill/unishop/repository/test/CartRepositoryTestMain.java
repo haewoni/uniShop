@@ -13,12 +13,12 @@ public class CartRepositoryTestMain {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring/application-config.xml");
 		CartRepository cartRepository = (CartRepository) applicationContext.getBean("cartRepository");
 		System.out.println(cartRepository.selectCartAll("uni1"));
-		//Cart insertCart = new Cart(-1,4,5000,"M","BLUE","uni1","431464");
+		//Cart insertCart = new Cart(-1,4,5000,"M","BLUE","uni3","431464");
 		//System.out.println(cartRepository.insertCart(insertCart));
-		//Cart updateCart = new Cart(10,16,5000,"M","BLUE","uni1","431464");
+		//Cart updateCart = new Cart(6,16,5000,"M","BLUE","uni1","431464");
 		//System.out.println(cartRepository.updateCart(updateCart));
-		//System.out.println(cartRepository.deleteCart(11));
-		
+		//System.out.println(cartRepository.deleteCartByCartNo(6));
+		//System.out.println(cartRepository.deleteCartByMemberId("uni3"));
 	}
 
 }

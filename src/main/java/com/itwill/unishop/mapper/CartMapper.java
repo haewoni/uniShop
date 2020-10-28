@@ -10,7 +10,9 @@ public interface CartMapper {
 	
 	public int insertCart(Cart cart);
 	
-	public int deleteCart(int cart_no);
+	public int deleteCartByCartNo(int cart_no);
+	
+	public int deleteCartByMemberId(String member_id);
 	
 	public int updateCart(Cart updateCart);
 	
