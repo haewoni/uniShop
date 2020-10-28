@@ -21,11 +21,13 @@ public class JumunController {
 	@Autowired
 	private MemberService memberService;
 
+	/*
+	 * jumun - address
+	 */
 	@RequestMapping("/address_form")
 	public String address_form() {
 		return "address_form"; 
 	}
-
 	@RequestMapping(value = "/jumun_address_action", method = RequestMethod.GET)
 	public String jumun_address_action_GET() {
 		return "address_form"; 
@@ -34,6 +36,23 @@ public class JumunController {
 	public String jumun_address_action_POST(HttpServletRequest request,@RequestParam String member_id, @RequestParam String member_password) {
 		String forwardPath = "delivery_form";
 	
+		return forwardPath;
+	}
+	/*
+	 * jumun - delivery
+	 */
+	@RequestMapping("/delivery_form")
+	public String delivery_form() {
+		return "delivery_form"; 
+	}
+	@RequestMapping(value = "/jumun_delivery_action", method = RequestMethod.GET)
+	public String jumun_delivery_action_GET() {
+		return "delivery_form"; 
+	}
+	@RequestMapping(value = "/jumun_delivery_action", method = RequestMethod.POST)
+	public String jumun_delivery_action_POST(HttpServletRequest request,@RequestParam String member_id, @RequestParam String member_password) {
+		String forwardPath = "payment_form";
+		
 		return forwardPath;
 	}
 	

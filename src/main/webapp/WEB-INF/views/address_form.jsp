@@ -6,6 +6,10 @@
 <title>Checkout</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript">
+	function delivery(){
+		document.f.action='delivery_form';
+		document.f.submit();
+		}
 </script>
 </head>
 <body bgcolor=#FFFFFF text=#000000 leftmargin=0 topmargin=0
