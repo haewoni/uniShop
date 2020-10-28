@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="member_login_insert_form">멤버 로그인 폼입니다.</a>
+
+	<div class="view-button">
+		<a class="btn btn-primary" href="member_login_form">VIEW COLLECTION</a>
+	</div>
+
 </body>
 </html>
