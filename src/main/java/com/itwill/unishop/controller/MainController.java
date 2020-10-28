@@ -15,9 +15,9 @@ public class MainController {
 	
 	
 	/********************** main **********************/
-	@RequestMapping("/unishop_main.do")
-	public String unishop_main() {
-		return "unishop_main";
+	@RequestMapping("/main")
+	public String main() {
+		return "main";
 	}
 	
 	

@@ -9,7 +9,6 @@
 <script type="text/javascript">
    function login() {
 		document.f.action='main';
-		
 		document.f.submit();
 	   } 
 </script>
@@ -18,7 +17,7 @@
 	<form name="f" action="member_login_action" method="POST">
 		<input type="text" name="id">
 		<input type="text" name="password">
-		<input type="submit">
+		<input type="submit" onclick="login()">
 	</form>
 </body>
 </html>
