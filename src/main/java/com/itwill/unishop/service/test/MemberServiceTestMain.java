@@ -43,7 +43,7 @@ public class MemberServiceTestMain {
 		//회원 로그인(아이디 존재 안함)
 		//System.out.println(memberService.loginMember("uni6", "1234"));
 		//회원 로그인 확인
-		//System.out.println(memberService.loginMember("uni5", "1234"));
+		System.out.println(memberService.loginMember("uni5", "1234"));
 	}
 	
 }
