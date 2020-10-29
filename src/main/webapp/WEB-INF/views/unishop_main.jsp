@@ -8,9 +8,13 @@
 </head>
 <body>
 
-	<div class="view-button">
-		<a class="btn btn-primary" href="member_login_form">VIEW COLLECTION</a>
+	<div>
+		<a href="unishop_main">Main</a>
 	</div>
+	<a href="maleTopProduct_list">남성 상의</a>
+	<a href="maleBottomProduct_list">남성 하의</a>
+	<a href="femaleTopProduct_list">여성 상의</a>
+	<a href="femaleBottomProduct_list">여성 하의</a>
 
 </body>
 </html>
