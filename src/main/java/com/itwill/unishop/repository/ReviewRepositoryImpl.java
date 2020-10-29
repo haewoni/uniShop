@@ -21,27 +21,15 @@ public class ReviewRepositoryImpl implements ReviewRepository{
 		return insertCount;
 	};
 	@Override
-	public Review selectReviewByNo(int no) throws Exception {
+	public Review selectReviewByNo(String product_no) throws Exception {
 		
-		Review reviewOne = reviewMapper.selectReviewByNo(no);
+		Review reviewOne = reviewMapper.selectReviewByNo(product_no);
 		return reviewOne;
 	};
 	@Override
-	public ArrayList<Review> selectReviewAll() throws Exception {
-		
-		ArrayList<Review> reviewsList = (ArrayList<Review>)reviewMapper.selectReviewAll();
+	public ArrayList<Review> selectReviewAll(String member_id){
+		ArrayList<Review> reviewsList = (ArrayList<Review>)reviewMapper.selectReviewAll(member_id);
 		return reviewsList;
 	};
-	@Override
-	public int updateReviewById(Review review) throws Exception {
-		
-		int updateCount = reviewMapper.updateReviewById(review);
-		return updateCount;
-	};
-	@Override
-	public int deleteReviewById(int no) throws Exception {
-		
-		int deleteCount = reviewMapper.deleteReviewById(no);
-		return deleteCount;
-	}
+
 }

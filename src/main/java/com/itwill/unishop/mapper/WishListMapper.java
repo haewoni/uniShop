@@ -7,12 +7,13 @@ public interface WishListMapper {
 
 	public int insertWishList(WishList wishList);
 	
-	public WishList selectWishListByNo(String no);
+	//public WishList selectWishListByNo(String no);
 	
-	public ArrayList<WishList> selectWishListAll();
+	public ArrayList<WishList> selectWishListAll(String member_id);
 	
+	public int deleteWishListById(Integer no);
 	
-	public int deleteWishListById(int no);
+	public int deleteWishListAll(String member_id);
 	
 	
 }
