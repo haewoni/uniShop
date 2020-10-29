@@ -30,7 +30,7 @@ public class MemberController {
 	}
 
 	@RequestMapping(value = "/member_login_action", method = RequestMethod.GET)
-	public String member_login_Action_GET() {
+	public String member_login_action_GET() {
 		return "member_login_insert_form"; 
 	}
 	@RequestMapping(value = "/member_login_action", method = RequestMethod.POST)
@@ -51,13 +51,11 @@ public class MemberController {
 		}
 		return forwardPath;
 	}
-	
+	@RequestMapping(value = "/member_profile")
 	public String member_profile(@RequestParam String member_id) {
-		
-		return "";
+		return "member_profile";
 	}
-
-
+	
 
 	//모든 Exception을 던지면 이곳으로 날라온다
 	@ExceptionHandler(Exception.class)
