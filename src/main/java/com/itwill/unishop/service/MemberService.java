@@ -20,6 +20,8 @@ public interface MemberService {
 	public Member loginMember(String member_id, String member_password) throws PasswordMismatchException,MemberNotFoundException;
 	//회원정보 수정
 	public int updateMember(Member updateMember);
+	//회원정보 수정--주소
+	public int updateAddress(Member updateMember);
 	//회원 삭제
 	public int deleteMember(String member_id);
 	

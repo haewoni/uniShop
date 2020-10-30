@@ -35,11 +35,12 @@ public class JumunController {
 		return "redirect:jumun_address_form"; 
 	}
 	@RequestMapping(value = "/jumun_address_action", method = RequestMethod.POST)
-	public String jumun_address_action_POST(Model model,HttpSession session) {
+	public String jumun_address_action_POST(Model model,HttpSession session,@ModelAttribute Member member) {
+		System.out.println("sdfs");
+		String forwardPath = "";
+		Member loginMember = (Member)session.getAttribute("loginMember");
 		session.setAttribute("loginMember", new Member("uni5", "1111", "tttt", "1111",
 				"ttt@naver.com"));
-		Member loginMember = (Member)session.getAttribute("loginMember");
-		String forwardPath = "";
 		memberService.updateMember(loginMember);
 		forwardPath="jumun_delivery_form";
 		return forwardPath;

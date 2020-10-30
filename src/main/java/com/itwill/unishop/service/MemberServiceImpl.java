@@ -61,11 +61,18 @@ public class MemberServiceImpl implements MemberService{
 
 		return memberRepository.updateMember(updateMember);
 	}
+	//회원정보 수정--주소
+	@Override
+	public int updateAddress(Member updateMember) {
+		return memberRepository.updateAddress(updateMember);
+	}
 	//회원삭제
 	@Override
 	public int deleteMember(String member_id) {
 
 		return memberRepository.deleteMember(member_id);
 	}
+
+
 
 }
