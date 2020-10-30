@@ -1,5 +1,7 @@
 package com.itwill.unishop.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -37,18 +39,18 @@ public class MemberController {
 		return "member_login_register_form"; 
 	}
 	
-	//멤버 로그인을 해보자
+	//멤버 로그인을 해보자 => 로그인 성공하면 메인으로, 실패하면 로그인_등록폼으로
 	@RequestMapping(value = "/member_login_action", method = RequestMethod.GET)
 	public String member_login_action_GET() {
 		return "member_login_register_form"; 
 	}
 	@RequestMapping(value = "/member_login_action", method = RequestMethod.POST)
-	public String member_login_action_POST(Model model,@RequestParam String member_id, @RequestParam String member_password) {
+	public String member_login_action_POST(Model model,HttpSession session,@RequestParam String member_id, @RequestParam String member_password) {
 		String forwardPath = "";
 		try {
 			Member loginMember=memberService.loginMember(member_id, member_password);
-			model.addAttribute("loginMember",loginMember);
-			model.addAttribute("sUserId", member_id);
+			session.setAttribute("loginMember",loginMember);
+			session.setAttribute("sMemberId", member_id);
 			forwardPath = "redirect:unishop_main";
 		} catch (PasswordMismatchException e) {
 			model.addAttribute("msg2", e.getMessage());
@@ -59,22 +61,24 @@ public class MemberController {
 			model.addAttribute("msg1", e.getMessage());
 			e.printStackTrace();
 			forwardPath = "member_login_register_form";
+		}catch (Exception e) {
+			e.printStackTrace();
 		}
 		return forwardPath;
 	}
 	
+	
+	/*
 	//회원가입을 해보자
 	@RequestMapping(value="/member_register_action", method = RequestMethod.GET)
 	public String member_register_action() {
 		return "member_login_register_form";
 		}
 	
-	
+	//회원가입 성공 => 로그인_등록 폼으로 이동
 	@RequestMapping(value="/member_register_action", method = RequestMethod.POST)
-	public String member_register_action(Model model,@RequestParam String member_id, @RequestParam String member_password,@RequestParam String member_name,@RequestParam String member_email,
-			@RequestParam String member_phone,@RequestParam String member_pass) {
+	public String member_register_action(Model model, @ModelAttribute Member newMember, @RequestParam String member_pass) {
 		String forwardPath="";
-		Member newMember = new Member(member_id,member_password,member_name,member_email,member_phone,null,null,null,null,null,null);
 		try {
 			memberService.insertMember(newMember);
 			if(newMember.getMember_password().equalsIgnoreCase(member_pass)) {
@@ -132,14 +136,14 @@ public class MemberController {
 		}
 		return forwardPath;
 	}
-
-
+	*/
+	/*
 	//모든 Exception을 던지면 이곳으로 날라온다
 	@ExceptionHandler(Exception.class)
 	public String member_error_handle(Exception e) {
 		return "error_handle";
 	}
-
+	*/
 
 
 }
