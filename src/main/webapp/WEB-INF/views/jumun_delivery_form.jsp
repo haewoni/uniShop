@@ -5,12 +5,6 @@
 <head>
 <title>Checkout</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script type="text/javascript">
-	function payment() {
-		document.f.action='payment_form';
-		document.f.submit();
-		}
-</script>
 </head>
 <body bgcolor=#FFFFFF text=#000000 leftmargin=0 topmargin=0
 	marginwidth=0 marginheight=0>
@@ -34,13 +28,13 @@
 							<td width=100 align=center bgcolor="E6ECDE" height="22">특급 배송:5000원</td>
 							<td width=490 align="left" bgcolor="ffffff"
 								style="padding-left: 10px"><input type="text"
-								style="width: 150" name="member_address_name"></td>
+								style="width: 150" name=""></td>
 						</tr>
 						<tr>
 							<td width=100 align=center bgcolor="E6ECDE" height="22">일반 배송:2000원</td>
 							<td width=490 align="left" bgcolor="ffffff"
 								style="padding-left: 10px"><input type="text"
-								style="width: 150" name="member_name"></td>
+								style="width: 150" name="S"></td>
 						</tr>
 					
 					
@@ -51,7 +45,7 @@
 				<table width=590 border=0 cellpadding=0 cellspacing=0>
 					<tr>
 						<td align=center>
-						<input type="button" value="다음(결제)" onclick="payment()"> 
+						<input type="button" value="다음(결제)" S> 
 					</tr>
 				</table>
 			</td>
