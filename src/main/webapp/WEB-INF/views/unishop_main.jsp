@@ -7,8 +7,16 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body><div>
+<body>
+	<div>
 		<a href="">${sMemberId}님 로그아웃</a>
+		<a href="">${loginMember.member_phone} 님의 핸드폰</a>
+		<a href="">${loginMember.member_address2} 주소상세</a>
+		<a href="">${sMemberId}님 로그아웃</a>		
+		<a href="member_jumun_list_form?member_id=${sMemberId}">주문 목록</a>
+		<a href="member_profile_update_form">수정 폼</a>
+		<a href="member_wishlist_form?member_id=${sMemberId}">찜 목록</a>
+		<a href="member_question_form?member_id=${sMemberId}">QnA 목록</a>		
 	</div>
 	<div>
 		<a href="unishop_main">Main</a>

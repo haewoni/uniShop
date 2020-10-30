@@ -12,6 +12,8 @@ public interface MemberMapper {
 	
 	public int updateMember(Member updateMember);
 	
+	public int updateAddress(Member updateMember);
+	
 	public int deleteMember(String member_id);
 	
 	public int isExistMember(String member_id);

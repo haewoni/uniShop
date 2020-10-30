@@ -37,11 +37,10 @@ public class JumunController {
 		return "redirect:jumun_address_form"; 
 	}
 	@RequestMapping(value = "/jumun_address_action", method = RequestMethod.POST)
-	public String jumun_address_action_POST(Model model,HttpSession session) {
-		session.setAttribute("loginMember", new Member("uni5", "1111", "tttt", "1111",
-				"ttt@naver.com"));
-		Member loginMember = (Member)session.getAttribute("loginMember");
+	public String jumun_address_action_POST(Model model,HttpSession session,@ModelAttribute Member member) {
 		String forwardPath = "";
+		session.setAttribute("loginMember", new Member("uni1", "2222", "t", "t","t", "t", "t", "t", "t", "t" ,"t"));
+		Member loginMember = (Member)session.getAttribute("loginMember");
 		memberService.updateMember(loginMember);
 		forwardPath="jumun_delivery_form";
 		return forwardPath;
@@ -58,9 +57,11 @@ public class JumunController {
 		return "jumun_delivery_form"; 
 	}
 	@RequestMapping(value = "/jumun_delivery_action", method = RequestMethod.POST)
-	public String jumun_delivery_action_POST(Model model,@ModelAttribute Member member) {
+	public String jumun_delivery_action_POST(Model model,HttpSession session, @ModelAttribute Member member) {
 		String forwardPath = " ";
-		memberService.updateMember(member);
+		session.setAttribute("loginMember", new Member("uni1", "2222", "t", "t","t", "t", "t", "t", "t", "t" ,"t"));
+		Member loginMember = (Member)session.getAttribute("loginMember");
+		memberService.updateMember(loginMember);
 		forwardPath="jumun_payment_form";
 		return forwardPath;
 	}

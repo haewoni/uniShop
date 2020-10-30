@@ -68,7 +68,7 @@ public class MemberController {
 	}
 	
 	
-	/*
+	
 	//회원가입을 해보자
 	@RequestMapping(value="/member_register_action", method = RequestMethod.GET)
 	public String member_register_action() {
@@ -80,31 +80,31 @@ public class MemberController {
 	public String member_register_action(Model model, @ModelAttribute Member newMember, @RequestParam String member_pass) {
 		String forwardPath="";
 		try {
-			memberService.insertMember(newMember);
 			if(newMember.getMember_password().equalsIgnoreCase(member_pass)) {
-				System.out.println("회원가입 완료");
-				//model.addAttribute();
+				memberService.insertMember(newMember);
 				forwardPath="redirect:member_login_register_form";
+			}else {
+				forwardPath="member_login_register_form";
 			}
+			
 			
 		} catch (ExistedMemberException e) {
 			model.addAttribute("msg1", e.getMessage());
 			System.out.println("아이디 확인좀요 ㅡㅡ");
 			e.printStackTrace();
 			forwardPath="member_login_register_form";
-		}
+		} 
 		
 		return forwardPath;
 	}
 	
-	
 	@RequestMapping(value = "/member_profile_update_form")
-	public String member_profile_update_form(Model model, @ModelAttribute String member_id) {
+	public String member_profile_update_form(Model model, HttpSession session, @ModelAttribute String member_id) {
 		String forwardPath = "";
 		try {
-			Member memberProfile = memberService.selectMemberById(member_id);
-			model.addAttribute(memberProfile);
-			forwardPath = "member_profile";
+			memberService.selectMemberById(member_id);
+			session.setAttribute("sMemberId", member_id);
+			forwardPath = "member_profile_update_form";
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -119,24 +119,24 @@ public class MemberController {
 	@RequestMapping(value = "/member_profile_update_action", method = RequestMethod.GET)
 	public String member_profile_update_action_GET() {
 
-		return "member_profile";
+		return "member_profile_update_action";
 	}
 
 	
 
 	@RequestMapping(value = "/member_profile_update_action", method = RequestMethod.POST)
-	public String member_profile_update_action_POST(Model model, @ModelAttribute Member member) {
+	public String member_profile_update_action_POST(Model model, HttpSession session, @ModelAttribute Member member) {
 		String forwardPath = "";
 		try {
-			int updateMember = memberService.updateMember(member);
-			model.addAttribute("updateMember", updateMember);
-			forwardPath = "redirect:main";
+			memberService.updateMember(member);
+			session.setAttribute("loginMember", member);
+			forwardPath = "redirect:unishop_main";
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return forwardPath;
 	}
-	*/
+	
 	/*
 	//모든 Exception을 던지면 이곳으로 날라온다
 	@ExceptionHandler(Exception.class)

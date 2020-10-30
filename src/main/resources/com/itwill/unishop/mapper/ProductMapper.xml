@@ -8,17 +8,20 @@
 	
 	<!-- SELECT RANDOM FOUR -->
 	<select id="selectFour" resultType="com.itwill.unishop.domain.Product">
-		SELECT * FROM PRODUCT WHERE ROWNUM <![CDATA[<=]]> 4 ORDER BY dbms_random.value
+		SELECT * FROM (SELECT * FROM PRODUCT ORDER BY dbms_random.value)
+		WHERE ROWNUM <![CDATA[<=]]> 4
 	</select>
 	
 	<!-- SELECT RANDOM EIGHT -->
 	<select id="selectEight" resultType="com.itwill.unishop.domain.Product">
-		SELECT * FROM PRODUCT WHERE ROWNUM <![CDATA[<=]]> 8 ORDER BY dbms_random.value
+		SELECT * FROM (SELECT * FROM PRODUCT ORDER BY dbms_random.value)
+		WHERE ROWNUM <![CDATA[<=]]> 8
 	</select>
 	
 	<!-- SELECT RANDOM THIRTY -->
 	<select id="selectThirty" resultType="com.itwill.unishop.domain.Product">
-		SELECT * FROM PRODUCT WHERE ROWNUM <![CDATA[<=]]> 30 ORDER BY dbms_random.value
+		SELECT * FROM (SELECT * FROM PRODUCT ORDER BY dbms_random.value)
+		WHERE ROWNUM <![CDATA[<=]]> 30
 	</select>
 	
 	<!-- SELECT BY PRODUCT_NO -->
