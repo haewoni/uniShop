@@ -24,7 +24,7 @@ public class ReviewServiceImpl implements ReviewService{
 	}
 	
 	@Override
-	public Review selectReviewByNo(String product_no) throws Exception{
+	public ArrayList<Review> selectReviewByNo(String product_no) throws Exception{
 		return reviewRepository.selectReviewByNo(product_no);
 	}
 	

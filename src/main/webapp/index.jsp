@@ -9,6 +9,8 @@
 <body>
 	<div>
 		<a href="unishop_main">Main</a>
+		<br>
+		<a href="shop_main">Shop</a>
 	</div>
 
 	<a href="product_M_T_list">남성 상의</a>
