@@ -7,7 +7,7 @@ public interface ReviewRepository {
 
 	public int insertReview(Review review) throws Exception;
 	
-	public Review selectReviewByNo(String product_no) throws Exception ;
+	public ArrayList<Review> selectReviewByNo(String product_no) throws Exception ;
 	
 	public ArrayList<Review> selectReviewAll(String member_id) throws Exception;
 
