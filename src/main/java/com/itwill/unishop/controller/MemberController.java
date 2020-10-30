@@ -128,8 +128,8 @@ public class MemberController {
 		String forwardPath = "";
 		try {
 			memberService.updateMember(member);
-			session.setAttribute("updateMember", member);
-			forwardPath = "redirect:main";
+			session.setAttribute("loginMember", member);
+			forwardPath = "redirect:unishop_main";
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
