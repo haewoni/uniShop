@@ -9,6 +9,12 @@ public interface ProductRepository {
 	
 	public ArrayList<Product> selectAll();
 	
+	public ArrayList<Product> selectFour();
+	
+	public ArrayList<Product> selectEight();
+	
+	public ArrayList<Product> selectThirty();
+	
 	public Product selectByNo(String product_no);
 	
 	public Product selectByName(String product_name);

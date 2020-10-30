@@ -20,23 +20,35 @@ public class WishListRepositoryImpl implements WishListRepository{
 		insertCount = wishListMapper.insertWishList(wishList);
 		return insertCount;
 	};
+	
 	@Override
-	public WishList selectWishListByNo(String no) throws Exception {
+	public ArrayList<WishList> selectWishListAll(String member_id) throws Exception {
 		
-		WishList wishListOne = wishListMapper.selectWishListByNo(no);
-		return wishListOne;
-	};
-	@Override
-	public ArrayList<WishList> selectWishListAll() throws Exception {
-		
-		ArrayList<WishList> wishList = (ArrayList<WishList>)wishListMapper.selectWishListAll();
+		ArrayList<WishList> wishList = (ArrayList<WishList>)wishListMapper.selectWishListAll(member_id);
 		return wishList;
 	};
 
 	@Override
-	public int deleteWishListById(int no) throws Exception {
+	public int deleteWishListById(Integer wish_no) throws Exception {
 		
-		int deleteCount = wishListMapper.deleteWishListById(no);
+		int deleteCount = wishListMapper.deleteWishListById(wish_no);
 		return deleteCount;
 	};
+	
+	public int deleteWishListAll(String member_id) throws Exception{
+		return wishListMapper.deleteWishListAll(member_id);
+	};
+	
+	/*
+	 * public int insertWishList(WishList wishList) throws Exception;
+	
+	public ArrayList<WishList> selectWishListAll(String no) throws Exception;
+	
+	
+	public int deleteWishListById(String product_no) throws Exception;
+	
+	public int deleteWishListAll(String no) throws Exception;
+	
+	 */
+	
 }

@@ -26,6 +26,27 @@ public class ProductRepositoryImpl implements ProductRepository {
 	}
 	
 	@Override
+	public ArrayList<Product> selectFour() {
+		ArrayList<Product> productList = new ArrayList<Product>();
+		productList = productMapper.selectFour();
+		return productList;
+	}
+	
+	@Override
+	public ArrayList<Product> selectEight() {
+		ArrayList<Product> productList = new ArrayList<Product>();
+		productList = productMapper.selectEight();
+		return productList;
+	}
+	
+	@Override
+	public ArrayList<Product> selectThirty() {
+		ArrayList<Product> productList = new ArrayList<Product>();
+		productList = productMapper.selectThirty();
+		return productList;
+	}
+	
+	@Override
 	public Product selectByNo(String product_no) {
 		Product product = new Product();
 		product = productMapper.selectByNo(product_no);

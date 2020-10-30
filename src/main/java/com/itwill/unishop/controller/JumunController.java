@@ -5,6 +5,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,17 +37,20 @@ public class JumunController {
 		return "redirect:jumun_address_form"; 
 	}
 	@RequestMapping(value = "/jumun_address_action", method = RequestMethod.POST)
-	public String jumun_address_action_POST(@ModelAttribute Member member) {
+	public String jumun_address_action_POST(Model model,HttpSession session) {
+		session.setAttribute("loginMember", new Member("uni5", "1111", "tttt", "1111",
+				"ttt@naver.com"));
+		Member loginMember = (Member)session.getAttribute("loginMember");
 		String forwardPath = "";
-		int updateRowCount = memberService.updateMember(member);
+		memberService.updateMember(loginMember);
 		forwardPath="jumun_delivery_form";
 		return forwardPath;
 	}
 	/*
 	 * jumun - delivery
 	 */
-	@RequestMapping("/delivery_form")
-	public String delivery_form() {
+	@RequestMapping("jumun_delivery_form")
+	public String jumun_delivery_form() {
 		return "jumun_delivery_form"; 
 	}
 	@RequestMapping(value = "/jumun_delivery_action", method = RequestMethod.GET)
@@ -54,9 +58,10 @@ public class JumunController {
 		return "jumun_delivery_form"; 
 	}
 	@RequestMapping(value = "/jumun_delivery_action", method = RequestMethod.POST)
-	public String jumun_delivery_action_POST(HttpServletRequest request,@RequestParam String member_id, @RequestParam String member_password) {
-		String forwardPath = "jumun_payment_form";
-		
+	public String jumun_delivery_action_POST(Model model,@ModelAttribute Member member) {
+		String forwardPath = " ";
+		memberService.updateMember(member);
+		forwardPath="jumun_payment_form";
 		return forwardPath;
 	}
 	/*
@@ -104,5 +109,6 @@ public class JumunController {
 		return forwardPath;
 	}
 	*/
-
+	
+	
 }

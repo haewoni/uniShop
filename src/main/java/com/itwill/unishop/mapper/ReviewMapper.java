@@ -7,13 +7,9 @@ public interface ReviewMapper {
 
 	public int insertReview(Review review);
 	
-	public Review selectReviewByNo(int no);
+	public Review selectReviewByNo(String product_no);
 	
-	public ArrayList<Review> selectReviewAll();
-	
-	public int updateReviewById(Review review);
-	
-	public int deleteReviewById(int no);
+	public ArrayList<Review> selectReviewAll(String member_id);
 	
 	
 }

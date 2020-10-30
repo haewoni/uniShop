@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itwill.unishop.mapper.WishListMapper">
+	<insert id="insertWishList" parameterType="com.itwill.unishop.domain.WishList">
+			INSERT INTO wishList (wish_no, member_id, product_no) 
+			     VALUES (#{wish_no}, #{member_id}, #{product_no})
+	</insert>
+	<select id="selectWishListAll" parameterType="String" resultType="com.itwill.unishop.domain.WishList">
+			select * from wishList where member_id = #{member_id}
+	</select>
+	<delete id="deleteWishListById" parameterType="Integer">
+			delete from wishList where wish_no = #{wish_no}
+	</delete>
+	<delete id="deleteWishListAll" parameterType="String">
+			delete from wishList where member_id = #{member_id}
+	</delete>
+
+</mapper>
