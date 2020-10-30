@@ -96,14 +96,14 @@ public class MemberController {
 		
 		return forwardPath;
 	}
-	/*
+	
 	@RequestMapping(value = "/member_profile_update_form")
 	public String member_profile_update_form(Model model, HttpSession session, @ModelAttribute String member_id) {
 		String forwardPath = "";
 		try {
 			memberService.selectMemberById(member_id);
 			session.setAttribute("sMemberId", member_id);
-			forwardPath = "member_profile";
+			forwardPath = "member_profile_update_form";
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -135,7 +135,7 @@ public class MemberController {
 		}
 		return forwardPath;
 	}
-	*/
+	
 	/*
 	//모든 Exception을 던지면 이곳으로 날라온다
 	@ExceptionHandler(Exception.class)
