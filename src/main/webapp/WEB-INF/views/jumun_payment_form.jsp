@@ -5,12 +5,6 @@
 <head>
 <title>Checkout</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script type="text/javascript">
-	function delivery(){
-		document.f.action='review_form';
-		document.f.submit();
-		}
-</script>
 </head>
 <body bgcolor=#FFFFFF text=#000000 leftmargin=0 topmargin=0
 	marginwidth=0 marginheight=0>
@@ -27,7 +21,7 @@
 								payment</b></td>
 					</tr>
 				</table> <!-- payment write form  -->
-				<form name="f" method="post">
+				<form name="f" method="post" action="jumun_payment_action">
 					<table border="0" cellpadding="0" cellspacing="1" width="590"
 						bgcolor="BBBBBB">
 						<tr>
@@ -56,14 +50,14 @@
 			
 						</tr>
 						<tr>
-							<td width=100 align=center bgcolor="E6ECDE" height="22">도시</td>
+							<td width=100 align=center bgcolor="E6ECDE" height="22">멤버 아이디</td>
 							<td width=490 align="left" bgcolor="ffffff"
 								style="padding-left: 10px"><input type="text"
 								style="width: 240" name="member_address_city"></td>
 			
 						</tr>
 						<tr>
-							<td width=100 align=center bgcolor="E6ECDE" height="22">우편번호</td>
+							<td width=100 align=center bgcolor="E6ECDE" height="22">분류</td>
 							<td width=490 align="left" bgcolor="ffffff"
 								style="padding-left: 10px"><input type="text"
 								style="width: 240" name="member_address_zipcode"></td>
@@ -72,11 +66,12 @@
 			
 						
 					</table>
+					<input type="submit" value="다음(리뷰)" > 
 				</form> <br />
 				<table width=590 border=0 cellpadding=0 cellspacing=0>
 					<tr>
 						<td align=center>
-						<input type="button" value="다음(리뷰)" onclick="delivery()"> 
+						
 					</tr>
 				</table>
 			</td>

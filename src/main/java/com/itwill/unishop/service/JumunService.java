@@ -25,7 +25,11 @@ public interface JumunService {
 	 	jumun_no와 member_id 를 동시에 만족한다면 주문 update
 	 */
 	public int updateJumun(Jumun jumun);
-	
+	/*
+ 	card 정보 주문 update
+	 */
+	public int updateJumunCard(Jumun jumun);
+
 	/*
 	 	인자로 받은 jumun_no를 jumun에서 지워버렷
 	 */
