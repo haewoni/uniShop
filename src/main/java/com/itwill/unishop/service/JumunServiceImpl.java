@@ -39,6 +39,11 @@ public class JumunServiceImpl implements JumunService{
 	public int deleteJumunByNo(int jumun_no) {
 		return jumunRepository.deleteJumunByNo(jumun_no);
 	}
+
+	@Override
+	public int updateJumunCard(Jumun jumun) {
+		return jumunRepository.updateJumunCard(jumun);
+	}
 	
 	
 }

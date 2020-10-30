@@ -47,4 +47,13 @@ public class JumunRepositoryImpl implements JumunRepository{
 		return jumunMapper.deleteJumunByNo(jumun_no);
 	}
 
+
+
+
+
+	@Override
+	public int updateJumunCard(Jumun jumun) {
+		return jumunMapper.updateJumunCard(jumun);
+	}
+
 }

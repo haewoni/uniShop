@@ -14,6 +14,8 @@ public interface JumunMapper {
 	
 	public int updateJumun(Jumun jumun);
 	
+	public int updateJumunCard(Jumun jumun);
+	
 	public int deleteJumunByNo(int jumun_no);
 	
 }
