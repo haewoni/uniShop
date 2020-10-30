@@ -32,6 +32,12 @@ public class MemberRepositoryImpl implements MemberRepository{
 		int rowcount = memberMapper.updateMember(updateMember);
 		return rowcount;
 	}
+	
+	@Override
+	public int updateAddress(Member updateMember) {
+		int rowcount = memberMapper.updateAddress(updateMember);
+		return rowcount;
+	}
 
 	@Override
 	public int deleteMember(String member_id) {
@@ -43,5 +49,7 @@ public class MemberRepositoryImpl implements MemberRepository{
 	public int isExistMember(String member_id) {
 		return memberMapper.isExistMember(member_id);
 	}
+
+	
 
 }
