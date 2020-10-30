@@ -8,5 +8,6 @@
 </head>
 <body>
 <a href="member_login_insert_form">멤버 로그인 폼입니다.</a>
+<a href="jumun_address_form">주문 주소 폼입니다</a>
 </body>
 </html>
