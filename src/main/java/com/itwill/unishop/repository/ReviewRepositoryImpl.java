@@ -21,10 +21,10 @@ public class ReviewRepositoryImpl implements ReviewRepository{
 		return insertCount;
 	};
 	@Override
-	public Review selectReviewByNo(String product_no) throws Exception {
+	public ArrayList<Review> selectReviewByNo(String product_no) throws Exception {
 		
-		Review reviewOne = reviewMapper.selectReviewByNo(product_no);
-		return reviewOne;
+		ArrayList<Review> reviewByNo = reviewMapper.selectReviewByNo(product_no);
+		return reviewByNo;
 	};
 	@Override
 	public ArrayList<Review> selectReviewAll(String member_id){

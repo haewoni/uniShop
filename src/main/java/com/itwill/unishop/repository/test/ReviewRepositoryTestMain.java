@@ -17,7 +17,7 @@ public class ReviewRepositoryTestMain {
 		//System.out.println(reviewRepository.selectReviewByNo(1));
 		
 		//System.out.println(reviewRepository.selectReviewAll("uni3"));
-		System.out.println(reviewRepository.selectReviewByNo("431464"));
+		//System.out.println(reviewRepository.selectReviewByNo("431464"));
 		
 		//Review insertreview = reviewRepository.insertReview(new Review(101, "aaa", "a@gmail.com", "aaa", 5, "aaa", "uni1", "432614"));
 		//Review insertreview = new Review(101, "aaa", "a@gmail.com", "aaa", 5, "aaa", "uni1", "431464");
@@ -26,7 +26,7 @@ public class ReviewRepositoryTestMain {
 		//Review updateReview = new Review(101, "bbb", "bbb@gmail.com", "bbb", 5, "bbb", "uni1", "432614");
 		//System.out.println(reviewRepository.updateReviewById(updateReview));
 		
-		
+		System.out.println(reviewRepository.selectReviewByNo("431464"));
 
 
 	}
