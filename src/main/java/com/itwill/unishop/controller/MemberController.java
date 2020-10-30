@@ -80,19 +80,20 @@ public class MemberController {
 	public String member_register_action(Model model, @ModelAttribute Member newMember, @RequestParam String member_pass) {
 		String forwardPath="";
 		try {
-			memberService.insertMember(newMember);
 			if(newMember.getMember_password().equalsIgnoreCase(member_pass)) {
-				System.out.println("회원가입 완료");
-				//model.addAttribute();
+				memberService.insertMember(newMember);
 				forwardPath="redirect:member_login_register_form";
+			}else {
+				forwardPath="member_login_register_form";
 			}
+			
 			
 		} catch (ExistedMemberException e) {
 			model.addAttribute("msg1", e.getMessage());
 			System.out.println("아이디 확인좀요 ㅡㅡ");
 			e.printStackTrace();
 			forwardPath="member_login_register_form";
-		}
+		} 
 		
 		return forwardPath;
 	}
