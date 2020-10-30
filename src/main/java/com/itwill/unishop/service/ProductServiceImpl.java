@@ -22,6 +22,31 @@ public class ProductServiceImpl implements ProductService{
 	public ArrayList<Product> selectAll() {
 		return productRepository.selectAll();
 	}
+	
+	/*
+	 * 랜덤 제품 4개 select
+	 */
+	@Override
+	public ArrayList<Product> selectFour() {
+		return productRepository.selectFour();
+	}
+	
+	/*
+	 * 랜덤 제품 8개 select
+	 */
+	@Override
+	public ArrayList<Product> selectEight() {
+		return productRepository.selectEight();
+	}
+	
+	/*
+	 * 랜덤 제품 30개 select
+	 */
+	@Override
+	public ArrayList<Product> selectThirty() {
+		return productRepository.selectThirty();
+	}
+	
 	/*
 	 * 제품번호로 찾기 
 	 */

@@ -11,7 +11,7 @@ public class ProductServiceTestMain {
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring/application-config.xml");
 		ProductService productService = (ProductService) applicationContext.getBean("productServiceImpl");
-		
+		/*
 		System.out.println("-----------------1. SELECT ALL----------------------");
 		System.out.println(productService.selectAll());
 		System.out.println("-----------------2. SELECT BY NO----------------------");
@@ -27,6 +27,17 @@ public class ProductServiceTestMain {
 		System.out.println(productService.insertProduct(product));
 		System.out.println("-----------------7.DELETE ----------------------");
 		System.out.println(productService.deleteProduct("12345"));
+		*/
+		System.out.println("-----------------8. SELECT Four----------------------");
+		System.out.println(productService.selectFour());
+		System.out.println("----------------------------------------------------------------");
+		
+		System.out.println("-----------------8. SELECT Eight----------------------");
+		System.out.println(productService.selectEight());
+		System.out.println("----------------------------------------------------------------");
+		
+		System.out.println("-----------------8. SELECT Thirty----------------------");
+		System.out.println(productService.selectThirty());
 
 	}
 

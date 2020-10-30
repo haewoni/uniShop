@@ -9,6 +9,22 @@ public interface ProductService {
 	 * 모든 제품 찾기 select
 	 */
 	public ArrayList<Product> selectAll();
+	
+	/*
+	 * 랜덤 제품 4개 select
+	 */
+	public ArrayList<Product> selectFour();
+		
+	/*
+	 * 랜덤 제품 8개 select
+	 */
+	public ArrayList<Product> selectEight();
+	
+	/*
+	 * 랜덤 제품 30개 select
+	 */
+	public ArrayList<Product> selectThirty();
+	
 	/*
 	 * 제품번호로 찾기 
 	 */
