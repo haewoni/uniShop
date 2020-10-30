@@ -14,7 +14,8 @@
 	<a href="maleBottomProduct_list">남성 하의</a>
 	<a href="femaleTopProduct_list">여성 상의</a>
 	<a href="femaleBottomProduct_list">여성 하의</a>
-	<a href="member_login_register_form">로오그으이인</a>
+	<a href="member_login_register_form">로그인</a>
+	<a href="member_login_register_form">회원가입</a>
 </body>
 </html>
 

@@ -68,7 +68,7 @@ public class MemberController {
 	}
 	
 	
-	/*
+	
 	//회원가입을 해보자
 	@RequestMapping(value="/member_register_action", method = RequestMethod.GET)
 	public String member_register_action() {
@@ -96,14 +96,13 @@ public class MemberController {
 		
 		return forwardPath;
 	}
-	
-	
+	/*
 	@RequestMapping(value = "/member_profile_update_form")
-	public String member_profile_update_form(Model model, @ModelAttribute String member_id) {
+	public String member_profile_update_form(Model model, HttpSession session, @ModelAttribute String member_id) {
 		String forwardPath = "";
 		try {
-			Member memberProfile = memberService.selectMemberById(member_id);
-			model.addAttribute(memberProfile);
+			memberService.selectMemberById(member_id);
+			session.setAttribute("sMemberId", member_id);
 			forwardPath = "member_profile";
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -119,17 +118,17 @@ public class MemberController {
 	@RequestMapping(value = "/member_profile_update_action", method = RequestMethod.GET)
 	public String member_profile_update_action_GET() {
 
-		return "member_profile";
+		return "member_profile_update_action";
 	}
 
 	
 
 	@RequestMapping(value = "/member_profile_update_action", method = RequestMethod.POST)
-	public String member_profile_update_action_POST(Model model, @ModelAttribute Member member) {
+	public String member_profile_update_action_POST(Model model, HttpSession session, @ModelAttribute Member member) {
 		String forwardPath = "";
 		try {
-			int updateMember = memberService.updateMember(member);
-			model.addAttribute("updateMember", updateMember);
+			memberService.updateMember(member);
+			session.setAttribute("updateMember", member);
 			forwardPath = "redirect:main";
 		} catch (Exception e) {
 			e.printStackTrace();

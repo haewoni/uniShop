@@ -7,8 +7,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body><div>
+<body>
+	<div>
 		<a href="">${sMemberId}님 로그아웃</a>
+		<a href="">${loginMember.member_phone} 님의 핸드폰</a>
+		<a href="">${loginMember.member_address2} 주소상세</a>
+		<a href="">${sMemberId}님 로그아웃</a>
+		<a href="member_update_form">수정 폼</a>
 	</div>
 	<div>
 		<a href="unishop_main">Main</a>
