@@ -28,41 +28,40 @@
 							<td width=100 align=center bgcolor="E6ECDE" height="22">카드 번호</td>
 							<td width=490 align="left" bgcolor="ffffff"
 								style="padding-left: 10px"><input type="text"
-								style="width: 150" name="member_address_name"></td>
+								style="width: 150" name="card_name"
+								value="${loginMember.card_name}"></td>
 						</tr>
 						<tr>
 							<td width=100 align=center bgcolor="E6ECDE" height="22">카드 만료날짜</td>
 							<td width=490 align="left" bgcolor="ffffff"
 								style="padding-left: 10px"><input type="text"
-								style="width: 150" name="member_name"></td>
+								style="width: 150" name="card_expire_date"
+								value="${loginMember.card_expire_date}"></td>
 						</tr>
 						<tr>
 								<td width=100 align=center bgcolor="E6ECDE" height="22">카드 cvc번호</td>
 								<td width=490 align="left" bgcolor="ffffff"
 								style="padding-left: 10px"><input type="text"
-								style="width: 150" name="member_email"></td>
+								style="width: 150" name="card_cvc"
+								value="${loginMember.card_cvc}"></td>
 						</tr>
 						<tr>
 							<td width=100 align=center bgcolor="E6ECDE" height="22">카드 소유자 이름</td>
 							<td width=490 align="left" bgcolor="ffffff"
 								style="padding-left: 10px"><input type="text"
-								style="width: 240" name="member_address_country"></td>
+								style="width: 240" name="card_member_name"
+								value="${loginMember.card_member_name}"></td>
 			
 						</tr>
 						<tr>
 							<td width=100 align=center bgcolor="E6ECDE" height="22">멤버 아이디</td>
 							<td width=490 align="left" bgcolor="ffffff"
 								style="padding-left: 10px"><input type="text"
-								style="width: 240" name="member_address_city"></td>
+								style="width: 240" name="member_id"
+								value="${loginMember.member_id}"></td>
 			
 						</tr>
-						<tr>
-							<td width=100 align=center bgcolor="E6ECDE" height="22">분류</td>
-							<td width=490 align="left" bgcolor="ffffff"
-								style="padding-left: 10px"><input type="text"
-								style="width: 240" name="member_address_zipcode"></td>
-			
-						</tr>
+						
 			
 						
 					</table>
