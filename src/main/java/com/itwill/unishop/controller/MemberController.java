@@ -49,8 +49,8 @@ public class MemberController {
 		String forwardPath = "";
 		try {
 			Member loginMember=memberService.loginMember(member_id, member_password);
-			session.setAttribute("loginMember",loginMember);
-			session.setAttribute("sMemberId", member_id);
+			session.setAttribute("loginMember",loginMember);//멤버의 객체반환
+			session.setAttribute("sMemberId", member_id);//멤버의아이디 보여줌
 			forwardPath = "redirect:unishop_main";
 		} catch (PasswordMismatchException e) {
 			model.addAttribute("msg2", e.getMessage());
@@ -98,13 +98,13 @@ public class MemberController {
 		return forwardPath;
 	}
 	
-	@RequestMapping(value = "/member_profile_update_form")
+	@RequestMapping(value = "/member_detial_form")
 	public String member_profile_update_form(Model model, HttpSession session, @ModelAttribute String member_id) {
 		String forwardPath = "";
 		try {
 			memberService.selectMemberById(member_id);
 			session.setAttribute("sMemberId", member_id);
-			forwardPath = "member_profile_update_form";
+			forwardPath = "member_detail_form";
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
