@@ -25,15 +25,7 @@
 			<a href=product_view><img src="418242_1.png"></a>
 			<a href="product_view">울트라라이트다운컴팩트재킷</a>
 	</div>
-	
-	
-	
-	
-	
-	
-	
 
->>>>>>> branch 'master' of https://github.com/2020-10-itwill-javapython/uniShop.git
 </body>
 </html>
 
