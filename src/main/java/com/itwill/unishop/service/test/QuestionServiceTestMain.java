@@ -15,6 +15,8 @@ public class QuestionServiceTestMain {
 		ApplicationContext applicationContext=new ClassPathXmlApplicationContext("spring/application-config.xml");
 		QuestionService questionService=(QuestionService)applicationContext.getBean("questionServiceImpl");
 		QuestionServiceImpl questionServiceImpl = new QuestionServiceImpl();
+			System.out.println(questionService.selectByNo(1));
+		/*	
 			System.out.println("selectAll() : ");
 			System.out.println(questionService.selectAll());
 			System.out.println("insertQuestion : ");
@@ -24,5 +26,6 @@ public class QuestionServiceTestMain {
 			System.out.println(questionService.updateQuestion(question));
 			System.out.println("deleteQuestion : ");
 			System.out.println(questionService.deleteQuestion(9));
+		*/
 	}
 }

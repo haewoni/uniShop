@@ -19,7 +19,11 @@ public interface QuestionService {
 	/*
 	 * 본인 질문 보기
 	 */
-	public Question selectById(String member_id);
+	public ArrayList<Question> selectById(String member_id);
+	/*
+	 * 질문 디테일 찾기
+	 */
+	public Question selectByNo(int question_no);
 	/*
 	 * 질문 등록하기
 	 */

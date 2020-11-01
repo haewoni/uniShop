@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.itwill.unishop.domain.Jumun;
 import com.itwill.unishop.domain.Member;
+import com.itwill.unishop.domain.Product;
 import com.itwill.unishop.domain.Question;
 import com.itwill.unishop.domain.WishList;
 import com.itwill.unishop.exception.ExistedMemberException;
@@ -24,6 +25,7 @@ import com.itwill.unishop.exception.MemberNotFoundException;
 import com.itwill.unishop.exception.PasswordMismatchException;
 import com.itwill.unishop.service.JumunService;
 import com.itwill.unishop.service.MemberService;
+import com.itwill.unishop.service.ProductService;
 import com.itwill.unishop.service.QuestionService;
 import com.itwill.unishop.service.WishListService;
 
@@ -38,7 +40,8 @@ public class MemberController {
 	private WishListService wishListService;
 	@Autowired
 	private QuestionService questionService;
-	
+	@Autowired
+	private ProductService productService;
 	@RequestMapping("/member_login_register_form")
 	public String member_login_register_form() {
 		return "member_login_register_form"; 
@@ -54,8 +57,10 @@ public class MemberController {
 		String forwardPath = "";
 		try {
 			Member loginMember=memberService.loginMember(member_id, member_password);
+			
 			session.setAttribute("loginMember",loginMember);//멤버의 객체반환
 			session.setAttribute("sMemberId", member_id);//멤버의아이디 보여줌
+			
 			forwardPath = "redirect:unishop_main";
 		} catch (PasswordMismatchException e) {
 			model.addAttribute("msg2", e.getMessage());
@@ -104,15 +109,20 @@ public class MemberController {
 	}
 	//회원 디테일
 	@RequestMapping(value = "/member_detail")
-	public String member_detail(Model model, HttpSession session, @ModelAttribute String member_id) {
+	public String member_detail(Model model, HttpSession session/*, @RequestParam String member_id*/) {
 		String forwardPath = "";
 		try {
-			memberService.selectMemberById(member_id);
-			ArrayList<Jumun> jumunList = (ArrayList<Jumun>) jumunService.selectById(member_id);
-			ArrayList<WishList> wishList = wishListService.selectWishListAll(member_id);
-			session.setAttribute("sMemberId", member_id);
-			session.setAttribute("jumunList", jumunList);
-			session.setAttribute("wishList", wishList);
+			String sMemberId = (String) session.getAttribute("sMemberId");
+//			memberService.selectMemberById(member_id);
+			ArrayList<Jumun> jumunList = (ArrayList<Jumun>) jumunService.selectById(sMemberId);
+			ArrayList<WishList> wishList = wishListService.selectWishListAll(sMemberId);
+			ArrayList<Question> questionList = questionService.selectById(sMemberId);
+			
+			//ArrayList<Question> questionList = questionService
+			//session.setAttribute("sMemberId", member_id);
+			model.addAttribute("jumunList", jumunList);
+			model.addAttribute("wishList", wishList);
+			model.addAttribute("questionList", questionList);
 			forwardPath = "member_detail";
 		} catch (Exception e) {
 			e.printStackTrace();
