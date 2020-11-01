@@ -40,8 +40,7 @@ public class MemberController {
 	private WishListService wishListService;
 	@Autowired
 	private QuestionService questionService;
-	@Autowired
-	private ProductService productService;
+	
 	@RequestMapping("/member_login_register_form")
 	public String member_login_register_form() {
 		return "member_login_register_form"; 
@@ -109,17 +108,19 @@ public class MemberController {
 	}
 	//회원 디테일
 	@RequestMapping(value = "/member_detail")
-	public String member_detail(Model model, HttpSession session/*, @RequestParam String member_id*/) {
+	public String member_detail(Model model, HttpSession session/*, @RequestParam int question_no*//*, @RequestParam String member_id*/) {
 		String forwardPath = "";
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
 //			memberService.selectMemberById(member_id);
 			ArrayList<Jumun> jumunList = (ArrayList<Jumun>) jumunService.selectById(sMemberId);
 			ArrayList<WishList> wishList = wishListService.selectWishListAll(sMemberId);
+			//Question question = questionService.selectByNo(question_no);
 			ArrayList<Question> questionList = questionService.selectById(sMemberId);
 			
 			//ArrayList<Question> questionList = questionService
 			//session.setAttribute("sMemberId", member_id);
+			//model.addAttribute("question", question);
 			model.addAttribute("jumunList", jumunList);
 			model.addAttribute("wishList", wishList);
 			model.addAttribute("questionList", questionList);
@@ -128,13 +129,6 @@ public class MemberController {
 			e.printStackTrace();
 		}
 		return forwardPath;
-	}
-
-	@RequestMapping(value = "/member_profile")
-	public String member_profile(@RequestParam String member_id) {
-		
-		
-		return null;
 	}
 
 	@RequestMapping(value = "/member_profile_update_action", method = RequestMethod.GET)
@@ -158,6 +152,18 @@ public class MemberController {
 		return forwardPath;
 	}
 	
+	public String member_question_detail_form(Model model, HttpSession session,@RequestParam int question_no) {
+		String forwardPath = "";
+		try {
+			String sMemberId = (String) session.getAttribute("sMemberId");
+			Question question = questionService.selectByNo(question_no);
+			model.addAttribute("question", question);
+			forwardPath = "member_question_detail";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return forwardPath;
+	}
 	/*
 	//모든 Exception을 던지면 이곳으로 날라온다
 	@ExceptionHandler(Exception.class)
