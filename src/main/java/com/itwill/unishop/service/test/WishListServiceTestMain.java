@@ -12,7 +12,7 @@ public class WishListServiceTestMain {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring/application-config.xml");
 		WishListService wishListService = (WishListService)applicationContext.getBean("wishListServiceImpl");
 		
-		//System.out.println(wishListService.selectWishListAll("uni4"));
+		System.out.println(wishListService.selectWishListAll("uni4"));
 				
 		//System.out.println(wishListService.insertWishList(new WishList(101, "uni3", "431464")));
 		
