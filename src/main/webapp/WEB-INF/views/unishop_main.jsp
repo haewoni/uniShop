@@ -13,7 +13,7 @@
 		<a href="">${loginMember.member_phone} 님의 핸드폰</a>
 		<a href="">${loginMember.member_address2} 주소상세</a>
 		<a href="">${sMemberId}님 로그아웃</a>		
-		<a href="member_detail_form">멤버 정보 수정, 주문 목록, 찜 목록, QnA 목록</a>
+		<a href="member_detail">멤버 정보 수정, 주문 목록, 찜 목록, QnA 목록</a>
 	</div>
 	<div>
 		<a href="unishop_main">Main</a>
