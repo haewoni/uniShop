@@ -2,12 +2,14 @@ package com.itwill.unishop.service;
 
 import java.util.ArrayList;
 
+import com.itwill.unishop.domain.Product;
 import com.itwill.unishop.domain.WishList;
 
 public interface WishListService {
 
 	
-	public int insertWishList(WishList wishList) throws Exception;
+	
+	public int insertWishList(Product product) throws Exception;
 	
 	public ArrayList<WishList> selectWishListAll(String member_id) throws Exception;
 	

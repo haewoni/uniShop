@@ -108,11 +108,8 @@ public class MainController {
 	
 	
 	@RequestMapping(value = "/product_wishList")
-	public String product_wishList(Model model, @RequestParam WishList wishList) throws Exception {
-		String forwardPath = "";
-			int insertRowCount = wishListService.insertWishList(wishList);
-			forwardPath = "product_wishList";
-		return forwardPath;
+	public void product_wishList(Model model, @RequestParam Product product) throws Exception {
+		wishListService.insertWishList(product);
 	}
 	
 	

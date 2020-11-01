@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<jsp:include page="include_common_top.jsp"/>
 	product detail 보여주기 페이지 입니다.
 </body>
 </html>
