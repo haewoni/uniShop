@@ -14,9 +14,9 @@ public class WishListServiceImpl implements WishListService{
 	private WishListRepository wishListRepository;
 	
 	@Override
-	public int insertWishList(Product product) throws Exception {
+	public int insertWishList(WishList wishList) throws Exception {
 		int insertCount = 0;
-		insertCount = wishListRepository.insertWishList(product);
+		insertCount = wishListRepository.insertWishList(wishList);
 		return insertCount;
 	};
 	

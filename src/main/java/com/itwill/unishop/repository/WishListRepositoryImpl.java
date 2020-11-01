@@ -15,10 +15,10 @@ public class WishListRepositoryImpl implements WishListRepository{
 	private WishListMapper wishListMapper;
 	
 	@Override
-	public int insertWishList(Product product) throws Exception {
+	public int insertWishList(WishList wishList) throws Exception {
 		
 		int insertCount = 0;
-		insertCount = wishListMapper.insertWishList(product);
+		insertCount = wishListMapper.insertWishList(wishList);
 		return insertCount;
 	};
 	
