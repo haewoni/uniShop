@@ -7,7 +7,7 @@ import com.itwill.unishop.domain.WishList;
 
 public interface WishListMapper {
 
-	public int insertWishList(Product product);
+	public int insertWishList(WishList wishList);
 	
 	//public WishList selectWishListByNo(String no);
 	

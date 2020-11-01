@@ -7,7 +7,7 @@ import com.itwill.unishop.domain.WishList;
 
 public interface WishListRepository {
 
-	public int insertWishList(Product product) throws Exception;
+	public int insertWishList(WishList wishList) throws Exception;
 	
 	public ArrayList<WishList> selectWishListAll(String member_id) throws Exception;
 	

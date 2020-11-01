@@ -108,8 +108,8 @@ public class MainController {
 	
 	
 	@RequestMapping(value = "/product_wishList")
-	public void product_wishList(Model model, @RequestParam Product product) throws Exception {
-		wishListService.insertWishList(product);
+	public void product_wishList(Model model, @RequestParam WishList wishList) throws Exception {
+		wishListService.insertWishList(wishList);
 	}
 	
 	

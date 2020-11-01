@@ -9,7 +9,7 @@ public interface WishListService {
 
 	
 	
-	public int insertWishList(Product product) throws Exception;
+	public int insertWishList(WishList wishList) throws Exception;
 	
 	public ArrayList<WishList> selectWishListAll(String member_id) throws Exception;
 	

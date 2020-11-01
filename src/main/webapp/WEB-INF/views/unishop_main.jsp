@@ -37,7 +37,7 @@
 		<h1>Featured Products</h1>
            <div class="product-card">
              <div class="product-badge text-danger" style="color: red">50% Off</div>
-             	<a class="product-image" href="product_detail?product_no=429284">
+             	<a class="product-image" href="product_detail?product_no=${product.product_no}">
              		<img src="IMAGE/429284_1.png" width="200" height="120">
              	</a>
              <h3 class="product-title">
