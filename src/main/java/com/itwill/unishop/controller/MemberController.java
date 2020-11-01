@@ -1,5 +1,8 @@
 package com.itwill.unishop.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.itwill.unishop.domain.Jumun;
 import com.itwill.unishop.domain.Member;
+import com.itwill.unishop.domain.Question;
 import com.itwill.unishop.domain.WishList;
 import com.itwill.unishop.exception.ExistedMemberException;
 import com.itwill.unishop.exception.MemberNotFoundException;
@@ -97,14 +102,18 @@ public class MemberController {
 		
 		return forwardPath;
 	}
-	
-	@RequestMapping(value = "/member_detial_form")
-	public String member_profile_update_form(Model model, HttpSession session, @ModelAttribute String member_id) {
+	//회원 디테일
+	@RequestMapping(value = "/member_detail")
+	public String member_detail(Model model, HttpSession session, @ModelAttribute String member_id) {
 		String forwardPath = "";
 		try {
 			memberService.selectMemberById(member_id);
+			ArrayList<Jumun> jumunList = (ArrayList<Jumun>) jumunService.selectById(member_id);
+			ArrayList<WishList> wishList = wishListService.selectWishListAll(member_id);
 			session.setAttribute("sMemberId", member_id);
-			forwardPath = "member_detail_form";
+			session.setAttribute("jumunList", jumunList);
+			session.setAttribute("wishList", wishList);
+			forwardPath = "member_detail";
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
