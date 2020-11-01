@@ -113,6 +113,8 @@ public class MemberController {
 
 	@RequestMapping(value = "/member_profile")
 	public String member_profile(@RequestParam String member_id) {
+		
+		
 		return null;
 	}
 
