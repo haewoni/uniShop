@@ -29,6 +29,14 @@ public class Jumun {
 		this.member_id = member_id;
 		this.delivery_no = delivery_no;
 	}
+	public Jumun(String card_no,String card_expire_date, String card_cvc, String card_member_name, String member_id) {
+		super();
+		this.card_no = card_no;
+		this.card_expire_date = card_expire_date;
+		this.card_cvc = card_cvc;
+		this.card_member_name = card_member_name;
+		this.member_id = member_id;
+	}
 	public Jumun() {
 		// TODO Auto-generated constructor stub
 	}

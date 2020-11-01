@@ -17,11 +17,11 @@
 				<table style="padding-left: 10px" border=0 cellpadding=0
 					cellspacing=0>
 					<tr>
-						<td bgcolor="f4f4f4" height="22">&nbsp;&nbsp;<b>
-								review</b></td>
+						<td bgcolor="f4f4f4" height="22">&nbsp;&nbsp;<b> review</b></td>
 					</tr>
 				</table> <!-- rewiew write form  -->
 				<form name="f" method="post">
+					<input type="hidden" name="member_id" value="${sMemberId}" />
 					<table border="0" cellpadding="0" cellspacing="1" width="590"
 						bgcolor="BBBBBB">
 						<tr>
@@ -32,27 +32,29 @@
 							<td width=100 align=center bgcolor="E6ECDE" height="22">주문내역1</td>
 							<td width=490 align="left" bgcolor="ffffff"
 								style="padding-left: 10px"><input type="text"
-								style="width: 150" name="member_address_name"></td>
+								style="width: 150" name="member_address_name"
+								value="${sMemberId.review_no}"></td>
 						</tr>
 						<tr>
 							<td width=100 align=center bgcolor="E6ECDE" height="22">주문내역2</td>
 							<td width=490 align="left" bgcolor="ffffff"
 								style="padding-left: 10px"><input type="text"
-								style="width: 150" name="member_address_name"></td>
+								style="width: 150" name="member_address_name"
+								value="${sMemberId.review_no}"></td>
 						</tr>
 						<tr>
 							<td width=100 align=center bgcolor="E6ECDE" height="22">주문내역3</td>
 							<td width=490 align="left" bgcolor="ffffff"
 								style="padding-left: 10px"><input type="text"
-								style="width: 150" name="member_address_name"></td>
+								style="width: 150" name="member_address_name"
+								value="${sMemberId.review_no}"></td>
 						</tr>
 						
 					</table>
 				</form> <br />
 				<table width=590 border=0 cellpadding=0 cellspacing=0>
 					<tr>
-						<td align=center>
-						<input type="button" value="주문완료" S> 
+						<td align=center><input type="button" value="주문완료"> 
 					</tr>
 				</table>
 			</td>

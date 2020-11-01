@@ -24,13 +24,16 @@ public class JumunServiceTestMain {
 //		System.out.println(jumunService.updateJumun(new Jumun(5, new Date(), "Canceled", 212121, "1111 2222 3333 4444", "12/12", "987", "신지수", "uni4", "EX")));
 		
 		System.out.println("--------------------------------------------- 3. SELECT ALL ---------------------------------------------");
-//		System.out.println(jumunService.selectAll());
+		//System.out.println(jumunService.selectAll());
 		
 		System.out.println("--------------------------------------------- 4. SELECT BY ID ---------------------------------------------");
 //		System.out.println(jumunService.selectById("uni3"));
 		
 		System.out.println("--------------------------------------------- 5. DELETE ---------------------------------------------");
 //		System.out.println(jumunService.deleteJumunByNo(5));
+		System.out.println("--------------------------------------------- 6. UPDATE CARD---------------------------------------------");
+		Jumun jumun2 = new Jumun("1122 1231 2321 1212","21/12","342","ttt","uni2");
+		System.out.println(jumunService.updateJumunCard(jumun2));
 	}
 
 }
