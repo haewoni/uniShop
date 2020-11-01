@@ -52,7 +52,7 @@
 		set card_no=#{card_no},
 		    card_expire_date=#{card_expire_date},
 		    card_cvc=#{card_cvc},
-		    card_member_name=#{card_member_name},
+		    card_member_name=#{card_member_name}
 		where member_id=#{member_id}
 	</update>
 	

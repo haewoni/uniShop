@@ -37,9 +37,10 @@ public class JumunRepositoryTestMain {
 		
 		
 		/********************** update **********************/
-//		Jumun jumun1 = new Jumun(3, new Date(), "waiting", 987654, "1111 2222 3333 8888", "01/26", "222", "수환잉", "uni3", "GEN");
+//		Jumun jumun1 = new Jumun(5, new Date(), "waiting", 987654, "1111 2222 3333 8888", "01/26", "222", "수환잉", "uni3", "GEN");
 //		System.out.println(jumunRepository.updateJumun(jumun1));
-		
+		Jumun jumun2 = new Jumun("4123 1231 2321 1212","20/12","754","신혜원","uni2");
+		System.out.println(jumunRepository.updateJumunCard(jumun2));
 		
 		
 		/********************** delete **********************/

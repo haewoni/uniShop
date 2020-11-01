@@ -85,8 +85,8 @@ public class JumunController {
 	}
 	@RequestMapping(value = "/jumun_payment_action", method = RequestMethod.POST)
 	public String jumun_payment_action_POST(Model model,HttpSession session, @ModelAttribute Jumun jumun) {
-		Jumun loginMember = (Jumun)session.getAttribute("loginMember");
-		session.setAttribute("loginMember", new Jumun(4, new Date(), "처리중", 123122, "4122 1231 2321 1212","20/12","754","신혜원","uni1","EX"));
+		Member loginMember = (Member)session.getAttribute("loginMember");
+		session.setAttribute("loginMember", new Member("uni4", "1111", "tttt", "1111","ttt@naver.com"));
 		String forwardPath = " ";
 		jumunService.updateJumunCard(jumun);
 		forwardPath="jumun_review_form";
