@@ -1,30 +1,38 @@
 package com.itwill.unishop.controller;
 
+
 import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 import com.itwill.unishop.domain.Jumun;
+
+import com.itwill.unishop.domain.Delivery;
+
 import com.itwill.unishop.domain.Member;
+
 import com.itwill.unishop.domain.Review;
 import com.itwill.unishop.exception.MemberNotFoundException;
 import com.itwill.unishop.exception.PasswordMismatchException;
+
+import com.itwill.unishop.service.DeliveryService;
+
 import com.itwill.unishop.service.JumunService;
 import com.itwill.unishop.service.MemberService;
 import com.itwill.unishop.service.ReviewService;
 
 @Controller
-public class JumunController {
+public class JumunController { 
 
 	@Autowired
 	private MemberService memberService;
@@ -32,6 +40,9 @@ public class JumunController {
 	private JumunService jumunService;
 	@Autowired
 	private ReviewService reviewService;
+	@Autowired
+	private DeliveryService deliveryService;
+	
 
 	/*
 	 * jumun - address
@@ -60,16 +71,16 @@ public class JumunController {
 	public String jumun_delivery_form() {
 		return "jumun_delivery_form"; 
 	}
+	
 	@RequestMapping(value = "/jumun_delivery_action", method = RequestMethod.GET)
 	public String jumun_delivery_action_GET() {
 		return "jumun_delivery_form"; 
 	}
+	
 	@RequestMapping(value = "/jumun_delivery_action", method = RequestMethod.POST)
-	public String jumun_delivery_action_POST(Model model,HttpSession session, @ModelAttribute Member member) {
+	public String jumun_delivery_action_POST(Model model,HttpSession session, @ModelAttribute Delivery delivery) {
 		String forwardPath = " ";
-		session.setAttribute("loginMember", new Member("uni1", "2222", "t", "t","t", "t", "t", "t", "t", "t" ,"t"));
-		Member loginMember = (Member)session.getAttribute("loginMember");
-		memberService.updateMember(loginMember);
+		deliveryService.insertDelivery(delivery);
 		forwardPath="jumun_payment_form";
 		return forwardPath;
 	}
