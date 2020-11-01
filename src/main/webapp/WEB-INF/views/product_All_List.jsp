@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<jsp:include page="include_common_top.jsp"/>
+	
 	모든 product를 보여준다.
 </body>
 </html>

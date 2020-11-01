@@ -8,7 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
  <div>
   <jsp:include page="include_common_top.jsp"/>
 
@@ -43,10 +42,10 @@
              	</a>
              <h3 class="product-title">
              	<a href="product_detail?product_no=429284">울트라라이트다운컴팩트재킷</a><br>
-	             	<a href="product_wishList">
-		             	<img src="IMAGE/heart.png" width="30" height="30">
+             		<a href="product_wishList">
+	             		<img src="IMAGE/heart.png" width="30" height="30">
 	             	</a>
-             	<a href="product_cart">
+	            <a href="product_cart">
              		<input type="button" value="ADD TO CART">
 				</a>             		
              </h3>

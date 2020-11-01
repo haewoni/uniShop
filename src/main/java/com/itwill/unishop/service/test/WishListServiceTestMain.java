@@ -14,11 +14,11 @@ public class WishListServiceTestMain {
 		
 		System.out.println(wishListService.selectWishListAll("uni4"));
 				
-		//System.out.println(wishListService.insertWishList(new WishList(101, "uni3", "431464")));
+		System.out.println(wishListService.insertWishList(new WishList(3, "uni4", "431464")));
 		
 		//System.out.println(wishListService.deleteWishListById(101));
 		
-		System.out.println(wishListService.deleteWishListAll("uni3"));
+//		System.out.println(wishListService.deleteWishListAll("uni3"));
 
 
 	}

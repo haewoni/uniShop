@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.itwill.unishop.domain.Product;
 import com.itwill.unishop.domain.WishList;
 import com.itwill.unishop.mapper.WishListMapper;
 @Repository("wishListRepository")
@@ -14,10 +15,10 @@ public class WishListRepositoryImpl implements WishListRepository{
 	private WishListMapper wishListMapper;
 	
 	@Override
-	public int insertWishList(WishList wishList) throws Exception {
+	public int insertWishList(Product product) throws Exception {
 		
 		int insertCount = 0;
-		insertCount = wishListMapper.insertWishList(wishList);
+		insertCount = wishListMapper.insertWishList(product);
 		return insertCount;
 	};
 	

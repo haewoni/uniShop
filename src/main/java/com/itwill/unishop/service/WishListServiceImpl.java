@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.itwill.unishop.domain.Product;
 import com.itwill.unishop.domain.WishList;
 import com.itwill.unishop.repository.WishListRepository;
 @Service
@@ -13,9 +14,9 @@ public class WishListServiceImpl implements WishListService{
 	private WishListRepository wishListRepository;
 	
 	@Override
-	public int insertWishList(WishList wishList) throws Exception {
+	public int insertWishList(Product product) throws Exception {
 		int insertCount = 0;
-		insertCount = wishListRepository.insertWishList(wishList);
+		insertCount = wishListRepository.insertWishList(product);
 		return insertCount;
 	};
 	
@@ -33,7 +34,9 @@ public class WishListServiceImpl implements WishListService{
 	
 	public int deleteWishListAll(String member_id) throws Exception{
 		return wishListRepository.deleteWishListAll(member_id);
-	};
+	}
+
+	
 	
 	
 }

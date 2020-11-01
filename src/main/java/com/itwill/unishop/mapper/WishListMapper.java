@@ -1,11 +1,13 @@
 package com.itwill.unishop.mapper;
 
 import java.util.ArrayList;
+
+import com.itwill.unishop.domain.Product;
 import com.itwill.unishop.domain.WishList;
 
 public interface WishListMapper {
 
-	public int insertWishList(WishList wishList);
+	public int insertWishList(Product product);
 	
 	//public WishList selectWishListByNo(String no);
 	
