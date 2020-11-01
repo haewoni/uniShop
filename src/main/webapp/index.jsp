@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<<<<<<< HEAD
-
-=======
->>>>>>> refs/heads/cjy
 <a href="member_login_insert_form">멤버 로그인 폼입니다.</a>
 <a href="jumun_address_form">주문 주소 폼입니다</a>
 <a href="jumun_payment_form">주문 결제 폼입니다</a>
@@ -39,3 +36,6 @@
 </body>
 </html>
 
+<%
+	response.sendRedirect("unishop_main");
+%>

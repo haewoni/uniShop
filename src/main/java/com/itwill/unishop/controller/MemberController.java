@@ -1,5 +1,8 @@
 package com.itwill.unishop.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.itwill.unishop.domain.Jumun;
 import com.itwill.unishop.domain.Member;
+import com.itwill.unishop.domain.Question;
 import com.itwill.unishop.domain.WishList;
 import com.itwill.unishop.exception.ExistedMemberException;
 import com.itwill.unishop.exception.MemberNotFoundException;
@@ -49,8 +54,8 @@ public class MemberController {
 		String forwardPath = "";
 		try {
 			Member loginMember=memberService.loginMember(member_id, member_password);
-			session.setAttribute("loginMember",loginMember);
-			session.setAttribute("sMemberId", member_id);
+			session.setAttribute("loginMember",loginMember);//멤버의 객체반환
+			session.setAttribute("sMemberId", member_id);//멤버의아이디 보여줌
 			forwardPath = "redirect:unishop_main";
 		} catch (PasswordMismatchException e) {
 			model.addAttribute("msg2", e.getMessage());
@@ -97,14 +102,18 @@ public class MemberController {
 		
 		return forwardPath;
 	}
-	
-	@RequestMapping(value = "/member_profile_update_form")
-	public String member_profile_update_form(Model model, HttpSession session, @ModelAttribute String member_id) {
+	//회원 디테일
+	@RequestMapping(value = "/member_detail")
+	public String member_detail(Model model, HttpSession session, @ModelAttribute String member_id) {
 		String forwardPath = "";
 		try {
 			memberService.selectMemberById(member_id);
+			ArrayList<Jumun> jumunList = (ArrayList<Jumun>) jumunService.selectById(member_id);
+			ArrayList<WishList> wishList = wishListService.selectWishListAll(member_id);
 			session.setAttribute("sMemberId", member_id);
-			forwardPath = "member_profile_update_form";
+			session.setAttribute("jumunList", jumunList);
+			session.setAttribute("wishList", wishList);
+			forwardPath = "member_detail";
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -113,6 +122,8 @@ public class MemberController {
 
 	@RequestMapping(value = "/member_profile")
 	public String member_profile(@RequestParam String member_id) {
+		
+		
 		return null;
 	}
 

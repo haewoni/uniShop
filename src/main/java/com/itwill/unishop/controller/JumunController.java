@@ -47,9 +47,9 @@ public class JumunController {
 	@RequestMapping(value = "/jumun_address_action", method = RequestMethod.POST)
 	public String jumun_address_action_POST(Model model,HttpSession session,@ModelAttribute Member member) {
 		String forwardPath = "";
-		session.setAttribute("loginMember", new Member("uni1", "2222", "t", "t","t", "t", "t", "t", "t", "t" ,"t"));
+		session.setAttribute("loginMember", new Member("uni1", "2222", "t564", "ta","ta", member.getMember_address_name(), member.getMember_address_country(), member.getMember_address_city(), member.getMember_address_zipcode(),member.getMember_address1() ,member.getMember_address2()));
 		Member loginMember = (Member)session.getAttribute("loginMember");
-		memberService.updateMember(loginMember);
+		memberService.updateAddress(loginMember);
 		forwardPath="jumun_delivery_form";
 		return forwardPath;
 	}

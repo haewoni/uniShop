@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	이미지를 클릭하면 해당 상품의 상세보기 페이지로 이동합니다.
-	
+	product detail 보여주기 페이지 입니다.
 </body>
 </html>
