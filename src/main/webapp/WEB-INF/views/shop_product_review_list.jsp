@@ -15,14 +15,14 @@
 				step="1" 
 				end="${reviewList.size()}"
 				varStatus="status">
-		<li>번호 : ${reivew.review_no}</li>
-		<li>작성자 : ${reivew.review_name}</li>
-		<li>이메일 : ${reivew.review_email}</li>
-		<li>제목 : ${reivew.review_title}</li>
-		<li>점수 : ${reivew.review_rating}</li>
-		<li>내용 : ${reivew.review_content}</li>
-		<li>아이디 : ${reivew.member_id}</li>
-		<li>제품번호 : ${reivew.product_no}</li>
+		<li>번호 : ${review.review_no}</li>
+		<li>작성자 : ${review.review_name}</li>
+		<li>이메일 : ${review.review_email}</li>
+		<li>제목 : ${review.review_title}</li>
+		<li>점수 : ${review.review_rating}</li>
+		<li>내용 : ${review.review_content}</li>
+		<li>아이디 : ${review.member_id}</li>
+		<li>제품번호 : ${review.product_no}</li>
 	</c:forEach>
 </body>
 </html>

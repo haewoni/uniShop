@@ -22,8 +22,8 @@
 	</div>
 	<div>
 		<a href="unishop_main">Main</a>
+		<a href="shop_main">Shop</a>
 	</div>
-
 	<a href="product_M_T_list">남성 상의</a>
 	<a href="product_M_B_list">남성 하의</a>
 	<a href="product_F_T_list">여성 상의</a>
