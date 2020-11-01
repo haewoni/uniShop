@@ -36,6 +36,7 @@
 	찜 목록
 	<form name="f" method="POST">
 		<input type="text" name="wishList" value="${wishList}">
+		<a href="product_detail">찜한 물품 자세히 보기</a>
 	</form>
 	QnA 목록
 	<form name="f" method="POST">

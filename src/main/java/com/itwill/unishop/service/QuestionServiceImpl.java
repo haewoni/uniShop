@@ -54,6 +54,9 @@ public class QuestionServiceImpl implements QuestionService{
 		int rowcount = questionRepository.updateQuestion(updateQuestion);
 		return rowcount;
 	}
+	/*
+	 * 질문 하나 디테일 보기
+	 */
 	@Override
 	public Question selectByNo(int question_no) {
 		Question question = questionRepository.selectByNo(question_no);

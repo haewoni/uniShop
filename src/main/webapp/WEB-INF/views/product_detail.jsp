@@ -9,5 +9,6 @@
 <body>
 	<jsp:include page="include_common_top.jsp"/>
 	product detail 보여주기 페이지 입니다.
+	<a href="member_detail">디테일</a>
 </body>
 </html>
