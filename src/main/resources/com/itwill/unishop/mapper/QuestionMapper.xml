@@ -11,6 +11,10 @@
 		SELECT * FROM QUESTION
 		WHERE question_no=#{question_no}
 	</select>
+	<select id="selectById" parameterType="java.lang.String" resultType="com.itwill.unishop.domain.Question">
+		select * from question
+		where member_id=#{member_id} 
+	</select>
 	<insert id="insertQuestion" parameterType="com.itwill.unishop.domain.Question">
 		<selectKey resultType="java.lang.Integer"
 			keyProperty="question_no" order="BEFORE">
