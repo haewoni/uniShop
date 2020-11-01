@@ -1,14 +1,13 @@
 package com.itwill.unishop.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.itwill.unishop.domain.Product;
@@ -30,68 +29,49 @@ public class MainController {
 	/********************** main **********************/
 
 	@RequestMapping("/unishop_main")
-	public String unishop_main() {
-		return "unishop_main";
+	public String unishop_main(Model model) {
+		String forwardPath = "";
+		ArrayList<Product> productList = productService.selectEight();
+		model.addAttribute("productList", productList);
+		forwardPath = "unishop_main";
+		return forwardPath;
 
 	}
 	
 	
 	
-	
-	/********************** 남성상의 **********************/
-	@RequestMapping("/product_M_T_list")
-	public String product_M_T_list(Model model) throws Exception{
+	/********************** 남성아우터 **********************/
+	@RequestMapping("/product_ManOuterList")
+	public String product_ManOuterList() throws Exception{
 		String forwardPath = "";
-			List<Product> productList = productService.selectByDivLM("M","T");
-			model.addAttribute("productList", productList);
-			forwardPath = "product_M_T_list";
+			forwardPath = "redirect:shop_male_outer_list";
 		return forwardPath;
 	}
 
 	
-	/********************** 남성하의 **********************/
-	@RequestMapping("/product_M_B_list")
-	public String product_M_B_list(Model model) throws Exception{
+	/********************** 남성 긴바지 **********************/
+	@RequestMapping("/product_ManPantslist")
+	public String product_M_B_list() throws Exception{
 		String forwardPath = "";
-			List<Product> productList = productService.selectByDivLM("M","B");
-			model.addAttribute("productList", productList);
-			forwardPath = "product_M_B_list";
+			forwardPath = "redirect:shop_male_longpants_list";
 		return forwardPath;
 	}
 	
-	/********************** 여성상의 **********************/
-	@RequestMapping("/product_F_T_list")
-	public String product_F_T_list(Model model) throws Exception{
+	/********************** 여성 아우터 **********************/
+	@RequestMapping("/product_FemaleOuter_list")
+	public String product_F_T_list() throws Exception{
 		String forwardPath = "";
-			List<Product> productList = productService.selectByDivLM("F","T");
-			model.addAttribute("productList", productList);
-			forwardPath = "product_F_T_list";
+			forwardPath = "redirect:shop_female_outer_list";
 		return forwardPath;
 	}
 	
-	/********************** 여성하의 **********************/
-	@RequestMapping("/product_F_B_list")
-	public String product_F_B_list(Model model) throws Exception{
+	/********************** 여성 스커트 **********************/
+	@RequestMapping("/product_FemaleSkirt_list")
+	public String product_F_B_list() throws Exception{
 		String forwardPath = "";
-			List<Product> productList = productService.selectByDivLM("F","B");
-			model.addAttribute("productList", productList);
-			forwardPath = "product_F_B_list";
+			forwardPath = "redirect:shop_female_skirt_list";
 		return forwardPath;
 	}
-	
-	
-	
-	
-	/********************** product detail **********************/
-	@RequestMapping("/product_detail")
-	public String product_detail(Model model, @RequestParam String product_no)throws Exception {
-		String forwardPath = "";
-			Product product = productService.selectByNo(product_no);
-			model.addAttribute("product", product);
-			forwardPath = "product_detail";
-		return forwardPath;		//	forward:/WEB-INF/views/guest_list.jsp 와 같다
-	}
-	
 	
 	
 	
@@ -99,10 +79,8 @@ public class MainController {
 	@RequestMapping("/product_All_List")
 	public String product_All_List(Model model) {
 		String forwardPath = "";
-		List<Product> productList  = productService.selectAll();
-			model.addAttribute("productList", productList);
-			forwardPath = "product_All_List";
-		return forwardPath;		//	forward:/WEB-INF/views/guest_list.jsp 와 같다
+			forwardPath = "redirect:shop_main";
+		return forwardPath;	
 	}
 	
 	
