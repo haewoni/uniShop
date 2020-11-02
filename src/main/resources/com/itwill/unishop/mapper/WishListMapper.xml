@@ -9,6 +9,10 @@
 </resultMap>
 
 	<insert id="insertWishList" parameterType="com.itwill.unishop.domain.WishList">
+		<selectKey resultType="java.lang.Integer"
+			keyProperty="wish_no" order="BEFORE">
+			SELECT wishlist_wish_no_seq.nextval FROM DUAL
+		</selectKey>
 			INSERT INTO wishList (wish_no, member_id, product_no) 
 			     VALUES (#{wish_no}, #{member_id}, #{product_no})
 	</insert>

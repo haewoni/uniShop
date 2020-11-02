@@ -167,23 +167,27 @@ public class ProductController {
 	
 	/**********카트 추가***********/
 	@RequestMapping("shop_add_cart_action")
-	public String shop_add_cart(Model model, HttpSession session, /*@RequestParam int cart_qty, @RequestParam String cart_product_size,*/ @RequestParam String product_no) {
+	public String shop_add_cart(Model model, HttpSession session, @RequestParam int cart_qty, @RequestParam String cart_product_size, @RequestParam String product_no) {
 		/*
-		 * 실전에서 하실때는 파람에 주석 풀고 아래 연결해주시면 됩니다.
+		 * 세션작업 되면 member_id 연결하세요.
 		 */
 		String forwardPath= "";
-		int cart_qty1 = 5;//cart_qty
-		String cart_product_size1 = "L";//cart_product_size
+		int cart_qty1 = cart_qty;
+		String cart_product_size1 = cart_product_size;
 		String member_id = "uni1";//session.getId();
 		String product_no1 = product_no;
+		//-1과 5000은 임의의 수일 뿐. 쿼리문상 자동으로 계산된 값으로 입력됨
 		Cart cart = new Cart(-1, cart_qty1, 5000, cart_product_size1, member_id, product_no1);
 		cartService.insertCart(cart);
 		forwardPath = "redirect:shop_product_detail?product_no="+product_no;
 		return forwardPath;
 	}
 	
-	
-	
+	/**********위시리스트 추가***********/
+	public String shop_add_wishlist(Model model, HttpSession session, @RequestParam String product_no) {
+		
+		return "";
+	}
 	
 	
 	
