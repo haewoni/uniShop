@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.itwill.unishop.domain.Cart;
 import com.itwill.unishop.domain.Product;
 import com.itwill.unishop.domain.Review;
 import com.itwill.unishop.service.ProductService;
@@ -136,8 +137,10 @@ public class ProductController {
 	@RequestMapping("/shop_product_detail")
 	public String shop_product_detail(Model model, @RequestParam String product_no) throws Exception{
 		String forwardPath = "";
+		ArrayList<Review> reviewList = reviewService.selectReviewByNo(product_no);
 		Product product = productService.selectByNo(product_no);
 		model.addAttribute("product",product);
+		model.addAttribute("reviewList", reviewList);
 		forwardPath = "shop_product_detail";
 		return forwardPath;
 	}

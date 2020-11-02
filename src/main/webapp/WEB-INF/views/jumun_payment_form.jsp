@@ -8,7 +8,6 @@
 </head>
 <body bgcolor=#FFFFFF text=#000000 leftmargin=0 topmargin=0
 	marginwidth=0 marginheight=0>
-		
 <div id="content">
 	<table width=0 border=0 cellpadding=0 cellspacing=0>
 		<tr>
@@ -17,7 +16,7 @@
 				<table style="padding-left: 10px" border=0 cellpadding=0
 					cellspacing=0>
 					<tr>
-						<td bgcolor="f4f4f4" height="22">&nbsp;&nbsp;<b>payment</b></td>
+						<td bgcolor="f4f4f4" height="22">&nbsp;&nbsp;<b>payment </b></td>
 					</tr>
 				</table> <!-- payment write form  -->
 				<form name="f" method="post" action="jumun_payment_action">
