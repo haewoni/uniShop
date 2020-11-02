@@ -16,9 +16,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.itwill.unishop.domain.Cart;
 import com.itwill.unishop.domain.Product;
 import com.itwill.unishop.domain.Review;
+import com.itwill.unishop.domain.WishList;
 import com.itwill.unishop.service.CartService;
 import com.itwill.unishop.service.ProductService;
 import com.itwill.unishop.service.ReviewService;
+import com.itwill.unishop.service.WishListService;
 
 @Controller
 public class ProductController {
@@ -28,6 +30,8 @@ public class ProductController {
 	private ReviewService reviewService;
 	@Autowired
 	private CartService cartService;
+	@Autowired
+	private WishListService wishListService;
 	
 	/**********샵 메인***********/
 	@RequestMapping("/shop_main")
@@ -166,7 +170,7 @@ public class ProductController {
 	}
 	
 	/**********카트 추가***********/
-	@RequestMapping("shop_add_cart_action")
+	@RequestMapping("/shop_add_cart_action")
 	public String shop_add_cart(Model model, HttpSession session, @RequestParam int cart_qty, @RequestParam String cart_product_size, @RequestParam String product_no) {
 		/*
 		 * 세션작업 되면 member_id 연결하세요.
@@ -184,12 +188,19 @@ public class ProductController {
 	}
 	
 	/**********위시리스트 추가***********/
-	public String shop_add_wishlist(Model model, HttpSession session, @RequestParam String product_no) {
-		
-		return "";
+	@RequestMapping("/shop_add_wishlist_action")
+	public String shop_add_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
+		String forwardPath = "";
+		String member_id = "uni1"; //session.getId();
+		String product_no1 = product_no;
+		try {
+			wishListService.insertWishList(new WishList(-1, member_id, product_no1, null));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		forwardPath = "redirect:shop_product_detail?product_no="+product_no;
+		return forwardPath;
 	}
-	
-	
 	
 	
 	/*
