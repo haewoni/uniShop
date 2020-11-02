@@ -64,8 +64,12 @@
 					step="1" 
 					end="${productList.size()}"
 					varStatus="status">
-			<li><a href="shop_product_detail?product_no=${product.product_no}">
-			<img src=IMAGE/${product.product_image_1} width=100, height=100><br>${product.product_name}</a></li>
+			<li>
+				<a href="shop_product_detail?product_no=${product.product_no}">
+					<img src=IMAGE/${product.product_image_1} width=100, height=100>${product.product_name}
+				</a>
+			</li>
+				<img src="IMAGE/heart.png" width="30" height="30">
 		</c:forEach>
 		
     </div>
