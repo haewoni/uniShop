@@ -25,6 +25,15 @@
 					 -->
 					<table border="0" cellpadding="0" cellspacing="1" width="590"
 						bgcolor="BBBBBB">
+=======
+	pageEncoding="UTF-8"%>
+					<form name="f" method="POST" action="jumun_payment_action">
+
+						<table border="0" cellpadding="0" cellspacing="1" width="590"
+							bgcolor="BBBBBB">
+
+				
+>>>>>>> refs/heads/cjy
 						<tr>
 							<td width=100 align=center bgcolor="E6ECDE" height="22">카드 번호</td>
 							<td width=490 align="left" bgcolor="ffffff"
@@ -61,21 +70,10 @@
 			
 						
 					</table>
-					<input type="submit" > 
-				</form> <br />
-				<table width=590 border=0 cellpadding=0 cellspacing=0>
-					<tr>
-						<td align=center>
-						
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-</div>
+						<input type="submit">
+					</form> <br />
 
-		
-	
+
 	<!--container end-->
 </body>
 </html>
