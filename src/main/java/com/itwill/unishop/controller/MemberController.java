@@ -129,7 +129,7 @@ public class MemberController {
 			
 			//ArrayList<Question> questionList = questionService
 			//session.setAttribute("sMemberId", member_id);
-			//model.addAttribute("question", question);
+			//model.addAttribute("question", question); 
 			model.addAttribute("jumunList", jumunList);
 			model.addAttribute("wishList", wishList);
 			model.addAttribute("questionList", questionList);
