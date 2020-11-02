@@ -1,11 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript">
+
+</script>
 </head>
 <body>
 	제품 디테일<hr>
@@ -37,7 +41,7 @@
 			<input type=submit value="ADD TO CART" class=TXTFLD onclick="javascript:alert('카트 추가 완료');" >
 			<input type="hidden" name=product_no value="${product.product_no}">
 		</form>
-		<form method="post" action="shop_add_cart_action">
+		<form method="post" action="shop_add_wishlist_action">
 		<input type=submit value="ADD TO WISHLIST" class=TXTFLD onclick="javascript:alert('위시리스트 추가 완료');" >
 		<input type="hidden" name=product_no value="${product.product_no}">
 		</form>
