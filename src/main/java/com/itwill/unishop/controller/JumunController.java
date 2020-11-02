@@ -6,9 +6,11 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.itwill.unishop.domain.Jumun;
 import com.itwill.unishop.domain.Member;
@@ -43,12 +45,12 @@ public class JumunController {
 		return "redirect:jumun_address_form"; 
 	}
 	@RequestMapping(value = "/jumun_address_action", method = RequestMethod.POST)
-	public String jumun_address_action_POST(Model model,HttpSession session,@ModelAttribute Member member) {
+	public String jumun_address_action_POST(HttpSession session,@ModelAttribute Member member) {
 		String forwardPath = "";
 		session.setAttribute("loginMember", new Member("uni1", "2222", "t564", "ta","ta", member.getMember_address_name(), member.getMember_address_country(), member.getMember_address_city(), member.getMember_address_zipcode(),member.getMember_address1() ,member.getMember_address2()));
 		Member loginMember = (Member)session.getAttribute("loginMember");
 		memberService.updateAddress(loginMember);
-		forwardPath="jumun_delivery_form";
+		forwardPath="redirect:jumun_delivery_form";
 		return forwardPath;
 	}
 	/*
@@ -65,20 +67,22 @@ public class JumunController {
 	}
 	
 	@RequestMapping(value = "/jumun_delivery_action", method = RequestMethod.POST)
-	public String jumun_delivery_action_POST(Model model,HttpSession session) {
+	public String jumun_delivery_action_POST(HttpSession session, @RequestParam String deliveryStr) {
 		String forwardPath = "";
-		String deliveryStr = "EX";
-		session.setAttribute("deliveryStr", deliveryStr);
-		forwardPath="jumun_payment_form";
+		Jumun jumun1 = new Jumun();
+		if(deliveryStr=="일반") {
+			jumun1.setDelivery_no("1");
+		}else {
+			jumun1.setDelivery_no("2");
+		}
+		forwardPath="redirect:jumun_payment_form";
 		return forwardPath;
 	}
 	/*
 	 * jumun - payment
 	 */
 	@RequestMapping("jumun_payment_form")
-	public String payment_form(HttpSession session) {
-		String aaa = (String)session.getAttribute("delivertStr");
-		System.out.println(aaa);
+	public String payment_form() {
 		return "jumun_payment_form";
 	}
 	@RequestMapping(value = "/jumun_payment_action", method = RequestMethod.GET)

@@ -4,7 +4,7 @@
 
 
 <form action="jumun_delivery_action" method="post">
-	deliveryStr<input type="text" value="EX" name="deliveryStr"><br>
+	deliveryStr<input type="text" name="deliveryStr"><br>
 	<input type="submit" >
 </form>
 
