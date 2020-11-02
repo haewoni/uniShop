@@ -12,16 +12,13 @@ public class WishList {
 		
 	}
 	
-	
-	
 	public WishList(int wish_no, String member_id, String product_no, List<Product> productList) {
 		super();
 		this.wish_no = wish_no;
 		this.member_id = member_id;
 		this.product_no = product_no;
 		this.productList = productList;
-	}
-	
+	}	
 
 	public int getWish_no() {
 		return wish_no;

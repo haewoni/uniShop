@@ -15,11 +15,11 @@ public class WishListRepositoryTestMain {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring/application-config.xml");
 		WishListRepository wishListRepository = (WishListRepository)applicationContext.getBean("wishListRepository");
 		
-		//System.out.println(wishListRepository.selectWishListAll());
+		System.out.println(wishListRepository.selectWishListAll("uni3"));
 		//System.out.println(wishListRepository.selectWishListByNo("uni4"));
 		
 		//System.out.println(wishListRepository.insertWishList(new WishList(101, "uni3", "431464")));
-		System.out.println(wishListRepository.deleteWishListById(2));
+		//System.out.println(wishListRepository.deleteWishListById(2));
 	}
 
 }
