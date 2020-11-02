@@ -1,10 +1,6 @@
 package com.itwill.unishop.controller;
 
 
-import java.util.Date;
-
-import javax.servlet.http.HttpServletRequest;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,19 +10,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
 import com.itwill.unishop.domain.Jumun;
-
-import com.itwill.unishop.domain.Delivery;
-
 import com.itwill.unishop.domain.Member;
-
 import com.itwill.unishop.domain.Review;
-import com.itwill.unishop.exception.MemberNotFoundException;
-import com.itwill.unishop.exception.PasswordMismatchException;
-
 import com.itwill.unishop.service.DeliveryService;
-
 import com.itwill.unishop.service.JumunService;
 import com.itwill.unishop.service.MemberService;
 import com.itwill.unishop.service.ReviewService;
@@ -79,18 +66,19 @@ public class JumunController {
 	
 	@RequestMapping(value = "/jumun_delivery_action", method = RequestMethod.POST)
 	public String jumun_delivery_action_POST(Model model,HttpSession session) {
-		System.out.println("asas");
 		String forwardPath = "";
 		String deliveryStr = "EX";
 		session.setAttribute("deliveryStr", deliveryStr);
-		forwardPath="redirect:jumun_payment_form";
+		forwardPath="jumun_payment_form";
 		return forwardPath;
 	}
 	/*
 	 * jumun - payment
 	 */
 	@RequestMapping("jumun_payment_form")
-	public String payment_form() {
+	public String payment_form(HttpSession session) {
+		String aaa = (String)session.getAttribute("delivertStr");
+		System.out.println(aaa);
 		return "jumun_payment_form";
 	}
 	@RequestMapping(value = "/jumun_payment_action", method = RequestMethod.GET)
@@ -131,21 +119,7 @@ public class JumunController {
 	public String complete_form() {
 		return "jumun_complete_form"; 
 	}
-	//모든 Exception을 던지면 이곳으로 날라온다
-//	@ExceptionHandler(Exception.class)
-//	public String member_error_handle(Exception e) {
-//		return "404.html"; //예시입니다. 후에 .html은 뺄거예요
-//	}
 
-	/*@RequestMapping("/guest_list.do")
-	public String guest_list(Model model) throws Exception {
-		String forwardPath = "";
-		List<Guest> guestList = guestService.selectAll();
-		model.addAttribute("guestList", guestList);
-		forwardPath = "guest_list";
-		return forwardPath;
-	}
-	*/
 	
 	
 }
