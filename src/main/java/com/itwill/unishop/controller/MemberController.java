@@ -75,7 +75,16 @@ public class MemberController {
 		}
 		return forwardPath;
 	}
-	
+	//멤버 로그아웃
+	@RequestMapping(value = "/member_logout_action", method = RequestMethod.GET)
+	public String member_logout_action() {
+		return "member_detail";
+	}
+	@RequestMapping(value = "/member_logout_action", method = RequestMethod.POST)
+	public String member_logout_action(HttpSession session) {
+		session.invalidate();
+		return "redirect:unishop_main";
+	}
 	
 	
 	//회원가입을 해보자
@@ -134,25 +143,40 @@ public class MemberController {
 	@RequestMapping(value = "/member_update_action", method = RequestMethod.GET)
 	public String member_update_action_GET() {
 
-		return "member_update_action";
+		return "member_detail";
 	}
 
 	
 
 	@RequestMapping(value = "/member_update_action", method = RequestMethod.POST)
-	public String member_update_action_POST(Model model, HttpSession session) {
+	public String member_update_action_POST(Model model, HttpSession session, @ModelAttribute Member updateMember) {
 		String forwardPath = "";
 		try {
-			Member updateMember = (Member) session.getAttribute("loginMember");;
-			model.addAttribute(updateMember);
-			session.setAttribute("updateMember", updateMember);
-			forwardPath = "redirect:unishop_main";
+			//Member updateMember = (Member) session.getAttribute("loginMember");;
+			session.getAttribute("loginMember");
+			memberService.updateMember(updateMember);
+			model.addAttribute("loginMember",updateMember);
+			//session.setAttribute("updateMember", updateMember);
+			forwardPath = "redirect:member_detail";
 		} catch (Exception e) {
 			e.printStackTrace();
+			forwardPath = "member_detail";
 		}
 		return forwardPath;
 	}
 	
+	@RequestMapping("/member_jumun_detail_form)")
+	public String member_jumun_detail_form() {
+		return "member_jumun_detail_form";
+	}
+	
+	@RequestMapping("/member_wishlist_detail")
+	public String member_wishlist_product_detail_form() {
+		return "member_wishlist_detail";
+	}
+	
+	
+	@RequestMapping("/member_question_detail_form")
 	public String member_question_detail_form(Model model, HttpSession session,@RequestParam int question_no) {
 		String forwardPath = "";
 		try {
