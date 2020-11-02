@@ -16,4 +16,6 @@ public interface CartRepository {
 	public int deleteCartByCartNo(int cart_no);
 	
 	public int deleteCartByMemberId(String member_id);
+	
+
 }

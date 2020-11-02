@@ -52,4 +52,6 @@ public class CartRepositoryImpl implements CartRepository {
 		int deleteRowCount = cartMapper.deleteCartByMemberId(member_id);
 		return deleteRowCount;
 	}
+	
+
 }
