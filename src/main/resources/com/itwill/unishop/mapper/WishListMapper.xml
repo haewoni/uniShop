@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.itwill.unishop.mapper.WishListMapper">
-
-<resultMap type="com.itwill.unishop.domain.WishList" id="wishlistWithProductResultMap">
-	<collection property="productList" autoMapping="true" ofType="com.itwill.unishop.domain.Product">
-	
-	</collection>
-</resultMap>
-
+	<resultMap type="com.itwill.unishop.domain.WishList" id="wishListWithProductResultMap" autoMapping="true">
+		<id column="WISH_NO" property="wish_no"/>
+		<association property="productList" autoMapping="true" resultMap="com.itwill.unishop.mapper.ProductMapper.productResultMap">
+			<id column="PRODUCT_NO" property="product_no"/>
+		</association>
+		
+	</resultMap>
 	<insert id="insertWishList" parameterType="com.itwill.unishop.domain.WishList">
 			INSERT INTO wishList (wish_no, member_id, product_no) 
 			     VALUES (#{wish_no}, #{member_id}, #{product_no})
 	</insert>
-	<select id="selectWishListAll" parameterType="String" resultMap="wishlistWithProductResultMap">
-			select w.*, p.* from wishList w join product p on w.product_no = p.product_no where member_id = #{member_id}
+	<select id="selectWishListAll" parameterType="String" resultMap="wishListWithProductResultMap">
+			select w.wish_no, w.member_id, p.* from wishList w join product p on w.product_no=p.product_no where member_id = #{member_id}
 	</select>
 	<delete id="deleteWishListById" parameterType="Integer">
 			delete from wishList where wish_no = #{wish_no}

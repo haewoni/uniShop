@@ -131,20 +131,21 @@ public class MemberController {
 		return forwardPath;
 	}
 
-	@RequestMapping(value = "/member_profile_update_action", method = RequestMethod.GET)
-	public String member_profile_update_action_GET() {
+	@RequestMapping(value = "/member_update_action", method = RequestMethod.GET)
+	public String member_update_action_GET() {
 
-		return "member_profile_update_action";
+		return "member_update_action";
 	}
 
 	
 
-	@RequestMapping(value = "/member_profile_update_action", method = RequestMethod.POST)
-	public String member_profile_update_action_POST(Model model, HttpSession session, @ModelAttribute Member member) {
+	@RequestMapping(value = "/member_update_action", method = RequestMethod.POST)
+	public String member_update_action_POST(Model model, HttpSession session) {
 		String forwardPath = "";
 		try {
-			memberService.updateMember(member);
-			session.setAttribute("loginMember", member);
+			Member updateMember = (Member) session.getAttribute("loginMember");;
+			model.addAttribute(updateMember);
+			session.setAttribute("updateMember", updateMember);
 			forwardPath = "redirect:unishop_main";
 		} catch (Exception e) {
 			e.printStackTrace();
