@@ -78,10 +78,12 @@ public class JumunController {
 	}
 	
 	@RequestMapping(value = "/jumun_delivery_action", method = RequestMethod.POST)
-	public String jumun_delivery_action_POST(Model model,HttpSession session, @ModelAttribute Delivery delivery) {
-		String forwardPath = " ";
-		deliveryService.insertDelivery(delivery);
-		forwardPath="jumun_payment_form";
+	public String jumun_delivery_action_POST(Model model,HttpSession session) {
+		System.out.println("asas");
+		String forwardPath = "";
+		String deliveryStr = "EX";
+		session.setAttribute("deliveryStr", deliveryStr);
+		forwardPath="redirect:jumun_payment_form";
 		return forwardPath;
 	}
 	/*
@@ -89,7 +91,7 @@ public class JumunController {
 	 */
 	@RequestMapping("jumun_payment_form")
 	public String payment_form() {
-		return "jumun_payment_form"; 
+		return "jumun_payment_form";
 	}
 	@RequestMapping(value = "/jumun_payment_action", method = RequestMethod.GET)
 	public String jumun_payment_action_GET() {
