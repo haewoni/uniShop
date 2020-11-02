@@ -28,6 +28,7 @@ public class CartServiceTestMain {
 		 */
 		System.out.println("-----------------2. selectCartAll----------------------");
 		System.out.println(cartService.selectCartAll("uni1"));
+		//System.out.println(cartService.cartAll());
 		/*
 		 * 카트 업데이트
 		 */
@@ -44,7 +45,7 @@ public class CartServiceTestMain {
 		 * 로그인된 아이디의 카트 전체 삭제
 		 */
 		System.out.println("-----------------5. deleteCartByMemberId----------------------");
-		System.out.println(cartService.deleteCartByMemberId("uni3"));
+		//System.out.println(cartService.deleteCartByMemberId("uni3"));
 		
 					
 	}

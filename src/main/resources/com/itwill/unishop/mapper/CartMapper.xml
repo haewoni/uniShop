@@ -5,7 +5,7 @@ namespace="com.itwill.unishop.mapper.CartMapper">
 	<select id="selectCartAll" 
 	parameterType="string"
 	resultType="com.itwill.unishop.domain.Cart">
-		SELECT * FROM CART WHERE member_id=#{member_id}
+		SELECT A.*, b.product_name, b.product_image_1 FROM CART a, PRODUCT B WHERE A.member_id=#{member_id} AND A.PRODUCT_NO = B.PRODUCT_NO ORDER BY 1
 	</select>
 	<insert id="insertCart" parameterType="com.itwill.unishop.domain.Cart">
 		<selectKey resultType="java.lang.Integer"

@@ -52,5 +52,5 @@ public class CartServiceImpl implements CartService{
 	public int deleteCartByMemberId(String member_id) {
 		return cartRepository.deleteCartByMemberId(member_id);
 	}
-	
+
 }

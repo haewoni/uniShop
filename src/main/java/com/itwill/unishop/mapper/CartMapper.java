@@ -1,5 +1,6 @@
 package com.itwill.unishop.mapper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.itwill.unishop.domain.Cart;
@@ -15,5 +16,8 @@ public interface CartMapper {
 	public int deleteCartByMemberId(String member_id);
 	
 	public int updateCart(Cart updateCart);
+	
+	
+	public ArrayList<Cart> cartAll();
 	
 }

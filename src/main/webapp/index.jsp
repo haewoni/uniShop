@@ -6,7 +6,10 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-<a href="member_login_insert_form">멤버 로그인 폼입니다.</a>
-</body>
+
+<%
+   response.sendRedirect("cart_list");
+ %>
+
+
 </html>

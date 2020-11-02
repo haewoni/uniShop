@@ -30,4 +30,6 @@ public interface CartService {
 	 * 로그인된 아이디의 카트 전체 삭제
 	 */
 	public int deleteCartByMemberId(String member_id);
+	
+
 }
