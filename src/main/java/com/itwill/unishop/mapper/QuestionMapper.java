@@ -8,7 +8,9 @@ public interface QuestionMapper {
 	
 	public List<Question> selectAll();
 	
-	public Question selectById(String member_id);
+	public List<Question> selectById(String member_id);
+	
+	public Question selectByNo(int question_no);
 	
 	public int insertQuestion(Question question);
 	

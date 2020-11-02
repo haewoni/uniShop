@@ -29,7 +29,7 @@ public class ProductServiceTestMain {
 		System.out.println(productService.deleteProduct("12345"));
 		*/
 		System.out.println("-----------------8. SELECT Four----------------------");
-		System.out.println(productService.selectFour());
+		System.out.println(productService.selectFour("M"));
 		System.out.println("----------------------------------------------------------------");
 		
 		System.out.println("-----------------8. SELECT Eight----------------------");

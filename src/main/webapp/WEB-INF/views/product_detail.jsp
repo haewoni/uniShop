@@ -7,10 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	찜 목록
-	<form name="f" method="POST">
-		<input type="text" name="wish_no" value="${wishlist.wish_no}">
-		<input type="text" name="product_no" value="${wishlist.product_no}">
-	</form>
+	<jsp:include page="include_common_top.jsp"/>
+	product detail 보여주기 페이지 입니다.
+	<a href="member_detail">디테일</a>
 </body>
 </html>

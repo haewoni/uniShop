@@ -8,7 +8,9 @@ public interface QuestionRepository {
 	
 	public ArrayList<Question> selectAll();
 	
-	public Question selectById(String member_id);
+	public ArrayList<Question> selectById(String member_id);
+	
+	public Question selectByNo(int question_no);
 	
 	public int insertQuestion(Question question);
 	

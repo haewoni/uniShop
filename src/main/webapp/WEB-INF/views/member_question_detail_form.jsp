@@ -8,7 +8,7 @@
 </head>
 <body>
 	<form>
-		<input type="text" name="question_date" value="${question.question_date}">
+		<input type="text" name="question_no" value="${question.question_no}">
 		<input type="text" name="question_date" value="${question.question_date}">
 		<input type="text" name="question_category" value="${question.question_category}">
 		<input type="text" name="question_status" value="${question.question_status}">

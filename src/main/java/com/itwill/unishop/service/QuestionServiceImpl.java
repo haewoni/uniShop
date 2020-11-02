@@ -26,9 +26,9 @@ public class QuestionServiceImpl implements QuestionService{
 	 * 본인 질문 보기
 	 */
 	@Override
-	public Question selectById(String member_id) {
-		Question question = questionRepository.selectById(member_id);
-		return question;
+	public ArrayList<Question> selectById(String member_id) {
+		ArrayList<Question> questionList = questionRepository.selectById(member_id);
+		return questionList;
 	}
 	/*
 	 * 질문 등록하기
@@ -53,6 +53,14 @@ public class QuestionServiceImpl implements QuestionService{
 	public int updateQuestion(Question updateQuestion) {
 		int rowcount = questionRepository.updateQuestion(updateQuestion);
 		return rowcount;
+	}
+	/*
+	 * 질문 하나 디테일 보기
+	 */
+	@Override
+	public Question selectByNo(int question_no) {
+		Question question = questionRepository.selectByNo(question_no);
+		return question;
 	}
 	
 	

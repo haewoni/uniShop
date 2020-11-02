@@ -1,6 +1,8 @@
 package com.itwill.unishop.repository;
 
 import java.util.ArrayList;
+
+import com.itwill.unishop.domain.Product;
 import com.itwill.unishop.domain.WishList;
 
 public interface WishListRepository {

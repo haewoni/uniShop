@@ -9,7 +9,7 @@ public interface ProductRepository {
 	
 	public ArrayList<Product> selectAll();
 	
-	public ArrayList<Product> selectFour();
+	public ArrayList<Product> selectFour(String product_l_div);
 	
 	public ArrayList<Product> selectEight();
 	

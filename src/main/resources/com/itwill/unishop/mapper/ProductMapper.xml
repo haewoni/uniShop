@@ -8,7 +8,7 @@
 	
 	<!-- SELECT RANDOM FOUR -->
 	<select id="selectFour" resultType="com.itwill.unishop.domain.Product">
-		SELECT * FROM (SELECT * FROM PRODUCT ORDER BY dbms_random.value)
+		SELECT * FROM (SELECT * FROM PRODUCT WHERE product_l_div=#{product_l_div} ORDER BY dbms_random.value)
 		WHERE ROWNUM <![CDATA[<=]]> 4
 	</select>
 	

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.itwill.unishop.domain.Product;
 import com.itwill.unishop.domain.WishList;
 import com.itwill.unishop.mapper.WishListMapper;
 @Repository("wishListRepository")

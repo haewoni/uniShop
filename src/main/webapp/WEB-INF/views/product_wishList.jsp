@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	이미지를 클릭하면 해당 상품의 상세보기 페이지로 이동합니다.
-	
+	wishList product를 보여준다.
 </body>
 </html>

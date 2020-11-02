@@ -26,9 +26,9 @@ public class ProductRepositoryImpl implements ProductRepository {
 	}
 	
 	@Override
-	public ArrayList<Product> selectFour() {
+	public ArrayList<Product> selectFour(String product_l_div) {
 		ArrayList<Product> productList = new ArrayList<Product>();
-		productList = productMapper.selectFour();
+		productList = productMapper.selectFour(product_l_div);
 		return productList;
 	}
 	

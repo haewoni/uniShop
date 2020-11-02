@@ -22,14 +22,7 @@
 		where member_id = #{member_id}
 	</select>
 	
-	<!-- address -->
-	<update id="updateAddress" parameterType="com.itwill.unishop.domain.Member">
-	update member 
-	set member_address_name=#{member_address_name},member_address_zipcode=#{member_address_zipcode},
-	member_address_country=#{member_address_country},member_address_city=#{member_address_city},
-	member_address1=#{member_address1},member_address2=#{member_address2}
-	where member_id=#{member_id}
-	</update>
+
 	
 	
 	<!-- insert -->
@@ -47,6 +40,14 @@
 		where member_id=#{member_id}
 	</update>
 	
+	<!-- address -->
+	<update id="updateAddress" parameterType="com.itwill.unishop.domain.Member">
+	update member 
+	set member_address_name=#{member_address_name},member_address_zipcode=#{member_address_zipcode},
+	member_address_country=#{member_address_country},member_address_city=#{member_address_city},
+	member_address1=#{member_address1},member_address2=#{member_address2}
+	where member_id=#{member_id}
+	</update>
 	<!-- delete -->
 	<delete id="deleteMember" parameterType="string">
 		delete member where member_id=#{member_id}

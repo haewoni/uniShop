@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	남성 상의 제품 보여주기
+
 </body>
 </html>

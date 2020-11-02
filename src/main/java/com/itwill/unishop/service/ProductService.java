@@ -13,7 +13,7 @@ public interface ProductService {
 	/*
 	 * 랜덤 제품 4개 select
 	 */
-	public ArrayList<Product> selectFour();
+	public ArrayList<Product> selectFour(String product_l_div);
 		
 	/*
 	 * 랜덤 제품 8개 select

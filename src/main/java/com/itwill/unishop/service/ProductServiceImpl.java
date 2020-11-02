@@ -27,8 +27,8 @@ public class ProductServiceImpl implements ProductService{
 	 * 랜덤 제품 4개 select
 	 */
 	@Override
-	public ArrayList<Product> selectFour() {
-		return productRepository.selectFour();
+	public ArrayList<Product> selectFour(String product_l_div) {
+		return productRepository.selectFour(product_l_div);
 	}
 	
 	/*

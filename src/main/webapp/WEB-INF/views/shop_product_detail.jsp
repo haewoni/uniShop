@@ -19,5 +19,19 @@
 	<p><img src=IMAGE/${product.product_image_3} width=300, height=300></p>
 	<p><img src=IMAGE/${product.product_image_4} width=300, height=300></p>
 	<p><img src=IMAGE/${product.product_image_5} width=300, height=300></p>
+	<hr>
+	<a href="shop_add_cart_action?product_no=${product.product_no}">카트추가</a>
+	<hr>
+	추천상품
+	<hr>
+	<c:forEach  items="${recommendedProductList}" 
+				var="product"  
+				begin="0"  
+				step="1" 
+				end="${recommendedProductList.size()}"
+				varStatus="status">
+		<li><a href="shop_product_detail?product_no=${product.product_no}">
+		<img src=IMAGE/${product.product_image_1} width=100, height=100><br>${product.product_name}</a></li>
+	</c:forEach>
 	</body>
 </html>
