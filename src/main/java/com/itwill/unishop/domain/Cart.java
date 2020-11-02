@@ -26,6 +26,18 @@ public class Cart {
 		this.product_no = product_name;
 		this.product_no = product_image_1;
 	}
+	
+	public Cart(int cart_no, int cart_qty, int cart_tot_price, String cart_product_size, String member_id,
+			String product_no) {
+		super();
+		this.cart_no = cart_no;
+		this.cart_qty = cart_qty;
+		this.cart_tot_price = cart_tot_price;
+		this.cart_product_size = cart_product_size;
+		this.member_id = member_id;
+		this.product_no = product_no;
+	}
+	
 	public int getCart_no() {
 		return cart_no;
 	}
