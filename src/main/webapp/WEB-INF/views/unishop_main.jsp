@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
- <div>
+ <div> 
   <jsp:include page="include_common_top.jsp"/>
 
 
