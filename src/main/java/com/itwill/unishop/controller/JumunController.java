@@ -109,6 +109,8 @@ public class JumunController {
 		//Member loginMember = (Member)session.getAttribute("loginMember");
 		//session.setAttribute("loginMember", new Member("uni4", "1111", "tttt", "1111","ttt@naver.com"));
 		Jumun jumun1 = (Jumun)session.getAttribute("jumun1");
+//		Jumun jumun2=new Jumun();
+		
 		jumun1.setCard_no(jumun.getCard_no());
 		jumun1.setCard_expire_date(jumun.getCard_expire_date());
 		jumun1.setCard_cvc(jumun.getCard_cvc());
@@ -117,6 +119,7 @@ public class JumunController {
 		String forwardPath = " ";
 		forwardPath="jumun_review_form";
 //		System.out.println(jumun1);
+		//System.out.println(jumun1);
 		return forwardPath;
 	}
 	/*
@@ -131,13 +134,20 @@ public class JumunController {
 		return "redirect:jumun_review_form"; 
 	}
 	@RequestMapping(value = "/jumun_review_action", method = RequestMethod.POST)
-	public String jumun_review_action_POST(Model model,@ModelAttribute Review review) throws Exception {
+	public String jumun_review_action_POST(Model model,HttpSession session,@ModelAttribute Jumun jumun) throws Exception {
 		String forwardPath = " ";
+		Member member2=new Member("uni1", "2222", "t564", "ta","ta", "집", "한국", "서울특별시", "01234", "강남구" ,"서초구");
+		Jumun jumun2=new Jumun("1121 1231 1213 4562", "12/21", "255", "민주영", "uni1");
+		session.setAttribute("member_name",member2.getMember_name());
+		session.setAttribute("member_address1",member2.getMember_address1());
+		session.setAttribute("member_phone",member2.getMember_phone());
+		session.setAttribute("card_no",jumun2.getCard_no());
 		//Member member = memberService.selectAddressById(member_id);
-		//model.addAttribute("member",member);
-		reviewService.insertReview(review);
+		//model.addAttribute("jumun",jumun);
+		jumunService.insertJumun(jumun2);
 		forwardPath="jumun_review_form";
 		return forwardPath;
+		
 	}
 	/*
 	 * jumun - complete
