@@ -22,12 +22,12 @@
 		<input type="text" name="member_phone" value="${loginMember.member_phone}">
 		<input type="submit">
 		
+		<input type="text" name="member_address_name" value="${loginMember.member_address_name}">
+		<input type="text" name="member_address_country" value="${loginMember.member_address_country}">
+		<input type="text" name="member_address_city" value="${loginMember.member_address_city}">
+		<input type="text" name="member_address_zipcode" value="${loginMember.member_address_zipcode}">
 		<input type="text" name="member_address1" value="${loginMember.member_address1}">
 		<input type="text" name="member_address2" value="${loginMember.member_address2}">
-		<input type="text" name="member_address_city" value="${loginMember.member_address_city}">
-		<input type="text" name="member_address_country" value="${loginMember.member_address_country}">
-		<input type="text" name="member_address_name" value="${loginMember.member_address_name}">
-		<input type="text" name="member_address_zipcode" value="${loginMember.member_address_zipcode}">
 		<input type="submit">
 		
 	</form>

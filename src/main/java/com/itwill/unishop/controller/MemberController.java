@@ -77,6 +77,7 @@ public class MemberController {
 		return forwardPath;
 	}
 	//멤버 로그아웃
+	
 	@RequestMapping(value = "/member_logout_action", method = RequestMethod.GET)
 	public String member_logout_action() {
 		return "member_detail";
@@ -122,15 +123,9 @@ public class MemberController {
 		String forwardPath = "";
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
-//			memberService.selectMemberById(member_id);
 			ArrayList<Jumun> jumunList = (ArrayList<Jumun>) jumunService.selectById(sMemberId);
 			ArrayList<WishList> wishList = wishListService.selectWishListAll(sMemberId);
-			//Question question = questionService.selectByNo(question_no);
 			ArrayList<Question> questionList = questionService.selectById(sMemberId);
-			
-			//ArrayList<Question> questionList = questionService
-			//session.setAttribute("sMemberId", member_id);
-			//model.addAttribute("question", question); 
 			model.addAttribute("jumunList", jumunList);
 			model.addAttribute("wishList", wishList);
 			model.addAttribute("questionList", questionList);
@@ -150,21 +145,14 @@ public class MemberController {
 	
 
 	@RequestMapping(value = "/member_update_action", method = RequestMethod.POST)
-	public String member_update_action_POST(Model model, HttpSession session,@ModelAttribute Member updateMember) {
+	public String member_update_action_POST(Model model, HttpSession session, @ModelAttribute Member updateMember) {
 		String forwardPath = "";
 		try {
-			//Member updateMember = (Member) session.getAttribute("loginMember");;
-			//session.getAttribute("loginMember");
-			//model.addAttribute("loginMember",updateMember);
-			//session.setAttribute("updateMember", updateMember);
 			Member loginMember = (Member)session.getAttribute("loginMember");
-			if(loginMember.getMember_id().equalsIgnoreCase(updateMember.getMember_id())) {
-				int update = memberService.updateMember(updateMember);
-				model.addAttribute("update", update);
-				//session.setAttribute("loginMember", loginMember);
-			}
-			
-			forwardPath = "redirect:member_detail";
+				updateMember.setMember_id(loginMember.getMember_id());
+				memberService.updateMember(updateMember);
+				
+			forwardPath = "redirect:unishop_main";
 		} catch (Exception e) {
 			e.printStackTrace();
 			forwardPath = "member_detail";
