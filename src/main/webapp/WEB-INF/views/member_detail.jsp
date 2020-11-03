@@ -37,22 +37,24 @@
 			주문 번호<c:out value="${jumun.jumun_no}"/>
 			주문 날짜<c:out value="${jumun.jumun_date}"/>
 			주문 상태<c:out value="${jumun.jumun_status}"/>
-			<a href="member_jumun_detail?jumun_no='${jumun.jumun_no}'">주문 디테일 보기</a><br/>
+			<a href="member_jumun_detail?jumun_no=${jumun.jumun_no}">주문 디테일 보기</a><br/>
 		</c:forEach>
 	</form>
 	찜 목록<br/>
-	<c:forEach items="${wishList}" var="wishList" begin="0" step="1" end="${wishList.size()}">
-			<a href="shop_product_detail?product_no='${wishList.product_no}'">상품 번호</a><c:out value="${wishList.product_no}"/>
+	<c:forEach items="${wishList}" var="wishList">
+			
+			<a href="shop_product_detail?product_no=${wishList.product.product_no}">상품 번호</a><c:out value="${wishList.product_no}"/>
 			상품 이름<c:out value="${wishList.product.product_name}"/>
 			찜 번호<c:out value="${wishList.wish_no}"/><br/>
-		</c:forEach>	
+		
+	</c:forEach>	
 	QnA 목록
 	<form name="f" method="POST">
 		<c:forEach items="${questionList}" var="question" begin="0" step="1" end="${questionList.size()}">
 			질문 번호<c:out value="${question.question_no}"/>
 			질문 타이틀<c:out value="${question.question_title}"/>
 			질문 상태<c:out value="${question.question_status}"/>
-			<a href="member_question_detail?question_no='${question.question_no}'">QnA 디테일 보기</a>
+			<a href="member_question_detail?question_no=${question.question_no}">QnA 디테일 보기</a><br/>
 		</c:forEach>
 	</form>
 </body>
