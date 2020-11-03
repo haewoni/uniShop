@@ -16,9 +16,17 @@ public class WishListServiceImpl implements WishListService{
 	@Override
 	public int insertWishList(WishList wishList) throws Exception {
 		int insertCount = 0;
+		
 		insertCount = wishListRepository.insertWishList(wishList);
 		return insertCount;
 	};
+	
+	@Override
+	public int inspectDuplicateWishList(String member_id, String product_no) throws Exception {
+		int duplicateCount = 0;
+		duplicateCount = wishListRepository.inspectDuplicateWishList(member_id, product_no);
+		return duplicateCount;
+	}
 	
 	@Override
 	public ArrayList<WishList> selectWishListAll(String member_id) throws Exception {
@@ -27,8 +35,8 @@ public class WishListServiceImpl implements WishListService{
 	};
 
 	@Override
-	public int deleteWishListById(int no) throws Exception {
-		int deleteCount = wishListRepository.deleteWishListById(no);
+	public int deleteWishListById(String member_id, String product_no) throws Exception {
+		int deleteCount = wishListRepository.deleteWishListById(member_id, product_no);
 		return deleteCount;
 	};
 	

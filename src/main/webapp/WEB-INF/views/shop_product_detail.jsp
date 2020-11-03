@@ -13,7 +13,7 @@
 </head>
 <body>
 	제품 디테일<hr>
-	<a href="shop_product_review_list?product_no=${product.product_no}">해당 상품 리뷰 리스트</a>
+	<input type="button" value="Back to ShopMain" class=TXTFLD onclick="location.href = 'unishop_main'" >
 	<hr>
 		<form method="post" action="shop_add_cart_action">
 			Quantity :
@@ -41,12 +41,19 @@
 			<input type=submit value="ADD TO CART" class=TXTFLD onclick="javascript:alert('카트 추가 완료');" >
 			<input type="hidden" name=product_no value="${product.product_no}">
 		</form>
+		<br/>
 		<form method="post" action="shop_add_wishlist_action">
 		<input type=submit value="ADD TO WISHLIST" class=TXTFLD onclick="javascript:alert('위시리스트 추가 완료');" >
 		<input type="hidden" name=product_no value="${product.product_no}">
 		</form>
+		<form method="post" action="shop_delete_wishlist_action">
+		<input type=submit value="DELETE FROM WISHLIST" class=TXTFLD onclick="javascript:alert('위시리스트 삭제 완료');" >
+		<input type="hidden" name=product_no value="${product.product_no}">
+		</form>
 	<hr>
 	<br />
+	<a href="shop_product_review_list?product_no=${product.product_no}">해당 상품 리뷰 리스트</a>
+	<br/>
 	<p>제품명 : ${product.product_name}</p>
 	<p>제품번호 : ${product.product_no}</p>
 		

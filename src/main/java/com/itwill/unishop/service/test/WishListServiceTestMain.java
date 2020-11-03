@@ -22,11 +22,11 @@ public class WishListServiceTestMain {
 		//System.out.println(wishListService.insertWishList(new WishList(4, "uni3", "425415", null)));
 
 		
-		//System.out.println(wishListService.deleteWishListById(101));
+		System.out.println(wishListService.deleteWishListById("uni4", "429290"));
 		
-//		System.out.println(wishListService.deleteWishListAll("uni3"));
+		//System.out.println(wishListService.deleteWishListAll("uni3"));
 
-
+		//System.out.println(wishListService.inspectDuplicateWishList("uni1","428855"));
 	}
 
 }
