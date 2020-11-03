@@ -52,5 +52,22 @@ public class CartServiceImpl implements CartService{
 	public int deleteCartByMemberId(String member_id) {
 		return cartRepository.deleteCartByMemberId(member_id);
 	}
+	
+	/*
+	 * 카트 중복검사
+	 */
+	@Override
+	public int inspectDuplicateCart(String member_id, String product_no, String cart_product_size) {
+		return cartRepository.inspectDuplicateCart(member_id, product_no, cart_product_size);
+	}
+	
+	/*
+	 * 카트 하나 검색
+	 */
+	@Override
+	public Cart selectCartOne(String member_id, String product_no, String cart_product_size) {
+		return cartRepository.selectCartOne(member_id, product_no, cart_product_size);
+	}
+	
 
 }

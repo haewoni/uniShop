@@ -32,7 +32,20 @@ public class CartRepositoryImpl implements CartRepository {
 		ArrayList<Cart> cartList1 = (ArrayList<Cart>) cartList2;
 		return cartList1;
 	}
+	
+	@Override
+	public int inspectDuplicateCart(String member_id, String product_no, String cart_product_size) {
+		int duplicateCount = 0;
+		duplicateCount = cartMapper.inspectDuplicateCart(member_id, product_no, cart_product_size);
+		return duplicateCount;
+	}
 
+	@Override
+	public Cart selectCartOne(String member_id, String product_no, String cart_product_size) {
+		Cart cart = cartMapper.selectCartOne(member_id, product_no, cart_product_size);
+		return cart;
+	}
+	
 	@Override
 	public int updateCart(Cart updateCart) {
 

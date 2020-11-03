@@ -17,6 +17,13 @@ namespace="com.itwill.unishop.mapper.CartMapper">
 		from product
 		where product_no=#{product_no}
 	</insert>
+	<select id="inspectDuplicateCart" parameterType="map" resultType="java.lang.Integer">
+			select count(*) from cart where member_id=#{member_id} and product_no=#{product_no} and cart_product_size=#{cart_product_size}
+	</select>
+	<select id="selectCartOne" parameterType="map" resultType="com.itwill.unishop.domain.Cart">
+			select * from cart where member_id=#{member_id} and product_no=#{product_no} and cart_product_size=#{cart_product_size}
+	</select>
+	
 	<delete id="deleteCartByCartNo" parameterType="java.lang.Integer">
 		delete from cart where cart_no = #{cart_no}
 	</delete>

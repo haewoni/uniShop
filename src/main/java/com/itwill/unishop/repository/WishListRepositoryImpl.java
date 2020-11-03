@@ -23,6 +23,13 @@ public class WishListRepositoryImpl implements WishListRepository{
 	};
 	
 	@Override
+	public int inspectDuplicateWishList(String member_id, String product_no) throws Exception {
+		int duplicateCount = 0;
+		duplicateCount = wishListMapper.inspectDuplicateWishList(member_id, product_no);
+		return duplicateCount;
+	}
+	
+	@Override
 	public ArrayList<WishList> selectWishListAll(String member_id) throws Exception {
 		
 		ArrayList<WishList> wishList = (ArrayList<WishList>)wishListMapper.selectWishListAll(member_id);
@@ -30,9 +37,9 @@ public class WishListRepositoryImpl implements WishListRepository{
 	};
 
 	@Override
-	public int deleteWishListById(Integer wish_no) throws Exception {
+	public int deleteWishListById(String member_id, String product_no) throws Exception {
 		
-		int deleteCount = wishListMapper.deleteWishListById(wish_no);
+		int deleteCount = wishListMapper.deleteWishListById(member_id, product_no);
 		return deleteCount;
 	};
 	

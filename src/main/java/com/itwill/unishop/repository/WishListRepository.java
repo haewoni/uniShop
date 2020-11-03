@@ -11,8 +11,9 @@ public interface WishListRepository {
 	
 	public ArrayList<WishList> selectWishListAll(String member_id) throws Exception;
 	
+	public int inspectDuplicateWishList(String member_id, String product_no) throws Exception;
 	
-	public int deleteWishListById(Integer wish_no) throws Exception;
+	public int deleteWishListById(String member_id, String product_no) throws Exception;
 	
 	public int deleteWishListAll(String member_id) throws Exception;
 	

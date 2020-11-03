@@ -8,7 +8,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	샵 메인 <hr>
+	샵 메인
+	<hr>
+	<input type="button" value="Back to Main" class=TXTFLD onclick="location.href = 'unishop_main'" >
+	<hr>
 	<div>
 		<a href="shop_male_outer_list">남성 아우터</a>
 		<a href="shop_male_cardigan_list">남성 가디건</a>
