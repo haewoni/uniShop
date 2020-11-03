@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.itwill.unishop.domain.Jumun;
+import com.itwill.unishop.domain.Jumun_Detail;
 import com.itwill.unishop.repository.JumunRepository;
 
 @Service
@@ -42,6 +43,12 @@ public class JumunServiceImpl implements JumunService{
 	@Override
 	public int deleteJumunByNo(int jumun_no) {
 		return jumunRepository.deleteJumunByNo(jumun_no);
+	}
+
+	@Override
+	public List<Jumun_Detail> selectJoinById(String member_id) {
+		
+		return jumunRepository.selectJoinById(member_id);
 	}
 
 	
