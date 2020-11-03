@@ -20,6 +20,8 @@ public class WishListRepositoryTestMain {
 		
 		//System.out.println(wishListRepository.insertWishList(new WishList(101, "uni3", "431464")));
 		//System.out.println(wishListRepository.deleteWishListById(2));
+		
+		System.out.println(wishListRepository.inspectDuplicateWishList("uni1","428855"));
 	}
 
 }

@@ -6,7 +6,6 @@
 		<association property="productList" autoMapping="true" resultMap="com.itwill.unishop.mapper.ProductMapper.productResultMap">
 			<id column="PRODUCT_NO" property="product_no"/>
 		</association>
-		
 	</resultMap>
 	<insert id="insertWishList" parameterType="com.itwill.unishop.domain.WishList">
 		<selectKey resultType="java.lang.Integer"
@@ -16,11 +15,14 @@
 			INSERT INTO wishList (wish_no, member_id, product_no) 
 			     VALUES (#{wish_no}, #{member_id}, #{product_no})
 	</insert>
+	<select id="inspectDuplicateWishList" parameterType="map" resultType="java.lang.Integer">
+			select count(*) from wishList where member_id=#{member_id} and product_no=#{product_no}
+	</select>
 	<select id="selectWishListAll" parameterType="String" resultMap="wishListWithProductResultMap">
 			select w.wish_no, w.member_id, p.* from wishList w join product p on w.product_no=p.product_no where member_id = #{member_id}
 	</select>
-	<delete id="deleteWishListById" parameterType="Integer">
-			delete from wishList where wish_no = #{wish_no}
+	<delete id="deleteWishListById" parameterType="map" >
+			delete from wishList where member_id = #{member_id} and product_no=#{product_no} 
 	</delete>
 	<delete id="deleteWishListAll" parameterType="String">
 			delete from wishList where member_id = #{member_id}

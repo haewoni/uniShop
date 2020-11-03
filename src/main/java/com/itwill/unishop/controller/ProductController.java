@@ -174,8 +174,15 @@ public class ProductController {
 	public String shop_add_cart(Model model, HttpSession session, @RequestParam int cart_qty, @RequestParam String cart_product_size, @RequestParam String product_no) {
 		/*
 		 * 세션작업 되면 member_id 연결하세요.
+		 * 로그인확인 작업되면 여기에 붙여주세용
 		 */
 		String forwardPath= "";
+		/*
+		String sMemberId = (String) session.getAttribute("sMemberId");
+		if(sMemberId!=null || sMemberId!="") {
+		}
+		템플릿 연결할때 로그인체크 할때 쓰세요. 아래 위시리스트 추가도 마찬가지.
+		*/
 		int cart_qty1 = cart_qty;
 		String cart_product_size1 = cart_product_size;
 		String member_id = "uni1";//session.getId();
@@ -194,7 +201,24 @@ public class ProductController {
 		String member_id = "uni1"; //session.getId();
 		String product_no1 = product_no;
 		try {
-			wishListService.insertWishList(new WishList(-1, member_id, product_no1, null));
+			int duplicateCount = wishListService.inspectDuplicateWishList(member_id, product_no);
+			if(duplicateCount==0) {
+				wishListService.insertWishList(new WishList(-1, member_id, product_no1, null));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		forwardPath = "redirect:shop_product_detail?product_no="+product_no;
+		return forwardPath;
+	}
+	
+	/**********위시리스트 삭제***********/
+	@RequestMapping("/shop_delete_wishlist_action")
+	public String shop_delete_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
+		String forwardPath = "";
+		String member_id = "uni1"; //session.getId();
+		try {
+			wishListService.deleteWishListById(member_id, product_no);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
