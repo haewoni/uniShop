@@ -31,5 +31,13 @@ public interface CartService {
 	 */
 	public int deleteCartByMemberId(String member_id);
 	
-
+	/*
+	 * 카트 중복검사
+	 */
+	public int inspectDuplicateCart(String member_id, String product_no, String cart_product_size);
+	
+	/*
+	 * 카트 하나 검색
+	 */
+	public Cart selectCartOne(String member_id, String product_no, String cart_product_size);
 }

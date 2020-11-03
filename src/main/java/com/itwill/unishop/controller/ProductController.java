@@ -183,14 +183,21 @@ public class ProductController {
 		}
 		템플릿 연결할때 로그인체크 할때 쓰세요. 아래 위시리스트 추가도 마찬가지.
 		*/
-		int cart_qty1 = cart_qty;
-		String cart_product_size1 = cart_product_size;
+				
 		String member_id = "uni1";//session.getId();
-		String product_no1 = product_no;
-		//-1과 5000은 임의의 수일 뿐. 쿼리문상 자동으로 계산된 값으로 입력됨
-		Cart cart = new Cart(-1, cart_qty1, 5000, cart_product_size1, member_id, product_no1);
-		cartService.insertCart(cart);
+		int duplicateCount = cartService.inspectDuplicateCart(member_id, product_no, cart_product_size);
+		//카트 중복검사 후 qty만 더하기
+		if(duplicateCount!=0) {
+			int update_qty = cartService.selectCartOne(member_id, product_no, cart_product_size).getCart_qty()+cart_qty;
+			int cart_no = cartService.selectCartOne(member_id, product_no, cart_product_size).getCart_no();
+			Cart updateCart = new Cart(cart_no, update_qty, 5000, cart_product_size, member_id, product_no);
+			cartService.updateCart(updateCart);
+		}else {
+			Cart cart = new Cart(-1, cart_qty, 5000, cart_product_size, member_id, product_no);
+			cartService.insertCart(cart);
+		}
 		forwardPath = "redirect:shop_product_detail?product_no="+product_no;
+		//-1과 5000은 임의의 수일 뿐. 쿼리문상 자동으로 계산된 값으로 입력됨
 		return forwardPath;
 	}
 	
@@ -199,11 +206,10 @@ public class ProductController {
 	public String shop_add_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
 		String forwardPath = "";
 		String member_id = "uni1"; //session.getId();
-		String product_no1 = product_no;
 		try {
 			int duplicateCount = wishListService.inspectDuplicateWishList(member_id, product_no);
 			if(duplicateCount==0) {
-				wishListService.insertWishList(new WishList(-1, member_id, product_no1, null));
+				wishListService.insertWishList(new WishList(-1, member_id, product_no, null));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
