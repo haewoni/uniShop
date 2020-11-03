@@ -20,6 +20,9 @@ public class WishList {
 		this.product = product;
 	}
 
+	
+
+
 	public int getWish_no() {
 		return wish_no;
 	}
