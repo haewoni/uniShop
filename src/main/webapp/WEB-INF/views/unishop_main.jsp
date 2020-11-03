@@ -71,9 +71,8 @@
 				<a href="shop_product_detail?product_no=${product.product_no}">
 					<img src=IMAGE/${product.product_image_1} width=100, height=100>${product.product_name}
 				</a>
-				<a href="add_wishList">
-					<input type="image" src="IMAGE/heart.png" width="20" height="20" 
-						   onclick="javascript:alert('찜 목록에 추가 되었습니다 !');">
+				<a href="add_wishlist_action?product_no=${product.product_no}">
+					<input type="image" src="IMAGE/heart.png" width="20" height="20">
 				</a>
 			</li>
 		</c:forEach>
@@ -86,8 +85,50 @@
 			<input type="button" value="VIEW ALL PRODUCTS">
 		</a>
 	</div>
-	<%@include file= "include_common_bottom.jspf" %>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+		<%@include file= "include_common_bottom.jspf" %>
  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
