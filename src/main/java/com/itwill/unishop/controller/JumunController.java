@@ -117,7 +117,7 @@ public class JumunController {
 		jumun1.setCard_member_name(jumun.getCard_member_name());
 		jumun1.setMember_id(jumun.getMember_id());
 		String forwardPath = " ";
-		forwardPath="jumun_review_form";
+		forwardPath="redirect:jumun_review_form";
 //		System.out.println(jumun1);
 		//System.out.println(jumun1);
 		return forwardPath;
@@ -137,7 +137,7 @@ public class JumunController {
 	public String jumun_review_action_POST(Model model,HttpSession session,@ModelAttribute Jumun jumun) throws Exception {
 		String forwardPath = " ";
 		Member member2=new Member("uni1", "2222", "t564", "ta","ta", "집", "한국", "서울특별시", "01234", "강남구" ,"서초구");
-		Jumun jumun2=new Jumun("1121 1231 1213 4562", "12/21", "255", "민주영", "uni1");
+		Jumun jumun2=new Jumun("1121 1231 1213 4562", "2020-12-21", "255", "민주영", "uni1");
 		session.setAttribute("member_name",member2.getMember_name());
 		session.setAttribute("member_address1",member2.getMember_address1());
 		session.setAttribute("member_phone",member2.getMember_phone());
@@ -145,7 +145,7 @@ public class JumunController {
 		//Member member = memberService.selectAddressById(member_id);
 		//model.addAttribute("jumun",jumun);
 		jumunService.insertJumun(jumun2);
-		forwardPath="jumun_review_form";
+		forwardPath="redirect:jumun_review_form";
 		return forwardPath;
 		
 	}
