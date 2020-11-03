@@ -13,7 +13,7 @@
 
 
 	<div>
-		<a href="">${sMemberId}님 로그아웃</a>
+		<a href="member_logout_action">${sMemberId}님 로그아웃</a>
 		<a href="">${loginMember.member_phone} 님의 핸드폰</a>
 		<a href="">${loginMember.member_address2} 주소상세</a>
 		<a href="">${sMemberId}님 로그아웃</a>		

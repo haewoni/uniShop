@@ -80,14 +80,11 @@ public class MemberController {
 	//멤버 로그아웃
 	
 	@RequestMapping(value = "/member_logout_action", method = RequestMethod.GET)
-	public String member_logout_action() {
-		return "member_detail";
-	}
-	@RequestMapping(value = "/member_logout_action", method = RequestMethod.POST)
 	public String member_logout_action(HttpSession session) {
 		session.invalidate();
 		return "redirect:unishop_main";
 	}
+	
 	
 	
 	//회원가입을 해보자
@@ -139,16 +136,14 @@ public class MemberController {
 		return "member_detail";
 	}
 
-	
-
 	@RequestMapping(value = "/member_update_action", method = RequestMethod.POST)
 	public String member_update_action_POST(Model model, HttpSession session, @ModelAttribute Member updateMember) {
 		String forwardPath = "";
 		try {
 			Member loginMember = (Member)session.getAttribute("loginMember");
-				updateMember.setMember_id(loginMember.getMember_id());
-				memberService.updateMember(updateMember);
-				forwardPath = "redirect:unishop_main";
+			updateMember.setMember_id(loginMember.getMember_id());
+			memberService.updateMember(updateMember);
+			forwardPath = "redirect:unishop_main";
 		} catch (Exception e) {
 			e.printStackTrace();
 			forwardPath = "member_detail";
