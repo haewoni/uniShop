@@ -24,6 +24,9 @@
 		<a href="shop_main">Shop</a>
 	</div>
 	
+		
+		
+	 <div class="product">
 		<div>
 			<a href="product_ManOuterList">남성 아우터
 				<input type="button" value="VIEW COLLECTION"><br>
@@ -47,7 +50,7 @@
 				<input type="button" value="VIEW COLLECTION"><br>
 			</a>
 		</div>
-	
+	</div>
 	
 	<a href="member_login_register_form">로오그으이인</a>
 	<a href="jumun_address_form">check out</a>
@@ -68,8 +71,11 @@
 				<a href="shop_product_detail?product_no=${product.product_no}">
 					<img src=IMAGE/${product.product_image_1} width=100, height=100>${product.product_name}
 				</a>
+				<a href="add_wishList">
+					<input type="image" src="IMAGE/heart.png" width="20" height="20" 
+						   onclick="javascript:alert('찜 목록에 추가 되었습니다 !');">
+				</a>
 			</li>
-				<img src="IMAGE/heart.png" width="30" height="30">
 		</c:forEach>
 		
     </div>
