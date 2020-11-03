@@ -1,5 +1,7 @@
 package com.itwill.unishop.service.test;
 
+import java.util.ArrayList;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -11,11 +13,11 @@ public class WishListServiceTestMain {
 	public static void main(String[] args) throws Exception {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring/application-config.xml");
 		WishListService wishListService = (WishListService)applicationContext.getBean("wishListServiceImpl");
-		
-		//System.out.println(wishListService.selectWishListAll("uni4"));
+		ArrayList<WishList> wishList = wishListService.selectWishListAll("uni3");
+		System.out.println(wishList);
 				
 
-		System.out.println(wishListService.insertWishList(new WishList(6, "uni3", "425415", null)));
+		//System.out.println(wishListService.insertWishList(new WishList(6, "uni3", "425415", null)));
 
 		//System.out.println(wishListService.insertWishList(new WishList(4, "uni3", "425415", null)));
 

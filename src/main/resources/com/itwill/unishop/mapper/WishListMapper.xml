@@ -3,7 +3,7 @@
 <mapper namespace="com.itwill.unishop.mapper.WishListMapper">
 	<resultMap type="com.itwill.unishop.domain.WishList" id="wishListWithProductResultMap" autoMapping="true">
 		<id column="WISH_NO" property="wish_no"/>
-		<association property="productList" autoMapping="true" resultMap="com.itwill.unishop.mapper.ProductMapper.productResultMap">
+		<association property="product" autoMapping="true" resultMap="com.itwill.unishop.mapper.ProductMapper.productResultMap">
 			<id column="PRODUCT_NO" property="product_no"/>
 		</association>
 		

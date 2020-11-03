@@ -35,13 +35,17 @@
 	<form name="f" method="POST">
 		<input type="text" name="jumunList" value="${jumunList}">
 	</form>
-	찜 목록
-	<form name="f" method="POST">
-		<a href="member_wishlist_detail?member_id=${sMemberId}">찜한 물품 자세히 보기</a>
-	</form>
+	찜 목록<br/>
+	<c:forEach items="${wishList}" var="wishList" begin="0" step="1" end="${wishList.size()}">
+			<a href="shop_product_detail?product_no='${wishList.product_no}'">상품 번호</a><c:out value="${wishList.product_no}"/>
+			상품 이름<c:out value="${wishList.product.product_name}"/>
+			찜 번호<c:out value="${wishList.wish_no}"/><br/>
+		</c:forEach>	
 	QnA 목록
 	<form name="f" method="POST">
+		<c:forEach items="${questionList}" var="question" begin="0" step="1" end="${questionList.size()}"/>
 		<input type="text" name="questionList" value="${questionList}">
+		<a href="member_question_detail?question_no='${question.question_no}'">QnA 디테일 보기</a>
 	</form>
 </body>
 </html>

@@ -6,48 +6,56 @@ public class WishList {
 	private int wish_no;
 	private String member_id;
 	private String product_no;
-	private List<Product> productList;
+	private Product product;
 	
 	public WishList() {
 		
 	}
-	
-	public WishList(int wish_no, String member_id, String product_no, List<Product> productList) {
+
+	public WishList(int wish_no, String member_id, String product_no, Product product) {
 		super();
 		this.wish_no = wish_no;
 		this.member_id = member_id;
 		this.product_no = product_no;
-		this.productList = productList;
-	}	
+		this.product = product;
+	}
 
 	public int getWish_no() {
 		return wish_no;
 	}
+
 	public void setWish_no(int wish_no) {
 		this.wish_no = wish_no;
 	}
+
 	public String getMember_id() {
 		return member_id;
 	}
+
 	public void setMember_id(String member_id) {
 		this.member_id = member_id;
 	}
+
 	public String getProduct_no() {
 		return product_no;
 	}
+
 	public void setProduct_no(String product_no) {
 		this.product_no = product_no;
 	}
-	public List<Product> getProductList() {
-		return productList;
+
+	public Product getProduct() {
+		return product;
 	}
-	public void setProductList(List<Product> productList) {
-		this.productList = productList;
+
+	public void setProduct(Product product) {
+		this.product = product;
 	}
+
 	@Override
 	public String toString() {
-		return "WishList [wish_no=" + wish_no + ", member_id=" + member_id + ", product_no=" + product_no
-				+ ", productList=" + productList + "]";
+		return "WishList [wish_no=" + wish_no + ", member_id=" + member_id + ", product_no=" + product_no + ", product="
+				+ product + "]";
 	}
 	
 }

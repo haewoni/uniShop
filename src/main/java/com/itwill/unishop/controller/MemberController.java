@@ -17,15 +17,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.itwill.unishop.domain.Jumun;
 import com.itwill.unishop.domain.Member;
-import com.itwill.unishop.domain.Product;
 import com.itwill.unishop.domain.Question;
 import com.itwill.unishop.domain.WishList;
 import com.itwill.unishop.exception.ExistedMemberException;
 import com.itwill.unishop.exception.MemberNotFoundException;
 import com.itwill.unishop.exception.PasswordMismatchException;
 import com.itwill.unishop.service.JumunService;
+import com.itwill.unishop.service.Jumun_DetailService;
 import com.itwill.unishop.service.MemberService;
-import com.itwill.unishop.service.ProductService;
 import com.itwill.unishop.service.QuestionService;
 import com.itwill.unishop.service.WishListService;
 
@@ -40,6 +39,8 @@ public class MemberController {
 	private WishListService wishListService;
 	@Autowired
 	private QuestionService questionService;
+	@Autowired
+	private Jumun_DetailService jumun_DetailService;
 	
 	@RequestMapping("/member_login_register_form")
 	public String member_login_register_form() {
@@ -149,14 +150,20 @@ public class MemberController {
 	
 
 	@RequestMapping(value = "/member_update_action", method = RequestMethod.POST)
-	public String member_update_action_POST(Model model, HttpSession session, @ModelAttribute Member updateMember) {
+	public String member_update_action_POST(Model model, HttpSession session,@ModelAttribute Member updateMember) {
 		String forwardPath = "";
 		try {
 			//Member updateMember = (Member) session.getAttribute("loginMember");;
-			session.getAttribute("loginMember");
-			memberService.updateMember(updateMember);
-			model.addAttribute("loginMember",updateMember);
+			//session.getAttribute("loginMember");
+			//model.addAttribute("loginMember",updateMember);
 			//session.setAttribute("updateMember", updateMember);
+			Member loginMember = (Member)session.getAttribute("loginMember");
+			if(loginMember.getMember_id().equalsIgnoreCase(updateMember.getMember_id())) {
+				int update = memberService.updateMember(updateMember);
+				model.addAttribute("update", update);
+				//session.setAttribute("loginMember", loginMember);
+			}
+			
 			forwardPath = "redirect:member_detail";
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -165,24 +172,41 @@ public class MemberController {
 		return forwardPath;
 	}
 	
-	@RequestMapping("/member_jumun_detail_form)")
-	public String member_jumun_detail_form() {
-		return "member_jumun_detail_form";
-	}
-	
-	@RequestMapping("/member_wishlist_detail")
-	public String member_wishlist_product_detail_form() {
-		return "member_wishlist_detail";
-	}
-	
-	
-	@RequestMapping("/member_question_detail_form")
-	public String member_question_detail_form(Model model, HttpSession session,@RequestParam int question_no) {
+	@RequestMapping("/member_jumun_detail)")
+	public String member_jumun_detail_form(Model model, HttpSession session) {
 		String forwardPath = "";
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
-			Question question = questionService.selectByNo(question_no);
-			model.addAttribute("question", question);
+			
+			forwardPath = "member_jumun_detail";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return forwardPath;
+	}
+	
+	@RequestMapping("/member_wishlist_detail")
+	public String member_wishlist_detail_form(Model model, HttpSession session) {
+		String forwardPath = "";
+		try {
+			String sMemberId = (String) session.getAttribute("sMemberId");
+			ArrayList<WishList> wishList = wishListService.selectWishListAll(sMemberId);
+			model.addAttribute("wishList", wishList);
+			forwardPath = "member_wishlist_detail";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return forwardPath;
+	}
+	
+	
+	@RequestMapping("/member_question_detail")
+	public String member_question_detail(Model model, HttpSession session) {
+		String forwardPath = "";
+		try {
+			String sMemberId = (String) session.getAttribute("sMemberId");
+			ArrayList<Question> questionList = questionService.selectById(sMemberId);
+			model.addAttribute("questionList", questionList);
 			forwardPath = "member_question_detail";
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -196,6 +220,5 @@ public class MemberController {
 		return "error_handle";
 	}
 	*/
-
 
 }
