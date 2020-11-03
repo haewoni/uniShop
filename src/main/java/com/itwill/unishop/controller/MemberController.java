@@ -100,21 +100,17 @@ public class MemberController {
 	public String member_register_action(Model model, @ModelAttribute Member newMember, @RequestParam String member_pass) {
 		String forwardPath="";
 		try {
-			if(newMember.getMember_password().equalsIgnoreCase(member_pass)) {
+			if(newMember.getMember_password().equals(member_pass)) {
 				memberService.insertMember(newMember);
 				forwardPath="redirect:member_login_register_form";
 			}else {
 				forwardPath="member_login_register_form";
 			}
-			
-			
 		} catch (ExistedMemberException e) {
 			model.addAttribute("msg1", e.getMessage());
-			System.out.println("아이디 확인좀요 ㅡㅡ");
 			e.printStackTrace();
 			forwardPath="member_login_register_form";
 		} 
-		
 		return forwardPath;
 	}
 	//회원 디테일
@@ -151,8 +147,7 @@ public class MemberController {
 			Member loginMember = (Member)session.getAttribute("loginMember");
 				updateMember.setMember_id(loginMember.getMember_id());
 				memberService.updateMember(updateMember);
-				
-			forwardPath = "redirect:unishop_main";
+				forwardPath = "redirect:unishop_main";
 		} catch (Exception e) {
 			e.printStackTrace();
 			forwardPath = "member_detail";
