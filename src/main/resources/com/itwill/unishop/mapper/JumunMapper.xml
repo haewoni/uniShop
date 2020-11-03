@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.itwill.unishop.mapper.JumunMapper">
-	
+	<resultMap type="com.itwill.unishop.domain.Jumun" id="jumunWithJumun_DetailResultMap" autoMapping="true">
+		<collection property="jumun_DetailList" resultMap="com.itwill.unishop.mapper.Jumun_DetailMapper.jumun_DetailResultMap" autoMapping="true">
+		
+		</collection>
+	</resultMap>
 	
 	<!-- create -->
 	<insert id="insertJumun" parameterType="com.itwill.unishop.domain.Jumun">
@@ -30,7 +34,12 @@
 		where member_id=#{member_id}
 	</select>
 	
-	
+	<select id="selectJoinById" parameterType="java.lang.String" resultMap="jumunWithJumun_DetailResultMap">
+		select j.jumun_no, j.jumun_date, j.jumun_status, j.jumun_tot_price, jd.jumun_d_product_name, jd.jumun_d_product_size,
+			   jd.jumun_d_product_price, jd.jumun_d_product_qty 
+		from jumun j join jumun_detail jd on j.jumun_no=jd.jumun_no
+		where member_id=#{member_id}
+	</select>
 	
 	<!-- update -->
 	<update id="updateJumun" parameterType="com.itwill.unishop.domain.Jumun"> 
@@ -63,11 +72,5 @@
 		where jumun_no=#{jumun_no}
 		
 	</delete>
-	
-	
-	
-	
-	
-	
 	
 </mapper>

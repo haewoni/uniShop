@@ -3,6 +3,7 @@ package com.itwill.unishop.repository;
 import java.util.List;
 
 import com.itwill.unishop.domain.Jumun;
+import com.itwill.unishop.domain.Jumun_Detail;
 
 public interface JumunRepository {
 	
@@ -11,6 +12,8 @@ public interface JumunRepository {
 	public List<Jumun> selectAll();
 	
 	public List<Jumun> selectById(String member_id);
+	
+	public List<Jumun_Detail> selectJoinById(String member_id);
 	
 	public int updateJumun(Jumun jumun);
 	

@@ -3,6 +3,7 @@ package com.itwill.unishop.service;
 import java.util.List;
 
 import com.itwill.unishop.domain.Jumun;
+import com.itwill.unishop.domain.Jumun_Detail;
 
 public interface JumunService {
 	
@@ -21,6 +22,10 @@ public interface JumunService {
 	 */
 	public List<Jumun> selectById(String member_id);
 	
+	/*
+	 *  주문, 주문 디테일 조인
+	 */
+	public List<Jumun_Detail> selectJoinById(String member_id);
 	/*
 	 	jumun_no와 member_id 를 동시에 만족한다면 주문 update
 	 */

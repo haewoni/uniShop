@@ -1,6 +1,7 @@
 package com.itwill.unishop.domain;
 
 import java.util.Date;
+import java.util.List;
 
 public class Jumun {
 	private int jumun_no;
@@ -13,7 +14,7 @@ public class Jumun {
 	private String card_member_name;
 	private String member_id;
 	private String delivery_no;
-	
+	private List<Jumun_Detail> jumun_DetailList;
 	
 	public Jumun(int jumun_no, Date jumun_date, String jumun_status, int jumun_tot_price, String card_no,
 			String card_expire_date, String card_cvc, String card_member_name, String member_id, String delivery_no) {
@@ -28,6 +29,22 @@ public class Jumun {
 		this.card_member_name = card_member_name;
 		this.member_id = member_id;
 		this.delivery_no = delivery_no;
+	}
+	public Jumun(int jumun_no, Date jumun_date, String jumun_status, int jumun_tot_price, String card_no,
+			String card_expire_date, String card_cvc, String card_member_name, String member_id, String delivery_no,
+			List<Jumun_Detail> jumun_DetailList) {
+		super();
+		this.jumun_no = jumun_no;
+		this.jumun_date = jumun_date;
+		this.jumun_status = jumun_status;
+		this.jumun_tot_price = jumun_tot_price;
+		this.card_no = card_no;
+		this.card_expire_date = card_expire_date;
+		this.card_cvc = card_cvc;
+		this.card_member_name = card_member_name;
+		this.member_id = member_id;
+		this.delivery_no = delivery_no;
+		this.jumun_DetailList = jumun_DetailList;
 	}
 	public Jumun(String card_no,String card_expire_date, String card_cvc, String card_member_name, String member_id) {
 		super();
@@ -100,12 +117,19 @@ public class Jumun {
 	public void setDelivery_no(String delivery_no) {
 		this.delivery_no = delivery_no;
 	}
+	public List<Jumun_Detail> getJumun_DetailList() {
+		return jumun_DetailList;
+	}
+	public void setJumun_DetailList(List<Jumun_Detail> jumun_DetailList) {
+		this.jumun_DetailList = jumun_DetailList;
+	}
 	@Override
 	public String toString() {
 		return "Jumun [jumun_no=" + jumun_no + ", jumun_date=" + jumun_date + ", jumun_status=" + jumun_status
 				+ ", jumun_tot_price=" + jumun_tot_price + ", card_no=" + card_no + ", card_expire_date="
 				+ card_expire_date + ", card_cvc=" + card_cvc + ", card_member_name=" + card_member_name
-				+ ", member_id=" + member_id + ", delivery_no=" + delivery_no + "]";
+				+ ", member_id=" + member_id + ", delivery_no=" + delivery_no + ", jumun_DetailList=" + jumun_DetailList
+				+ "]";
 	}
-	
+
 }

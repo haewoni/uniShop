@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.itwill.unishop.domain.Jumun;
+import com.itwill.unishop.domain.Jumun_Detail;
 import com.itwill.unishop.mapper.JumunMapper;
 @Repository
 public class JumunRepositoryImpl implements JumunRepository{
@@ -17,10 +18,6 @@ public class JumunRepositoryImpl implements JumunRepository{
 	public JumunRepositoryImpl() {
 		
 	}
-	
-	
-	
-	
 	
 	@Override
 	public int insertJumun(Jumun jumun) {
@@ -46,14 +43,16 @@ public class JumunRepositoryImpl implements JumunRepository{
 	public int deleteJumunByNo(int jumun_no) {
 		return jumunMapper.deleteJumunByNo(jumun_no);
 	}
-
-
-
-
-
+	
 	@Override
 	public int updateJumunCard(Jumun jumun) {
 		return jumunMapper.updateJumunCard(jumun);
+	}
+
+	@Override
+	public List<Jumun_Detail> selectJoinById(String member_id) {
+		
+		return jumunMapper.selectJoinById(member_id);
 	}
 
 }
