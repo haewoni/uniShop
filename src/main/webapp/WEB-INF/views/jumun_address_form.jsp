@@ -5,15 +5,19 @@
 	<table border="0" cellpadding="0" cellspacing="1" width="590"
 		bgcolor="BBBBBB">
 
-		<tr>
-			<td>이름<input type="text" name="member_name">
-			</td>
-		</tr>
-		<tr>
-			<td>전화번호<input type="text" name="member_phone">
-			</td>
-		</tr>
 
+		<tr>
+			<td width=100 align=center bgcolor="E6ECDE" height="22">이름</td>
+			<td width=490 align="left" bgcolor="ffffff"
+				style="padding-left: 10px"><input type="text"
+				style="width: 150" name="member_name"></td>
+		</tr>
+		<tr>
+			<td width=100 align=center bgcolor="E6ECDE" height="22">전화번호</td>
+			<td width=490 align="left" bgcolor="ffffff"
+				style="padding-left: 10px"><input type="text"
+				style="width: 150" name="member_phone"></td>
+		</tr>
 
 
 		<tr>
@@ -58,6 +62,12 @@
 				style="width: 240" name="member_address2"></td>
 	</table>
 	<input type="submit">
+</form>
+
+<form action="jumun_address_form" method="get">
+	cart subtotal: <input type="text" name="subtotal" value="${cart_tot_price}"><br>
+	shipping: <input type="text" name="delivery_fee" value="${delivery_fee}"><br>
+	total: <input type="text" name="total_fee" value="${cart_tot_price + delivery_fee}"><br>
 </form>
 <br />
 

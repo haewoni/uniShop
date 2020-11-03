@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.itwill.unishop.domain.Cart;
+import com.itwill.unishop.domain.Delivery;
 import com.itwill.unishop.domain.Jumun;
 import com.itwill.unishop.domain.Member;
 import com.itwill.unishop.domain.Product;
@@ -45,7 +47,11 @@ public class JumunController {
 	 * jumun - address
 	 */
 	@RequestMapping("/jumun_address_form")
-	public String jumun_address_form() {
+	public String jumun_address_form(Model model,HttpSession session) {
+		Cart cart1 = new Cart(1, 2, 56000, "s", "uni1","sa");
+		Delivery delivery = new Delivery("EX", "특급", "tt", 5000);
+		session.setAttribute("cart_tot_price",cart1.getCart_tot_price());
+		session.setAttribute("delivery_fee",delivery.getDelivery_fee());
 		return "jumun_address_form"; 
 	}
 	@RequestMapping(value = "/jumun_address_action", method = RequestMethod.GET)
