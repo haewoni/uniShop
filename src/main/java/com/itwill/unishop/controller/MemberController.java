@@ -173,7 +173,7 @@ public class MemberController {
 	}
 	
 	@RequestMapping("/member_jumun_detail)")
-	public String member_jumun_detail_form(Model model, HttpSession session) {
+	public String member_jumun_detail(Model model, HttpSession session) {
 		String forwardPath = "";
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
@@ -186,7 +186,7 @@ public class MemberController {
 	}
 	
 	@RequestMapping("/member_wishlist_detail")
-	public String member_wishlist_detail_form(Model model, HttpSession session) {
+	public String member_wishlist_detail(Model model, HttpSession session) {
 		String forwardPath = "";
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
