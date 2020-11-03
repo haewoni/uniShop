@@ -3,6 +3,7 @@ package com.itwill.unishop.mapper;
 import java.util.List;
 
 import com.itwill.unishop.domain.Jumun;
+import com.itwill.unishop.domain.Jumun_Detail;
 
 public interface JumunMapper {
 	
@@ -11,6 +12,8 @@ public interface JumunMapper {
 	public List<Jumun> selectAll();
 	
 	public List<Jumun> selectById(String member_id);
+	
+	public List<Jumun_Detail> selectJoinById(String member_id);
 	
 	public int updateJumun(Jumun jumun);
 	

@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.itwill.unishop.domain.Jumun;
+import com.itwill.unishop.domain.Jumun_Detail;
 import com.itwill.unishop.domain.Member;
 import com.itwill.unishop.domain.Question;
 import com.itwill.unishop.domain.WishList;
@@ -79,14 +80,11 @@ public class MemberController {
 	//멤버 로그아웃
 	
 	@RequestMapping(value = "/member_logout_action", method = RequestMethod.GET)
-	public String member_logout_action() {
-		return "member_detail";
-	}
-	@RequestMapping(value = "/member_logout_action", method = RequestMethod.POST)
 	public String member_logout_action(HttpSession session) {
 		session.invalidate();
 		return "redirect:unishop_main";
 	}
+	
 	
 	
 	//회원가입을 해보자
@@ -138,16 +136,14 @@ public class MemberController {
 		return "member_detail";
 	}
 
-	
-
 	@RequestMapping(value = "/member_update_action", method = RequestMethod.POST)
 	public String member_update_action_POST(Model model, HttpSession session, @ModelAttribute Member updateMember) {
 		String forwardPath = "";
 		try {
 			Member loginMember = (Member)session.getAttribute("loginMember");
-				updateMember.setMember_id(loginMember.getMember_id());
-				memberService.updateMember(updateMember);
-				forwardPath = "redirect:unishop_main";
+			updateMember.setMember_id(loginMember.getMember_id());
+			memberService.updateMember(updateMember);
+			forwardPath = "redirect:unishop_main";
 		} catch (Exception e) {
 			e.printStackTrace();
 			forwardPath = "member_detail";
@@ -155,12 +151,14 @@ public class MemberController {
 		return forwardPath;
 	}
 	
-	@RequestMapping("/member_jumun_detail)")
+	@RequestMapping("/member_jumun_detail")
 	public String member_jumun_detail(Model model, HttpSession session) {
+		System.out.println("-----------------member_jumun_detail--------------------");
 		String forwardPath = "";
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
-			
+			ArrayList<Jumun_Detail> jumunList = (ArrayList<Jumun_Detail>) jumunService.selectJoinById(sMemberId);
+			model.addAttribute("jumunList", jumunList);
 			forwardPath = "member_jumun_detail";
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -168,28 +166,14 @@ public class MemberController {
 		return forwardPath;
 	}
 	
-	@RequestMapping("/member_wishlist_detail")
-	public String member_wishlist_detail(Model model, HttpSession session) {
-		String forwardPath = "";
-		try {
-			String sMemberId = (String) session.getAttribute("sMemberId");
-			ArrayList<WishList> wishList = wishListService.selectWishListAll(sMemberId);
-			model.addAttribute("wishList", wishList);
-			forwardPath = "member_wishlist_detail";
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return forwardPath;
-	}
-	
-	
 	@RequestMapping("/member_question_detail")
-	public String member_question_detail(Model model, HttpSession session) {
+	public String member_question_detail(Model model, HttpSession session, @RequestParam int question_no) {
 		String forwardPath = "";
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
-			ArrayList<Question> questionList = questionService.selectById(sMemberId);
-			model.addAttribute("questionList", questionList);
+		
+			Question question = questionService.selectByNo(question_no);
+			model.addAttribute("question", question);
 			forwardPath = "member_question_detail";
 		} catch (Exception e) {
 			e.printStackTrace();

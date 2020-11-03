@@ -1,11 +1,8 @@
 package com.itwill.unishop.controller;
 
-import java.io.PrintWriter;
 import java.util.ArrayList;
 
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.swing.JOptionPane;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,10 +10,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.itwill.unishop.domain.Cart;
 import com.itwill.unishop.domain.Jumun;
 import com.itwill.unishop.domain.Product;
 import com.itwill.unishop.domain.Question;
 import com.itwill.unishop.domain.WishList;
+import com.itwill.unishop.service.CartService;
 import com.itwill.unishop.service.JumunService;
 import com.itwill.unishop.service.ProductService;
 import com.itwill.unishop.service.QuestionService;
@@ -35,6 +34,9 @@ public class MainController {
 	
 	@Autowired
 	private QuestionService questionService;
+	
+	@Autowired
+	private CartService cartService;
 	
 	
 	
@@ -97,37 +99,43 @@ public class MainController {
 	
 	
 	
-	@RequestMapping(value = "/add_wishList")
-	public String add_wishList(Model model, HttpSession session, @RequestParam String product_no) throws Exception {
+	
+	/********************** wishList 추가하기 **********************/
+	@RequestMapping("/add_wishlist_action")
+	public String add_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
 		String forwardPath = "";
 		String productNo = product_no;
-		
 		String sMemberId = (String) session.getAttribute("sMemberId");
 			
-		if(sMemberId == null || sMemberId == "") {
-				JOptionPane.showMessageDialog(null, "로그인 하세요");
-				forwardPath = "member_login_register_form";
+		try {
+			if(sMemberId == null || sMemberId == "") {
+					
+					forwardPath = "member_login_register_form";
+			}
+			
+			wishListService.insertWishList(new WishList(-1, sMemberId, productNo, null));
+				
+			
+			forwardPath = "redirect:unishop_main";
+			
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		
-		wishListService.insertWishList(new WishList(-8888, sMemberId, productNo, null));
-		forwardPath = "redirect:shop_main:";
-		return "forwardPath";
+		return forwardPath;
 	}
+	
 	
 	
 	
 	
 	/********************** ACCOUNT click 시  **********************/
 		@RequestMapping(value = "/account_member_detail")
-		public String account_member_detail(Model model, HttpServletResponse response, HttpSession session/*, @RequestParam int question_no*//*, @RequestParam String member_id*/) {
+		public String account_member_detail(Model model, HttpSession session) {
 			String forwardPath = "";
 			try {
 				String sMemberId = (String) session.getAttribute("sMemberId");
 				if(sMemberId == null || sMemberId == "") {
-					response.setContentType("text/html; charset=UTF-8");
-					PrintWriter out = response.getWriter();
-					out.println("<script>alert('로그인 하세요');</script>"); 
-					out.flush();
+					
 					forwardPath = "member_login_register_form";
 				}
 //				memberService.selectMemberById(member_id);
@@ -152,6 +160,29 @@ public class MainController {
 	
 	
 	
+		
+		/********************** 장바구니 클릭시 해당 아이디의 카트 보기 **********************/
+		@RequestMapping("/cart_list")
+		public String cart_list(Model model, HttpSession session) {
+			String forwardPath = "";
+			try {
+				String sMemberId = (String) session.getAttribute("sMemberId");
+				if(sMemberId == null || sMemberId == "") {
+					
+					forwardPath = "member_login_register_form";
+				}
+				ArrayList<Cart> cartList = cartService.selectCartAll(sMemberId);
+				model.addAttribute("cartList", cartList);
+				
+				forwardPath = "cart_list";
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return forwardPath;
+				
+		}
+		
+		
 	
 	
 	

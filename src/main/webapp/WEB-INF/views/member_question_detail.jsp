@@ -9,10 +9,8 @@
 </head>
 <body>
 	Question Detail<hr>
-	<c:forEach  items="${questionList}" var="question"  begin="0"  step="1" end="${questionList.size()}">
-			질문 번호<c:out value="${question.question_no}"/>
-			질문 타이틀<c:out value="${question.question_title}"/>
-			질문 내용<c:out value="${question.question_content}"/><br/>
-		</c:forEach>	
+		질문 번호<c:out value="${question.question_no}"/>
+		질문 타이틀<c:out value="${question.question_title}"/>
+		질문 내용<c:out value="${question.question_content}"/><br/>
 </body>
 </html>

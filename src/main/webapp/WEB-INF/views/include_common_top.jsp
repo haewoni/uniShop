@@ -5,7 +5,8 @@
 	<a href="unishop_main">UniShop</a>
 	<span><a href="shop_main">SHOP</a></span>
 	<span><a href="account_member_detail">ACCOUNT</a></span>
-	<span><a href="">CUSTOM SERVICE</a></span>
+	<span id="service"><a href="">CUSTOM SERVICE</a></span>
+	
 	
 	
 	<span class="toolbar">
@@ -16,7 +17,7 @@
 					<a href="account_member_detail">
 						<img src="IMAGE/person.png" width="20" height="20">
 					</a>
-					<a href="">
+					<a href="cart_list">
 						<img src="IMAGE/basket.png" width="20" height="20">
 					</a>
 				</span>

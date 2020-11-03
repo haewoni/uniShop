@@ -47,6 +47,17 @@ public class CartServiceTestMain {
 		System.out.println("-----------------5. deleteCartByMemberId----------------------");
 		//System.out.println(cartService.deleteCartByMemberId("uni3"));
 		
+		/*
+		 * 카트 중복검사
+		 */
+		System.out.println("-----------------6. inspectDuplicateCart----------------------");
+		//System.out.println(cartService.inspectDuplicateCart("uni1", "429284", "M"));
+		
+		/*
+		 * 카트 하나 검색
+		 */
+		System.out.println("-----------------7. inspectDuplicateCart----------------------");
+		//System.out.println(cartService.selectCartOne("uni1", "429284", "M"));
 					
 	}
 
