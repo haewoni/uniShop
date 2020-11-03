@@ -35,6 +35,7 @@
 				<li>사이즈 : ${cart.cart_product_size}</li>
 				<li>수량 : ${cart.cart_qty}</li>
 				<li>금액 : ${cart.cart_tot_price}</li>
+				<li><a href="cart_delete_cartNo_action_get?cart_no=${cart.cart_no}">장바구니 지우기 @</a></li>
 				<p>
 				
 				<c:set var= "sum" value="${sum + cart.cart_tot_price}"/>
@@ -42,7 +43,27 @@
 			</c:forEach>
 				
 				<li>총금액_sum : ${sum}</li>
-
 	</div>
+	
+	<div>
+		<h1>당신은 또한 좋아 할 수 있다</h1><hr>
+		
+			<c:forEach  items="${productList}" 
+						var="product"  
+						begin="0"  
+						step="1" 
+						end="${productList.size()}"
+						varStatus="status">
+				<li>제품 번호 : ${product.product_no}</li>
+				<li><a href="shop_product_detail.jsp?product_no=${product.product_no}">
+				<img src=IMAGE/${product.product_image_1} width=100, height=100><br>${product.product_name}</a></li>
+				<li>금액 : ${product.product_price}</li>
+				<li><a href="shop_add_cart_action.jsp?product_no=${product.product_no}">wish리스트 추가♥</a></li>
+				<li><a href="shop_product_detail.jsp?product_no=${product.product_no}">장바구니에 추가(상품상세)</a></li>
+				<p>
+			</c:forEach>
+	</div>
+	<li>
+	
 </body>
 </html>

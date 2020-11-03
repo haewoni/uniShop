@@ -28,16 +28,16 @@ public class ProductServiceTestMain {
 		System.out.println("-----------------7.DELETE ----------------------");
 		System.out.println(productService.deleteProduct("12345"));
 		*/
-		System.out.println("-----------------8. SELECT Four----------------------");
-		System.out.println(productService.selectFour("M"));
-		System.out.println("----------------------------------------------------------------");
+		//System.out.println("-----------------8. SELECT Four----------------------");
+		//System.out.println(productService.selectFour("M"));
+		//System.out.println("----------------------------------------------------------------");
 		
 		System.out.println("-----------------8. SELECT Eight----------------------");
 		System.out.println(productService.selectEight());
-		System.out.println("----------------------------------------------------------------");
+		//System.out.println("----------------------------------------------------------------");
 		
 		System.out.println("-----------------8. SELECT Thirty----------------------");
-		System.out.println(productService.selectThirty());
+		//System.out.println(productService.selectThirty());
 
 	}
 

@@ -177,7 +177,7 @@ public class ProductController {
 		String member_id = "uni1";//session.getId();
 		String product_no1 = product_no;
 		//-1과 5000은 임의의 수일 뿐. 쿼리문상 자동으로 계산된 값으로 입력됨
-		Cart cart = new Cart(-1, cart_qty1, 5000, cart_product_size1, member_id, product_no1);
+		Cart cart = new Cart(-1, cart_qty1, 5000, cart_product_size1, member_id, product_no1,"","");
 		cartService.insertCart(cart);
 		forwardPath = "redirect:shop_product_detail?product_no="+product_no;
 		return forwardPath;
