@@ -4,7 +4,7 @@
 
 
 <%
-   response.sendRedirect("unishop_main");
+   response.sendRedirect("cart_list");
  %>
 
 
