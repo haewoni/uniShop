@@ -39,17 +39,13 @@ public class JumunController {
 	@Autowired
 	private CartService cartService;
 
-	String member_id = "uni1";
-	@RequestMapping("/test_main")
-	public String test_main() {
-		return "common_top"; 
-	}
+
 	/*
 	 * jumun - address
 	 */
 	@RequestMapping("/jumun_address_form")
 	public String jumun_address_form(Model model,HttpSession session) {
-		String sMemberId = (String) session.getAttribute("sMemberId");
+		Member loginMember = (Member) session.getAttribute("loginMember");
 		List<Cart> cartList = (List<Cart>) session.getAttribute("cartList");
 		int cart_subtotal = 0;
 //		DecimalFormat df=new DecimalFormat("#,##0");
@@ -57,8 +53,8 @@ public class JumunController {
 			cart_subtotal+=cart.getCart_tot_price();
 		}
 //        String cart_subtotal1 = df.format(cart_subtotal);
+		model.addAttribute("loginMember", loginMember);
 		model.addAttribute("cart_subtotal", cart_subtotal);
-		model.addAttribute("loginMember", memberService.selectMemberById(sMemberId));
 		session.setAttribute("cart_subtotal",cart_subtotal);
 		return "jumun_address_form"; 
 	}
@@ -69,9 +65,12 @@ public class JumunController {
 	@RequestMapping(value = "/jumun_address_action", method = RequestMethod.POST)
 	public String jumun_address_action_POST(HttpSession session,@ModelAttribute Member member) {
 		String forwardPath = "";
-		session.setAttribute("loginMember", new Member("uni1", "3333",member.getMember_name(), member.getMember_phone(),"ta", member.getMember_address_name(), member.getMember_address_country(), member.getMember_address_city(), member.getMember_address_zipcode(),member.getMember_address1() ,member.getMember_address2()));
-		Member loginMember = (Member)session.getAttribute("loginMember");
-		memberService.updateMember(loginMember);
+		Member loginMember = (Member) session.getAttribute("loginMember");
+		member.setMember_id(loginMember.getMember_id());
+		member.setMember_password(loginMember.getMember_password());
+		member.setMember_email(loginMember.getMember_email());
+		memberService.updateMember(member);
+		session.setAttribute("loginMember", member);
 		forwardPath="redirect:jumun_delivery_form";
 		return forwardPath;
 	}
@@ -91,15 +90,15 @@ public class JumunController {
 	@RequestMapping(value = "/jumun_delivery_action", method = RequestMethod.POST)
 	public String jumun_delivery_action_POST(HttpSession session, @RequestParam String deliveryStr) {
 		String forwardPath = "";
-		Jumun jumun1 = new Jumun();
+		Jumun createJumun = new Jumun();
 		if(deliveryStr=="일반") {
-			jumun1.setDelivery_no("GEN");
-			session.setAttribute("delivery fee", 3000);
+			createJumun.setDelivery_no("GEN");
+			session.setAttribute("delivery_fee", 3000);
 		}else {
-			jumun1.setDelivery_no("EX");
+			createJumun.setDelivery_no("EX");
 			session.setAttribute("delivery_fee", 6000);
 		}
-		session.setAttribute("jumun1", jumun1);
+		session.setAttribute("createJumun", createJumun);
 		forwardPath="redirect:jumun_payment_form";
 		return forwardPath;
 	}
@@ -109,6 +108,7 @@ public class JumunController {
 	@RequestMapping("jumun_payment_form")
 	public String payment_form(HttpSession session) {
 		session.getAttribute("delivery_fee");
+		session.getAttribute("sMemberId");
 		return "jumun_payment_form";
 	}
 	@RequestMapping(value = "/jumun_payment_action", method = RequestMethod.GET)
@@ -116,51 +116,44 @@ public class JumunController {
 		return "redirect:jumun_payment_form"; 
 	}
 	@RequestMapping(value = "/jumun_payment_action", method = RequestMethod.POST)
-	public String jumun_payment_action_POST(Model model,HttpSession session, @ModelAttribute Jumun jumun) {
-		//Member loginMember = (Member)session.getAttribute("loginMember");
-		//session.setAttribute("loginMember", new Member("uni4", "1111", "tttt", "1111","ttt@naver.com"));
-		Jumun jumun1 = (Jumun)session.getAttribute("jumun1");
-//		Jumun jumun2=new Jumun();
-		
-		jumun1.setCard_no(jumun.getCard_no());
-		jumun1.setCard_expire_date(jumun.getCard_expire_date());
-		jumun1.setCard_cvc(jumun.getCard_cvc());
-		jumun1.setCard_member_name(jumun.getCard_member_name());
-		jumun1.setMember_id(jumun.getMember_id());
+	public String jumun_payment_action_POST(HttpSession session, @ModelAttribute Jumun jumun) {
+		session.getAttribute("loginMember");
+		int cart_subtotal = (int) session.getAttribute("cart_subtotal");
+		int delivery_fee = (int)session.getAttribute("delivery_fee");
+		String sMemberId = (String) session.getAttribute("sMemberId");
+		Jumun createJumun = (Jumun)session.getAttribute("createJumun");
+		createJumun.setJumun_no(-9999);
+		createJumun.setJumun_status("주문");
+		createJumun.setJumun_tot_price(cart_subtotal+delivery_fee);
+		createJumun.setJumun_date(new Date());
+		createJumun.setMember_id(sMemberId);
+		createJumun.setCard_no(jumun.getCard_no());
+		createJumun.setCard_expire_date(jumun.getCard_expire_date());
+		createJumun.setCard_cvc(jumun.getCard_cvc());
+		createJumun.setCard_member_name(jumun.getCard_member_name());
+		session.setAttribute("createJumun", createJumun);
 		String forwardPath = " ";
 		forwardPath="redirect:jumun_review_form";
-//		System.out.println(jumun1);
-		//System.out.println(jumun1);
-		//System.out.println("1");
 		return forwardPath;
 	}
 	/*
+	 * Jumun(int jumun_no, Date jumun_date, String jumun_status, int jumun_tot_price, String card_no,
+			String card_expire_date, String card_cvc, String card_member_name, String member_id, String delivery_no)
 	 * jumun - review
 	 */
 	@RequestMapping("jumun_review_form")
 	public String review_form(HttpSession session) {
 		session.getAttribute("loginMember");
-		//System.out.println("1");
 		return "jumun_review_form"; 
 	}
 	@RequestMapping(value = "/jumun_review_action", method = RequestMethod.GET)
 	public String jumun_review_action_GET(Model model,HttpSession session,@ModelAttribute Jumun jumun) {
 		String forwardPath = " ";
-		Member member2=new Member("uni1", "2222", "t564", "ta","ta", "집", "한국", "서울특별시", "01234", "강남구" ,"서초구");
-		Jumun jumun2=new Jumun(1234, new Date(), "15126", 51551,"1121 1231 1213 4562", "12/21", "255", "민주영", "uni1","EX");
-		Cart cart2=new Cart(1,1,1,"M","uni1","1");
-		ArrayList<Cart> cartList = cartService.selectCartAll(member_id);
-		//ArrayList<Cart> cartList = cartService.selectCartAll(member_id);
-//		session.setAttribute("member_name",member2.getMember_name());
-//		session.setAttribute("member_address1",member2.getMember_address1());
-//		session.setAttribute("member_phone",member2.getMember_phone());
-//		session.setAttribute("card_no",jumun2.getCard_no());
-		session.setAttribute("member_id", member_id);
+		String sMemberId = (String) session.getAttribute("sMemberId");
+		ArrayList<Cart> cartList = cartService.selectCartAll(sMemberId);
 		session.setAttribute("cartList", cartList);
-//		//Member member = memberService.selectAddressById(member_id);
-//		//model.addAttribute("jumun",jumun);
-		jumunService.insertJumun(jumun2);
-		System.out.println("1");
+		Jumun createJumun = (Jumun) session.getAttribute("createJumun");
+		jumunService.insertJumun(createJumun);
 		forwardPath="jumun_complete_form";
 		return forwardPath;
 	}

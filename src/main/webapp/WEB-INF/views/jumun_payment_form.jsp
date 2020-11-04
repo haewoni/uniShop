@@ -13,11 +13,7 @@
 
                   <table border="0" cellpadding="0" cellspacing="1" width="590"
                      bgcolor="BBBBBB">
-				<form action="jumun_address_form" method="get">
-					cart subtotal: <input type="text" name="subtotal" value="${cart_subtotal}"><br>
-					shipping: <input type="text" name="delivery_fee" value="${delivery_fee}"><br>
-					total: <input type="text" name="total_fee" value="${cart_subtotal + delivery_fee}"><br>
-				</form>
+				
 
                   <tr>
                      <td width=100 align=center bgcolor="E6ECDE" height="22">카드 번호</td>
@@ -48,7 +44,7 @@
                      <td width=100 align=center bgcolor="E6ECDE" height="22">멤버 아이디</td>
                      <td width=490 align="left" bgcolor="ffffff"
                         style="padding-left: 10px"><input type="text"
-                        style="width: 240" name="member_id"></td>
+                        style="width: 240" name="member_id" value="${sMemberId}"></td>
          
                   </tr>
                   
@@ -57,6 +53,12 @@
                </table>
                   <input type="submit">
                </form> <br />
+               
+               <form action="jumun_address_form" method="get">
+					cart subtotal: <input type="text" name="subtotal" value="${cart_subtotal}"><br>
+					shipping: <input type="text" name="delivery_fee" value="${delivery_fee}"><br>
+					total: <input type="text" name="total_fee" value="${cart_subtotal + delivery_fee}"><br>
+				</form>
 
 
    <!--container end-->
