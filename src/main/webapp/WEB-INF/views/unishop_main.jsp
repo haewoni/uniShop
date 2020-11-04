@@ -14,16 +14,18 @@
 
 	<div>
 
-		<a href="member_logout_action">${sMemberId}님 로그아웃</a>
-
-		<a href="">${loginMember.member_phone} 님의 핸드폰</a>
-		<a href="">${loginMember.member_address2} 주소상세</a>
-		<a href="">${sMemberId}님 로그아웃</a>		
-		<a href="member_detail">멤버 정보 수정, 주문 목록, 찜 목록, QnA 목록</a>
+		<a href="member_logout_action">${sMemberId}님 로그아웃</a><br>
+		<a href="">${sMemberId} 님의 핸드폰: ${loginMember.member_phone}</a><br>
+		<a href="">${loginMember.member_address2} 님의 주소상세</a><br>
+		<a href="">${sMemberId}님 로그아웃</a>		<br>
+		<a href="member_detail">멤버 정보 수정, 주문 목록, 찜 목록, QnA 목록</a><br>
 	</div>
 	<div>
-		<a href="unishop_main">Main</a>
-		<a href="shop_main">Shop</a>
+		<a href="unishop_main">Main</a><br>
+		<a href="member_login_register_form">로그인</a><br>
+		<a href="shop_main">Shop</a><br>
+		<a href="cart_list">Cart</a><br>
+		<a href="jumun_address_form">check out</a>
 	</div>
 	
 		
@@ -54,8 +56,7 @@
 		</div>
 	</div>
 	
-	<a href="member_login_register_form">로오그으이인</a>
-	<a href="jumun_address_form">check out</a>
+	
 	
 	
 	

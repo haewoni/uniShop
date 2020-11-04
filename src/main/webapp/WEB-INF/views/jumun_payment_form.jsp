@@ -14,9 +14,9 @@
                   <table border="0" cellpadding="0" cellspacing="1" width="590"
                      bgcolor="BBBBBB">
 				<form action="jumun_address_form" method="get">
-					cart subtotal: <input type="text" name="subtotal" value="${cart_tot_price}"><br>
+					cart subtotal: <input type="text" name="subtotal" value="${cart_subtotal}"><br>
 					shipping: <input type="text" name="delivery_fee" value="${delivery_fee}"><br>
-					total: <input type="text" name="total_fee" value="${cart_tot_price + delivery_fee}"><br>
+					total: <input type="text" name="total_fee" value="${cart_subtotal + delivery_fee}"><br>
 				</form>
 
                   <tr>

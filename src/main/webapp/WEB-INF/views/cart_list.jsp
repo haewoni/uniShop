@@ -18,7 +18,7 @@
 	function cart_update() {
 
 		//location.href = 'cart_update_action_get?cart_no=?${cart.cart_no}&cart_qty=?$(#cart_qty.option:selected).val()';
-		
+		location.href = 'jumun_address_form'
 		
 	}
 </script>
