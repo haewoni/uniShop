@@ -136,7 +136,7 @@ public class JumunController {
 		return "jumun_review_form"; 
 	}
 	@RequestMapping(value = "/jumun_review_action", method = RequestMethod.GET)
-	public String jumun_review_action_GET(Model model,HttpSession session,@RequestParam String member_id,@ModelAttribute Jumun jumun) {
+	public String jumun_review_action_GET(Model model,HttpSession session,@ModelAttribute Jumun jumun) {
 		String forwardPath = " ";
 		Member member2=new Member("uni1", "2222", "t564", "ta","ta", "집", "한국", "서울특별시", "01234", "강남구" ,"서초구");
 		Jumun jumun2=new Jumun(1234, new Date(), "15126", 51551,"1121 1231 1213 4562", "12/21", "255", "민주영", "uni1","EX");
@@ -147,6 +147,7 @@ public class JumunController {
 //		session.setAttribute("member_address1",member2.getMember_address1());
 //		session.setAttribute("member_phone",member2.getMember_phone());
 //		session.setAttribute("card_no",jumun2.getCard_no());
+		session.setAttribute("member_id", member_id);
 		session.setAttribute("cartList", cartList);
 //		//Member member = memberService.selectAddressById(member_id);
 //		//model.addAttribute("jumun",jumun);

@@ -3,13 +3,8 @@
 	<form name="f" method="GET" action="shop_main">
 
 		<table border="0" cellpadding="0" cellspacing="1" width="590" bgcolor="BBBBBB">
-
-		<tr>
-			<td width=100 align=center bgcolor="E6ECDE" height="22">이름</td>
-			<td width=490 align="left" bgcolor="ffffff"
-				style="padding-left: 10px"><input type="text"
-				style="width: 150" name="member_name"></td>
-		</tr>
+		<h1>주문이 완료되었습니다</h1><hr>
+		
 		
 
 	<input type="submit">

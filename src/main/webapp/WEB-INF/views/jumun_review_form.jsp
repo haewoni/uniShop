@@ -10,7 +10,7 @@
 							bgcolor="BBBBBB">
 	<div class="cart_list">
 
-		<h1>카트 - 리스트</h1><hr>
+		
 		<% 
 			DecimalFormat df = new DecimalFormat("#,##0");
 			//decimalFormat.applyPattern("#,##0");
@@ -29,16 +29,38 @@
 				<li><a href="shop_single.jsp?product_no=${cart.product_no}">
 				<img src=IMAGE/${cart.product_image_1} width=100, height=100><br>${cart.product_name}</a></li>
 				<li>사이즈 : ${cart.cart_product_size}</li>
-				<li>수량 : ${cart.cart_qty}</li>
+				
+				<form> 
+				  <li>수량 :
+				  <select name="cart_qty"  id="cart_qty">
+				    <option value=수량 selected>${cart.cart_qty}</option>
+				    <option value=1>1</option>
+				    <option value=2>2</option>
+				    <option value=3>3</option>
+				    <option value=4>4</option>
+				    <option value=5>5</option>
+				    <option value=6>6</option>
+				    <option value=7>7</option>
+				    <option value=8>8</option>
+				    <option value=9>9</option>
+				    <option value=10>10</option>
+				  </select>
+				</form>
+					
 				<li>금액 : ${cart.cart_tot_price}</li>
+				<li><a href="cart_delete_cartNo_action_get?cart_no=${cart.cart_no}">장바구니 지우기 @</a></li>
+				
+				<li><a href="cart_update_action_get?cart_no=${cart.cart_no}&cart_qty=${cart_qty.option.selected.text}">카트 UPDATE</a></li>
+				
+				<input type="button" value="카트 UPDATE" class=TXTFLD
+				       onclick="location.href = 'cart_update_action_get?cart_no=${cart.cart_no}'" > 
 				<p>
 				
-				<c:set var= "sum" value="${sum + cart.cart_tot_price}"/>
+				<c:set var= "sum" value="(sum + cart.cart_tot_price)"/>
 
 			</c:forEach>
 				
 				<li>총금액_sum : ${sum}</li>
-
 	</div>
   				cart subtotal: <input type="text" name="subtotal" value="${cart_tot_price}"><br>
 			   shipping: <input type="text" name="delivery_fee" value="${delivery_fee}"><br>
