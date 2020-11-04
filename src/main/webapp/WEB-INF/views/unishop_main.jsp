@@ -92,8 +92,49 @@
 	
 	<h1>Staff Picks</h1>
 	
-		<span>TOP SELLERS</span>
+		<span>TOP SELLERS</span>	
+			<ol>	
+				<li>
+					<a href="shop_product_detail?product_no=429067">
+						<img src=IMAGE/429067_1.png width=100, height=100>EFM터틀넥스웨터(긴팔)
+					</a>
+					<a href="add_wishlist_action?product_no=${product.product_no}">
+						<input type="image" src="IMAGE/heart.png" width="20" height="20">
+					</a>
+				</li>
+				<li>
+					<a href="shop_product_detail?product_no=432324">
+						<img src=IMAGE/432324_1.png width=100, height=100>JWA로우게이지크루넥스웨터(긴팔)
+					</a>
+					<a href="add_wishlist_action?product_no=${product.product_no}">
+						<input type="image" src="IMAGE/heart.png" width="20" height="20">
+					</a>
+				</li>
+				<li>
+					<a href="shop_product_detail?product_no=429461">
+						<img src=IMAGE/429461_1.png width=100, height=100>하이브리드다운코트
+					</a>
+					<a href="add_wishlist_action?product_no=${product.product_no}">
+						<input type="image" src="IMAGE/heart.png" width="20" height="20">
+					</a>
+				</li>
+			</ol>
+		
+	<div class="productAll">
+		<a href="product_All_List">
+			<input type="button" value="VIEW MORE">
+		</a>
+	</div>
+		
+		
+		
 		<span>NEW ARRIVALS</span>
+			
+		
+		
+		
+		
+		
 		<span>BEST RATED</span>
 	
 	
