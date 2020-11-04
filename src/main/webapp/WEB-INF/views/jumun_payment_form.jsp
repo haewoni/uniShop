@@ -13,7 +13,11 @@
 
                   <table border="0" cellpadding="0" cellspacing="1" width="590"
                      bgcolor="BBBBBB">
-
+				<form action="jumun_address_form" method="get">
+					cart subtotal: <input type="text" name="subtotal" value="${cart_tot_price}"><br>
+					shipping: <input type="text" name="delivery_fee" value="${delivery_fee}"><br>
+					total: <input type="text" name="total_fee" value="${cart_tot_price + delivery_fee}"><br>
+				</form>
 
                   <tr>
                      <td width=100 align=center bgcolor="E6ECDE" height="22">카드 번호</td>

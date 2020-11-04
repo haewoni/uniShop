@@ -33,7 +33,8 @@ public class CartController {
 		String forwardPath = " ";
 		session.setAttribute("member_id", member_id);
 		ArrayList<Cart> cartList = cartService.selectCartAll(member_id);
-		model.addAttribute("cartList", cartList);
+		//model.addAttribute("cartList", cartList);
+		session.setAttribute("cartList", cartList);
 		forwardPath="cart_list";
 		return forwardPath;
 	}
