@@ -23,6 +23,7 @@ import com.itwill.unishop.domain.Jumun;
 import com.itwill.unishop.domain.Member;
 import com.itwill.unishop.domain.Product;
 import com.itwill.unishop.domain.Review;
+import com.itwill.unishop.service.CartService;
 import com.itwill.unishop.service.DeliveryService;
 import com.itwill.unishop.service.JumunService;
 import com.itwill.unishop.service.MemberService;
@@ -41,7 +42,10 @@ public class JumunController {
 	private ReviewService reviewService;
 	@Autowired
 	private DeliveryService deliveryService;
-	
+	@Autowired
+	private CartService cartService;
+
+	String member_id = "uni1";
 
 	/*
 	 * jumun - address
@@ -120,6 +124,7 @@ public class JumunController {
 		forwardPath="redirect:jumun_review_form";
 //		System.out.println(jumun1);
 		//System.out.println(jumun1);
+		//System.out.println("1");
 		return forwardPath;
 	}
 	/*
@@ -127,32 +132,35 @@ public class JumunController {
 	 */
 	@RequestMapping("jumun_review_form")
 	public String review_form() {
+		//System.out.println("1");
 		return "jumun_review_form"; 
 	}
 	@RequestMapping(value = "/jumun_review_action", method = RequestMethod.GET)
-	public String jumun_review_action_GET() {
-		return "redirect:jumun_review_form"; 
-	}
-	@RequestMapping(value = "/jumun_review_action", method = RequestMethod.POST)
-	public String jumun_review_action_POST(Model model,HttpSession session,@ModelAttribute Jumun jumun) throws Exception {
+	public String jumun_review_action_GET(Model model,HttpSession session,@RequestParam String member_id,@ModelAttribute Jumun jumun) {
 		String forwardPath = " ";
 		Member member2=new Member("uni1", "2222", "t564", "ta","ta", "집", "한국", "서울특별시", "01234", "강남구" ,"서초구");
-		Jumun jumun2=new Jumun("1121 1231 1213 4562", "2020-12-21", "255", "민주영", "uni1");
-		session.setAttribute("member_name",member2.getMember_name());
-		session.setAttribute("member_address1",member2.getMember_address1());
-		session.setAttribute("member_phone",member2.getMember_phone());
-		session.setAttribute("card_no",jumun2.getCard_no());
-		//Member member = memberService.selectAddressById(member_id);
-		//model.addAttribute("jumun",jumun);
+		Jumun jumun2=new Jumun(1234, new Date(), "15126", 51551,"1121 1231 1213 4562", "12/21", "255", "민주영", "uni1","EX");
+		Cart cart2=new Cart(1,1,1,"M","uni1","1");
+		ArrayList<Cart> cartList = cartService.selectCartAll(member_id);
+		//ArrayList<Cart> cartList = cartService.selectCartAll(member_id);
+//		session.setAttribute("member_name",member2.getMember_name());
+//		session.setAttribute("member_address1",member2.getMember_address1());
+//		session.setAttribute("member_phone",member2.getMember_phone());
+//		session.setAttribute("card_no",jumun2.getCard_no());
+		session.setAttribute("cartList", cartList);
+//		//Member member = memberService.selectAddressById(member_id);
+//		//model.addAttribute("jumun",jumun);
 		jumunService.insertJumun(jumun2);
-		forwardPath="redirect:jumun_review_form";
+		System.out.println("1");
+		forwardPath="jumun_complete_form";
 		return forwardPath;
-		
 	}
+
+		
 	/*
 	 * jumun - complete
 	 */
-	@RequestMapping("/complete_form")
+	@RequestMapping("jumun_complete_form")
 	public String complete_form() {
 		return "jumun_complete_form"; 
 	}

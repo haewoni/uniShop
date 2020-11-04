@@ -21,6 +21,7 @@
 	</insert>
 	
 	
+	
 	<!-- read -->
 	<select id="selectAll" resultType="com.itwill.unishop.domain.Jumun">
 		select * from JUMUN

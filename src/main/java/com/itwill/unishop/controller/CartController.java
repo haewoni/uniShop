@@ -41,8 +41,9 @@ public class CartController {
 		model.addAttribute("cartList", cartList);
 		
 		ArrayList<Product> productList = productService.selectEight();
-		model.addAttribute("productList", productList);
+		//model.addAttribute("productList", productList);
 
+		session.setAttribute("cartList", cartList);
 		forwardPath="cart_list";
 		return forwardPath;
 	}
