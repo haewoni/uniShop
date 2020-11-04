@@ -180,6 +180,26 @@ public class MemberController {
 		}
 		return forwardPath;
 	}
+	@RequestMapping(value = "/member_question_action", method = RequestMethod.GET)
+	public String member_question_action_GET() {
+		
+		return "member_detail";
+	}
+	@RequestMapping(value = "/member_question_action", method = RequestMethod.POST)
+	public String member_question_action_POST(HttpSession session, @ModelAttribute Question newQuestion) {
+		String forwardPath = "";
+		String sMemberId  = (String) session.getAttribute("sMemberId");
+		//newQuestion.setMember_id(sMemberId);
+		try {
+			if (newQuestion.getMember_id().equals(sMemberId)) {
+			questionService.insertQuestion(newQuestion);
+			forwardPath = "redirect:member_detail";
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return forwardPath;
+	}
 	/*
 	//모든 Exception을 던지면 이곳으로 날라온다
 	@ExceptionHandler(Exception.class)
