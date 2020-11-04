@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<form name="f" method="POST" action="main_form">
+	<form name="f" method="GET" action="shop_main">
 
 		<table border="0" cellpadding="0" cellspacing="1" width="590" bgcolor="BBBBBB">
 
