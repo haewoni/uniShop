@@ -90,6 +90,12 @@
 	
 	
 	
+	<h1>Staff Picks</h1>
+	
+		<span>TOP SELLERS</span>
+		<span>NEW ARRIVALS</span>
+		<span>BEST RATED</span>
+	
 	
 	
 	
