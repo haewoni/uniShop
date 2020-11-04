@@ -9,9 +9,9 @@
 </form>
 
 <form action="jumun_address_form" method="get">
-	cart subtotal: <input type="text" name="subtotal" value="${cart_tot_price}"><br>
-	shipping: <input type="text" name="delivery_fee" value="${delivery_fee}"><br>
-	total: <input type="text" name="total_fee" value="${cart_tot_price + delivery_fee}"><br>
+	cart subtotal: <input type="text" name="subtotal" value="${cart_subtotal}"><br>
+	shipping: <input type="text" name="delivery_fee"><br>
+	total: <input type="text" name="total_fee" value="${cart_subtotal}"><br>
 </form>
 
 

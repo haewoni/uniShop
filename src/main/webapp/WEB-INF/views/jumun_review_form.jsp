@@ -62,9 +62,9 @@
 				
 				<li>총금액_sum : ${sum}</li>
 	</div>
-  				cart subtotal: <input type="text" name="subtotal" value="${cart_tot_price}"><br>
+  				cart subtotal: <input type="text" name="subtotal" value="${cart_subtotal}"><br>
 			   shipping: <input type="text" name="delivery_fee" value="${delivery_fee}"><br>
-   				total: <input type="text" name="total_fee" value="${cart_tot_price + delivery_fee}"><br>
+   				total: <input type="text" name="total_fee" value="${cart_subtotal + delivery_fee}"><br>
 
    					<tr>
                      	<td width=100 align=center bgcolor="E6ECDE" height="22">이름</td>

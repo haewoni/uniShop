@@ -1,35 +1,29 @@
 package com.itwill.unishop.controller;
 
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Date;
-
-import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.itwill.unishop.domain.Cart;
-import com.itwill.unishop.domain.Delivery;
 import com.itwill.unishop.domain.Jumun;
 import com.itwill.unishop.domain.Member;
-import com.itwill.unishop.domain.Product;
-import com.itwill.unishop.domain.Review;
 import com.itwill.unishop.service.CartService;
 import com.itwill.unishop.service.DeliveryService;
 import com.itwill.unishop.service.JumunService;
 import com.itwill.unishop.service.MemberService;
 import com.itwill.unishop.service.ReviewService;
-
-import jdk.internal.org.objectweb.asm.tree.JumpInsnNode;
 
 @Controller
 public class JumunController { 
@@ -52,10 +46,17 @@ public class JumunController {
 	 */
 	@RequestMapping("/jumun_address_form")
 	public String jumun_address_form(Model model,HttpSession session) {
-		Cart cart1 = new Cart(1, 2, 56000, "s", "uni1","sa");
-		Delivery delivery = new Delivery("EX", "특급", "tt", 5000);
-		session.setAttribute("cart_tot_price",cart1.getCart_tot_price());
-		session.setAttribute("delivery_fee",delivery.getDelivery_fee());
+		String sMemberId = (String) session.getAttribute("sMemberId");
+		List<Cart> cartList = (List<Cart>) session.getAttribute("cartList");
+		int cart_subtotal = 0;
+//		DecimalFormat df=new DecimalFormat("#,##0");
+		for (Cart cart : cartList) {
+			cart_subtotal+=cart.getCart_tot_price();
+		}
+//        String cart_subtotal1 = df.format(cart_subtotal);
+		model.addAttribute("cart_subtotal", cart_subtotal);
+		model.addAttribute("loginMember", memberService.selectMemberById(sMemberId));
+		session.setAttribute("cart_subtotal",cart_subtotal);
 		return "jumun_address_form"; 
 	}
 	@RequestMapping(value = "/jumun_address_action", method = RequestMethod.GET)
@@ -90,8 +91,10 @@ public class JumunController {
 		Jumun jumun1 = new Jumun();
 		if(deliveryStr=="일반") {
 			jumun1.setDelivery_no("GEN");
+			session.setAttribute("delivery fee", 3000);
 		}else {
 			jumun1.setDelivery_no("EX");
+			session.setAttribute("delivery_fee", 6000);
 		}
 		session.setAttribute("jumun1", jumun1);
 		forwardPath="redirect:jumun_payment_form";
@@ -101,7 +104,8 @@ public class JumunController {
 	 * jumun - payment
 	 */
 	@RequestMapping("jumun_payment_form")
-	public String payment_form() {
+	public String payment_form(HttpSession session) {
+		session.getAttribute("delivery_fee");
 		return "jumun_payment_form";
 	}
 	@RequestMapping(value = "/jumun_payment_action", method = RequestMethod.GET)
@@ -131,7 +135,8 @@ public class JumunController {
 	 * jumun - review
 	 */
 	@RequestMapping("jumun_review_form")
-	public String review_form() {
+	public String review_form(HttpSession session) {
+		session.getAttribute("loginMember");
 		//System.out.println("1");
 		return "jumun_review_form"; 
 	}
