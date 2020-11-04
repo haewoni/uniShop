@@ -46,7 +46,10 @@ public class JumunController {
 	private CartService cartService;
 
 	String member_id = "uni1";
-
+	@RequestMapping("/test_main")
+	public String test_main() {
+		return "common_top"; 
+	}
 	/*
 	 * jumun - address
 	 */
