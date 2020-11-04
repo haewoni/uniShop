@@ -6,5 +6,3 @@
 <%
    response.sendRedirect("unishop_main");
  %>
-
-
