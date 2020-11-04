@@ -13,7 +13,7 @@
 	회원 정보 수정
 	<form name="f" action="member_update_action" method="POST">
 	
-		<input type="text" name="sMemberId" value="${loginMember.member_id}" >
+		<input type="text" name="loginMember" value="${loginMember.member_id}" >
 		
 		<input type="text" name="member_name" value="${loginMember.member_name}">
 		<input type="text" name="member_password" value="${loginMember.member_password}">

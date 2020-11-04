@@ -117,6 +117,7 @@ public class MemberController {
 		String forwardPath = "";
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
+			//Member loginMember = (Member)session.getAttribute("loginMember");
 			ArrayList<Jumun> jumunList = (ArrayList<Jumun>) jumunService.selectById(sMemberId);
 			ArrayList<WishList> wishList = wishListService.selectWishListAll(sMemberId);
 			ArrayList<Question> questionList = questionService.selectById(sMemberId);
@@ -143,6 +144,7 @@ public class MemberController {
 			Member loginMember = (Member)session.getAttribute("loginMember");
 			updateMember.setMember_id(loginMember.getMember_id());
 			memberService.updateMember(updateMember);
+			session.setAttribute("loginMember", updateMember);
 			forwardPath = "redirect:unishop_main";
 		} catch (Exception e) {
 			e.printStackTrace();

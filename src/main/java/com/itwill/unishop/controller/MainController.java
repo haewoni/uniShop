@@ -162,7 +162,7 @@ public class MainController {
 	
 		
 		/********************** 장바구니 클릭시 해당 아이디의 카트 보기 **********************/
-		@RequestMapping("/cart_list")
+		@RequestMapping("/main_cart_list")
 		public String cart_list(Model model, HttpSession session) {
 			String forwardPath = "";
 			try {
