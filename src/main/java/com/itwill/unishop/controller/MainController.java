@@ -161,9 +161,10 @@ public class MainController {
 	
 	
 		
+
 		/********************** 장바구니 클릭시 해당 아이디의 카트 보기 **********************/
 		@RequestMapping("/main_cart_list")
-		public String cart_list(Model model, HttpSession session) {
+		public String main_cart_list(Model model, HttpSession session) {
 			String forwardPath = "";
 			try {
 				String sMemberId = (String) session.getAttribute("sMemberId");
