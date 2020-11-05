@@ -12,6 +12,7 @@
 </script>
 </head>
 <body>
+	<jsp:include page="include_common_top.jsp"/>
 	제품 디테일<hr>
 	<input type="button" value="Back to ShopMain" class=TXTFLD onclick="location.href = 'unishop_main'" >
 	<hr>
@@ -38,16 +39,16 @@
 			</select>
 			
 	<br>
-			<input type=submit value="ADD TO CART" class=TXTFLD onclick="javascript:alert('카트 추가 완료');" >
+			<input type=submit value="ADD TO CART" class=TXTFLD > <!-- onclick="javascript:alert('카트 추가 완료');"  -->
 			<input type="hidden" name=product_no value="${product.product_no}">
 		</form>
 		<br/>
 		<form method="post" action="shop_add_wishlist_action">
-		<input type=submit value="ADD TO WISHLIST" class=TXTFLD onclick="javascript:alert('위시리스트 추가 완료');" >
+		<input type=submit value="ADD TO WISHLIST" class=TXTFLD > <!-- onclick="javascript:alert('위시리스트 추가 완료');"  -->
 		<input type="hidden" name=product_no value="${product.product_no}">
 		</form>
 		<form method="post" action="shop_delete_wishlist_action">
-		<input type=submit value="DELETE FROM WISHLIST" class=TXTFLD onclick="javascript:alert('위시리스트 삭제 완료');" >
+		<input type=submit value="DELETE FROM WISHLIST" class=TXTFLD  > <!-- onclick="javascript:alert('위시리스트 삭제 완료');" -->
 		<input type="hidden" name=product_no value="${product.product_no}">
 		</form>
 	<hr>
