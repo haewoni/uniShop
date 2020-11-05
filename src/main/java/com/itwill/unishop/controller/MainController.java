@@ -150,7 +150,7 @@ public class MainController {
 				model.addAttribute("jumunList", jumunList);
 				model.addAttribute("wishList", wishList);
 				model.addAttribute("questionList", questionList);
-				forwardPath = "member_detail";
+				forwardPath = "member_profile_form";
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
