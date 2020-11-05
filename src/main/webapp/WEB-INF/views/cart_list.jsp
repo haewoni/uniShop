@@ -18,13 +18,8 @@
 	function cart_update() {
 
 		//location.href = 'cart_update_action_get?cart_no=?${cart.cart_no}&cart_qty=?$(#cart_qty.option:selected).val()';
-<<<<<<< HEAD
-		location.href = 'jumun_address_form'
-		
-=======
-		
 		//alert("수량확인 : "+${cart_qty.option.selected.text()});
->>>>>>> refs/heads/kyj
+
 	}
 </script>
 
@@ -53,7 +48,8 @@
 				<img src=IMAGE/${cart.product_image_1} width=100, height=100><br>${cart.product_name}</a></li>
 				<li>사이즈 : ${cart.cart_product_size}</li>
 				
-			<form method="post" action="cart_update_action_get"> 
+			<form method="post" action="cart_update_action_get">
+				 
 				  수량 :
 				  <select name="cart_qty">
 				    <option value="0" selected="selected">${cart.cart_qty}</option>
@@ -77,13 +73,15 @@
 				 
 				<li><a href="cart_update_action_get?cart_no=${cart.cart_no}&cart_qty=${document.getElementById('cart_qty').value}">카트 UPDATE</a></li>
 				-->
-				<input type="button" value="수량확인" class=TXTFLD 
-				   onclick="alert(${document.getElementById('cart_qty').value})" > 
 				
 				<input type=submit value="카트 UPDATE" class=TXTFLD onclick="카트 UPDATE 성공;" >
 			    <input type="hidden" name=cart_no value="${cart.cart_no}">
+			    
 			</form>
-				
+			    <%--
+				<input type="button" value="수량확인" class=TXTFLD 
+				   onclick="alert(${document.getElementById('cart_qty').itemLabel})" > 
+				 --%>   
 				<p>
 				
 				<c:set var= "sum" value="(sum + cart.cart_tot_price)"/>
@@ -95,6 +93,7 @@
 
 	<hr>
 	<input type="button" value="계속 쇼핑하기" class=TXTFLD onclick="location.href = 'unishop_main'" >
+	<input type="button" value="주문하기" class=TXTFLD onclick="location.href = 'jumun_address_form'" >
 	
 	
 
