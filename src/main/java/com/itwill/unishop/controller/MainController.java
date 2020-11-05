@@ -30,7 +30,7 @@ public class MainController {
 	private WishListService wishListService;
 	
 	@Autowired
-	private JumunService jumunService;
+	private JumunService jumunService; 
 	
 	@Autowired
 	private QuestionService questionService;
