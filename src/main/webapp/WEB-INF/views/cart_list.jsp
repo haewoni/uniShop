@@ -65,7 +65,7 @@
 				  </select>
 				
 					
-				<li>금액 : ${cart.cart_tot_price}</li>
+				<li>금액 : ${cart.cart_tot_price}</li> 
 				<li><a href="cart_delete_cartNo_action_get?cart_no=${cart.cart_no}">장바구니 지우기 @</a></li>
 				<!-- 
 				<li><a href="cart_update_action_get?cart_no=${cart.cart_no}&cart_qty=${document.getElementById('cart_qty').options.selectedIndex.value}">카트 UPDATE</a></li>

@@ -38,7 +38,7 @@ public class CartController {
 	//public String cart_list(HttpSession session) {
 		String forwardPath = " ";
 
-		//session.setAttribute("member_id", member_id);
+		//session.setAttribute("member_id", member_id); 
 		//ArrayList<Cart> cartList = cartService.selectCartAll(member_id);
 
 		String sMemberId = (String) session.getAttribute("sMemberId");
