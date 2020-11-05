@@ -31,11 +31,10 @@ public class CartController {
 
 	//String member_id = "uni1";
 	
-	@RequestMapping(value = "/cart_list",method = RequestMethod.POST)
-	public String cart_list(Model model, HttpSession session, @RequestParam String member_id) {
-	//@RequestMapping(value = "/cart_list")
-	//public String cart_list(Model model, HttpSession session) {
-	//public String cart_list(HttpSession session) {
+//	@RequestMapping(value = "/cart_list",method = RequestMethod.POST)
+//	public String cart_list(Model model, HttpSession session, @RequestParam String member_id) {
+	@RequestMapping(value = "/cart_list")
+	public String cart_list(Model model, HttpSession session) {
 		String forwardPath = " ";
 
 		//session.setAttribute("member_id", member_id); 
