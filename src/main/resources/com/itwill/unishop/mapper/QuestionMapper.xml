@@ -22,7 +22,7 @@
 		</selectKey>
 		insert into question 
 		values( #{question_no},#{question_title},
-		 		#{question_category},#{question_date},
+		 		#{question_category},sysdate,
 		 		#{question_status}, #{question_content},
 		 		#{member_id})
 	</insert>

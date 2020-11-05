@@ -1,7 +1,7 @@
 <%@page import="com.itwill.unishop.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +9,9 @@
 <title>Insert title here</title>
 
 </head>
+
 <body>
-	회원 정보 수정
+회원 정보 수정<br/>
 	<form name="f" action="member_update_action" method="POST">
 	
 		<input type="text" name="sMemberId" value="${loginMember.member_id}" >
@@ -28,11 +29,11 @@
 		<input type="text" name="member_address_zipcode" value="${loginMember.member_address_zipcode}">
 		<input type="text" name="member_address1" value="${loginMember.member_address1}">
 		<input type="text" name="member_address2" value="${loginMember.member_address2}">
-		<input type="submit">
+		<input type="submit"><br/>
 		
 	</form>
-	주문 목록
-	<form name="f" method="POST">
+주문 목록<br/>
+	<form name="f2" method="POST">
 		<c:forEach items="${jumunList}" var="jumun" begin="0" step="1" end="${jumunList.size()}">
 			주문 번호<c:out value="${jumun.jumun_no}"/>
 			주문 날짜<c:out value="${jumun.jumun_date}"/>
@@ -40,7 +41,7 @@
 			<a href="member_jumun_detail?jumun_no=${jumun.jumun_no}">주문 디테일 보기</a><br/>
 		</c:forEach>
 	</form>
-	찜 목록<br/>
+찜 목록<br/>
 	<c:forEach items="${wishList}" var="wishList">
 			
 			<a href="shop_product_detail?product_no=${wishList.product.product_no}">상품 번호</a><c:out value="${wishList.product_no}"/>
@@ -48,8 +49,8 @@
 			찜 번호<c:out value="${wishList.wish_no}"/><br/>
 		
 	</c:forEach>	
-	QnA 목록
-	<form name="f" method="POST">
+QnA 목록<br/>
+	<form name="f3" method="POST">
 		<c:forEach items="${questionList}" var="question" begin="0" step="1" end="${questionList.size()}">
 			질문 번호<c:out value="${question.question_no}"/>
 			질문 타이틀<c:out value="${question.question_title}"/>
@@ -57,16 +58,15 @@
 			<a href="member_question_detail?question_no=${question.question_no}">QnA 디테일 보기</a><br/>
 		</c:forEach>
 	</form>
-	QnA 등록
-	<form name="f" action="member_question_action" method="POST">
-		<input type="text" name="member_id" value="${sMemberId}">
-		<input type="text" name="question_no" value="1" disabled="disabled">
-		제목<input type="text" name="question_title">
-		카테고리<input type="text" name="question_category">
-		날짜<input type="text" name="question_date" value="sysdate">
-		상태<input type="text" name="question_status">
-		내용<input type="text" name="question_content">
-		<input type="submit">
+	
+	QnA 등록<br/>
+	<form name="f4" action="member_question_action" method="POST">
+		제목<input	type="text" name="question_title"> 
+		카테고리<input	type="text" name="question_category"> 
+		상태<input	type="text" name="question_status"> 
+		내용<input	type="text" name="question_content"> 
+			<input  type="text"  name="member_id" value="${sMemberId}"> 
+			<input	type="submit">
 	</form>
 </body>
 </html>
