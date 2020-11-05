@@ -70,6 +70,7 @@
 					step="1" 
 					end="${productList.size()}"
 					varStatus="status">
+					
 			<li>
 				<a href="shop_product_detail?product_no=${product.product_no}">
 					<img src=IMAGE/${product.product_image_1} width=100, height=100>${product.product_name}
@@ -77,6 +78,7 @@
 				<a href="add_wishlist_action?product_no=${product.product_no}">
 					<input type="image" src="IMAGE/heart.png" width="20" height="20">
 				</a>
+					<span style="size: 5px">$ : ${product.product_price}</span>
 			</li>
 		</c:forEach>
 		
@@ -91,10 +93,13 @@
 	
 	
 	
-	<h1>Staff Picks</h1>
 	
-		<span>TOP SELLERS</span>	
+	<h1>Staff Picks</h1>
+		<p id="PICK">
+			<span>TOP SELLERS</span>	
+			
 			<ol>	
+			
 				<li>
 					<a href="shop_product_detail?product_no=429067">
 						<img src=IMAGE/429067_1.png width=100, height=100>EFM터틀넥스웨터(긴팔)
@@ -121,23 +126,83 @@
 				</li>
 			</ol>
 		
-	<div class="productAll">
-		<a href="product_All_List">
-			<input type="button" value="VIEW MORE">
-		</a>
-	</div>
+		
+			<div class="productAll">
+				<a href="product_All_List">
+					<input type="button" value="VIEW MORE">
+				</a>
+			</div>
 		
 		
-		
-		<span>NEW ARRIVALS</span>
+			<br>
+			<span >NEW ARRIVALS</span>
+				<ol>	
+					<li>
+						<a href="shop_product_detail?product_no=432710">
+							<img src=IMAGE/432710_1.png width=100, height=100>JWA스텐칼라코트
+						</a>
+						<a href="add_wishlist_action?product_no=${product.product_no}">
+							<input type="image" src="IMAGE/heart.png" width="20" height="20">
+						</a>
+					</li>
+					<li>
+						<a href="shop_product_detail?product_no=428856">
+							<img src=IMAGE/428856_1.png width=100, height=100>EFM V넥스웨터(긴팔)
+						</a>
+						<a href="add_wishlist_action?product_no=${product.product_no}">
+							<input type="image" src="IMAGE/heart.png" width="20" height="20">
+						</a>
+					</li>
+					<li>
+						<a href="shop_product_detail?product_no=428867">
+							<img src=IMAGE/428867_1.png width=100, height=100>수플레얀하이넥스웨터(긴팔)
+						</a>
+						<a href="add_wishlist_action?product_no=${product.product_no}">
+							<input type="image" src="IMAGE/heart.png" width="20" height="20">
+						</a>
+					</li>
+				</ol>
+				<div class="productAll">
+					<a href="product_All_List">
+						<input type="button" value="VIEW MORE">
+					</a>
+				</div>
 			
-		
-		
-		
-		
-		
-		<span>BEST RATED</span>
-	
+			
+			<br>
+			<span>BEST RATED</span>
+				<ol>	
+					<li>
+						<a href="shop_product_detail?product_no=430929">
+							<img src=IMAGE/430929_1.png width=100, height=100>U메리노블렌드V넥가디건(긴팔)
+						</a>
+						<a href="add_wishlist_action?product_no=${product.product_no}">
+							<input type="image" src="IMAGE/heart.png" width="20" height="20">
+						</a>
+					</li>
+					<li>
+						<a href="shop_product_detail?product_no=432729">
+							<img src=IMAGE/432729_1.png width=100, height=100>U메리노블렌드크루넥스웨터(긴팔)
+						</a>
+						<a href="add_wishlist_action?product_no=${product.product_no}">
+							<input type="image" src="IMAGE/heart.png" width="20" height="20">
+						</a>
+					</li>
+					<li>
+						<a href="shop_product_detail?product_no=429128">
+							<img src=IMAGE/429128_1.png width=100, height=100>스마트앵클팬츠
+						</a>
+						<a href="add_wishlist_action?product_no=${product.product_no}">
+							<input type="image" src="IMAGE/heart.png" width="20" height="20">
+						</a>
+					</li>
+				</ol>
+				<div class="productAll">
+					<a href="product_All_List">
+						<input type="button" value="VIEW MORE">
+					</a>
+				</div>
+		</p>
 	
 	
 	
