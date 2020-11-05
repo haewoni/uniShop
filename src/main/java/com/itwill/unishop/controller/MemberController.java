@@ -155,7 +155,6 @@ public class MemberController {
 	
 	@RequestMapping("/member_jumun_detail")
 	public String member_jumun_detail(Model model, HttpSession session) {
-		System.out.println("-----------------member_jumun_detail--------------------");
 		String forwardPath = "";
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
@@ -188,18 +187,20 @@ public class MemberController {
 		return "member_detail";
 	}
 	@RequestMapping(value = "/member_question_action", method = RequestMethod.POST)
-	public String member_question_action_POST(HttpSession session, @ModelAttribute Question newQuestion) {
+	public String member_question_action_POST(HttpSession session, @ModelAttribute Question newQuestion, @RequestParam String question_title
+			, @RequestParam String question_category, @RequestParam String question_status, @RequestParam String question_content) {
 		String forwardPath = "";
 		String sMemberId  = (String) session.getAttribute("sMemberId");
+		newQuestion=new Question(0, question_title, question_category, null, question_status, question_content, sMemberId);
+		questionService.insertQuestion(newQuestion);
+		forwardPath = "redirect:member_detail";
 		//newQuestion.setMember_id(sMemberId);
-		try {
-			if (newQuestion.getMember_id().equals(sMemberId)) {
-			questionService.insertQuestion(newQuestion);
-			forwardPath = "redirect:member_detail";
-			}
-		}catch(Exception e){
-			e.printStackTrace();
-		}
+		//try {
+		//	if (newQuestion.getMember_id().equals(sMemberId)) {
+		//	}
+		//}catch(Exception e){
+		//	e.printStackTrace();
+		//}
 		return forwardPath;
 	}
 	/*
