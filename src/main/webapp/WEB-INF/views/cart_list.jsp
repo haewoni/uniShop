@@ -19,7 +19,7 @@
 
 		//location.href = 'cart_update_action_get?cart_no=?${cart.cart_no}&cart_qty=?$(#cart_qty.option:selected).val()';
 		
-		
+		//alert("수량확인 : "+${cart_qty.option.selected.text()});
 	}
 </script>
 
@@ -48,30 +48,37 @@
 				<img src=IMAGE/${cart.product_image_1} width=100, height=100><br>${cart.product_name}</a></li>
 				<li>사이즈 : ${cart.cart_product_size}</li>
 				
-				<form> 
-				  <li>수량 :
-				  <select name="cart_qty"  id="cart_qty">
-				    <option value=수량 selected>${cart.cart_qty}</option>
-				    <option value=1>1</option>
-				    <option value=2>2</option>
-				    <option value=3>3</option>
-				    <option value=4>4</option>
-				    <option value=5>5</option>
-				    <option value=6>6</option>
-				    <option value=7>7</option>
-				    <option value=8>8</option>
-				    <option value=9>9</option>
-				    <option value=10>10</option>
+			<form method="post" action="cart_update_action_get"> 
+				  수량 :
+				  <select name="cart_qty">
+				    <option value="0" selected="selected">${cart.cart_qty}</option>
+				    <option value="1">1</option>
+				    <option value="2">2</option>
+				    <option value="3">3</option>
+				    <option value="4">4</option>
+				    <option value="5">5</option>
+				    <option value="6">6</option>
+				    <option value="7">7</option>
+				    <option value="8">8</option>
+				    <option value="9">9</option>
+				    <option value="10">10</option>
 				  </select>
-				</form>
+				
 					
 				<li>금액 : ${cart.cart_tot_price}</li>
 				<li><a href="cart_delete_cartNo_action_get?cart_no=${cart.cart_no}">장바구니 지우기 @</a></li>
+				<!-- 
+				<li><a href="cart_update_action_get?cart_no=${cart.cart_no}&cart_qty=${document.getElementById('cart_qty').options.selectedIndex.value}">카트 UPDATE</a></li>
+				 
+				<li><a href="cart_update_action_get?cart_no=${cart.cart_no}&cart_qty=${document.getElementById('cart_qty').value}">카트 UPDATE</a></li>
+				-->
+				<input type="button" value="수량확인" class=TXTFLD 
+				   onclick="alert(${document.getElementById('cart_qty').value})" > 
 				
-				<li><a href="cart_update_action_get?cart_no=${cart.cart_no}&cart_qty=${cart_qty.option.selected.text}">카트 UPDATE</a></li>
+				<input type=submit value="카트 UPDATE" class=TXTFLD onclick="카트 UPDATE 성공;" >
+			    <input type="hidden" name=cart_no value="${cart.cart_no}">
+			</form>
 				
-				<input type="button" value="카트 UPDATE" class=TXTFLD
-				       onclick="location.href = 'cart_update_action_get?cart_no=${cart.cart_no}'" > 
 				<p>
 				
 				<c:set var= "sum" value="(sum + cart.cart_tot_price)"/>
@@ -83,7 +90,7 @@
 
 	<hr>
 	<input type="button" value="계속 쇼핑하기" class=TXTFLD onclick="location.href = 'unishop_main'" >
-	<input type="button" value="주문하기" class=TXTFLD onclick="cart_update()" >
+	
 	
 
 	<hr>
@@ -108,4 +115,7 @@
 	<li>
 	
 </body>
+<script>
+
+</script>
 </html>

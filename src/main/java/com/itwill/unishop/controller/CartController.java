@@ -29,19 +29,26 @@ public class CartController {
 	@Autowired
 	private ProductService productService;
 
-	String member_id = "uni1";
+	//String member_id = "uni1";
 	
-	//@RequestMapping(value = "/cart_list",method = RequestMethod.POST)
-	//public String cart_list(Model model, HttpSession session, @RequestParam String member_id) {
-	@RequestMapping(value = "/cart_list")
-	public String cart_list(Model model, HttpSession session) {
+	@RequestMapping(value = "/cart_list",method = RequestMethod.POST)
+	public String cart_list(Model model, HttpSession session, @RequestParam String member_id) {
+	//@RequestMapping(value = "/cart_list")
+	//public String cart_list(Model model, HttpSession session) {
+	//public String cart_list(HttpSession session) {
 		String forwardPath = " ";
-		session.setAttribute("member_id", member_id);
-		ArrayList<Cart> cartList = cartService.selectCartAll(member_id);
-		model.addAttribute("cartList", cartList);
+
+		//session.setAttribute("member_id", member_id);
+		//ArrayList<Cart> cartList = cartService.selectCartAll(member_id);
+
+		String sMemberId = (String) session.getAttribute("sMemberId");
+		ArrayList<Cart> cartList = cartService.selectCartAll(sMemberId);
+		//model.addAttribute("cartList", cartList);
+		session.setAttribute("cartList", cartList);
 		
 		ArrayList<Product> productList = productService.selectEight();
-		model.addAttribute("productList", productList);
+		//model.addAttribute("productList", productList);
+		session.setAttribute("productList", productList);
 
 		forwardPath="cart_list";
 		return forwardPath;
@@ -50,10 +57,13 @@ public class CartController {
 	@RequestMapping("cart_delete_cartNo_action_get")
 	public String cart_delete_cartNo_action_get(Model model, HttpSession session, @RequestParam int cart_no) {
 		String forwardPath = " ";
-		session.setAttribute("member_id", member_id);
+		String sMemberId = (String) session.getAttribute("sMemberId");
+
+		//session.setAttribute("member_id", member_id);
 		int delete_Cartno = cartService.deleteCartByCartNo(cart_no);
 		if (delete_Cartno == 1) {
-			forwardPath="redirect:cart_list?member_id="+member_id;
+			forwardPath="redirect:cart_list?member_id="+sMemberId;
+			//forwardPath="redirect:cart_list?member_id="+member_id;
 		} else {
 			return "error_handle";
 		}
@@ -61,21 +71,24 @@ public class CartController {
 		return forwardPath;
 	}
 	
-	@RequestMapping("cart_update_action_get")
-	public String cart_update_action_get(Model model, HttpSession session, @RequestParam int cart_no, @RequestParam String cart_qty) {
+	@RequestMapping("/cart_update_action_get")
+	public String cart_update_action_get(Model model, HttpSession session, @RequestParam int cart_no, @RequestParam int cart_qty) {
 	//public String cart_update_action(Model model, HttpSession session, @RequestParam int cart_no) {
 		//public String cart_update_action(Model model, HttpSession session) {
 		
-		//System.out.println("cart_no :");
 		//System.out.println("cart_no :"+cart_no);
 		//System.out.println("cart_qty :"+cart_qty);
+		
 		String forwardPath = " ";
-		session.setAttribute("member_id", member_id);
-		int a = Integer.parseInt(cart_qty);
-		Cart updateCart = new Cart(cart_no, a, 1, "", "", "");
+
+		//session.setAttribute("member_id", member_id);
+		String sMemberId = (String) session.getAttribute("sMemberId");
+
+		Cart updateCart = new Cart(cart_no, cart_qty, 1, "", "", "");
 		int update_Cartno = cartService.updateCart(updateCart);
 		if (update_Cartno == 1) {
-			forwardPath="redirect:cart_list?member_id="+member_id;
+			forwardPath="redirect:cart_list?member_id="+sMemberId;
+			//forwardPath="redirect:cart_list?member_id="+member_id;
 		} else {
 			return "error_handle";
 		}
