@@ -15,10 +15,10 @@
 	<div>
 
 		<a href="member_logout_action">${sMemberId}님 로그아웃</a><br>
-		<a href="">${sMemberId} 님의 핸드폰: ${loginMember.member_phone}</a><br>
-		<a href="">${loginMember.member_address2} 님의 주소상세</a><br>
-		<a href="">${sMemberId}님 로그아웃</a>		<br>
-		<a href="member_detail">멤버 정보 수정, 주문 목록, 찜 목록, QnA 목록</a><br>
+		<a href="member_profile_form">멤버 정보</a><br>
+		<a href="member_jumun_list">주문 목록</a><br>
+		<a href="member_wishlist">찜 목록</a><br>
+		<a href="member_question_list">QnA 목록</a><br>
 	</div>
 	<div>
 		<a href="unishop_main">Main</a><br>

@@ -16,7 +16,6 @@
 			상품 이름 ${jumun_Detail.jumun_d_product_name}
 			상품 가격 ${jumun_Detail.jumun_d_product_price}
 			상품 사이즈${jumun_Detail.jumun_d_product_size}<br/>			
-			
 		</c:forEach>	
 	</c:forEach>
 </body>

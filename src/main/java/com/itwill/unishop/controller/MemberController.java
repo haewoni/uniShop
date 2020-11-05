@@ -42,12 +42,12 @@ public class MemberController {
 	private QuestionService questionService;
 	@Autowired
 	private Jumun_DetailService jumun_DetailService;
-	
+
 	@RequestMapping("/member_login_register_form")
 	public String member_login_register_form() {
 		return "member_login_register_form"; 
 	}
-	
+
 	//멤버 로그인을 해보자 => 로그인 성공하면 메인으로, 실패하면 로그인_등록폼으로
 	@RequestMapping(value = "/member_login_action", method = RequestMethod.GET)
 	public String member_login_action_GET() {
@@ -58,14 +58,14 @@ public class MemberController {
 		String forwardPath = "";
 		try {
 			Member loginMember=memberService.loginMember(member_id, member_password);
-			
+
 			session.setAttribute("loginMember",loginMember);//멤버의 객체반환
 			session.setAttribute("sMemberId", member_id);//멤버의아이디 보여줌
-			
+
 			forwardPath = "redirect:unishop_main";
 		} catch (PasswordMismatchException e) {
 			model.addAttribute("msg2", e.getMessage());
-			
+
 			forwardPath = "member_login_register_form";
 			e.printStackTrace();
 		}catch(MemberNotFoundException e){
@@ -78,21 +78,21 @@ public class MemberController {
 		return forwardPath;
 	}
 	//멤버 로그아웃
-	
+
 	@RequestMapping(value = "/member_logout_action", method = RequestMethod.GET)
 	public String member_logout_action(HttpSession session) {
 		session.invalidate();
 		return "redirect:unishop_main";
 	}
-	
-	
-	
+
+
+
 	//회원가입을 해보자
 	@RequestMapping(value="/member_register_action", method = RequestMethod.GET)
 	public String member_register_action() {
 		return "member_login_register_form";
-		}
-	
+	}
+
 	//회원가입 성공 => 로그인_등록 폼으로 이동
 	@RequestMapping(value="/member_register_action", method = RequestMethod.POST)
 	public String member_register_action(Model model, @ModelAttribute Member newMember, @RequestParam String member_pass) {
@@ -112,32 +112,39 @@ public class MemberController {
 		return forwardPath;
 	}
 	//회원 디테일
-	@RequestMapping(value = "/member_detail")
+	@RequestMapping(value = "/member_profile_form")
 	public String member_detail(Model model, HttpSession session/*, @RequestParam int question_no*//*, @RequestParam String member_id*/) {
 		String forwardPath = "";
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
-			//Member loginMember = (Member)session.getAttribute("loginMember");
-			ArrayList<Jumun> jumunList = (ArrayList<Jumun>) jumunService.selectById(sMemberId);
-			ArrayList<WishList> wishList = wishListService.selectWishListAll(sMemberId);
-			ArrayList<Question> questionList = questionService.selectById(sMemberId);
-			model.addAttribute("jumunList", jumunList);
-			model.addAttribute("wishList", wishList);
-			model.addAttribute("questionList", questionList);
-			forwardPath = "member_detail";
+			Member loginMember = (Member)session.getAttribute("loginMember");
+
+			forwardPath = "member_profile_form";
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return forwardPath;
 	}
-
-	@RequestMapping(value = "/member_update_action", method = RequestMethod.GET)
+	@RequestMapping("/member_wishlist")
+	public String member_wishlist(Model model, HttpSession session) {
+		String forwardPath="";
+		String sMemberId = (String) session.getAttribute("sMemberId");
+		try {
+			ArrayList<WishList> wishList = wishListService.selectWishListAll(sMemberId);
+			model.addAttribute("wishList", wishList);
+			forwardPath="member_wishlist";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return forwardPath;
+	}
+	@RequestMapping(value = "/member_profile_update_action", method = RequestMethod.GET)
 	public String member_update_action_GET() {
 
-		return "member_detail";
+		return "member_profile_form";
 	}
 
-	@RequestMapping(value = "/member_update_action", method = RequestMethod.POST)
+	@RequestMapping(value = "/member_profile_update_action", method = RequestMethod.POST)
 	public String member_update_action_POST(Model model, HttpSession session, @ModelAttribute Member updateMember) {
 		String forwardPath = "";
 		try {
@@ -148,11 +155,26 @@ public class MemberController {
 			forwardPath = "redirect:unishop_main";
 		} catch (Exception e) {
 			e.printStackTrace();
-			forwardPath = "member_detail";
+			forwardPath = "member_profile_form";
 		}
 		return forwardPath;
 	}
-	
+
+	@RequestMapping("/member_jumun_list")
+	public String member_jumun_list(Model model, HttpSession session) {
+		System.out.println("-----------------member_jumun_detail--------------------");
+		String forwardPath = "";
+		try {
+			String sMemberId = (String) session.getAttribute("sMemberId");
+			ArrayList<Jumun> jumunList = (ArrayList<Jumun>) jumunService.selectById(sMemberId);
+			model.addAttribute("jumunList", jumunList);
+			forwardPath = "member_jumun_list";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return forwardPath;
+	}
+
 	@RequestMapping("/member_jumun_detail")
 	public String member_jumun_detail(Model model, HttpSession session) {
 		System.out.println("-----------------member_jumun_detail--------------------");
@@ -167,13 +189,24 @@ public class MemberController {
 		}
 		return forwardPath;
 	}
-	
+	@RequestMapping("/member_question_list")
+	public String member_question_list(Model model, HttpSession session/*, @RequestParam int question_no*/) {
+		String forwardPath = "";
+		try {
+			String sMemberId = (String) session.getAttribute("sMemberId");
+			ArrayList<Question> questionList = questionService.selectById(sMemberId);
+			model.addAttribute("questionList", questionList);
+			forwardPath = "member_question_list";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return forwardPath;
+	}
 	@RequestMapping("/member_question_detail")
 	public String member_question_detail(Model model, HttpSession session, @RequestParam int question_no) {
 		String forwardPath = "";
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
-		
 			Question question = questionService.selectByNo(question_no);
 			model.addAttribute("question", question);
 			forwardPath = "member_question_detail";
@@ -182,10 +215,15 @@ public class MemberController {
 		}
 		return forwardPath;
 	}
+	@RequestMapping("/member_question_form")
+	public String member_question_form(HttpSession session) {
+		String sMemberId = (String) session.getAttribute("sMemberId");
+		return "member_question_form";
+	}
 	@RequestMapping(value = "/member_question_action", method = RequestMethod.GET)
 	public String member_question_action_GET() {
-		
-		return "member_detail";
+
+		return "redirect:member_question_list";
 	}
 	@RequestMapping(value = "/member_question_action", method = RequestMethod.POST)
 	public String member_question_action_POST(HttpSession session, @ModelAttribute Question newQuestion) {
@@ -194,8 +232,8 @@ public class MemberController {
 		//newQuestion.setMember_id(sMemberId);
 		try {
 			if (newQuestion.getMember_id().equals(sMemberId)) {
-			questionService.insertQuestion(newQuestion);
-			forwardPath = "redirect:member_detail";
+				questionService.insertQuestion(newQuestion);
+				forwardPath = "redirect:member_question_list";
 			}
 		}catch(Exception e){
 			e.printStackTrace();
@@ -208,6 +246,6 @@ public class MemberController {
 	public String member_error_handle(Exception e) {
 		return "error_handle";
 	}
-	*/
+	 */
 
 }
