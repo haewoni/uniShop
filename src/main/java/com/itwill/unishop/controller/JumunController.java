@@ -22,6 +22,7 @@ import com.itwill.unishop.domain.Member;
 import com.itwill.unishop.service.CartService;
 import com.itwill.unishop.service.DeliveryService;
 import com.itwill.unishop.service.JumunService;
+import com.itwill.unishop.service.Jumun_DetailService;
 import com.itwill.unishop.service.MemberService;
 import com.itwill.unishop.service.ReviewService;
 
@@ -33,9 +34,7 @@ public class JumunController {
 	@Autowired
 	private JumunService jumunService;
 	@Autowired
-	private ReviewService reviewService;
-	@Autowired
-	private DeliveryService deliveryService;
+	private Jumun_DetailService jumunDetailService;
 	@Autowired
 	private CartService cartService;
 
@@ -154,6 +153,7 @@ public class JumunController {
 		session.setAttribute("cartList", cartList);
 		Jumun createJumun = (Jumun) session.getAttribute("createJumun");
 		jumunService.insertJumun(createJumun);
+		//jumunDetailService.insertJumunDetail(jumun_Detail);
 		forwardPath="jumun_complete_form";
 		return forwardPath;
 	}
