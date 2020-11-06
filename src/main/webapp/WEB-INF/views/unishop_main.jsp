@@ -15,8 +15,8 @@
 	<div>
 
 		<a href="member_logout_action">${sMemberId}님 로그아웃</a><br>
-		<a href="member_profile_form">멤버 정보</a><br>
 		<a href="member_jumun_list">주문 목록</a><br>
+		<a href="member_profile_form">멤버 정보</a><br>
 		<a href="member_wishlist">찜 목록</a><br>
 		<a href="member_question_list">QnA 목록</a><br>
 	</div>

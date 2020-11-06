@@ -14,6 +14,7 @@ public class Question {
 	public Question() {
 		
 	}
+	
 	public Question(int question_no, String question_title, String question_category, Date question_date,
 			String question_status, String question_content, String member_id) {
 		super();
@@ -69,9 +70,10 @@ public class Question {
 	}
 	@Override
 	public String toString() {
-		return "Question [question_no=" + question_no + ", question_title=" + question_title + ", question_category="
-				+ question_category + ", question_date=" + question_date + ", question_status=" + question_status
-				+ ", question_content=" + question_content + ", member_id=" + member_id + "]";
+		return String.format(
+				"Question [question_no=%s, question_title=%s, question_category=%s, question_date=%s, question_status=%s, question_content=%s, member_id=%s]",
+				question_no, question_title, question_category, question_date, question_status, question_content,
+				member_id);
 	}
 	
 }

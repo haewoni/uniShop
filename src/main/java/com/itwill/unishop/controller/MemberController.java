@@ -116,9 +116,11 @@ public class MemberController {
 	public String member_detail(Model model, HttpSession session/*, @RequestParam int question_no*//*, @RequestParam String member_id*/) {
 		String forwardPath = "";
 		try {
+			//Member loginMember = (Member)session.getAttribute("loginMember");
 			String sMemberId = (String) session.getAttribute("sMemberId");
-			Member loginMember = (Member)session.getAttribute("loginMember");
-
+			if(sMemberId == null || sMemberId=="") {
+				forwardPath = "member_login_register_form";
+			}
 			forwardPath = "member_profile_form";
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -152,7 +154,7 @@ public class MemberController {
 			updateMember.setMember_id(loginMember.getMember_id());
 			memberService.updateMember(updateMember);
 			session.setAttribute("loginMember", updateMember);
-			forwardPath = "redirect:unishop_main";
+			forwardPath = "redirect:member_profile_form";
 		} catch (Exception e) {
 			e.printStackTrace();
 			forwardPath = "member_profile_form";
@@ -176,12 +178,12 @@ public class MemberController {
 	}
 
 	@RequestMapping("/member_jumun_detail")
-	public String member_jumun_detail(Model model, HttpSession session) {
+	public String member_jumun_detail(Model model, HttpSession session/*, @RequestParam int jumun_d_no*/) {
 		String forwardPath = "";
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
-			ArrayList<Jumun_Detail> jumunList = (ArrayList<Jumun_Detail>) jumunService.selectJoinById(sMemberId);
-			model.addAttribute("jumunList", jumunList);
+			ArrayList<Jumun_Detail> jumunDetailList = (ArrayList<Jumun_Detail>) jumunService.selectJoinById(sMemberId);
+			model.addAttribute("jumunDetailList", jumunDetailList);
 			forwardPath = "member_jumun_detail";
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -222,23 +224,16 @@ public class MemberController {
 	@RequestMapping(value = "/member_question_action", method = RequestMethod.GET)
 	public String member_question_action_GET() {
 
-		return "redirect:member_question_list";
+		return "member_question_form";
 	}
 	@RequestMapping(value = "/member_question_action", method = RequestMethod.POST)
-	public String member_question_action_POST(HttpSession session, @ModelAttribute Question newQuestion, @RequestParam String question_title
-			, @RequestParam String question_category, @RequestParam String question_status, @RequestParam String question_content) {
+	public String member_question_action_POST(HttpSession session, @ModelAttribute Question newQuestion) {
 		String forwardPath = "";
 		String sMemberId  = (String) session.getAttribute("sMemberId");
-		newQuestion=new Question(0, question_title, question_category, null, question_status, question_content, sMemberId);
+		System.out.println(newQuestion);
 		questionService.insertQuestion(newQuestion);
-		forwardPath = "redirect:member_detail";
-		//newQuestion.setMember_id(sMemberId);
-		//try {
-		//	if (newQuestion.getMember_id().equals(sMemberId)) {
-		//	}
-		//}catch(Exception e){
-		//	e.printStackTrace();
-		//}
+		forwardPath = "redirect:member_question_list";
+		
 		return forwardPath;
 	}
 	/*

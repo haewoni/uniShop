@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<c:forEach items="${jumunList}" var="jumun"  >
+	<c:forEach items="${jumunDetailList}" var="jumun"  >
 			주문 번호<c:out value="${jumun.jumun_no}"/>
 			주문 날짜<c:out value="${jumun.jumun_date}"/>
 			주문 상태<c:out value="${jumun.jumun_status}"/><br/>

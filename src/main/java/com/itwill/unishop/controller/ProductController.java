@@ -186,7 +186,6 @@ public class ProductController {
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
 			if(sMemberId == null || sMemberId == "") {
-				
 				forwardPath = "member_login_register_form";
 			}	
 		//String member_id = "uni1";//session.getId();
@@ -219,14 +218,12 @@ public class ProductController {
 			if(sMemberId == null || sMemberId == "") {
 				
 				forwardPath = "member_login_register_form";
-			
-				int duplicateCount = wishListService.inspectDuplicateWishList(sMemberId, product_no);
-			
-				if(duplicateCount==0) {
-					wishListService.insertWishList(new WishList(-1, sMemberId, product_no, null));
-				}
 			}
-				
+			int duplicateCount = wishListService.inspectDuplicateWishList(sMemberId, product_no);
+			
+			if(duplicateCount==0) {
+				wishListService.insertWishList(new WishList(-1, sMemberId, product_no, null));
+			}
 			forwardPath = "redirect:shop_product_detail?product_no="+product_no;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -242,11 +239,9 @@ public class ProductController {
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
 				if(sMemberId == null || sMemberId == "") {
-					
 					forwardPath = "member_login_register_form";
-					wishListService.deleteWishListById(sMemberId, product_no);
-				
 				}
+			wishListService.deleteWishListById(sMemberId, product_no);
 			forwardPath = "redirect:shop_product_detail?product_no="+product_no;
 		} catch (Exception e) {
 			e.printStackTrace();

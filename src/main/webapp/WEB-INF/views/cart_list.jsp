@@ -46,8 +46,8 @@
 						varStatus="status">
 				<li>카트 순번 : ${cart.cart_no}</li>
 				<li>제품 번호 : ${cart.product_no}</li>
-				<li><a href="shop_single.jsp?product_no=${cart.product_no}">
-				<img src=IMAGE/${cart.product_image_1} width=100, height=100><br>${cart.product_name}</a></li>
+				<li><a href="shop_product_detail?product_no=${cart.product_no}">
+				<img src="IMAGE/${cart.product_image_1}" width=100, height=100><br>${cart.product_name}</a></li>
 				<li>사이즈 : ${cart.cart_product_size}</li>
 				
 			<form method="post" action="cart_update_action_get">
@@ -110,11 +110,11 @@
 						end="${productList.size()}"
 						varStatus="status">
 				<li>제품 번호 : ${product.product_no}</li>
-				<li><a href="shop_product_detail.jsp?product_no=${product.product_no}">
+				<li><a href="shop_product_detail?product_no=${product.product_no}">
 				<img src=IMAGE/${product.product_image_1} width=100, height=100><br>${product.product_name}</a></li>
 				<li>금액 : ${product.product_price}</li>
-				<li><a href="shop_add_cart_action.jsp?product_no=${product.product_no}">wish리스트 추가♥</a></li>
-				<li><a href="shop_product_detail.jsp?product_no=${product.product_no}">장바구니에 추가(상품상세)</a></li>
+				<li><a href="shop_add_wishlist_action?product_no=${product.product_no}">wish리스트 추가♥</a></li>
+				<li><a href="shop_product_detail?product_no=${product.product_no}">장바구니에 추가(상품상세)</a></li>
 				<p>
 			</c:forEach>
 	</div>
