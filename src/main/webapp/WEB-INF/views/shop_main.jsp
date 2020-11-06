@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<jsp:include page="include_common_top.jsp"/>
 	샵 메인
 	<hr>
 	<input type="button" value="Back to Main" class=TXTFLD onclick="location.href = 'unishop_main'" >

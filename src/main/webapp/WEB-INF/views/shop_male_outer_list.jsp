@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<jsp:include page="include_common_top.jsp"/>
 	남성 아우터 리스트<hr>
 		
 	<c:forEach  items="${productList}" 

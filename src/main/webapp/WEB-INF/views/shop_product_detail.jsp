@@ -76,6 +76,7 @@
 				varStatus="status">
 		<li><a href="shop_product_detail?product_no=${product.product_no}">
 		<img src=IMAGE/${product.product_image_1} width=100, height=100><br>${product.product_name}</a></li>
+		<span style="size: 5px">$ : ${product.product_price}</span>
 	</c:forEach>
 	</body>
 </html>
