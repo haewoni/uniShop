@@ -90,7 +90,7 @@
 
 			</c:forEach>
 				
-				<li>총금액_sum : ${sum}</li>
+				<li>총금액_sum : ${cart_subtotal}</li>
 	</div>
 
 	<hr>
