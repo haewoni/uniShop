@@ -23,6 +23,11 @@ public class JumunRepositoryImpl implements JumunRepository{
 	public int insertJumun(Jumun jumun) {
 		return jumunMapper.insertJumun(jumun);
 	}
+	
+	@Override
+	public int selectJumunNo(Jumun jumun) {
+		return jumunMapper.selectJumunNo(jumun);
+	}
 
 	@Override
 	public List<Jumun> selectAll() {
@@ -54,5 +59,7 @@ public class JumunRepositoryImpl implements JumunRepository{
 		
 		return jumunMapper.selectJoinById(member_id);
 	}
+
+
 
 }

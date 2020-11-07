@@ -1700,13 +1700,14 @@ VALUES ('EX', '특급', '1~2일', 6000);
 
 --jumun
 INSERT INTO jumun (jumun_no, jumun_date, jumun_status, jumun_tot_price, card_no, card_expire_date, card_cvc, card_member_name, member_id, delivery_no) 
-VALUES (jumun_jumun_no_SEQ.nextval, sysdate, 'Delivered', 79800, '1234 5678 9012 3456', '08/25', '123', '신혜원', 'uni1','GEN');
+VALUES (1, sysdate, 'Delivered', 79800, '1234 5678 9012 3456', '08/25', '123', '신혜원', 'uni1','GEN');
+
 
 INSERT INTO jumun (jumun_no, JUMUN_DATE, JUMUN_STATUS, JUMUN_TOT_PRICE, CARD_NO, CARD_EXPIRE_DATE, CARD_CVC, CARD_MEMBER_NAME, MEMBER_ID, delivery_no) 
-VALUES (jumun_jumun_no_SEQ.nextval, sysdate, 'Delayed', 99800, '9876 5432 1098 7654', '02/21', '456', '신지원', 'uni2','EX');
+VALUES ((select NVL(MAX(jumun_no),0)+1 as jno from jumun), sysdate, 'Delayed', 99800, '9876 5432 1098 7654', '02/21', '456', '신지원', 'uni2','EX');
 
 INSERT INTO jumun (jumun_no, JUMUN_DATE, JUMUN_STATUS, JUMUN_TOT_PRICE, CARD_NO, CARD_EXPIRE_DATE, CARD_CVC, CARD_MEMBER_NAME, MEMBER_ID, delivery_no) 
-VALUES (jumun_jumun_no_SEQ.nextval, sysdate, 'Canceled', 59800, '1346 7964 2585 1973', '06/23', '789', '김민정', 'uni3','EX');
+VALUES ((select NVL(MAX(jumun_no),0)+1 as jno from jumun), sysdate, 'Canceled', 59800, '1346 7964 2585 1973', '06/23', '789', '김민정', 'uni3','EX');
 
 commit;
 
@@ -1719,16 +1720,16 @@ INSERT INTO jumun_detail
 VALUES (jumun_detail_jumun_d_no_SEQ.nextval, '보아후리스크루넥가디건(긴팔)', 'M', 39900, 1, 1, 435455);
 
 INSERT INTO jumun_detail 
-VALUES (jumun_detail_jumun_d_no_SEQ.nextval, 'IDLF3D니트자카드스웨터(긴팔)', 'S', 49900, 1, 2, 432087);
+VALUES (jumun_detail_jumun_d_no_SEQ.nextval, 'IDLF3D니트자카드스웨터(긴팔)', 'S', 49900, 1, 1, 432087);
 
 INSERT INTO jumun_detail 
 VALUES (jumun_detail_jumun_d_no_SEQ.nextval, '울트라스트레치진20FW', 'S', 49900, 1, 2, 432049);
 
 INSERT INTO jumun_detail
-VALUES (jumun_detail_jumun_d_no_SEQ.nextval, '플란넬체크셔츠(긴팔)', 'L', 29900, 1, 3, 426035);
+VALUES (jumun_detail_jumun_d_no_SEQ.nextval, '플란넬체크셔츠(긴팔)', 'L', 29900, 1, 2, 426035);
 
 INSERT INTO jumun_detail 
-VALUES (jumun_detail_jumun_d_no_SEQ.nextval, 'U크루넥T(긴팔)20SS', 'L', 29900, 1, 3, 425213);
+VALUES (jumun_detail_jumun_d_no_SEQ.nextval, 'U크루넥T(긴팔)20SS', 'L', 29900, 1, 2, 425213);
 
 commit;
 

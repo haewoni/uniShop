@@ -9,16 +9,24 @@
 	
 	<!-- create -->
 	<insert id="insertJumun" parameterType="com.itwill.unishop.domain.Jumun">
+		<!--
 		<selectKey resultType="java.lang.Integer"
 			keyProperty="jumun_no" order="BEFORE">
 			select jumun_jumun_no_SEQ.nextval from dual
 		</selectKey>
+		-->
 		insert into JUMUN 
-		values (#{jumun_no}, #{jumun_date}, #{jumun_status},
+		values ((select NVL(MAX(jumun_no),0)+1 as jno from jumun), #{jumun_date}, #{jumun_status},
 				#{jumun_tot_price}, #{card_no}, #{card_expire_date},
 				#{card_cvc}, #{card_member_name}, #{member_id},
 				#{delivery_no})
 	</insert>
+	
+	<!-- select Jumun_no from jumun -->
+	<select id="selectJumunNo" parameterType="com.itwill.unishop.domain.Jumun"
+			resultType="java.lang.Integer">
+		select MAX(jumun_no) from jumun
+	</select>
 	
 	
 	

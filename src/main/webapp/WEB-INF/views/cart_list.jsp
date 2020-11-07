@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-	<jsp:include page="common_top.jsp"/>
+<jsp:include page="common_top.jsp"/>
     <!-- Off-Canvas Wrapper-->
     <div class="offcanvas-wrapper">
       <!-- Page Title-->
@@ -213,4 +213,3 @@
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
   </body>
-</html>
