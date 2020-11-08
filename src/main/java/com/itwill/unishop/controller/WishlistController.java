@@ -28,7 +28,7 @@ public class WishlistController {
 		try {
 			ArrayList<WishList> wishList = wishListService.selectWishListAll(sMemberId);
 			model.addAttribute("wishList", wishList);
-			forwardPath="member_wishlist";
+			forwardPath="member_wishlist_detail";
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
