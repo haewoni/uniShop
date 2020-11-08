@@ -309,7 +309,7 @@
         <div class="inner">
           <!-- Off-Canvas Toggle (#shop-categories)--><a class="offcanvas-toggle cats-toggle" href="#shop-categories" data-toggle="offcanvas"></a>
           <!-- Off-Canvas Toggle (#mobile-menu)--><a class="offcanvas-toggle menu-toggle" href="#mobile-menu" data-toggle="offcanvas"></a>
-          <!-- Site Logo--><a class="site-logo" href="index.html"><img src="img/logo/logo.png" alt="Unishop"></a>
+          <!-- Site Logo--><a class="site-logo" href="unishop_main"><img src="img/logo/logo.png" alt="Unishop"></a>
         </div>
       </div>
       <!-- Main Navigation-->
@@ -327,7 +327,7 @@
                   <h6 class="mt-3">Dark Header</h6></a></li>
             </ul>
           </li>
-          <li><a href="shop-grid-ls.html"><span>Shop</span></a>
+          <li><a href="shop_main"><span>Shop</span></a>
             <ul class="sub-menu">
                 <li><a href="shop-categories.html">Shop Categories</a></li>
               <li class="has-children"><a href="shop-grid-ls.html"><span>Shop Grid</span></a>

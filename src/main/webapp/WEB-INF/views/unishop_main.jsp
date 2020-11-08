@@ -11,9 +11,9 @@
           <div class="category-card col-md-6 col-sm-12 fw-section padding-top-7x padding-bottom-7x" style="background-image: url(img/banners/home05.jpg);"><span class="overlay" style="background-color: #000; opacity: .5;"></span>
             <div class="d-flex justify-content-center">
               <div class="px-3 text-center">
-                <h2 class="display-4 text-white text-shadow">Shoes</h2>
+                <h2 class="display-4 text-white text-shadow">Male Outer</h2>
                 <h5 class="text-white text-normal mb-3 opacity-60 text-shadow">Starting from $56.00</h5>
-                <div class="view-button"><a class="btn btn-primary" href="shop-grid-ls.html">View Collection</a></div>
+                <div class="view-button"><a class="btn btn-primary" href=product_ManOuterList>View Collection</a></div>
               </div>
             </div>
           </div>
@@ -21,9 +21,9 @@
           <div class="category-card col-md-6 col-sm-12 fw-section padding-top-7x padding-bottom-7x" style="background-image: url(img/banners/home04.jpg);"><span class="overlay" style="background-color: #000; opacity: .5;"></span>
             <div class="d-flex justify-content-center">
               <div class="px-3 text-center">
-                <h2 class="display-4 text-white text-shadow">Bags</h2>
+                <h2 class="display-4 text-white text-shadow">Female Outer</h2>
                 <h5 class="text-white text-normal mb-3 opacity-60 text-shadow">Starting from $27.00</h5>
-                <div class="view-button"><a class="btn btn-primary" href="shop-grid-ls.html">View Collection</a></div>
+                <div class="view-button"><a class="btn btn-primary" href="product_FemaleOuter_list">View Collection</a></div>
               </div>
             </div>
           </div>
@@ -33,9 +33,9 @@
           <div class="category-card col-md-6 col-sm-12 fw-section padding-top-7x padding-bottom-7x" style="background-image: url(img/banners/home01.jpg);"><span class="overlay" style="background-color: #000; opacity: .5;"></span>
             <div class="d-flex justify-content-center">
               <div class="px-3 text-center">
-                <h2 class="display-4 text-white text-shadow">Sunglasses</h2>
+                <h2 class="display-4 text-white text-shadow">Male longPants</h2>
                 <h5 class="text-white text-normal mb-3 opacity-60 text-shadow">Starting from $35.99</h5>
-                <div class="view-button"><a class="btn btn-primary" href="shop-grid-ls.html">View Collection</a></div>
+                <div class="view-button"><a class="btn btn-primary" href="product_ManPantslist">View Collection</a></div>
               </div>
             </div>
           </div>
@@ -43,9 +43,9 @@
           <div class="category-card col-md-6 col-sm-12 fw-section padding-top-7x padding-bottom-7x" style="background-image: url(img/banners/home06.jpg);"><span class="overlay" style="background-color: #000; opacity: .5;"></span>
             <div class="d-flex justify-content-center">
               <div class="px-3 text-center">
-                <h2 class="display-4 text-white text-shadow">Watches</h2>
+                <h2 class="display-4 text-white text-shadow">Female skirts</h2>
                 <h5 class="text-white text-normal mb-3 opacity-60 text-shadow">Starting from $79.99.00</h5>
-                <div class="view-button"><a class="btn btn-primary" href="shop-grid-ls.html">View Collection</a></div>
+                <div class="view-button"><a class="btn btn-primary" href="product_FemaleSkirt_list">View Collection</a></div>
               </div>
             </div>
           </div>
@@ -60,8 +60,8 @@
           <!-- Product-->
           <div class="grid-item">
             <div class="product-card">
-              <div class="product-badge text-danger">50% Off</div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/01.jpg" alt="Product"></a>
-              <h3 class="product-title"><a href="shop-single.html">Unionbay Park</a></h3>
+              <div class="product-badge text-danger">50% Off</div><a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}"><img src="img/shop/products/01.jpg" alt="Product"></a>
+              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
               <h4 class="product-price">
                 <del>$99.99</del>$49.99
               </h4>
@@ -156,7 +156,7 @@
             </div>
           </div>
         </div>
-        <div class="text-center"><a class="btn btn-outline-secondary margin-top-none" href="shop-grid-ls.html">View All Products</a></div>
+        <div class="text-center"><a class="btn btn-outline-secondary margin-top-none" href=product_All_List>View All Products</a></div>
       </section>
       <!-- Promo-->
       <section class="fw-section" style="background-image: url(img/banners/home03.jpg);"><span class="overlay" style="background-color: #374250; opacity: .55;"></span>
@@ -193,7 +193,7 @@
                 <div class="entry-content">
                   <h4 class="entry-title"><a href="shop-single.html">Big Wordmark Tote</a></h4><span class="entry-meta">$29.99</span>
                 </div>
-              </div><a class="btn btn-outline-secondary btn-sm mb-0" href="shop-grid-ls.html">View More</a>
+              </div><a class="btn btn-outline-secondary btn-sm mb-0" href="product_All_List">View More</a>
             </div>
           </div>
           <div class="col-md-4 col-sm-6">
@@ -219,7 +219,7 @@
                 <div class="entry-content">
                   <h4 class="entry-title"><a href="shop-single.html">Skagen Holst Watch</a></h4><span class="entry-meta">$145.00</span>
                 </div>
-              </div><a class="btn btn-outline-secondary btn-sm mb-0" href="shop-grid-ls.html">View More</a>
+              </div><a class="btn btn-outline-secondary btn-sm mb-0" href="product_All_List">View More</a>
             </div>
           </div>
           <div class="col-md-4 col-sm-6">
@@ -245,7 +245,7 @@
                 <div class="entry-content">
                   <h4 class="entry-title"><a href="shop-single.html">Off the Shoulder Top</a></h4><span class="entry-meta">$128.00</span>
                 </div>
-              </div><a class="btn btn-outline-secondary btn-sm mb-0" href="shop-grid-ls.html">View More</a>
+              </div><a class="btn btn-outline-secondary btn-sm mb-0" href="product_All_List">View More</a>
             </div>
           </div>
         </div>
