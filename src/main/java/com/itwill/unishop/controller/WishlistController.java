@@ -21,7 +21,7 @@ public class WishlistController {
 	@Autowired
 	private WishListService wishListService;
 	//멤버 찜 리스트
-	@RequestMapping("/member_wishlist")
+	@RequestMapping("/member_wishlist_detail")
 	public String member_wishlist(Model model, HttpSession session) {
 		String forwardPath="";
 		String sMemberId = (String) session.getAttribute("sMemberId");

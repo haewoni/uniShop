@@ -66,7 +66,7 @@
           </div>
           <div class="column">
             <ul class="breadcrumbs">
-              <li><a href="index.html">Home</a>
+              <li><a href="unishop_main">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
               <li><a href="account-orders.html">Account</a>
@@ -92,7 +92,7 @@
                 </div>
               </div>
             </aside>
-            <nav class="list-group"><a class="list-group-item with-badge" href="account-orders.html"><i class="icon-bag"></i>Orders<span class="badge badge-primary badge-pill">6</span></a><a class="list-group-item" href="account-profile.html"><i class="icon-head"></i>Profile</a><a class="list-group-item" href="account-address.html"><i class="icon-map"></i>Addresses</a><a class="list-group-item with-badge" href="account-wishlist.html"><i class="icon-heart"></i>Wishlist<span class="badge badge-primary badge-pill">3</span></a><a class="list-group-item with-badge active" href="account-tickets.html"><i class="icon-tag"></i>My Tickets<span class="badge badge-primary badge-pill">4</span></a></nav>
+            <nav class="list-group"><a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>Orders<span class="badge badge-primary badge-pill">6</span></a><a class="list-group-item" href="member_profile_form"><i class="icon-head"></i>Profile</a><a class="list-group-item" href="member_address_detail"><i class="icon-map"></i>Addresses</a><a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>Wishlist<span class="badge badge-primary badge-pill">3</span></a><a class="list-group-item with-badge active" href="member_question_list"><i class="icon-tag"></i>My Tickets<span class="badge badge-primary badge-pill">4</span></a></nav>
           </div>
           <div class="col-lg-8">
             <div class="padding-top-2x mt-2 hidden-lg-up"></div>
@@ -109,28 +109,28 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="text-medium navi-link" href="account-single-ticket.html">My new ticket</a></td>
+                    <td><a class="text-medium navi-link" href="member_question_detail">My new ticket</a></td>
                     <td>08/08/2017 | 08/14/2017</td>
                     <td>Website problem</td>
                     <td><span class="text-warning">High</span></td>
                     <td><span class="text-primary">Open</span></td>
                   </tr>
                   <tr>
-                    <td><a class="text-medium navi-link" href="account-single-ticket.html">Another ticket</a></td>
+                    <td><a class="text-medium navi-link" href="member_question_detail">Another ticket</a></td>
                     <td>07/21/2017 | 07/23/2017</td>
                     <td>Partner request</td>
                     <td><span class="text-info">Medium</span></td>
                     <td><span class="text-muted">Closed</span></td>
                   </tr>
                   <tr>
-                    <td><a class="text-medium navi-link" href="account-single-ticket.html">Yet another ticket</a></td>
+                    <td><a class="text-medium navi-link" href="member_question_detail">Yet another ticket</a></td>
                     <td>05/19/2017 | 05/20/2017</td>
                     <td>Complaint</td>
                     <td><span class="text-danger">Urgent</span></td>
                     <td><span class="text-muted">Closed</span></td>
                   </tr>
                   <tr>
-                    <td><a class="text-medium navi-link" href="account-single-ticket.html">My old ticket</a></td>
+                    <td><a class="text-medium navi-link" href="member_question_detail">My old ticket</a></td>
                     <td>05/19/2017 | 05/20/2017</td>
                     <td>Info inquiry</td>
                     <td><span class="text-success">Low</span></td>

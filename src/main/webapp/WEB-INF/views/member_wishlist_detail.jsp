@@ -11,10 +11,10 @@
           </div>
           <div class="column">
             <ul class="breadcrumbs">
-              <li><a href="index.html">Home</a>
+              <li><a href="unishop_main">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li><a href="account-orders.html">Account</a>
+              <li><a href="member_jumun_list">Account</a>
               </li>
               <li class="separator">&nbsp;</li>
               <li>My Wishlist</li>
@@ -37,7 +37,7 @@
                 </div>
               </div>
             </aside>
-            <nav class="list-group"><a class="list-group-item with-badge" href="account-orders.html"><i class="icon-bag"></i>Orders<span class="badge badge-primary badge-pill">6</span></a><a class="list-group-item" href="account-profile.html"><i class="icon-head"></i>Profile</a><a class="list-group-item" href="account-address.html"><i class="icon-map"></i>Addresses</a><a class="list-group-item with-badge active" href="account-wishlist.html"><i class="icon-heart"></i>Wishlist<span class="badge badge-primary badge-pill">3</span></a><a class="list-group-item with-badge" href="account-tickets.html"><i class="icon-tag"></i>My Tickets<span class="badge badge-primary badge-pill">4</span></a></nav>
+            <nav class="list-group"><a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>Orders<span class="badge badge-primary badge-pill">6</span></a><a class="list-group-item" href="member_profile_form"><i class="icon-head"></i>Profile</a><a class="list-group-item" href="member_address_detail"><i class="icon-map"></i>Addresses</a><a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>Wishlist<span class="badge badge-primary badge-pill">3</span></a><a class="list-group-item with-badge active" href="member_question_list"><i class="icon-tag"></i>My Q&As<span class="badge badge-primary badge-pill">4</span></a></nav>
           </div>
           <div class="col-lg-8">
             <div class="padding-top-2x mt-2 hidden-lg-up"></div>
@@ -53,10 +53,10 @@
                 <tbody>
                   <tr>
                     <td>
-                      <div class="product-item"><a class="product-thumb" href="shop-single.html"><img src="img/shop/cart/01.jpg" alt="Product"></a>
+                      <div class="product-item"><a class="product-thumb" href="shop_product_detail?product_no= ${wishList.product.product_no}"><img src="img/shop/cart/01.jpg" alt="Product"></a>
                         <div class="product-info">
-                          <h4 class="product-title"><a href="shop-single.html">Unionbay Park</a></h4>
-                          <div class="text-lg text-medium text-muted">$43.90</div>
+                          <h4 class="product-title"><a href="shop_product_detail?product_no= ${wishList.product.product_no}">${wishList.product.product_name}</a></h4>
+                          <div class="text-lg text-medium text-muted">${wishList.product.product_price}</div>
                           <div>Availability:
                             <div class="d-inline text-success">In Stock</div>
                           </div>
@@ -67,10 +67,10 @@
                   </tr>
                   <tr>
                     <td>
-                      <div class="product-item"><a class="product-thumb" href="shop-single.html"><img src="img/shop/cart/02.jpg" alt="Product"></a>
+                      <div class="product-item"><a class="product-thumb" href="shop_product_detail?product_no= ${wishList.product.product_no}"><img src="img/shop/cart/02.jpg" alt="Product"></a>
                         <div class="product-info">
-                          <h4 class="product-title"><a href="shop-single.html">Daily Fabric Cap</a></h4>
-                          <div class="text-lg text-medium text-muted">$24.70</div>
+                          <h4 class="product-title"><a href="shop_product_detail?product_no= ${wishList.product.product_no}">${wishList.product.product_name}</a></h4>
+                          <div class="text-lg text-medium text-muted">${wishList.product.product_price}</div>
                           <div>Availability:
                             <div class="d-inline text-warning">2 - 3 Weeks</div>
                           </div>
@@ -81,10 +81,10 @@
                   </tr>
                   <tr>
                     <td>
-                      <div class="product-item"><a class="product-thumb" href="shop-single.html"><img src="img/shop/cart/03.jpg" alt="Product"></a>
+                      <div class="product-item"><a class="product-thumb" href="shop_product_detail?product_no= ${wishList.product.product_no}"><img src="img/shop/cart/03.jpg" alt="Product"></a>
                         <div class="product-info">
-                          <h4 class="product-title"><a href="shop-single.html">Cole Haan Crossbody</a></h4>
-                          <div class="text-lg text-medium text-muted">$200.00</div>
+                          <h4 class="product-title"><a href="shop_product_detail?product_no= ${wishList.product.product_no}">${wishList.product.product_name}</a></h4>
+                          <div class="text-lg text-medium text-muted">${wishList.product.product_price}</div>
                           <div>Availability:
                             <div class="d-inline text-success">In Stock</div>
                           </div>
