@@ -200,7 +200,7 @@
           </li>
           <li class="has-children active"><span><a href="account-orders.html"><span>Account</span></a><span class="sub-menu-toggle"></span></span>
             <ul class="offcanvas-submenu">
-                <li><a href="account-login.html">Login / Register</a></li>
+                <li><a href="member_login_register_form">Login / Register</a></li>
                 <li><a href="account-password-recovery.html">Password Recovery</a></li>
                 <li class="active"><a href="account-orders.html">Orders List</a></li>
                 <li><a href="account-wishlist.html">Wishlist</a></li>
@@ -398,13 +398,13 @@
               </li>
             </ul>
           </li>
-          <li class="active"><a href="account-orders.html"><span>Account</span></a>
+          <li class="active"><a href="member_profile_form"><span>Account</span></a>
             <ul class="sub-menu">
-                <li><a href="account-login.html">Login / Register</a></li>
+                <li><a href="member_login_register_form">Login / Register</a></li>
                 <li><a href="account-password-recovery.html">Password Recovery</a></li>
                 <li class="active"><a href="account-orders.html">Orders List</a></li>
                 <li><a href="account-wishlist.html">Wishlist</a></li>
-                <li><a href="account-profile.html">Profile Page</a></li>
+                <li><a href="member_profile_form">Profile Page</a></li>
                 <li><a href="account-address.html">Contact / Shipping Address</a></li>
                 <li><a href="account-tickets.html">My Tickets</a></li>
                 <li><a href="account-single-ticket.html">Single Ticket</a></li>

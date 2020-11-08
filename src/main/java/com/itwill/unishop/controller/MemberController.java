@@ -6,6 +6,7 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -51,7 +52,7 @@ public class MemberController {
 		return "member_login_register_form"; 
 	}
 	@RequestMapping(value = "/member_login_action", method = RequestMethod.POST)
-	public String member_login_action_POST(Model model,HttpSession session,@RequestParam String member_id, @RequestParam String member_password) {
+	public String member_login_action_POST(Model model,HttpSession session, @RequestParam String member_id, @RequestParam String member_password) {
 		String forwardPath = "";
 		try {
 			Member loginMember=memberService.loginMember(member_id, member_password);
