@@ -309,7 +309,7 @@
         <div class="inner">
           <!-- Off-Canvas Toggle (#shop-categories)--><a class="offcanvas-toggle cats-toggle" href="#shop-categories" data-toggle="offcanvas"></a>
           <!-- Off-Canvas Toggle (#mobile-menu)--><a class="offcanvas-toggle menu-toggle" href="#mobile-menu" data-toggle="offcanvas"></a>
-          <!-- Site Logo--><a class="site-logo" href="index.html"><img src="img/logo/logo.png" alt="Unishop"></a>
+          <!-- Site Logo--><a class="site-logo" href="unishop_main"><img src="img/logo/logo.png" alt="Unishop"></a>
         </div>
       </div>
       <!-- Main Navigation-->
@@ -327,7 +327,7 @@
                   <h6 class="mt-3">Dark Header</h6></a></li>
             </ul>
           </li>
-          <li><a href="shop-grid-ls.html"><span>Shop</span></a>
+          <li><a href="shop_main"><span>Shop</span></a>
             <ul class="sub-menu">
                 <li><a href="shop-categories.html">Shop Categories</a></li>
               <li class="has-children"><a href="shop-grid-ls.html"><span>Shop Grid</span></a>
@@ -398,13 +398,13 @@
               </li>
             </ul>
           </li>
-          <li class="active"><a href="account-orders.html"><span>Account</span></a>
+          <li class="active"><a href="member_profile_form"><span>Account</span></a>
             <ul class="sub-menu">
-                <li><a href="account-login.html">Login / Register</a></li>
+                <li><a href="member_login_register_form">Login / Register</a></li>
                 <li><a href="account-password-recovery.html">Password Recovery</a></li>
                 <li class="active"><a href="account-orders.html">Orders List</a></li>
                 <li><a href="account-wishlist.html">Wishlist</a></li>
-                <li><a href="account-profile.html">Profile Page</a></li>
+                <li><a href="member_profile_form">Profile Page</a></li>
                 <li><a href="account-address.html">Contact / Shipping Address</a></li>
                 <li><a href="account-tickets.html">My Tickets</a></li>
                 <li><a href="account-single-ticket.html">Single Ticket</a></li>
