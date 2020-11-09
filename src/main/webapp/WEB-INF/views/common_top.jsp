@@ -198,17 +198,24 @@
               </li>
             </ul>
           </li>
-          <li class="has-children active"><span><a href="account-orders.html"><span>Account</span></a><span class="sub-menu-toggle"></span></span>
+          <li class="has-children active"><span><a href="member_profile_form"><span>Account</span></a><span class="sub-menu-toggle"></span></span>
             <ul class="offcanvas-submenu">
                 <li><a href="member_login_register_form">Login / Register</a></li>
                 <li><a href="account-password-recovery.html">Password Recovery</a></li>
-                <li class="active"><a href="account-orders.html">Orders List</a></li>
+
+                <li class="active"><a href="member_jumun_list">Orders List</a></li>
                 <li><a href="member_wishlist_detail">Wishlist</a></li>
-                <li><a href="account-profile.html">Profile Page</a></li>
-                <li><a href="account-address.html">Contact / Shipping Address</a></li>
+                <li><a href="member_profile_form">Profile Page</a></li>
+                <li><a href="member_address_detail">Contact / Shipping Address</a></li>
+
                 <li><a href="account-open-ticket.html">Open Ticket</a></li>
+
                 <li><a href="member_question_list">질문내역</a></li>
                 <li><a href="member_question_detail">질문보기</a></li>
+
+                <li><a href="member_qna_list">My Tickets</a></li>
+                <li><a href="member_question_detail">Single Ticket</a></li>
+
             </ul>
           </li>
           <li class="has-children"><span><a href="blog-rs.html"><span>Blog</span></a><span class="sub-menu-toggle"></span></span>
@@ -405,9 +412,15 @@
                 <li class="active"><a href="account-orders.html">Orders List</a></li>
                 <li><a href="member_wishlist_detail">Wishlist</a></li>
                 <li><a href="member_profile_form">Profile Page</a></li>
+<<<<<<< HEAD
                 <li><a href="account-address.html">Contact / Shipping Address</a></li>
                 <li><a href="member_question_list">My Tickets</a></li>
                 <li><a href="member_question_detail">Single Ticket</a></li>
+=======
+                <li><a href="member_address_detail">Contact / Shipping Address</a></li>
+                <li><a href="account-tickets.html">My Tickets</a></li>
+                <li><a href="account-single-ticket.html">Single Ticket</a></li>
+>>>>>>> refs/heads/yoonho
             </ul>
           </li>
           <li><a href="blog-rs.html"><span>Blog</span></a>

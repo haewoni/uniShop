@@ -11,10 +11,10 @@
           </div>
           <div class="column">
             <ul class="breadcrumbs">
-              <li><a href="index.html">Home</a>
+              <li><a href="index">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li><a href="account-orders.html">Account</a>
+              <li><a href="member_profile_form">Account</a>
               </li>
               <li class="separator">&nbsp;</li>
               <li>Contact Address</li>
@@ -33,11 +33,11 @@
               <div class="user-info">
                 <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="img/account/user-ava.jpg" alt="User"></div>
                 <div class="user-data">
-                  <h4>Daniel Adams</h4><span>Joined February 06, 2017</span>
+                  <h4>${loginMember.member_name}</h4><span>Joined February 06, 2017</span>
                 </div>
               </div>
             </aside>
-            <nav class="list-group"><a class="list-group-item with-badge" href="account-orders.html"><i class="icon-bag"></i>Orders<span class="badge badge-primary badge-pill">6</span></a><a class="list-group-item" href="account-profile.html"><i class="icon-head"></i>Profile</a><a class="list-group-item active" href="account-address.html"><i class="icon-map"></i>Addresses</a><a class="list-group-item with-badge" href="account-wishlist.html"><i class="icon-heart"></i>Wishlist<span class="badge badge-primary badge-pill">3</span></a><a class="list-group-item with-badge" href="account-tickets.html"><i class="icon-tag"></i>My Tickets<span class="badge badge-primary badge-pill">4</span></a></nav>
+            <nav class="list-group"><a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>주문 목록<span class="badge badge-primary badge-pill">6</span></a><a class="list-group-item" href="member_profile_form"><i class="icon-head"></i>내 정보</a><a class="list-group-item active" href="member_address_detail"><i class="icon-map"></i>내 주소</a><a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>찜 목록<span class="badge badge-primary badge-pill">3</span></a><a class="list-group-item with-badge" href="member_qna_list"><i class="icon-tag"></i>질문 목록<span class="badge badge-primary badge-pill">4</span></a></nav>
           </div>
           <div class="col-lg-8">
             <div class="padding-top-2x mt-2 hidden-lg-up"></div>
@@ -46,8 +46,8 @@
             <form class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="account-company">Company</label>
-                  <input class="form-control" type="text" id="account-company" value="Bets Company Ltd.">
+                  <label for="account-company">Name</label>
+                  <input class="form-control" type="text" id="account-company" value="Home">
                 </div>
               </div>
               <div class="col-md-6">
@@ -55,12 +55,12 @@
                   <label for="account-country">Country</label>
                   <select class="form-control" id="account-country">
                     <option>Choose country</option>
-                    <option>Australia</option>
+                    <option>United State</option>
                     <option>Canada</option>
                     <option>France</option>
                     <option>Germany</option>
                     <option>Switzerland</option>
-                    <option selected>United States</option>
+                    <option selected>South Korea</option>
                   </select>
                 </div>
               </div>
@@ -72,7 +72,7 @@
                     <option>Amsterdam</option>
                     <option>Berlin</option>
                     <option>Geneve</option>
-                    <option selected>New York</option>
+                    <option selected>Seoul</option>
                     <option>Paris</option>
                   </select>
                 </div>
