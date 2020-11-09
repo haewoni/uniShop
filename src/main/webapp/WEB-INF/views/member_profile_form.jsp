@@ -11,10 +11,10 @@
           </div>
           <div class="column">
             <ul class="breadcrumbs">
-              <li><a href="index.html">Home</a>
+              <li><a href="index">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li><a href="account-orders.html">Account</a>
+              <li><a href="member_profile_form">Account</a>
               </li>
               <li class="separator">&nbsp;</li>
               <li>My Profile</li>
@@ -33,48 +33,52 @@
               <div class="user-info">
                 <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="img/account/user-ava.jpg" alt="User"></div>
                 <div class="user-data">
-                  <h4>Daniel Adams</h4><span>Joined February 06, 2017</span>
+                  <h4>${loginMember.member_name}</h4><span>Joined February 06, 2017</span>
                 </div>
               </div>
             </aside>
-            <nav class="list-group"><a class="list-group-item with-badge" href="account-orders.html"><i class="icon-bag"></i>Orders<span class="badge badge-primary badge-pill">6</span></a><a class="list-group-item active" href="account-profile.html"><i class="icon-head"></i>Profile</a><a class="list-group-item" href="account-address.html"><i class="icon-map"></i>Addresses</a><a class="list-group-item with-badge" href="account-wishlist.html"><i class="icon-heart"></i>Wishlist<span class="badge badge-primary badge-pill">3</span></a><a class="list-group-item with-badge" href="account-tickets.html"><i class="icon-tag"></i>My Tickets<span class="badge badge-primary badge-pill">4</span></a></nav>
-          </div>
+			<nav class="list-group">
+				<a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>주문 목록<span class="badge badge-primary badge-pill">6</span></a>
+				<a class="list-group-item" href="member_profile_form"><i class="icon-head"></i>내 정보</a>
+				<a class="list-group-item active" href="member_address_detail"><i class="icon-map"></i>내 주소</a>
+				<a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>찜 목록<span class="badge badge-primary badge-pill">3</span></a>
+				<a class="list-group-item with-badge" href="member_question_list"><i class="icon-tag"></i>질문 목록<span class="badge badge-primary badge-pill">4</span></a></nav>          </div>
           <div class="col-lg-8">
             <div class="padding-top-2x mt-2 hidden-lg-up"></div>
             <form class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="account-fn">First Name</label>
-                  <input class="form-control" type="text" id="account-fn" value="Daniel" required>
+                  <label for="account-fn">이름</label>
+                  <input class="form-control" type="text" id="account-fn" value="${loginMember.member_name.charAt(1)}" required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="account-ln">Last Name</label>
-                  <input class="form-control" type="text" id="account-ln" value="Adams" required>
+                  <label for="account-ln">성</label>
+                  <input class="form-control" type="text" id="account-ln" value="${loginMember.member_name.charAt(0)}" required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="account-email">E-mail Address</label>
-                  <input class="form-control" type="email" id="account-email" value="daniel.adams@mail.com" disabled>
+                  <label for="account-email">이메일</label>
+                  <input class="form-control" type="email" id="account-email" value="${loginMember.member_email}" disabled>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="account-phone">Phone Number</label>
-                  <input class="form-control" type="text" id="account-phone" value="+7(805) 348 95 72" required>
+                  <label for="account-phone">전화번호</label>
+                  <input class="form-control" type="text" id="account-phone" value="${loginMember.member_phone}" required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="account-pass">New Password</label>
+                  <label for="account-pass">새로운 비밀번호</label>
                   <input class="form-control" type="password" id="account-pass">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="account-confirm-pass">Confirm Password</label>
+                  <label for="account-confirm-pass">비밀번호 재입력</label>
                   <input class="form-control" type="password" id="account-confirm-pass">
                 </div>
               </div>
