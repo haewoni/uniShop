@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 	<jsp:include page="common_top.jsp"/>
     <!-- Off-Canvas Wrapper-->
     <div class="offcanvas-wrapper">
@@ -7,7 +8,7 @@
       <div class="page-title">
         <div class="container">
           <div class="column">
-            <h1>Contact / Shipping Address</h1>
+            <h1>회원주소</h1>
           </div>
           <div class="column">
             <ul class="breadcrumbs">
@@ -17,7 +18,7 @@
               <li><a href="member_profile_form">Account</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li>Contact Address</li>
+              <li>회원주소</li>
             </ul>
           </div>
         </div>
@@ -38,26 +39,26 @@
               </div>
             </aside>
 			<nav class="list-group">
-				<a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>주문 목록<span class="badge badge-primary badge-pill">6</span></a>
-				<a class="list-group-item active" href="member_profile_form"><i class="icon-head"></i>내 정보</a>
-				<a class="list-group-item" href="member_address_detail"><i class="icon-map"></i>내 주소</a>
-				<a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>찜 목록<span class="badge badge-primary badge-pill">3</span></a>
-				<a class="list-group-item with-badge" href="member_question_list"><i class="icon-tag"></i>질문 목록<span class="badge badge-primary badge-pill">4</span></a></nav>
+				<a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>주문 목록</a>
+				<a class="list-group-item" href="member_profile_form"><i class="icon-head"></i>내 정보</a>
+				<a class="list-group-item active" href="member_address_detail"><i class="icon-map"></i>내 주소</a>
+				<a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>찜 목록</a>
+				<a class="list-group-item with-badge" href="member_question_list"><i class="icon-tag"></i>질문 목록</a></nav>
 			</div>
           <div class="col-lg-8">
             <div class="padding-top-2x mt-2 hidden-lg-up"></div>
             <h4>Contact Address</h4>
             <hr class="padding-bottom-1x">
-            <form class="row">
+            <form class="row" action="member_address_update_action" method="post">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="account-company">Name</label>
-                  <input class="form-control" type="text" id="account-company" value="Home">
+                  <label for="account-company">주소명</label>
+                  <input class="form-control" type="text" id="account-company" value="${loginMember.member_address_name }">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="account-country">Country</label>
+                  <label for="account-country">국가</label>
                   <select class="form-control" id="account-country">
                     <option>Choose country</option>
                     <option>United State</option>
@@ -65,39 +66,39 @@
                     <option>France</option>
                     <option>Germany</option>
                     <option>Switzerland</option>
-                    <option selected>South Korea</option>
+                    <option selected>${loginMember.member_address_country}</option>
                   </select>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="account-city">City</label>
+                  <label for="account-city">도시</label>
                   <select class="form-control" id="account-city">
                     <option>Choose city</option>
                     <option>Amsterdam</option>
                     <option>Berlin</option>
                     <option>Geneve</option>
-                    <option selected>Seoul</option>
+                    <option selected>${loginMember.member_address_city}</option>
                     <option>Paris</option>
                   </select>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="account-zip">ZIP Code</label>
-                  <input class="form-control" type="text" id="account-zip" required>
+                  <label for="account-zip">우편번호</label>
+                  <input class="form-control" type="text" id="account-zip" value="${loginMember.member_address_zipcode}" required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="account-address1">Address 1</label>
-                  <input class="form-control" type="text" id="account-address1" required>
+                  <label for="account-address1">주소1</label>
+                  <input class="form-control" type="text" id="account-address1" value="${loginMember.member_address1}" required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="account-address2">Address 2</label>
-                  <input class="form-control" type="text" id="account-address2">
+                  <label for="account-address2">상세주소</label>
+                  <input class="form-control" type="text" id="account-address2" value="${loginMember.member_address2}" required>
                 </div>
               </div>
               <div class="col-12 padding-top-1x">

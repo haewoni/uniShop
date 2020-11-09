@@ -39,11 +39,11 @@
               </div>
             </aside>
 			<nav class="list-group">
-				<a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>주문 목록<span class="badge badge-primary badge-pill">6</span></a>
+				<a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>주문 목록</a>
 				<a class="list-group-item active" href="member_profile_form"><i class="icon-head"></i>내 정보</a>
 				<a class="list-group-item" href="member_address_detail"><i class="icon-map"></i>내 주소</a>
-				<a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>찜 목록<span class="badge badge-primary badge-pill">3</span></a>
-				<a class="list-group-item with-badge" href="member_question_list"><i class="icon-tag"></i>질문 목록<span class="badge badge-primary badge-pill">4</span></a></nav>
+				<a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>찜 목록</a>
+				<a class="list-group-item with-badge" href="member_question_list"><i class="icon-tag"></i>질문 목록</a></nav>
 			 </div>
 			<div class="col-lg-8">
             <div class="padding-top-2x mt-2 hidden-lg-up"></div>
@@ -63,7 +63,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="account-email">이메일</label>
-                  <input class="form-control" type="email" id="account-email" value="${loginMember.member_email}" required>
+                  <input class="form-control" type="text" id="account-email" value="${loginMember.member_email}" required>
                 </div>
               </div>
               <div class="col-md-6">
@@ -75,13 +75,13 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="account-pass">새로운 비밀번호</label>
-                  <input class="form-control" type="password" id="account-pass">
+                  <input class="form-control" type="text" id="account-pass">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="account-confirm-pass">비밀번호 재입력</label>
-                  <input class="form-control" type="password" id="account-confirm-pass">
+                  <input class="form-control" type="text" id="account-confirm-pass">
                 </div>
               </div>
               <div class="col-12">

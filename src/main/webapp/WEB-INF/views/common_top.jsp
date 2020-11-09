@@ -501,7 +501,7 @@
         <div class="inner">
           <div class="tools">
             <div class="search"><i class="icon-search"></i></div>
-            <div class="account"><a href="account-orders.html"></a><i class="icon-head"></i>
+            <div class="account"><a href="member_profile_form"></a><i class="icon-head"></i>
               <ul class="toolbar-dropdown">
                 <li class="sub-menu-user">
                   <div class="user-ava"><img src="img/account/user-ava-sm.jpg" alt="Daniel Adams">
@@ -514,7 +514,7 @@
                   <li class="active"><a href="member_jumun_list">Order List</a></li>
                   <li><a href="member_wishlist_detail">Wishlist</a></li>
                 <li class="sub-menu-separator"></li>
-                <li><a href="#"> <i class="icon-unlock"></i>Logout</a></li>
+                <li><a href="member_logout_action"> <i class="icon-unlock"></i>Logout</a></li>
               </ul>
             </div>
             <div class="cart"><a href="cart_list"></a><i class="icon-bag"></i><span class="count">3</span><span class="subtotal">$289.68</span>
