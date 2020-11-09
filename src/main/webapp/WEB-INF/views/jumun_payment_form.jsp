@@ -66,7 +66,7 @@
               <div class="column"><a class="btn btn-primary" href="jumun_review_form.html"><span class="hidden-xs-down">계속&nbsp;</span><i class="icon-arrow-right"></i></a></div>
             </div>
           </div>
-          <!-- Sidebar          -->
+       <!-- Sidebar          -->
           <div class="col-xl-3 col-lg-4">
             <aside class="sidebar">
               <div class="padding-top-2x hidden-lg-up"></div>
@@ -85,6 +85,7 @@
                   <tr>
                     <td>총 금액:</td>
                     <td class="text-lg text-medium">${cart_subtotal}</td>
+                  </tr>
                 </table>
               </section>
             </aside>
