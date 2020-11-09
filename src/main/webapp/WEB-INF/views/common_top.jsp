@@ -405,9 +405,15 @@
                 <li class="active"><a href="account-orders.html">Orders List</a></li>
                 <li><a href="member_wishlist_detail">Wishlist</a></li>
                 <li><a href="member_profile_form">Profile Page</a></li>
-                <li><a href="account-address.html">Contact / Shipping Address</a></li>
+
+
+                <li><a href="member_address_detail">Contact / Shipping Address</a></li>
+
                 <li><a href="member_question_list">My Tickets</a></li>
                 <li><a href="member_question_detail">Single Ticket</a></li>
+
+
+
             </ul>
           </li>
           <li><a href="blog-rs.html"><span>Blog</span></a>
