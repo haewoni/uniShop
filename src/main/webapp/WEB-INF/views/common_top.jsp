@@ -106,11 +106,11 @@
         <div class="user-ava"><img src="img/account/user-ava-md.jpg" alt="Daniel Adams">
         </div>
         <div class="user-info">
-          <h6 class="user-name">Daniel Adams</h6><span class="text-sm text-white opacity-60">290 Reward points</span>
+          <h6 class="user-name">${loginMember.member_name}</h6><span class="text-sm text-white opacity-60"></span>
         </div></a>
       <nav class="offcanvas-menu">
         <ul class="menu">
-          <li class="has-children"><span><a href="index.html"><span>Home</span></a><span class="sub-menu-toggle"></span></span>
+          <li class="has-children"><span><a href="unishop_main"><span>Home</span></a><span class="sub-menu-toggle"></span></span>
             <ul class="offcanvas-submenu">
                 <li><a href="index.html">Featured Products Slider</a></li>
                 <li><a href="home-featured-categories.html">Featured Categories</a></li>
@@ -118,7 +118,7 @@
                 <li><a href="home-dark-header.html">Dark Header</a></li>
             </ul>
           </li>
-          <li class="has-children"><span><a href="shop-grid-ls.html"><span>Shop</span></a><span class="sub-menu-toggle"></span></span>
+          <li class="has-children"><span><a href="shop_main"><span>Shop</span></a><span class="sub-menu-toggle"></span></span>
             <ul class="offcanvas-submenu">
                 <li><a href="shop-categories.html">Shop Categories</a></li>
               <li class="has-children"><span><a href="shop-grid-ls.html"><span>Shop Grid</span></a><span class="sub-menu-toggle"></span></span>
@@ -136,11 +136,11 @@
                 </ul>
               </li>
                 <li><a href="shop-single.html">Single Product</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="cart_list">Cart</a></li>
+                <li><a href="jumun_address_form">Checkout</a></li>
             </ul>
           </li>
-          <li class="has-children"><span><a href="#">Categories</a><span class="sub-menu-toggle"></span></span>
+          <li class="has-children"><span><a href="#">카테고리</a><span class="sub-menu-toggle"></span></span>
             <ul class="offcanvas-submenu">
               <li class="has-children"><span><a href="#">Men's Shoes</a><span class="sub-menu-toggle"></span></span>
                 <ul class="offcanvas-submenu">
@@ -198,24 +198,17 @@
               </li>
             </ul>
           </li>
-          <li class="has-children active"><span><a href="member_profile_form"><span>Account</span></a><span class="sub-menu-toggle"></span></span>
+          <li class="has-children active"><span><a href="account-orders.html"><span>Account</span></a><span class="sub-menu-toggle"></span></span>
             <ul class="offcanvas-submenu">
                 <li><a href="member_login_register_form">Login / Register</a></li>
                 <li><a href="account-password-recovery.html">Password Recovery</a></li>
-
                 <li class="active"><a href="member_jumun_list">Orders List</a></li>
                 <li><a href="member_wishlist_detail">Wishlist</a></li>
                 <li><a href="member_profile_form">Profile Page</a></li>
                 <li><a href="member_address_detail">Contact / Shipping Address</a></li>
-
-                <li><a href="account-open-ticket.html">Open Ticket</a></li>
-
+                <li><a href="account-open-ticket.html">Q&A</a></li>
                 <li><a href="member_question_list">질문내역</a></li>
                 <li><a href="member_question_detail">질문보기</a></li>
-
-                <li><a href="member_qna_list">My Tickets</a></li>
-                <li><a href="member_question_detail">Single Ticket</a></li>
-
             </ul>
           </li>
           <li class="has-children"><span><a href="blog-rs.html"><span>Blog</span></a><span class="sub-menu-toggle"></span></span>
@@ -322,7 +315,7 @@
       <!-- Main Navigation-->
       <nav class="site-menu">
         <ul>
-          <li class="has-megamenu"><a href="index.html"><span>Home</span></a>
+          <li class="has-megamenu"><a href="unishop_main"><span>Home</span></a>
             <ul class="mega-menu">
               <li><a class="d-block img-thumbnail text-center navi-link" href="index.html"><img alt="Featured Products Slider" src="img/mega-menu-home/01.jpg">
                   <h6 class="mt-3">Featured Products Slider</h6></a></li>
@@ -412,15 +405,9 @@
                 <li class="active"><a href="account-orders.html">Orders List</a></li>
                 <li><a href="member_wishlist_detail">Wishlist</a></li>
                 <li><a href="member_profile_form">Profile Page</a></li>
-<<<<<<< HEAD
                 <li><a href="account-address.html">Contact / Shipping Address</a></li>
                 <li><a href="member_question_list">My Tickets</a></li>
                 <li><a href="member_question_detail">Single Ticket</a></li>
-=======
-                <li><a href="member_address_detail">Contact / Shipping Address</a></li>
-                <li><a href="account-tickets.html">My Tickets</a></li>
-                <li><a href="account-single-ticket.html">Single Ticket</a></li>
->>>>>>> refs/heads/yoonho
             </ul>
           </li>
           <li><a href="blog-rs.html"><span>Blog</span></a>
@@ -514,34 +501,29 @@
                   <div class="user-ava"><img src="img/account/user-ava-sm.jpg" alt="Daniel Adams">
                   </div>
                   <div class="user-info">
-                    <h6 class="user-name">Daniel Adams</h6><span class="text-xs text-muted">290 Reward points</span>
+                    <h6 class="user-name">${loginMember.member_name}</h6><span class="text-xs text-muted"></span>
                   </div>
                 </li>
-                  <li><a href="account-profile.html">My Profile</a></li>
-                  <li class="active"><a href="account-orders.html">Orders List</a></li>
+                  <li><a href="member_profile_form">My Profile</a></li>
+                  <li class="active"><a href="member_jumun_list">Order List</a></li>
                   <li><a href="member_wishlist_detail">Wishlist</a></li>
                 <li class="sub-menu-separator"></li>
                 <li><a href="#"> <i class="icon-unlock"></i>Logout</a></li>
               </ul>
             </div>
-            <div class="cart"><a href="cart.html"></a><i class="icon-bag"></i><span class="count">3</span><span class="subtotal">$289.68</span>
+            <div class="cart"><a href="cart_list"></a><i class="icon-bag"></i><span class="count">3</span><span class="subtotal">$289.68</span>
               <div class="toolbar-dropdown">
                 <div class="dropdown-product-item"><span class="dropdown-product-remove"><i class="icon-cross"></i></span><a class="dropdown-product-thumb" href="shop-single.html"><img src="img/cart-dropdown/01.jpg" alt="Product"></a>
                   <div class="dropdown-product-info"><a class="dropdown-product-title" href="shop-single.html">Unionbay Park</a><span class="dropdown-product-details">1 x $43.90</span></div>
                 </div>
-                <div class="dropdown-product-item"><span class="dropdown-product-remove"><i class="icon-cross"></i></span><a class="dropdown-product-thumb" href="shop-single.html"><img src="img/cart-dropdown/02.jpg" alt="Product"></a>
-                  <div class="dropdown-product-info"><a class="dropdown-product-title" href="shop-single.html">Daily Fabric Cap</a><span class="dropdown-product-details">2 x $24.89</span></div>
-                </div>
-                <div class="dropdown-product-item"><span class="dropdown-product-remove"><i class="icon-cross"></i></span><a class="dropdown-product-thumb" href="shop-single.html"><img src="img/cart-dropdown/03.jpg" alt="Product"></a>
-                  <div class="dropdown-product-info"><a class="dropdown-product-title" href="shop-single.html">Haan Crossbody</a><span class="dropdown-product-details">1 x $200.00</span></div>
-                </div>
+             
                 <div class="toolbar-dropdown-group">
                   <div class="column"><span class="text-lg">Total:</span></div>
                   <div class="column text-right"><span class="text-lg text-medium">$289.68&nbsp;</span></div>
                 </div>
                 <div class="toolbar-dropdown-group">
-                  <div class="column"><a class="btn btn-sm btn-block btn-secondary" href="cart.html">View Cart</a></div>
-                  <div class="column"><a class="btn btn-sm btn-block btn-success" href="checkout-address.html">Checkout</a></div>
+                  <div class="column"><a class="btn btn-sm btn-block btn-secondary" href="cart_list">View Cart</a></div>
+                  <div class="column"><a class="btn btn-sm btn-block btn-success" href="jumun_address_form">Checkout</a></div>
                 </div>
               </div>
             </div>
