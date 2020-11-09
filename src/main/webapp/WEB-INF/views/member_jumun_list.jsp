@@ -8,7 +8,7 @@
         <div class="modal-content">
           <div class="modal-header">
           
-            <h4 class="modal-title">Order No  - 34VB5540K83</h4>
+            <h4 class="modal-title">Order No  - ${jumun.jumun_no}</h4>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
           <div class="modal-body">
@@ -21,16 +21,20 @@
                   </tr>
                 </thead>
                 <tbody>
+                <c:forEach items="${jumunList}" var="jumun">
+                 <c:forEach items="${jumun.jumun_DetailList}" var="jumun_Detail">
                   <tr>
                     <td>
-                      <div class="product-item"><a class="product-thumb" href="shop_product_detail?${jumunList.jumun_detail.product_no}"><img src="img/shop/cart/03.jpg" alt="Product"></a>
+                      <div class="product-item"><a class="product-thumb" href="shop_product_detail?${jumun_Detail.product_no}"><img src="img/shop/cart/03.jpg" alt="Product"></a>
                         <div class="product-info">
-                          <h4 class="product-title"><a href="shop_product_detail?${jumunList.jumun_detail.product_no}">Cole Haan Crossbody<small>x 1</small></a></h4><span><em>Size:</em> -</span><span><em>Color:</em> Turquoise</span>
+                          <h4 class="product-title"><a href="shop_product_detail?${jumun_Detail.product_no}">${jumun_Detail.product_name}<small>X${jumun_Detail.jumun_d_product_qty}</small></a></h4><span><em>Size:</em>${jumun_Detail.jumun_d_product_size}</span>
                         </div>
                       </div>
                     </td>
-                    <td class="text-center text-lg text-medium">$200.00</td>
+                    <td class="text-center text-lg text-medium">${jumun_Detail.jumun_d_product_price}</td>
                   </tr>
+                  </c:forEach>
+                 </c:forEach>
                 </tbody>
               </table>
             </div>
@@ -77,61 +81,40 @@
               <div class="user-info">
                 <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="img/account/user-ava.jpg" alt="User"></div>
                 <div class="user-data">
-                  <h4>Daniel Adams</h4><span>Joined February 06, 2017</span>
+                  <h4>${loginMember.member_name}</h4><span>${loginMember.member_id}</span>
                 </div>
               </div>
             </aside>
-            <nav class="list-group"><a class="list-group-item with-badge active" href="account-orders.html"><i class="icon-bag"></i>Orders<span class="badge badge-primary badge-pill">6</span></a><a class="list-group-item" href="account-profile.html"><i class="icon-head"></i>Profile</a><a class="list-group-item" href="account-address.html"><i class="icon-map"></i>Addresses</a><a class="list-group-item with-badge" href="account-wishlist.html"><i class="icon-heart"></i>Wishlist<span class="badge badge-primary badge-pill">3</span></a><a class="list-group-item with-badge" href="account-tickets.html"><i class="icon-tag"></i>My Tickets<span class="badge badge-primary badge-pill">4</span></a></nav>
-          </div>
+			<nav class="list-group">
+				<a class="list-group-item with-badge active" href="member_jumun_list"><i class="icon-bag"></i>주문 목록</a>
+				<a class="list-group-item" href="member_profile_form"><i class="icon-head"></i>내 정보</a>
+				<a class="list-group-item" href="member_address_detail"><i class="icon-map"></i>내 주소</a>
+				<a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>찜 목록</a>
+				<a class="list-group-item with-badge" href="member_question_list"><i class="icon-tag"></i>질문 목록</a></nav>
+			</div>
           <div class="col-lg-8">
             <div class="padding-top-2x mt-2 hidden-lg-up"></div>
             <div class="table-responsive">
               <table class="table table-hover margin-bottom-none">
                 <thead>
                   <tr>
-                    <th>Order #</th>
-                    <th>Date Purchased</th>
+                    <th>주문 번호</th>
+                    <th>주문 날짜</th>
                     <th>Status</th>
                     <th>Total</th>
                   </tr>
                 </thead>
                 <tbody>
+                <c:forEach items="${jumunList}" var="jumun">
                   <tr>
-                    <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails">78A643CD409</a></td>
-                    <td>August 08, 2017</td>
-                    <td><span class="text-danger">Canceled</span></td>
-                    <td><span class="text-medium">$760.50</span></td>
+
+                    <td><a class="text-medium navi-link" href="?jumun_no=${jumun.jumun_no}" data-toggle="modal" data-target="#orderDetails">${jumun.jumun_no}</a></td>
+                    <td>${jumun.jumun_date}</td>
+                    <td><span class="text-danger">${jumun.jumun_status}</span></td>
+                    <td><span class="text-medium">${jumun.jumun_tot_price}</span></td>
+
                   </tr>
-                  <tr>
-                    <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails">34VB5540K83</a></td>
-                    <td>July 21, 2017</td>
-                    <td><span class="text-info">In Progress</span></td>
-                    <td><span class="text-medium">$315.20</span></td>
-                  </tr>
-                  <tr>
-                    <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails">112P45A90V2</a></td>
-                    <td>June 15, 2017</td>
-                    <td><span class="text-warning">Delayed</span></td>
-                    <td><span class="text-medium">$1,264.00</span></td>
-                  </tr>
-                  <tr>
-                    <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails">28BA67U0981</a></td>
-                    <td>May 19, 2017</td>
-                    <td><span class="text-success">Delivered</span></td>
-                    <td><span class="text-medium">$198.35</span></td>
-                  </tr>
-                  <tr>
-                    <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails">502TR872W2</a></td>
-                    <td>April 04, 2017</td>
-                    <td><span class="text-success">Delivered</span></td>
-                    <td><span class="text-medium">$2,133.90</span></td>
-                  </tr>
-                  <tr>
-                    <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails">47H76G09F33</a></td>
-                    <td>March 30, 2017</td>
-                    <td><span class="text-success">Delivered</span></td>
-                    <td><span class="text-medium">$86.40</span></td>
-                  </tr>
+                 </c:forEach>
                 </tbody>
               </table>
             </div>

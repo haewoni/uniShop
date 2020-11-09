@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 	<jsp:include page="common_top.jsp"/>
     <!-- Open Ticket Modal-->
     <form class="modal fade" method="post" id="openTicket" tabindex="-1">
@@ -93,11 +94,11 @@
               </div>
             </aside>
             <nav class="list-group">
-				<a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>주문 목록<span class="badge badge-primary badge-pill">6</span></a>
-				<a class="list-group-item active" href="member_profile_form"><i class="icon-head"></i>내 정보</a>
+				<a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>주문 목록</a>
+				<a class="list-group-item" href="member_profile_form"><i class="icon-head"></i>내 정보</a>
 				<a class="list-group-item" href="member_address_detail"><i class="icon-map"></i>내 주소</a>
-				<a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>찜 목록<span class="badge badge-primary badge-pill">3</span></a>
-				<a class="list-group-item with-badge" href="member_question_list"><i class="icon-tag"></i>질문 목록<span class="badge badge-primary badge-pill">4</span></a></nav>
+				<a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>찜 목록</a>
+				<a class="list-group-item with-badge active" href="member_question_list"><i class="icon-tag"></i>질문 목록</a></nav>
 			</div>
           <div class="col-lg-8">
             <div class="padding-top-2x mt-2 hidden-lg-up"></div>
@@ -105,48 +106,27 @@
               <table class="table table-hover margin-bottom-none">
                 <thead>
                   <tr>
-                    <th>Ticket Subject</th>
-                    <th>Date Submitted | Updated</th>
-                    <th>Type</th>
-                    <th>Priority</th>
-                    <th>Status</th>
+                    <th>제목</th>
+                    <th>질문 날짜</th>
+                    <th>카테고리</th>
+                    <th>상태</th>
                   </tr>
                 </thead>
                 <tbody>
+                 <c:forEach items="${questionList}" var="question">
                   <tr>
-                    <td><a class="text-medium navi-link" href="member_question_detail">My new ticket</a></td>
-                    <td>08/08/2017 | 08/14/2017</td>
-                    <td>Website problem</td>
-                    <td><span class="text-warning">High</span></td>
-                    <td><span class="text-primary">Open</span></td>
+                    <td><a class="text-medium navi-link" href="member_question_detail?question_no=${question.question_no}">${question.question_title}</a></td>
+                    <td>${question.question_date}</td>
+                    <td>${question.question_category}</td>
+                    <td><span class="text-muted">${question.question_status}</span></td>
                   </tr>
-                  <tr>
-                    <td><a class="text-medium navi-link" href="member_question_detail">Another ticket</a></td>
-                    <td>07/21/2017 | 07/23/2017</td>
-                    <td>Partner request</td>
-                    <td><span class="text-info">Medium</span></td>
-                    <td><span class="text-muted">Closed</span></td>
-                  </tr>
-                  <tr>
-                    <td><a class="text-medium navi-link" href="member_question_detail">Yet another ticket</a></td>
-                    <td>05/19/2017 | 05/20/2017</td>
-                    <td>Complaint</td>
-                    <td><span class="text-danger">Urgent</span></td>
-                    <td><span class="text-muted">Closed</span></td>
-                  </tr>
-                  <tr>
-                    <td><a class="text-medium navi-link" href="member_question_detail">My old ticket</a></td>
-                    <td>05/19/2017 | 05/20/2017</td>
-                    <td>Info inquiry</td>
-                    <td><span class="text-success">Low</span></td>
-                    <td><span class="text-muted">Closed</span></td>
-                  </tr>
+                 </c:forEach>
                 </tbody>
               </table>
             </div>
             <hr class="mb-4">
             <div class="text-right">
-              <button class="btn btn-primary margin-bottom-none" data-toggle="modal" data-target="#openTicket">Submit New Ticket</button>
+              <button class="btn btn-primary margin-bottom-none" data-toggle="modal" data-target="#openTicket">질문하기</button>
             </div>
           </div>
         </div>
