@@ -28,7 +28,8 @@
             	<a class="active" href="jumun_review_form">4. 주문확인</a>
             	<a href="jumun_payment_form"><span class="angle"></span>3. 결제정보</a>
             	<a href="jumun_delivery_form"><span class="angle"></span>2. 배송확인</a>
-            	<a href="jumun_address_form"><span class="angle"></span>1. 주소</a></div>
+            	<a href="jumun_address_form"><span class="angle"></span>1. 주소</a>
+            	</div>
            	<h4>주문 확인</h4>
             <hr class="padding-bottom-1x">
             <div class="table-responsive shopping-cart">
@@ -79,7 +80,7 @@
             </div>
             <div class="shopping-cart-footer">
               <div class="column"></div>
-              <div class="column text-lg">카트 합계: <span class="text-medium">$289.68</span></div>
+              <div class="column text-lg">카트 합계: <span class="text-medium">${cart_subtotal}</span></div>
             </div>
             <div class="row padding-top-1x mt-3">
               <div class="col-sm-6">
