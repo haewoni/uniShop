@@ -35,7 +35,7 @@
             <div class="accordion" id="accordion" role="tablist">
               <div class="card">
                 <div class="card-header" role="tab">
-                  <h6><a href="#card" data-toggle="collapse"><i class="icon-columns"></i>Pay with Credit Card</a></h6>
+                  <h6><a href="#card" data-toggle="collapse"><i class="icon-columns"></i>신용카드 결제</a></h6>
                 </div>
                 <div class="collapse show" id="card" data-parent="#accordion" role="tabpanel">
                   <div class="card-body">
@@ -43,16 +43,16 @@
                     <div class="card-wrapper"></div>
                     <form class="interactive-credit-card row">
                       <div class="form-group col-sm-6">
-                        <input class="form-control" type="text" name="number" placeholder="카드 번호" required>
+                        <input class="form-control" type="text" name="card_no"  placeholder="카드 번호" required>
                       </div>
                       <div class="form-group col-sm-6">
-                        <input class="form-control" type="text" name="name" placeholder="이름" required>
+                        <input class="form-control" type="text" name="card_member_name" placeholder="이름" required>
                       </div>
                       <div class="form-group col-sm-3">
-                        <input class="form-control" type="text" name="expiry" placeholder="MM/YY" required>
+                        <input class="form-control" type="text" name="card_expire_date" placeholder="MM/YY" required>
                       </div>
                       <div class="form-group col-sm-3">
-                        <input class="form-control" type="text" name="cvc" placeholder="CVC 번호" required>
+                        <input class="form-control" type="text" name="card_cvc" placeholder="CVC 번호" required>
                       </div>
                       <div class="col-sm-6">
                         <button class="btn btn-outline-primary btn-block margin-top-none" type="submit">계속</button>
