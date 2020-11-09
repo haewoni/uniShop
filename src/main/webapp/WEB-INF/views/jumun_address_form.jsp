@@ -24,19 +24,19 @@
         <div class="row">
           <!-- Checkout Adress-->
           <div class="col-xl-9 col-lg-8">
-            <div class="checkout-steps"><a href="checkout-review.html">4. Review</a><a href="checkout-payment.html"><span class="angle"></span>3. Payment</a><a href="checkout-shipping.html"><span class="angle"></span>2. Shipping</a><a class="active" href="checkout-address.html"><span class="angle"></span>1. Address</a></div>
+            <div class="checkout-steps"><a href="jumun_review_form">4. Review</a><a href="jumun_payment_form"><span class="angle"></span>3. Payment</a><a href="jumun_delivery_form"><span class="angle"></span>2. Shipping</a><a class="active" href="jumun_address_form"><span class="angle"></span>1. Address</a></div>
             <h4>Billing Address</h4>
             <hr class="padding-bottom-1x">
             <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label for="checkout-fn">First Name</label>
+                  <label for="checkout-fn">Name</label>
                   <input class="form-control" type="text" id="checkout-fn">
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label for="checkout-ln">Last Name</label>
+                  <label for="checkout-ln">Phone Number</label>
                   <input class="form-control" type="text" id="checkout-ln">
                 </div>
               </div>
@@ -44,21 +44,7 @@
             <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label for="checkout-email">E-mail Address</label>
-                  <input class="form-control" type="email" id="checkout-email">
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <label for="checkout-phone">Phone Number</label>
-                  <input class="form-control" type="text" id="checkout-phone">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <label for="checkout-company">Company</label>
+                  <label for="checkout-company">Address Name</label>
                   <input class="form-control" type="text" id="checkout-company">
                 </div>
               </div>
@@ -67,7 +53,7 @@
                   <label for="checkout-country">Country</label>
                   <select class="form-control" id="checkout-country">
                     <option>Choose country</option>
-                    <option>Australia</option>
+                    <option>South Korea</option>
                     <option>Canada</option>
                     <option>France</option>
                     <option>Germany</option>
@@ -83,11 +69,11 @@
                   <label for="checkout-city">City</label>
                   <select class="form-control" id="checkout-city">
                     <option>Choose city</option>
-                    <option>Amsterdam</option>
-                    <option>Berlin</option>
-                    <option>Geneve</option>
-                    <option>New York</option>
-                    <option>Paris</option>
+                    <option>Seoul</option>
+                    <option>Incheon</option>
+                    <option>Busan</option>
+                    <option>Iksan</option>
+                    <option>Daegu</option>
                   </select>
                 </div>
               </div>
@@ -140,10 +126,6 @@
                   <tr>
                     <td>Shipping:</td>
                     <td class="text-medium">$22.50</td>
-                  </tr>
-                  <tr>
-                    <td>Estimated tax:</td>
-                    <td class="text-medium">$3.42</td>
                   </tr>
                   <tr>
                     <td></td>
@@ -203,5 +185,6 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    
   </body>
 </html>
