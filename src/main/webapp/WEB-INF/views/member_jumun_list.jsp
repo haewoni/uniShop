@@ -23,26 +23,6 @@
                 <tbody>
                   <tr>
                     <td>
-                      <div class="product-item"><a class="product-thumb" href="shop_product_detail?${jumunList.jumun_detail.product_no}"><img src="img/shop/cart/01.jpg" alt="Product"></a>
-                        <div class="product-info">
-                          <h4 class="product-title"><a href="shop_product_detail?${jumunList.jumun_detail.product_no}">Unionbay Park<small>x 1</small></a></h4><span><em>Size:</em> 10.5</span><span><em>Color:</em> Dark Blue</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-center text-lg text-medium">$43.90</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="product-item"><a class="product-thumb" href="shop_product_detail?${jumunList.jumun_detail.product_no}"><img src="img/shop/cart/02.jpg" alt="Product"></a>
-                        <div class="product-info">
-                          <h4 class="product-title"><a href="shop_product_detail?${jumunList.jumun_detail.product_no}">Daily Fabric Cap<small>x 2</small></a></h4><span><em>Size:</em> XL</span><span><em>Color:</em> Black</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-center text-lg text-medium">$24.89</td>
-                  </tr>
-                  <tr>
-                    <td>
                       <div class="product-item"><a class="product-thumb" href="shop_product_detail?${jumunList.jumun_detail.product_no}"><img src="img/shop/cart/03.jpg" alt="Product"></a>
                         <div class="product-info">
                           <h4 class="product-title"><a href="shop_product_detail?${jumunList.jumun_detail.product_no}">Cole Haan Crossbody<small>x 1</small></a></h4><span><em>Size:</em> -</span><span><em>Color:</em> Turquoise</span>
@@ -97,14 +77,17 @@
               <div class="user-info">
                 <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="img/account/user-ava.jpg" alt="User"></div>
                 <div class="user-data">
-                  <h4>Daniel Adams</h4><span>Joined February 06, 2017</span>
+                  <h4>${loginMember.member_name}</h4><span>${loginMember.member_id}</span>
                 </div>
               </div>
             </aside>
-
-			<nav class="list-group"><a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>주문 목록<span class="badge badge-primary badge-pill">6</span></a><a class="list-group-item" href="member_profile_form"><i class="icon-head"></i>내 정보</a><a class="list-group-item active" href="member_address_detail"><i class="icon-map"></i>내 주소</a><a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>찜 목록<span class="badge badge-primary badge-pill">3</span></a><a class="list-group-item with-badge" href="member_qna_list"><i class="icon-tag"></i>질문 목록<span class="badge badge-primary badge-pill">4</span></a></nav>          </div>
-
-          </div>
+			<nav class="list-group">
+				<a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>주문 목록<span class="badge badge-primary badge-pill">6</span></a>
+				<a class="list-group-item active" href="member_profile_form"><i class="icon-head"></i>내 정보</a>
+				<a class="list-group-item" href="member_address_detail"><i class="icon-map"></i>내 주소</a>
+				<a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>찜 목록<span class="badge badge-primary badge-pill">3</span></a>
+				<a class="list-group-item with-badge" href="member_question_list"><i class="icon-tag"></i>질문 목록<span class="badge badge-primary badge-pill">4</span></a></nav>
+			</div>
           <div class="col-lg-8">
             <div class="padding-top-2x mt-2 hidden-lg-up"></div>
             <div class="table-responsive">

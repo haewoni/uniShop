@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 	<jsp:include page="common_top.jsp"></jsp:include>
     <!-- Off-Canvas Wrapper-->
     <div class="offcanvas-wrapper">
@@ -33,12 +34,17 @@
               <div class="user-info">
                 <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="img/account/user-ava.jpg" alt="User"></div>
                 <div class="user-data">
-                  <h4>Daniel Adams</h4><span>Joined February 06, 2017</span>
+                  <h4>${loginMember.member_name}</h4><span>${loginMember.member_id}</span>
                 </div>
               </div>
             </aside>
-            <nav class="list-group"><a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>Orders<span class="badge badge-primary badge-pill">6</span></a><a class="list-group-item" href="member_profile_form"><i class="icon-head"></i>Profile</a><a class="list-group-item" href="member_address_detail"><i class="icon-map"></i>Addresses</a><a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>Wishlist<span class="badge badge-primary badge-pill">3</span></a><a class="list-group-item with-badge active" href="member_question_list"><i class="icon-tag"></i>My Q&As<span class="badge badge-primary badge-pill">4</span></a></nav>
-          </div>
+            <nav class="list-group">
+				<a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>주문 목록<span class="badge badge-primary badge-pill">6</span></a>
+				<a class="list-group-item active" href="member_profile_form"><i class="icon-head"></i>내 정보</a>
+				<a class="list-group-item" href="member_address_detail"><i class="icon-map"></i>내 주소</a>
+				<a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>찜 목록<span class="badge badge-primary badge-pill">3</span></a>
+				<a class="list-group-item with-badge" href="member_question_list"><i class="icon-tag"></i>질문 목록<span class="badge badge-primary badge-pill">4</span></a></nav>
+			</div>
           <div class="col-lg-8">
             <div class="padding-top-2x mt-2 hidden-lg-up"></div>
             <!-- Wishlist Table-->
@@ -51,34 +57,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      <div class="product-item"><a class="product-thumb" href="shop_product_detail?product_no= ${wishList.product.product_no}"><img src="img/shop/cart/01.jpg" alt="Product"></a>
-                        <div class="product-info">
-                          <h4 class="product-title"><a href="shop_product_detail?product_no= ${wishList.product.product_no}">${wishList.product.product_name}</a></h4>
-                          <div class="text-lg text-medium text-muted">${wishList.product.product_price}</div>
-                          <div>Availability:
-                            <div class="d-inline text-success">In Stock</div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-center"><a class="remove-from-cart" href="#" data-toggle="tooltip" title="Remove item"><i class="icon-cross"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="product-item"><a class="product-thumb" href="shop_product_detail?product_no= ${wishList.product.product_no}"><img src="img/shop/cart/02.jpg" alt="Product"></a>
-                        <div class="product-info">
-                          <h4 class="product-title"><a href="shop_product_detail?product_no= ${wishList.product.product_no}">${wishList.product.product_name}</a></h4>
-                          <div class="text-lg text-medium text-muted">${wishList.product.product_price}</div>
-                          <div>Availability:
-                            <div class="d-inline text-warning">2 - 3 Weeks</div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-center"><a class="remove-from-cart" href="#" data-toggle="tooltip" title="Remove item"><i class="icon-cross"></i></a></td>
-                  </tr>
+                 <c:forEach items="${wishList}" var="wishList">
                   <tr>
                     <td>
                       <div class="product-item"><a class="product-thumb" href="shop_product_detail?product_no= ${wishList.product.product_no}"><img src="img/shop/cart/03.jpg" alt="Product"></a>
@@ -92,7 +71,8 @@
                       </div>
                     </td>
                     <td class="text-center"><a class="remove-from-cart" href="#" data-toggle="tooltip" title="Remove item"><i class="icon-cross"></i></a></td>
-                  </tr>
+                  </tr>               
+                 </c:forEach>
                 </tbody>
               </table>
             </div>
