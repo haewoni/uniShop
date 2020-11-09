@@ -169,6 +169,7 @@ public class ProductController {
 		return forwardPath;
 	}
 	
+	
 	/**********카트 추가***********/
 	@RequestMapping("/shop_add_cart_action")
 	public String shop_add_cart(Model model, HttpSession session, @RequestParam int cart_qty, @RequestParam String cart_product_size, @RequestParam String product_no) {
@@ -177,6 +178,8 @@ public class ProductController {
 		 * 로그인확인 작업되면 여기에 붙여주세용
 		 */
 		String forwardPath= "";
+		String productNo = product_no;
+		String sMemberId = (String) session.getAttribute("sMemberId");
 		/*
 		String sMemberId = (String) session.getAttribute("sMemberId");
 		if(sMemberId!=null || sMemberId!="") {
@@ -184,7 +187,6 @@ public class ProductController {
 		템플릿 연결할때 로그인체크 할때 쓰세요. 아래 위시리스트 추가도 마찬가지.
 		*/
 		try {
-			String sMemberId = (String) session.getAttribute("sMemberId");
 			if(sMemberId == null || sMemberId == "") {
 				forwardPath = "member_login_register_form";
 			}	
@@ -207,6 +209,8 @@ public class ProductController {
 		}
 		return forwardPath;
 	}
+	
+	
 	
 	/**********위시리스트 추가***********/
 	@RequestMapping("/shop_add_wishlist_action")

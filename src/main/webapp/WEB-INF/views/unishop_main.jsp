@@ -34,7 +34,7 @@
           <div class="category-card col-md-6 col-sm-12 fw-section padding-top-7x padding-bottom-7x" style="background-image: url(img/banners/home01.jpg);"><span class="overlay" style="background-color: #000; opacity: .5;"></span>
             <div class="d-flex justify-content-center">
               <div class="px-3 text-center">
-                <h2 class="display-4 text-white text-shadow">Male longPants</h2>
+                <h2 class="display-4 text-white text-shadow">Male Pants</h2>
                 <h5 class="text-white text-normal mb-3 opacity-60 text-shadow">Starting from $35.99</h5>
                 <div class="view-button"><a class="btn btn-primary" href="product_ManPantslist">View Collection</a></div>
               </div>
@@ -44,7 +44,7 @@
           <div class="category-card col-md-6 col-sm-12 fw-section padding-top-7x padding-bottom-7x" style="background-image: url(img/banners/home06.jpg);"><span class="overlay" style="background-color: #000; opacity: .5;"></span>
             <div class="d-flex justify-content-center">
               <div class="px-3 text-center">
-                <h2 class="display-4 text-white text-shadow">Female skirts</h2>
+                <h2 class="display-4 text-white text-shadow">Female Skirts</h2>
                 <h5 class="text-white text-normal mb-3 opacity-60 text-shadow">Starting from $79.99.00</h5>
                 <div class="view-button"><a class="btn btn-primary" href="product_FemaleSkirt_list">View Collection</a></div>
               </div>
@@ -77,13 +77,13 @@
               </h4>
               <div class="product-buttons">
                 <a href="add_wishlist_action?product_no=${product.product_no}">
-	                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
-	                	<i class="icon-heart"></i>
-	                </button>
+                	<button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
+                		<i class="icon-heart"></i>
+                	</button>
                 </a>
-                <a href="add_wishlist_action?product_no=${product.product_no}">
-                	<button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              	</a>
+                <a href="shop_product_detail?product_no=${product.product_no}">
+                	<button class="btn btn-outline-primary btn-sm">detail</button>	
+                </a>
               </div>
             </c:forEach>  
             </div>
@@ -111,9 +111,9 @@
 	                	<i class="icon-heart"></i>
 	                </button>
                 </a>
-                <a href="add_wishlist_action?product_no=${product.product_no}">
-                	<button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              	</a>
+                <a href="shop_product_detail?product_no=${product.product_no}">
+                	<button class="btn btn-outline-primary btn-sm">detail</button>	
+                </a>
               </div>
             </c:forEach>  
             </div>
@@ -141,9 +141,9 @@
 	                	<i class="icon-heart"></i>
 	                </button>
                 </a>
-                <a href="add_wishlist_action?product_no=${product.product_no}">
-                	<button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              	</a>
+                <a href="shop_product_detail?product_no=${product.product_no}">
+                	<button class="btn btn-outline-primary btn-sm">detail</button>	
+                </a>
               </div>
             </c:forEach>  
             </div>
@@ -171,9 +171,9 @@
 	                	<i class="icon-heart"></i>
 	                </button>
                 </a>
-                <a href="add_wishlist_action?product_no=${product.product_no}">
-                	<button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              	</a>
+                <a href="shop_product_detail?product_no=${product.product_no}">
+                	<button class="btn btn-outline-primary btn-sm">detail</button>	
+                </a>
               </div>
             </c:forEach>  
             </div>
@@ -201,9 +201,9 @@
 	                	<i class="icon-heart"></i>
 	                </button>
                 </a>
-                <a href="add_wishlist_action?product_no=${product.product_no}">
-                	<button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              	</a>
+                <a href="shop_product_detail?product_no=${product.product_no}">
+                	<button class="btn btn-outline-primary btn-sm">detail</button>	
+                </a>
               </div>
             </c:forEach>  
             </div>
@@ -231,9 +231,9 @@
 	                	<i class="icon-heart"></i>
 	                </button>
                 </a>
-                <a href="add_wishlist_action?product_no=${product.product_no}">
-                	<button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              	</a>
+                <a href="shop_product_detail?product_no=${product.product_no}">
+                	<button class="btn btn-outline-primary btn-sm">detail</button>	
+                </a>
               </div>
             </c:forEach>  
             </div>
@@ -261,9 +261,9 @@
 	                	<i class="icon-heart"></i>
 	                </button>
                 </a>
-                <a href="add_wishlist_action?product_no=${product.product_no}">
-                	<button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              	</a>
+                <a href="shop_product_detail?product_no=${product.product_no}">
+                	<button class="btn btn-outline-primary btn-sm">detail</button>	
+                </a>
               </div>
             </c:forEach>  
             </div>
@@ -291,9 +291,9 @@
 	                	<i class="icon-heart"></i>
 	                </button>
                 </a>
-                <a href="add_wishlist_action?product_no=${product.product_no}">
-                	<button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              	</a>
+                <a href="shop_product_detail?product_no=${product.product_no}">
+                	<button class="btn btn-outline-primary btn-sm">detail</button>	
+                </a>
               </div>
             </c:forEach>  
             </div>
