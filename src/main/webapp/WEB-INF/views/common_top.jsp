@@ -103,8 +103,6 @@
     </div>
     <!-- Off-Canvas Mobile Menu-->
     <div class="offcanvas-container" id="mobile-menu"><a class="account-link" href="account-orders.html">
-        <div class="user-ava"><img src="img/account/user-ava-md.jpg" alt="Daniel Adams">
-        </div>
         <div class="user-info">
           <h6 class="user-name">${loginMember.member_name}</h6><span class="text-sm text-white opacity-60"></span>
         </div></a>
@@ -283,13 +281,13 @@
       </div>
       <div class="topbar-column"><a class="hidden-md-down" href="#"><i class="icon-download"></i>&nbsp; Get mobile app</a>
         <div class="lang-currency-switcher-wrap">
-          <div class="lang-currency-switcher dropdown-toggle"><span class="language"><img alt="English" src="img/flags/GB.png"></span><span class="currency">$ USD</span></div>
+          <div class="lang-currency-switcher dropdown-toggle"><span class="language"><img alt="English" src="img/flags/GB.png"></span><span class="currency"> WON (원)</span></div>
           <div class="dropdown-menu">
             <div class="currency-select">
               <select class="form-control form-control-rounded form-control-sm">
-                <option value="usd">$ USD</option>
+                <option value="usd"> WON</option>
                 <option value="usd">€ EUR</option>
-                <option value="usd">£ UKP</option>
+                <option value="usd">$ USD</option>
                 <option value="usd">¥ JPY</option>
               </select>
             </div><a class="dropdown-item" href="#"><img src="img/flags/FR.png" alt="Français">Français</a><a class="dropdown-item" href="#"><img src="img/flags/DE.png" alt="Deutsch">Deutsch</a><a class="dropdown-item" href="#"><img src="img/flags/IT.png" alt="Italiano">Italiano</a>
@@ -346,7 +344,7 @@
               </li>
                 <li><a href="shop-single.html">Single Product</a></li>
                 <li><a href="cart.html">Cart</a></li>
-              <li class="has-children"><a href="checkout-address.html"><span>Checkout</span></a>
+              <li class="has-children"><a href="jumun_address_form"><span>Checkout</span></a>
                 <ul class="sub-menu">             
                     <li><a href="checkout-address.html">Address</a></li>
                     <li><a href="checkout-shipping.html">Shipping</a></li>
@@ -504,8 +502,6 @@
             <div class="account"><a href="member_profile_form"></a><i class="icon-head"></i>
               <ul class="toolbar-dropdown">
                 <li class="sub-menu-user">
-                  <div class="user-ava"><img src="img/account/user-ava-sm.jpg" alt="Daniel Adams">
-                  </div>
                   <div class="user-info">
                     <h6 class="user-name">${loginMember.member_name}</h6><span class="text-xs text-muted"></span>
                   </div>
