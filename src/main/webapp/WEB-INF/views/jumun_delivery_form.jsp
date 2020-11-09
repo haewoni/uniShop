@@ -24,17 +24,17 @@
         <div class="row">
           <!-- Checkout Adress-->
           <div class="col-xl-9 col-lg-8">
-            <div class="checkout-steps"><a href="checkout-review.html">4. Review</a><a href="checkout-payment.html"><span class="angle"></span>3. Payment</a><a class="active" href="checkout-shipping.html"><span class="angle"></span>2. Shipping</a><a class="completed" href="checkout-address.html"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>1. Address</a></div>
-            <h4>Choose Shipping Method</h4>
+            <div class="checkout-steps"><a href="jumun_review_form">4. 주문확인</a><a href="checkout-payment.html"><span class="angle"></span>3. 결제정보</a><a class="active" href="jumun_delivery_form"><span class="angle"></span>2. 배송방법</a><a class="completed" href="jumun_address_form"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>1. 주소</a></div>
+            <h4>배송방법을 선택하시오</h4>
             <hr class="padding-bottom-1x">
             <div class="table-responsive">
               <table class="table table-hover">
                 <thead class="thead-default">
                   <tr>
                     <th></th>
-                    <th>Shipping method</th>
-                    <th>Delivery time</th>
-                    <th>Handling fee</th>
+                    <th>배송 방법</th>
+                    <th>평균 배송 시간</th>
+                    <th>배송료</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -45,9 +45,9 @@
                         <label class="custom-control-label" for="courier"></label>
                       </div>
                     </td>
-                    <td class="align-middle"><span class="text-medium">Courier</span><br><span class="text-muted text-sm">All Addresses(default zone), United States & Canada</span></td>
-                    <td class="align-middle">2 - 4 days</td>
-                    <td class="align-middle">$22.50</td>
+                    <td class="align-middle"><span class="text-medium">일반배송</span><br><span class="text-muted text-sm">*제주도 및 도서 산간지역은 기본배송료 + 추가운임비</span></td>
+                    <td class="align-middle">3 - 4 일</td>
+                    <td class="align-middle">3000 원</td>
                   </tr>
                   <tr>
                     <td class="align-middle">
@@ -56,137 +56,39 @@
                         <label class="custom-control-label" for="local"></label>
                       </div>
                     </td>
-                    <td class="align-middle"><span class="text-medium">Local Shipping</span><br><span class="text-muted text-sm">All Addresses(default zone), United States & Canada</span></td>
-                    <td class="align-middle">up to one week</td>
-                    <td class="align-middle">$10.00</td>
-                  </tr>
-                  <tr>
-                    <td class="align-middle">
-                      <div class="custom-control custom-radio mb-0">
-                        <input class="custom-control-input" type="radio" id="flat" name="shipping-method">
-                        <label class="custom-control-label" for="flat"></label>
-                      </div>
-                    </td>
-                    <td class="align-middle"><span class="text-medium">Flat Rate</span><br><span class="text-muted text-sm">All Addresses(default zone)</span></td>
-                    <td class="align-middle">5 - 7 days</td>
-                    <td class="align-middle">$33.85</td>
-                  </tr>
-                  <tr>
-                    <td class="align-middle">
-                      <div class="custom-control custom-radio mb-0">
-                        <input class="custom-control-input" type="radio" id="ups" name="shipping-method">
-                        <label class="custom-control-label" for="ups"></label>
-                      </div>
-                    </td>
-                    <td class="align-middle"><span class="text-medium">UPS Ground Shipping</span><br><span class="text-muted text-sm">All Addresses(default zone)</span></td>
-                    <td class="align-middle">4 - 6 days</td>
-                    <td class="align-middle">$18.00</td>
-                  </tr>
-                  <tr>
-                    <td class="align-middle">
-                      <div class="custom-control custom-radio mb-0">
-                        <input class="custom-control-input" type="radio" id="pickup" name="shipping-method">
-                        <label class="custom-control-label" for="pickup"></label>
-                      </div>
-                    </td>
-                    <td class="align-middle"><span class="text-medium">Local Pickup from store</span><br><span class="text-muted text-sm">All Addresses(default zone)</span></td>
-                    <td class="align-middle">&mdash;</td>
-                    <td class="align-middle">$0.00</td>
-                  </tr>
-                  <tr>
-                    <td class="align-middle">
-                      <div class="custom-control custom-radio mb-0">
-                        <input class="custom-control-input" type="radio" id="locker" name="shipping-method">
-                        <label class="custom-control-label" for="locker"></label>
-                      </div>
-                    </td>
-                    <td class="align-middle"><span class="text-medium">Pick Up at Unishop Locker</span><br><span class="text-muted text-sm">All Addresses(default zone), United States & Canada</span></td>
-                    <td class="align-middle">&mdash;</td>
-                    <td class="align-middle">$9.99</td>
-                  </tr>
-                  <tr>
-                    <td class="align-middle">
-                      <div class="custom-control custom-radio mb-0">
-                        <input class="custom-control-input" type="radio" id="global" name="shipping-method">
-                        <label class="custom-control-label" for="global"></label>
-                      </div>
-                    </td>
-                    <td class="align-middle"><span class="text-medium">Unishop Global Export</span><br><span class="text-muted text-sm">All Addresses(default zone), outside United States</span></td>
-                    <td class="align-middle">3 - 4 days;</td>
-                    <td class="align-middle">$25.00</td>
+                    <td class="align-middle"><span class="text-medium">특급배송</span><br><span class="text-muted text-sm">*제주도 및 도서 산간지역은 기본배송료 + 추가운임비</span></td>
+                    <td class="align-middle">1 - 2 일</td>
+                    <td class="align-middle">6000 원</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <div class="checkout-footer margin-top-1x">
               <div class="column"><a class="btn btn-outline-secondary" href="checkout-address.html"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;Back</span></a></div>
-              <div class="column"><a class="btn btn-primary" href="checkout-payment.html"><span class="hidden-xs-down">Continue&nbsp;</span><i class="icon-arrow-right"></i></a></div>
+              <div class="column"><a class="btn btn-primary" href="jumun_delivery_action"><span class="hidden-xs-down">계속&nbsp;</span><i class="icon-arrow-right"></i></a></div>
             </div>
           </div>
           <!-- Sidebar          -->
           <div class="col-xl-3 col-lg-4">
             <aside class="sidebar">
               <div class="padding-top-2x hidden-lg-up"></div>
-              <!-- Order Summary Widget-->
+               <!-- Order Summary Widget-->
               <section class="widget widget-order-summary">
-                <h3 class="widget-title">Order Summary</h3>
+                <h3 class="widget-title">주문 요약</h3>
                 <table class="table">
                   <tr>
-                    <td>Cart Subtotal:</td>
-                    <td class="text-medium">$289.68</td>
+                    <td>카트 합계:</td>
+                    <td class="text-medium">${cart_subtotal}</td>
                   </tr>
                   <tr>
-                    <td>Shipping:</td>
-                    <td class="text-medium">$22.50</td>
+                    <td>배송비:</td>
+                    <td class="text-medium"></td>
                   </tr>
                   <tr>
-                    <td>Estimated tax:</td>
-                    <td class="text-medium">$3.42</td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td class="text-lg text-medium">$315.60</td>
+                    <td>총 금액:</td>
+                    <td class="text-lg text-medium">${cart_subtotal}</td>
                   </tr>
                 </table>
-              </section>
-              <!-- Featured Products Widget-->
-              <section class="widget widget-featured-products">
-                <h3 class="widget-title">Recently Viewed</h3>
-                <!-- Entry-->
-                <div class="entry">
-                  <div class="entry-thumb"><a href="shop-single.html"><img src="img/shop/widget/01.jpg" alt="Product"></a></div>
-                  <div class="entry-content">
-                    <h4 class="entry-title"><a href="shop-single.html">Oakley Kickback</a></h4><span class="entry-meta">$155.00</span>
-                  </div>
-                </div>
-                <!-- Entry-->
-                <div class="entry">
-                  <div class="entry-thumb"><a href="shop-single.html"><img src="img/shop/widget/02.jpg" alt="Product"></a></div>
-                  <div class="entry-content">
-                    <h4 class="entry-title"><a href="shop-single.html">Top-Sider Fathom</a></h4><span class="entry-meta">$90.00</span>
-                  </div>
-                </div>
-                <!-- Entry-->
-                <div class="entry">
-                  <div class="entry-thumb"><a href="shop-single.html"><img src="img/shop/widget/03.jpg" alt="Product"></a></div>
-                  <div class="entry-content">
-                    <h4 class="entry-title"><a href="shop-single.html">Vented Straw Fedora</a></h4><span class="entry-meta">$49.50</span>
-                  </div>
-                </div>
-                <!-- Entry-->
-                <div class="entry">
-                  <div class="entry-thumb"><a href="shop-single.html"><img src="img/shop/widget/04.jpg" alt="Product"></a></div>
-                  <div class="entry-content">
-                    <h4 class="entry-title"><a href="shop-single.html">Big Wordmark Tote</a></h4><span class="entry-meta">$29.99</span>
-                  </div>
-                </div>
-              </section>
-              <!-- Promo Banner-->
-              <section class="promo-box" style="background-image: url(img/banners/02.jpg);"><span class="overlay-dark" style="opacity: .4;"></span>
-                <div class="promo-box-content text-center padding-top-2x padding-bottom-2x">
-                  <h4 class="text-light text-thin text-shadow">New Collection of</h4>
-                  <h3 class="text-bold text-light text-shadow">Sunglasses</h3><a class="btn btn-outline-white btn-sm" href="shop-grid-ls.html">Shop Now</a>
-                </div>
               </section>
             </aside>
           </div>

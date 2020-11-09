@@ -11,7 +11,7 @@
           </div>
           <div class="column">
             <ul class="breadcrumbs">
-              <li><a href="index.html">Home</a>
+              <li><a href="unishop_main">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
               <li>Checkout</li>
@@ -24,41 +24,44 @@
         <div class="row">
           <!-- Checkout Adress-->
           <div class="col-xl-9 col-lg-8">
-            <div class="checkout-steps"><a href="jumun_review_form">4. Review</a><a href="jumun_payment_form"><span class="angle"></span>3. Payment</a><a href="jumun_delivery_form"><span class="angle"></span>2. Shipping</a><a class="active" href="jumun_address_form"><span class="angle"></span>1. Address</a></div>
-            <h4>Billing Address</h4>
+            <div class="checkout-steps"><a href="jumun_review_form">4. 주문확인</a><a href="jumun_payment_form"><span class="angle"></span>3. 결제정보</a><a href="jumun_delivery_form"><span class="angle"></span>2. 배송방법</a><a class="active" href="jumun_address_form"><span class="angle"></span>1. 주소</a></div>
+            <h4>주소</h4>
             <hr class="padding-bottom-1x">
             <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label for="checkout-fn">Name</label>
-                  <input class="form-control" type="text" id="checkout-fn">
+                  <label for="checkout-fn">주문자 이름</label>
+                  <input class="form-control" type="text" id="checkout-fn"
+                  name="member_name" value="${loginMember.member_name}">
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label for="checkout-ln">Phone Number</label>
-                  <input class="form-control" type="text" id="checkout-ln">
+                  <label for="checkout-ln">전화번호</label>
+                  <input class="form-control" type="text" id="checkout-ln"
+                  name="member_phone" value="${loginMember.member_phone}">
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label for="checkout-company">Address Name</label>
-                  <input class="form-control" type="text" id="checkout-company">
+                  <label for="checkout-company">주소명</label>
+                  <input class="form-control" type="text" id="checkout-company"
+                  name="member_address_name" value="${loginMember.member_address_name}">
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label for="checkout-country">Country</label>
+                  <label for="checkout-country">국가</label>
                   <select class="form-control" id="checkout-country">
-                    <option>Choose country</option>
-                    <option>South Korea</option>
-                    <option>Canada</option>
-                    <option>France</option>
-                    <option>Germany</option>
-                    <option>Switzerland</option>
-                    <option>USA</option>
+                    <option>국가 선택</option>
+                    <option>대한민국</option>
+                    <option>캐나다</option>
+                    <option>프랑스</option>
+                    <option>독일</option>
+                    <option>미국</option>
+                    <option>뉴질랜드</option>
                   </select>
                 </div>
               </div>
@@ -66,49 +69,52 @@
             <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label for="checkout-city">City</label>
+                  <label for="checkout-city">도시</label>
                   <select class="form-control" id="checkout-city">
-                    <option>Choose city</option>
-                    <option>Seoul</option>
-                    <option>Incheon</option>
-                    <option>Busan</option>
-                    <option>Iksan</option>
-                    <option>Daegu</option>
+                    <option>도시 선택</option>
+                    <option>서울</option>
+                    <option>인천</option>
+                    <option>부산</option>
+                    <option>대전</option>
+                    <option>익산</option>
                   </select>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label for="checkout-zip">ZIP Code</label>
-                  <input class="form-control" type="text" id="checkout-zip">
+                  <label for="checkout-zip">우편번호</label>
+                  <input class="form-control" type="text" id="checkout-zip"
+                  name="member_address_zipcode" value="${loginMember.member_address_zipcode}">
                 </div>
               </div>
             </div>
             <div class="row padding-bottom-1x">
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label for="checkout-address1">Address 1</label>
-                  <input class="form-control" type="text" id="checkout-address1">
+                  <label for="checkout-address1">주소1</label>
+                  <input class="form-control" type="text" id="checkout-address1"
+                  name="member_address1" value="${loginMember.member_address1}">
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label for="checkout-address2">Address 2</label>
-                  <input class="form-control" type="text" id="checkout-address2">
+                  <label for="checkout-address2">상세주소</label>
+                  <input class="form-control" type="text" id="checkout-address2"
+                  name="member_address2" value="${loginMember.member_address2}">
                 </div>
               </div>
             </div>
-            <h4>Shipping Address</h4>
+            <h4>배송지 주소</h4>
             <hr class="padding-bottom-1x">
             <div class="form-group">
               <div class="custom-control custom-checkbox">
                 <input class="custom-control-input" type="checkbox" id="same_address" checked>
-                <label class="custom-control-label" for="same_address">Same as billing address</label>
+                <label class="custom-control-label" for="same_address">회원정보와 동일</label>
               </div>
             </div>
             <div class="checkout-footer">
-              <div class="column"><a class="btn btn-outline-secondary" href="cart.html"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;Back To Cart</span></a></div>
-              <div class="column"><a class="btn btn-primary" href="checkout-shipping.html"><span class="hidden-xs-down">Continue&nbsp;</span><i class="icon-arrow-right"></i></a></div>
+              <div class="column"><a class="btn btn-outline-secondary" href="cart_list"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;카트로 돌아가기</span></a></div>
+              <div class="column"><a class="btn btn-primary" href="jumun_address_action"><span class="hidden-xs-down">계속&nbsp;</span><i class="icon-arrow-right"></i></a></div>
             </div>
           </div>
           <!-- Sidebar          -->
@@ -117,60 +123,21 @@
               <div class="padding-top-2x hidden-lg-up"></div>
               <!-- Order Summary Widget-->
               <section class="widget widget-order-summary">
-                <h3 class="widget-title">Order Summary</h3>
+                <h3 class="widget-title">주문 요약</h3>
                 <table class="table">
                   <tr>
-                    <td>Cart Subtotal:</td>
-                    <td class="text-medium">$289.68</td>
+                    <td>카트 합계:</td>
+                    <td class="text-medium">${cart_subtotal}</td>
                   </tr>
                   <tr>
-                    <td>Shipping:</td>
-                    <td class="text-medium">$22.50</td>
+                    <td>배송비:</td>
+                    <td class="text-medium"></td>
                   </tr>
                   <tr>
-                    <td></td>
-                    <td class="text-lg text-medium">$315.60</td>
+                    <td>총 금액:</td>
+                    <td class="text-lg text-medium">${cart_subtotal}</td>
                   </tr>
                 </table>
-              </section>
-              <!-- Featured Products Widget-->
-              <section class="widget widget-featured-products">
-                <h3 class="widget-title">Recently Viewed</h3>
-                <!-- Entry-->
-                <div class="entry">
-                  <div class="entry-thumb"><a href="shop-single.html"><img src="img/shop/widget/01.jpg" alt="Product"></a></div>
-                  <div class="entry-content">
-                    <h4 class="entry-title"><a href="shop-single.html">Oakley Kickback</a></h4><span class="entry-meta">$155.00</span>
-                  </div>
-                </div>
-                <!-- Entry-->
-                <div class="entry">
-                  <div class="entry-thumb"><a href="shop-single.html"><img src="img/shop/widget/02.jpg" alt="Product"></a></div>
-                  <div class="entry-content">
-                    <h4 class="entry-title"><a href="shop-single.html">Top-Sider Fathom</a></h4><span class="entry-meta">$90.00</span>
-                  </div>
-                </div>
-                <!-- Entry-->
-                <div class="entry">
-                  <div class="entry-thumb"><a href="shop-single.html"><img src="img/shop/widget/03.jpg" alt="Product"></a></div>
-                  <div class="entry-content">
-                    <h4 class="entry-title"><a href="shop-single.html">Vented Straw Fedora</a></h4><span class="entry-meta">$49.50</span>
-                  </div>
-                </div>
-                <!-- Entry-->
-                <div class="entry">
-                  <div class="entry-thumb"><a href="shop-single.html"><img src="img/shop/widget/04.jpg" alt="Product"></a></div>
-                  <div class="entry-content">
-                    <h4 class="entry-title"><a href="shop-single.html">Big Wordmark Tote</a></h4><span class="entry-meta">$29.99</span>
-                  </div>
-                </div>
-              </section>
-              <!-- Promo Banner-->
-              <section class="promo-box" style="background-image: url(img/banners/02.jpg);"><span class="overlay-dark" style="opacity: .4;"></span>
-                <div class="promo-box-content text-center padding-top-2x padding-bottom-2x">
-                  <h4 class="text-light text-thin text-shadow">New Collection of</h4>
-                  <h3 class="text-bold text-light text-shadow">Sunglasses</h3><a class="btn btn-outline-white btn-sm" href="shop-grid-ls.html">Shop Now</a>
-                </div>
               </section>
             </aside>
           </div>
