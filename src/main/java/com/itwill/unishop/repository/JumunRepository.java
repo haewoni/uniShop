@@ -9,6 +9,8 @@ public interface JumunRepository {
 	
 	public int insertJumun(Jumun jumun);
 	
+	public int selectJumunNo(Jumun jumun);
+	
 	public List<Jumun> selectAll();
 	
 	public List<Jumun> selectById(String member_id);

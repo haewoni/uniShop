@@ -6,6 +6,7 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -34,12 +35,9 @@ public class MemberController {
 
 	@Autowired
 	private MemberService memberService;
+	
 	@Autowired
 	private JumunService jumunService;
-	@Autowired
-	private WishListService wishListService;
-	@Autowired
-	private QuestionService questionService;
 	@Autowired
 	private Jumun_DetailService jumun_DetailService;
 
@@ -54,7 +52,7 @@ public class MemberController {
 		return "member_login_register_form"; 
 	}
 	@RequestMapping(value = "/member_login_action", method = RequestMethod.POST)
-	public String member_login_action_POST(Model model,HttpSession session,@RequestParam String member_id, @RequestParam String member_password) {
+	public String member_login_action_POST(Model model,HttpSession session, @RequestParam String member_id, @RequestParam String member_password) {
 		String forwardPath = "";
 		try {
 			Member loginMember=memberService.loginMember(member_id, member_password);
@@ -127,19 +125,8 @@ public class MemberController {
 		}
 		return forwardPath;
 	}
-	@RequestMapping("/member_wishlist")
-	public String member_wishlist(Model model, HttpSession session) {
-		String forwardPath="";
-		String sMemberId = (String) session.getAttribute("sMemberId");
-		try {
-			ArrayList<WishList> wishList = wishListService.selectWishListAll(sMemberId);
-			model.addAttribute("wishList", wishList);
-			forwardPath="member_wishlist";
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return forwardPath;
-	}
+	
+	//회원정보 변경
 	@RequestMapping(value = "/member_profile_update_action", method = RequestMethod.GET)
 	public String member_update_action_GET() {
 
@@ -161,7 +148,7 @@ public class MemberController {
 		}
 		return forwardPath;
 	}
-
+	//멤버의 주문내역
 	@RequestMapping("/member_jumun_list")
 	public String member_jumun_list(Model model, HttpSession session) {
 		System.out.println("-----------------member_jumun_detail--------------------");
@@ -176,7 +163,7 @@ public class MemberController {
 		}
 		return forwardPath;
 	}
-
+	//멤버의 주문상세
 	@RequestMapping("/member_jumun_detail")
 	public String member_jumun_detail(Model model, HttpSession session/*, @RequestParam int jumun_d_no*/) {
 		String forwardPath = "";
@@ -190,52 +177,7 @@ public class MemberController {
 		}
 		return forwardPath;
 	}
-	@RequestMapping("/member_question_list")
-	public String member_question_list(Model model, HttpSession session/*, @RequestParam int question_no*/) {
-		String forwardPath = "";
-		try {
-			String sMemberId = (String) session.getAttribute("sMemberId");
-			ArrayList<Question> questionList = questionService.selectById(sMemberId);
-			model.addAttribute("questionList", questionList);
-			forwardPath = "member_question_list";
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return forwardPath;
-	}
-	@RequestMapping("/member_question_detail")
-	public String member_question_detail(Model model, HttpSession session, @RequestParam int question_no) {
-		String forwardPath = "";
-		try {
-			String sMemberId = (String) session.getAttribute("sMemberId");
-			Question question = questionService.selectByNo(question_no);
-			model.addAttribute("question", question);
-			forwardPath = "member_question_detail";
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return forwardPath;
-	}
-	@RequestMapping("/member_question_form")
-	public String member_question_form(HttpSession session) {
-		String sMemberId = (String) session.getAttribute("sMemberId");
-		return "member_question_form";
-	}
-	@RequestMapping(value = "/member_question_action", method = RequestMethod.GET)
-	public String member_question_action_GET() {
-
-		return "member_question_form";
-	}
-	@RequestMapping(value = "/member_question_action", method = RequestMethod.POST)
-	public String member_question_action_POST(HttpSession session, @ModelAttribute Question newQuestion) {
-		String forwardPath = "";
-		String sMemberId  = (String) session.getAttribute("sMemberId");
-		System.out.println(newQuestion);
-		questionService.insertQuestion(newQuestion);
-		forwardPath = "redirect:member_question_list";
-		
-		return forwardPath;
-	}
+	
 	/*
 	//모든 Exception을 던지면 이곳으로 날라온다
 	@ExceptionHandler(Exception.class)

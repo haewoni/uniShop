@@ -39,17 +39,18 @@ public class CartController {
 
 		session.setAttribute("member_id", member_id); 
 		ArrayList<Cart> cartList = cartService.selectCartAll(member_id);
-
 		//String sMemberId = (String) session.getAttribute("sMemberId");
 		//ArrayList<Cart> cartList = cartService.selectCartAll(sMemberId);
-
 		//model.addAttribute("cartList", cartList);
+	    int cart_subtotal = 0;
+	      for (Cart cart : cartList) {
+	         cart_subtotal+=cart.getCart_tot_price();
+	      }
+	    session.setAttribute("cart_subtotal", cart_subtotal);
 		session.setAttribute("cartList", cartList);
 		
 		ArrayList<Product> productList = productService.selectEight();
-
 		session.setAttribute("productList", productList);
-		//session.setAttribute("cartList", cartList);
 		forwardPath="cart_list";
 		return forwardPath;
 	}

@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="com.itwill.unishop.domain.Product"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	남성 아우터 리스트<hr>
+		
+	<c:forEach  items="${productList}" 
+				var="product"  
+				begin="0"  
+				step="1" 
+				end="${productList.size()}"
+				varStatus="status">
+		<li><a href="shop_product_detail?product_no=${product.product_no}">
+		<img src=IMAGE/${product.product_image_1} width=100, height=100><br>${product.product_name}</a></li>
+	</c:forEach>
+	
+</body>
+</html>

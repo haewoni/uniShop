@@ -18,7 +18,8 @@ public class JumunServiceImpl implements JumunService{
 	
 	@Override
 	public int insertJumun(Jumun jumun) {
-		return jumunRepository.insertJumun(jumun);
+		jumunRepository.insertJumun(jumun);
+		return jumunRepository.selectJumunNo(jumun);
 	}
 
 	@Override
