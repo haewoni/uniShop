@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 	<jsp:include page="common_top.jsp"/>
     <!-- Off-Canvas Wrapper-->
     <div class="offcanvas-wrapper">
@@ -33,35 +34,36 @@
               <div class="user-info">
                 <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="img/account/user-ava.jpg" alt="User"></div>
                 <div class="user-data">
-                  <h4>${loginMember.member_name}</h4><span>Joined February 06, 2017</span>
+                  <h4>${loginMember.member_name}</h4><span>${loginMember.member_id}</span>
                 </div>
               </div>
             </aside>
 			<nav class="list-group">
 				<a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>주문 목록<span class="badge badge-primary badge-pill">6</span></a>
-				<a class="list-group-item" href="member_profile_form"><i class="icon-head"></i>내 정보</a>
-				<a class="list-group-item active" href="member_address_detail"><i class="icon-map"></i>내 주소</a>
+				<a class="list-group-item active" href="member_profile_form"><i class="icon-head"></i>내 정보</a>
+				<a class="list-group-item" href="member_address_detail"><i class="icon-map"></i>내 주소</a>
 				<a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>찜 목록<span class="badge badge-primary badge-pill">3</span></a>
-				<a class="list-group-item with-badge" href="member_question_list"><i class="icon-tag"></i>질문 목록<span class="badge badge-primary badge-pill">4</span></a></nav>          </div>
-          <div class="col-lg-8">
+				<a class="list-group-item with-badge" href="member_question_list"><i class="icon-tag"></i>질문 목록<span class="badge badge-primary badge-pill">4</span></a></nav>
+			 </div>
+			<div class="col-lg-8">
             <div class="padding-top-2x mt-2 hidden-lg-up"></div>
             <form class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="account-fn">이름</label>
-                  <input class="form-control" type="text" id="account-fn" value="${loginMember.member_name.charAt(1)}" required>
+                  <label for="account-fn">아이디</label>
+                  <input class="form-control" type="text" id="account-fn" value="${loginMember.member_id}" disabled>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="account-ln">성</label>
-                  <input class="form-control" type="text" id="account-ln" value="${loginMember.member_name.charAt(0)}" required>
+                  <label for="account-ln">이름</label>
+                  <input class="form-control" type="text" id="account-ln" value="${loginMember.member_name}" required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="account-email">이메일</label>
-                  <input class="form-control" type="email" id="account-email" value="${loginMember.member_email}" disabled>
+                  <input class="form-control" type="email" id="account-email" value="${loginMember.member_email}" required>
                 </div>
               </div>
               <div class="col-md-6">
@@ -92,6 +94,7 @@
                   <button class="btn btn-primary margin-right-none" type="button" data-toast data-toast-position="topRight" data-toast-type="success" data-toast-icon="icon-circle-check" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Update Profile</button>
                 </div>
               </div>
+           
             </form>
           </div>
         </div>

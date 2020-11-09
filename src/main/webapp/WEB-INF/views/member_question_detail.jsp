@@ -91,13 +91,18 @@
               <div class="user-info">
                 <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="img/account/user-ava.jpg" alt="User"></div>
                 <div class="user-data">
-                  <h4>Daniel Adams</h4><span>Joined February 06, 2017</span>
+                  <h4>${loginMember.member_name}</h4><span>${loginMember.member_id}</span>
                 </div>
               </div>
             </aside>
-			<nav class="list-group"><a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>Orders<span class="badge badge-primary badge-pill">6</span></a><a class="list-group-item" href="member_profile_form"><i class="icon-head"></i>Profile</a><a class="list-group-item" href="member_address_detail"><i class="icon-map"></i>Addresses</a><a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>Wishlist<span class="badge badge-primary badge-pill">3</span></a><a class="list-group-item with-badge active" href="member_question_list"><i class="icon-tag"></i>My Tickets<span class="badge badge-primary badge-pill">4</span></a></nav>
-          </div>
-          <div class="col-lg-8">
+			<nav class="list-group">
+				<a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>주문 목록<span class="badge badge-primary badge-pill">6</span></a>
+				<a class="list-group-item active" href="member_profile_form"><i class="icon-head"></i>내 정보</a>
+				<a class="list-group-item" href="member_address_detail"><i class="icon-map"></i>내 주소</a>
+				<a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>찜 목록<span class="badge badge-primary badge-pill">3</span></a>
+				<a class="list-group-item with-badge" href="member_question_list"><i class="icon-tag"></i>질문 목록<span class="badge badge-primary badge-pill">4</span></a></nav>
+			 </div>
+			<div class="col-lg-8">
             <div class="padding-top-2x mt-2 hidden-lg-up"></div>
             <div class="table-responsive margin-bottom-2x">
               <table class="table margin-bottom-none">
