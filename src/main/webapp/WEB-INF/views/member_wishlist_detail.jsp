@@ -17,7 +17,7 @@
               <li><a href="member_jumun_list">Account</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li>My Wishlist</li>
+              <li>찜목록</li>
             </ul>
           </div>
         </div>

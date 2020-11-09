@@ -188,19 +188,19 @@ public class ProductController {
 			if(sMemberId == null || sMemberId == "") {
 				forwardPath = "member_login_register_form";
 			}	
-		//String member_id = "uni1";//session.getId();
-		int duplicateCount = cartService.inspectDuplicateCart(sMemberId, product_no, cart_product_size);
-		//카트 중복검사 후 qty만 더하기
-		if(duplicateCount!=0) {
-			int update_qty = cartService.selectCartOne(sMemberId, product_no, cart_product_size).getCart_qty()+cart_qty;
-			int cart_no = cartService.selectCartOne(sMemberId, product_no, cart_product_size).getCart_no();
-			Cart updateCart = new Cart(cart_no, update_qty, 5000, cart_product_size, sMemberId, product_no);
-			cartService.updateCart(updateCart);
-		}else {
-			Cart cart = new Cart(-1, cart_qty, 5000, cart_product_size, sMemberId, product_no);
-			cartService.insertCart(cart);
-		}
-		forwardPath = "redirect:shop_product_detail?product_no="+product_no;
+			//String member_id = "uni1";//session.getId();
+			int duplicateCount = cartService.inspectDuplicateCart(sMemberId, product_no, cart_product_size);
+			//카트 중복검사 후 qty만 더하기
+			if(duplicateCount!=0) {
+				int update_qty = cartService.selectCartOne(sMemberId, product_no, cart_product_size).getCart_qty()+cart_qty;
+				int cart_no = cartService.selectCartOne(sMemberId, product_no, cart_product_size).getCart_no();
+				Cart updateCart = new Cart(cart_no, update_qty, 5000, cart_product_size, sMemberId, product_no);
+				cartService.updateCart(updateCart);
+			}else {
+				Cart cart = new Cart(-1, cart_qty, 5000, cart_product_size, sMemberId, product_no);
+				cartService.insertCart(cart);
+			}
+			forwardPath = "shop_product_detail?product_no="+product_no;
 		//-1과 5000은 임의의 수일 뿐. 쿼리문상 자동으로 계산된 값으로 입력됨
 		} catch (Exception e) {
 			e.printStackTrace();
