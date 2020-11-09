@@ -151,24 +151,28 @@ public class JumunController {
       String forwardPath = " ";
       String sMemberId = (String) session.getAttribute("sMemberId");
       ArrayList<Cart> cartList = cartService.selectCartAll(sMemberId);
-//		for (Cart cartItem : cartList) {
-//		Jumun_Detail jumun_Detail=new Jumun_Detail();
-//		
-//		jumun_Detail.setJumun_d_no(Integer.parseInt(cartItem.getProduct_no()));
-//		jumun_Detail.setJumun_d_product_name(cartItem.getProduct_name());
-//		jumun_Detail.setJumun_d_product_price(cartItem.getCart_tot_price());
-//		jumun_Detail.setJumun_d_product_qty(Integer.toString(cartItem.getCart_qty()));
-//		jumun_Detail.setJumun_d_product_size(cartItem.getCart_product_size());
-//		
-//		jumun_DetailService.insertJumunDetail(jumun_Detail);
-//	}
+		//for (Cart cartItem : cartList) {
+		Jumun_Detail jumun_Detail=new Jumun_Detail();
+		Cart cartItem=cartList.get(0);
+		
+		jumun_Detail.setJumun_d_no(Integer.parseInt(cartItem.getProduct_no()));
+		jumun_Detail.setJumun_d_product_name(cartItem.getProduct_name());
+		jumun_Detail.setJumun_d_product_price(cartItem.getCart_tot_price());
+		jumun_Detail.setJumun_d_product_qty(Integer.toString(cartItem.getCart_qty()));
+		jumun_Detail.setJumun_d_product_size(cartItem.getCart_product_size());
+		
+		System.out.println(jumun_Detail);
+		//jumun_DetailService.insertJumunDetail(jumun_Detail);
+		
+		System.out.println("1");
+	    //}
       
       session.setAttribute("cartList", cartList);
       Jumun createJumun = (Jumun) session.getAttribute("createJumun");
-	 // Jumun_Detail createJumunDetail = (Jumun_Detail) session.getAttribute("createJumunDetail");
+	  Jumun_Detail createJumunDetail = (Jumun_Detail) session.getAttribute("createJumunDetail");
 		
       jumunService.insertJumun(createJumun);
-     // jumun_DetailService.insertJumunDetail(createJumunDetail);
+      jumun_DetailService.insertJumunDetail(createJumunDetail);
       forwardPath="redirect:jumun_complete_form";
       System.out.println("1");
       return forwardPath;
