@@ -109,15 +109,10 @@ public class MainController {
 			
 		try {
 			if(sMemberId == null || sMemberId == "") {
-					
 					forwardPath = "member_login_register_form";
 			}
-			
 			wishListService.insertWishList(new WishList(-1, sMemberId, productNo, null));
-				
-			
 			forwardPath = "redirect:unishop_main";
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -132,25 +127,24 @@ public class MainController {
 		@RequestMapping(value = "/account_member_detail")
 		public String account_member_detail(Model model, HttpSession session) {
 			String forwardPath = "";
+			String sMemberId = (String) session.getAttribute("sMemberId");
 			try {
-				String sMemberId = (String) session.getAttribute("sMemberId");
 				if(sMemberId == null || sMemberId == "") {
-					
 					forwardPath = "member_login_register_form";
 				}
-//				memberService.selectMemberById(member_id);
-				ArrayList<Jumun> jumunList = (ArrayList<Jumun>) jumunService.selectById(sMemberId);
-				ArrayList<WishList> wishList = wishListService.selectWishListAll(sMemberId);
-				//Question question = questionService.selectByNo(question_no);
-				ArrayList<Question> questionList = questionService.selectById(sMemberId);
-				
-				//ArrayList<Question> questionList = questionService
-				//session.setAttribute("sMemberId", member_id);
-				//model.addAttribute("question", question);
-				model.addAttribute("jumunList", jumunList);
-				model.addAttribute("wishList", wishList);
-				model.addAttribute("questionList", questionList);
-				forwardPath = "member_profile_form";
+	//				memberService.selectMemberById(member_id);
+					ArrayList<Jumun> jumunList = (ArrayList<Jumun>) jumunService.selectById(sMemberId);
+					ArrayList<WishList> wishList = wishListService.selectWishListAll(sMemberId);
+					//Question question = questionService.selectByNo(question_no);
+					ArrayList<Question> questionList = questionService.selectById(sMemberId);
+					
+					//ArrayList<Question> questionList = questionService
+					//session.setAttribute("sMemberId", member_id);
+					//model.addAttribute("question", question);
+					model.addAttribute("jumunList", jumunList);
+					model.addAttribute("wishList", wishList);
+					model.addAttribute("questionList", questionList);
+					forwardPath = "member_profile_form";
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 	<jsp:include page="common_top.jsp"/>
     <!-- Off-Canvas Wrapper-->
     <div class="offcanvas-wrapper">
@@ -51,110 +52,245 @@
           </div>
         </div>
       </div>
-      <!-- Featured Products (Grid)-->
+       <!-- Featured Products (Grid)-->
       <section class="container padding-top-3x padding-bottom-3x">
         <h3 class="text-center mb-30">Featured Products</h3>
         <div class="isotope-grid cols-4 mb-2">
           <div class="gutter-sizer"></div>
           <div class="grid-sizer"></div>
-          <!-- Product-->
+			
+		<!-- Product-->
           <div class="grid-item">
             <div class="product-card">
-              <div class="product-badge text-danger">50% Off</div><a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}"><img src="img/shop/products/01.jpg" alt="Product"></a>
+            <c:forEach  items="${productList}" 
+					var="product"  
+					begin="0"  
+					step="1" 
+					end="${productList.size()-8}"
+					varStatus="status">
+	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
+	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
+	              </a>
               <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
               <h4 class="product-price">
-                <del>$99.99</del>$49.99
+              	<span style="size: 1px">$ : ${product.product_price}</span>
               </h4>
               <div class="product-buttons">
-                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
+                <a href="add_wishlist_action?product_no=${product.product_no}">
+	                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
+	                	<i class="icon-heart"></i>
+	                </button>
+                </a>
                 <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
               </div>
+            </c:forEach>  
             </div>
           </div>
-          <!-- Product-->
-          <div class="grid-item">
-            <div class="product-card"><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/02.jpg" alt="Product"></a>
-              <h3 class="product-title"><a href="shop-single.html">Cole Haan Crossbody</a></h3>
-              <h4 class="product-price">$200.00</h4>
-              <div class="product-buttons">
-                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-          <!-- Product-->
+          
+          <!-- Product -->
           <div class="grid-item">
             <div class="product-card">
-                <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star"></i>
-                </div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/03.jpg" alt="Product"></a>
-              <h3 class="product-title"><a href="shop-single.html">Oakley Kickback</a></h3>
-              <h4 class="product-price">$155.00</h4>
-              <div class="product-buttons">
-                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-          <!-- Product-->
-          <div class="grid-item">
-            <div class="product-card"><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/04.jpg" alt="Product"></a>
-              <h3 class="product-title"><a href="shop-single.html">Waist Leather Belt</a></h3>
-              <h4 class="product-price">$47.00</h4>
-              <div class="product-buttons">
-                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-          <!-- Product-->
-          <div class="grid-item">
-            <div class="product-card">
-                <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star"></i><i class="icon-star"></i>
-                </div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/05.jpg" alt="Product"></a>
-              <h3 class="product-title"><a href="shop-single.html">Jordan City Man's Hoodie</a></h3>
-              <h4 class="product-price">$65.00</h4>
-              <div class="product-buttons">
-                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-          <!-- Product-->
-          <div class="grid-item">
-            <div class="product-card">
-              <div class="product-badge text-danger">40% Off</div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/06.jpg" alt="Product"></a>
-              <h3 class="product-title"><a href="shop-single.html">Palace Shell Track Jacket</a></h3>
+            <c:forEach  items="${productList}" 
+					var="product"  
+					begin="1"  
+					step="1" 
+					end="${productList.size()-7}"
+					varStatus="status">
+	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
+	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
+	              </a>
+              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
               <h4 class="product-price">
-                <del>$60.00</del>$36.00
+              	<span style="size: 1px">$ : ${product.product_price}</span>
               </h4>
               <div class="product-buttons">
-                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
+                <a href="add_wishlist_action?product_no=${product.product_no}">
+	                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
+	                	<i class="icon-heart"></i>
+	                </button>
+                </a>
                 <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
               </div>
+            </c:forEach>  
             </div>
           </div>
-          <!-- Product-->
-          <div class="grid-item">
-            <div class="product-card"><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/07.jpg" alt="Product"></a>
-              <h3 class="product-title"><a href="shop-single.html">Stretch Woven Jogger</a></h3>
-              <h4 class="product-price">$69.99</h4>
-              <div class="product-buttons">
-                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-          <!-- Product-->
+          
+          <!-- Product -->
           <div class="grid-item">
             <div class="product-card">
-              <div class="product-badge text-muted">Out of stock</div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/08.jpg" alt="Product"></a>
-              <h3 class="product-title"><a href="shop-single.html">Off the Shoulder Top</a></h3>
-              <h4 class="product-price">$128.00</h4>
+            <c:forEach  items="${productList}" 
+					var="product"  
+					begin="2"  
+					step="1" 
+					end="${productList.size()-6}"
+					varStatus="status">
+	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
+	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
+	              </a>
+              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
+              <h4 class="product-price">
+              	<span style="size: 1px">$ : ${product.product_price}</span>
+              </h4>
               <div class="product-buttons">
-                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button><a class="btn btn-outline-secondary btn-sm" href="shop-single.html">View Details</a>
+                <a href="add_wishlist_action?product_no=${product.product_no}">
+	                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
+	                	<i class="icon-heart"></i>
+	                </button>
+                </a>
+                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
               </div>
+            </c:forEach>  
             </div>
           </div>
+
+          <!-- Product -->
+          <div class="grid-item">
+            <div class="product-card">
+            <c:forEach  items="${productList}" 
+					var="product"  
+					begin="3"  
+					step="1" 
+					end="${productList.size()-5}"
+					varStatus="status">
+	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
+	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
+	              </a>
+              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
+              <h4 class="product-price">
+              	<span style="size: 1px">$ : ${product.product_price}</span>
+              </h4>
+              <div class="product-buttons">
+                <a href="add_wishlist_action?product_no=${product.product_no}">
+	                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
+	                	<i class="icon-heart"></i>
+	                </button>
+                </a>
+                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+              </div>
+            </c:forEach>  
+            </div>
+          </div>
+          
+          <!-- Product -->
+          <div class="grid-item">
+            <div class="product-card">
+            <c:forEach  items="${productList}" 
+					var="product"  
+					begin="4"  
+					step="1" 
+					end="${productList.size()-4}"
+					varStatus="status">
+	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
+	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
+	              </a>
+              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
+              <h4 class="product-price">
+              	<span style="size: 1px">$ : ${product.product_price}</span>
+              </h4>
+              <div class="product-buttons">
+                <a href="add_wishlist_action?product_no=${product.product_no}">
+	                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
+	                	<i class="icon-heart"></i>
+	                </button>
+                </a>
+                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+              </div>
+            </c:forEach>  
+            </div>
+          </div>
+          
+          <!-- Product -->
+          <div class="grid-item">
+            <div class="product-card">
+            <c:forEach  items="${productList}" 
+					var="product"  
+					begin="5"  
+					step="1" 
+					end="${productList.size()-3}"
+					varStatus="status">
+	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
+	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
+	              </a>
+              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
+              <h4 class="product-price">
+              	<span style="size: 1px">$ : ${product.product_price}</span>
+              </h4>
+              <div class="product-buttons">
+                <a href="add_wishlist_action?product_no=${product.product_no}">
+	                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
+	                	<i class="icon-heart"></i>
+	                </button>
+                </a>
+                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+              </div>
+            </c:forEach>  
+            </div>
+          </div>
+          
+          <!-- Product -->
+          <div class="grid-item">
+            <div class="product-card">
+            <c:forEach  items="${productList}" 
+					var="product"  
+					begin="6"  
+					step="1" 
+					end="${productList.size()-2}"
+					varStatus="status">
+	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
+	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
+	              </a>
+              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
+              <h4 class="product-price">
+              	<span style="size: 1px">$ : ${product.product_price}</span>
+              </h4>
+              <div class="product-buttons">
+                <a href="add_wishlist_action?product_no=${product.product_no}">
+	                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
+	                	<i class="icon-heart"></i>
+	                </button>
+                </a>
+                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+              </div>
+            </c:forEach>  
+            </div>
+          </div>
+          
+          <!-- Product -->
+          <div class="grid-item">
+            <div class="product-card">
+            <c:forEach  items="${productList}" 
+					var="product"  
+					begin="7"  
+					step="1" 
+					end="${productList.size()-1}"
+					varStatus="status">
+	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
+	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
+	              </a>
+              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
+              <h4 class="product-price">
+              	<span style="size: 1px">$ : ${product.product_price}</span>
+              </h4>
+              <div class="product-buttons">
+                <a href="add_wishlist_action?product_no=${product.product_no}">
+	                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
+	                	<i class="icon-heart"></i>
+	                </button>
+                </a>
+                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+              </div>
+            </c:forEach>  
+            </div>
+          </div>
+          
+          
+         
+        
+        
+        
+        
+        
+        
         </div>
         <div class="text-center"><a class="btn btn-outline-secondary margin-top-none" href=product_All_List>View All Products</a></div>
       </section>
