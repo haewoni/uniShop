@@ -25,86 +25,45 @@
           <!-- Checkout Adress-->
           <div class="col-xl-9 col-lg-8">
             <div class="checkout-steps">
-            	<a href="jumun_review_form">4. Review</a>
-            	<a class="active" href="jumun_payment_form"><span class="angle"></span>3. Payment</a>
-            	<a href="jumun_delivery_form"><span class="angle"></span>2. Shipping</a>
-            	<a href="jumun_address_form"><span class="angle"></span>1. Address</a></div>
-            <h4>choose paymentMethod</h4>
+            	<a href="jumun_review_form">4. 주문확인</a>
+            	<a class="active" href="jumun_payment_form"><span class="angle"></span>3. 결제정보</a>
+            	<a href="jumun_delivery_form"><span class="angle"></span>2. 배송확인</a>
+            	<a href="jumun_address_form"><span class="angle"></span>1. 주소</a></div>
+            <h4>결제방법을 선택하시오</h4>
             <hr class="padding-bottom-1x">
             <div class="accordion" id="accordion" role="tablist">
               <div class="card">
                 <div class="card-header" role="tab">
-                  <h6><a href="#card" data-toggle="collapse"><i class="icon-columns"></i>Pay with Credit Card</a></h6>
+                  <h6><a href="#card" data-toggle="collapse"><i class="icon-columns"></i>신용카드 결제</a></h6>
                 </div>
                 <div class="collapse show" id="card" data-parent="#accordion" role="tabpanel">
                   <div class="card-body">
-                    <p>We accept following credit cards:&nbsp;<img class="d-inline-block align-middle" src="img/credit-cards.png" style="width: 120px;" alt="Cerdit Cards"></p>
+                    <p>결제 가능한 신용카드:&nbsp;<img class="d-inline-block align-middle" src="img/credit-cards.png" style="width: 120px;" alt="Cerdit Cards"></p>
                     <div class="card-wrapper"></div>
                     <form class="interactive-credit-card row">
                       <div class="form-group col-sm-6">
-                        <input class="form-control" type="text" name="number" placeholder="Card Number" required>
+                        <input class="form-control" type="text" name="card_no" placeholder="카드 번호" required>
                       </div>
                       <div class="form-group col-sm-6">
-                        <input class="form-control" type="text" name="name" placeholder="Full Name" required>
+                        <input class="form-control" type="text" name="card_member_name" placeholder="이름" required>
                       </div>
                       <div class="form-group col-sm-3">
-                        <input class="form-control" type="text" name="expiry" placeholder="MM/YY" required>
+                        <input class="form-control" type="text" name="card_expire_date" placeholder="MM/YY" required>
                       </div>
                       <div class="form-group col-sm-3">
-                        <input class="form-control" type="text" name="cvc" placeholder="CVC" required>
+                        <input class="form-control" type="text" name="card_cvc" placeholder="카드CVC" required>
                       </div>
                       <div class="col-sm-6">
-                        <button class="btn btn-outline-primary btn-block margin-top-none" type="submit">Submit</button>
+                        <button class="btn btn-outline-primary btn-block margin-top-none" type="submit">계속</button>
                       </div>
                     </form>
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <div class="card-header" role="tab">
-                  <h6><a class="collapsed" href="#paypal" data-toggle="collapse"><i class="socicon-paypal"></i>Pay with PayPal</a></h6>
-                </div>
-                <div class="collapse" id="paypal" data-parent="#accordion" role="tabpanel">
-                  <div class="card-body">
-                    <p>PayPal - the safer, easier way to pay</p>
-                    <form class="row" method="post">
-                      <div class="col-sm-6">
-                        <div class="form-group">
-                          <input class="form-control" type="email" placeholder="E-mail" required>
-                        </div>
-                      </div>
-                      <div class="col-sm-6">
-                        <div class="form-group">
-                          <input class="form-control" type="password" placeholder="Password" required>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="d-flex flex-wrap justify-content-between align-items-center"><a class="navi-link" href="#">Forgot password?</a>
-                          <button class="btn btn-outline-primary margin-top-none" type="submit">Log In</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header" role="tab">
-                  <h6><a class="collapsed" href="#points" data-toggle="collapse"><i class="icon-medal"></i>Redeem Reward Points</a></h6>
-                </div>
-                <div class="collapse" id="points" data-parent="#accordion" role="tabpanel">
-                  <div class="card-body">
-                    <p>You currently have<span class="text-medium"> 290</span> Reward Points to spend.</p>
-                    <div class="custom-control custom-checkbox d-block">
-                      <input class="custom-control-input" type="checkbox" id="use_points">
-                      <label class="custom-control-label" for="use_points">Use my Reward Points to pay for this order.</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
             <div class="checkout-footer margin-top-1x">
-              <div class="column"><a class="btn btn-outline-secondary" href="jumun_shipping_form.html"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;Back</span></a></div>
-              <div class="column"><a class="btn btn-primary" href="jumun_review_form.html"><span class="hidden-xs-down">Continue&nbsp;</span><i class="icon-arrow-right"></i></a></div>
+              <div class="column"><a class="btn btn-outline-secondary" href="jumun_shipping_form.html"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;배송으로 돌아가기</span></a></div>
+              <div class="column"><a class="btn btn-primary" href="jumun_review_form.html"><span class="hidden-xs-down">계속&nbsp;</span><i class="icon-arrow-right"></i></a></div>
             </div>
           </div>
           <!-- Sidebar          -->
@@ -113,24 +72,19 @@
               <div class="padding-top-2x hidden-lg-up"></div>
               <!-- Order Summary Widget-->
               <section class="widget widget-order-summary">
-                <h3 class="widget-title">Order Summary</h3>
+                <h3 class="widget-title">주문 요약</h3>
                 <table class="table">
                   <tr>
-                    <td>Cart Subtotal:</td>
-                    <td class="text-medium">$289.68</td>
+                    <td>카트 합계:</td>
+                    <td class="text-medium">${cart_subtotal}</td>
                   </tr>
                   <tr>
-                    <td>Shipping:</td>
-                    <td class="text-medium">$22.50</td>
+                    <td>배송비:</td>
+                    <td class="text-medium"></td>
                   </tr>
                   <tr>
-                    <td>Estimated tax:</td>
-                    <td class="text-medium">$3.42</td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td class="text-lg text-medium">$315.60</td>
-                  </tr>
+                    <td>총 금액:</td>
+                    <td class="text-lg text-medium">${cart_subtotal}</td>
                 </table>
               </section>
             </aside>

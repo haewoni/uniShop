@@ -25,18 +25,18 @@
           <!-- Checkout Reviews-->
           <div class="col-xl-9 col-lg-8">
             <div class="checkout-steps">
-            	<a class="active" href="jumun_review_form">4. Review</a>
-            	<a href="jumun_payment_form"><span class="angle"></span>3. Payment</a>
-            	<a href="jumun_delivery_form"><span class="angle"></span>2. Shipping</a>
-            	<a href="jumun_address_form"><span class="angle"></span>1. Address</a></div>
+            	<a class="active" href="jumun_review_form">4. 주문확인</a>
+            	<a href="jumun_payment_form"><span class="angle"></span>3. 결제정보</a>
+            	<a href="jumun_delivery_form"><span class="angle"></span>2. 배송확인</a>
+            	<a href="jumun_address_form"><span class="angle"></span>1. 주소</a></div>
            	<h4>주문 확인</h4>
             <hr class="padding-bottom-1x">
             <div class="table-responsive shopping-cart">
               <table class="table">
                 <thead>
                   <tr>
-                    <th>Product Name</th>
-                    <th class="text-center">Subtotal</th>
+                    <th>상품 이름</th>
+                    <th class="text-center">금액</th>
                     <th></th>
                   </tr>
                 </thead>
@@ -45,61 +45,61 @@
                     <td>
                       <div class="product-item"><a class="product-thumb" href="shop-single.html"><img src="img/shop/cart/01.jpg" alt="Product"></a>
                         <div class="product-info">
-                          <h4 class="product-title"><a href="shop-single.html">Unionbay Park<small>x 1</small></a></h4><span><em>Size:</em> 10.5</span><span><em>Color:</em> Dark Blue</span>
+                          <h4 class="product-title"><a href="shop-single.html"> ${cart.cart_product_name}<small>x ${cart.cart_qty}</small></a></h4><span><em>사이즈:</em> ${cart.cart_product_size}</span>
                         </div>
                       </div>
                     </td>
-                    <td class="text-center text-lg text-medium">$43.90</td>
-                    <td class="text-center"><a class="btn btn-outline-primary btn-sm" href="cart.html">Edit</a></td>
+                    <td class="text-center text-lg text-medium">${cart.cart_tot_price}</td>
+                    <td class="text-center"><a class="btn btn-outline-primary btn-sm" href="cart.html">수정</a></td>
                   </tr>
                   <tr>
                     <td>
                       <div class="product-item"><a class="product-thumb" href="shop-single.html"><img src="img/shop/cart/02.jpg" alt="Product"></a>
                         <div class="product-info">
-                          <h4 class="product-title"><a href="shop-single.html">Daily Fabric Cap<small>x 2</small></a></h4><span><em>Size:</em> XL</span><span><em>Color:</em> Black</span>
+                          <h4 class="product-title"><a href="shop-single.html">Daily Fabric Cap<small>x 2</small></a></h4><span><em>사이즈:</em> XL</span><span><em>색상:</em> Black</span>
                         </div>
                       </div>
                     </td>
                     <td class="text-center text-lg text-medium">$24.89</td>
-                    <td class="text-center"><a class="btn btn-outline-primary btn-sm" href="cart.html">Edit</a></td>
+                    <td class="text-center"><a class="btn btn-outline-primary btn-sm" href="cart.html">수정</a></td>
                   </tr>
                   <tr>
                     <td>
                       <div class="product-item"><a class="product-thumb" href="shop-single.html"><img src="img/shop/cart/03.jpg" alt="Product"></a>
                         <div class="product-info">
-                          <h4 class="product-title"><a href="shop-single.html">Cole Haan Crossbody<small>x 1</small></a></h4><span><em>Size:</em> -</span><span><em>Color:</em> Turquoise</span>
+                          <h4 class="product-title"><a href="shop-single.html">Cole Haan Crossbody<small>x 1</small></a></h4><span><em>사이즈:</em> -</span><span><em>색상:</em> Turquoise</span>
                         </div>
                       </div>
                     </td>
                     <td class="text-center text-lg text-medium">$200.00</td>
-                    <td class="text-center"><a class="btn btn-outline-primary btn-sm" href="cart.html">Edit</a></td>
+                    <td class="text-center"><a class="btn btn-outline-primary btn-sm" href="cart.html">수정</a></td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <div class="shopping-cart-footer">
               <div class="column"></div>
-              <div class="column text-lg">Subtotal: <span class="text-medium">$289.68</span></div>
+              <div class="column text-lg">카트 합계: <span class="text-medium">$289.68</span></div>
             </div>
             <div class="row padding-top-1x mt-3">
               <div class="col-sm-6">
-                <h5>Shipping to:</h5>
+                <h5>받는분:</h5>
                 <ul class="list-unstyled">
-                  <li><span class="text-muted">Client:</span>Daniel Adams</li>
-                  <li><span class="text-muted">Address:</span>44 Shirley Ave. West Chicago, IL 60185, USA</li>
-                  <li><span class="text-muted">Phone:</span>+1(808) 764 554 330</li>
+                  <li><span class="text-muted">이름:</span>${loginMember.member_name}</li>
+                  <li><span class="text-muted">주소:</span>${loginMember.member_address1}</li>
+                  <li><span class="text-muted">연락처:</span>${loginMember.member_phone}</li>
                 </ul>
               </div>
               <div class="col-sm-6">
-                <h5>Payment method:</h5>
+                <h5>결제 수단:</h5>
                 <ul class="list-unstyled">
-                  <li><span class="text-muted">Credit Card:</span>**** **** **** 5300</li>
+                  <li><span class="text-muted">카드 번호:</span>${createJumun.card_no}</li>
                 </ul>
               </div>
             </div>
             <div class="checkout-footer margin-top-1x">
-              <div class="column hidden-xs-down"><a class="btn btn-outline-secondary" href="jumun_payment_form.html"><i class="icon-arrow-left"></i>&nbsp;Back</a></div>
-              <div class="column"><a class="btn btn-primary" href="jumun_complete_form.html">Complete Order</a></div>
+              <div class="column hidden-xs-down"><a class="btn btn-outline-secondary" href="jumun_payment_form.html"><i class="icon-arrow-left"></i>&nbsp;결제로 돌아가기</a></div>
+              <div class="column"><a class="btn btn-primary" href="jumun_complete_form.html">계속</a></div>
             </div>
           </div>
           <!-- Sidebar          -->
@@ -108,24 +108,19 @@
               <div class="padding-top-2x hidden-lg-up"></div>
               <!-- Order Summary Widget-->
               <section class="widget widget-order-summary">
-                <h3 class="widget-title">Order Summary</h3>
+                <h3 class="widget-title">주문 요약</h3>
                 <table class="table">
                   <tr>
-                    <td>Cart Subtotal:</td>
-                    <td class="text-medium">$289.68</td>
+                    <td>카트 합계:</td>
+                    <td class="text-medium">${cart_subtotal}</td>
                   </tr>
                   <tr>
-                    <td>Shipping:</td>
-                    <td class="text-medium">$22.50</td>
+                    <td>배송비:</td>
+                    <td class="text-medium"></td>
                   </tr>
                   <tr>
-                    <td>Estimated tax:</td>
-                    <td class="text-medium">$3.42</td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td class="text-lg text-medium">$315.60</td>
-                  </tr>
+                    <td>총 금액:</td>
+                    <td class="text-lg text-medium">${cart_subtotal}</td>
                 </table>
               </section>
             </aside>
