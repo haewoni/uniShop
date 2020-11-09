@@ -59,7 +59,7 @@ public class MemberController {
 
 			session.setAttribute("loginMember",loginMember);//멤버의 객체반환
 			session.setAttribute("sMemberId", member_id);//멤버의아이디 보여줌
-
+			
 			forwardPath = "redirect:unishop_main";
 		} catch (PasswordMismatchException e) {
 			model.addAttribute("msg2", e.getMessage());
