@@ -101,9 +101,7 @@
                 </div>
               </div>
             </aside>
-
-			<nav class="list-group"><a class="list-group-item with-badge" href="member_jumun_list"><i class="icon-bag"></i>주문 목록<span class="badge badge-primary badge-pill">6</span></a><a class="list-group-item" href="member_profile_form"><i class="icon-head"></i>내 정보</a><a class="list-group-item active" href="member_address_detail"><i class="icon-map"></i>내 주소</a><a class="list-group-item with-badge" href="member_wishlist_detail"><i class="icon-heart"></i>찜 목록<span class="badge badge-primary badge-pill">3</span></a><a class="list-group-item with-badge" href="member_qna_list"><i class="icon-tag"></i>질문 목록<span class="badge badge-primary badge-pill">4</span></a></nav>          </div>
-
+            <nav class="list-group"><a class="list-group-item with-badge active" href="account-orders.html"><i class="icon-bag"></i>Orders<span class="badge badge-primary badge-pill">6</span></a><a class="list-group-item" href="account-profile.html"><i class="icon-head"></i>Profile</a><a class="list-group-item" href="account-address.html"><i class="icon-map"></i>Addresses</a><a class="list-group-item with-badge" href="account-wishlist.html"><i class="icon-heart"></i>Wishlist<span class="badge badge-primary badge-pill">3</span></a><a class="list-group-item with-badge" href="account-tickets.html"><i class="icon-tag"></i>My Tickets<span class="badge badge-primary badge-pill">4</span></a></nav>
           </div>
           <div class="col-lg-8">
             <div class="padding-top-2x mt-2 hidden-lg-up"></div>
@@ -119,9 +117,9 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="text-medium navi-link" href="#;" data-toggle="modal" data-target="#orderDetails">78A643CD409</a></td>
+                    <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails">78A643CD409</a></td>
                     <td>August 08, 2017</td>
-                    <td><span class="text-danger">${jumunList.jumun_detail.jumun_status}</span></td>
+                    <td><span class="text-danger">Canceled</span></td>
                     <td><span class="text-medium">$760.50</span></td>
                   </tr>
                   <tr>

@@ -148,6 +148,40 @@ public class MemberController {
 		}
 		return forwardPath;
 	}
+	
+	//멤버의 주소조회
+	@RequestMapping("/member_address_detail")
+	public String member_address_detail(HttpSession session) {
+		String forwardPath ="";
+		String sMemberId = (String) session.getAttribute("sMemberId");
+		if(sMemberId == null || sMemberId=="") {
+			forwardPath = "member_login_register_form";
+		}
+		forwardPath ="member_address_detail";
+		return forwardPath;
+	}
+	//멤버의 주소변경
+	@RequestMapping(value = "member_address_update_action", method = RequestMethod.GET)
+	public String member_address_update_action() {
+		return "member_address_detail";
+	}
+	@RequestMapping(value = "member_address_update_action", method = RequestMethod.POST)
+	public String member_address_update_action(Model model, HttpSession session,@ModelAttribute Member updateMember) {
+		String forwardPath = "";
+		try {
+			Member loginMember = (Member)session.getAttribute("loginMember");
+			updateMember.setMember_id(loginMember.getMember_id());
+			memberService.updateMember(updateMember);
+			session.setAttribute("loginMember", updateMember);
+			forwardPath = "redirect:member_address_detail";
+		} catch (Exception e) {
+			e.printStackTrace();
+			forwardPath = "member_profile_form";
+		}
+		return forwardPath;
+	}
+	
+	
 	//멤버의 주문내역
 	@RequestMapping("/member_jumun_list")
 	public String member_jumun_list(Model model, HttpSession session) {
