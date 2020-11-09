@@ -47,41 +47,41 @@
 			 </div>
 			<div class="col-lg-8">
             <div class="padding-top-2x mt-2 hidden-lg-up"></div>
-            <form class="row">
+            <form class="row" action="member_profile_update_action" method="post">
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="account-fn">아이디</label>
-                  <input class="form-control" type="text" id="account-fn" value="${loginMember.member_id}" disabled>
+                  <input class="form-control" type="text" name="member_id" value="${loginMember.member_id}" disabled>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="account-ln">이름</label>
-                  <input class="form-control" type="text" id="account-ln" value="${loginMember.member_name}" required>
+                  <input class="form-control" type="text" name="member_name" value="${loginMember.member_name}" required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="account-email">이메일</label>
-                  <input class="form-control" type="text" id="account-email" value="${loginMember.member_email}" required>
+                  <input class="form-control" type="text" name="member_email" value="${loginMember.member_email}" required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="account-phone">전화번호</label>
-                  <input class="form-control" type="text" id="account-phone" value="${loginMember.member_phone}" required>
+                  <input class="form-control" type="text" name="member_phone" value="${loginMember.member_phone}" required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="account-pass">새로운 비밀번호</label>
-                  <input class="form-control" type="text" id="account-pass">
+                  <input class="form-control" type="password" name="member_password" value="${loginMember.member_password}">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="account-confirm-pass">비밀번호 재입력</label>
-                  <input class="form-control" type="text" id="account-confirm-pass">
+                  <input class="form-control" type="password" name="member_pass">
                 </div>
               </div>
               <div class="col-12">
@@ -91,7 +91,7 @@
                     <input class="custom-control-input" type="checkbox" id="subscribe_me" checked>
                     <label class="custom-control-label" for="subscribe_me">Subscribe me to Newsletter</label>
                   </div>
-                  <button class="btn btn-primary margin-right-none" type="button" data-toast data-toast-position="topRight" data-toast-type="success" data-toast-icon="icon-circle-check" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Update Profile</button>
+                  <button class="btn btn-primary margin-right-none" type="submit" data-toast data-toast-position="topRight" data-toast-type="success" data-toast-icon="icon-circle-check" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Update Profile</button>
                 </div>
               </div>
            
