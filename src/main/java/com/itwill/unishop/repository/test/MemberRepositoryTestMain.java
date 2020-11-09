@@ -31,6 +31,20 @@ public class MemberRepositoryTestMain {
 		//주소 찾아보기
 		//System.out.println(memberRepository.selectAddressById("uni1"));
 		//System.out.println(memberRepository.isExistMember("uni5"));
+		Member member1 = memberRepository.selectMemberById("uni22");
+//		System.out.println(member1);
+//		member1.setMember_address_name("우리집");
+//		member1.setMember_address_country("대한민국");
+//		member1.setMember_address_city("서울");
+//		member1.setMember_address_zipcode("123456");
+//		member1.setMember_address1("양천 동서로 11");
+//		member1.setMember_address2("101동 1001호");
+//		System.out.println(memberRepository.updateAddress(member1));
+//		System.out.println(member1);
+		member1.setMember_email("uni234@gmail.com");
+		memberRepository.updateMember(member1);
+		System.out.println(member1);
+		
 	}
 
 }

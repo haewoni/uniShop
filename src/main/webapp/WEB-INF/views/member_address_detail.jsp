@@ -53,13 +53,13 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="account-company">주소명</label>
-                  <input class="form-control" type="text" id="account-company" value="${loginMember.member_address_name }">
+                  <input class="form-control" type="text" name="member_address_name" value="${loginMember.member_address_name }">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="account-country">국가</label>
-                  <select class="form-control" id="account-country">
+                  <select class="form-control" name="member_address_country">
                     <option>Choose country</option>
                     <option>United State</option>
                     <option>Canada</option>
@@ -73,7 +73,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="account-city">도시</label>
-                  <select class="form-control" id="account-city">
+                  <select class="form-control" name="member_address_city">
                     <option>Choose city</option>
                     <option>Amsterdam</option>
                     <option>Berlin</option>
@@ -86,19 +86,19 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="account-zip">우편번호</label>
-                  <input class="form-control" type="text" id="account-zip" value="${loginMember.member_address_zipcode}" required>
+                  <input class="form-control" type="text" name="member_address_zipcode" value="${loginMember.member_address_zipcode}" required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="account-address1">주소1</label>
-                  <input class="form-control" type="text" id="account-address1" value="${loginMember.member_address1}" required>
+                  <input class="form-control" type="text" name="member_address1" value="${loginMember.member_address1}" required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="account-address2">상세주소</label>
-                  <input class="form-control" type="text" id="account-address2" value="${loginMember.member_address2}" required>
+                  <input class="form-control" type="text" name="member_address2" value="${loginMember.member_address2}" required>
                 </div>
               </div>
               <div class="col-12 padding-top-1x">
@@ -110,7 +110,7 @@
                 </div>
                 <hr class="margin-top-1x margin-bottom-1x">
                 <div class="text-right">
-                  <button class="btn btn-primary margin-bottom-none" type="button" data-toast data-toast-position="topRight" data-toast-type="success" data-toast-icon="icon-circle-check" data-toast-title="Success!" data-toast-message="Your address updated successfuly.">Update Address</button>
+                  <button class="btn btn-primary margin-bottom-none" type="submit" data-toast data-toast-position="topRight" data-toast-type="success" data-toast-icon="icon-circle-check" data-toast-title="Success!" data-toast-message="Your address updated successfuly.">Update Address</button>
                 </div>
               </div>
             </form>

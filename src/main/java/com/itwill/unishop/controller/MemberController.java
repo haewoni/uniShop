@@ -134,16 +134,26 @@ public class MemberController {
 	}
 
 	@RequestMapping(value = "/member_profile_update_action", method = RequestMethod.POST)
-	public String member_update_action_POST(Model model, HttpSession session, @ModelAttribute Member updateMember) {
+	public String member_update_action_POST(Model model, HttpSession session, @RequestParam String member_name, @RequestParam String member_password
+			, @RequestParam String member_pass, @RequestParam String member_email, 
+			@RequestParam String member_phone/*@ModelAttribute Member updateMember*/) {
 		String forwardPath = "";
 		try {
+			//System.out.println("업데이트가 됩니다");
 			Member loginMember = (Member)session.getAttribute("loginMember");
-			updateMember.setMember_id(loginMember.getMember_id());
-			memberService.updateMember(updateMember);
-			session.setAttribute("loginMember", updateMember);
+			loginMember.setMember_id(loginMember.getMember_id());
+			loginMember.setMember_name(member_name);
+			if(member_password.equals(member_pass)) {
+				loginMember.setMember_password(member_password);
+			}
+			loginMember.setMember_email(member_email);
+			loginMember.setMember_phone(member_phone);
+			memberService.updateMember(loginMember);
+			session.setAttribute("loginMember", loginMember);
 			forwardPath = "redirect:member_profile_form";
 		} catch (Exception e) {
 			e.printStackTrace();
+			Member loginMember = (Member)session.getAttribute("loginMember");
 			forwardPath = "member_profile_form";
 		}
 		return forwardPath;
@@ -166,13 +176,21 @@ public class MemberController {
 		return "member_address_detail";
 	}
 	@RequestMapping(value = "member_address_update_action", method = RequestMethod.POST)
-	public String member_address_update_action(Model model, HttpSession session,@ModelAttribute Member updateMember) {
+	public String member_address_update_action(Model model, HttpSession session, @RequestParam String member_address_name,
+			@RequestParam String member_address_country,@RequestParam String member_address_city,@RequestParam String member_address_zipcode,
+			@RequestParam String member_address1,@RequestParam String member_address2/*@ModelAttribute Member updateMember*/) {
 		String forwardPath = "";
 		try {
 			Member loginMember = (Member)session.getAttribute("loginMember");
-			updateMember.setMember_id(loginMember.getMember_id());
-			memberService.updateMember(updateMember);
-			session.setAttribute("loginMember", updateMember);
+			loginMember.setMember_id(loginMember.getMember_id());
+			loginMember.setMember_address_name(member_address_name);
+			loginMember.setMember_address_country(member_address_country);
+			loginMember.setMember_address_city(member_address_city);
+			loginMember.setMember_address_zipcode(member_address_zipcode);
+			loginMember.setMember_address1(member_address1);
+			loginMember.setMember_address2(member_address2);
+			memberService.updateAddress(loginMember);
+			session.setAttribute("loginMember", loginMember);
 			forwardPath = "redirect:member_address_detail";
 		} catch (Exception e) {
 			e.printStackTrace();
