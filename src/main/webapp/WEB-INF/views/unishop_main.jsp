@@ -81,7 +81,9 @@
 	                	<i class="icon-heart"></i>
 	                </button>
                 </a>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                <a href="add_wishlist_action?product_no=${product.product_no}">
+                	<button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+              	</a>
               </div>
             </c:forEach>  
             </div>
@@ -109,7 +111,9 @@
 	                	<i class="icon-heart"></i>
 	                </button>
                 </a>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                <a href="add_wishlist_action?product_no=${product.product_no}">
+                	<button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+              	</a>
               </div>
             </c:forEach>  
             </div>
@@ -137,7 +141,9 @@
 	                	<i class="icon-heart"></i>
 	                </button>
                 </a>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                <a href="add_wishlist_action?product_no=${product.product_no}">
+                	<button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+              	</a>
               </div>
             </c:forEach>  
             </div>
@@ -165,7 +171,9 @@
 	                	<i class="icon-heart"></i>
 	                </button>
                 </a>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                <a href="add_wishlist_action?product_no=${product.product_no}">
+                	<button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+              	</a>
               </div>
             </c:forEach>  
             </div>
@@ -193,7 +201,9 @@
 	                	<i class="icon-heart"></i>
 	                </button>
                 </a>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                <a href="add_wishlist_action?product_no=${product.product_no}">
+                	<button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+              	</a>
               </div>
             </c:forEach>  
             </div>
@@ -221,7 +231,9 @@
 	                	<i class="icon-heart"></i>
 	                </button>
                 </a>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                <a href="add_wishlist_action?product_no=${product.product_no}">
+                	<button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+              	</a>
               </div>
             </c:forEach>  
             </div>
@@ -249,7 +261,9 @@
 	                	<i class="icon-heart"></i>
 	                </button>
                 </a>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                <a href="add_wishlist_action?product_no=${product.product_no}">
+                	<button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+              	</a>
               </div>
             </c:forEach>  
             </div>
@@ -277,20 +291,14 @@
 	                	<i class="icon-heart"></i>
 	                </button>
                 </a>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                <a href="add_wishlist_action?product_no=${product.product_no}">
+                	<button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+              	</a>
               </div>
             </c:forEach>  
             </div>
           </div>
           
-          
-         
-        
-        
-        
-        
-        
-        
         </div>
         <div class="text-center"><a class="btn btn-outline-secondary margin-top-none" href=product_All_List>View All Products</a></div>
       </section>
@@ -311,23 +319,23 @@
               <h3 class="widget-title">Top Sellers</h3>
               <!-- Entry-->
               <div class="entry">
-                <div class="entry-thumb"><a href="shop-single.html"><img src="img/shop/widget/01.jpg" alt="Product"></a></div>
+                <div class="entry-thumb"><a href="shop_product_detail?product_no=429067"><img src="IMAGE/429067_1.png" alt="Product"></a></div>
                 <div class="entry-content">
-                  <h4 class="entry-title"><a href="shop-single.html">Oakley Kickback</a></h4><span class="entry-meta">$155.00</span>
+                  <h4 class="entry-title"><a href="shop_product_detail?product_no=429067">EFM터틀넥스웨터(긴팔)</a></h4><span class="entry-meta">$155.00</span>
                 </div>
               </div>
               <!-- Entry-->
               <div class="entry">
-                <div class="entry-thumb"><a href="shop-single.html"><img src="img/shop/widget/03.jpg" alt="Product"></a></div>
+                <div class="entry-thumb"><a href="shop_product_detail?product_no=432324"><img src="IMAGE/432324_1.png" alt="Product"></a></div>
                 <div class="entry-content">
-                  <h4 class="entry-title"><a href="shop-single.html">Vented Straw Fedora</a></h4><span class="entry-meta">$49.50</span>
+                  <h4 class="entry-title"><a href="shop_product_detail?product_no=432324">JWA로우게이지크루넥스웨터(긴팔)</a></h4><span class="entry-meta">$49.50</span>
                 </div>
               </div>
               <!-- Entry-->
               <div class="entry">
-                <div class="entry-thumb"><a href="shop-single.html"><img src="img/shop/widget/04.jpg" alt="Product"></a></div>
+                <div class="entry-thumb"><a href="shop_product_detail?product_no=429461"><img src="IMAGE/429461_1.png" alt="Product"></a></div>
                 <div class="entry-content">
-                  <h4 class="entry-title"><a href="shop-single.html">Big Wordmark Tote</a></h4><span class="entry-meta">$29.99</span>
+                  <h4 class="entry-title"><a href="shop_product_detail?product_no=429461">하이브리드다운코트</a></h4><span class="entry-meta">$29.99</span>
                 </div>
               </div><a class="btn btn-outline-secondary btn-sm mb-0" href="product_All_List">View More</a>
             </div>
@@ -337,23 +345,23 @@
               <h3 class="widget-title">New Arrivals</h3>
               <!-- Entry-->
               <div class="entry">
-                <div class="entry-thumb"><a href="shop-single.html"><img src="img/shop/widget/05.jpg" alt="Product"></a></div>
+                <div class="entry-thumb"><a href="shop_product_detail?product_no=432710"><img src="IMAGE/432710_1.png" alt="Product"></a></div>
                 <div class="entry-content">
-                  <h4 class="entry-title"><a href="shop-single.html">Union Park</a></h4><span class="entry-meta">$49.99</span>
+                  <h4 class="entry-title"><a href="shop_product_detail?product_no=432710">JWA스텐칼라코트</a></h4><span class="entry-meta">$49.99</span>
                 </div>
               </div>
               <!-- Entry-->
               <div class="entry">
-                <div class="entry-thumb"><a href="shop-single.html"><img src="img/shop/widget/06.jpg" alt="Product"></a></div>
+                <div class="entry-thumb"><a href="shop_product_detail?product_no=428856"><img src="IMAGE/428856_1.png" alt="Product"></a></div>
                 <div class="entry-content">
-                  <h4 class="entry-title"><a href="shop-single.html">Cole Haan Crossbody</a></h4><span class="entry-meta">$200.00</span>
+                  <h4 class="entry-title"><a href="shop_product_detail?product_no=428856">EFM V넥스웨터(긴팔)</a></h4><span class="entry-meta">$200.00</span>
                 </div>
               </div>
               <!-- Entry-->
               <div class="entry">
-                <div class="entry-thumb"><a href="shop-single.html"><img src="img/shop/widget/07.jpg" alt="Product"></a></div>
+                <div class="entry-thumb"><a href="shop_product_detail?product_no=428867"><img src="IMAGE/428867_1.png" alt="Product"></a></div>
                 <div class="entry-content">
-                  <h4 class="entry-title"><a href="shop-single.html">Skagen Holst Watch</a></h4><span class="entry-meta">$145.00</span>
+                  <h4 class="entry-title"><a href="shop_product_detail?product_no=428867">수플레얀하이넥스웨터(긴팔)</a></h4><span class="entry-meta">$145.00</span>
                 </div>
               </div><a class="btn btn-outline-secondary btn-sm mb-0" href="product_All_List">View More</a>
             </div>
@@ -363,16 +371,16 @@
               <h3 class="widget-title">Best Rated</h3>
               <!-- Entry-->
               <div class="entry">
-                <div class="entry-thumb"><a href="shop-single.html"><img src="img/shop/widget/08.jpg" alt="Product"></a></div>
+                <div class="entry-thumb"><a href="shop_product_detail?product_no=430929"><img src="IMAGE/430929_1.png" alt="Product"></a></div>
                 <div class="entry-content">
-                  <h4 class="entry-title"><a href="shop-single.html">Jordan's City Hoodie</a></h4><span class="entry-meta">$65.00</span>
+                  <h4 class="entry-title"><a href="shop_product_detail?product_no=430929">U메리노블렌드V넥가디건(긴팔)</a></h4><span class="entry-meta">$65.00</span>
                 </div>
               </div>
               <!-- Entry-->
               <div class="entry">
-                <div class="entry-thumb"><a href="shop-single.html"><img src="img/shop/widget/09.jpg" alt="Product"></a></div>
+                <div class="entry-thumb"><a href="shop_product_detail?product_no=432729"><img src="IMAGE/432729_1.png" alt="Product"></a></div>
                 <div class="entry-content">
-                  <h4 class="entry-title"><a href="shop-single.html">Palace Shell Track Jacket</a></h4><span class="entry-meta">$36.99</span>
+                  <h4 class="entry-title"><a href="shop_product_detail?product_no=432729">U메리노블렌드크루넥스웨터(긴팔)</a></h4><span class="entry-meta">$36.99</span>
                 </div>
               </div>
               <!-- Entry-->

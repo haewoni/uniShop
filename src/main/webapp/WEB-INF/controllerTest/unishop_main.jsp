@@ -102,7 +102,7 @@
 			
 				<li>
 					<a href="shop_product_detail?product_no=429067">
-						<img src=IMAGE/429067_1.png width=100, height=100>EFM터틀넥스웨터(긴팔)
+						<img src="IMAGE/429067_1.png width=100, height=100">EFM터틀넥스웨터(긴팔)
 					</a>
 					<a href="add_wishlist_action?product_no=${product.product_no}">
 						<input type="image" src="IMAGE/heart.png" width="20" height="20">
@@ -110,7 +110,7 @@
 				</li>
 				<li>
 					<a href="shop_product_detail?product_no=432324">
-						<img src=IMAGE/432324_1.png width=100, height=100>JWA로우게이지크루넥스웨터(긴팔)
+						<img src="IMAGE/432324_1.png" width=100, height=100>JWA로우게이지크루넥스웨터(긴팔)
 					</a>
 					<a href="add_wishlist_action?product_no=${product.product_no}">
 						<input type="image" src="IMAGE/heart.png" width="20" height="20">
@@ -118,7 +118,7 @@
 				</li>
 				<li>
 					<a href="shop_product_detail?product_no=429461">
-						<img src=IMAGE/429461_1.png width=100, height=100>하이브리드다운코트
+						<img src="IMAGE/429461_1.png" width=100, height=100>하이브리드다운코트
 					</a>
 					<a href="add_wishlist_action?product_no=${product.product_no}">
 						<input type="image" src="IMAGE/heart.png" width="20" height="20">
@@ -139,7 +139,7 @@
 				<ol>	
 					<li>
 						<a href="shop_product_detail?product_no=432710">
-							<img src=IMAGE/432710_1.png width=100, height=100>JWA스텐칼라코트
+							<img src="IMAGE/432710_1.png" width=100, height=100>JWA스텐칼라코트
 						</a>
 						<a href="add_wishlist_action?product_no=${product.product_no}">
 							<input type="image" src="IMAGE/heart.png" width="20" height="20">
@@ -147,7 +147,7 @@
 					</li>
 					<li>
 						<a href="shop_product_detail?product_no=428856">
-							<img src=IMAGE/428856_1.png width=100, height=100>EFM V넥스웨터(긴팔)
+							<img src="IMAGE/428856_1.png" width=100, height=100>EFM V넥스웨터(긴팔)
 						</a>
 						<a href="add_wishlist_action?product_no=${product.product_no}">
 							<input type="image" src="IMAGE/heart.png" width="20" height="20">
@@ -155,7 +155,7 @@
 					</li>
 					<li>
 						<a href="shop_product_detail?product_no=428867">
-							<img src=IMAGE/428867_1.png width=100, height=100>수플레얀하이넥스웨터(긴팔)
+							<img src="IMAGE/428867_1.png" width=100, height=100>수플레얀하이넥스웨터(긴팔)
 						</a>
 						<a href="add_wishlist_action?product_no=${product.product_no}">
 							<input type="image" src="IMAGE/heart.png" width="20" height="20">
@@ -174,7 +174,7 @@
 				<ol>	
 					<li>
 						<a href="shop_product_detail?product_no=430929">
-							<img src=IMAGE/430929_1.png width=100, height=100>U메리노블렌드V넥가디건(긴팔)
+							<img src="IMAGE/430929_1.png" width=100, height=100>U메리노블렌드V넥가디건(긴팔)
 						</a>
 						<a href="add_wishlist_action?product_no=${product.product_no}">
 							<input type="image" src="IMAGE/heart.png" width="20" height="20">
@@ -182,7 +182,7 @@
 					</li>
 					<li>
 						<a href="shop_product_detail?product_no=432729">
-							<img src=IMAGE/432729_1.png width=100, height=100>U메리노블렌드크루넥스웨터(긴팔)
+							<img src="IMAGE/432729_1.png" width=100, height=100>U메리노블렌드크루넥스웨터(긴팔)
 						</a>
 						<a href="add_wishlist_action?product_no=${product.product_no}">
 							<input type="image" src="IMAGE/heart.png" width="20" height="20">
