@@ -7,36 +7,52 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title">새로운 질문 등록하기</h4>
+            <h4 class="modal-title">Submit New Ticket</h4>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
           <div class="modal-body">
-            <p class="text-muted">답변까지 평균 2일이 소요됩니다. 양해 바랍니다.</p>
+            <p class="text-muted">We normally respond tickets within 2 business days.</p>
             <div class="form-group">
-              <label for="ticket-subject">제목</label>
-              <input class="form-control" type="text" id="question_title" required>
+              <label for="ticket-subject">Subject</label>
+              <input class="form-control" type="text" id="ticket-subject" required>
             </div>
             <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label for="ticket-type">카테고리</label>
-                  <select class="form-control" id="question_category">
-                    <option>선택해주세요</option>
-                    <option>배송</option>
-                    <option>상품</option>
-                    <option>교환/환불</option>
-                    <option>이벤트</option>
+                  <label for="ticket-type">Type</label>
+                  <select class="form-control" id="ticket-type">
+                    <option>Choose type</option>
+                    <option>Website problem</option>
+                    <option>Partner request</option>
+                    <option>Complaint</option>
+                    <option>Info inquiry</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="ticket-priority">Priority</label>
+                  <select class="form-control" id="ticket-priority">
+                    <option>How urgent is your issue?</option>
+                    <option>Urgent</option>
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
                   </select>
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <label for="ticket-description">내용</label>
-              <textarea class="form-control" id="question_content" rows="8" required></textarea>
+              <label for="ticket-description">Description</label>
+              <textarea class="form-control" id="ticket-description" rows="8" required></textarea>
+            </div>
+            <div class="custom-file mb-3">
+              <input class="custom-file-input" type="file" id="file-input">
+              <label class="custom-file-label" for="file-input">Choose file...</label>
             </div>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-primary" type="submit">등록하기</button>
+            <button class="btn btn-primary" type="submit">Submit Ticket</button>
           </div>
         </div>
       </div>
@@ -110,7 +126,7 @@
             </div>
             <hr class="mb-4">
             <div class="text-right">
-              <button class="btn btn-primary margin-bottom-none" data-toggle="modal" data-target="#openQuestion">질문하기</button>
+              <button class="btn btn-primary margin-bottom-none" data-toggle="modal" data-target="#openTicket">질문하기</button>
             </div>
           </div>
         </div>
