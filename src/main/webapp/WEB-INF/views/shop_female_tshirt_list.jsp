@@ -225,7 +225,8 @@
 											data-toggle="tooltip" title="Whishlist">
 											<i class="icon-heart"></i>
 										</button>
-									</a> <a href="shop_product_detail?product_no=${product.product_no}">
+									</a> 
+									<a href="shop_product_detail?product_no=${product.product_no}">
 										<button class="btn btn-outline-primary btn-sm">detail</button>
 									</a>
 

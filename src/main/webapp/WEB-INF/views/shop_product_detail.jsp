@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 	<jsp:include page="common_top.jsp"/>
     <!-- Off-Canvas Wrapper-->
     <div class="offcanvas-wrapper">
@@ -11,10 +12,10 @@
           </div>
           <div class="column">
             <ul class="breadcrumbs">
-              <li><a href="index.html">Home</a>
+              <li><a href="unishop_main">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li><a href="shop-grid-ls.html">Shop</a>
+              <li><a href="shop_main">Shop</a>
               </li>
               <li class="separator">&nbsp;</li>
               <li>Single Product</li>
@@ -27,23 +28,24 @@
         <div class="row">
           <!-- Poduct Gallery-->
           <div class="col-md-6">
-            <div class="product-gallery"><span class="product-badge text-danger">30% Off</span>
+            <div class="product-gallery">
               <div class="gallery-wrapper">
-                <div class="gallery-item video-btn text-center"><a href="#" data-toggle="tooltip" data-type="video" data-video="&lt;div class=&quot;wrapper&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;iframe class=&quot;pswp__video&quot; width=&quot;960&quot; height=&quot;640&quot; src=&quot;//www.youtube.com/embed/B81qd2v6alw?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;" title="Watch video"></a></div>
+                <div class="gallery-item video-btn text-center">
+                	</div>
               </div>
               <div class="product-carousel owl-carousel gallery-wrapper">
-                <div class="gallery-item" data-hash="one"><a href="img/shop/single/01.jpg" data-size="1000x667"><img src="img/shop/single/01.jpg" alt="Product"></a></div>
-                <div class="gallery-item" data-hash="two"><a href="img/shop/single/02.jpg" data-size="1000x667"><img src="img/shop/single/02.jpg" alt="Product"></a></div>
-                <div class="gallery-item" data-hash="three"><a href="img/shop/single/03.jpg" data-size="1000x667"><img src="img/shop/single/03.jpg" alt="Product"></a></div>
-                <div class="gallery-item" data-hash="four"><a href="img/shop/single/04.jpg" data-size="1000x667"><img src="img/shop/single/04.jpg" alt="Product"></a></div>
-                <div class="gallery-item" data-hash="five"><a href="img/shop/single/05.jpg" data-size="1000x667"><img src="img/shop/single/05.jpg" alt="Product"></a></div>
+                <div class="gallery-item" data-hash="one"><a href="IMAGE/${product.product_image_1}" data-size="1000x667"><img src="IMAGE/${product.product_image_1}" alt="Product"></a></div>
+                <div class="gallery-item" data-hash="two"><a href="IMAGE/${product.product_image_2}" data-size="1000x667"><img src="IMAGE/${product.product_image_2}" alt="Product"></a></div>
+                <div class="gallery-item" data-hash="three"><a href="IMAGE/${product.product_image_3}" data-size="1000x667"><img src="IMAGE/${product.product_image_3}" alt="Product"></a></div>
+                <div class="gallery-item" data-hash="four"><a href="IMAGE/${product.product_image_4}" data-size="1000x667"><img src="IMAGE/${product.product_image_4}" alt="Product"></a></div>
+                <div class="gallery-item" data-hash="five"><a href="IMAGE/${product.product_image_5}" data-size="1000x667"><img src="IMAGE/${product.product_image_5}" alt="Product"></a></div>
               </div>
               <ul class="product-thumbnails">
-                <li class="active"><a href="#one"><img src="img/shop/single/th01.jpg" alt="Product"></a></li>
-                <li><a href="#two"><img src="img/shop/single/th02.jpg" alt="Product"></a></li>
-                <li><a href="#three"><img src="img/shop/single/th03.jpg" alt="Product"></a></li>
-                <li><a href="#four"><img src="img/shop/single/th04.jpg" alt="Product"></a></li>
-                <li><a href="#five"><img src="img/shop/single/th05.jpg" alt="Product"></a></li>
+                <li class="active"><a href="#one"><img src="IMAGE/${product.product_image_1}" alt="Product"></a></li>
+                <li><a href="#two"><img src="IMAGE/${product.product_image_2}" alt="Product"></a></li>
+                <li><a href="#three"><img src="IMAGE/${product.product_image_3}" alt="Product"></a></li>
+                <li><a href="#four"><img src="IMAGE/${product.product_image_4}" alt="Product"></a></li>
+                <li><a href="#five"><img src="IMAGE/${product.product_image_5}" alt="Product"></a></li>
               </ul>
             </div>
           </div>
@@ -52,49 +54,44 @@
             <div class="padding-top-2x mt-2 hidden-md-up"></div>
               <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star"></i>
               </div><span class="text-muted align-middle">&nbsp;&nbsp;4.2 | 3 customer reviews</span>
-            <h2 class="padding-top-1x text-normal">Reebok Royal CL Jogger 2</h2><span class="h2 d-block">
-              <del class="text-muted text-normal">$68.00</del>&nbsp; $47.60</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatibus quos ea dolore rem, molestias laudantium et explicabo assumenda fugiat deserunt in, facilis laborum excepturi aliquid nobis ipsam deleniti aut? Aliquid sit hic id velit qui fuga nemo suscipit obcaecati. Officia nisi quaerat minus nulla saepe aperiam sint possimus magni veniam provident.</p>
+            <h2 class="padding-top-1x text-normal">${product.product_name}</h2>
+            <span class="h2 d-block">$ : ${product.product_price}</span>
+            <p>
+            	${product.product_desc}
+            </p>
             <div class="row margin-top-1x">
               <div class="col-sm-4">
                 <div class="form-group">
-                  <label for="size">Men's size</label>
-                  <select class="form-control" id="size">
+                  <label for="size">Size</label>
+                  
+                  <select class="cart_product_size" id="size">
                     <option>Chooze size</option>
-                    <option>11.5</option>
-                    <option>11</option>
-                    <option>10.5</option>
-                    <option>10</option>
-                    <option>9.5</option>
-                    <option>9</option>
-                    <option>8.5</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-sm-5">
-                <div class="form-group">
-                  <label for="color">Choose color</label>
-                  <select class="form-control" id="color">
-                    <option>White/Red/Blue</option>
-                    <option>Black/Orange/Green</option>
-                    <option>Gray/Purple/White</option>
-                  </select>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+			   		<option value="L">L</option>
+				  </select>
+                   
                 </div>
               </div>
               <div class="col-sm-3">
                 <div class="form-group">
                   <label for="quantity">Quantity</label>
-                  <select class="form-control" id="quantity">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                  <select class="cart_qty" id="quantity">
+                    <option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
                   </select>
                 </div>
               </div>
             </div>
-            <div class="pt-1 mb-2"><span class="text-medium">SKU:</span> #21457832</div>
+            <div class="pt-1 mb-2"><span class="text-medium">제품번호:</span> #${product.product_no}</div>
             <div class="padding-bottom-1x mb-2"><span class="text-medium">Categories:&nbsp;</span><a class="navi-link" href="#">Men’s shoes,</a><a class="navi-link" href="#"> Snickers,</a><a class="navi-link" href="#"> Sport shoes</a></div>
             <hr class="mb-3">
             <div class="d-flex flex-wrap justify-content-between">
@@ -102,8 +99,20 @@
                 <div class="share-links"><a class="social-button shape-circle sb-facebook" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="socicon-facebook"></i></a><a class="social-button shape-circle sb-twitter" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="socicon-twitter"></i></a><a class="social-button shape-circle sb-instagram" href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="socicon-instagram"></i></a><a class="social-button shape-circle sb-google-plus" href="#" data-toggle="tooltip" data-placement="top" title="Google +"><i class="socicon-googleplus"></i></a></div>
               </div>
               <div class="sp-buttons mt-2 mb-2">
-                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                <button class="btn btn-primary" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="icon-bag"></i> Add to Cart</button>
+              	<span>
+	              	<a href="shop_add_wishlist_action?product_no=${product.product_no}">
+						<button class="btn btn-outline-secondary btn-sm btn-wishlist"
+							data-toggle="tooltip" title="Whishlist">
+							<i class="icon-heart"></i>
+						</button>
+					</a>
+				</span> 
+				<a href="shop_delete_wishlist_action?product_no=${product.product_no}">
+					<button class="btn btn-outline-primary btn-sm">DELETE FROM WISHLIST</button>
+				</a>
+				<a href="shop_add_cart_action?product_no=${product.product_no}">
+					<button class="btn btn-outline-primary btn-sm">Add to Cart</button>
+				</a>  
               </div>
             </div>
           </div>
@@ -117,8 +126,7 @@
             </ul>
             <div class="tab-content">
               <div class="tab-pane fade show active" id="description" role="tabpanel">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error blanditiis a, deserunt magnam pariatur quam suscipit quae. Veniam, deserunt reprehenderit quasi hic recusandae itaque omnis fugiat animi architecto facilis repellendus. Commodi dolorem, eius consectetur. Amet maiores nemo at nobi s aspernatur velit, sequi odio, a veritatis inventore autem esse provident in? Placeat, sunt!</p>
-                <p class="mb-30">Iste assumenda, vitae, aliquam excepturi libero quia ullam quisquam tenetur id sint labore. Pariatur praesentium velit, fugit facere maxime voluptates optio qui? Quidem obcaecati necessitatibus rem aspernatur, mollitia, assumenda explicabo numquam minus eos sapiente totam dicta, laborum dolorum! Vitae distinctio quos non ut fugiat.</p>
+                <p>제품 설명 : ${product.product_desc}</p>
                 <div class="row">
                   <div class="col-sm-6">
                     <dl>
@@ -148,6 +156,7 @@
                   <div class="comment-author-ava"><img src="img/reviews/01.jpg" alt="Review author"></div>
                   <div class="comment-body">
                     <div class="comment-header d-flex flex-wrap justify-content-between">
+                    <a href="shop_product_review_list?product_no=${product.product_no}">해당 상품 리뷰 리스트</a>
                       <h4 class="comment-title">Average quality for the price</h4>
                       <div class="mb-2">
                           <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star"></i><i class="icon-star"></i>
@@ -239,84 +248,45 @@
         <h3 class="text-center padding-top-2x mt-2 padding-bottom-1x">You May Also Like</h3>
         <!-- Carousel-->
         <div class="owl-carousel" data-owl-carousel="{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;margin&quot;: 30, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;576&quot;:{&quot;items&quot;:2},&quot;768&quot;:{&quot;items&quot;:3},&quot;991&quot;:{&quot;items&quot;:4},&quot;1200&quot;:{&quot;items&quot;:4}} }">
+         
+         
+         <c:forEach  items="${recommendedProductList}" 
+				var="product"  
+				begin="0"  
+				step="1" 
+				end="${recommendedProductList.size()}"
+				varStatus="status">
+		
+         
+         
           <!-- Product-->
           <div class="grid-item">
             <div class="product-card">
-              <div class="product-badge text-danger">22% Off</div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/09.jpg" alt="Product"></a>
-              <h3 class="product-title"><a href="shop-single.html">Rocket Dog</a></h3>
+              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
+              	<img src="IMAGE/${product.product_image_1}" alt="Product">
+              </a>
+              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
               <h4 class="product-price">
-                <del>$44.95</del>$34.99
+                <span>$ : ${product.product_price}</span>
               </h4>
               <div class="product-buttons">
-                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              </div>
+				<a href="add_wishlist_action?product_no=${product.product_no}">
+					<button class="btn btn-outline-secondary btn-sm btn-wishlist"
+						data-toggle="tooltip" title="Whishlist">
+						<i class="icon-heart"></i>
+					</button>
+				</a> 
+				<a href="shop_product_detail?product_no=${product.product_no}">
+					<button class="btn btn-outline-primary btn-sm">detail</button>
+				</a>
+
+			  </div>
             </div>
+            
           </div>
-          <!-- Product-->
-          <div class="grid-item">
-            <div class="product-card">
-                <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star"></i>
-                </div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/03.jpg" alt="Product"></a>
-              <h3 class="product-title"><a href="shop-single.html">Oakley Kickback</a></h3>
-              <h4 class="product-price">$155.00</h4>
-              <div class="product-buttons">
-                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-          <!-- Product-->
-          <div class="grid-item">
-            <div class="product-card"><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/12.jpg" alt="Product"></a>
-              <h3 class="product-title"><a href="shop-single.html">Vented Straw Fedora</a></h3>
-              <h4 class="product-price">$49.50</h4>
-              <div class="product-buttons">
-                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-          <!-- Product-->
-          <div class="grid-item">
-            <div class="product-card">
-                <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i>
-                </div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/11.jpg" alt="Product"></a>
-              <h3 class="product-title"><a href="shop-single.html">Top-Sider Fathom</a></h3>
-              <h4 class="product-price">$90.00</h4>
-              <div class="product-buttons">
-                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-          <!-- Product-->
-          <div class="grid-item">
-            <div class="product-card"><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/04.jpg" alt="Product"></a>
-              <h3 class="product-title"><a href="shop-single.html">Waist Leather Belt</a></h3>
-              <h4 class="product-price">$47.00</h4>
-              <div class="product-buttons">
-                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-          <!-- Product-->
-          <div class="grid-item">
-            <div class="product-card">
-              <div class="product-badge text-danger">50% Off</div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/01.jpg" alt="Product"></a>
-              <h3 class="product-title"><a href="shop-single.html">Unionbay Park</a></h3>
-              <h4 class="product-price">
-                <del>$99.99</del>$49.99
-              </h4>
-              <div class="product-buttons">
-                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+         </c:forEach>
+         
+      
       <!-- Site Footer-->
       <jsp:include page="common_bottom.jsp"/>
     </div>
