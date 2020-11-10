@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%@page import="org.apache.ibatis.scripting.xmltags.ForEachSqlNode"%>
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@page import="java.text.DecimalFormat"%>
 <%@ include file="login_check.jspf" %> 
 	<jsp:include page="common_top.jsp"/>
     <!-- Off-Canvas Wrapper-->
@@ -37,45 +43,63 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th>상품 이름</th>
-                    <th class="text-center">금액</th>
+                    <th>상품명</th>
+                    <th class="text-center">수량</th>
+	                <th class="text-center">가격</th>
+                    <th class="text-center"></th>
                     <th></th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      <div class="product-item"><a class="product-thumb" href="shop-single.html"><img src="img/shop/cart/01.jpg" alt="Product"></a>
-                        <div class="product-info">
-                          <h4 class="product-title"><a href="shop-single.html"> ${cart.cart_product_name}<small>x ${cart.cart_qty}</small></a></h4><span><em>사이즈:</em> ${cart.cart_product_size}</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-center text-lg text-medium">${cart.cart_tot_price}</td>
-                    <td class="text-center"><a class="btn btn-outline-primary btn-sm" href="cart.html">수정</a></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="product-item"><a class="product-thumb" href="shop-single.html"><img src="img/shop/cart/02.jpg" alt="Product"></a>
-                        <div class="product-info">
-                          <h4 class="product-title"><a href="shop-single.html">Daily Fabric Cap<small>x 2</small></a></h4><span><em>사이즈:</em> XL</span><span><em>색상:</em> Black</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-center text-lg text-medium">$24.89</td>
-                    <td class="text-center"><a class="btn btn-outline-primary btn-sm" href="cart.html">수정</a></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="product-item"><a class="product-thumb" href="shop-single.html"><img src="img/shop/cart/03.jpg" alt="Product"></a>
-                        <div class="product-info">
-                          <h4 class="product-title"><a href="shop-single.html">Cole Haan Crossbody<small>x 1</small></a></h4><span><em>사이즈:</em> -</span><span><em>색상:</em> Turquoise</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-center text-lg text-medium">$200.00</td>
-                    <td class="text-center"><a class="btn btn-outline-primary btn-sm" href="cart.html">수정</a></td>
-                  </tr>
+                 <c:set var = "sum" value = "0" />
+          
+
+			<c:forEach  items="${cartList}" 
+						var="cart"  
+						begin="0"  
+						step="1" 
+						end="${cartList.size()}"
+						varStatus="status">
+
+
+              <tr>
+              
+                 <td>
+                  <div class="product-item"><a class="product-thumb" href="shop-single.jsp?product_no=${cart.product_no}"><img src="IMAGE/${cart.product_image_1}" alt="Product"></a>
+                    <div class="product-info">
+                      <h4 class="product-title"><a href="shop-single.html">${cart.product_name}</a></h4><span><em>Color:</em>${cart.cart_product_size}</span><span><em>Product No:</em>${cart.product_no}</span>
+                    </div>
+                  </div>
+                 </td>
+
+                 <td class="text-center">
+                  <div class="count-input">
+	                 <select name="cart_qty" class="form-control">
+					    <option value="0" selected="selected">${cart.cart_qty}</option>
+					    <option value="1">1</option>
+					    <option value="2">2</option>
+					    <option value="3">3</option>
+					    <option value="4">4</option>
+					    <option value="5">5</option>
+					    <option value="6">6</option>
+					    <option value="7">7</option>
+					    <option value="8">8</option>
+					    <option value="9">9</option>
+					    <option value="10">10</option>
+					  </select>
+                  </div>
+                 </td>
+                 <td class="text-center text-lg text-medium">${cart.cart_tot_price}</td>
+                <td class="text-center"><a class="remove-from-cart" href="cart_delete_cartNo_action_get?cart_no=${cart.cart_no}" data-toggle="tooltip" title="선택상품 삭제"><i class="icon-cross"></i></a></td>
+                <td>
+	                <input type=submit value="수량" data-toggle="tooltip" title="수량변경" class=TXTFLD onclick="location.href = 'cart_update_action_get'" >
+				    <input type="hidden" name=cart_no value="${cart.cart_no}">
+                </td>
+                
+              </tr>
+            		
+			</c:forEach>
+                
                 </tbody>
               </table>
             </div>
