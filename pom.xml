@@ -56,12 +56,7 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-		<!-- spring-jdbc[SqlSessinTemplate] -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>${org.springframework-version}</version>
-		</dependency>
+		
 		<!-- json  -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
