@@ -7,7 +7,7 @@
       <div class="page-title">
         <div class="container">
           <div class="column">
-            <h1>Checkout</h1>
+            <h1>결제</h1>
           </div>
           <div class="column">
             <ul class="breadcrumbs">
