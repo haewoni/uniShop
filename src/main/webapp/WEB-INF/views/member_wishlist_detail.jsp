@@ -60,9 +60,9 @@
                  <c:forEach items="${wishList}" var="wishList">
                   <tr>
                     <td>
-                      <div class="product-item"><a class="product-thumb" href="shop_product_detail?product_no= ${wishList.product.product_no}"><img src="IMAGE/${wishList.product.product_image_1}" alt="Product"></a>
+                      <div class="product-item"><a class="product-thumb" href="shop_product_detail?product_no=${wishList.product.product_no}"><img src="IMAGE/${wishList.product.product_image_1}" alt="Product"></a>
                         <div class="product-info">
-                          <h4 class="product-title"><a href="shop_product_detail?product_no= ${wishList.product.product_no}">${wishList.product.product_name}</a></h4>
+                          <h4 class="product-title"><a href="shop_product_detail?product_no=${wishList.product.product_no}">${wishList.product.product_name}</a></h4>
                           <div class="text-lg text-medium text-muted">${wishList.product.product_price}</div>
                           <div>Availability:
                             <div class="d-inline text-success">In Stock</div>
