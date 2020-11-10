@@ -178,7 +178,6 @@ public class ProductController {
 		 * 로그인확인 작업되면 여기에 붙여주세용
 		 */
 		String forwardPath= "";
-		String productNo = product_no;
 		String sMemberId = (String) session.getAttribute("sMemberId");
 		/*
 		String sMemberId = (String) session.getAttribute("sMemberId");
@@ -186,7 +185,8 @@ public class ProductController {
 		}
 		템플릿 연결할때 로그인체크 할때 쓰세요. 아래 위시리스트 추가도 마찬가지.
 		*/
-		try {
+		try {	
+			
 			if(sMemberId == null || sMemberId == "") {
 				forwardPath = "member_login_register_form";
 			}	

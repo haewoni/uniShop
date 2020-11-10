@@ -1,3 +1,6 @@
+function shop_add_cart_action() {
+	document.product_detail.alert('asdasd');
+}
 /*
 1. ID : 4~12자 이내의 영어와 숫자로 입력
 2. 첫문자는 숫자로 시작할 수 없음

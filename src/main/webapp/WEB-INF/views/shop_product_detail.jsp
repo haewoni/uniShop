@@ -50,6 +50,7 @@
             </div>
           </div>
           <!-- Product Info-->
+          <form name="product_detail">
           <div class="col-md-6">
             <div class="padding-top-2x mt-2 hidden-md-up"></div>
               <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star"></i>
@@ -64,7 +65,7 @@
                 <div class="form-group">
                   <label for="size">Size</label>
                   
-                  <select class="cart_product_size" id="size">
+                  <select class="cart_product_size" id="cart_product_size" name="cart_product_size">
                     <option>Chooze size</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
@@ -76,7 +77,7 @@
               <div class="col-sm-3">
                 <div class="form-group">
                   <label for="quantity">Quantity</label>
-                  <select class="cart_qty" id="quantity">
+                  <select class="cart_qty" id="cart_qty" name="cart_qty">
                     <option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -110,13 +111,14 @@
 				<a href="shop_delete_wishlist_action?product_no=${product.product_no}">
 					<button class="btn btn-outline-primary btn-sm">DELETE FROM WISHLIST</button>
 				</a>
-				<a href="shop_add_cart_action?product_no=${product.product_no}">
+				<a href="javascript:shop_add_cart_action();">
 					<button class="btn btn-outline-primary btn-sm">Add to Cart</button>
 				</a>  
               </div>
             </div>
           </div>
         </div>
+        </form>
         <!-- Product Tabs-->
         <div class="row padding-top-3x mb-3">
           <div class="col-lg-10 offset-lg-1">
@@ -331,6 +333,6 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/common.js"></script>
   </body>
->>>>>>> refs/heads/jongho
 </html>

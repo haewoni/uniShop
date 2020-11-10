@@ -100,24 +100,7 @@ public class MainController {
 	
 	
 	
-	/********************** wishList 추가하기 **********************/
-	@RequestMapping("/add_wishlist_action")
-	public String add_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
-		String forwardPath = "";
-		String productNo = product_no;
-		String sMemberId = (String) session.getAttribute("sMemberId");
-			
-		try {
-			if(sMemberId == null || sMemberId == "") {
-					forwardPath = "member_login_register_form";
-			}
-			wishListService.insertWishList(new WishList(-1, sMemberId, productNo, null));
-			forwardPath = "redirect:unishop_main";
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return forwardPath;
-	}
+	
 	
 	
 	

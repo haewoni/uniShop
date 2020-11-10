@@ -165,7 +165,7 @@
           </div>
           <div class="column">
             <ul class="breadcrumbs">
-              <li><a href="index.html">Home</a>
+              <li><a href="unishop_main">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
               <li>Shop Grid Left Sidebar</li>
@@ -201,43 +201,42 @@
             <div class="isotope-grid cols-3 mb-2">
               <div class="gutter-sizer"></div>
               <div class="grid-sizer"></div>
-
-
-					<c:forEach items="${productList}" var="product" begin="0" step="1"
-						end="${productList.size()}" varStatus="status">
-
-						<!-- Product-->
-						<div class="grid-item">
-							<div class="product-card">
-								<a class="product-thumb"
-									href="shop_product_detail?product_no=${product.product_no}">
-									<img src="IMAGE/${product.product_image_1}" alt="Product">
-								</a>
-								<h3 class="product-title">
-									<a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a>
-								</h3>
-								<h4 class="product-price">
-									<del>$ : ${product.product_price}</del>
-								</h4>
-								<div class="product-buttons">
-									<a href="add_wishlist_action?product_no=${product.product_no}">
-										<button class="btn btn-outline-secondary btn-sm btn-wishlist"
-											data-toggle="tooltip" title="Whishlist">
-											<i class="icon-heart"></i>
-										</button>
-									</a> 
-									<a href="shop_product_detail?product_no=${product.product_no}">
-										<button class="btn btn-outline-primary btn-sm">detail</button>
-									</a>
-
-								</div>
-							</div>
-						</div>
-					</c:forEach>
-
-
-
-					<!-- Pagination-->
+              
+              <c:forEach  items="${productList}" 
+				var="product"  
+				begin="0"  
+				step="1" 
+				end="${productList.size()}"
+				varStatus="status">
+			 
+              <!-- Product-->
+              <div class="grid-item">
+                <div class="product-card">
+                  <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
+                  	<img src="IMAGE/${product.product_image_1}" alt="Product">
+                  </a>
+                  <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
+                  <h4 class="product-price">
+                    <del>$ : ${product.product_price}</del>
+                  </h4>
+                  <div class="product-buttons">
+                    <a href="shop_add_wishlist_action?product_no=${product.product_no}">
+	                	<button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
+	                		<i class="icon-heart"></i>
+	                	</button>
+                	</a>
+               		<a href="shop_product_detail?product_no=${product.product_no}">
+                		<button class="btn btn-outline-primary btn-sm">detail</button>	
+                	</a>
+               		 
+                  </div>
+                </div>
+              </div>
+              
+             </c:forEach>
+            </div>
+              
+            <!-- Pagination-->
             <nav class="pagination">
               <div class="column">
                 <ul class="pages">
@@ -274,7 +273,7 @@
                           <li><a href="shop_female_tshirt_list">여성 티셔츠</a></li>
                         </ul>
                       </li>
-                      <li><a href="#">Men's</a><span>(423)</span>
+                      <li><a href="#">Bottom</a><span>(423)</span>
                         <ul>
                           <li><a href="#">Boots</a></li>
                           <li><a href="#">Oxfords</a></li>
@@ -306,6 +305,8 @@
                         </ul>
                       </li>
                       <li><a href="#">Men's</a><span>(937)</span>
+                      
+                      <li><a href="#">Bottom</a><span>(937)</span>
                         <ul>
                           <li><a href="#">Shirts &amp; Tops</a></li>
                           <li><a href="#">Shorts</a></li>

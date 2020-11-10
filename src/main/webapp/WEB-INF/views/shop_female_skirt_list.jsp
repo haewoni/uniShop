@@ -165,7 +165,7 @@
           </div>
           <div class="column">
             <ul class="breadcrumbs">
-              <li><a href="index.html">Home</a>
+              <li><a href="unishop_main">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
               <li>Shop Grid Left Sidebar</li>
@@ -221,7 +221,7 @@
 									<del>$ : ${product.product_price}</del>
 								</h4>
 								<div class="product-buttons">
-									<a href="add_wishlist_action?product_no=${product.product_no}">
+									<a href="shop_add_wishlist_action?product_no=${product.product_no}">
 										<button class="btn btn-outline-secondary btn-sm btn-wishlist"
 											data-toggle="tooltip" title="Whishlist">
 											<i class="icon-heart"></i>

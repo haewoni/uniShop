@@ -165,7 +165,7 @@
           </div>
           <div class="column">
             <ul class="breadcrumbs">
-              <li><a href="index.html">Home</a>
+              <li><a href="unishop_main">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
               <li>Shop Grid Left Sidebar</li>
@@ -201,7 +201,6 @@
             <div class="isotope-grid cols-3 mb-2">
               <div class="gutter-sizer"></div>
               <div class="grid-sizer"></div>
-              <!-- Product-->
               
               <c:forEach  items="${productList}" 
 				var="product"  
@@ -209,18 +208,19 @@
 				step="1" 
 				end="${productList.size()}"
 				varStatus="status">
-              
+			 
+              <!-- Product-->
               <div class="grid-item">
                 <div class="product-card">
                   <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
-                 	 <img src="IMAGE/${product.product_image_1}" alt="Product">
+                  	<img src="IMAGE/${product.product_image_1}" alt="Product">
                   </a>
                   <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
                   <h4 class="product-price">
                     <del>$ : ${product.product_price}</del>
                   </h4>
                   <div class="product-buttons">
-                    <a href="add_wishlist_action?product_no=${product.product_no}">
+                    <a href="shop_add_wishlist_action?product_no=${product.product_no}">
 	                	<button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
 	                		<i class="icon-heart"></i>
 	                	</button>
@@ -233,8 +233,9 @@
                 </div>
               </div>
               
-              </c:forEach>
-            
+             </c:forEach>
+            </div>
+              
             <!-- Pagination-->
             <nav class="pagination">
               <div class="column">
@@ -279,8 +280,8 @@
                           <li><a href="#">Loafers</a></li>
                           <li><a href="#">Sandals</a></li>
                           
-                          <li><a href="shop_female_longpants_list">여성 긴바지</a><span>(97)</span></li>
-                     	  <li><a href="shop_female_skirt_list">여성 스커트</a><span>(110)</span></li>
+                          <li><a href="shop_female_longpants_list">여성 긴바지</a></li>
+                          <li><a href="shop_female_skirt_list">여성 스커트</a></li>
                         </ul>
                       </li>
                       <li><a href="#">Boy's Shoes</a><span>(97)</span></li>
@@ -289,7 +290,6 @@
                   </li>
                   <li class="has-children"><a href="#">Men's</a><span>(2356)</span>
                     <ul>
-                      
                       <li><a href="#">Women's</a><span>(1032)</span>
                       
                       <li><a href="#">Top</a><span>(1032)</span>
@@ -298,18 +298,16 @@
                           <li><a href="#">Shirts &amp; Tops</a></li>
                           <li><a href="#">Swimwear</a></li>
                           <li><a href="#">Shorts</a></li>
-
+                          
                           <li><a href="shop_male_outer_list">남성 아우터</a></li>
                           <li><a href="shop_male_cardigan_list">남성 가디건</a></li>
                           <li><a href="shop_male_tshirt_list">남성 티셔츠</a></li>
                         </ul>
                       </li>
-                      
                       <li><a href="#">Men's</a><span>(937)</span>
                       
                       <li><a href="#">Bottom</a><span>(937)</span>
                         <ul>
-                        
                           <li><a href="#">Shirts &amp; Tops</a></li>
                           <li><a href="#">Shorts</a></li>
                           <li><a href="#">Swimwear</a></li>
