@@ -1,8 +1,19 @@
+
 function jumun_address_form_action(){
 	document.jumun_address_form.action='jumun_address_action';
 	document.jumun_address_form.method='POST';
 	document.jumun_address_form.submit();
 }
+function shop_add_cart_action() {
+	document.product_detail.alert('asdasd');
+}
+/*
+1. ID : 4~12자 이내의 영어와 숫자로 입력
+2. 첫문자는 숫자로 시작할 수 없음
+3. Password : 4~12자 이내며, 입력 필수
+*/
+
+/************************** 아이디 검사 *****************************/
 
 function login() {
 	var member_id = document.getElementsByName('member_id')
