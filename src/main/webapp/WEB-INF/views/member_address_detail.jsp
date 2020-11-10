@@ -60,13 +60,13 @@
                 <div class="form-group">
                   <label for="account-country">국가</label>
                   <select class="form-control" name="member_address_country">
-                    <option>Choose country</option>
-                    <option>United State</option>
-                    <option>Canada</option>
-                    <option>France</option>
-                    <option>Germany</option>
-                    <option>Switzerland</option>
+                    <option>국가 선택</option>
                     <option selected>${loginMember.member_address_country}</option>
+                    <option>캐나다</option>
+                    <option>프랑스</option>
+                    <option>독일</option>
+                    <option>미국</option>
+                    <option>뉴질랜드</option>
                   </select>
                 </div>
               </div>
@@ -74,12 +74,12 @@
                 <div class="form-group">
                   <label for="account-city">도시</label>
                   <select class="form-control" name="member_address_city">
-                    <option>Choose city</option>
-                    <option>Amsterdam</option>
-                    <option>Berlin</option>
-                    <option>Geneve</option>
+                    <option>도시 선택</option>
                     <option selected>${loginMember.member_address_city}</option>
-                    <option>Paris</option>
+                    <option>인천</option>
+                    <option>부산</option>
+                    <option>대전</option>
+                    <option>익산</option>
                   </select>
                 </div>
               </div>
