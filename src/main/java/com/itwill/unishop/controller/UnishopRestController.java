@@ -32,6 +32,6 @@ public class UnishopRestController {
 	@Autowired
 	private WishListService wishListService;
 	@Autowired
-	DeliveryService deliveryService;
+	private DeliveryService deliveryService;
 	
 }

@@ -203,7 +203,6 @@ public class MemberController {
 	//멤버의 주문내역
 	@RequestMapping("/member_jumun_list")
 	public String member_jumun_list(Model model, HttpSession session) {
-		System.out.println("-----------------member_jumun_detail--------------------");
 		String forwardPath = "";
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
