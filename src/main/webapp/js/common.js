@@ -1,5 +1,4 @@
 function jumun_address_form_action(){
-	alert('ccccccccccccccccccc')
 	document.jumun_address_form.action='jumun_address_action';
 	document.jumun_address_form.method='POST';
 	document.jumun_address_form.submit();
