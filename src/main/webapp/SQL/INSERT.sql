@@ -132,7 +132,7 @@ VALUES ('429292', '하이브리드다운코트', '고품질 다운과 기능성 
 --4
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134741&displayNo=NQ1A01A10A06&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('429291', '심리스다운파카(3D CUT)', '심리스 타입으로 고급스러운 인상을 주는 심리스 다운 파카(3D CUT).
+VALUES ('429291', '심리스다운파카', '심리스 타입으로 고급스러운 인상을 주는 심리스 다운 파카(3D CUT).
 · 가벼운 물방울을 튕겨내는 내구 발수 가공 추가.
 · 640필 파워* 이상의 고품질 다운 사용.
 · 어깨 부분 패턴을 3D 구조로 디자인하여 활동성 업.', 169000, 'M', 'T', 'OT', '429291_1.png', '429291_2.png', '429291_3.png', '429291_4.png', '429291_5.png');
@@ -167,7 +167,7 @@ VALUES ('429282', '울트라라이트다운파카', '얇고 가벼우면서도 �
 --8
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135833&displayNo=NQ1A01A10A15&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('435416', 'JWA더블페이스더플코트(패턴)', '영국 전통의 더플 코트 디자인을 현대적으로 재해석한 더블페이스 더플 코트.
+VALUES ('435416', '더블페이스더플코트(패턴)', '영국 전통의 더플 코트 디자인을 현대적으로 재해석한 더블페이스 더플 코트.
 유니클로의 심플한 고품질 옷에 JW ANDERSON의 혁신적인 디자인이 더해진 라이프웨어를 만나보세요!
 · 두께감이 있으면서도 가벼운 착용감을 양립한 더블페이스 소재를 사용하였습니다.
 · 안감은 겉감의 글렌 체크 무늬에 어울리는 다크 브라운 컬러를 채용하였습니다.
@@ -202,7 +202,7 @@ VALUES ('432049', 'JWA더블페이스더플코트', '영국 전통의 더플 코
 --12
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31130584&displayNo=NQ1A01A10A15&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('426035', '라이트BLOCKTECH후디드코트', '가벼운 비바람을 막아주면서도 가벼운 착용감을 느낄 수 있는 라이트 BLOCKTECH 후디드 코트.
+VALUES ('426035', '라이트후디드코트', '가벼운 비바람을 막아주면서도 가벼운 착용감을 느낄 수 있는 라이트 BLOCKTECH 후디드 코트.
 · 내구발수, 방풍, 투습 기능.
 · 트렌디한 오버사이즈 실루엣.
 · *자외선 차단(UPF40) 기능.
@@ -236,7 +236,7 @@ VALUES ('425030', '데님재킷', '트렌디한 와이드 핏을 적용하여 �
 --16
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135270&displayNo=NQ1A01A10A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('429188', '윈드블럭보아후리스재킷(긴팔)', '찬 바람이 잘 통하지 않아 따뜻함을 유지시켜주는 방풍 기능을 지닌 후리스 재킷.
+VALUES ('429188', '윈드블럭보아후리스재킷', '찬 바람이 잘 통하지 않아 따뜻함을 유지시켜주는 방풍 기능을 지닌 후리스 재킷.
 · 릴렉스감 있는 트렌디한 실루엣.
 · 젠더리스로 착용 가능.
 · 0.008mm의 필름으로 차가운 바람은 막아주며 착용감은 가볍고 부드러우며 따뜻합니다.
@@ -245,7 +245,7 @@ VALUES ('429188', '윈드블럭보아후리스재킷(긴팔)', '찬 바람이 �
 --17
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135271&displayNo=NQ1A01A10A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('429189', '윈드블럭플러피얀후리스풀짚파카(긴팔)', '방풍기능으로 찬 바람이 잘 통하지 않아 따뜻함을 유지시켜주는 후리스풀짚파카.
+VALUES ('429189', '플러피얀후리스풀짚파카', '방풍기능으로 찬 바람이 잘 통하지 않아 따뜻함을 유지시켜주는 후리스풀짚파카.
 · 부드러운 후리스 소재와 메쉬소재의 앞 주머니 사양을 플러스.
 · 0.008mm의 필름으로 차가운 바람은 막아주며 착용감은 가볍고 부드러우며 따뜻합니다.
 · 안감의 후리스로 피부에 닿는 감촉이 부드럽습니다.', 49900, 'M', 'T', 'OT', '429189_1.png', '429189_2.png', '429189_3.png', '429189_4.png', '429189_5.png');
@@ -262,7 +262,7 @@ VALUES ('425423', '컴포트블레이저', '신축성이 있어 편하면서도 
 --19
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135815&displayNo=NQ1A01A10A13&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428937', '컴포트재킷(프린트)', '여유감 있는 실루엣과 신축성으로 편한 착용감을 느낄 수 있는 컴포트 재킷.
+VALUES ('428937', '프린팅컴포트재킷', '여유감 있는 실루엣과 신축성으로 편한 착용감을 느낄 수 있는 컴포트 재킷.
 · 어깨 주변의 디자인을 변경하여 더 편한 착용감으로 개선.
 · 저지 소재 사용.
 · 레귤러 피트 사양.', 69900, 'M', 'T', 'OT', '428937_1.png', '428937_2.png', '428937_3.png', '428937_4.png', '428937_5.png');
@@ -290,14 +290,14 @@ VALUES ('425136', '리넨블렌드재킷', '시원하면서도 부드러운 착�
 --23
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135235&displayNo=NQ1A01A10A13&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('431346', 'U울블렌드저지테일러드재킷', '최소한의 디테일과 스트레이트 실루엣으로 보다 편안한 착용감을 느낄 수 있는 울블렌드 저지 테일러드 재킷.
+VALUES ('431346', '울블렌드저지테일러드재킷', '최소한의 디테일과 스트레이트 실루엣으로 보다 편안한 착용감을 느낄 수 있는 울블렌드 저지 테일러드 재킷.
 · 유니클로 파리 RnD센터의 아티스틱 디렉터 크리스토퍼 르메르(Christophe Lemaire)가 혁신적인 소재와 현대적인 디자인으로 재해석한 Uniqlo U 컬렉션입니다.
 · 편안한 착용감을 자랑하는 초경량 플란넬 울 소재 사용.', 129000, 'M', 'T', 'OT', '431346_1.png', '431346_2.png', '431346_3.png', '431346_4.png', '431346_5.png');
 
 --24
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135234&displayNo=NQ1A01A10A13&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('431345', 'U테일러드재킷', '릴렉스한 피트감과 다소 넓은 어깨 폭과 기장감이 트렌디한 인상을 주는 테일러드 재킷.
+VALUES ('431345', '테일러드재킷', '릴렉스한 피트감과 다소 넓은 어깨 폭과 기장감이 트렌디한 인상을 주는 테일러드 재킷.
 · 유니클로 파리 RnD센터의 아티스틱 디렉터 크리스토퍼 르메르(Christophe Lemaire)가 혁신적인 소재와 현대적인 디자인으로 재해석한 Uniqlo U 컬렉션입니다.
 · 주름이 잘 생기지 않는 소재 사용.', 99000, 'M', 'T', 'OT', '431345_1.png', '431345_2.png', '431345_3.png', '431345_4.png', '431345_5.png');
 
@@ -321,20 +321,20 @@ VALUES ('425429', '트렌치코트', '소재부터 디테일, 실루엣까지 �
 --1
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134831&displayNo=NQ1A01A11A04&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('433839', 'AIRism UV PROTECTION T(긴팔)', '상쾌한 착용감을 느낄 수 있으면서도 자외선을 차단해주는 AIRism UV PROTECTION T셔츠.
+VALUES ('433839', 'AIRism자외선차단T', '상쾌한 착용감을 느낄 수 있으면서도 자외선을 차단해주는 AIRism UV PROTECTION T셔츠.
 · 자외선 차단(UPF40+)* 기능.
 * 자외선 차단평가 (JIS L 1925:2019) 결과 기준.', 19900, 'M', 'T', 'SH', '433839_1.png', '433839_2.png', '433839_3.png', '433839_4.png', '433839_5.png');
 
 --2
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31122247&displayNo=NQ1A01A11A04&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('418696', '소프트터치크루넥T(긴팔)', '안감에 기모 가공을 추가하여 부드러우면서도 따뜻한 착용감을 느낄 수 있는 소프트터치 크루넥 T셔츠.
+VALUES ('418696', '소프트터치크루넥T', '안감에 기모 가공을 추가하여 부드러우면서도 따뜻한 착용감을 느낄 수 있는 소프트터치 크루넥 T셔츠.
 · 면 소재 100% 사용.', 14900, 'M', 'T', 'SH', '418696_1.png', '418696_2.png', '418696_3.png', '418696_4.png', '418696_5.png');
 
 --3
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135879&displayNo=NQ1A01A11A04&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('432513', 'U히트텍코튼크루넥T(긴팔)', '상의 아이템으로서 히트텍 소재의 새로운 가능성! 히트텍 코튼 크루넥 T셔츠.
+VALUES ('432513', 'U히트텍코튼크루넥T', '상의 아이템으로서 히트텍 소재의 새로운 가능성! 히트텍 코튼 크루넥 T셔츠.
 · 유니클로 파리 RnD센터의 아티스틱 디렉터 크리스토퍼 르메르(Christophe Lemaire)가 혁신적인 소재와 현대적인 디자인으로 재해석한 Uniqlo U 컬렉션입니다.
 · 빈티지 밀리터리에서 영감을 받은 디자인으로 맵시있는 인상을 줍니다.
 · 미들 웨이트 소재를 채택하였습니다.
@@ -344,7 +344,7 @@ VALUES ('432513', 'U히트텍코튼크루넥T(긴팔)', '상의 아이템으로�
 --4
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31127830&displayNo=NQ1A01A11A04&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('425213', 'U크루넥T(긴팔)20SS', '심플한 디자인이면서도 소재, 디테일 모두 고집한 크루넥 T셔츠.
+VALUES ('425213', 'U크루넥긴팔T', '심플한 디자인이면서도 소재, 디테일 모두 고집한 크루넥 T셔츠.
 · 크리스토퍼 르메르가 이끄는 파리의 디자이너 팀이 제안하는 새로운 LifeWear 컬렉션.
 · 클래식한 티셔츠 다운 저지 소재를 사용하였습니다.
 · 클래식한 스티치를 채용하였습니다.
@@ -354,20 +354,20 @@ VALUES ('425213', 'U크루넥T(긴팔)20SS', '심플한 디자인이면서도 �
 --5
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134094&displayNo=NQ1A01A11A04&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('429192', '히트텍후리스모크넥T(긴팔)', '히트텍 후리스 소재를 사용하여 가볍고 따뜻한 티셔츠.
+VALUES ('429192', '히트텍후리스모크넥T', '히트텍 후리스 소재를 사용하여 가볍고 따뜻한 티셔츠.
 · 어깨와 가슴둘레, 목둘레를 여유감 있게 조정하여 착용감이 뛰어남.', 14900, 'M', 'T', 'SH', '429192_1.png', '429192_2.png', '429192_3.png', '429192_4.png', '429192_5.png');
 
 --6
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31122249&displayNo=NQ1A01A11A04&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('418698', '소프트터치모크넥T(긴팔)', '부드러우면서도 따뜻한 착용감을 느낄 수 있는 소프트 터치 모크넥 T셔츠.
+VALUES ('418698', '소프트터치모크넥T', '부드러우면서도 따뜻한 착용감을 느낄 수 있는 소프트 터치 모크넥 T셔츠.
 · 면 소재 100% 사용.
 · 안감 기모 가공 처리.', 14900, 'M', 'T', 'SH', '418698_1.png', '418698_2.png', '418698_3.png', '418698_4.png', '418698_5.png');
 
 --7
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135602&displayNo=NQ1A01A11A04&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('432166', '스탠드칼라T(긴팔)럭비스트라이프', '편안한 착용감을 느낄 수 있으면서도 트렌디한 인상을 주는 스탠드 칼라 T셔츠.
+VALUES ('432166', '스탠드칼라스트라이프T', '편안한 착용감을 느낄 수 있으면서도 트렌디한 인상을 주는 스탠드 칼라 T셔츠.
 · 탄력감이 있는 캐주얼한 소재감을 느낄 수 있습니다.
 · 스탠드 칼라 디자인.
 · 사이즈 업하여 여유감 있는 실루엣으로 착용하는 것도 추천!
@@ -376,28 +376,28 @@ VALUES ('432166', '스탠드칼라T(긴팔)럭비스트라이프', '편안한 �
 --8
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31125888&displayNo=NQ1A01A11A04&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('422597', '후리스하프짚풀오버(긴팔)', '하프짚 사양으로 체온 조절이 간편한 후리스 하프짚 풀오버.
+VALUES ('422597', '후리스하프짚풀오버', '하프짚 사양으로 체온 조절이 간편한 후리스 하프짚 풀오버.
 · 후리스 소재 사용.
 · 하프짚 사양.', 29900, 'M', 'T', 'SH', '422597_1.png', '422597_2.png', '422597_3.png', '422597_4.png', '422597_5.png');
 
 --9
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31127727&displayNo=NQ1A01A11A04&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('422989', 'SUPIMA COTTON V넥T(반팔)20SS', '고급스러우면서도 부드러운 착용감을 자랑하는 SUPIMA COTTON V넥 T셔츠.
+VALUES ('422989', 'SUPIMA 코튼V넥T', '고급스러우면서도 부드러운 착용감을 자랑하는 SUPIMA COTTON V넥 T셔츠.
 · 가슴너비, 소매너비를 약간 넓게 설정하면서도 밑간까지 깔끔하게 떨어지는 실루엣으로 개량.
 · 수피마코튼 소재 100% 사용.', 9900, 'M', 'T', 'SH', '422989_1.png', '422989_2.png', '422989_3.png', '422989_4.png', '422989_5.png');
 
 --10
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31127726&displayNo=NQ1A01A11A04&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('419495', '크루넥T(반팔)', '심플한 디자인으로 다양한 스타일에 활용하기 좋은 크루넥 T셔츠.
+VALUES ('419495', '반팔 크루넥T', '심플한 디자인으로 다양한 스타일에 활용하기 좋은 크루넥 T셔츠.
 · 보송보송한 착용감을 유지시켜 주면서도, 세탁 후 건조가 빠른 드라이 기능 추가.
 · 크루넥 타입.', 7900, 'M', 'T', 'SH', '419495_1.png', '419495_2.png', '419495_3.png', '419495_4.png', '419495_5.png');
 
 --11
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31130612&displayNo=NQ1A01A11A04&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('422995', 'U오버사이즈크루넥T(반팔)20SS', '고급스러운 분위기를 연출할 수 있는 오버사이즈 크루넥 T셔츠.
+VALUES ('422995', 'U오버사이즈반팔크루넥T', '고급스러운 분위기를 연출할 수 있는 오버사이즈 크루넥 T셔츠.
 · 크리스토퍼 르메르가 이끄는 파리 디자이너 팀이 제안하는 혁신적인 소재와 현대적인 디자인의 새로운 LifeWear 컬렉션.
 · 특수 가공을 추가하여 적당한 광택감을 즐길 수 있습니다.
 · 드롭 숄더와 박시한 실루엣으로 설정하여 편한 착용감을 느낄 수 있습니다.', 19900, 'M', 'T', 'SH', '422995_1.png', '422995_2.png', '422995_3.png', '422995_4.png', '422995_5.png');
@@ -405,7 +405,7 @@ VALUES ('422995', 'U오버사이즈크루넥T(반팔)20SS', '고급스러운 분
 --12
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134107&displayNo=NQ1A01A11A04&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('430605', 'EFM니트폴로셔츠(긴팔)', '고급스러우면서도 섬세하고 우아한 감촉을 느낄 수 있는 EFM 니트 폴로셔츠.
+VALUES ('430605', 'EFM니트폴로셔츠', '고급스러우면서도 섬세하고 우아한 감촉을 느낄 수 있는 EFM 니트 폴로셔츠.
 · 19.5 마이크로 극세 메리노 울 소재 100% 사용.
 · 물세탁 가능.
 · 크루넥 타입.', 39900, 'M', 'T', 'SH', '430605_1.png', '430605_2.png', '430605_3.png', '430605_4.png', '430605_5.png');
@@ -413,7 +413,7 @@ VALUES ('430605', 'EFM니트폴로셔츠(긴팔)', '고급스러우면서도 섬
 --13
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31129604&displayNo=NQ1A01A11A04&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('422970', 'DRY-EX폴로셔츠(반팔)그라데이션', '놀라운 통기성과 드라이 기능으로 시원한 착용감을 느낄 수 있는 DRY-EX 폴로 셔츠.
+VALUES ('422970', 'DRY-EX폴로셔츠', '놀라운 통기성과 드라이 기능으로 시원한 착용감을 느낄 수 있는 DRY-EX 폴로 셔츠.
 · 드라이 기능을 가진 드라이 EX 소재 사용.
 · 통기성이 높은 짜임 방식을 채용하여 끈적이지 않습니다.
 · 열이 발생하여 땀이 나기 쉬운 겨드랑이 부분은 메쉬 홀을 채용하여 통기성 향상.', 29900, 'M', 'T', 'SH', '422970_1.png', '422970_2.png', '422970_3.png', '422970_4.png', '422970_5.png');
@@ -421,7 +421,7 @@ VALUES ('422970', 'DRY-EX폴로셔츠(반팔)그라데이션', '놀라운 통기
 --14
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31127828&displayNo=NQ1A01A11A04&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('422987', '드라이피케폴로셔츠(반팔)', '신축성이 있어 움직임이 편하면서도 실루엣을 개량하여 높은 완성도를 자랑하는 드라이 피케 폴로 셔츠.
+VALUES ('422987', '드라이피케폴로셔츠', '신축성이 있어 움직임이 편하면서도 실루엣을 개량하여 높은 완성도를 자랑하는 드라이 피케 폴로 셔츠.
 · 어깨와 가슴 주의의 실루엣 변경.
 · 스포츠씬에서 착용하기 좋게 소매 기장을 늘림.
 · 드라이 기능 추가.', 29900, 'M', 'T', 'SH', '422987_1.png', '422987_2.png', '422987_3.png', '422987_4.png', '422987_5.png');
@@ -429,7 +429,7 @@ VALUES ('422987', '드라이피케폴로셔츠(반팔)', '신축성이 있어 �
 --15
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31129606&displayNo=NQ1A01A11A04&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('424217', 'AIRism피케폴로셔츠(반팔)버튼다운', '편안하면서도 시원한 착용감을 느낄 수 있는 AIRism 피케 폴로 셔츠.
+VALUES ('424217', 'AIRism피케폴로셔츠', '편안하면서도 시원한 착용감을 느낄 수 있는 AIRism 피케 폴로 셔츠.
 · 에어리즘 소재 사용.
 · 어깨와 가슴 둘레를 재검토.
 · 칼라 주변의 가장자리는 스티치를 없애고 사이드 슬릿 추가, 소매는 싱글 스티치를 채용하여 깔끔한 인상을 줍니다.
@@ -442,7 +442,7 @@ VALUES ('424217', 'AIRism피케폴로셔츠(반팔)버튼다운', '편안하면�
 --1
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134104&displayNo=NQ1A01A17A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('429066', 'EFM크루넥스웨터(긴팔)20FW', '고급스러우면서도 섬세하고 우아한 감촉을 느낄 수 있는 EFM 크루넥 스웨터.
+VALUES ('429066', 'EFM울크루넥스웨터', '고급스러우면서도 섬세하고 우아한 감촉을 느낄 수 있는 EFM 크루넥 스웨터.
 · 19.5 마이크로 극세 메리노 울 소재 100% 사용.
 · 물세탁 가능.
 · 크루넥 타입.', 39900, 'M', 'T', 'KN', '429066_1.png', '429066_2.png', '429066_3.png', '429066_4.png', '429066_5.png');
@@ -450,14 +450,14 @@ VALUES ('429066', 'EFM크루넥스웨터(긴팔)20FW', '고급스러우면서도
 --2
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31122305&displayNo=NQ1A01A17A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('419190', 'EFM크루넥스웨터(긴팔)', '고급스러운 모직 감촉을 느낄 수 있는 EFM 크루넥 스웨터.
+VALUES ('419190', 'EFM모직크루넥스웨터', '고급스러운 모직 감촉을 느낄 수 있는 EFM 크루넥 스웨터.
 · 19.5 마이크로 극세 메리노 울 소재 100% 사용.
 · 물 세탁이 가능한 사양.', 39900, 'M', 'T', 'KN', '419190_1.png', '419190_2.png', '419190_3.png', '419190_4.png', '419190_5.png');
 
 --3
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134103&displayNo=NQ1A01A17A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('429065', 'EFM V넥스웨터(긴팔)', '고급스러우면서도 섬세하고 우아한 감촉을 느낄 수 있는 EFM V넥 스웨터.
+VALUES ('429065', 'EFM V넥스웨터', '고급스러우면서도 섬세하고 우아한 감촉을 느낄 수 있는 EFM V넥 스웨터.
 · 19.5 마이크로 극세 메리노 울 소재 100% 사용.
 · 물세탁 가능.
 · V넥 타입.', 39900, 'M', 'T', 'KN', '429065_1.png', '429065_2.png', '429065_3.png', '429065_4.png', '429065_5.png');
@@ -465,7 +465,7 @@ VALUES ('429065', 'EFM V넥스웨터(긴팔)', '고급스러우면서도 섬세�
 --4
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134105&displayNo=NQ1A01A17A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('429067', 'EFM터틀넥스웨터(긴팔)', '섬세하면서도 우아한 감촉을 느낄 수 EFM 터틀넥 스웨터.
+VALUES ('429067', 'EFM터틀넥스웨터', '섬세하면서도 우아한 감촉을 느낄 수 EFM 터틀넥 스웨터.
 · 19.5 마이크로 극세 메리노 울 소재 100% 사용.
 · 워셔블(물세탁) 사양.
 · 칼라 높이를 낮게 설정하여 편한 착용감을 느낄 수 있습니다.
@@ -483,21 +483,21 @@ VALUES ('429068', 'EFM V넥베스트', '고급스러우면서도 섬세하고 �
 --6
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135276&displayNo=NQ1A01A17A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('435798', '캐시미어크루넥스웨터(긴팔)', '섬유의 보석이라 불리우는 캐시미어 소재를 사용하여 부드러우면서도 따뜻한 감촉을 느낄 수 있는 캐시미어 크루넥 스웨터.
+VALUES ('435798', '캐시미어크루넥스웨터', '섬유의 보석이라 불리우는 캐시미어 소재를 사용하여 부드러우면서도 따뜻한 감촉을 느낄 수 있는 캐시미어 크루넥 스웨터.
 · 캐시미어 소재 100% 사용.
 · 크루넥 타입.', 99000, 'M', 'T', 'KN', '435798_1.png', '435798_2.png', '435798_3.png', '435798_4.png', '435798_5.png');
 
 --7
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134099&displayNo=NQ1A01A17A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('429074', '캐시미어V넥스웨터(긴팔)', '섬유의 보석이라 불리우는 캐시미어 소재를 사용하여 부드러우면서도 따뜻한 감촉을 느낄 수 있는 캐시미어 V넥 스웨터.
+VALUES ('429074', '캐시미어V넥스웨터', '섬유의 보석이라 불리우는 캐시미어 소재를 사용하여 부드러우면서도 따뜻한 감촉을 느낄 수 있는 캐시미어 V넥 스웨터.
 · 캐시미어 소재 100% 사용.
 · 소매 밑단에서부터 어깨 주위까지 단계적으로 립 짜임을 설정하여 편안한 착용감을 느낄 수 있습니다.', 99000, 'M', 'T', 'KN', '429074_1.png', '429074_2.png', '429074_3.png', '429074_4.png', '429074_5.png');
 
 --8
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134101&displayNo=NQ1A01A17A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('429076', '캐시미어터틀넥스웨터(긴팔)', '섬유의 보석이라 불리는 캐시미어 소재를 100% 사용하여 부드러우면서도 따뜻한 착용감을 자랑하는 캐시미어 크루넥 스웨터.
+VALUES ('429076', '캐시미어터틀넥스웨터', '섬유의 보석이라 불리는 캐시미어 소재를 100% 사용하여 부드러우면서도 따뜻한 착용감을 자랑하는 캐시미어 크루넥 스웨터.
 · 매끄러우면서도 부드러운 감촉을 느낄 수 있습니다.
 · 소매 밑단의 립 부분부터 어깨 주위까지 짜임을 단계적으로 디테일하게 설정하여 편한 착용감을 느낄 수 있습니다.
 · 터틀넥 타입.', 99000, 'M', 'T', 'KN', '429076_1.png', '429076_2.png', '429076_3.png', '429076_4.png', '429076_5.png');
@@ -505,21 +505,21 @@ VALUES ('429076', '캐시미어터틀넥스웨터(긴팔)', '섬유의 보석이
 --9
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134839&displayNo=NQ1A01A17A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('429069', '프리미엄램스울V넥가디건(긴팔)20FW', '고급 모직 소재를 사용하여 부드러우면서도 따뜻한 착용감을 자랑하는 프리미엄 램스울 V넥 가디건.
+VALUES ('429069', '프리미엄램스울V넥가디건', '고급 모직 소재를 사용하여 부드러우면서도 따뜻한 착용감을 자랑하는 프리미엄 램스울 V넥 가디건.
 · 19.5 마이크로 양모 소재를 사용하여 부드러운 감촉 실현.
 · 밑단 립은 단계적으로 짜임 강도를 설정하여 편한 착용감을 느낄 수 있습니다.', 49900, 'M', 'T', 'KN', '429069_1.png', '429069_2.png', '429069_3.png', '429069_4.png', '429069_5.png');
 
 --10
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134108&displayNo=NQ1A01A17A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('429071', '프리미엄램스울크루넥스웨터(긴팔)20FW', '소재의 원료를 변경하여 더욱 부드러운 감촉을 느낄 수 있는 프리미엄 램스울 크루넥 스웨터.
+VALUES ('429071', '프리미엄램스울크루넥스웨터', '소재의 원료를 변경하여 더욱 부드러운 감촉을 느낄 수 있는 프리미엄 램스울 크루넥 스웨터.
 · 19.5 마이크로 프리미엄 램스울 소재 100% 사용.
 · 크루넥 타입.', 39900, 'M', 'T', 'KN', '429071_1.png', '429071_2.png', '429071_3.png', '429071_4.png', '429071_5.png');
 
 --11
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135278&displayNo=NQ1A01A17A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('432324', 'JWA로우게이지크루넥스웨터(긴팔)', '클래식한 피셔맨 니트를 JWA식으로 재해석한 로우게이지 크루넥 스웨터.
+VALUES ('432324', '로우게이지크루넥스웨터', '클래식한 피셔맨 니트를 JWA식으로 재해석한 로우게이지 크루넥 스웨터.
 · 유니클로의 심플한 고품질 옷에 JW ANDERSON의 혁신적인 디자인이 더해진 라이프웨어를 만나보세요!
 · 여러가지 컬러의 실을 믹스한 디자인이 포인트.
 · 여유감 있는 실루엣이 특징.', 49900, 'M', 'T', 'KN', '432324_1.png', '432324_2.png', '432324_3.png', '432324_4.png', '432324_5.png');
@@ -527,7 +527,7 @@ VALUES ('432324', 'JWA로우게이지크루넥스웨터(긴팔)', '클래식한 
 --12
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135607&displayNo=NQ1A01A17A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('432323', 'JWA프리미엄램스울모크넥스웨터(긴팔)', '컬러풀한 색감을 사용하여 고급스러우면서도 캐주얼한 인상을 주는 프리미엄 램스울 모크넥 스웨터.
+VALUES ('432323', '프리미엄램스울모크넥스웨터', '컬러풀한 색감을 사용하여 고급스러우면서도 캐주얼한 인상을 주는 프리미엄 램스울 모크넥 스웨터.
 · 유니클로의 심플한 고품질 옷에 JW ANDERSON의 혁신적인 디자인이 더해진 라이프웨어를 만나보세요!
 · 19.5 마이크론의 고품질 울 100% 사용.
 · 모크넥 디자인으로 세련되고 경쾌한 겨울 룩과 레이어링에 적합합니다.', 49900, 'M', 'T', 'KN', '432323_1.png', '432323_2.png', '432323_3.png', '432323_4.png', '432323_5.png');
@@ -535,14 +535,14 @@ VALUES ('432323', 'JWA프리미엄램스울모크넥스웨터(긴팔)', '컬러�
 --13
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135280&displayNo=NQ1A01A17A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('432930', 'U미들게이지모크넥스웨터(긴팔)', '부드럽고 따뜻한 미들 게이지 모크넥 스웨터.
+VALUES ('432930', 'U미들게이지모크넥스웨터', '부드럽고 따뜻한 미들 게이지 모크넥 스웨터.
 · 유니클로 파리 RnD센터의 아티스틱 디렉터 크리스토퍼 르메르(Christophe Lemaire)가 혁신적인 소재와 현대적인 디자인으로 재해석한 Uniqlo U 컬렉션입니다.
 · 울 소재 100% 사용.', 49900, 'M', 'T', 'KN', '432930_1.png', '432930_2.png', '432930_3.png', '432930_4.png', '432930_5.png');
 
 --14
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134840&displayNo=NQ1A01A17A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('432745', 'U라이트웨이트크루넥스웨터(긴팔)', '릴렉스한 피트감의 라이트 웨이트 크루넥 스웨터.
+VALUES ('432745', 'U라이트웨이트크루넥스웨터', '릴렉스한 피트감의 라이트 웨이트 크루넥 스웨터.
 · 유니클로 파리 RnD센터의 아티스틱 디렉터 크리스토퍼 르메르(Christophe Lemaire)가 혁신적인 소재와 현대적인 디자인으로 재해석한 Uniqlo U 컬렉션입니다.
 · 울 블렌드 소재 사용.
 · 심플한 래글런 슬리브 타입.', 49900, 'M', 'T', 'KN', '432745_1.png', '432745_2.png', '432745_3.png', '432745_4.png', '432745_5.png');
@@ -550,7 +550,7 @@ VALUES ('432745', 'U라이트웨이트크루넥스웨터(긴팔)', '릴렉스한
 --15
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134841&displayNo=NQ1A01A17A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('432746', 'U립크루넥스웨터(긴팔)', '고급스러운 인상을 주는 립 크루넥 스웨터.
+VALUES ('432746', 'U립크루넥스웨터', '고급스러운 인상을 주는 립 크루넥 스웨터.
 · 유니클로 파리 RnD센터의 아티스틱 디렉터 크리스토퍼 르메르(Christophe Lemaire)가 혁신적인 소재와 현대적인 디자인으로 재해석한 Uniqlo U 컬렉션입니다.
 · 19.5 마이크론 극세 메리노 울에 아크릴을 블렌드한 소재 사용.', 49900, 'M', 'T', 'KN', '432746_1.png', '432746_2.png', '432746_3.png', '432746_4.png', '432746_5.png');
 
@@ -561,7 +561,7 @@ VALUES ('432746', 'U립크루넥스웨터(긴팔)', '고급스러운 인상을 �
 --1
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31132406&displayNo=NQ1A01A06A06&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428050', '울트라스트레치액티브쇼트팬츠(라인)', '뛰어난 기능과 세련된 디자인으로 스포츠씬뿐만 아니라 캐주얼한 스타일에도 제격인 울트라 스트레치 액티브 쇼트 팬츠.
+VALUES ('428050', '울트라스트레치액티브쇼트팬츠', '뛰어난 기능과 세련된 디자인으로 스포츠씬뿐만 아니라 캐주얼한 스타일에도 제격인 울트라 스트레치 액티브 쇼트 팬츠.
 · 드라이 EX 소재 사용.
 · 울트라 스트레치 원단 채용.
 · 밑단은 압착 테이프 및 반사 테이프를 채용하여 깔끔한 인상을 줍니다.
@@ -620,7 +620,7 @@ VALUES ('427817', '드라이스트레치이지쇼트팬츠A', '보송보송한 �
 --9
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?displayNo=&goodsNo=NQ31132082&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('425142', '치노쇼트팬츠(COTTON 100％)', '트렌디한 여유감 있는 실루엣으로 설정하여 캐주얼한 스타일에 제격인 치노 쇼트 팬츠.
+VALUES ('425142', '치노쇼트팬츠', '트렌디한 여유감 있는 실루엣으로 설정하여 캐주얼한 스타일에 제격인 치노 쇼트 팬츠.
 · 면 소재 100% 사용.', 29900, 'M', 'B', 'SP', '425142_1.png', '425142_2.png', '425142_3.png', '425142_4.png', '425142_5.png');
 
 --10
@@ -646,7 +646,7 @@ VALUES ('430631', '히트텍STETECO', '기능성이 뛰어나 얇지만 따뜻�
 --1
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134064&displayNo=NQ1A01A12A05&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('430270', '스트레치셀비지슬림피트진20FW', '신축성을 추가하여 편한 착용감을 느낄 수 있는 스트레치 셀비지 슬림피트 진.
+VALUES ('430270', '스트레치셀비지슬림피트진', '신축성을 추가하여 편한 착용감을 느낄 수 있는 스트레치 셀비지 슬림피트 진.
 · 카이하라 사의 셀비지 데님 원단 사용.
 · 논 워싱 리지드 데님 원단으로 입을 수록 체형에 맞는 스타일로 탈색됩니다.
 · 다리가 길어 보이게 전면 포켓 위치를 높게 설정하고, 백 포켓의 각도 조정.
@@ -655,7 +655,7 @@ VALUES ('430270', '스트레치셀비지슬림피트진20FW', '신축성을 추�
 --2
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134061&displayNo=NQ1A01A12A05&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428686', '레귤러피트스트레이트진20FW', '베이직하면서도 모던한 디자인을 즐길 수 있는 레귤러피트 스트레이트 진.
+VALUES ('428686', '레귤러피트스트레이트진', '베이직하면서도 모던한 디자인을 즐길 수 있는 레귤러피트 스트레이트 진.
 · 적당한 탄력감을 느낄 수 있는 카이하라 사의 데님 원단 채용.
 · 스트레이트 실루엣.
 · 미들 라이즈 타입.
@@ -699,7 +699,7 @@ VALUES ('428685', 'EZY진20FW', '부드러운 착용감을 자랑하는 EZY진.
 --7
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31127676&displayNo=NQ1A01A12A05&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('425302', '슬림피트진(데미지)', '신축성이 있으 움직임이 편하면서도 멋스러운 실루엣을 즐길 수 있는 슬림피트 진.
+VALUES ('425302', '데미지슬림피트진', '신축성이 있으 움직임이 편하면서도 멋스러운 실루엣을 즐길 수 있는 슬림피트 진.
 · 모든 패턴을 재검토하여 세련된 슬림 스트레이트 실루엣으로 변경.
 · 컴포트 스트레치 데님 소재 사용.
 · 라이즈를 약간 깊게 설정.
@@ -710,14 +710,14 @@ VALUES ('425302', '슬림피트진(데미지)', '신축성이 있으 움직임�
 --8
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135835&displayNo=NQ1A01A12A05&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428902', '울트라스트레치코듀로이스키니피트진20FW', '뛰어난 스트레치성으로 편안한 착용감을 느낄 수 있는 울트라 스트레치 코듀로이 스키니피트 진.
+VALUES ('428902', '스트레치코듀로이스키니피트진', '뛰어난 스트레치성으로 편안한 착용감을 느낄 수 있는 스트레치 코듀로이 스키니피트 진.
 · 코듀로이 소재 사용.
 · 허리 안쪽에 드로우 스트링을 추가하여 벨트 없이도 편안하게 착용 가능.', 39900, 'M', 'B', 'LP', '428902_1.png', '428902_2.png', '428902_3.png', '428902_4.png', '428902_5.png');
 
 --9
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31129514&displayNo=NQ1A01A12A05&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('422368', '울트라스트레치스키니피트컬러진', '신축성이 있어 움직임이 편한 울트라 스트레치 스키니 피트 컬러 진.
+VALUES ('422368', '스트레치스키니피트컬러진', '신축성이 있어 움직임이 편한 울트라 스트레치 스키니 피트 컬러 진.
 · 울트라 스트레치 새틴 소재 사용.
 · 표면에는 광택감을 느낄 수 있는 미세 기모 가공 처리.
 · 웨이스트 밴드 n 드로우 사양.', 39900, 'M', 'B', 'LP', '422368_1.png', '422368_2.png', '422368_3.png', '422368_4.png', '422368_5.png');
@@ -734,7 +734,7 @@ VALUES ('422360', '울트라스트레치스키니피트진', '움직임이 편�
 --11
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135240&displayNo=NQ1A01A12A05&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428903', '히트텍울트라스트레치슬림피트진20FW', '신축성이 있어 편안하면서도 따뜻한 착용감을 느낄 수 있는 히트텍 울트라 스트레치 슬림피트 진
+VALUES ('428903', '히트텍스트레치슬림피트진', '신축성이 있어 편안하면서도 따뜻한 착용감을 느낄 수 있는 히트텍 스트레치 슬림피트 진
 · 신축성이 있는 울트라 스트레치 소재 사용.
 · 흡습 발열 기능이 있는 히트텍 소재 사용.
 · 청바지 혁신 센터에서 연구한 최첨단 기술과 청바지 가공 전문가와 연구 개발을 거듭하여 만들어진 유니클로만의 악세사리 가공 추가.
@@ -797,7 +797,7 @@ VALUES ('428928', '스마트앵클팬츠(코듀로이)', '깔끔한 인상을 �
 --17
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134097&displayNo=NQ1A01A12A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('429164', '스마트앵클팬츠(울트라스트레치·DRY-EX)', '고급스러운 외형이 매력적인 스마트 앵클팬츠.
+VALUES ('429164', 'DRY-EX스마트앵클팬츠', '고급스러운 외형이 매력적인 스마트 앵클팬츠.
 · 신축성이 있는 울트라 스트레치 소재의 드라이 EX 원단 사용.
 · 드라이 기능.
 · 탄력감이 있어 깔끔한 실루엣 실현.
@@ -966,7 +966,7 @@ VALUES ('431588', 'U데님셔츠코트', '데님 느낌의 워크감은 살리�
 --14
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31133892&displayNo=NQ1A02A10A14&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('429060', '라이트BLOCKTECH코트', '경량 소재를 사용하여 가벼운 착용감을 느낄 수 있으면서도 캐주얼한 스타일에 제격인 라이트 BLOCKTECH 코트.
+VALUES ('429060', '경량라이트블록테크코트', '경량 소재를 사용하여 가벼운 착용감을 느낄 수 있으면서도 캐주얼한 스타일에 제격인 라이트 BLOCKTECH 코트.
 · 자외선 차단 기능.
 · 포켓터블 사양.
 · 경량 소재 내부를 코팅 처리한 방풍 사양.
@@ -976,7 +976,7 @@ VALUES ('429060', '라이트BLOCKTECH코트', '경량 소재를 사용하여 가
 --15
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31130404&displayNo=NQ1A02A10A14&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('424578', '라이트BLOCKTECH코트', '가벼운 비바람을 막아주면서도 가벼운 착용감을 느낄 수 있는 라이트 BLOCKTECH 코트.
+VALUES ('424578', '라이트블록테크코트', '가벼운 비바람을 막아주면서도 가벼운 착용감을 느낄 수 있는 라이트 BLOCKTECH 코트.
 · 내구발수, 방풍, 투습 기능.
 · *자외선 차단(UPF40) 기능.
 * 자외선 차단평가 (JIS L 1925:2019) 결과 기준.', 79900, 'F', 'T', 'OT', '424578_1.png', '424578_2.png', '424578_3.png', '424578_4.png', '424578_5.png');
@@ -1039,7 +1039,7 @@ VALUES ('428333', '보아후리스테일러드코트', '따뜻함과 세련된 �
 --23
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31123331&displayNo=NQ1A02A10A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('418242', '플러피얀후리스풀짚재킷(긴팔)', '따뜻하면서도 푹신푹신한 감촉을 느낄 수 있는 플러피얀 후리스 풀짚 재킷.
+VALUES ('418242', '플러피얀후리스풀짚재킷', '따뜻하면서도 푹신푹신한 감촉을 느낄 수 있는 플러피얀 후리스 풀짚 재킷.
 · 빠른 건조와 간편한 세척 사양.
 · 스트레이트 실루엣.
 · 스탠드 칼라 타입.', 29900, 'F', 'T', 'OT', '418242_1.png', '418242_2.png', '418242_3.png', '418242_4.png', '418242_5.png');
@@ -1051,7 +1051,7 @@ VALUES ('418242', '플러피얀후리스풀짚재킷(긴팔)', '따뜻하면서�
 --1
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135807&displayNo=NQ1A02A11A17&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('432640', 'U히트텍코튼크루넥T(긴팔)', '상의 아이템으로서 히트텍 소재의 새로운 가능성! 히트텍 코튼 크루넥 T셔츠.
+VALUES ('432640', 'U히트텍코튼크루넥T', '상의 아이템으로서 히트텍 소재의 새로운 가능성! 히트텍 코튼 크루넥 T셔츠.
 · 유니클로 파리 RnD센터의 아티스틱 디렉터 크리스토퍼 르메르(Christophe Lemaire)가 혁신적인 소재와 현대적인 디자인으로 재해석한 Uniqlo U 컬렉션입니다.
 · 빈티지 밀리터리에서 영감을 받은 디자인으로 맵시있는 인상을 줍니다.
 · 미들 웨이트 소재를 채택하였습니다.
@@ -1061,26 +1061,26 @@ VALUES ('432640', 'U히트텍코튼크루넥T(긴팔)', '상의 아이템으로�
 --2
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134590&displayNo=NQ1A02A11A17&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('430869', 'U머서라이즈코튼모크넥T(긴팔)', '광택감 있는 소재와 트렌디한 모크넥 디자인이 특징인 머서라이즈 코튼 모크넥 T.
+VALUES ('430869', 'U머서라이즈코튼모크넥T', '광택감 있는 소재와 트렌디한 모크넥 디자인이 특징인 머서라이즈 코튼 모크넥 T.
 · 유니클로 파리 RnD센터의 아티스틱 디렉터 크리스토퍼 르메르(Christophe Lemaire)가 혁신적인 소재와 현대적인 디자인으로 재해석한 Uniqlo U 컬렉션입니다.
 · 신축성 있는 저지 소재에 실켓 가공 추가.', 19900, 'F', 'T', 'SH', '430869_1.png', '430869_2.png', '430869_3.png', '430869_4.png', '430869_5.png');
 
 --3
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134589&displayNo=NQ1A02A11A17&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428320', '소프트니트크루넥퍼프슬리브T(긴팔)', '단품으로도 트렌디한 스타일을 즐길 수 있는 티셔츠.
+VALUES ('428320', '소프트니트크루넥퍼프슬리브T', '단품으로도 트렌디한 스타일을 즐길 수 있는 티셔츠.
 · 볼륨감 있는 소매 디자인이 매력적.', 19900, 'F', 'T', 'SH', '428320_1.png', '428320_2.png', '428320_3.png', '428320_4.png', '428320_5.png');
 
 --4
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31133907&displayNo=NQ1A02A11A17&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428311', '스트레치코튼터틀넥T(긴팔)', '적당한 두께감으로 단품으로도 착용하기 좋은 T.
+VALUES ('428311', '스트레치코튼터틀넥T', '적당한 두께감으로 단품으로도 착용하기 좋은 T.
 · 깔끔한 실루엣에 스트레치성을 더해 착용감이 뛰어남.', 12900, 'F', 'T', 'SH', '428311_1.png', '428311_2.png', '428311_3.png', '428311_4.png', '428311_5.png');
 
 --5
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31133905&displayNo=NQ1A02A11A17&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428308', '스트레치코튼크루넥T(7부)', '한 장만 입어도 깔끔하면서도 맵시 있는 스타일을 연출할 수 있는 스트레치 코튼 크루넥 T셔츠.
+VALUES ('428308', '스트레치코튼7부크루넥T', '한 장만 입어도 깔끔하면서도 맵시 있는 스타일을 연출할 수 있는 스트레치 코튼 크루넥 T셔츠.
 · 컴팩트한 코튼 원사를 사용한 립 소재 사용.
 · 웨이스트 주변이 피트 된 깔끔한 실루엣.
 · 네크 라인의 스티치는 보이지 않도록 개선.', 12900, 'F', 'T', 'SH', '428308_1.png', '428308_2.png', '428308_3.png', '428308_4.png', '428308_5.png');
@@ -1088,7 +1088,7 @@ VALUES ('428308', '스트레치코튼크루넥T(7부)', '한 장만 입어도 �
 --6
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134597&displayNo=NQ1A02A11A17&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('432523', '스트레치코튼보트넥T(반팔)', '보트넥 디자인으로 목 주변이 깔끔해 보이는 스트레치 코튼 보트넥 T셔츠.
+VALUES ('432523', '스트레치코튼반팔보트넥T', '보트넥 디자인으로 목 주변이 깔끔해 보이는 스트레치 코튼 보트넥 T셔츠.
 · 다소 두꺼운 소재감으로 비침 현상이 적은 면 소재 사용.
 · 5부 소매 기장.
 · 보트넥 타입.', 12900, 'F', 'T', 'SH', '432523_1.png', '432523_2.png', '432523_3.png', '432523_4.png', '432523_5.png');
@@ -1096,27 +1096,27 @@ VALUES ('432523', '스트레치코튼보트넥T(반팔)', '보트넥 디자인�
 --7
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134591&displayNo=NQ1A02A11A17&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('431868', '립크루넥T(긴팔)', '깔끔한 인상을 주는 립 크루넥 T셔츠.
+VALUES ('431868', '립크루넥긴팔T', '깔끔한 인상을 주는 립 크루넥 T셔츠.
 · 두께감 있는 립 원단 채용.
 · 크루넥 타입.', 19900, 'F', 'T', 'SH', '431868_1.png', '431868_2.png', '431868_3.png', '431868_4.png', '431868_5.png');
 
 --8
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31127473&displayNo=NQ1A02A11A17&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('422691', '립코튼하이넥T(5부)', '보풀 현상이 적으면서도 부드러운 감촉을 느낄 수 있는 립 코튼 하이넥 T셔츠.
+VALUES ('422691', '립코튼하이넥5부T', '보풀 현상이 적으면서도 부드러운 감촉을 느낄 수 있는 립 코튼 하이넥 T셔츠.
 · 보풀 현상을 억제한 컴팩트 코튼 원사 채용.
 · 5부 소매 기장.', 12900, 'F', 'T', 'SH', '422691_1.png', '422691_2.png', '422691_3.png', '422691_4.png', '422691_5.png');
 
 --9
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31127467&displayNo=NQ1A02A11A17&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('422692', '립코튼크루넥T(긴팔)20SS', '보풀 현상이 적으면서도 부드러운 감촉을 느낄 수 있는 립 코튼 크루넥 T셔츠.
+VALUES ('422692', '립코튼긴팔크루넥T', '보풀 현상이 적으면서도 부드러운 감촉을 느낄 수 있는 립 코튼 크루넥 T셔츠.
 · 보풀 현상을 억제한 컴팩트 코튼 원사 채용.', 12900, 'F', 'T', 'SH', '422692_1.png', '422692_2.png', '422692_3.png', '422692_4.png', '422692_5.png');
 
 --10
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134622&displayNo=NQ1A02A11A17&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428327', '히트텍후리스터틀넥T(긴팔)', '따뜻하면서도 부드러운 착용감뿐만 아니라 소재 특유의 드레이프감을 느낄 수 있는 히트텍 후리스 터틀넥 T셔츠.
+VALUES ('428327', '히트텍후리스터틀넥긴팔T', '따뜻하면서도 부드러운 착용감뿐만 아니라 소재 특유의 드레이프감을 느낄 수 있는 히트텍 후리스 터틀넥 T셔츠.
 · 히트텍 소재 사용.
 · 흡습발열*, 보온 기능.
 · 미세 기모 가공 처리.
@@ -1141,19 +1141,19 @@ VALUES ('425663', 'U크루넥T(반팔)', '베이직한 디자인이면서도 부
 --13
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31129391&displayNo=NQ1A02A11A17&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('422697', 'SUPIMA COTTON크루넥T(반팔)20SS', '부드러운 감촉을 느낄 수 있는 SUPIMA COTTON 크루넥 T셔츠.
+VALUES ('422697', 'SUPIMA코튼크루넥반팔T', '부드러운 감촉을 느낄 수 있는 SUPIMA COTTON 크루넥 T셔츠.
 · 수피마코튼 소재 100% 사용.', 9900, 'F', 'T', 'SH', '422697_1.png', '422697_2.png', '422697_3.png', '422697_4.png', '422697_5.png');
 
 --14
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31129392&displayNo=NQ1A02A11A17&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('422698', 'SUPIMA COTTON V넥T(반팔)', '부드러운 감촉을 느낄 수 있는 SUPIMA COTTON V넥 T셔츠.
+VALUES ('422698', 'SUPIMA코튼반팔V넥T', '부드러운 감촉을 느낄 수 있는 SUPIMA COTTON V넥 T셔츠.
 · 수피마코튼 소재 100% 사용.', 9900, 'F', 'T', 'SH', '422698_1.png', '422698_2.png', '422698_3.png', '422698_4.png', '422698_5.png');
 
 --15
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134593&displayNo=NQ1A02A11A17&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('432357', 'AIRism심리스롱T(긴팔)', '긴 기장감으로 캐주얼한 스타일에 제격이면서도 쾌적한 착용감을 느낄 수 있는 AIRism 심리스 롱 T셔츠.
+VALUES ('432357', 'AIRism심리스롱긴팔T', '긴 기장감으로 캐주얼한 스타일에 제격이면서도 쾌적한 착용감을 느낄 수 있는 AIRism 심리스 롱 T셔츠.
 · 드라이, 접촉 냉감 기능.
 · 자외선 차단(UPF40)* 기능.
 * 자외선 차단평가 (JIS L 1925:2019) 결과 기준.', 29900, 'F', 'T', 'SH', '432357_1.png', '432357_2.png', '432357_3.png', '432357_4.png', '432357_5.png');
@@ -1161,7 +1161,7 @@ VALUES ('432357', 'AIRism심리스롱T(긴팔)', '긴 기장감으로 캐주얼�
 --16
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31127474&displayNo=NQ1A02A11A17&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('422809', 'AIRism V넥롱T(반팔)', '보송보송하면서도 편한 착용감을 느낄 수 있는 AIRism V넥 롱 T셔츠.
+VALUES ('422809', 'AIRism V넥롱반팔T', '보송보송하면서도 편한 착용감을 느낄 수 있는 AIRism V넥 롱 T셔츠.
 · 에어리즘 소재 사용.
 · 드라이, 접촉 냉감 기능.
 · V넥 타입.', 19900, 'F', 'T', 'SH', '422809_1.png', '422809_2.png', '422809_3.png', '422809_4.png', '422809_5.png');
@@ -1169,7 +1169,7 @@ VALUES ('422809', 'AIRism V넥롱T(반팔)', '보송보송하면서도 편한 �
 --17
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31129393&displayNo=NQ1A02A11A17&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('422812', 'DRY-EX크루넥T(반팔)', '쾌적한 착용감을 자랑하여 스포츠 씬에서부터 일상 생활까지 착용하기 좋은 DRY-EX 크루넥 T셔츠
+VALUES ('422812', 'DRY-EX크루넥반팔T', '쾌적한 착용감을 자랑하여 스포츠 씬에서부터 일상 생활까지 착용하기 좋은 DRY-EX 크루넥 T셔츠
 · 드라이 EX 소재 사용.
 · 맵핑 디자인.', 19900, 'F', 'T', 'SH', '422812_1.png', '422812_2.png', '422812_3.png', '422812_4.png', '422812_5.png');
 
@@ -1180,14 +1180,14 @@ VALUES ('422812', 'DRY-EX크루넥T(반팔)', '쾌적한 착용감을 자랑하�
 --1
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31133935&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428858', 'EFM크루넥가디건(긴팔)', '섬세하면서도 우아한 감촉을 느낄 수 있는 EFM 크루넥 가디건.
+VALUES ('428858', 'EFM크루넥긴팔가디건', '섬세하면서도 우아한 감촉을 느낄 수 있는 EFM 크루넥 가디건.
 · 마이크로 극세 메리노 울 소재 100% 사용.
 · 물세탁 가능.', 39900, 'F', 'T', 'KN', '428858_1.png', '428858_2.png', '428858_3.png', '428858_4.png', '428858_5.png');
 
 --2
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31133936&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428859', 'EFM V넥가디건(긴팔)', '고급스러우면서도 우아한 감촉을 느낄 수 있는 EFM V넥 가디건.
+VALUES ('428859', 'EFM V넥긴팔가디건', '고급스러우면서도 우아한 감촉을 느낄 수 있는 EFM V넥 가디건.
 · 마이크로 극세 메리노 울 소재 100% 사용.
 · 물세탁 가능.
 · V넥 타입.', 39900, 'F', 'T', 'KN', '428859_1.png', '428859_2.png', '428859_3.png', '428859_4.png', '428859_5.png');
@@ -1195,26 +1195,26 @@ VALUES ('428859', 'EFM V넥가디건(긴팔)', '고급스러우면서도 우아�
 --3
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31133934&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428855', 'EFM크루넥스웨터(긴팔)', '섬세하면서도 우아한 감촉을 느낄 수 있는 EFM 크루넥 스웨터.
+VALUES ('428855', 'EFM크루넥긴팔스웨터', '섬세하면서도 우아한 감촉을 느낄 수 있는 EFM 크루넥 스웨터.
 · 마이크로 극세 메리노 울 소재 100% 사용.
 · 물세탁 가능.', 29900, 'F', 'T', 'KN', '428855_1.png', '428855_2.png', '428855_3.png', '428855_4.png', '428855_5.png');
 
 --4
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135202&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('432730', 'U EFM립크루넥스웨터(긴팔)', '엑스트라 화인 메리노 울을 사용하여 스타일리시한 분위기를 자아내는 EFM 립 크루넥 스웨터.
+VALUES ('432730', 'U EFM립크루넥긴팔스웨터', '엑스트라 화인 메리노 울을 사용하여 스타일리시한 분위기를 자아내는 EFM 립 크루넥 스웨터.
 · 유니클로 파리 RnD센터의 아티스틱 디렉터 크리스토퍼 르메르(Christophe Lemaire)가 혁신적인 소재와 현대적인 디자인으로 재해석한 Uniqlo U 컬렉션입니다.', 39900, 'F', 'T', 'KN', '432730_1.png', '432730_2.png', '432730_3.png', '432730_4.png', '432730_5.png');
 
 --5
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135203&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('432731', 'U EFM립터틀넥스웨터(긴팔)', '엑스트라 화인 메리노 울을 사용하여 스타일리시한 분위기를 자아내는 EFM 립 터틀넥 스웨터.
+VALUES ('432731', 'U EFM립터틀넥긴팔스웨터', '엑스트라 화인 메리노 울을 사용하여 스타일리시한 분위기를 자아내는 EFM 립 터틀넥 스웨터.
 · 유니클로 파리 RnD센터의 아티스틱 디렉터 크리스토퍼 르메르(Christophe Lemaire)가 혁신적인 소재와 현대적인 디자인으로 재해석한 Uniqlo U 컬렉션입니다.', 39900, 'F', 'T', 'KN', '432731_1.png', '432731_2.png', '432731_3.png', '432731_4.png', '432731_5.png');
 
 --6
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134636&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428856', 'EFM V넥스웨터(긴팔)', '부드러우면서도 고급스러운 감촉을 느낄 수 있는 EFM V넥 스웨터.
+VALUES ('428856', 'EFM V넥긴팔스웨터', '부드러우면서도 고급스러운 감촉을 느낄 수 있는 EFM V넥 스웨터.
 · 19.5 마이크로 극세 메리노 울 소재 100% 사용.
 · 워셔블(물세탁) 사양.
 · V넥 타입.', 29900, 'F', 'T', 'KN', '428856_1.png', '428856_2.png', '428856_3.png', '428856_4.png', '428856_5.png');
@@ -1222,7 +1222,7 @@ VALUES ('428856', 'EFM V넥스웨터(긴팔)', '부드러우면서도 고급스�
 --7
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135201&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428857', 'EFM터틀넥스웨터(긴팔)', '고급스러운 소재감을 느낄 수 있는 EFM 터틀넥 스웨터.
+VALUES ('428857', 'EFM터틀넥긴팔스웨터', '고급스러운 소재감을 느낄 수 있는 EFM 터틀넥 스웨터.
 · 19.5 마이크로 극세 메리노 울 소재 100% 사용.
 · 워셔블(물세탁) 사양.
 · 소매 밑단의 립 부분을 길게 설정하여 손목이 가늘어 보입니다.', 39900, 'F', 'T', 'KN', '428857_1.png', '428857_2.png', '428857_3.png', '428857_4.png', '428857_5.png');
@@ -1230,7 +1230,7 @@ VALUES ('428857', 'EFM터틀넥스웨터(긴팔)', '고급스러운 소재감을
 --8
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31122111&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('418673', 'EFM립터틀넥스웨터(긴팔)', '고급스러운 감촉을 느낄 수 있는 EFM 립 터틀넥 스웨터.
+VALUES ('418673', 'EFM립터틀넥긴팔스웨터', '고급스러운 감촉을 느낄 수 있는 EFM 립 터틀넥 스웨터.
 · 19.5 마이크로 극세 메리노 울 소재 100% 사용.
 · 물 세탁이 가능한 사양.
 · 터틀넥 타입.', 29900, 'F', 'T', 'KN', '418673_1.png', '418673_2.png', '418673_3.png', '418673_4.png', '418673_5.png');
@@ -1238,7 +1238,7 @@ VALUES ('418673', 'EFM립터틀넥스웨터(긴팔)', '고급스러운 감촉을
 --9
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31133932&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428863', '캐시미어크루넥스웨터(긴팔)', '섬유의 보석이라 불리는 캐시미어 소재를 100% 사용하여 부드러우면서도 따뜻한 착용감을 자랑하는 캐시미어 크루넥 스웨터.
+VALUES ('428863', '캐시미어크루넥긴팔스웨터', '섬유의 보석이라 불리는 캐시미어 소재를 100% 사용하여 부드러우면서도 따뜻한 착용감을 자랑하는 캐시미어 크루넥 스웨터.
 · 매끄러우면서도 부드러운 감촉을 느낄 수 있습니다.
 · 엄격한 품질 관리로 만들어져 일상을 럭셔리하게 연출해줍니다.
 · 크루넥 타입.
@@ -1247,7 +1247,7 @@ VALUES ('428863', '캐시미어크루넥스웨터(긴팔)', '섬유의 보석이
 --10
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134634&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428866', '캐시미어크루넥가디건(긴팔)', '섬유의 보석이라 불리는 캐시미어 소재를 100% 사용하여 부드러우면서도 따뜻한 착용감을 자랑하는 캐시미어 크루넥 가디건
+VALUES ('428866', '캐시미어크루넥긴팔가디건', '섬유의 보석이라 불리는 캐시미어 소재를 100% 사용하여 부드러우면서도 따뜻한 착용감을 자랑하는 캐시미어 크루넥 가디건
 · 매끄러우면서도 부드러운 감촉을 느낄 수 있습니다.
 · 엄격한 품질 관리로 만들어져 일상을 럭셔리하게 연출해줍니다.
 · 크루넥 타입.
@@ -1256,7 +1256,7 @@ VALUES ('428866', '캐시미어크루넥가디건(긴팔)', '섬유의 보석이
 --11
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31133933&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428864', '캐시미어터틀넥스웨터(긴팔)', '섬유의 보석이라 불리는 캐시미어 소재를 100% 사용하여 부드러우면서도 따뜻한 착용감을 자랑하는 캐시미어 터틀넥 스웨터.
+VALUES ('428864', '캐시미어터틀넥긴팔스웨터', '섬유의 보석이라 불리는 캐시미어 소재를 100% 사용하여 부드러우면서도 따뜻한 착용감을 자랑하는 캐시미어 터틀넥 스웨터.
 · 매끄러우면서도 부드러운 감촉을 느낄 수 있습니다.
 · 엄격한 품질 관리로 만들어져 일상을 럭셔리하게 연출해줍니다.
 · 터틀넥 타입.
@@ -1265,7 +1265,7 @@ VALUES ('428864', '캐시미어터틀넥스웨터(긴팔)', '섬유의 보석이
 --12
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31133938&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428861', '프리미엄램스울크루넥스웨터(긴팔)', '부드러우면서도 따뜻한 착용감을 자랑하는 프리미엄 램스울 크루넥 스웨터.
+VALUES ('428861', '램스울크루넥긴팔스웨터', '부드러우면서도 따뜻한 착용감을 자랑하는 램스울 크루넥 스웨터.
 · 립 사양의 넥 타입.
 · 19.5 마이크로 프리미엄 램스 울 소재 100% 사용.
 · 부드러우면서도 팽창감이 있어 가벼운 소재감을 느낄 수 있습니다.
@@ -1274,51 +1274,51 @@ VALUES ('428861', '프리미엄램스울크루넥스웨터(긴팔)', '부드러�
 --13
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134646&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('428867', '수플레얀하이넥스웨터(긴팔)', '수플레 케이크처럼 폭신폭신하면서도 가벼운 착용감을 느낄 수 있는 수플레얀 하이넥 스웨터.
+VALUES ('428867', '수플레얀하이넥긴팔스웨터', '수플레 케이크처럼 폭신폭신하면서도 가벼운 착용감을 느낄 수 있는 수플레얀 하이넥 스웨터.
 · 신축성이 있는 부클레 실을 사용하여 폭신폭신하면서도 부드러운 감촉 실현하여 따끔거리지 않습니다.', 29900, 'F', 'T', 'KN', '428867_1.png', '428867_2.png', '428867_3.png', '428867_4.png', '428867_5.png');
 
 --14
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135561&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('432708', 'JWA수플레얀크루넥스웨터(긴팔)', '스웨트 셔츠와 같은 디테일의 부드럽고 폭신한 수플레 소재 스웨터.
+VALUES ('432708', '수플레얀크루넥긴팔스웨터', '스웨트 셔츠와 같은 디테일의 부드럽고 폭신한 수플레 소재 스웨터.
 · 고급스러우면서도 캐주얼한 느낌을 줍니다. 함께 입을 수 있는 팬츠도 같이 만나보세요!', 39900, 'F', 'T', 'KN', '432708_1.png', '432708_2.png', '432708_3.png', '432708_4.png', '432708_5.png');
 
 --15
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135558&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('430931', 'JWA크롭크루넥스웨터(긴팔)', '크롭기장의 디자인으로 여성스러움을 더한 래글런 슬리브의 청키 니트 스웨터.
+VALUES ('430931', 'JWA크롭크루넥긴팔스웨터', '크롭기장의 디자인으로 여성스러움을 더한 래글런 슬리브의 청키 니트 스웨터.
 · 접을 수 있는 긴 소매 디테일이 스타일리시한 디자인의 겨울 필수품을 만듭니다.', 49900, 'F', 'T', 'KN', '430931_1.png', '430931_2.png', '430931_3.png', '430931_4.png', '430931_5.png');
 
 --16
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135560&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('432707', 'JWA터틀넥스웨터(긴팔)A', '부드럽고 편안한 실루엣이 특징인 이 스웨터는 단독으로 착용하거나 레이어드하여 완벽하게 착용할 수 있습니다.
+VALUES ('432707', 'JWA터틀넥긴팔스웨터A', '부드럽고 편안한 실루엣이 특징인 이 스웨터는 단독으로 착용하거나 레이어드하여 완벽하게 착용할 수 있습니다.
 · 심플하면서도 귀여운 인상을 주는 니트.', 49900, 'F', 'T', 'KN', '432707_1.png', '432707_2.png', '432707_3.png', '432707_4.png', '432707_5.png');
 
 --17
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134654&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('432732', 'U로우게이지터틀넥스웨터(긴팔)', '스타일리시한 분위기를 자아내는 로우 게이지 터틀넥 스웨터.
+VALUES ('432732', 'U로우게이지터틀넥긴팔스웨터', '스타일리시한 분위기를 자아내는 로우 게이지 터틀넥 스웨터.
 · 유니클로 파리 RnD센터의 아티스틱 디렉터 크리스토퍼 르메르(Christophe Lemaire)가 혁신적인 소재와 현대적인 디자인으로 재해석한 Uniqlo U 컬렉션입니다.', 49900, 'F', 'T', 'KN', '432732_1.png', '432732_2.png', '432732_3.png', '432732_4.png', '432732_5.png');
 
 --18
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134648&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('430929', 'U메리노블렌드V넥가디건(긴팔)', '메리노 울을 사용하여 스타일리시한 분위기를 자아내는 메리노 블렌드 V넥 가디건.
+VALUES ('430929', 'U메리노블렌드V넥긴팔가디건', '메리노 울을 사용하여 스타일리시한 분위기를 자아내는 메리노 블렌드 V넥 가디건.
 · 유니클로 파리 RnD센터의 아티스틱 디렉터 크리스토퍼 르메르(Christophe Lemaire)가 혁신적인 소재와 현대적인 디자인으로 재해석한 Uniqlo U 컬렉션입니다.
 · 19.5 마이크론 극세 메리노 울에 폴리에스터를 블렌딩한 소재 사용.', 49900, 'F', 'T', 'KN', '430929_1.png', '430929_2.png', '430929_3.png', '430929_4.png', '430929_5.png');
 
 --19
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134653&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('432729', 'U메리노블렌드크루넥스웨터(긴팔)', '메리노 울을 사용하여 스타일리시한 분위기를 자아내는 메리노 블렌드 크루넥 스웨터.
+VALUES ('432729', 'U메리노블렌드크루넥스웨터', '메리노 울을 사용하여 스타일리시한 분위기를 자아내는 메리노 블렌드 크루넥 스웨터.
 · 유니클로 파리 RnD센터의 아티스틱 디렉터 크리스토퍼 르메르(Christophe Lemaire)가 혁신적인 소재와 현대적인 디자인으로 재해석한 Uniqlo U 컬렉션입니다.
 · 19.5 마이크론 극세 메리노 울에 폴리에스터를 블렌딩한 소재 사용.', 49900, 'F', 'T', 'KN', '432729_1.png', '432729_2.png', '432729_3.png', '432729_4.png', '432729_5.png');
 
 --20
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135207&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('432087', 'IDLF 3D니트자카드스웨터(긴팔)', '입체적인 실루엣과 고급스러운 소재감을 즐길 수 있는 3D 니트 자카드 스웨터.
+VALUES ('432087', '3D니트자카드스웨터', '입체적인 실루엣과 고급스러운 소재감을 즐길 수 있는 3D 니트 자카드 스웨터.
 · 시대와 세대를 넘어 사랑 받고 있는 프렌치 시크의 대명사 이네스 드 라 프레상쥬와 스페셜 콜라보레이션.
 · 신축성이 있는 원사를 사용하였습니다.
 · 홀가먼트 기술을 채용하여 입체적인 실루엣을 실현하고 봉제선이 없어 부드러운 착용감을 느낄 수 있습니다.
@@ -1327,7 +1327,7 @@ VALUES ('432087', 'IDLF 3D니트자카드스웨터(긴팔)', '입체적인 실�
 --21
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134641&displayNo=NQ1A02A20A03&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('430553', '3D니트램스울블렌드터틀넥스웨터(긴팔)', '3D 니트만의 아름다운 라인을 즐길 수 있는 3D 니트 램스울 블렌드 터틀넥 스웨터.
+VALUES ('430553', '3D램스울블렌드터틀넥스웨터', '3D 니트만의 아름다운 라인을 즐길 수 있는 3D 니트 램스울 블렌드 터틀넥 스웨터.
 · 19.5 마이크로의 고급 모직 X 나일론 혼합 소재 사용.
 · 홀가먼트 기술 채용.
 · 텍스처감이 있는 니트 짜임 실현.
@@ -1373,7 +1373,7 @@ VALUES ('432354', 'JWA디자인햄스커트', '플리츠 뿐만 아니라, 개�
 --5
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135530&recopick=4&product_type=R
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('435470', 'JWA이지와이드크롭팬츠(체크)', '와이드실루엣으로 편안한 착용감의 크롭팬츠.
+VALUES ('435470', 'JWA이지와이드체크크롭팬츠', '와이드실루엣으로 편안한 착용감의 크롭팬츠.
 · 릴렉스감을 주며 웨이스트 밴드사양으로 착용하기 쉽습니다.
 · 코디에 포인트를 주는 클래식한 체크 무늬 디자인.', 49900, 'F', 'B', 'SK', '435470_1.png', '435470_2.png', '435470_3.png', '435470_4.png', '435470_5.png');
 
@@ -1444,7 +1444,7 @@ VALUES ('431466', 'U새틴미디스커트', '광택감 있는 소재로 우아�
 --14
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?displayNo=&goodsNo=NQ31134537&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('433113', 'IDLF트위스트플리츠롱스커트', '광택 있는 소재감과 아름다운 머메이드 실루엣을 즐길 수 있는 트위스트 플리츠 롱 스커트.
+VALUES ('433113', '트위스트플리츠머메이드스커트', '광택 있는 소재감과 아름다운 머메이드 실루엣을 즐길 수 있는 트위스트 플리츠 롱 스커트.
 · 시대와 세대를 넘어 사랑 받고 있는 프렌치 시크의 대명사 이네스 드 라 프레상쥬와 스페셜 콜라보레이션.
 · 트위스트 주름을 가공하여 캐주얼한 인상을 줍니다.
 · 광택감이 있는 새틴 소재를 사용하였습니다.
@@ -1456,7 +1456,7 @@ VALUES ('433113', 'IDLF트위스트플리츠롱스커트', '광택 있는 소재
 --15
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134535&recopick=4&product_type=R
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('430501', 'IDLF트위스트플리츠롱스커트', '2종류의 주름을 채용하면서도 밑단은 주름을 풀어 깔끔한 라인을 표현한 트위스트 플리츠 롱 스커트.
+VALUES ('430501', '트위스트플리츠롱스커트', '2종류의 주름을 채용하면서도 밑단은 주름을 풀어 깔끔한 라인을 표현한 트위스트 플리츠 롱 스커트.
 · 시대와 세대를 넘어 사랑 받고 있는 프렌치 시크의 대명사 이네스 드 라 프레상쥬와 스페셜 콜라보레이션.
 · 아름다운 A라인 실루엣을 표현했습니다.
 · 절묘한 프린트 디자인이 포인트.', 39900, 'F', 'B', 'SK', '430501_1.png', '430501_2.png', '430501_3.png', '430501_4.png', '430501_5.png');
@@ -1474,7 +1474,7 @@ VALUES ('430134', '슬라우치테이퍼드앵클진', '드롭 웨스트 디자�
 --2
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31129349&displayNo=NQ1A02A12A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('426284', '슬라우치테이퍼드앵클진(릴랙스피트)', '새로운 실루엣과 빈티지 가공을 더해 트렌디한 인상을 주는 슬라우치 테이퍼드 앵클 진.
+VALUES ('426284', '릴랙스피트슬라우치앵클진', '새로운 실루엣과 빈티지 가공을 더해 트렌디한 인상을 주는 슬라우치 테이퍼드 앵클 진.
 · 카이하라사 면 소재 100%의 데님 원단 사용.
 · 슬라우치 실루엣(릴랙스 피트) 디자인.
 · 밑단은 테이퍼드 실루엣.', 49900, 'F', 'B', 'LP', '426284_1.png', '426284_2.png', '426284_3.png', '426284_4.png', '426284_5.png');
@@ -1482,7 +1482,7 @@ VALUES ('426284', '슬라우치테이퍼드앵클진(릴랙스피트)', '새로�
 --3
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134512&displayNo=NQ1A02A12A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('429107', '슬림스트레이트하이라이즈진20FW', '길고 곧아 보이는 다리 라인을 연출할 수 있는 슬림피트 스트레이트 하이라이즈 진.
+VALUES ('429107', '슬림스트레이트하이라이즈진', '길고 곧아 보이는 다리 라인을 연출할 수 있는 슬림피트 스트레이트 하이라이즈 진.
 · 트렌디한 스트레이트 실루엣.
 · 카이하라사의 데님 원단 채용.
 · 하이라이즈 타입.
@@ -1493,7 +1493,7 @@ VALUES ('429107', '슬림스트레이트하이라이즈진20FW', '길고 곧아 
 --4
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134516&displayNo=NQ1A02A12A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('431737', '히트텍울트라스트레치하이라이즈진20FW', '신축성이 있어 편하면서도 따뜻한 착용감을 자랑하는 히트텍 울트라 스트레치 하이라이즈 진.
+VALUES ('431737', '히트텍스트레치하이라이즈진', '신축성이 있어 편하면서도 따뜻한 착용감을 자랑하는 히트텍 스트레치 하이라이즈 진.
 · 히트텍 소재의 울트라 스트레치 원단 사용.
 · 흡습 발열* 기능.
 · 기모 안감 처리.
@@ -1505,7 +1505,7 @@ VALUES ('431737', '히트텍울트라스트레치하이라이즈진20FW', '신�
 --5
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31127438&displayNo=NQ1A02A12A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('425499', '울트라스트레치진(데미지)', '놀라운 신축성으로 움직임이 편하면서도 데미지 디자인을 즐길 수 있는 울트라 스트레치 진.
+VALUES ('425499', '울트라데미지스트레치진', '놀라운 신축성으로 움직임이 편하면서도 데미지 디자인을 즐길 수 있는 울트라 스트레치 진.
 · 울트라 스트레치 데님 원단 사용.
 · 신축성이 있어 무릎이 잘 튀어나오지 않습니다.
 · 스키니 피트 실루엣.
@@ -1517,7 +1517,7 @@ VALUES ('425499', '울트라스트레치진(데미지)', '놀라운 신축성으
 --6
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135525&displayNo=NQ1A02A12A02&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('430460', '스키니플레어앵클진20FW', '플레어한 실루엣과 앵클 기장이 포인트인 스키니 플레어 앵클 진.
+VALUES ('430460', '스키니플레어앵클진', '플레어한 실루엣과 앵클 기장이 포인트인 스키니 플레어 앵클 진.
 · 카이하라 사의 데님 원단 사용.
 · 데미지 가공 추가.', 49900, 'F', 'B', 'LP', '430460_1.png', '430460_2.png', '430460_3.png', '430460_4.png', '430460_5.png');
 
@@ -1638,14 +1638,14 @@ VALUES ('432355', 'JWA이지와이드팬츠', '편안하게 착용하기 좋은 
 --21
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134521&displayNo=NQ1A02A12A05&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('429204', '하이웨이스트와이드팬츠(기모)', '울 같은 소재감을 느낄 수 있으면서도 물세탁이 가능해 손질이 간편한 하이웨이스트 와이드 팬츠.
+VALUES ('429204', '하이웨이스트기모와이드팬츠', '울 같은 소재감을 느낄 수 있으면서도 물세탁이 가능해 손질이 간편한 하이웨이스트 와이드 팬츠.
 · 와이드 스트레이트 실루엣.
 · 워셔블(물세탁) 사양.', 39900, 'F', 'B', 'LP', '429204_1.png', '429204_2.png', '429204_3.png', '429204_4.png', '429204_5.png');
 
 --22
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31134629&displayNo=NQ1A02A12A05&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('430108', '윈드블럭스트레치보아후리스팬츠', '입는순간 따뜻하고 바람이 잘 통하지 않아 더 따뜻한 보아 후리스 팬츠.
+VALUES ('430108', '스트레치보아후리스팬츠', '입는순간 따뜻하고 바람이 잘 통하지 않아 더 따뜻한 보아 후리스 팬츠.
 · 방풍 사양에 폭신폭신한 보아 후리스 소재를 플러스.
 · 0.008mm의 필름으로 차가운 바람은 막아주며 착용감은 가볍고 부드러우며 따뜻합니다.
 · 안감의 후리스로 피부에 닿는 감촉이 부드럽습니다.', 39900, 'F', 'B', 'LP', '430108_1.png', '430108_2.png', '430108_3.png', '430108_4.png', '430108_5.png');
@@ -1659,7 +1659,7 @@ VALUES ('418249', '보아스웨트팬츠', '부드러운 착용감뿐만 아니�
 --24
 --https://store-kr.uniqlo.com/display/showDisplayCache.lecs?goodsNo=NQ31135529&displayNo=NQ1A02A12A05&stonType=P&storeNo=83&siteNo=50706
 INSERT INTO product (product_no, product_name, product_desc, product_price, product_L_div, product_M_div, product_S_div, product_image_1, product_image_2, product_image_3, product_image_4, product_image_5) 
-VALUES ('435469', 'JWA이지와이드팬츠(스트라이프)', '와이드실루엣으로 편안한 착용감의 롱 팬츠.
+VALUES ('435469', 'JWA이지와이드팬츠', '와이드실루엣으로 편안한 착용감의 롱 팬츠.
 · 웨이스트 밴드 사양으로 착용하기 쉽습니다.
 · 핀 스트라이프 디자인.', 49900, 'F', 'B', 'LP', '435469_1.png', '435469_2.png', '435469_3.png', '435469_4.png', '435469_5.png');
 
