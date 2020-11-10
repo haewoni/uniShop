@@ -4,5 +4,5 @@
 
 
 <%
-   response.sendRedirect("unishop_main");
+   response.sendRedirect("shop_main");
  %>
