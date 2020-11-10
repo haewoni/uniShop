@@ -26,11 +26,10 @@
 			<form name="jumun_address_form">
 				<div class="col-xl-9 col-lg-8">
 					<div class="checkout-steps">
-						<a href="jumun_review_form">4. 주문확인</a><a
-							href="jumun_payment_form"><span class="angle"></span>3. 결제정보</a><a
-							href="jumun_delivery_form"><span class="angle"></span>2. 배송방법</a><a
-							class="active" href="jumun_address_form"><span class="angle"></span>1.
-							주소</a>
+						<a href="jumun_review_form">4. 주문확인</a>
+						<a href="jumun_payment_form"><span class="angle"></span>3. 결제정보</a>
+						<a href="jumun_delivery_form"><span class="angle"></span>2. 배송방법</a>
+						<a class="active" href="jumun_address_form"><span class="angle"></span>1.주소</a>
 					</div>
 					<h4>주소</h4>
 					<hr class="padding-bottom-1x">

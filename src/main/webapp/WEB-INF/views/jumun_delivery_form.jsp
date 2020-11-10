@@ -12,7 +12,7 @@
           </div>
           <div class="column">
             <ul class="breadcrumbs">
-              <li><a href="index.html">Home</a>
+              <li><a href="unishop_main">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
               <li>Checkout</li>
@@ -28,8 +28,7 @@
             <div class="checkout-steps"><a href="jumun_review_form">4. 주문확인</a>
             <a href="jumun_payment_form"><span class="angle"></span>3. 결제정보</a>
             <a class="active" href="jumun_delivery_form"><span class="angle"></span>2. 배송방법</a>
-            <a class="completed" href="jumun_address_form"><span class="angle"></span>
-            <span class="step-indicator icon-circle-check"></span>1. 주소</a></div>
+            <a class="completed" href="jumun_address_form"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>1. 주소</a></div>
             <h4>배송방법을 선택하시오</h4>
             <hr class="padding-bottom-1x">
             <div class="table-responsive">
@@ -102,7 +101,8 @@
       <!-- Site Footer-->
       <jsp:include page="common_bottom.jsp"/>
     </div>
-    <!-- Back To Top Button--><a class="scroll-to-top-btn" href="#"><i class="icon-arrow-up"></i></a>
+    <!-- Back To Top Button-->
+    <a class="scroll-to-top-btn" href="#"><i class="icon-arrow-up"></i></a>
     <!-- Backdrop-->
     <div class="site-backdrop"></div>
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
