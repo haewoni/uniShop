@@ -53,7 +53,7 @@
                 <thead>
                   <tr>
                     <th>Product Name</th>
-                    <th class="text-center"><a class="btn btn-sm btn-outline-danger" href="#">Clear Wishlist</a></th>
+                    <th class="text-center"><a class="btn btn-sm btn-outline-danger" href="member_wishlist_delete_all">찜 목록 삭제하기</a></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -70,7 +70,7 @@
                         </div>
                       </div>
                     </td>
-                    <td class="text-center"><a class="remove-from-cart" href="#" data-toggle="tooltip" title="Remove item"><i class="icon-cross"></i></a></td>
+                    <td class="text-center"><a class="remove-from-cart" href="member_wishlist_delete_one?product_no=${wishList.product.product_no}" data-toggle="tooltip" title="찜 삭제하기"><i class="icon-cross"></i></a></td>
                   </tr>               
                  </c:forEach>
                 </tbody>
