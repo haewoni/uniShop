@@ -7,7 +7,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page import="java.text.DecimalFormat"%>
-
+<%@ include file="login_check.jspf" %>  
 	<jsp:include page="common_top.jsp"/>
 
 <script type="text/javascript">
