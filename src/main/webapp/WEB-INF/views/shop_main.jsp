@@ -438,7 +438,7 @@
              
              
             <!-- Pagination-->
-            <!--  
+              
             <nav class="pagination">
               <div class="column">
                 <ul class="pages">
@@ -452,7 +452,7 @@
               </div>
               <div class="column text-right hidden-xs-down"><a class="btn btn-outline-secondary btn-sm" href="#">Next&nbsp;<i class="icon-arrow-right"></i></a></div>
             </nav>
-            -->
+            
           </div>
           
       <!-- Site Footer-->
