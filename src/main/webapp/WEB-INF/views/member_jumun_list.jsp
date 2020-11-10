@@ -8,7 +8,7 @@
         <div class="modal-content">
           <div class="modal-header">
            
-            <h4 class="modal-title">Order No  - ${jumun.jumun_no}</h4>
+            <h4 class="modal-title">주문 번호  - ${jumun.jumun_no}</h4>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
           <div class="modal-body">
@@ -16,8 +16,8 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th>Product Name</th>
-                    <th class="text-center">Subtotal</th>
+                    <th>제품 이름</th>
+                    <th class="text-center">총 가격</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -25,7 +25,7 @@
                  <c:forEach items="${jumun.jumun_DetailList}" var="jumun_Detail">
                   <tr>
                     <td>
-                      <div class="product-item"><a class="product-thumb" href="shop_product_detail?${jumun_Detail.product_no}"><img src="img/shop/cart/03.jpg" alt="Product"></a>
+                      <div class="product-item"><a class="product-thumb" href="shop_product_detail?${jumun_Detail.product_no}"><img src="IMAGE/${jumun_Detail.product_no}_1.png" alt="Product"></a>
                         <div class="product-info">
                           <h4 class="product-title"><a href="shop_product_detail?${jumun_Detail.product_no}">${jumun_Detail.product_name}<small>X${jumun_Detail.jumun_d_product_qty}</small></a></h4><span><em>Size:</em>${jumun_Detail.jumun_d_product_size}</span>
                         </div>
@@ -66,7 +66,7 @@
       <div class="page-title">
         <div class="container">
           <div class="column">
-            <h1>My Orders</h1>
+            <h1>주문 내역</h1>
           </div>
           <div class="column">
             <ul class="breadcrumbs">
@@ -76,7 +76,7 @@
               <li><a href="account-orders.html">Account</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li>My Orders</li>
+              <li>주문내역</li>
             </ul>
           </div>
         </div>
@@ -111,8 +111,8 @@
                   <tr>
                     <th>주문 번호</th>
                     <th>주문 날짜</th>
-                    <th>Status</th>
-                    <th>Total</th>
+                    <th>주문 상태</th>
+                    <th>총 가격</th>
                   </tr>
                 </thead>
                 <tbody>
