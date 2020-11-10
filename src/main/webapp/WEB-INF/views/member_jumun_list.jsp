@@ -7,7 +7,7 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-          
+           
             <h4 class="modal-title">Order No  - ${jumun.jumun_no}</h4>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
@@ -38,13 +38,24 @@
                 </tbody>
               </table>
             </div>
-            <hr class="mb-3">
-            <div class="d-flex flex-wrap justify-content-between align-items-center pb-2">
-              <div class="px-2 py-1">Subtotal: <span class='text-medium'>$289.68</span></div>
-              <div class="px-2 py-1">Shipping: <span class='text-medium'>$22.50</span></div>
-              <div class="px-2 py-1">Tax: <span class='text-medium'>$3.42</span></div>
-              <div class="text-lg px-2 py-1">Total: <span class='text-medium'>$315.60</span></div>
-            </div>
+            <c:choose>
+             <c:when test="${jumun.delivery_no eq 'GEN'}">
+              <hr class="mb-3">
+               <div class="d-flex flex-wrap justify-content-between align-items-center pb-2">
+               <div class="px-2 py-1">주문 가격: <span class='text-medium'>${jumun.jumun_tot_price}</span></div>
+               <div class="px-2 py-1">배송비: <span class='text-medium'>3000</span></div>
+               <div class="text-lg px-2 py-1">총 가격: <span class='text-medium'>${jumun.jumun_tot_price + 3000}</span></div>
+              </div>
+             </c:when>
+            <c:when test="${jumun.delivery_no eq 'EX'}">
+             <hr class="mb-3">
+               <div class="d-flex flex-wrap justify-content-between align-items-center pb-2">
+                <div class="px-2 py-1">주문 가격: <span class='text-medium'>${jumun.jumun_tot_price}</span></div>
+                <div class="px-2 py-1">배송비: <span class='text-medium'>6000</span></div>
+                <div class="text-lg px-2 py-1">총 가격: <span class='text-medium'>${jumun.jumun_tot_price + 6000}</span></div>
+               </div>
+              </c:when>
+            </c:choose>
           </div>
         </div>
       </div>
@@ -108,7 +119,7 @@
                 <c:forEach items="${jumunList}" var="jumun">
                   <tr>
 
-                    <td><a class="text-medium navi-link" href="?jumun_no=${jumun.jumun_no}" data-toggle="modal" data-target="#orderDetails">${jumun.jumun_no}</a></td>
+                    <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails">${jumun.jumun_no}</a></td>
                     <td>${jumun.jumun_date}</td>
                     <td><span class="text-danger">${jumun.jumun_status}</span></td>
                     <td><span class="text-medium">${jumun.jumun_tot_price}</span></td>

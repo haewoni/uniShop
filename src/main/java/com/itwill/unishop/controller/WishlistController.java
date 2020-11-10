@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.itwill.unishop.domain.WishList;
 import com.itwill.unishop.service.MemberService;
@@ -34,4 +35,30 @@ public class WishlistController {
 		}
 		return forwardPath;
 	}
+	@RequestMapping("/member_wishlist_delete_one")
+	public String member_wishlist_delete_one(Model model, HttpSession session, @RequestParam String product_no) {
+		String forwardPath="";
+		String sMemberId = (String) session.getAttribute("sMemberId");
+		model.addAttribute("product_no", product_no);
+		try {
+			wishListService.deleteWishListById(sMemberId, product_no);
+			forwardPath = "forward:member_wishlist_detail";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return forwardPath;
+	}
+	@RequestMapping("/member_wishlist_delete_all")
+	public String member_wishlist_delete_all(HttpSession session) {
+		String forwardPath="";
+		String sMemberId = (String) session.getAttribute("sMemberId");
+		try {
+			wishListService.deleteWishListAll(sMemberId);
+			forwardPath = "member_wishlist_detail";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return forwardPath;
+	}
+	
 }
