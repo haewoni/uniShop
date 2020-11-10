@@ -182,7 +182,7 @@
             <div class="shop-toolbar padding-bottom-1x mb-2">
               <div class="column">
                 <div class="shop-sorting">
-                <!--  
+               
                   <label for="sorting">Sort by:</label>
                   <select class="form-control" id="sorting">
                     <option>Popularity</option>
@@ -192,7 +192,7 @@
                     <option>A - Z Order</option>
                     <option>Z - A Order</option>
                   </select><span class="text-muted">Showing:&nbsp;</span><span>1 - 12 items</span>
-                -->
+        
                 </div>
               </div>
               <div class="column">
@@ -200,182 +200,10 @@
                 <span></span><span></span><span></span></a></div>
               </div>
             </div>
-            <!-- Products Grid-->
-            <div class="isotope-grid cols-3 mb-2">
-              <div class="gutter-sizer"></div>
-              <div class="grid-sizer"></div>
-              <!-- Product-->
-               
-               
-               
-              <div class="grid-item">
-                <div class="product-card">
-                  <div class="product-badge text-danger">50% Off</div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/01.jpg" alt="Product"></a>
-                  <h3 class="product-title"><a href="shop-single.html">Unionbay Park</a></h3>
-                  <h4 class="product-price">
-                    <del>$99.99</del>$49.99
-                  </h4>
-                  <div class="product-buttons">
-                    <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                    <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-                  </div>
-                </div>
-              </div>
-             
-             
-              <!-- Product-->
-              
-              <div class="grid-item">
-                <div class="product-card"><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/02.jpg" alt="Product"></a>
-                  <h3 class="product-title"><a href="shop-single.html">Cole Haan Crossbody</a></h3>
-                  <h4 class="product-price">$200.00</h4>
-                  <div class="product-buttons">
-                    <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                    <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-                  </div>
-                </div>
-              </div>
-             
-              <!-- Product-->
-               
-              <div class="grid-item">
-                <div class="product-card">
-                    <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star"></i>
-                    </div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/03.jpg" alt="Product"></a>
-                  <h3 class="product-title"><a href="shop-single.html">Oakley Kickback</a></h3>
-                  <h4 class="product-price">$155.00</h4>
-                  <div class="product-buttons">
-                    <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                    <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card">
-                  <div class="product-badge text-muted">Out of stock</div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/08.jpg" alt="Product"></a>
-                  <h3 class="product-title"><a href="shop-single.html">Off the Shoulder Top</a></h3>
-                  <h4 class="product-price">$128.00</h4>
-                  <div class="product-buttons">
-                    <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button><a class="btn btn-outline-secondary btn-sm" href="shop-single.html">View Details</a>
-                  </div>
-                </div>
-              </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card">
-                    <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star"></i><i class="icon-star"></i>
-                    </div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/05.jpg" alt="Product"></a>
-                  <h3 class="product-title"><a href="shop-single.html">Jordan City Man's Hoodie</a></h3>
-                  <h4 class="product-price">$65.00</h4>
-                  <div class="product-buttons">
-                    <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                    <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-                  </div>
-                </div>
-              </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card">
-                  <div class="product-badge text-danger">40% Off</div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/06.jpg" alt="Product"></a>
-                  <h3 class="product-title"><a href="shop-single.html">Palace Shell Track Jacket</a></h3>
-                  <h4 class="product-price">
-                    <del>$60.00</del>$36.00
-                  </h4>
-                  <div class="product-buttons">
-                    <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                    <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-                  </div>
-                </div>
-              </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card"><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/04.jpg" alt="Product"></a>
-                  <h3 class="product-title"><a href="shop-single.html">Waist Leather Belt</a></h3>
-                  <h4 class="product-price">$47.00</h4>
-                  <div class="product-buttons">
-                    <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                    <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-                  </div>
-                </div>
-              </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card"><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/10.jpg" alt="Product"></a>
-                  <h3 class="product-title"><a href="shop-single.html">Daily Fabric Cap</a></h3>
-                  <h4 class="product-price">$31.99</h4>
-                  <div class="product-buttons">
-                    <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                    <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-                  </div>
-                </div>
-              </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card">
-                    <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i>
-                    </div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/11.jpg" alt="Product"></a>
-                  <h3 class="product-title"><a href="shop-single.html">Top-Sider Fathom</a></h3>
-                  <h4 class="product-price">$90.00</h4>
-                  <div class="product-buttons">
-                    <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                    <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-                  </div>
-                </div>
-              </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card"><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/16.jpg" alt="Product"></a>
-                  <h3 class="product-title"><a href="shop-single.html">Big Wordmark Tote</a></h3>
-                  <h4 class="product-price">$29.99</h4>
-                  <div class="product-buttons">
-                    <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                    <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-                  </div>
-                </div>
-              </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card"><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/14.jpg" alt="Product"></a>
-                  <h3 class="product-title"><a href="shop-single.html">Skagen Holst Watch</a></h3>
-                  <h4 class="product-price">$145.00</h4>
-                  <div class="product-buttons">
-                    <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                    <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-                  </div>
-                </div>
-              </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card"><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/15.jpg" alt="Product"></a>
-                  <h3 class="product-title"><a href="shop-single.html">Metal Star Earings</a></h3>
-                  <h4 class="product-price">$90.00</h4>
-                  <div class="product-buttons">
-                    <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                    <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Pagination-->
-            <!--  
-            <nav class="pagination">
-              <div class="column">
-                <ul class="pages">
-                  <li class="active"><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li>...</li>
-                  <li><a href="#">12</a></li>
-                </ul>
-              </div>
-              <div class="column text-right hidden-xs-down"><a class="btn btn-outline-secondary btn-sm" href="#">Next&nbsp;<i class="icon-arrow-right"></i></a></div>
-            </nav>
-            -->
-          </div>
-          <!-- Sidebar          -->
+            
+            
+            
+            <!-- Sidebar          -->
           <div class="col-xl-3 col-lg-4 order-lg-1">
             <button class="sidebar-toggle position-left" data-toggle="modal" data-target="#modalShopFilters"><i class="icon-layout"></i></button>
             <aside class="sidebar sidebar-offcanvas">
@@ -387,12 +215,12 @@
                     <ul>
                       <li><a href="#">Top</a><span>(508)</span>
                         <ul>
-                        <!--  
+                     
                           <li><a href="#">Sneakers</a></li>
                           <li><a href="#">Heels</a></li>
                           <li><a href="#">Loafers</a></li>
                           <li><a href="#">Sandals</a></li>
-                        -->
+                       
                           <li><a href="shop_female_outer_list">여성 아우터</a></li>
                           <li><a href="shop_female_cardigan_list">여성 가디건</a></li>
                           <li><a href="shop_female_tshirt_list">여성 티셔츠</a></li>
@@ -400,61 +228,60 @@
                       </li>
                       <li><a href="#">Bottom</a><span>(423)</span>
                         <ul>
-                        <!--  
+                         
                           <li><a href="#">Boots</a></li>
                           <li><a href="#">Oxfords</a></li>
                           <li><a href="#">Loafers</a></li>
                           <li><a href="#">Sandals</a></li>
-                        -->
+                    
                           <li><a href="shop_female_longpants_list">여성 긴바지</a></li>
                           <li><a href="shop_female_skirt_list">여성 스커트</a></li>
                         </ul>
                       </li>
-                      <!--  
+                        
                       <li><a href="#">Boy's Shoes</a><span>(97)</span></li>
                       <li><a href="#">Girl's Shoes</a><span>(110)</span></li>
-                      -->
+                     
                     </ul>
                   </li>
                   <li class="has-children"><a href="#">Men's</a><span>(2356)</span>
                     <ul>
-                    <!--  
+                      
                       <li><a href="#">Women's</a><span>(1032)</span>
-                    -->
+                    
                       <li><a href="#">Top</a><span>(1032)</span>
                         <ul>
-                        <!--  
                           <li><a href="#">Dresses</a></li>
                           <li><a href="#">Shirts &amp; Tops</a></li>
                           <li><a href="#">Swimwear</a></li>
                           <li><a href="#">Shorts</a></li>
-                        -->
+                        
                           <li><a href="shop_male_outer_list">남성 아우터</a></li>
                           <li><a href="shop_male_cardigan_list">남성 가디건</a></li>
                           <li><a href="shop_male_tshirt_list">남성 티셔츠</a></li>
                         </ul>
                       </li>
-                      <!--  
+                        
                       <li><a href="#">Men's</a><span>(937)</span>
-                      -->
+                      
                       <li><a href="#">Bottom</a><span>(937)</span>
                         <ul>
-                        <!--  
+                         
                           <li><a href="#">Shirts &amp; Tops</a></li>
                           <li><a href="#">Shorts</a></li>
                           <li><a href="#">Swimwear</a></li>
                           <li><a href="#">Pants</a></li>
-                        -->
+                        
                           <li><a href="shop_male_longpants_list">남성 긴바지</a></li>
                           <li><a href="shop_male_shortpants_list">남성 반바지</a></li>
                         </ul>
                       </li>
-                      <!--  
+                       
                       <li><a href="#">Kid's Clothing</a><span>(386)</span></li>
-                      -->
+                      
                     </ul>
                   </li>
-                  <!--  
+                  
                   <li class="has-children"><a href="#">Bags</a><span>(420)</span>
                     <ul>
                       <li><a href="#">Handbags</a><span>(180)</span></li>
@@ -472,11 +299,11 @@
                       <li><a href="#">Belts</a><span>(106)</span></li>
                     </ul>
                   </li>
-                 --> 
+                 
                 </ul>
               </section>
               <!-- Widget Price Range-->
-              <!--  
+                
               <section class="widget widget-categories">
                 <h3 class="widget-title">Price Range</h3>
                 <form class="price-range-slider" method="post" data-start-min="250" data-start-max="650" data-min="0" data-max="1000" data-step="1">
@@ -498,9 +325,9 @@
                   </footer>
                 </form>
               </section>
-              -->
+             
               <!-- Widget Brand Filter-->
-              <!--
+              
               <section class="widget">
                 <h3 class="widget-title">Filter by Brand</h3>
                 <div class="custom-control custom-checkbox">
@@ -524,9 +351,9 @@
                   <label class="custom-control-label" for="bahama">Tommy Bahama&nbsp;<span class="text-muted">(42)</span></label>
                 </div>
               </section>
-              -->
+             
               <!-- Widget Size Filter-->
-               <!--   
+                 
               <section class="widget">
                 <h3 class="widget-title">Filter by Size</h3>
                 <div class="custom-control custom-checkbox">
@@ -546,23 +373,88 @@
                   <label class="custom-control-label" for="s">S&nbsp;<span class="text-muted">(213)</span></label>
                 </div>
               </section>
-             -->
+             
               <!-- Promo Banner-->
-               <!--   
+                
               <section class="promo-box" style="background-image: url(img/banners/02.jpg);">
-              -->
+             
                 <!-- Choose between .overlay-dark (#000) or .overlay-light (#fff) with default opacity of 50%. You can overrride default color and opacity values via 'style' attribute.--><span class="overlay-dark" style="opacity: .45;"></span>
-                <!--  
+                  
                 <div class="promo-box-content text-center padding-top-3x padding-bottom-2x">
                   <h4 class="text-light text-thin text-shadow">New Collection of</h4>
                   <h3 class="text-bold text-light text-shadow">Sunglassess</h3><a class="btn btn-sm btn-primary" href="#">Shop Now</a>
                 </div>
-                -->
+                
               </section>
             </aside>
           </div>
         </div>
       </div>
+            
+            
+            
+            
+            
+            
+            
+            <!-- Products Grid-->
+            <div class="isotope-grid cols-3 mb-2">
+              <div class="gutter-sizer"></div>
+              <div class="grid-sizer"></div>
+              <!-- Product-->
+               
+               
+               <c:forEach  items="${productList}" 
+					var="product"  
+					begin="0"  
+					step="1" 
+					end="${productList.size()}"
+					varStatus="status">
+					   
+               <div class="grid-item">
+                <div class="product-card">
+                <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
+                	<img src="IMAGE/${product.product_image_1}" alt="Product" width="147" height="131" >
+                </a>
+                  <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
+                  <h4 class="product-price">
+                    <del>$ : ${product.product_price}</del>
+                  </h4>
+                  <div class="product-buttons">
+                    <a href="add_wishlist_action?product_no=${product.product_no}">
+	                	<button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
+	                		<i class="icon-heart"></i>
+	                	</button>
+                	</a>
+               		<a href="shop_product_detail?product_no=${product.product_no}">
+                		<button class="btn btn-outline-primary btn-sm">detail</button>	
+                	</a>
+               		 
+                  </div>
+                </div>
+              </div>
+              
+              </c:forEach>
+             
+             
+            <!-- Pagination-->
+            <!--  
+            <nav class="pagination">
+              <div class="column">
+                <ul class="pages">
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li>...</li>
+                  <li><a href="#">12</a></li>
+                </ul>
+              </div>
+              <div class="column text-right hidden-xs-down"><a class="btn btn-outline-secondary btn-sm" href="#">Next&nbsp;<i class="icon-arrow-right"></i></a></div>
+            </nav>
+            -->
+          </div>
+          
       <!-- Site Footer-->
       <jsp:include page="common_bottom.jsp"/>
     </div>

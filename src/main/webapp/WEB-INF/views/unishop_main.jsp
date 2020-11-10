@@ -279,7 +279,7 @@
 					end="${productList.size()-1}"
 					varStatus="status">
 	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
-	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
+	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100 alt="Product">
 	              </a>
               <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
               <h4 class="product-price">
