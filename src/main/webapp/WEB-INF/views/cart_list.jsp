@@ -10,17 +10,6 @@
 
 	<jsp:include page="common_top.jsp"/>
 
-<script type="text/javascript">
-    function format(n){
-    	var reg = /(^[+-]?\d+)(\d{3})/;
-        n += '';
-        while (reg.test(n)){
-              n = n.replace(reg, '$1' + ',' + '$2');
-        }
-        return n;
-	}	
-</script> 
-
     <!-- Off-Canvas Wrapper-->
     <div class="offcanvas-wrapper">
       <!-- Page Title-->
@@ -62,18 +51,13 @@
             </thead>
             <tbody>
             
-            <c:set var = "sum" value = "0" />
-            <% 
-			DecimalFormat df = new DecimalFormat("#,##0");
-			%>
-
-			<c:forEach  items="${cartList}" 
-						var="cart"  
-						begin="0"  
-						step="1" 
-						end="${cartList.size()}"
-						varStatus="status">
-
+	            <c:set var = "sum" value = "0" />
+				<c:forEach  items="${cartList}" 
+							var="cart"  
+							begin="0"  
+							step="1" 
+							end="${cartList.size()}"
+							varStatus="status">
 
               <tr>
               
@@ -102,17 +86,10 @@
 					  </select>
                   </div>
                  </td>
-                 
-                 
-                 <%-- 
-            System.out.println("DecimalFormat : "+df.format(123456));
-                 //String tot = df.format(cart.cart_tot_price);
-			--%>
-                <%--<td class="text-center text-lg text-medium">${<%=df.format("123456")%>}</td> --%>
-                <td class="text-center text-lg text-medium">${cart.cart_tot_price}</td>
+                <td class="text-center text-lg text-medium"><fmt:formatNumber value="${cart.cart_tot_price}" pattern="###,###,###"/>원</td>
                 <td class="text-center"><a class="remove-from-cart" href="cart_delete_cartNo_action_get?cart_no=${cart.cart_no}" data-toggle="tooltip" title="선택상품 삭제"><i class="icon-cross"></i></a></td>
                 <td>
-	                <input type=submit value="수량" data-toggle="tooltip" title="수량변경" class=TXTFLD onclick="location.href = 'cart_update_action_get'" >
+	                <input type=submit value="수정" data-toggle="tooltip" title="수량변경" class=TXTFLD onclick="location.href = 'cart_update_action_get'" >
 				    <input type="hidden" name=cart_no value="${cart.cart_no}">
                 </td>
                 
@@ -133,7 +110,8 @@
               <%--<button class="btn btn-outline-primary btn-sm" type="hidden">Apply Coupon</button> --%>
             </form>
           </div>
-          <div class="column text-lg">총금액: <span class="text-medium">${sum}</span></div>
+          <div class="column text-lg">총금액: <span class="text-medium">
+          										<fmt:formatNumber value="${sum}" pattern="###,###,###"/>원</span></div>
         </div>
        
          <div class="shopping-cart-footer">

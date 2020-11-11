@@ -18,8 +18,10 @@ public class ProductServiceTestMain {
 		System.out.println(productService.selectByNo("415693"));
 		System.out.println("-----------------3. SELECT BY DIV L----------------------");
 		System.out.println(productService.selectByDivL("F"));
+		*/
 		System.out.println("-----------------4. SELECT BY DIV LM----------------------");
 		System.out.println(productService.selectByDivLM("F", "T"));
+		/*
 		System.out.println("-----------------5. SELECT BY DIV LMS----------------------");
 		System.out.println(productService.selectByDivLMS("F", "T","SH"));
 		System.out.println("-----------------6.INSERT ----------------------");
@@ -27,7 +29,7 @@ public class ProductServiceTestMain {
 		System.out.println(productService.insertProduct(product));
 		System.out.println("-----------------7.DELETE ----------------------");
 		System.out.println(productService.deleteProduct("12345"));
-		*/
+		
 		System.out.println("-----------------8. SELECT Four----------------------");
 		System.out.println(productService.selectFour("M"));
 		System.out.println("----------------------------------------------------------------");
@@ -38,7 +40,7 @@ public class ProductServiceTestMain {
 		
 		System.out.println("-----------------8. SELECT Thirty----------------------");
 		System.out.println(productService.selectThirty());
-
+		*/
 	}
 
 }
