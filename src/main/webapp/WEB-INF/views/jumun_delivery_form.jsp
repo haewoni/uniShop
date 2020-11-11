@@ -24,6 +24,7 @@
       <div class="container padding-bottom-3x mb-2">
         <div class="row">
           <!-- Checkout Adress-->
+          <form name="jumun_delivery_form">
           <div class="col-xl-9 col-lg-8">
             <div class="checkout-steps"><a href="jumun_review_form">4. 주문확인</a>
             <a href="jumun_payment_form"><span class="angle"></span>3. 결제정보</a>
@@ -45,18 +46,18 @@
                   <tr>
                     <td class="align-middle" id="delivery_radio">
                       <div class="custom-control custom-radio mb-0">
-                        <input class="custom-control-input" type="radio" id="sh-1" name="sh-1" checked>
+                        <input class="custom-control-input" type="radio" id="deliveryStr" name="deliveryStr" value="일반" checked>
                         <label class="custom-control-label" for="courier"></label>
                       </div>
                     </td>
-                    <td class="align-middle"><span class="text-medium" data-일반 id="deliveryStr" >일반배송</span><br><span class="text-muted text-sm">*제주도 및 도서 산간지역은 기본배송료 + 추가운임비</span></td>
+                    <td class="align-middle"><span class="text-medium"  id="deliveryStr" >일반배송</span><br><span class="text-muted text-sm">*제주도 및 도서 산간지역은 기본배송료 + 추가운임비</span></td>
                     <td class="align-middle">3 - 4 일</td>
                     <td class="align-middle">3000 원</td>
                   </tr>
                   <tr>
                     <td class="align-middle">
                       <div class="custom-control custom-radio mb-0">
-                        <input class="custom-control-input" type="radio" id="sh-2"  name="sh-2">
+                        <input class="custom-control-input" type="radio" id="deliveryStr"  name="deliveryStr" value="특급">
                         <label class="custom-control-label" for="local"></label>
                       </div>
                     </td>
@@ -69,9 +70,10 @@
             </div>
             <div class="checkout-footer margin-top-1x">
               <div class="column"><a class="btn btn-outline-secondary" href="checkout-address.html"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;Back</span></a></div>
-              <div class="column"><a class="btn btn-primary" href="jumun_payment_form"><span class="hidden-xs-down">계속&nbsp;</span><i class="icon-arrow-right"></i></a></div>
+              <div class="column"><a class="btn btn-primary" href="javascript:jumun_delivery_form_action();"><span class="hidden-xs-down">계속&nbsp;</span><i class="icon-arrow-right"></i></a></div>
             </div>
           </div>
+          </form>
           <!-- Sidebar          -->
           <div class="col-xl-3 col-lg-4">
             <aside class="sidebar">
@@ -108,5 +110,6 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/common.js"></script>
   </body>
 </html>

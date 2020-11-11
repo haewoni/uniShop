@@ -99,7 +99,6 @@ public class JumunController {
          createJumun.setDelivery_no("EX");
          session.setAttribute("delivery_fee", 6000);
       }
-      System.out.println(deliveryStr);
       //3. 세션에 주문 객체 붙이기
       session.setAttribute("createJumun", createJumun);
       forwardPath="redirect:jumun_payment_form";
@@ -119,6 +118,7 @@ public class JumunController {
    
    @RequestMapping(value = "/jumun_payment_action", method = RequestMethod.GET)
    public String jumun_payment_action_GET() {
+	   System.out.println("22222");
       return "redirect:jumun_payment_form"; 
    }
    // checkout 결제카드 폼 액션
@@ -134,14 +134,14 @@ public class JumunController {
       //3. 주문 객체에 폼에서 가져온 정보 set
       createJumun.setJumun_no(1);
       createJumun.setJumun_status("주문");
-      createJumun.setJumun_tot_price(cart_subtotal+delivery_fee);
+      createJumun.setJumun_tot_price(cart_subtotal/*+delivery_fee*/);
       createJumun.setJumun_date(new Date());
       createJumun.setMember_id(sMemberId);
       createJumun.setCard_no(jumun.getCard_no());
       createJumun.setCard_expire_date(jumun.getCard_expire_date());
       createJumun.setCard_cvc(jumun.getCard_cvc());
       createJumun.setCard_member_name(jumun.getCard_member_name());
- 
+      System.out.println("111111");
       session.setAttribute("createJumun", createJumun);
       String forwardPath = " ";
       forwardPath="redirect:jumun_review_form";
