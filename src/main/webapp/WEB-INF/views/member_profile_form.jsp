@@ -18,7 +18,7 @@
               <li><a href="member_profile_form">Account</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li>My Profile</li>
+              <li>회원 정보</li>
             </ul>
           </div>
         </div>
