@@ -28,7 +28,7 @@
             <p class="card-text">주문이 접수되었으며 빠르게 처리해 드리겠습니다</p>
             <p class="card-text">주문번호는<span class="text-medium">${loginMember.jumun_no}</span>입니다</p>
             </p>
-            <div class="padding-top-1x padding-bottom-1x"><a class="btn btn-outline-secondary" href="shop_main.html">계속 쇼핑하기</a></div>
+            <div class="padding-top-1x padding-bottom-1x"><a class="btn btn-outline-secondary" href="shop_main">계속 쇼핑하기</a></div>
           </div>
         </div>
       </div>
