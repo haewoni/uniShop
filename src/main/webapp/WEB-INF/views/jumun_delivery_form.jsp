@@ -43,24 +43,24 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="align-middle">
+                    <td class="align-middle" id="delivery_radio">
                       <div class="custom-control custom-radio mb-0">
-                        <input class="custom-control-input" type="radio" id="courier" name="shipping-method" checked>
+                        <input class="custom-control-input" type="radio" id="sh-1" name="sh-1" checked>
                         <label class="custom-control-label" for="courier"></label>
                       </div>
                     </td>
-                    <td class="align-middle"><span class="text-medium">일반배송</span><br><span class="text-muted text-sm">*제주도 및 도서 산간지역은 기본배송료 + 추가운임비</span></td>
+                    <td class="align-middle"><span class="text-medium" data-일반 id="deliveryStr" >일반배송</span><br><span class="text-muted text-sm">*제주도 및 도서 산간지역은 기본배송료 + 추가운임비</span></td>
                     <td class="align-middle">3 - 4 일</td>
                     <td class="align-middle">3000 원</td>
                   </tr>
                   <tr>
                     <td class="align-middle">
                       <div class="custom-control custom-radio mb-0">
-                        <input class="custom-control-input" type="radio" id="local" name="shipping-method">
+                        <input class="custom-control-input" type="radio" id="sh-2"  name="sh-2">
                         <label class="custom-control-label" for="local"></label>
                       </div>
                     </td>
-                    <td class="align-middle"><span class="text-medium">특급배송</span><br><span class="text-muted text-sm">*제주도 및 도서 산간지역은 기본배송료 + 추가운임비</span></td>
+                    <td class="align-middle"><span class="text-medium" data-특급>특급배송</span><br><span class="text-muted text-sm">*제주도 및 도서 산간지역은 기본배송료 + 추가운임비</span></td>
                     <td class="align-middle">1 - 2 일</td>
                     <td class="align-middle">6000 원</td>
                   </tr>
