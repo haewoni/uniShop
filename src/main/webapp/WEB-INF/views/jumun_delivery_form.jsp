@@ -44,21 +44,21 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="align-middle" id="delivery_radio">
+                    <td class="align-middle">
                       <div class="custom-control custom-radio mb-0">
-                        <input class="custom-control-input" type="radio" id="deliveryStr" name="deliveryStr" value="일반" checked>
-                        <label class="custom-control-label" for="courier"></label>
+                        <input class="custom-control-input" type="radio" id="GEN" name="deliveryStr" value="일반" checked>
+                        <label class="custom-control-label" for="GEN"></label>
                       </div>
                     </td>
-                    <td class="align-middle"><span class="text-medium"  id="deliveryStr" >일반배송</span><br><span class="text-muted text-sm">*제주도 및 도서 산간지역은 기본배송료 + 추가운임비</span></td>
+                    <td class="align-middle"><span class="text-medium">일반배송</span><br><span class="text-muted text-sm">*제주도 및 도서 산간지역은 기본배송료 + 추가운임비</span></td>
                     <td class="align-middle">3 - 4 일</td>
                     <td class="align-middle">3000 원</td>
                   </tr>
                   <tr>
                     <td class="align-middle">
                       <div class="custom-control custom-radio mb-0">
-                        <input class="custom-control-input" type="radio" id="deliveryStr"  name="deliveryStr" value="특급">
-                        <label class="custom-control-label" for="local"></label>
+                        <input class="custom-control-input" type="radio" id="EX"  name="deliveryStr" value="특급">
+                        <label class="custom-control-label" for="EX"></label>
                       </div>
                     </td>
                     <td class="align-middle"><span class="text-medium" data-특급>특급배송</span><br><span class="text-muted text-sm">*제주도 및 도서 산간지역은 기본배송료 + 추가운임비</span></td>

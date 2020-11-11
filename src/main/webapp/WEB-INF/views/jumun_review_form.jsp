@@ -7,7 +7,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page import="java.text.DecimalFormat"%>
 <%@ include file="login_check.jspf" %> 
-	<jsp:include page="common_top.jsp"/>
+   <jsp:include page="common_top.jsp"/>
     <!-- Off-Canvas Wrapper-->
     <div class="offcanvas-wrapper">
       <!-- Page Title-->
@@ -32,12 +32,12 @@
           <!-- Checkout Reviews-->
           <div class="col-xl-9 col-lg-8">
             <div class="checkout-steps">
-            	<a class="active" href="jumun_review_form">4. 주문확인</a>
-            	<a class="completed" href="jumun_payment_form"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>3. 결제정보</a>
-            	<a class="completed" href="jumun_delivery_form"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>2. 배송확인</a>
-            	<a class="completed" href="jumun_address_form"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>1. 주소</a>
-            	</div>
-           	<h4>주문 확인</h4>
+               <a class="active" href="jumun_review_form">4. 주문확인</a>
+               <a class="completed" href="jumun_payment_form"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>3. 결제정보</a>
+               <a class="completed" href="jumun_delivery_form"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>2. 배송확인</a>
+               <a class="completed" href="jumun_address_form"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>1. 주소</a>
+               </div>
+              <h4>주문 확인</h4>
             <hr class="padding-bottom-1x">
             <div class="table-responsive shopping-cart">
               <table class="table">
@@ -45,7 +45,7 @@
                   <tr>
                     <th>상품명</th>
                     <th class="text-center">수량</th>
-	                <th class="text-center">가격</th>
+                   <th class="text-center">가격</th>
                     <th class="text-center"></th>
                     <th></th>
                   </tr>
@@ -54,12 +54,12 @@
                  <c:set var = "sum" value = "0" />
           
 
-			<c:forEach  items="${cartList}" 
-						var="cart"  
-						begin="0"  
-						step="1" 
-						end="${cartList.size()}"
-						varStatus="status">
+         <c:forEach  items="${cartList}" 
+                  var="cart"  
+                  begin="0"  
+                  step="1" 
+                  end="${cartList.size()}"
+                  varStatus="status">
 
 
               <tr>
@@ -74,31 +74,31 @@
 
                  <td class="text-center">
                   <div class="count-input">
-	                 <select name="cart_qty" class="form-control">
-					    <option value="0" selected="selected">${cart.cart_qty}</option>
-					    <option value="1">1</option>
-					    <option value="2">2</option>
-					    <option value="3">3</option>
-					    <option value="4">4</option>
-					    <option value="5">5</option>
-					    <option value="6">6</option>
-					    <option value="7">7</option>
-					    <option value="8">8</option>
-					    <option value="9">9</option>
-					    <option value="10">10</option>
-					  </select>
+                    <select name="cart_qty" class="form-control">
+                   <option value="0" selected="selected">${cart.cart_qty}</option>
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                   <option value="4">4</option>
+                   <option value="5">5</option>
+                   <option value="6">6</option>
+                   <option value="7">7</option>
+                   <option value="8">8</option>
+                   <option value="9">9</option>
+                   <option value="10">10</option>
+                 </select>
                   </div>
                  </td>
                  <td class="text-center text-lg text-medium">${cart.cart_tot_price}</td>
                 <td class="text-center"><a class="remove-from-cart" href="cart_delete_cartNo_action_get?cart_no=${cart.cart_no}" data-toggle="tooltip" title="선택상품 삭제"><i class="icon-cross"></i></a></td>
                 <td>
-	                <input type=submit value="수량" data-toggle="tooltip" title="수량변경" class=TXTFLD onclick="location.href = 'cart_update_action_get'" >
-				    <input type="hidden" name=cart_no value="${cart.cart_no}">
+                   <input type=submit value="수량" data-toggle="tooltip" title="수량변경" class=TXTFLD onclick="location.href = 'cart_update_action_get'" >
+                <input type="hidden" name=cart_no value="${cart.cart_no}">
                 </td>
                 
               </tr>
-            		
-			</c:forEach>
+                  
+         </c:forEach>
                 
                 </tbody>
               </table>
@@ -125,7 +125,7 @@
             </div>
             <div class="checkout-footer margin-top-1x">
               <div class="column hidden-xs-down"><a class="btn btn-outline-secondary" href="jumun_payment_form"><i class="icon-arrow-left"></i>&nbsp;결제로 돌아가기</a></div>
-              <div class="column"><a class="btn btn-primary" href="jumun_complete_form">계속</a></div>
+              <div class="column"><a class="btn btn-primary" href="jumun_review_action">계속</a></div>
             </div>
           </div>
           <!-- Sidebar          -->
