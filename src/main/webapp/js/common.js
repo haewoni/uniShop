@@ -1,4 +1,15 @@
+/*
+var delivery_radio = document.getElementById('deliveryStr').value;
+var delivery_value;
+for(var i = 0; i < delivery_radio.length; i++){
+    if(delivery_radio[i].checked){
+        delivery_value = delivery_radio[i].value;
+    }
+}
+*/
+
 function jumun_address_form_action(){
+	alert('aaaaa')
 	document.jumun_address_form.action='jumun_address_action';
 	document.jumun_address_form.method='POST';
 	document.jumun_address_form.submit();
@@ -44,11 +55,6 @@ function login() {
 		}
 	}
 	
-function jumun_address_action() {
-	document.f.action = "jumun_address_action";
-	document.f.method='POST';
-	document.f.submit();
-}
 
 
 
