@@ -5,7 +5,7 @@ function jumun_delivery_form_action() {
 	document.jumun_delivery_form.submit();
 }
 
-function jumun_payment_form_action() {
+function jumun_payment_action() {
 	alert('bbb')
 	document.jumun_payment_form.action='jumun_payment_action';
 	document.jumun_payment_form.method='POST';
