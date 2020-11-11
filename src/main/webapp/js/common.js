@@ -1,14 +1,16 @@
 
-/*
-var delivery_radio = document.getElementById('deliveryStr').value;
-var delivery_value;
-for(var i = 0; i < delivery_radio.length; i++){
-    if(delivery_radio[i].checked){
-        delivery_value = delivery_radio[i].value;
-    }
+function jumun_delivery_form_action() {
+	document.jumun_delivery_form.action='jumun_delivery_action';
+	document.jumun_delivery_form.method='POST';
+	document.jumun_delivery_form.submit();
 }
-*/
 
+function jumun_payment_form_action() {
+	alert('bbb')
+	document.jumun_payment_form.action='jumun_payment_action';
+	document.jumun_payment_form.method='POST';
+	document.jumun_payment_form.submit();
+}
 
 function jumun_address_form_action(){
 	alert('aaaaa')
