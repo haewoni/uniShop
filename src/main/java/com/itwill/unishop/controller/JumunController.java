@@ -18,6 +18,7 @@ import com.itwill.unishop.domain.Cart;
 import com.itwill.unishop.domain.Jumun;
 import com.itwill.unishop.domain.Jumun_Detail;
 import com.itwill.unishop.domain.Member;
+import com.itwill.unishop.service.CartService;
 import com.itwill.unishop.service.JumunService;
 import com.itwill.unishop.service.Jumun_DetailService;
 import com.itwill.unishop.service.MemberService;
@@ -30,11 +31,13 @@ public class JumunController {
    @Autowired
    private JumunService jumunService;
    @Autowired
+   private CartService cartService;
+   @Autowired
    private Jumun_DetailService jumun_DetailService;
 
 
    /*
-    * checkout(jumun) address 입력 폼
+    * jumun - address
     */
    @RequestMapping("/jumun_address_form")
    public String jumun_address_form(Model model,HttpSession session) {
@@ -47,26 +50,17 @@ public class JumunController {
    public String jumun_address_action_GET() {
       return "redirect:jumun_address_form"; 
    }
-   // Checkout- 주소 폼 액션
+   
    @RequestMapping(value = "/jumun_address_action", method = RequestMethod.POST)
    public String jumun_address_action_POST(HttpSession session,@ModelAttribute Member member) {
       String forwardPath = "";
-      //1. 세션으로 로그인 멤버 객체 가져오기
       Member loginMember = (Member) session.getAttribute("loginMember");
-      //2. 로그인 멤버에 회원 정보+주소 set
-      loginMember.setMember_id(loginMember.getMember_id());
-      loginMember.setMember_name(member.getMember_name());
-      loginMember.setMember_phone(member.getMember_phone());
-      loginMember.setMember_address_name(member.getMember_address_name());
-      loginMember.setMember_address_country(member.getMember_address_country());
-      loginMember.setMember_address_city(member.getMember_address_city());
-      loginMember.setMember_address_zipcode(member.getMember_address_zipcode());
-      loginMember.setMember_address1(member.getMember_address1());
-      loginMember.setMember_address2(member.getMember_address2());
-      //3. 세션에 수정된 로그인 멤버 붙이기
-      session.setAttribute("loginMember", loginMember);
-      //4. 멤버서비스로 주소정보 업데이트
-      memberService.updateAddress(loginMember);
+      member.setMember_id(loginMember.getMember_id());
+      member.setMember_password(loginMember.getMember_password());
+      member.setMember_email(loginMember.getMember_email());
+      
+      memberService.updateMember(member);
+      session.setAttribute("loginMember", member);
       
       forwardPath="redirect:jumun_delivery_form";
       return forwardPath;
@@ -74,7 +68,7 @@ public class JumunController {
    
    
    /*
-    * checkout(jumun) - delivery 배송방법 폼
+    * jumun - delivery
     */
    @RequestMapping("jumun_delivery_form")
    public String jumun_delivery_form() {
@@ -85,13 +79,12 @@ public class JumunController {
    public String jumun_delivery_action_GET() {
       return "jumun_delivery_form"; 
    }
-   //checkout 배송방법 폼 액션
+   
    @RequestMapping(value = "/jumun_delivery_action", method = RequestMethod.POST)
    public String jumun_delivery_action_POST(HttpSession session, @RequestParam String deliveryStr) {
       String forwardPath = "";
-      //1.주문 객체 생성 (DB 반영x)
       Jumun createJumun = new Jumun();
-      //2. 일반 또는 특급 선택후, delivery_fee(배송비) set
+      
       if(deliveryStr=="일반") {
          createJumun.setDelivery_no("GEN");
          session.setAttribute("delivery_fee", 3000);
@@ -100,6 +93,7 @@ public class JumunController {
          session.setAttribute("delivery_fee", 6000);
       }
       //3. 세션에 주문 객체 붙이기
+      
       session.setAttribute("createJumun", createJumun);
       forwardPath="redirect:jumun_payment_form";
       return forwardPath;
@@ -107,7 +101,7 @@ public class JumunController {
    
    
    /*
-    * checkout(jumun) - payment 결제카드 폼
+    * jumun - payment
     */
    @RequestMapping("jumun_payment_form")
    public String payment_form(HttpSession session) {
@@ -121,17 +115,36 @@ public class JumunController {
 	   System.out.println("22222");
       return "redirect:jumun_payment_form"; 
    }
-   // checkout 결제카드 폼 액션
+   
    @RequestMapping(value = "/jumun_payment_action", method = RequestMethod.POST)
    public String jumun_payment_action_POST(HttpSession session, @ModelAttribute Jumun jumun) {
-      session.getAttribute("loginMember");
-      // 1. 세션으로 카트총합금액, 배송비, 로그인 멤버 아이디 가져오기
-      int cart_subtotal = (int) session.getAttribute("cart_subtotal");
-      int delivery_fee = (int)session.getAttribute("delivery_fee");
+      Member loginMember=(Member)session.getAttribute("loginMember");
+      System.out.println(jumun);
+      System.out.println(session);
+      
+      session.setAttribute("cart_subtotal",0);
+      session.setAttribute("delivery_fee",0);
+      
+      
+	   ArrayList<Cart> cartList = cartService.selectCartAll(loginMember.getMember_id());
+		int cart_subtotal = 0;
+	      for (Cart cart : cartList) {
+	         cart_subtotal+=cart.getCart_tot_price();
+	      }
+	    session.setAttribute("cart_subtotal", cart_subtotal);
+      
+      
+      cart_subtotal = (Integer) session.getAttribute("cart_subtotal");
+      Integer delivery_fee = (Integer)session.getAttribute("delivery_fee");
+      if(delivery_fee==null) {
+    	  delivery_fee=0;
+      }
       String sMemberId = (String) session.getAttribute("sMemberId");
-      //2. 세션으로 주문객체 가져오기
+      
       Jumun createJumun = (Jumun)session.getAttribute("createJumun");
-      //3. 주문 객체에 폼에서 가져온 정보 set
+      if(createJumun==null) {
+    	  createJumun=new Jumun();
+      }
       createJumun.setJumun_no(1);
       createJumun.setJumun_status("주문");
       createJumun.setJumun_tot_price(cart_subtotal/*+delivery_fee*/);
@@ -150,7 +163,7 @@ public class JumunController {
    
    
    /*
-    * checkout(jumun) - review 주문확인 폼
+    * jumun - review
     */
    @RequestMapping("jumun_review_form")
    public String review_form(HttpSession session) {
