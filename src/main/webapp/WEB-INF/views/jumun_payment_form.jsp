@@ -82,11 +82,11 @@
                   </tr>
                   <tr>
                     <td>배송비:</td>
-                    <td class="text-medium"></td>
+                    <td class="text-medium">${delivery_fee}</td>
                   </tr>
                   <tr>
                     <td>총 금액:</td>
-                    <td class="text-lg text-medium">${cart_subtotal}</td>
+                    <td class="text-lg text-medium">${cart_subtotal + delivery_fee}</td>
                   </tr>
                 </table>
               </section>
