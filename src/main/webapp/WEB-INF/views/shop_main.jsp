@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 	<jsp:include page="common_top.jsp"/>
+	
     <!-- Shop Filters Modal-->
     <div class="modal fade" id="modalShopFilters" tabindex="-1">
       <div class="modal-dialog">

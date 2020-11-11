@@ -42,7 +42,7 @@ public class ProductController {
 		forwardPath = "shop_main";
 		return forwardPath;
 	}
-		
+
 	/**********남성 아우터***********/
 	@RequestMapping("/shop_male_outer_list")
 	public String male_outer_list(Model model) throws Exception{
