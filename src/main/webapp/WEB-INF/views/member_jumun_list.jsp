@@ -70,10 +70,10 @@
           </div>
           <div class="column">
             <ul class="breadcrumbs">
-              <li><a href="index.html">Home</a>
+              <li><a href="unishop_main">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li><a href="account-orders.html">Account</a>
+              <li><a href="member_profile_form">Account</a>
               </li>
               <li class="separator">&nbsp;</li>
               <li>주문내역</li>
