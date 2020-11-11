@@ -124,8 +124,8 @@
               </div>
             </div>
             <div class="checkout-footer margin-top-1x">
-              <div class="column hidden-xs-down"><a class="btn btn-outline-secondary" href="jumun_payment_form.html"><i class="icon-arrow-left"></i>&nbsp;결제로 돌아가기</a></div>
-              <div class="column"><a class="btn btn-primary" href="jumun_complete_form.html">계속</a></div>
+              <div class="column hidden-xs-down"><a class="btn btn-outline-secondary" href="jumun_payment_form"><i class="icon-arrow-left"></i>&nbsp;결제로 돌아가기</a></div>
+              <div class="column"><a class="btn btn-primary" href="jumun_complete_form">계속</a></div>
             </div>
           </div>
           <!-- Sidebar          -->
