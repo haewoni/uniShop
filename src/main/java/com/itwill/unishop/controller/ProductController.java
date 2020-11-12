@@ -155,6 +155,22 @@ public class ProductController {
 		return forwardPath;
 	}
 		
+	
+	
+	/**********제품 상세 kyj***********/
+	@RequestMapping("/shop_product_detail_kyj")
+	public String shop_product_detail_kyj(Model model, @RequestParam String product_no) throws Exception{
+		String forwardPath = "";
+		Product product = productService.selectByNo(product_no);
+		ArrayList<Product> recommendedProductList = productService.selectFour(product.getProduct_L_div());
+		model.addAttribute("product",product);
+		model.addAttribute("recommendedProductList",recommendedProductList);
+		forwardPath = "shop_product_detail_kyj";
+		return forwardPath;
+	}
+	
+	
+	
 	/**********제품 리뷰***********/
 	@RequestMapping("/shop_product_review_list")
 	public String shop_product_review(Model model, @RequestParam String product_no) {
