@@ -62,9 +62,9 @@
               <tr>
               
                  <td>
-                  <div class="product-item"><a class="product-thumb" href="shop_product_detail.jsp?product_no=${cart.product_no}"><img src="IMAGE/${cart.product_image_1}" alt="Product"></a>
+                  <div class="product-item"><a class="product-thumb" href="shop_product_detail?product_no=${cart.product_no}"><img src="IMAGE/${cart.product_image_1}" alt="Product"></a>
                     <div class="product-info">
-                      <h4 class="product-title"><a href="shop-single.html">${cart.product_name}</a></h4><span><em>Color:</em>${cart.cart_product_size}</span><span><em>Product No:</em>${cart.product_no}</span>
+                      <h4 class="product-title"><a href="shop_product_detail?product_no=${cart.product_no}">${cart.product_name}</a></h4><span><em>Color:</em>${cart.cart_product_size}</span><span><em>Product No:</em>${cart.product_no}</span>
                     </div>
                   </div>
                  </td>
@@ -142,8 +142,8 @@
           <!-- Product-->
           <div class="grid-item">
             <div class="product-card">
-              <div class="product-badge text-danger">${product.product_no}</div><a class="product-thumb" href="shop_product_detail.jsp?product_no=${product.product_no}"><img src="IMAGE/${product.product_image_1}" alt="Product"></a>
-              <h3 class="product-title"><a href="shop_product_detail.jsp?product_no=${product.product_no}">${product.product_name}</a></h3>
+              <div class="product-badge text-danger">${product.product_no}</div><a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}"><img src="IMAGE/${product.product_image_1}" alt="Product"></a>
+              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
               <h4 class="product-price">
                 <del></del>${product.product_price}
               </h4>
@@ -161,7 +161,7 @@
               --%>
               <div class="product-buttons">
                 <button class="btn btn-outline-secondary btn-sm btn-wishlist" onclick="location.href = 'wishList_insert_action_get?product_no=${product.product_no}'"  data-toggle="tooltip" title="Wishlist"><i class="icon-heart"></i></button>
-                <button class="btn btn-outline-primary btn-sm" onclick="location.href = 'shop-single.jsp?product_no=${cart.product_no}'"  
+                <button class="btn btn-outline-primary btn-sm" onclick="location.href = 'shop_product_detail?product_no=${product.product_no}'"  
                                                                data-toast data-toast-type="success" 
                                                                data-toast-position="topRight" 
                                                                data-toast-icon="icon-circle-check" 
@@ -185,5 +185,6 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/cart.js"></script>
   </body>
 </html>
