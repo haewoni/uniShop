@@ -65,10 +65,12 @@ public class QuestionController {
 		return "member_question_form";
 	}
 	@RequestMapping(value = "/member_question_action", method = RequestMethod.POST)
-	public String member_question_action_POST(HttpSession session, @ModelAttribute Question newQuestion) {
+	public String member_question_action_POST(HttpSession session, @ModelAttribute Question newQuestion, @RequestParam String question_title) {
 		String forwardPath = "";
 		String sMemberId  = (String) session.getAttribute("sMemberId");
-		System.out.println(newQuestion);
+		newQuestion.setQuestion_title(question_title);
+		newQuestion.setQuestion_status("처리중");
+		newQuestion.setMember_id(sMemberId);		
 		questionService.insertQuestion(newQuestion);
 		forwardPath = "redirect:member_question_list";
 
