@@ -43,7 +43,7 @@
                   <div class="card-body">
                     <p>결제 가능한 신용카드:&nbsp;<img class="d-inline-block align-middle" src="img/credit-cards.png" style="width: 120px;" alt="Cerdit Cards"></p>
                     <div class="card-wrapper"></div>
-                    <form class="interactive-credit-card row" action="jumun_payment_action" method="post">
+                    <form class="interactive-credit-card row"  id="jumun_payment_form" name="jumun_payment_form" >
                       <div class="form-group col-sm-6">
                         <input class="form-control" type="text" name="card_no"  placeholder="card_no" required>
                       </div>
@@ -57,7 +57,7 @@
                         <input class="form-control" type="text" name="card_cvc"  placeholder="CVC" required>
                       </div>
                   		<div class="col-sm-6">
-						<button class="btn btn-outline-primary btn-block margin-top-none" type="submit">카드등록</button>
+						<button class="btn btn-outline-primary btn-block margin-top-none" type="submit">clear</button>
                       </div>
                     </form>
                   </div>
@@ -66,7 +66,7 @@
             </div>
             <div class="checkout-footer margin-top-1x">
               <div class="column"><a class="btn btn-outline-secondary" href="jumun_delivery_form"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;배송으로 돌아가기</span></a></div>
-              <div class="column"><a class="btn btn-primary" href="jumun_payment_action"><span class="hidden-xs-down">#카드등록누르세요&nbsp;</span><i class="icon-arrow-right"></i></a></div>
+              <div class="column"><a id="jumun_payment_button" class="btn btn-primary"  href="#"><span class="hidden-xs-down">다음&nbsp;</span><i class="icon-arrow-right"></i></a></div>
             
             </div>
           </div>

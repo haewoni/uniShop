@@ -24,8 +24,8 @@
       <div class="container padding-bottom-3x mb-2">
         <div class="row">
           <!-- Checkout Adress-->
-          <form name="jumun_delivery_form">
           <div class="col-xl-9 col-lg-8">
+          <form name="jumun_delivery_form">
             <div class="checkout-steps"><a href="jumun_review_form">4. 주문확인</a>
             <a href="jumun_payment_form"><span class="angle"></span>3. 결제정보</a>
             <a class="active" href="jumun_delivery_form"><span class="angle"></span>2. 배송방법</a>
@@ -72,8 +72,8 @@
               <div class="column"><a class="btn btn-outline-secondary" href="checkout-address.html"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;Back</span></a></div>
               <div class="column"><a class="btn btn-primary" href="javascript:jumun_delivery_form_action();"><span class="hidden-xs-down">계속&nbsp;</span><i class="icon-arrow-right"></i></a></div>
             </div>
-          </div>
           </form>
+          </div>
           <!-- Sidebar          -->
           <div class="col-xl-3 col-lg-4">
             <aside class="sidebar">
