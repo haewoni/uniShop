@@ -115,6 +115,10 @@
                 <p class="comment-text">${question.question_content}</p>
                 <div class="comment-footer"><span class="comment-meta">${loginMember.member_name}</span></div>
               </div>
+            </div>
+            <hr class="mb-4">
+            <div class="text-right">
+              <button class="btn btn-primary margin-bottom-none" data-toggle="modal" data-target="#openTicket">질문하기</button>
             </div>            
           </div>
         </div>
@@ -128,5 +132,6 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    
   </body>
 </html>
