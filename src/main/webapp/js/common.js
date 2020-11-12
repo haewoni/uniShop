@@ -5,7 +5,9 @@ function jumun_address_form_action(){
 	document.jumun_address_form.submit();
 }
 function shop_add_cart_action() {
-	document.product_detail.alert('asdasd');
+	document.alert('bbbb');
+	document.product_cart_form.action='shop_add_cart_action';
+	document.product_cart_form.submit();
 }
 /*
 1. ID : 4~12자 이내의 영어와 숫자로 입력
