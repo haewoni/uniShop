@@ -8,7 +8,7 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title">Order No  - 34VB5540K83</h4>
+            <h4 class="modal-title">주문 정보</h4>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
           <div class="modal-body">
@@ -16,8 +16,8 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th>Product Name</th>
-                    <th class="text-center">Subtotal</th>
+                    <th>상품 상세</th>
+                    <th class="text-center">상품 가격</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -33,17 +33,15 @@
                     <td class="text-center text-lg text-medium">$43.90</td>
                   </tr>
                    -->
-                  
-                  
+                          
                 </tbody>
               </table>
             </div>
             <hr class="mb-3">
             <div class="d-flex flex-wrap justify-content-between align-items-center pb-2">
-              <div class="px-2 py-1">Subtotal: <span class='text-medium'>$289.68</span></div>
-              <div class="px-2 py-1">Shipping: <span class='text-medium'>$22.50</span></div>
-              <div class="px-2 py-1">Tax: <span class='text-medium'>$3.42</span></div>
-              <div class="text-lg px-2 py-1">Total: <span class='text-medium'>$315.60</span></div>
+              <div class="px-2 py-1">상품 가격: <span id='tot_price' class='text-medium'>$289.68</span></div>
+              <div class="px-2 py-1">배송비: <span id='delivery_fee' class='text-medium'>$22.50</span></div>
+              <div class="text-lg px-2 py-1">총 가격: <span id='jumun_tot_price' class='text-medium'>$315.60</span></div>
             </div>
           </div>
         </div>
@@ -109,7 +107,7 @@
                 <c:forEach items="${jumunList}" var="jumun">
                   <tr>
 
-                    <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails">${jumun.jumun_no}</a></td>
+                    <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails"  delivery_no="${jumun.delivery_no}">${jumun.jumun_no}</a></td>
                     <td>${jumun.jumun_date}</td>
                     <td><span class="text-danger">${jumun.jumun_status}</span></td>
                     <td><span class="text-medium">${jumun.jumun_tot_price}</span></td>
