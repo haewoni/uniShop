@@ -23,8 +23,8 @@
 	<div class="container padding-bottom-3x mb-2">
 		<div class="row">
 			<!-- Checkout Adress-->
-			<form name="jumun_address_form">
 				<div class="col-xl-9 col-lg-8">
+				<form name="jumun_address_form">
 					<div class="checkout-steps">
 						<a href="jumun_review_form">4. 주문확인</a>
 						<a href="jumun_payment_form"><span class="angle"></span>3. 결제정보</a>
@@ -136,8 +136,9 @@
 								class="icon-arrow-right"></i></a>
 						</div>
 					</div>
+					</form>
 				</div>
-			</form>
+			
 			<!-- Sidebar          -->
 			<div class="col-xl-3 col-lg-4">
 				<aside class="sidebar">
