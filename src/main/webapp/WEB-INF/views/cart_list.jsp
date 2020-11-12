@@ -62,7 +62,7 @@
               <tr>
               
                  <td>
-                  <div class="product-item"><a class="product-thumb" href="shop-single.jsp?product_no=${cart.product_no}"><img src="IMAGE/${cart.product_image_1}" alt="Product"></a>
+                  <div class="product-item"><a class="product-thumb" href="shop_product_detail.jsp?product_no=${cart.product_no}"><img src="IMAGE/${cart.product_image_1}" alt="Product"></a>
                     <div class="product-info">
                       <h4 class="product-title"><a href="shop-single.html">${cart.product_name}</a></h4><span><em>Color:</em>${cart.cart_product_size}</span><span><em>Product No:</em>${cart.product_no}</span>
                     </div>
