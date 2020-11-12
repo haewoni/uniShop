@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="common_top.jsp"/>
     <!-- Open Ticket Modal-->
-    <form class="modal fade" method="post" id="openTicket" tabindex="-1">
+    <form class="modal fade" method="post" id="openTicket" name="openTicket" tabindex="-1">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
@@ -13,14 +13,14 @@
           <div class="modal-body">
             <p class="text-muted">답변까지 평균 2일이 소요됩니다. 양해 바랍니다.</p>
             <div class="form-group">
-              <label for="ticket-subject">제목</label>
-              <input class="form-control" type="text" id="ticket-subject" required>
+              <label for="question_title">제목</label>
+              <input class="form-control" type="text" id="question_title" name="question_title" required>
             </div>
             <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label for="ticket-type">카테고리</label>
-                  <select class="form-control" id="ticket-type">
+                  <label for="question_category">카테고리</label>
+                  <select class="form-control" id="question_category" name="question_category">
                     <option>선택해주세요</option>
                     <option>배송</option>
                     <option>상품</option>
@@ -31,12 +31,14 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="ticket-description">내용</label>
-              <textarea class="form-control" id="ticket-description" rows="8" required></textarea>
+              <label for="question_content">내용</label>
+              <textarea class="form-control" id="question_content" name="question_content" rows="8" required></textarea>
             </div>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-primary" id="question_insert_button" type="button" data-target="#insertTicket">등록하기</button>
+            <button class="btn btn-primary" id="question_insert_button" type="submit" >등록하기</button>
+
+          
           </div>
         </div>
       </div>
@@ -124,5 +126,6 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/common.js"></script>
   </body>
 </html>

@@ -9,9 +9,10 @@ $(function(){
 	});
 	//event
 	$('#question_insert_button').click(function(e){
-		document.member_question_list.action='member_question_action';
-		document.member_question_list.method='POST';
-		document.member_question_list.submit();
+		alert('등록되었습니다');
+		document.openTicket.action='member_question_action';
+		document.openTicket.method='POST';
+		document.openTicket.submit();
 		e.preventDefault();		
 	});
 	
@@ -76,6 +77,12 @@ $('#orderDetails').on('shown.bs.modal',function(e){
         });
 		
 	});
+
+function question_insert_action() {
+	document.member_question_list.action='member_question_action';
+	document.member_question_list.method='POST';
+	document.member_question_list.submit();
+}
 	
 function jumun_delivery_form_action() {
 	document.jumun_delivery_form.action='jumun_delivery_action';
