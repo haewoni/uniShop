@@ -2,24 +2,13 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="common_top.jsp"/>
-<script type="text/javascript">
-	function jumun_detail_funtion() {
-		$.ajax({
-			url:'jumun_detail',
-			method:'POST',
-			dataType:'json'
-			success:function(jsonArray){
-				}
-			});
-		}
-</script>    
-     <!-- Open Jumun_detail Modal-->
-    <div class="modal fade" id="orderDetails" tabindex="-1">
+   
+     <!-- Open Jumun_detail Modal start-->
+   <div class="modal fade" id="orderDetails" tabindex="-1">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-           
-            <h4 class="modal-title">주문 번호  - ${jumun.jumun_no}</h4>
+            <h4 class="modal-title">Order No  - 34VB5540K83</h4>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
           <div class="modal-body">
@@ -27,50 +16,40 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th>제품 이름</th>
-                    <th class="text-center">총 가격</th>
+                    <th>Product Name</th>
+                    <th class="text-center">Subtotal</th>
                   </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${jumunList}" var="jumun">
-                 <c:forEach items="${jumun.jumun_DetailList}" var="jumun_Detail">
+                <!-- 
                   <tr>
                     <td>
-                      <div class="product-item"><a class="product-thumb" href="shop_product_detail?${jumun_Detail.product_no}"><img src="IMAGE/${jumun_Detail.product_no}_1.png" alt="Product"></a>
+                      <div class="product-item"><a class="product-thumb" href="shop-single.html"><img src="img/shop/cart/01.jpg" alt="Product"></a>
                         <div class="product-info">
-                          <h4 class="product-title"><a href="shop_product_detail?${jumun_Detail.product_no}">${jumun_Detail.product_name}<small>X${jumun_Detail.jumun_d_product_qty}</small></a></h4><span><em>Size:</em>${jumun_Detail.jumun_d_product_size}</span>
+                          <h4 class="product-title"><a href="shop-single.html">Unionbay Park<small>x 1</small></a></h4><span><em>Size:</em> 10.5</span><span><em>Color:</em> Dark Blue</span>
                         </div>
                       </div>
                     </td>
-                    <td class="text-center text-lg text-medium">${jumun_Detail.jumun_d_product_price}</td>
+                    <td class="text-center text-lg text-medium">$43.90</td>
                   </tr>
-                  </c:forEach>
-                 </c:forEach>
+                   -->
+                  
+                  
                 </tbody>
               </table>
             </div>
-            <c:choose>
-             <c:when test="${jumun.delivery_no eq 'GEN'}">
-              <hr class="mb-3">
-               <div class="d-flex flex-wrap justify-content-between align-items-center pb-2">
-               <div class="px-2 py-1">주문 가격: <span class='text-medium'>${jumun.jumun_tot_price}</span></div>
-               <div class="px-2 py-1">배송비: <span class='text-medium'>3000</span></div>
-               <div class="text-lg px-2 py-1">총 가격: <span class='text-medium'>${jumun.jumun_tot_price + 3000}</span></div>
-              </div>
-             </c:when>
-            <c:when test="${jumun.delivery_no eq 'EX'}">
-             <hr class="mb-3">
-               <div class="d-flex flex-wrap justify-content-between align-items-center pb-2">
-                <div class="px-2 py-1">주문 가격: <span class='text-medium'>${jumun.jumun_tot_price}</span></div>
-                <div class="px-2 py-1">배송비: <span class='text-medium'>6000</span></div>
-                <div class="text-lg px-2 py-1">총 가격: <span class='text-medium'>${jumun.jumun_tot_price + 6000}</span></div>
-               </div>
-              </c:when>
-            </c:choose>
+            <hr class="mb-3">
+            <div class="d-flex flex-wrap justify-content-between align-items-center pb-2">
+              <div class="px-2 py-1">Subtotal: <span class='text-medium'>$289.68</span></div>
+              <div class="px-2 py-1">Shipping: <span class='text-medium'>$22.50</span></div>
+              <div class="px-2 py-1">Tax: <span class='text-medium'>$3.42</span></div>
+              <div class="text-lg px-2 py-1">Total: <span class='text-medium'>$315.60</span></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+   <!-- Open Jumun_detail Modal end-->
 	<!-- Off-Canvas Wrapper-->
     <div class="offcanvas-wrapper">
       <!-- Page Title-->
@@ -154,5 +133,6 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/common.js"></script>
   </body>
 </html>

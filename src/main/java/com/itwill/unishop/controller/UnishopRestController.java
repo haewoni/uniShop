@@ -1,7 +1,10 @@
 package com.itwill.unishop.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.itwill.unishop.domain.Jumun_Detail;
@@ -38,8 +41,8 @@ public class UnishopRestController {
 	private DeliveryService deliveryService;
 	
 	@RequestMapping(value = "jumun_detail")
-	public Jumun_Detail jumun_detail(int jumun_no) throws Exception{
-		return (Jumun_Detail) jumun_DetailService.selectByNo(jumun_no);
+	public List<Jumun_Detail> jumun_detail(@RequestParam int jumun_no) throws Exception{
+		return jumun_DetailService.selectByNo(jumun_no);
 	}
 	@RequestMapping(value = "question_insert_action")
 	public int question_insert_action(Question question) {
