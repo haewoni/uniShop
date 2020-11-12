@@ -18,6 +18,7 @@ import com.itwill.unishop.domain.Cart;
 import com.itwill.unishop.domain.Jumun;
 import com.itwill.unishop.domain.Jumun_Detail;
 import com.itwill.unishop.domain.Member;
+import com.itwill.unishop.service.CartService;
 import com.itwill.unishop.service.JumunService;
 import com.itwill.unishop.service.Jumun_DetailService;
 import com.itwill.unishop.service.MemberService;
@@ -27,6 +28,8 @@ public class JumunController {
 
    @Autowired
    private MemberService memberService;
+   @Autowired
+   private CartService cartService;
    @Autowired
    private JumunService jumunService;
    @Autowired
@@ -177,7 +180,7 @@ public class JumunController {
       
       jumun_DetailService.insertJumunDetail(jumun_Detail);
    }
-      forwardPath="jumun_complete_form";
+      forwardPath="forward:jumun_complete_form";
       return forwardPath;
    }
 
@@ -185,11 +188,14 @@ public class JumunController {
    /*
     * jumun - complete
     */
+   
+   
    @RequestMapping("jumun_complete_form")
-   public String complete_form() {
-      return "jumun_complete_form"; 
+   public String complete_form(Model model,HttpSession session) {
+	   String sMemberId = (String) session.getAttribute("sMemberId");
+       cartService.deleteCartByMemberId(sMemberId);
+       return "jumun_complete_form";
    }
 
-   
    
 }
