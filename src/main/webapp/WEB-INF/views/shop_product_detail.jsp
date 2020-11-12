@@ -49,13 +49,8 @@
               </ul>
             </div>
           </div>
+          
           <!-- Product Info-->
-
-          
-          
-          
-          <form name="product_detail">
-
           <div class="col-md-6">
             <div class="padding-top-2x mt-2 hidden-md-up"></div>
               <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star"></i>
@@ -65,34 +60,25 @@
             <p>
             	${product.product_desc}
             </p>
+            <form id="product_detail_cart" name= "product_detail_cart" method="post">
+            <input type="hidden" name="product_no" value="${product.product_no}">
             <div class="row margin-top-1x">
               <div class="col-sm-4">
-                <div class="form-group">
+              <div class="form-group">
                   <label for="size">Size</label>
-                  <form method="post" action="shop_add_cart_action">
-                  <select class="cart_product_size" id="cart_product_size" name="cart_product_size">
-                    <option>Chooze size</option>
+				  <select class="form-control" id="cart_product_size" name="cart_product_size">
+                    <option>Choose size</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
 			   		<option value="L">L</option>
-				  </select>
-				  
-                   </form>
-                   <form method="post" action="shop_add_wishlist_action">
-		<input type=submit value="ADD TO WISHLIST" class=TXTFLD > <!-- onclick="javascript:alert('위시리스트 추가 완료');"  -->
-		<input type="hidden" name=product_no value="${product.product_no}">
-		</form>
-		<form method="post" action="shop_delete_wishlist_action">
-		<input type=submit value="DELETE FROM WISHLIST" class=TXTFLD  > <!-- onclick="javascript:alert('위시리스트 삭제 완료');" -->
-		<input type="hidden" name=product_no value="${product.product_no}">
-		</form>
+                  </select>
                 </div>
               </div>
+              
               <div class="col-sm-3">
                 <div class="form-group">
-                <form method="post" action="shop_add_cart_action">
-                  <label for="cart_qty">Quantity</label>
-                  <select class="form_control" name="cart_qty" id="cart_qty">
+                  <label for="quantity">Quantity</label>
+                 <select class="form-control" id="cart_qty" name="cart_qty">
                     <option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -104,43 +90,32 @@
 					<option value="9">9</option>
 					<option value="10">10</option>
                   </select>
-                  <input type=submit value="ADD TO CART" class=TXTFLD > <!-- onclick="javascript:alert('카트 추가 완료');"  -->
-				  <input type="hidden" name=product_no value="${product.product_no}">
-                  </form>
                 </div>
               </div>
             </div>
+            </form>
             <div class="pt-1 mb-2"><span class="text-medium">제품번호:</span> #${product.product_no}</div>
             <div class="padding-bottom-1x mb-2"><span class="text-medium">Categories:&nbsp;</span><a class="navi-link" href="#">Men’s shoes,</a><a class="navi-link" href="#"> Snickers,</a><a class="navi-link" href="#"> Sport shoes</a></div>
             <hr class="mb-3">
-            <div class="d-flex flex-wrap justify-content-between">
+        <div class="d-flex flex-wrap justify-content-between">
               <div class="entry-share mt-2 mb-2"><span class="text-muted">Share:</span>
-                <div class="share-links"><a class="social-button shape-circle sb-facebook" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="socicon-facebook"></i></a><a class="social-button shape-circle sb-twitter" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="socicon-twitter"></i></a><a class="social-button shape-circle sb-instagram" href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="socicon-instagram"></i></a><a class="social-button shape-circle sb-google-plus" href="#" data-toggle="tooltip" data-placement="top" title="Google +"><i class="socicon-googleplus"></i></a></div>
+                <div class="share-links"><a class="social-button shape-circle sb-facebook" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i class="socicon-facebook"></i></a><a class="social-button shape-circle sb-twitter" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i class="socicon-twitter"></i></a><a class="social-button shape-circle sb-instagram" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Instagram"><i class="socicon-instagram"></i></a><a class="social-button shape-circle sb-google-plus" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google +"><i class="socicon-googleplus"></i></a></div>
               </div>
               <div class="sp-buttons mt-2 mb-2">
-              	<span>
-	              	<a href="shop_add_wishlist_action?product_no=${product.product_no}">
-						<button class="btn btn-outline-secondary btn-sm btn-wishlist"
-							data-toggle="tooltip" title="Whishlist">
-							<i class="icon-heart"></i>
-						</button>
-					</a>
-				</span> 
-				<a href="shop_delete_wishlist_action?product_no=${product.product_no}">
-					<button class="btn btn-outline-primary btn-sm">DELETE FROM WISHLIST</button>
-				</a>
-				<a href="shop_add_cart_action?product_no=${product.product_no}">
-					<button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-				</a>  
-				
-				
+                <button class="btn btn-outline-secondary btn-sm btn-wishlist" 
+                		data-toggle="tooltip" title="" data-original-title="Whishlist">
+                		<i class="icon-heart"
+                		id="add_wishlist_button"></i></button>
+                <button class="btn btn-primary" 
+                		id="add_cart_button"
+                		data-toast="" data-toast-type="success" 
+                		data-toast-position="topRight" data-toast-icon="icon-circle-check" 
+                		data-toast-title="Product" data-toast-message="successfuly added to cart!"
+                		><i class="icon-bag"></i> Add to Cart</button>
               </div>
             </div>
           </div>
-        
-
-        </form>
-        
+        </div>
         
         <!-- Product Tabs-->
         <div class="row padding-top-3x mb-3">
@@ -356,6 +331,6 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
-    <script src="js/common.js"></script>
+    <script src="js/custom_product.js"></script>
   </body>
 </html>

@@ -193,12 +193,8 @@ public class ProductController {
 
 
 	/**********카트 추가***********/
-	@RequestMapping("/shop_add_cart_action")
+	@RequestMapping(value = "/shop_add_cart_action" , method = RequestMethod.POST)
 	public String shop_add_cart(Model model, HttpSession session, @RequestParam int cart_qty, @RequestParam String cart_product_size, @RequestParam String product_no) {
-		/*
-		 * 세션작업 되면 member_id 연결하세요.
-		 * 로그인확인 작업되면 여기에 붙여주세용
-		 */
 		String forwardPath= "";
 		String sMemberId = (String) session.getAttribute("sMemberId");
 		/*
@@ -207,6 +203,8 @@ public class ProductController {
 		}
 		템플릿 연결할때 로그인체크 할때 쓰세요. 아래 위시리스트 추가도 마찬가지.
 		 */
+		System.out.println("!111");
+		
 		try {	
 
 			if(sMemberId == null || sMemberId == "") {
@@ -224,7 +222,7 @@ public class ProductController {
 				Cart cart = new Cart(-9999, cart_qty, 5000, cart_product_size, sMemberId, product_no);
 				cartService.insertCart(cart);
 			}
-			forwardPath = "shop_product_detail?product_no="+product_no;
+			forwardPath = "redirect:shop_product_detail?product_no="+product_no;
 			//-1과 5000은 임의의 수일 뿐. 쿼리문상 자동으로 계산된 값으로 입력됨
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -235,7 +233,7 @@ public class ProductController {
 
 
 	/**********위시리스트 추가***********/
-	@RequestMapping("/shop_add_wishlist_action")
+	@RequestMapping(value= "/shop_add_wishlist_action", method = RequestMethod.POST)
 	public String shop_add_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
 		String forwardPath = "";
 		//String member_id = "uni1"; //session.getId();
