@@ -156,7 +156,6 @@
                   <div class="comment-author-ava"><img src="img/reviews/01.jpg" alt="Review author"></div>
                   <div class="comment-body">
                     <div class="comment-header d-flex flex-wrap justify-content-between">
-                    <a href="shop_product_review_list?product_no=${product.product_no}">해당 상품 리뷰 리스트</a>
                       <h4 class="comment-title">Average quality for the price</h4>
                       <div class="mb-2">
                           <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star"></i><i class="icon-star"></i>
@@ -198,46 +197,46 @@
                   </div>
                 </div>
                 <!-- Review Form-->
-                <h5 class="mb-30 padding-top-1x">Leave Review</h5>
+                <h5 class="mb-30 padding-top-1x">후기 작성</h5>
                 <form class="row" method="post">
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <label for="review_name">Your Name</label>
-                      <input class="form-control form-control-rounded" type="text" id="review_name" required>
+                      <label for="review_name">작성자</label>
+                      <input class="form-control form-control-rounded" type="text" name ="review_name" id="review_name" required>
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <label for="review_email">Your Email</label>
-                      <input class="form-control form-control-rounded" type="email" id="review_email" required>
+                      <label for="review_email">이메일</label>
+                      <input class="form-control form-control-rounded" type="text" name ="review_email" id="review_email" required>
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <label for="review_subject">Subject</label>
-                      <input class="form-control form-control-rounded" type="text" id="review_subject" required>
+                      <label for="review_subject">제목</label>
+                      <input class="form-control form-control-rounded" type="text" name = "review_title" id="review_subject" required>
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <label for="review_rating">Rating</label>
-                      <select class="form-control form-control-rounded" id="review_rating">
-                        <option>5 Stars</option>
-                        <option>4 Stars</option>
-                        <option>3 Stars</option>
-                        <option>2 Stars</option>
-                        <option>1 Star</option>
+                      <label for="review_rating">별점</label>
+                      <select class="form-control form-control-rounded" name="review_rating" id="review_rating">
+                        <option>5</option>
+                        <option>4</option>
+                        <option>3</option>
+                        <option>2</option>
+                        <option>1</option>
                       </select>
                     </div>
                   </div>
                   <div class="col-12">
                     <div class="form-group">
-                      <label for="review_text">Review </label>
-                      <textarea class="form-control form-control-rounded" id="review_text" rows="8" required></textarea>
+                      <label for="review_text">후기</label>
+                      <textarea class="form-control form-control-rounded" name = "review_content" id="review_text" rows="8" required></textarea>
                     </div>
                   </div>
                   <div class="col-12 text-right">
-                    <button class="btn btn-outline-primary" type="submit">Submit Review</button>
+                    <button class="btn btn-outline-primary" type="submit">후기 작성</button>
                   </div>
                 </form>
               </div>
@@ -248,17 +247,13 @@
         <h3 class="text-center padding-top-2x mt-2 padding-bottom-1x">You May Also Like</h3>
         <!-- Carousel-->
         <div class="owl-carousel" data-owl-carousel="{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;margin&quot;: 30, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;576&quot;:{&quot;items&quot;:2},&quot;768&quot;:{&quot;items&quot;:3},&quot;991&quot;:{&quot;items&quot;:4},&quot;1200&quot;:{&quot;items&quot;:4}} }">
-         
-         
+
          <c:forEach  items="${recommendedProductList}" 
 				var="product"  
 				begin="0"  
 				step="1" 
 				end="${recommendedProductList.size()}"
 				varStatus="status">
-		
-         
-         
           <!-- Product-->
           <div class="grid-item">
             <div class="product-card">
@@ -285,8 +280,6 @@
             
           </div>
          </c:forEach>
-         
-      
       <!-- Site Footer-->
       <jsp:include page="common_bottom.jsp"/>
     </div>
@@ -331,6 +324,7 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/custom_product.js"></script>
   </body>
 </html>

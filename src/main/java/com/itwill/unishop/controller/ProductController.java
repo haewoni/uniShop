@@ -177,7 +177,9 @@ public class ProductController {
 	@RequestMapping(value = "/shop_product_review_action",method = RequestMethod.POST)
 	public String shop_product_review_action_POST(@ModelAttribute Review insertReview, @RequestParam String product_no,HttpSession session){
 		String forwardPath = "";
+		System.out.println("dsjkpfdsjfsj");
 		try {
+			
 			String sMemberId = (String) session.getAttribute("sMemberId");
 			Product product = productService.selectByNo(product_no);
 			if(sMemberId.equals(insertReview.getMember_id()) && product.getProduct_no().equals(product_no)) {
