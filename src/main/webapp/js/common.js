@@ -1,3 +1,5 @@
+
+	
 $(function(){
 	//event
 	$('#jumun_payment_button').click(function(e){
@@ -120,9 +122,7 @@ function login() {
 		}
 	}
 	
-
-
-
+	
 
 
 

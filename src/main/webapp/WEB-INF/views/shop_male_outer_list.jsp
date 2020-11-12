@@ -213,7 +213,7 @@
               <!-- Product-->
               <div class="grid-item">
                 <div class="product-card">
-                  <a class="product-thumb" href="shop_product_detail_kyj?product_no=${product.product_no}">
+                  <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
                   	<img src="IMAGE/${product.product_image_1}" alt="Product">
                   </a>
                   <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>

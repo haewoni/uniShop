@@ -1,3 +1,19 @@
-/**
- * 
- */
+$(function(){
+	$('#add_cart_button').click(function(e){
+		alert('adsasas');
+		document.product_detail_cart.method='POST';
+		document.product_detail_cart.action='shop_add_cart_action';
+		document.product_detail_cart.submit();
+		e.preventDefault();
+		});
+	});
+	
+$(function(){
+	$('#add_wishlist_button').click(function(e){
+		alert('2');
+		document.product_detail_cart.method='POST';
+		document.product_detail_cart.action='shop_add_wishlist_action';
+		document.product_detail_cart.submit();
+		e.preventDefault();
+		});
+	});
