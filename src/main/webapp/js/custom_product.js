@@ -19,6 +19,15 @@ $(function(){
 		});
 	});
 
+$(function(){
+	$('#add_review_button').click(function(e){
+		alert('adsasas');
+		document.review_form.method='POST';
+		document.review_form.action='shop_product_review_action';
+		document.review_form.submit();
+		e.preventDefault();
+		});
+	});
 /**
  $('#orderDetails').on('show.bs.modal',function(e){
 		jumun_no=$(e.relatedTarget).text();

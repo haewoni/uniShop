@@ -179,15 +179,18 @@ public class ProductController {
 		String forwardPath = "";
 		System.out.println("dsjkpfdsjfsj");
 		try {
-			
 			String sMemberId = (String) session.getAttribute("sMemberId");
+			if(sMemberId == null || sMemberId == "") {
+				forwardPath = "member_login_register_form";
+			}	
 			Product product = productService.selectByNo(product_no);
-			if(sMemberId.equals(insertReview.getMember_id()) && product.getProduct_no().equals(product_no)) {
-				reviewService.insertReview(insertReview);
-			}
+//			if(sMemberId.equals(insertReview.getMember_id()) && product.getProduct_no().equals(product_no)) {
+//			}
+			reviewService.insertReview(insertReview);
 			forwardPath = "redirect:shop_product_review_list";
+			
 		} catch (Exception e) {
-			forwardPath="error_handle";
+			//forwardPath="error_handle";
 			e.printStackTrace();
 		}
 		return forwardPath;

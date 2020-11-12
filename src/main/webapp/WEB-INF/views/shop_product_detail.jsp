@@ -197,46 +197,46 @@
                   </div>
                 </div>
                 <!-- Review Form-->
-                <h5 class="mb-30 padding-top-1x">후기 작성</h5>
+                <h5 class="mb-30 padding-top-1x">Leave Review</h5>
                 <form class="row" method="post">
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <label for="review_name">작성자</label>
-                      <input class="form-control form-control-rounded" type="text" name ="review_name" id="review_name" required>
+                      <label for="review_name">Your Name</label>
+                      <input class="form-control form-control-rounded" type="text" id="review_name" required>
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <label for="review_email">이메일</label>
-                      <input class="form-control form-control-rounded" type="text" name ="review_email" id="review_email" required>
+                      <label for="review_email">Your Email</label>
+                      <input class="form-control form-control-rounded" type="email" id="review_email" required>
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <label for="review_subject">제목</label>
-                      <input class="form-control form-control-rounded" type="text" name = "review_title" id="review_subject" required>
+                      <label for="review_subject">Subject</label>
+                      <input class="form-control form-control-rounded" type="text" id="review_subject" required>
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <label for="review_rating">별점</label>
-                      <select class="form-control form-control-rounded" name="review_rating" id="review_rating">
-                        <option>5</option>
-                        <option>4</option>
-                        <option>3</option>
-                        <option>2</option>
-                        <option>1</option>
+                      <label for="review_rating">Rating</label>
+                      <select class="form-control form-control-rounded" id="review_rating">
+                        <option>5 Stars</option>
+                        <option>4 Stars</option>
+                        <option>3 Stars</option>
+                        <option>2 Stars</option>
+                        <option>1 Star</option>
                       </select>
                     </div>
                   </div>
                   <div class="col-12">
                     <div class="form-group">
-                      <label for="review_text">후기</label>
-                      <textarea class="form-control form-control-rounded" name = "review_content" id="review_text" rows="8" required></textarea>
+                      <label for="review_text">Review </label>
+                      <textarea class="form-control form-control-rounded" id="review_text" rows="8" required></textarea>
                     </div>
                   </div>
                   <div class="col-12 text-right">
-                    <button class="btn btn-outline-primary" type="submit">후기 작성</button>
+                    <button class="btn btn-outline-primary" type="submit">Submit Review</button>
                   </div>
                 </form>
               </div>
