@@ -126,7 +126,6 @@ public class JumunController {
       int cart_subtotal = (int) session.getAttribute("cart_subtotal");
       int delivery_fee = (int)session.getAttribute("delivery_fee");
       //2. 세션으로 주문객체 가져오기
-      
       Jumun createJumun = (Jumun)session.getAttribute("createJumun");
       //3. 주문 객체에 폼에서 가져온 정보 set
       createJumun.setJumun_no(1);
