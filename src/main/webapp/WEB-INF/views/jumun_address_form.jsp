@@ -53,7 +53,7 @@
 						<div class="col-sm-6">
 							<div class="form-group">
 								<label for="checkout-company">주소명</label> <input
-									class="form-control" type="text" id="checkout-company"
+									class="form-control" type="text" 
 									name="member_address_name"
 									value="${loginMember.member_address_name}">
 							</div>
@@ -61,14 +61,15 @@
 						<div class="col-sm-6">
 							<div class="form-group">
 								<label for="checkout-country">국가</label> <select
-									class="form-control" id="checkout-country">
-									<option>국가 선택</option>
-									<option>대한민국</option>
-									<option>캐나다</option>
-									<option>프랑스</option>
-									<option>독일</option>
-									<option>미국</option>
-									<option>뉴질랜드</option>
+									class="form-control" id="checkout-country"
+									name="member_address_country">
+									<option>${loginMember.member_address_country}</option>
+									<option value="대한민국">대한민국</option>
+									<option value="캐나다">캐나다</option>
+									<option value="프랑스">프랑스</option>
+									<option value="독일">독일</option>
+									<option value="미국">미국</option>
+									<option value="뉴질랜드">뉴질랜드</option>
 								</select>
 							</div>
 						</div>
@@ -77,13 +78,14 @@
 						<div class="col-sm-6">
 							<div class="form-group">
 								<label for="checkout-city">도시</label> <select
-									class="form-control" id="checkout-city">
-									<option>도시 선택</option>
-									<option>서울</option>
-									<option>인천</option>
-									<option>부산</option>
-									<option>대전</option>
-									<option>익산</option>
+									class="form-control" id="checkout-city"
+									name="member_address_city">
+									<option>${loginMember.member_address_city}</option>
+									<option value="서울">서울</option>
+									<option value="인천">인천</option>
+									<option value="부산">부산</option>
+									<option value="대전">대전</option>
+									<option value="익산">익산</option>
 								</select>
 							</div>
 						</div>

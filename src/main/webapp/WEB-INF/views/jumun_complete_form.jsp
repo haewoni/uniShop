@@ -26,9 +26,9 @@
           <div class="card-body padding-top-2x">
             <h3 class="card-title">주문해주셔서 감사합니다!</h3>
             <p class="card-text">주문이 접수되었으며 빠르게 처리해 드리겠습니다</p>
-            <p class="card-text">주문번호는<span class="text-medium">${loginMember.jumun_no}</span>입니다</p>
+            <p class="card-text">주문번호는<span class="text-medium"> ${jumun_no} 번</span>입니다</p>
             </p>
-            <div class="padding-top-1x padding-bottom-1x"><a class="btn btn-outline-secondary" href="shop_main.html">계속 쇼핑하기</a></div>
+            <div class="padding-top-1x padding-bottom-1x"><a class="btn btn-outline-secondary" href="shop_main">계속 쇼핑하기</a></div>
           </div>
         </div>
       </div>

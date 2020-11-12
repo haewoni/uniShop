@@ -50,11 +50,11 @@
 	-->
 	<!-- address -->
 	<update id="updateAddress" parameterType="com.itwill.unishop.domain.Member">
-	update member 
-	set member_address_name=#{member_address_name},member_address_zipcode=#{member_address_zipcode},
-	member_address_country=#{member_address_country},member_address_city=#{member_address_city},
-	member_address1=#{member_address1},member_address2=#{member_address2}
-	where member_id=#{member_id}
+	update member set member_name=#{member_name},member_phone=#{member_phone},
+				member_address_name=#{member_address_name},member_address_zipcode=#{member_address_zipcode},
+				member_address_country=#{member_address_country},member_address_city=#{member_address_city},
+				member_address1=#{member_address1},member_address2=#{member_address2}
+		where member_id=#{member_id}
 	</update>
 	<!-- delete -->
 	<delete id="deleteMember" parameterType="string">

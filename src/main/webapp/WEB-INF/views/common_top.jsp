@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -200,7 +201,7 @@
               </li>
             </ul>
           </li>
-          <li class="has-children active"><span><a href="account-orders.html"><span>Account</span></a><span class="sub-menu-toggle"></span></span>
+          <li class="has-children active"><span><a href="member_profile_form"><span>Account</span></a><span class="sub-menu-toggle"></span></span>
             <ul class="offcanvas-submenu">
                 <li><a href="member_login_register_form">Login / Register</a></li>
                 <li><a href="account-password-recovery.html">Password Recovery</a></li>
@@ -208,7 +209,6 @@
                 <li><a href="member_wishlist_detail">Wishlist</a></li>
                 <li><a href="member_profile_form">Profile Page</a></li>
                 <li><a href="member_address_detail">Contact / Shipping Address</a></li>
-                <li><a href="account-open-ticket.html">Q&A</a></li>
                 <li><a href="member_question_list">질문내역</a></li>
                 <li><a href="member_question_detail">질문보기</a></li>
             </ul>
@@ -400,22 +400,22 @@
               </li>
             </ul>
           </li>
-          <li class="active"><a href="member_profile_form"><span>Account</span></a>
+          <li class="active"><c:choose><c:when test="${empty sMemberId}"><a href="member_login_register_form"><span>Account</span></a></c:when><c:otherwise><a href="member_profile_form"><span>Account</span></a></c:otherwise></c:choose>
             <ul class="sub-menu">
-                <li><a href="member_login_register_form">Login / Register</a></li>
-                <li><a href="account-password-recovery.html">Password Recovery</a></li>
-                <li class="active"><a href="account-orders.html">Orders List</a></li>
-                <li><a href="member_wishlist_detail">Wishlist</a></li>
-                <li><a href="member_profile_form">Profile Page</a></li>
-
-
-                <li><a href="member_address_detail">Contact / Shipping Address</a></li>
-
-                <li><a href="member_question_list">My Tickets</a></li>
-                <li><a href="member_question_detail">Single Ticket</a></li>
-
-
-
+                <c:choose>
+                	<c:when test="${empty sMemberId}">
+                		<li><a href="member_login_register_form">로그인 / 회원가입</a></li>
+                	</c:when>
+                	<c:otherwise>
+                		<li><a href="member_login_register_form">회원가입</a></li>
+                		<li><a href="account-password-recovery.html">Password Recovery</a></li>
+                		<li class="active"><a href="member_jumun_list">주문 내역</a></li>
+                		<li><a href="member_wishlist_detail">찜 목록</a></li>
+                		<li><a href="member_profile_form">회원 정보</a></li>
+                		<li><a href="member_address_detail">회원 주소</a></li>
+                		<li><a href="member_question_list">질문 내역</a></li>
+                	</c:otherwise>
+                </c:choose>
             </ul>
           </li>
           <li><a href="blog-rs.html"><span>Blog</span></a>
@@ -503,18 +503,25 @@
         <div class="inner">
           <div class="tools">
             <div class="search"><i class="icon-search"></i></div>
-            <div class="account"><a href="member_profile_form"></a><i class="icon-head"></i>
+            <div class="account"><c:choose><c:when test="${empty sMemberId}"><a href="member_login_register_form"></a></c:when><c:otherwise><a href="member_profile_form"></a></c:otherwise></c:choose><i class="icon-head"></i>
               <ul class="toolbar-dropdown">
-                <li class="sub-menu-user">
-                  <div class="user-info">
-                    <h6 class="user-name">${loginMember.member_name}</h6><span class="text-xs text-muted"></span>
-                  </div>
-                </li>
-                  <li><a href="member_profile_form">My Profile</a></li>
-                  <li class="active"><a href="member_jumun_list">Order List</a></li>
-                  <li><a href="member_wishlist_detail">Wishlist</a></li>
-                <li class="sub-menu-separator"></li>
-                <li><a href="member_logout_action"> <i class="icon-unlock"></i>Logout</a></li>
+              	<c:choose>
+              		<c:when test="${empty sMemberId}">
+              			<li><a href="member_login_register_form">로그인</a></li>
+              		</c:when>
+              		<c:otherwise>
+		                <li class="sub-menu-user">
+		                  <div class="user-info">
+		                    <h6 class="user-name">${loginMember.member_name}</h6><span class="text-xs text-muted"></span>
+		                  </div>
+		                </li>
+		                  <li><a href="member_profile_form">회원 정보</a></li>
+		                  <li class="active"><a href="member_jumun_list">주문 내역</a></li>
+		                  <li><a href="member_wishlist_detail">찜 목록</a></li>
+		                <li class="sub-menu-separator"></li>
+		                <li><a href="member_logout_action"> <i class="icon-unlock"></i>Logout</a></li>
+		            </c:otherwise>
+              </c:choose>
               </ul>
             </div>
             <div class="cart"><a href="cart_list"></a><i class="icon-bag"></i><span class="count">3</span><span class="subtotal">$289.68</span>
@@ -528,8 +535,8 @@
                   <div class="column text-right"><span class="text-lg text-medium">$289.68&nbsp;</span></div>
                 </div>
                 <div class="toolbar-dropdown-group">
-                  <div class="column"><a class="btn btn-sm btn-block btn-secondary" href="cart_list">View Cart</a></div>
-                  <div class="column"><a class="btn btn-sm btn-block btn-success" href="jumun_address_form">Checkout</a></div>
+                  <div class="column"><a class="btn btn-sm btn-block btn-secondary" href="cart_list">장바구니</a></div>
+                  <div class="column"><a class="btn btn-sm btn-block btn-success" href="jumun_address_form">결제</a></div>
                 </div>
               </div>
             </div>

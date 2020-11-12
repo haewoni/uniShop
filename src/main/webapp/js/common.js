@@ -1,5 +1,19 @@
 
+function jumun_delivery_form_action() {
+	document.jumun_delivery_form.action='jumun_delivery_action';
+	document.jumun_delivery_form.method='POST';
+	document.jumun_delivery_form.submit();
+}
+
+function jumun_payment_action() {
+	alert('bbb')
+	document.jumun_payment_form.action='jumun_payment_action';
+	document.jumun_payment_form.method='POST';
+	document.jumun_payment_form.submit();
+}
+
 function jumun_address_form_action(){
+	alert('aaaaa')
 	document.jumun_address_form.action='jumun_address_action';
 	document.jumun_address_form.method='POST';
 	document.jumun_address_form.submit();
@@ -55,11 +69,6 @@ function login() {
 		}
 	}
 	
-function jumun_address_action() {
-	document.f.action = "jumun_address_action";
-	document.f.method='POST';
-	document.f.submit();
-}
 
 
 

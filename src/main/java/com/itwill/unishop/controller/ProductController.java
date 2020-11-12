@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.itwill.unishop.domain.Cart;
@@ -32,7 +33,7 @@ public class ProductController {
 	private CartService cartService;
 	@Autowired
 	private WishListService wishListService;
-	
+
 	/**********샵 메인***********/
 	@RequestMapping("/shop_main")
 	public String shop_main(Model model) throws Exception{
@@ -52,7 +53,7 @@ public class ProductController {
 		forwardPath = "shop_male_outer_list";
 		return forwardPath;
 	}
-	
+
 	/**********남성 가디건***********/
 	@RequestMapping("/shop_male_cardigan_list")
 	public String male_cardigan_list(Model model) throws Exception{
@@ -62,7 +63,7 @@ public class ProductController {
 		forwardPath = "shop_male_cardigan_list";
 		return forwardPath;
 	}
-	
+
 	/**********남성 티셔츠***********/
 	@RequestMapping("/shop_male_tshirt_list")
 	public String male_tshirt_list(Model model) throws Exception{
@@ -72,7 +73,7 @@ public class ProductController {
 		forwardPath = "shop_male_tshirt_list";
 		return forwardPath;
 	}
-	
+
 	/**********남성 긴바지***********/
 	@RequestMapping("/shop_male_longpants_list")
 	public String male_longpants_list(Model model) throws Exception{
@@ -82,7 +83,7 @@ public class ProductController {
 		forwardPath = "shop_male_longpants_list";
 		return forwardPath;
 	}
-	
+
 	/**********남성 반바지***********/
 	@RequestMapping("/shop_male_shortpants_list")
 	public String male_shortpants_list(Model model) throws Exception{
@@ -92,7 +93,7 @@ public class ProductController {
 		forwardPath = "shop_male_shortpants_list";
 		return forwardPath;
 	}
-	
+
 	/**********여성 아우터***********/
 	@RequestMapping("/shop_female_outer_list")
 	public String female_outer_list(Model model) throws Exception{
@@ -102,7 +103,7 @@ public class ProductController {
 		forwardPath = "shop_female_outer_list";
 		return forwardPath;
 	}
-	
+
 	/**********여성 가디건***********/
 	@RequestMapping("/shop_female_cardigan_list")
 	public String female_cardigan_list(Model model) throws Exception{
@@ -112,7 +113,7 @@ public class ProductController {
 		forwardPath = "shop_female_cardigan_list";
 		return forwardPath;
 	}
-	
+
 	/**********여성 티셔츠***********/
 	@RequestMapping("/shop_female_tshirt_list")
 	public String female_tshirt_list(Model model) throws Exception{
@@ -122,7 +123,7 @@ public class ProductController {
 		forwardPath = "shop_female_tshirt_list";
 		return forwardPath;
 	}
-	
+
 	/**********여성 긴바지***********/
 	@RequestMapping("/shop_female_longpants_list")
 	public String female_longpants_list(Model model) throws Exception{
@@ -132,7 +133,7 @@ public class ProductController {
 		forwardPath = "shop_female_longpants_list";
 		return forwardPath;
 	}
-	
+
 	/**********여성 스커트***********/
 	@RequestMapping("/shop_female_skirt_list")
 	public String female_skirt_list(Model model) throws Exception{
@@ -142,7 +143,7 @@ public class ProductController {
 		forwardPath = "shop_female_skirt_list";
 		return forwardPath;
 	}
-	
+
 	/**********제품 상세***********/
 	@RequestMapping("/shop_product_detail")
 	public String shop_product_detail(Model model, @RequestParam String product_no) throws Exception{
@@ -154,7 +155,7 @@ public class ProductController {
 		forwardPath = "shop_product_detail";
 		return forwardPath;
 	}
-		
+
 	/**********제품 리뷰***********/
 	@RequestMapping("/shop_product_review_list")
 	public String shop_product_review(Model model, @RequestParam String product_no) {
@@ -168,8 +169,29 @@ public class ProductController {
 		}
 		return forwardPath;
 	}
-	
-	
+	/*************************************리뷰를 남겨보자***************************************/
+	@RequestMapping(value = "/shop_product_review_action",method = RequestMethod.GET)
+	public String shop_product_review_action_GET(){
+		return "shop_product_review_list";
+	}
+	@RequestMapping(value = "/shop_product_review_action",method = RequestMethod.POST)
+	public String shop_product_review_action_POST(@ModelAttribute Review insertReview, @RequestParam String product_no,HttpSession session){
+		String forwardPath = "";
+		try {
+			String sMemberId = (String) session.getAttribute("sMemberId");
+			Product product = productService.selectByNo(product_no);
+			if(sMemberId.equals(insertReview.getMember_id()) && product.getProduct_no().equals(product_no)) {
+				reviewService.insertReview(insertReview);
+			}
+			forwardPath = "redirect:shop_product_review_list";
+		} catch (Exception e) {
+			forwardPath="error_handle";
+			e.printStackTrace();
+		}
+		return forwardPath;
+	}
+
+
 	/**********카트 추가***********/
 	@RequestMapping("/shop_add_cart_action")
 	public String shop_add_cart(Model model, HttpSession session, @RequestParam int cart_qty, @RequestParam String cart_product_size, @RequestParam String product_no) {
@@ -184,9 +206,9 @@ public class ProductController {
 		if(sMemberId!=null || sMemberId!="") {
 		}
 		템플릿 연결할때 로그인체크 할때 쓰세요. 아래 위시리스트 추가도 마찬가지.
-		*/
+		 */
 		try {	
-			
+
 			if(sMemberId == null || sMemberId == "") {
 				forwardPath = "member_login_register_form";
 			}	
@@ -203,15 +225,15 @@ public class ProductController {
 				cartService.insertCart(cart);
 			}
 			forwardPath = "shop_product_detail?product_no="+product_no;
-		//-1과 5000은 임의의 수일 뿐. 쿼리문상 자동으로 계산된 값으로 입력됨
+			//-1과 5000은 임의의 수일 뿐. 쿼리문상 자동으로 계산된 값으로 입력됨
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return forwardPath;
 	}
-	
-	
-	
+
+
+
 	/**********위시리스트 추가***********/
 	@RequestMapping("/shop_add_wishlist_action")
 	public String shop_add_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
@@ -220,11 +242,11 @@ public class ProductController {
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
 			if(sMemberId == null || sMemberId == "") {
-				
+
 				forwardPath = "member_login_register_form";
 			}
 			int duplicateCount = wishListService.inspectDuplicateWishList(sMemberId, product_no);
-			
+
 			if(duplicateCount==0) {
 				wishListService.insertWishList(new WishList(-1, sMemberId, product_no, null));
 			}
@@ -234,7 +256,7 @@ public class ProductController {
 		}
 		return forwardPath;
 	}
-	
+
 	/**********위시리스트 삭제***********/
 	@RequestMapping("/shop_delete_wishlist_action")
 	public String shop_delete_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
@@ -242,9 +264,9 @@ public class ProductController {
 		//String member_id = "uni1"; //session.getId();
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
-				if(sMemberId == null || sMemberId == "") {
-					forwardPath = "member_login_register_form";
-				}
+			if(sMemberId == null || sMemberId == "") {
+				forwardPath = "member_login_register_form";
+			}
 			wishListService.deleteWishListById(sMemberId, product_no);
 			forwardPath = "redirect:shop_product_detail?product_no="+product_no;
 		} catch (Exception e) {
@@ -252,17 +274,17 @@ public class ProductController {
 		}
 		return forwardPath;
 	}
-	
-	
+
+
 	/*
 	 * 모든 Exception을 던지면 이곳으로 날라온다
-	 
+
 		@ExceptionHandler(Exception.class)
 		public String member_error_handle(Exception e) {
 			return "error_handle";
 		}
-	*/
-	
-	
-	
+	 */
+
+
+
 }
