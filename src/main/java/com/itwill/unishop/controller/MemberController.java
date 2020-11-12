@@ -207,6 +207,7 @@ public class MemberController {
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
 			ArrayList<Jumun> jumunList = (ArrayList<Jumun>) jumunService.selectById(sMemberId);
+			
 			model.addAttribute("jumunList", jumunList);
 			forwardPath = "member_jumun_list";
 		} catch (Exception e) {

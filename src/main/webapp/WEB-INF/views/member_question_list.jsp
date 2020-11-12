@@ -36,7 +36,7 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-primary" id="insertTicket_btn" type="button" data-target="#insertTicket">등록하기</button>
+            <button class="btn btn-primary" id="question_insert_button" type="button" data-target="#insertTicket">등록하기</button>
           </div>
         </div>
       </div>
@@ -124,31 +124,5 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
-   
-    <script type="text/javascript">
-    	/* var ticket-subject = "";
-    	var ticket-type = "";
-    	var ticket-description = ""; */
-
-		$(function(){
-		
-			$('#insertTicket_btn').on('click', function() {
-			$.ajax({
-				type: "POST",
-				url: "question_insert_action"
-				dataType: "json",
-				success: function(){
-					alert("등록 되었습니다.");
-					location.reload();	
-					}, error: function(){
-						alert("등록 실패하였습니다");
-					}
-				})
-				
-			});
-		})
- 
-		
-	</script>
   </body>
 </html>

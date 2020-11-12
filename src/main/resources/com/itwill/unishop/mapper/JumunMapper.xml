@@ -38,7 +38,7 @@
 	<select id="selectById"
 			parameterType="java.lang.String"
 			resultType="com.itwill.unishop.domain.Jumun">
-		select jumun_no, jumun_date, jumun_status, jumun_tot_price
+		select *
 		from JUMUN
 		where member_id=#{member_id}
 	</select>

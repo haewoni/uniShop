@@ -34,9 +34,6 @@
               <textarea class="form-control" id="ticket-description" rows="8" required></textarea>
             </div>
           </div>
-          <div class="modal-footer">
-            <button class="btn btn-primary" type="submit">등록하기</button>
-          </div>
         </div>
       </div>
     </form>
@@ -115,11 +112,7 @@
                 <p class="comment-text">${question.question_content}</p>
                 <div class="comment-footer"><span class="comment-meta">${loginMember.member_name}</span></div>
               </div>
-            </div>
-            <hr class="mb-4">
-            <div class="text-right">
-              <button class="btn btn-primary margin-bottom-none" data-toggle="modal" data-target="#openTicket">질문하기</button>
-            </div>            
+            </div>                
           </div>
         </div>
       </div>
