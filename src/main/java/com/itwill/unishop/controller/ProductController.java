@@ -221,7 +221,7 @@ public class ProductController {
 				Cart updateCart = new Cart(cart_no, update_qty, 5000, cart_product_size, sMemberId, product_no);
 				cartService.updateCart(updateCart);
 			}else {
-				Cart cart = new Cart(-1, cart_qty, 5000, cart_product_size, sMemberId, product_no);
+				Cart cart = new Cart(-9999, cart_qty, 5000, cart_product_size, sMemberId, product_no);
 				cartService.insertCart(cart);
 			}
 			forwardPath = "shop_product_detail?product_no="+product_no;
