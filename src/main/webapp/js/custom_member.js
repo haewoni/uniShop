@@ -21,8 +21,6 @@ $(function() {
 				console.log(jdArray);
 				html = "";
 				tot_price = 0;
-				delivery_fee = 0;
-				jumun_tot_price = tot_price + delivery_fee;
 				$.each(jdArray, function(i, jd) {
 					console.log(jd.jumun_d_no + "," + jd.jumun_d_product_name)
 					html += " <tr>";
@@ -38,8 +36,6 @@ $(function() {
 					tot_price += jd.jumun_d_product_price;
 				});
 				$('#tot_price').html(tot_price);
-				$('#delivery_fee').html(delivery_fee);
-				$('#jumun_tot_price').html(jumun_tot_price);
 				$('#orderDetails table > tbody').html(html);
 
 			}

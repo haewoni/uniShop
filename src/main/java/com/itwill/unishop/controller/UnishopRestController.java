@@ -49,6 +49,7 @@ public class UnishopRestController {
 	@Autowired
 	private DeliveryService deliveryService;
 	
+	/****************멤버 주문 리스트*******************/
 	@RequestMapping(value = "rest_jumun_detail")
 	public List<Jumun_Detail> jumun_detail(@RequestParam int jumun_no) throws Exception{
 		return jumun_DetailService.selectByNo(jumun_no);
