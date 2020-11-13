@@ -1,5 +1,5 @@
 $(function() {
-	//event
+	// jumun_payment ----> jumun_review
 	$(document).on('click', '#jumun_review_button', function(e) {
 		$.ajax({
 			url: 'f_jumun_review_form',
@@ -10,7 +10,21 @@ $(function() {
 		});
 
 	});
-	//event
+	
+	// jumun_delivery_form_action
+	$(document).on('click', '#jumun_payment_button', function(e) {
+		$.ajax({
+			url: 'rest_jumun_delivery_action',
+			method: 'POST',
+			data: $('#jumun_delivery_form').serialize(),
+			success: function(str) {
+				alert('1111');
+			}
+		});
+
+	});
+	
+	// jumun_delivery ----> jumun_payment
 	$(document).on('click', '#jumun_payment_button', function(e) {
 		$.ajax({
 			url: 'f_jumun_payment_form',
@@ -25,22 +39,13 @@ $(function() {
 	// jumun_address_form_action
 	$('#jumun_address_action_button').on('click', (function(e) {
 		$.ajax({
-			member_name='member_name',
 			url: 'rest_jumun_address_action',
 			method: 'POST',
-			success: function(resultStr) {
-				if (resultStr.trim() == 'true') {
-					
-				}
-			}
+			data: $('#jumun_address_form').serialize()
 		});
 	}));
 
-
-
-
-
-	// jumun_address---->jumun_delivery
+	// jumun_address----> jumun_delivery
 	$('#jumun_address_action_button').on('click', (function(e) {
 		$.ajax({
 			url: 'rest_jumun_delivery_form',
