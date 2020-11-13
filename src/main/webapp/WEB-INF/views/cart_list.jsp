@@ -145,7 +145,8 @@
               <div class="product-badge text-danger">${product.product_no}</div><a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}"><img src="IMAGE/${product.product_image_1}" alt="Product"></a>
               <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
               <h4 class="product-price">
-                <del></del>${product.product_price}
+                <!-- <del></del>${product.product_price} -->
+                <span class="text-center text-lg text-medium"><fmt:formatNumber value="${product.product_price}" pattern="###,###,###"/>원</span>
               </h4>
               
               <%-- 
