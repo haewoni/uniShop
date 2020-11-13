@@ -76,19 +76,20 @@ public class UnishopRestController {
 	public String shop_product_review_action_GET(){
 		return "shop_product_review_list";
 	}
-	@RequestMapping(value = "/rest_shop_product_review_action",method = RequestMethod.POST)
-	public String shop_product_review_action_POST(@ModelAttribute Review insertReview, @RequestParam String product_no,HttpSession session) throws Exception {
-		String forwardPath = "";
+	@RequestMapping(value = "rest_shop_product_review_action",method = RequestMethod.POST)
+	public String shop_product_review_action_POST(@ModelAttribute Review insertReview,HttpSession session) throws Exception {
+		System.out.println(insertReview);
+		String msg = "";
 		String sMemberId = (String) session.getAttribute("sMemberId");
 		if(sMemberId == null || sMemberId == "") {
-			forwardPath = "member_login_register_form";
+			msg = "false";
 		}
-		Product product = productService.selectByNo(product_no);
-		if(sMemberId.equals(insertReview.getMember_id()) && product.getProduct_no().equals(product_no)) {
+		Product product = productService.selectByNo(insertReview.getProduct_no());
+		if(sMemberId.equals(insertReview.getMember_id()) && product.getProduct_no().equals(insertReview.getProduct_no())) {
 			reviewService.insertReview(insertReview);
 		}
-		forwardPath = "redirect:shop_product_review_list";
-		return forwardPath;
+		msg = "true";
+		return msg;
 		}
 	
 
