@@ -7,12 +7,15 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
+
 import org.springframework.web.bind.annotation.ModelAttribute;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.itwill.unishop.domain.Cart;
 import com.itwill.unishop.domain.Delivery;
 import com.itwill.unishop.domain.Jumun_Detail;
 import com.itwill.unishop.domain.Product;
@@ -67,6 +70,7 @@ public class UnishopRestController {
 
 		return reviewList;
 	}
+
 	/*************************************리뷰를 남겨보자***************************************/
 	@RequestMapping(value = "/rest_shop_product_review_action",method = RequestMethod.GET)
 	public String shop_product_review_action_GET(){
@@ -92,6 +96,40 @@ public class UnishopRestController {
 			e.printStackTrace();
 		}
 		return forwardPath;
+	}
+
+
+	
+	@RequestMapping(value = "rest_shop_add_cart_action")
+	public String shop_add_cart(Model model, HttpSession session, @RequestParam int cart_qty,
+			                                                      @RequestParam String cart_product_size, 
+			                                                      @RequestParam String product_no) {
+	
+		String msg= "";
+		String sMemberId = (String) session.getAttribute("sMemberId");
+
+		try {	
+
+			if(sMemberId == null || sMemberId == "") {
+				msg = "false";
+			}	
+			int duplicateCount = cartService.inspectDuplicateCart(sMemberId, product_no, cart_product_size);
+			if(duplicateCount!=0) {
+				int update_qty = cartService.selectCartOne(sMemberId, product_no, cart_product_size).getCart_qty()+cart_qty;
+				int cart_no = cartService.selectCartOne(sMemberId, product_no, cart_product_size).getCart_no();
+				Cart updateCart = new Cart(cart_no, update_qty, 5000, cart_product_size, sMemberId, product_no);
+				cartService.updateCart(updateCart);
+			}else {
+				Cart cart = new Cart(-9999, cart_qty, 5000, cart_product_size, sMemberId, product_no);
+				cartService.insertCart(cart);
+			}
+			msg = "true";
+			//-1과 5000은 임의의 수일 뿐. 쿼리문상 자동으로 계산된 값으로 입력됨
+		} catch (Exception e) {
+			e.printStackTrace();
+			msg="false";
+		}
+		return msg;
 	}
 
 }
