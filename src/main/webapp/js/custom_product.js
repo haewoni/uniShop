@@ -8,7 +8,6 @@ $(function(){
 		e.preventDefault();
 		});
 	
-	
 	$('.add_wishlist_button').click(function(e){
 		alert('test');
 		console.log($(e.target).attr('product_no'));

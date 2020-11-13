@@ -61,19 +61,17 @@
           <div class="grid-sizer"></div>
 			
 		<!-- Product-->
-		
-          <div class="grid-item">
-            <div class="product-card">
-	            <c:forEach  items="${productList}" 
+		<c:forEach  items="${productList}" 
 						var="product"  
 						begin="0"  
 						step="1" 
-						end="${productList.size()-8}"
+						end="${productList.size()}"
 						varStatus="status">
-							<form id="product_detail_cart" name= "product_detail_cart" method="post">
-		            		<input type="hidden" name="product_no" value="${product.product_no}">
+          <div class="grid-item">
+            <div class="product-card">
+	            
 		              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
-		              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
+		              	<img src="IMAGE/${product.product_image_1}" width=100, height=100 alt="Product">
 		              </a>
 	              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
 	              <h4 class="product-price">
@@ -81,238 +79,20 @@
 	              </h4>
 	              
 	              <div class="product-buttons">
-	                 <button class="btn btn-outline-secondary btn-sm btn-wishlist" 
-	                		 data-toggle="tooltip" 
-	                		 title="" 
-	                		 data-original-title="Whishlist">
-	                		<i class="icon-heart" id="add_wishlist_button"></i>
-	                 </button>
-	                <a href="shop_product_detail?product_no=${product.product_no}">
-	                	<button class="btn btn-outline-primary btn-sm">detail</button>	
-	                </a>
-	              </div>
-	              </form>
+	                	<button class="btn btn-outline-primary btn-sm add_wishlist_button" product_no="${product.product_no}" type="button">
+	                		<i class="icon-heart" product_no="${product.product_no}"></i>
+	                	</button>
+               		<a href="shop_product_detail?product_no=${product.product_no}">
+                		<button class="btn btn-outline-primary btn-sm">detail</button>	
+                	</a>
+               		 
+                  </div>
+            </div>
+          </div>
 	            </c:forEach>  
-            </div>
-          </div>
          
           
          
-          <!-- Product -->
-          <div class="grid-item">
-            <div class="product-card">
-	            <c:forEach  items="${productList}" 
-						var="product"  
-						begin="1"  
-						step="1" 
-						end="${productList.size()-7}"
-						varStatus="status">
-							<form id="product_detail_cart1" name= "product_detail_cart1" method="post">
-		            		<input type="hidden" name="product_no" value="${product.product_no}">
-		              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
-		              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
-		              </a>
-	              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
-	              <h4 class="product-price">
-	              	<span style="size: 1px">$ : ${product.product_price}</span>
-	              </h4>
-	              
-	              <div class="product-buttons">
-	                 <button class="btn btn-outline-secondary btn-sm btn-wishlist" 
-	                		 data-toggle="tooltip" 
-	                		 title="" 
-	                		 data-original-title="Whishlist">
-	                		<i class="icon-heart" id="add_wishlist_button1"></i>
-	                 </button>
-	                <a href="shop_product_detail?product_no=${product.product_no}">
-	                	<button class="btn btn-outline-primary btn-sm">detail</button>	
-	                </a>
-	              </div>
-	              </form>
-	            </c:forEach>  
-            </div>
-          </div>
-         
-          
-          <!-- Product -->
-          <div class="grid-item">
-            <div class="product-card">
-            <c:forEach  items="${productList}" 
-					var="product"  
-					begin="2"  
-					step="1" 
-					end="${productList.size()-6}"
-					varStatus="status">
-							
-	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
-	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
-	              </a>
-              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
-              <h4 class="product-price">
-              	<span style="size: 1px">$ : ${product.product_price}</span>
-              </h4>
-              <div class="product-buttons">
-                <button class="btn btn-outline-secondary btn-sm btn-wishlist" 
-                		data-toggle="tooltip" title="" data-original-title="Whishlist">
-                		<i class="icon-heart"
-                		id="add_wishlist_button"></i></button>
-                <a href="shop_product_detail?product_no=${product.product_no}">
-                	<button class="btn btn-outline-primary btn-sm">detail</button>	
-                </a>
-              </div>
-            </c:forEach>  
-            </div>
-          </div>
-
-          <!-- Product -->
-          <div class="grid-item">
-            <div class="product-card">
-            <c:forEach  items="${productList}" 
-					var="product"  
-					begin="3"  
-					step="1" 
-					end="${productList.size()-5}"
-					varStatus="status">
-	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
-	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
-	              </a>
-              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
-              <h4 class="product-price">
-              	<span style="size: 1px">$ : ${product.product_price}</span>
-              </h4>
-              <div class="product-buttons">
-                <a href="add_wishlist_action?product_no=${product.product_no}">
-	                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
-	                	<i class="icon-heart"></i>
-	                </button>
-                </a>
-                <a href="shop_product_detail?product_no=${product.product_no}">
-                	<button class="btn btn-outline-primary btn-sm">detail</button>	
-                </a>
-              </div>
-            </c:forEach>  
-            </div>
-          </div>
-          
-          <!-- Product -->
-          <div class="grid-item">
-            <div class="product-card">
-            <c:forEach  items="${productList}" 
-					var="product"  
-					begin="4"  
-					step="1" 
-					end="${productList.size()-4}"
-					varStatus="status">
-	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
-	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
-	              </a>
-              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
-              <h4 class="product-price">
-              	<span style="size: 1px">$ : ${product.product_price}</span>
-              </h4>
-              <div class="product-buttons">
-                <a href="add_wishlist_action?product_no=${product.product_no}">
-	                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
-	                	<i class="icon-heart"></i>
-	                </button>
-                </a>
-                <a href="shop_product_detail?product_no=${product.product_no}">
-                	<button class="btn btn-outline-primary btn-sm">detail</button>	
-                </a>
-              </div>
-            </c:forEach>  
-            </div>
-          </div>
-          
-          <!-- Product -->
-          <div class="grid-item">
-            <div class="product-card">
-            <c:forEach  items="${productList}" 
-					var="product"  
-					begin="5"  
-					step="1" 
-					end="${productList.size()-3}"
-					varStatus="status">
-	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
-	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
-	              </a>
-              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
-              <h4 class="product-price">
-              	<span style="size: 1px">$ : ${product.product_price}</span>
-              </h4>
-              <div class="product-buttons">
-                <a href="add_wishlist_action?product_no=${product.product_no}">
-	                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
-	                	<i class="icon-heart"></i>
-	                </button>
-                </a>
-                <a href="shop_product_detail?product_no=${product.product_no}">
-                	<button class="btn btn-outline-primary btn-sm">detail</button>	
-                </a>
-              </div>
-            </c:forEach>  
-            </div>
-          </div>
-          
-          <!-- Product -->
-          <div class="grid-item">
-            <div class="product-card">
-            <c:forEach  items="${productList}" 
-					var="product"  
-					begin="6"  
-					step="1" 
-					end="${productList.size()-2}"
-					varStatus="status">
-	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
-	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
-	              </a>
-              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
-              <h4 class="product-price">
-              	<span style="size: 1px">$ : ${product.product_price}</span>
-              </h4>
-              <div class="product-buttons">
-                <a href="add_wishlist_action?product_no=${product.product_no}">
-	                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
-	                	<i class="icon-heart"></i>
-	                </button>
-                </a>
-                <a href="shop_product_detail?product_no=${product.product_no}">
-                	<button class="btn btn-outline-primary btn-sm">detail</button>	
-                </a>
-              </div>
-            </c:forEach>  
-            </div>
-          </div>
-          
-          <!-- Product -->
-          <div class="grid-item">
-            <div class="product-card">
-            <c:forEach  items="${productList}" 
-					var="product"  
-					begin="7"  
-					step="1" 
-					end="${productList.size()-1}"
-					varStatus="status">
-	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
-	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100 alt="Product">
-	              </a>
-              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
-              <h4 class="product-price">
-              	<span style="size: 1px">$ : ${product.product_price}</span>
-              </h4>
-              <div class="product-buttons">
-                <a href="add_wishlist_action?product_no=${product.product_no}">
-	                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
-	                	<i class="icon-heart"></i>
-	                </button>
-                </a>
-                <a href="shop_product_detail?product_no=${product.product_no}">
-                	<button class="btn btn-outline-primary btn-sm">detail</button>	
-                </a>
-              </div>
-            </c:forEach>  
-            </div>
-          </div>
           
          
           
