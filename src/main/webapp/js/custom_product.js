@@ -9,14 +9,19 @@ $(function(){
 		});
 	
 	
-
-	$('#add_wishlist_button').click(function(e){
-		alert('2');
-		document.product_detail_cart.method='POST';
-		document.product_detail_cart.action='shop_add_wishlist_action';
-		document.product_detail_cart.submit();
-		e.preventDefault();
+	$('.add_wishlist_button').click(function(e){
+		alert('test');
+		console.log($(e.target).attr('product_no'));
+		product_no=$(e.target).attr('product_no')
+		param='product_no='+product_no
+		$.ajax({
+		url:'shop_add_wishlist_action',
+		data:param,	
+		method:'POST',
 		});
+		alert('등록되었습니다');
+		e.preventDefault();
+	});
 	
 
 
