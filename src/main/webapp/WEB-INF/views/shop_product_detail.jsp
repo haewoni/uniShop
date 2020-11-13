@@ -121,8 +121,8 @@
         <div class="row padding-top-3x mb-3">
           <div class="col-lg-10 offset-lg-1">
             <ul class="nav nav-tabs" role="tablist">
-              <li class="nav-item"><a class="nav-link active" href="#description" data-toggle="tab" role="tab">Description</a></li>
-              <li class="nav-item"><a class="nav-link" href="#reviews" data-toggle="tab" role="tab">Reviews (3)</a></li>
+              <li class="nav-item"><a class="nav-link active" href="#description" data-toggle="tab" role="tab" product_no="${product.product_no}">Description</a></li>
+              <li class="nav-item"><a class="nav-link" href="#reviews" data-toggle="tab" role="tab" product_no="${product.product_no}">Reviews (3)</a></li>
             </ul>
             <div class="tab-content">
               <div class="tab-pane fade show active" id="description" role="tabpanel">
@@ -150,7 +150,7 @@
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="reviews" role="tabpanel">
+              <div class="tab-pane fade" data-target="reviews" id="reviews" role="tabpanel">
                 <!-- Review
                 <div class="comment">
                   <div class="comment-author-ava"><img src="img/reviews/01.jpg" alt="Review author"></div>

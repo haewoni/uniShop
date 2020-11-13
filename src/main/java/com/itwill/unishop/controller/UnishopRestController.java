@@ -60,16 +60,11 @@ public class UnishopRestController {
 	
 	/**********제품 리뷰***********/
 	@RequestMapping("/rest_shop_product_review_list")
-	public String shop_product_review(Model model, @RequestParam String product_no) {
-		String forwardPath = "";
-		try {
-			ArrayList<Review> reviewList = reviewService.selectReviewByNo(product_no);
-			model.addAttribute("reviewList", reviewList);
-			forwardPath = "shop_product_review_list";
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return forwardPath;
+	public List<Review> shop_product_review(@RequestParam String product_no) throws Exception{
+		
+		List<Review> reviewList = reviewService.selectReviewByNo(product_no);
+
+		return reviewList;
 	}
 	/*************************************리뷰를 남겨보자***************************************/
 	@RequestMapping(value = "/rest_shop_product_review_action",method = RequestMethod.GET)
