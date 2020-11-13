@@ -130,8 +130,7 @@
 				</a>
 
 				<a  href="#">
-					<button id="rest_add_cart_button" class="btn btn-outline-primary btn-sm" product_no="${product.product_no}" >Add to Cart[ajax]</button>
-					<button id="add_cart_button" class="btn btn-outline-primary btn-sm" product_no="${product.product_no}" >Add to Cart[page]</button>
+					<button id="rest_add_cart_button" class="btn btn-outline-primary btn-sm" product_no="${product.product_no}" >Add to Cart</button>
 				</a>
 				
               </div>

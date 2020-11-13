@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 	<jsp:include page="common_top.jsp"/>
     <!-- Shop Filters Modal-->
     <div class="modal fade" id="modalShopFilters" tabindex="-1">
@@ -218,7 +219,8 @@
                   </a>
                   <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
                   <h4 class="product-price">
-                    <del>$ : ${product.product_price}</del>
+                    <!--<del>$ : ${product.product_price}</del>-->
+                    <span class="h4 d-block1"><fmt:formatNumber value="${product.product_price}" pattern="###,###,###"/>원</span>
                   </h4>
                   <div class="product-buttons">
                     <a href="shop_add_wishlist_action?product_no=${product.product_no}">
@@ -261,44 +263,62 @@
               <section class="widget widget-categories">
                 <h3 class="widget-title">Shop Categories</h3>
                 <ul>
-                  <li class="has-children expanded"><a href="#">Shoes</a><span>(1138)</span>
+                  <li class="has-children expanded"><a href="#">Women's</a><span>(1138)</span>
                     <ul>
-                      <li><a href="#">Women's</a><span>(508)</span>
+                      <li><a href="#">Top</a><span>(508)</span>
                         <ul>
                           <li><a href="#">Sneakers</a></li>
                           <li><a href="#">Heels</a></li>
                           <li><a href="#">Loafers</a></li>
                           <li><a href="#">Sandals</a></li>
+                          
+                          <li><a href="shop_female_outer_list">여성 아우터</a></li>
+                          <li><a href="shop_female_cardigan_list">여성 가디건</a></li>
+                          <li><a href="shop_female_tshirt_list">여성 티셔츠</a></li>
                         </ul>
                       </li>
-                      <li><a href="#">Men's</a><span>(423)</span>
+                      <li><a href="#">Bottom</a><span>(423)</span>
                         <ul>
                           <li><a href="#">Boots</a></li>
                           <li><a href="#">Oxfords</a></li>
                           <li><a href="#">Loafers</a></li>
                           <li><a href="#">Sandals</a></li>
+                          
+                          <li><a href="shop_female_longpants_list">여성 긴바지</a></li>
+                          <li><a href="shop_female_skirt_list">여성 스커트</a></li>
                         </ul>
                       </li>
                       <li><a href="#">Boy's Shoes</a><span>(97)</span></li>
                       <li><a href="#">Girl's Shoes</a><span>(110)</span></li>
                     </ul>
                   </li>
-                  <li class="has-children"><a href="#">Clothing</a><span>(2356)</span>
+                  <li class="has-children"><a href="#">Men's</a><span>(2356)</span>
                     <ul>
                       <li><a href="#">Women's</a><span>(1032)</span>
+                      
+                      <li><a href="#">Top</a><span>(1032)</span>
                         <ul>
                           <li><a href="#">Dresses</a></li>
                           <li><a href="#">Shirts &amp; Tops</a></li>
                           <li><a href="#">Swimwear</a></li>
                           <li><a href="#">Shorts</a></li>
+                          
+                          <li><a href="shop_male_outer_list">남성 아우터</a></li>
+                          <li><a href="shop_male_cardigan_list">남성 가디건</a></li>
+                          <li><a href="shop_male_tshirt_list">남성 티셔츠</a></li>
                         </ul>
                       </li>
                       <li><a href="#">Men's</a><span>(937)</span>
+                      
+                      <li><a href="#">Bottom</a><span>(937)</span>
                         <ul>
                           <li><a href="#">Shirts &amp; Tops</a></li>
                           <li><a href="#">Shorts</a></li>
                           <li><a href="#">Swimwear</a></li>
                           <li><a href="#">Pants</a></li>
+                          
+                          <li><a href="shop_male_longpants_list">남성 긴바지</a></li>
+                          <li><a href="shop_male_shortpants_list">남성 반바지</a></li>
                         </ul>
                       </li>
                       <li><a href="#">Kid's Clothing</a><span>(386)</span></li>
@@ -322,28 +342,6 @@
                     </ul>
                   </li>
                 </ul>
-              </section>
-              <!-- Widget Price Range-->
-              <section class="widget widget-categories">
-                <h3 class="widget-title">Price Range</h3>
-                <form class="price-range-slider" method="post" data-start-min="250" data-start-max="650" data-min="0" data-max="1000" data-step="1">
-                  <div class="ui-range-slider"></div>
-                  <footer class="ui-range-slider-footer">
-                    <div class="column">
-                      <button class="btn btn-outline-primary btn-sm" type="submit">Filter</button>
-                    </div>
-                    <div class="column">
-                      <div class="ui-range-values">
-                        <div class="ui-range-value-min">$<span></span>
-                          <input type="hidden">
-                        </div>&nbsp;-&nbsp;
-                        <div class="ui-range-value-max">$<span></span>
-                          <input type="hidden">
-                        </div>
-                      </div>
-                    </div>
-                  </footer>
-                </form>
               </section>
               <!-- Widget Brand Filter-->
               <section class="widget">
@@ -411,5 +409,4 @@
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
   </body>
->>>>>>> refs/heads/jongho
 </html>
