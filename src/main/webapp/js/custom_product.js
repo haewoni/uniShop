@@ -57,14 +57,42 @@ $(function(){
 				//
 				$('#orderDetails table > tbody').html(html)
  */
-	$(function(){
+$(function(){
 		$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-			  e.target // newly activated tab
-			  e.relatedTarget // previous active tab
+			 //e.target // newly activated tab
 			console.log(e.target);
-			});
-		
+			  e.relatedTarget // previous active tab
+			  review_no=$(e.relatedTarget).text();
+			  param='review_no='+review_no
+			  $.ajax({
+				url:'shop_product_review_list',
+			data:param,
+			method:'POST',
+			dataType:'json',
+			success:function(reivewArray){
+				html="";
+				$.each(reivewArray,function(i,review){
+					console.log(review.review_no+","+review.review_name)
+					html+="<div class=\"comment\">";
+						html+="<div class=\"comment-author-ava\"><img src=\"img/reviews/02.jpg\" alt=\"Review author\"></div>";
+						html+="<div class=\"comment-body\">";
+							html+="<div class=\"comment-header d-flex flex-wrap justify-content-between\">";
+								html+="<h4 class=\"comment-title\">"+review.review_title+"</h4>";
+								html+="<div class=\"mb-2\">";
+									html+="<div class=\"rating-stars\"><i class=\"icon-star filled\"></i><i class=\"icon-star filled\"></i><i class=\"icon-star filled\"></i><i class=\"icon-star filled\"></i><i class=\"icon-star filled\"></i>";
+									html+="</div>";
+								html+="</div>";
+							html+="</div>";
+							html+="<p class=\"comment-text\">"+review.review_content+"</p>";
+							html+="<div class=\"comment-footer\"><span class=\"comment-meta\">"+review.review_name+"</span></div>";
+						html+=" </div>";
+					html+="</div>";
+				});
+			}
+		});
 	});
+		
+});
 	
 
 

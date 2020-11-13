@@ -14,7 +14,7 @@ $(function(){
 		param='jumun_no='+jumun_no 
 		//alert(param)
 		$.ajax({
-            url:'jumun_detail',
+            url:'rest_jumun_detail',
 			data:param,
 			method:'GET',
 			dataType:'json',
@@ -57,7 +57,7 @@ $('#orderDetails').on('shown.bs.modal',function(e){
 		param='delivery_no='+delivery_no 
 		//alert(param)
 		$.ajax({
-            url:'jumun_delivery_detail',
+            url:'rest_jumun_delivery_detail',
 			data:param,
 			method:'GET',
 			dataType:'json',

@@ -157,8 +157,6 @@ public class ProductController {
 		return forwardPath;
 	}
 
-	
-	
 	/**********제품 리뷰***********/
 	@RequestMapping("/shop_product_review_list")
 	public String shop_product_review(Model model, @RequestParam String product_no) {
@@ -196,6 +194,7 @@ public class ProductController {
 			//forwardPath="error_handle";
 			e.printStackTrace();
 		}
+
 		return forwardPath;
 	}
 
