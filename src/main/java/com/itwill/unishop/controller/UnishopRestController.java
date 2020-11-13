@@ -1,15 +1,11 @@
 package com.itwill.unishop.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-
-import org.springframework.web.bind.annotation.ModelAttribute;
-
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,10 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.itwill.unishop.domain.Cart;
 import com.itwill.unishop.domain.Delivery;
+import com.itwill.unishop.domain.Jumun;
 import com.itwill.unishop.domain.Jumun_Detail;
-import com.itwill.unishop.domain.Product;
 import com.itwill.unishop.domain.Member;
-import com.itwill.unishop.domain.Question;
+import com.itwill.unishop.domain.Product;
 import com.itwill.unishop.domain.Review;
 import com.itwill.unishop.service.CartService;
 import com.itwill.unishop.service.DeliveryService;
@@ -137,12 +133,7 @@ public class UnishopRestController {
 		return memberService.selectMemberById(sMemberId);
 	}
 
-	/*************** 체크아웃-주소폼 액션 - GET *****************/
-	@RequestMapping(value = "/rest_jumun_address_action", method = RequestMethod.GET)
-	public void jumun_address_action_GET() {
-	}
-
-	/*************** 체크아웃-주소폼 액션 - POST *****************/
+	/*************** 체크아웃-주소폼 액션 *****************/
 	@RequestMapping(value = "/rest_jumun_address_action", method = RequestMethod.POST)
 	public String jumun_address_action_POST(HttpSession session, @ModelAttribute Member member) {
 		Member loginMember = (Member) session.getAttribute("loginMember");
@@ -165,5 +156,20 @@ public class UnishopRestController {
 	public String jumun_delivery_form() {
 		return "true";
 	}
+	
+	/*************** 체크아웃-배송 폼 액션 *****************/
+	@RequestMapping(value = "/rest_jumun_delivery_action", method = RequestMethod.POST)
+	   public String jumun_delivery_action_POST(HttpSession session, @RequestParam String deliveryStr) {
+	      Jumun createJumun = new Jumun();
+	      if(deliveryStr.equalsIgnoreCase("일반")) {
+	         createJumun.setDelivery_no("GEN");
+	         session.setAttribute("delivery_fee", 3000);
+	      }else {
+	         createJumun.setDelivery_no("EX");
+	         session.setAttribute("delivery_fee", 6000);
+	      }
+	      session.setAttribute("createJumun", createJumun);
+	      return "true";
+	   }
 
 }
