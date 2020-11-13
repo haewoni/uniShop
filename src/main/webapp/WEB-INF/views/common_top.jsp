@@ -314,33 +314,26 @@
       <!-- Main Navigation-->
       <nav class="site-menu">
         <ul>
-          <li class="has-megamenu"><a href="unishop_main"><span>Home</span></a>
-            <ul class="mega-menu">
-              <li><a class="d-block img-thumbnail text-center navi-link" href="index.html"><img alt="Featured Products Slider" src="img/mega-menu-home/01.jpg">
-                  <h6 class="mt-3">Featured Products Slider</h6></a></li>
-              <li><a class="d-block img-thumbnail text-center navi-link" href="home-featured-categories.html"><img alt="Featured Categories" src="img/mega-menu-home/02.jpg">
-                  <h6 class="mt-3">Featured Categories</h6></a></li>
-              <li><a class="d-block img-thumbnail text-center navi-link" href="home-collection-showcase.html"><img alt="Products Collection Showcase" src="img/mega-menu-home/03.jpg">
-                  <h6 class="mt-3">Products Collection Showcase</h6></a></li>
-              <li><a class="d-block img-thumbnail text-center navi-link" href="home-dark-header.html"><img alt="Dark Header" src="img/mega-menu-home/04.jpg">
-                  <h6 class="mt-3">Dark Header</h6></a></li>
-            </ul>
-          </li>
+          <li class="has-megamenu"><a href="unishop_main"><span>Home</span></a></li>
           <li><a href="shop_main"><span>Shop</span></a>
             <ul class="sub-menu">
                 <li><a href="shop-categories.html">Shop Categories</a></li>
-              <li class="has-children"><a href="shop-grid-ls.html"><span>Shop Grid</span></a>
+              <li class="has-children"><a href="shop-grid-ls.html"><span>여성</span></a>
                 <ul class="sub-menu">
-                    <li><a href="shop-grid-ls.html">Grid Left Sidebar</a></li>
-                    <li><a href="shop-grid-rs.html">Grid Right Sidebar</a></li>
-                    <li><a href="shop-grid-ns.html">Grid No Sidebar</a></li>
+                    <li><a href="shop_female_outer_list">여성 아우터</a></li>
+                    <li><a href="shop_female_cardigan_list">여성 가디건</a></li>
+                    <li><a href="shop_female_tshirt_list">여성 티셔츠</a></li>
+                    <li><a href="shop_female_longpants_list">여성 긴바지</a></li>
+                    <li><a href="shop_female_skirt_list">여성 스커트</a></li>
                 </ul>
               </li>
-              <li class="has-children"><a href="shop-list-ls.html"><span>Shop List</span></a>
+              <li class="has-children"><a href="shop-list-ls.html"><span>남성</span></a>
                 <ul class="sub-menu">
-                    <li><a href="shop-list-ls.html">List Left Sidebar</a></li>
-                    <li><a href="shop-list-rs.html">List Right Sidebar</a></li>
-                    <li><a href="shop-list-ns.html">List No Sidebar</a></li>
+                    <li><a href="shop_male_outer_list">남성 아우터</a></li>
+                    <li><a href="shop_male_cardigan_list">남성 가디건</a></li>
+                    <li><a href="shop_male_tshirt_list">남성 티셔츠</a></li>
+                    <li><a href="shop_male_longpants_list">남성 긴바지</a></li>
+                    <li><a href="shop_male_shortpants_list">남성 반바지</a></li>
                 </ul>
               </li>
                 <li><a href="shop-single.html">Single Product</a></li>
