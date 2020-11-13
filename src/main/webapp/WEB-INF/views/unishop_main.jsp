@@ -53,6 +53,7 @@
         </div>
       </div>
        <!-- Featured Products (Grid)-->
+       
       <section class="container padding-top-3x padding-bottom-3x">
         <h3 class="text-center mb-30">Featured Products</h3>
         <div class="isotope-grid cols-4 mb-2">
@@ -60,64 +61,78 @@
           <div class="grid-sizer"></div>
 			
 		<!-- Product-->
+		
           <div class="grid-item">
             <div class="product-card">
-            <c:forEach  items="${productList}" 
-					var="product"  
-					begin="0"  
-					step="1" 
-					end="${productList.size()-8}"
-					varStatus="status">
-	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
-	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
-	              </a>
-              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
-              <h4 class="product-price">
-              	<span style="size: 1px">$ : ${product.product_price}</span>
-              </h4>
-              <div class="product-buttons">
-                <a href="add_wishlist_action?product_no=${product.product_no}">
-                	<button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
-                		<i class="icon-heart"></i>
-                	</button>
-                </a>
-                <a href="shop_product_detail?product_no=${product.product_no}">
-                	<button class="btn btn-outline-primary btn-sm">detail</button>	
-                </a>
-              </div>
-            </c:forEach>  
+	            <c:forEach  items="${productList}" 
+						var="product"  
+						begin="0"  
+						step="1" 
+						end="${productList.size()-8}"
+						varStatus="status">
+							<form id="product_detail_cart" name= "product_detail_cart" method="post">
+		            		<input type="hidden" name="product_no" value="${product.product_no}">
+		              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
+		              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
+		              </a>
+	              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
+	              <h4 class="product-price">
+	              	<span style="size: 1px">$ : ${product.product_price}</span>
+	              </h4>
+	              
+	              <div class="product-buttons">
+	                 <button class="btn btn-outline-secondary btn-sm btn-wishlist" 
+	                		 data-toggle="tooltip" 
+	                		 title="" 
+	                		 data-original-title="Whishlist">
+	                		<i class="icon-heart" id="add_wishlist_button"></i>
+	                 </button>
+	                <a href="shop_product_detail?product_no=${product.product_no}">
+	                	<button class="btn btn-outline-primary btn-sm">detail</button>	
+	                </a>
+	              </div>
+	              </form>
+	            </c:forEach>  
             </div>
           </div>
+         
           
+         
           <!-- Product -->
           <div class="grid-item">
             <div class="product-card">
-            <c:forEach  items="${productList}" 
-					var="product"  
-					begin="1"  
-					step="1" 
-					end="${productList.size()-7}"
-					varStatus="status">
-	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
-	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
-	              </a>
-              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
-              <h4 class="product-price">
-              	<span style="size: 1px">$ : ${product.product_price}</span>
-              </h4>
-              <div class="product-buttons">
-                <a href="add_wishlist_action?product_no=${product.product_no}">
-	                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
-	                	<i class="icon-heart"></i>
-	                </button>
-                </a>
-                <a href="shop_product_detail?product_no=${product.product_no}">
-                	<button class="btn btn-outline-primary btn-sm">detail</button>	
-                </a>
-              </div>
-            </c:forEach>  
+	            <c:forEach  items="${productList}" 
+						var="product"  
+						begin="1"  
+						step="1" 
+						end="${productList.size()-7}"
+						varStatus="status">
+							<form id="product_detail_cart1" name= "product_detail_cart1" method="post">
+		            		<input type="hidden" name="product_no" value="${product.product_no}">
+		              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
+		              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
+		              </a>
+	              <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
+	              <h4 class="product-price">
+	              	<span style="size: 1px">$ : ${product.product_price}</span>
+	              </h4>
+	              
+	              <div class="product-buttons">
+	                 <button class="btn btn-outline-secondary btn-sm btn-wishlist" 
+	                		 data-toggle="tooltip" 
+	                		 title="" 
+	                		 data-original-title="Whishlist">
+	                		<i class="icon-heart" id="add_wishlist_button1"></i>
+	                 </button>
+	                <a href="shop_product_detail?product_no=${product.product_no}">
+	                	<button class="btn btn-outline-primary btn-sm">detail</button>	
+	                </a>
+	              </div>
+	              </form>
+	            </c:forEach>  
             </div>
           </div>
+         
           
           <!-- Product -->
           <div class="grid-item">
@@ -128,6 +143,7 @@
 					step="1" 
 					end="${productList.size()-6}"
 					varStatus="status">
+							
 	              <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
 	              	<img src="IMAGE/${product.product_image_1}" width=100, height=100" alt="Product">
 	              </a>
@@ -136,11 +152,10 @@
               	<span style="size: 1px">$ : ${product.product_price}</span>
               </h4>
               <div class="product-buttons">
-                <a href="add_wishlist_action?product_no=${product.product_no}">
-	                <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
-	                	<i class="icon-heart"></i>
-	                </button>
-                </a>
+                <button class="btn btn-outline-secondary btn-sm btn-wishlist" 
+                		data-toggle="tooltip" title="" data-original-title="Whishlist">
+                		<i class="icon-heart"
+                		id="add_wishlist_button"></i></button>
                 <a href="shop_product_detail?product_no=${product.product_no}">
                 	<button class="btn btn-outline-primary btn-sm">detail</button>	
                 </a>
@@ -299,6 +314,8 @@
             </div>
           </div>
           
+         
+          
         </div>
         <div class="text-center"><a class="btn btn-outline-secondary margin-top-none" href=product_All_List>View All Products</a></div>
       </section>
@@ -319,23 +336,23 @@
               <h3 class="widget-title">Top Sellers</h3>
               <!-- Entry-->
               <div class="entry">
-                <div class="entry-thumb"><a href="shop_product_detail?product_no=429067"><img src="IMAGE/429067_1.png" alt="Product"></a></div>
+                <div class="entry-thumb"><a href="shop_product_detail?product_no=431466"><img src="IMAGE/431466_1.png" alt="Product"></a></div>
                 <div class="entry-content">
-                  <h4 class="entry-title"><a href="shop_product_detail?product_no=429067">EFM터틀넥스웨터(긴팔)</a></h4><span class="entry-meta">$155.00</span>
+                  <h4 class="entry-title"><a href="shop_product_detail?product_no=431466">U새틴미디스커트</a></h4><span class="entry-meta">$39900</span>
                 </div>
               </div>
               <!-- Entry-->
               <div class="entry">
-                <div class="entry-thumb"><a href="shop_product_detail?product_no=432324"><img src="IMAGE/432324_1.png" alt="Product"></a></div>
+                <div class="entry-thumb"><a href="shop_product_detail?product_no=430501"><img src="IMAGE/430501_1.png" alt="Product"></a></div>
                 <div class="entry-content">
-                  <h4 class="entry-title"><a href="shop_product_detail?product_no=432324">JWA로우게이지크루넥스웨터(긴팔)</a></h4><span class="entry-meta">$49.50</span>
+                  <h4 class="entry-title"><a href="shop_product_detail?product_no=430501">트위스트플리츠롱스커트</a></h4><span class="entry-meta">$39900</span>
                 </div>
               </div>
               <!-- Entry-->
               <div class="entry">
-                <div class="entry-thumb"><a href="shop_product_detail?product_no=429461"><img src="IMAGE/429461_1.png" alt="Product"></a></div>
+                <div class="entry-thumb"><a href="shop_product_detail?product_no=430134"><img src="IMAGE/430134_1.png" alt="Product"></a></div>
                 <div class="entry-content">
-                  <h4 class="entry-title"><a href="shop_product_detail?product_no=429461">하이브리드다운코트</a></h4><span class="entry-meta">$29.99</span>
+                  <h4 class="entry-title"><a href="shop_product_detail?product_no=430134">슬라우치테이퍼드앵클진</a></h4><span class="entry-meta">$49900</span>
                 </div>
               </div><a class="btn btn-outline-secondary btn-sm mb-0" href="product_All_List">View More</a>
             </div>
@@ -345,23 +362,23 @@
               <h3 class="widget-title">New Arrivals</h3>
               <!-- Entry-->
               <div class="entry">
-                <div class="entry-thumb"><a href="shop_product_detail?product_no=432710"><img src="IMAGE/432710_1.png" alt="Product"></a></div>
+                <div class="entry-thumb"><a href="shop_product_detail?product_no=431463"><img src="IMAGE/431463_1.png" alt="Product"></a></div>
                 <div class="entry-content">
-                  <h4 class="entry-title"><a href="shop_product_detail?product_no=432710">JWA스텐칼라코트</a></h4><span class="entry-meta">$49.99</span>
+                  <h4 class="entry-title"><a href="shop_product_detail?product_no=431463">U플레어진</a></h4><span class="entry-meta">$49900</span>
                 </div>
               </div>
               <!-- Entry-->
               <div class="entry">
-                <div class="entry-thumb"><a href="shop_product_detail?product_no=428856"><img src="IMAGE/428856_1.png" alt="Product"></a></div>
+                <div class="entry-thumb"><a href="shop_product_detail?product_no=429204"><img src="IMAGE/429204_1.png" alt="Product"></a></div>
                 <div class="entry-content">
-                  <h4 class="entry-title"><a href="shop_product_detail?product_no=428856">EFM V넥스웨터(긴팔)</a></h4><span class="entry-meta">$200.00</span>
+                  <h4 class="entry-title"><a href="shop_product_detail?product_no=429204">하이웨이스트기모와이드팬츠</a></h4><span class="entry-meta">$39900</span>
                 </div>
               </div>
               <!-- Entry-->
               <div class="entry">
-                <div class="entry-thumb"><a href="shop_product_detail?product_no=428867"><img src="IMAGE/428867_1.png" alt="Product"></a></div>
+                <div class="entry-thumb"><a href="shop_product_detail?product_no=418249"><img src="IMAGE/418249_1.png" alt="Product"></a></div>
                 <div class="entry-content">
-                  <h4 class="entry-title"><a href="shop_product_detail?product_no=428867">수플레얀하이넥스웨터(긴팔)</a></h4><span class="entry-meta">$145.00</span>
+                  <h4 class="entry-title"><a href="shop_product_detail?product_no=418249">보아스웨트팬츠</a></h4><span class="entry-meta">$29900</span>
                 </div>
               </div><a class="btn btn-outline-secondary btn-sm mb-0" href="product_All_List">View More</a>
             </div>
@@ -371,23 +388,23 @@
               <h3 class="widget-title">Best Rated</h3>
               <!-- Entry-->
               <div class="entry">
-                <div class="entry-thumb"><a href="shop_product_detail?product_no=430929"><img src="IMAGE/430929_1.png" alt="Product"></a></div>
+                <div class="entry-thumb"><a href="shop_product_detail?product_no=430460"><img src="IMAGE/430460_1.png" alt="Product"></a></div>
                 <div class="entry-content">
-                  <h4 class="entry-title"><a href="shop_product_detail?product_no=430929">U메리노블렌드V넥가디건(긴팔)</a></h4><span class="entry-meta">$65.00</span>
+                  <h4 class="entry-title"><a href="shop_product_detail?product_no=430460">스키니플레어앵클진</a></h4><span class="entry-meta">$49900</span>
                 </div>
               </div>
               <!-- Entry-->
               <div class="entry">
-                <div class="entry-thumb"><a href="shop_product_detail?product_no=432729"><img src="IMAGE/432729_1.png" alt="Product"></a></div>
+                <div class="entry-thumb"><a href="shop_product_detail?product_no=421379"><img src="IMAGE/421379_1.png" alt="Product"></a></div>
                 <div class="entry-content">
-                  <h4 class="entry-title"><a href="shop_product_detail?product_no=432729">U메리노블렌드크루넥스웨터(긴팔)</a></h4><span class="entry-meta">$36.99</span>
+                  <h4 class="entry-title"><a href="shop_product_detail?product_no=421379">하이라이즈스키니앵클진</a></h4><span class="entry-meta">$39900</span>
                 </div>
               </div>
               <!-- Entry-->
               <div class="entry">
-                <div class="entry-thumb"><a href="shop-single.html"><img src="img/shop/widget/10.jpg" alt="Product"></a></div>
+                <div class="entry-thumb"><a href="shop_product_detail?product_no=429212"><img src="IMAGE/429212_1.png" alt="Product"></a></div>
                 <div class="entry-content">
-                  <h4 class="entry-title"><a href="shop-single.html">Off the Shoulder Top</a></h4><span class="entry-meta">$128.00</span>
+                  <h4 class="entry-title"><a href="shop_product_detail?product_no=429212">개더롱스커트</a></h4><span class="entry-meta">$29900</span>
                 </div>
               </div><a class="btn btn-outline-secondary btn-sm mb-0" href="product_All_List">View More</a>
             </div>
@@ -431,5 +448,6 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/custom_product.js"></script>
   </body>
 </html>

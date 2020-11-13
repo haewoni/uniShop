@@ -209,28 +209,32 @@
 				step="1" 
 				end="${productList.size()}"
 				varStatus="status">
-			 
+			 		
               <!-- Product-->
               <div class="grid-item">
                 <div class="product-card">
+                <form id="product_detail_cart" name= "product_detail_cart" method="post">
+		        <input type="hidden" name="product_no" value="${product.product_no}">
                   <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
                   	<img src="IMAGE/${product.product_image_1}" alt="Product">
                   </a>
                   <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
                   <h4 class="product-price">
-                    <del>$ : ${product.product_price}</del>
+                    <span style="size: 1px">$ : ${product.product_price}</span>
                   </h4>
                   <div class="product-buttons">
-                    <a href="shop_add_wishlist_action?product_no=${product.product_no}">
-	                	<button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
-	                		<i class="icon-heart"></i>
-	                	</button>
-                	</a>
+                    <button class="btn btn-outline-secondary btn-sm btn-wishlist" 
+	                		 data-toggle="tooltip" 
+	                		 title="" 
+	                		 data-original-title="Whishlist">
+	                		<i class="icon-heart" id="add_wishlist_button"></i>
+	                 </button>
                		<a href="shop_product_detail?product_no=${product.product_no}">
                 		<button class="btn btn-outline-primary btn-sm">detail</button>	
                 	</a>
                		 
                   </div>
+                  </form>
                 </div>
               </div>
               
@@ -264,11 +268,6 @@
                     <ul>
                       <li><a href="#">Top</a><span>(508)</span>
                         <ul>
-                          <li><a href="#">Sneakers</a></li>
-                          <li><a href="#">Heels</a></li>
-                          <li><a href="#">Loafers</a></li>
-                          <li><a href="#">Sandals</a></li>
-                          
                           <li><a href="shop_female_outer_list">여성 아우터</a></li>
                           <li><a href="shop_female_cardigan_list">여성 가디건</a></li>
                           <li><a href="shop_female_tshirt_list">여성 티셔츠</a></li>
@@ -276,68 +275,30 @@
                       </li>
                       <li><a href="#">Bottom</a><span>(423)</span>
                         <ul>
-                          <li><a href="#">Boots</a></li>
-                          <li><a href="#">Oxfords</a></li>
-                          <li><a href="#">Loafers</a></li>
-                          <li><a href="#">Sandals</a></li>
-                          
                           <li><a href="shop_female_longpants_list">여성 긴바지</a></li>
                           <li><a href="shop_female_skirt_list">여성 스커트</a></li>
                         </ul>
                       </li>
-                      <li><a href="#">Boy's Shoes</a><span>(97)</span></li>
-                      <li><a href="#">Girl's Shoes</a><span>(110)</span></li>
-                    </ul>
+                      </ul>
                   </li>
                   <li class="has-children"><a href="#">Men's</a><span>(2356)</span>
                     <ul>
-                      <li><a href="#">Women's</a><span>(1032)</span>
-                      
                       <li><a href="#">Top</a><span>(1032)</span>
                         <ul>
-                          <li><a href="#">Dresses</a></li>
-                          <li><a href="#">Shirts &amp; Tops</a></li>
-                          <li><a href="#">Swimwear</a></li>
-                          <li><a href="#">Shorts</a></li>
-                          
                           <li><a href="shop_male_outer_list">남성 아우터</a></li>
                           <li><a href="shop_male_cardigan_list">남성 가디건</a></li>
                           <li><a href="shop_male_tshirt_list">남성 티셔츠</a></li>
                         </ul>
                       </li>
-                      <li><a href="#">Men's</a><span>(937)</span>
-                      
                       <li><a href="#">Bottom</a><span>(937)</span>
                         <ul>
-                          <li><a href="#">Shirts &amp; Tops</a></li>
-                          <li><a href="#">Shorts</a></li>
-                          <li><a href="#">Swimwear</a></li>
-                          <li><a href="#">Pants</a></li>
-                          
                           <li><a href="shop_male_longpants_list">남성 긴바지</a></li>
                           <li><a href="shop_male_shortpants_list">남성 반바지</a></li>
                         </ul>
                       </li>
-                      <li><a href="#">Kid's Clothing</a><span>(386)</span></li>
-                    </ul>
+                     </ul>
                   </li>
-                  <li class="has-children"><a href="#">Bags</a><span>(420)</span>
-                    <ul>
-                      <li><a href="#">Handbags</a><span>(180)</span></li>
-                      <li><a href="#">Backpacks</a><span>(132)</span></li>
-                      <li><a href="#">Wallets &amp; Accessories</a><span>(47)</span></li>
-                      <li><a href="#">Luggage</a><span>(61)</span></li>
-                    </ul>
-                  </li>
-                  <li class="has-children"><a href="#">Accessories</a><span>(874)</span>
-                    <ul>
-                      <li><a href="#">Sunglasses</a><span>(211)</span></li>
-                      <li><a href="#">Hats</a><span>(195)</span></li>
-                      <li><a href="#">Watches</a><span>(159)</span></li>
-                      <li><a href="#">Jewelry</a><span>(203)</span></li>
-                      <li><a href="#">Belts</a><span>(106)</span></li>
-                    </ul>
-                  </li>
+                  
                 </ul>
               </section>
               <!-- Widget Price Range-->

@@ -9,6 +9,8 @@ $(function(){
 		});
 	});
 	
+
+
 $(function(){
 	$('#add_wishlist_button').click(function(e){
 		alert('2');
@@ -18,6 +20,19 @@ $(function(){
 		e.preventDefault();
 		});
 	});
+	
+$(function(){
+	$('#add_wishlist_button1').click(function(e){
+		alert('2');
+		document.product_detail_cart1.method='POST';
+		document.product_detail_cart1.action='shop_add_wishlist_action';
+		document.product_detail_cart1.submit();
+		e.preventDefault();
+		});
+	});
+
+
+
 
 $(function(){
 	$('#add_review_button').click(function(e){
