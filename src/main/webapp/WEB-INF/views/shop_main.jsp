@@ -213,8 +213,6 @@
               <!-- Product-->
               <div class="grid-item">
                 <div class="product-card">
-                <form id="product_detail_cart" name= "product_detail_cart" method="post">
-		        <input type="hidden" name="product_no" value="${product.product_no}">
                   <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
                   	<img src="IMAGE/${product.product_image_1}" alt="Product">
                   </a>
@@ -223,18 +221,13 @@
                     <span style="size: 1px">$ : ${product.product_price}</span>
                   </h4>
                   <div class="product-buttons">
-                    <button class="btn btn-outline-secondary btn-sm btn-wishlist" 
-	                		 data-toggle="tooltip" 
-	                		 title="" 
-	                		 data-original-title="Whishlist">
-	                		<i class="icon-heart" id="add_wishlist_button"></i>
-	                 </button>
+                	<button class="btn btn-outline-primary btn-sm add_wishlist_button" product_no="${product.product_no}" type="button">
+                		<i class="icon-heart" product_no="${product.product_no}"></i>
+                	</button>
                		<a href="shop_product_detail?product_no=${product.product_no}">
                 		<button class="btn btn-outline-primary btn-sm">detail</button>	
                 	</a>
-               		 
-                  </div>
-                  </form>
+               	  </div>
                 </div>
               </div>
               
@@ -388,5 +381,6 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/custom_product.js"></script>
   </body>
 </html>
