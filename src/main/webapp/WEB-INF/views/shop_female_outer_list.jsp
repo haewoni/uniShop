@@ -217,14 +217,12 @@
                   </a>
                   <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
                   <h4 class="product-price">
-                    <del>$ : ${product.product_price}</del>
+                    <span style="size: 1px">￦ : ${product.product_price}</span>
                   </h4>
                   <div class="product-buttons">
-                    <a href="shop_add_wishlist_action?product_no=${product.product_no}">
-	                	<button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
-	                		<i class="icon-heart"></i>
+	                	<button class="btn btn-outline-primary btn-sm add_wishlist_button" product_no="${product.product_no}" type="button">
+	                		<i class="icon-heart" product_no="${product.product_no}"></i>
 	                	</button>
-                	</a>
                		<a href="shop_product_detail?product_no=${product.product_no}">
                 		<button class="btn btn-outline-primary btn-sm">detail</button>	
                 	</a>
@@ -426,5 +424,6 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/custom_product.js"></script>
   </body>
 </html>

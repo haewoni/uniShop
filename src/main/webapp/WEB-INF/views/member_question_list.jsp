@@ -38,7 +38,6 @@
           <div class="modal-footer">
             <button class="btn btn-primary" id="question_insert_button" type="submit" >등록하기</button>
 
-          
           </div>
         </div>
       </div>
