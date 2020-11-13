@@ -1,14 +1,5 @@
 
-	
 $(function(){
-	//event
-	$('#jumun_payment_button').click(function(e){
-		alert('adsasas');
-		document.jumun_payment_form.action='jumun_payment_action';
-		document.jumun_payment_form.method='POST';
-		document.jumun_payment_form.submit();
-		e.preventDefault();
-	});
 	//event
 	$('#question_insert_button').click(function(e){
 		alert('등록되었습니다');
@@ -110,11 +101,6 @@ function shop_add_cart_action() {
 	document.product_cart_form.action='shop_add_cart_action';
 	document.product_cart_form.submit();
 }
-/*
-1. ID : 4~12자 이내의 영어와 숫자로 입력
-2. 첫문자는 숫자로 시작할 수 없음
-3. Password : 4~12자 이내며, 입력 필수
-*/
 
 /************************** 아이디 검사 *****************************/
 

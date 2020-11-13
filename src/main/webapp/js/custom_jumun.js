@@ -1,3 +1,10 @@
-/**
- * 
- */
+$(function(){
+	//event
+	$('#jumun_payment_button').click(function(e){
+		alert('adsasas');
+		document.jumun_payment_form.action='jumun_payment_action';
+		document.jumun_payment_form.method='POST';
+		document.jumun_payment_form.submit();
+		e.preventDefault();
+		});
+	});

@@ -145,6 +145,6 @@
     <script src="js/vendor.min.js"></script>
     <script src="js/card.min.js"></script>
     <script src="js/scripts.min.js"></script>
-    <script src="js/common.js"></script>
+    <script src="js/custom_jumun.js"></script>
   </body>
 </html>
