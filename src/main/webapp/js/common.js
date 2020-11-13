@@ -90,12 +90,7 @@ function jumun_payment_action() {
 	document.jumun_payment_form.submit();
 }
 
-function jumun_address_form_action(){
-	alert('aaaaa')
-	document.jumun_address_form.action='jumun_address_action';
-	document.jumun_address_form.method='POST';
-	document.jumun_address_form.submit();
-}
+
 function shop_add_cart_action() {
 	document.alert('bbbb');
 	document.product_cart_form.action='shop_add_cart_action';
