@@ -27,13 +27,6 @@
       </div>
       <!-- Page Content-->
       <div class="container padding-bottom-3x mb-1">
-      
-      
-      
-      <!-- <form method="post" action="shop_add_cart_action">  -->
-
-
-
 
         <div class="row">
           <!-- Poduct Gallery-->
@@ -123,11 +116,6 @@
                 <div class="share-links"><a class="social-button shape-circle sb-facebook" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="socicon-facebook"></i></a><a class="social-button shape-circle sb-twitter" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="socicon-twitter"></i></a><a class="social-button shape-circle sb-instagram" href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="socicon-instagram"></i></a><a class="social-button shape-circle sb-google-plus" href="#" data-toggle="tooltip" data-placement="top" title="Google +"><i class="socicon-googleplus"></i></a></div>
               </div>
               <div class="sp-buttons mt-2 mb-2">
-              
-              
-				 <input type="text" method='GET' id="hdn_qty">
-				 <input type="text" method='GET' id="hdn_size">
-				 
 				 
               	<span>
 	              	<a href="shop_add_wishlist_action?product_no=${product.product_no}">
@@ -141,35 +129,15 @@
 					<button class="btn btn-outline-primary btn-sm">DELETE FROM WISHLIST</button>
 				</a>
 
-				<!--<a href="shop_add_cart_action?cart_qty=qty();&cart_product_size=size();&product_no=${product.product_no}">
-					<button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-				</a>
-
-				<!-- <a href="shop_add_cart_action?cart_qty=${document.getElementById('cart_qty').value}
-				                                            &cart_product_size=${document.getElementById('cart_product_size').value}
-				                                            &cart_product_no=${product.product_no}">
-					<button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-				</a> --> 
-				
-				<%
-					String gv_qty = request.getParameter("hdn_qty");
-					String gv_size = request.getParameter("hdn_size");
-				%>
 				<a  href="#">
 					<button id="rest_add_cart_button" class="btn btn-outline-primary btn-sm" product_no="${product.product_no}" >Add to Cart[ajax]</button>
-					
 					<button id="add_cart_button" class="btn btn-outline-primary btn-sm" product_no="${product.product_no}" >Add to Cart[page]</button>
 				</a>
-				
-				<!-- <input type=submit value="카트담기" data-toggle="tooltip" title="Add to Cart" class=TXTFLD onclick="location.href = 'shop_add_cart_action'" > -->
-				
 				
               </div>
             </div>
           </div>
         </div>
-        
-        <!-- </form> -->
 
         <!-- Product Tabs-->
         <div class="row padding-top-3x mb-3">
@@ -307,10 +275,7 @@
           </div>
           
          </c:forEach>
-      
-      
-      
-      
+
       <!-- Site Footer-->
 
       <jsp:include page="common_bottom.jsp"/>
