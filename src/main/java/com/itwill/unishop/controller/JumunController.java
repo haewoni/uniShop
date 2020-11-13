@@ -115,6 +115,10 @@ public class JumunController {
    public String payment_form() {
       return "jumun_payment_form";
    }
+   @RequestMapping("f_jumun_payment_form")
+   public String f_payment_form() {
+      return "f_jumun_payment_form";
+   }
    
    @RequestMapping(value = "/jumun_payment_action", method = RequestMethod.GET)
    public String jumun_payment_action_GET() {
@@ -154,6 +158,10 @@ public class JumunController {
    @RequestMapping("jumun_review_form")
    public String review_form() {
       return "jumun_review_form"; 
+   }
+   @RequestMapping("f_jumun_review_form")
+   public String f_jumun_review_form() {
+      return "f_jumun_review_form";
    }
    
    @RequestMapping(value = "/jumun_review_action", method = RequestMethod.GET)
@@ -197,5 +205,12 @@ public class JumunController {
        return "jumun_complete_form";
    }
 
+   
+   
+   
+   
+   
+   
+   
    
 }

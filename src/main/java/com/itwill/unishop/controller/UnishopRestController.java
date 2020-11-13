@@ -6,10 +6,14 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< HEAD
 import org.springframework.ui.Model;
 
 import org.springframework.web.bind.annotation.ModelAttribute;
 
+=======
+import org.springframework.web.bind.annotation.ModelAttribute;
+>>>>>>> refs/heads/haewon
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,7 +22,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.itwill.unishop.domain.Cart;
 import com.itwill.unishop.domain.Delivery;
 import com.itwill.unishop.domain.Jumun_Detail;
+<<<<<<< HEAD
 import com.itwill.unishop.domain.Product;
+=======
+import com.itwill.unishop.domain.Member;
+>>>>>>> refs/heads/haewon
 import com.itwill.unishop.domain.Question;
 import com.itwill.unishop.domain.Review;
 import com.itwill.unishop.service.CartService;
@@ -70,7 +78,6 @@ public class UnishopRestController {
 
 		return reviewList;
 	}
-
 	/*************************************리뷰를 남겨보자***************************************/
 	@RequestMapping(value = "/rest_shop_product_review_action",method = RequestMethod.GET)
 	public String shop_product_review_action_GET(){
@@ -122,6 +129,40 @@ public class UnishopRestController {
 			msg="false";
 		}
 		return msg;
+	}
+	/*************** 체크아웃-주소폼 *****************/
+	@RequestMapping("/rest_jumun_address_form")
+	public Member jumun_address_form(HttpSession session) {
+		String sMemberId = (String)session.getAttribute("sMemberId");
+		return memberService.selectMemberById(sMemberId);
+	}
+	/*************** 체크아웃-주소폼 액션 - GET *****************/
+	@RequestMapping(value = "/rest_jumun_address_action", method = RequestMethod.GET)
+	public void jumun_address_action_GET() {
+	}
+	/*************** 체크아웃-주소폼 액션 - POST *****************/
+	@RequestMapping(value = "/rest_jumun_address_action", method = RequestMethod.POST)
+	public String jumun_address_action_POST(HttpSession session, @ModelAttribute Member member) {
+		Member loginMember = (Member) session.getAttribute("loginMember");
+		loginMember.setMember_id(loginMember.getMember_id());
+		loginMember.setMember_name(member.getMember_name());
+		loginMember.setMember_phone(member.getMember_phone());
+		loginMember.setMember_address_name(member.getMember_address_name());
+		loginMember.setMember_address_country(member.getMember_address_country());
+		loginMember.setMember_address_city(member.getMember_address_city());
+		loginMember.setMember_address_zipcode(member.getMember_address_zipcode());
+		loginMember.setMember_address1(member.getMember_address1());
+		loginMember.setMember_address2(member.getMember_address2());
+		session.setAttribute("loginMember", loginMember);
+		memberService.updateAddress(loginMember);
+		return "true";
+	}
+
+	/*************** 체크아웃-배송 폼 *****************/
+	@RequestMapping(value = "rest_jumun_delivery_form",
+					method = RequestMethod.POST)
+	public String jumun_delivery_form() {
+		return "true";
 	}
 
 }

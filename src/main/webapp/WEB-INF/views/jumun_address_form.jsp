@@ -22,8 +22,9 @@
 	<!-- Page Content-->
 	<div class="container padding-bottom-3x mb-2">
 		<div class="row">
-			<!-- Checkout Adress-->
-				<div class="col-xl-9 col-lg-8">
+			<!-- Checkout Address-->
+				<div class="col-xl-9 col-lg-8" id='check_out_display'>
+				<!-- -------------------------address start----------------------- -->
 				<form name="jumun_address_form">
 					<div class="checkout-steps">
 						<a href="jumun_review_form">4. 주문확인</a>
@@ -130,15 +131,16 @@
 									돌아가기</span></a>
 						</div>
 						<div class="column">
-							<a class="btn btn-primary"
-								href="javascript:jumun_address_form_action();"><span
+							<a class="btn btn-primary" member_name="${loginMember.member_name}"
+								id="jumun_address_action_button"
+								href="#"><span
 								class="hidden-xs-down">계속&nbsp;</span><i
 								class="icon-arrow-right"></i></a>
 						</div>
 					</div>
 					</form>
 				</div>
-			
+			<!-- -------------------------address end----------------------- -->
 			<!-- Sidebar          -->
 			<div class="col-xl-3 col-lg-4">
 				<aside class="sidebar">
@@ -175,7 +177,7 @@
 <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
 <script src="js/vendor.min.js"></script>
 <script src="js/scripts.min.js"></script>
-<script src="js/common.js"></script>
+<script src="js/custom_jumun.js"></script>
 
 </body>
 </html>

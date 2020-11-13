@@ -24,7 +24,7 @@
       <div class="container padding-bottom-3x mb-2">
         <div class="row">
           <!-- Checkout Adress-->
-          <div class="col-xl-9 col-lg-8">
+          <div class="col-xl-9 col-lg-8" id = "jumun_delivery">
           <form name="jumun_delivery_form">
             <div class="checkout-steps"><a href="jumun_review_form">4. 주문확인</a>
             <a href="jumun_payment_form"><span class="angle"></span>3. 결제정보</a>
