@@ -153,7 +153,7 @@ public class ProductController {
 		ArrayList<Product> recommendedProductList = productService.selectFour(product.getProduct_L_div());
 		model.addAttribute("product",product);
 		model.addAttribute("recommendedProductList",recommendedProductList);
-		forwardPath = "shop_product_detail_kyj";
+		forwardPath = "shop_product_detail";
 		return forwardPath;
 	}
 
