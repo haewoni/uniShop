@@ -196,27 +196,21 @@ public class ProductController {
 		return forwardPath;
 	}
 
-
 	/**********카트 추가***********/
-	@RequestMapping(value = "/shop_add_cart_action" , method = RequestMethod.POST)
-	public String shop_add_cart(Model model, HttpSession session, @RequestParam int cart_qty, @RequestParam String cart_product_size, @RequestParam String product_no) {
+	@RequestMapping(value = "/shop_add_cart_action")
+	public String shop_add_cart(Model model, HttpSession session, @RequestParam int cart_qty,
+			                                                      @RequestParam String cart_product_size, 
+			                                                      @RequestParam String product_no) {
 		String forwardPath= "";
 		String sMemberId = (String) session.getAttribute("sMemberId");
-		/*
-		String sMemberId = (String) session.getAttribute("sMemberId");
-		if(sMemberId!=null || sMemberId!="") {
-		}
-		템플릿 연결할때 로그인체크 할때 쓰세요. 아래 위시리스트 추가도 마찬가지.
-		 */
-		System.out.println("!111");
-		
-		try {	
 
+		try {	
 			if(sMemberId == null || sMemberId == "") {
 				forwardPath = "member_login_register_form";
 			}	
-			//String member_id = "uni1";//session.getId();
+			
 			int duplicateCount = cartService.inspectDuplicateCart(sMemberId, product_no, cart_product_size);
+
 			//카트 중복검사 후 qty만 더하기
 			if(duplicateCount!=0) {
 				int update_qty = cartService.selectCartOne(sMemberId, product_no, cart_product_size).getCart_qty()+cart_qty;
@@ -235,10 +229,8 @@ public class ProductController {
 		return forwardPath;
 	}
 
-
-
 	/**********위시리스트 추가***********/
-	@RequestMapping(value= "/shop_add_wishlist_action", method = RequestMethod.POST)
+	@RequestMapping(value= "/shop_add_wishlist_action")
 	public String shop_add_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
 		String forwardPath = "";
 		//String member_id = "uni1"; //session.getId();
