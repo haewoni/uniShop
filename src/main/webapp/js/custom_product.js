@@ -23,7 +23,7 @@ $(function(){
 	$('#add_review_button').click(function(e){
 		alert('adsasas');
 		document.review_form.method='POST';
-		document.review_form.action='shop_product_review_action';
+		document.review_form.action='rest_shop_product_review_action';
 		document.review_form.submit();
 		e.preventDefault();
 		});
@@ -33,9 +33,9 @@ $(function(){
 			 //console.log(e.target);
 			 //console.log(e.relatedTarget);
 			  
-			  product_no=$(e.relatedTarget).attr("product_no")
-			  param='product_no='+product_no
-			  $.ajax({
+			product_no=$(e.relatedTarget).attr("product_no")
+			param='product_no='+product_no
+			$.ajax({
 			url:'rest_shop_product_review_list',
 			data:param,
 			method:'POST',
@@ -56,13 +56,58 @@ $(function(){
 							html+="</div>";
 							html+="<p class=\"comment-text\">"+review.review_content+"</p>";
 							html+="<div class=\"comment-footer\"><span class=\"comment-meta\">"+review.review_name+"</span></div>";
-						html+=" </div>";
+						html+="</div>";
 					html+="</div>";
 					
 				});
+				html+="<h5 class=\"mb-30 padding-top-1x\">후기를 작성해주세요</h5>";
+					html+="<form class=\"row\" method=\"post\">";
+						html+="<div class=\"col-sm-6\">";
+							html+="<div class=\"form-group\">";
+								html+="<label for=\"review_name\">성함</label>";
+								html+="<input class=\"form-control form-control-rounded\" type=\"text\" name=\"review_name\" id=\"review_name\" required>";
+							html+="</div>";
+					html+="</div>";
+					html+="<div class=\"col-sm-6\">";
+						html+="<div class=\"form-group\">";
+							html+="<label for=\"review_email\">Your Email</label>";
+							html+="<input class=\"form-control form-control-rounded\" type=\"email\" name=\"review_email\" id=\"review_email\" required>";
+						html+="</div>";
+					html+="</div>";
+					html+="<div class=\"col-sm-6\">";
+						html+="<div class=\"form-group\">";
+							html+="<label for=\"review_subject\">Subject</label>";
+							html+="<input class=\"form-control form-control-rounded\" type=\"text\" name=\"review_title\" id=\"review_subject\" required>";
+						html+="</div>";
+					html+="</div>";
+					html+="<div class=\"col-sm-6\">";
+						html+="<div class=\"form-group\">";
+							html+="<label for=\"review_rating\">Rating</label>";
+							html+="<select class=\"form-control form-control-rounded\" name =\"review_rating\" id=\"review_rating\">";
+								html+="<option>5 Stars</option>";
+								html+="<option>4 Stars</option>";
+								html+="<option>3 Stars</option>";
+								html+="<option>2 Stars</option>";
+								html+="<option>1 Star</option>";
+							html+="</select>";
+						html+="</div>";
+					html+="</div>";
+					html+="<div class=\"col-12\">";
+						html+="<div class=\"form-group\">";
+							html+="<label for=\"review_text\">후기 작성란 </label>";
+							html+="<textarea class=\"form-control form-control-rounded\" name =\"review_content\" id=\"review_text\" rows=\"8\" required></textarea>";
+						html+="</div>";
+					html+="</div>";
+					html+="<div class=\"col-12 text-right\">";
+						html+="<button class=\"btn btn-outline-primary\" id = \"add_review_button\" type=\"submit\">후기 작성</button>";
+					html+="</div>";
+					html+="</form>";
+					
 				$('#reviews').html(html);
+				
 			}
 		});
+		
 	});
 		
 });
