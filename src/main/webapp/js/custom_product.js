@@ -23,8 +23,6 @@ $(function(){
 		e.preventDefault();
 	});
 	
-
-
 	$('#add_review_button').click(function(e){
 		alert('adsasas');
 		document.review_form.method='POST';
