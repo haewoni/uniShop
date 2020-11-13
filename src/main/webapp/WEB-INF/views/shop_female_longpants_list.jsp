@@ -217,7 +217,7 @@
                   </a>
                   <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
                   <h4 class="product-price">
-                    <del>$ : ${product.product_price}</del>
+                    <span style="size: 1px">￦ : ${product.product_price}</span>
                   </h4>
                   <div class="product-buttons">
                     <a href="shop_add_wishlist_action?product_no=${product.product_no}">

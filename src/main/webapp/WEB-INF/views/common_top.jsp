@@ -37,67 +37,30 @@
       </div>
       <nav class="offcanvas-menu">
         <ul class="menu">
-          <li class="has-children"><span><a href="#">Men's Shoes</a><span class="sub-menu-toggle"></span></span>
+          <li class="has-children"><span><a href="#">여성 상의</a><span class="sub-menu-toggle"></span></span>
             <ul class="offcanvas-submenu">
-              <li><a href="#">Sneakers</a></li>
-              <li><a href="#">Loafers</a></li>
-              <li><a href="#">Boat Shoes</a></li>
-              <li><a href="#">Sandals</a></li>
-              <li><a href="#">View All</a></li>
+              <li><a href="shop_female_outer_list">여성 아우터</a></li>
+              <li><a href="shop_female_cardigan_list">여성 가디건</a></li>
+              <li><a href="shop_female_tshirt_list">여성 티셔츠</a></li>
             </ul>
           </li>
-          <li class="has-children"><span><a href="#">Women's Shoes</a><span class="sub-menu-toggle"></span></span>
+          <li class="has-children"><span><a href="#">여성 하의</a><span class="sub-menu-toggle"></span></span>
             <ul class="offcanvas-submenu">
-              <li><a href="#">Sandals</a></li>
-              <li><a href="#">Flats</a></li>
-              <li><a href="#">Sneakers</a></li>
-              <li><a href="#">Heels</a></li>
-              <li><a href="#">View All</a></li>
+              <li><a href="shop_female_longpants_list">여성 긴바지</a></li>
+              <li><a href="shop_female_skirt_list">여성 스커트</a></li>
             </ul>
           </li>
-          <li class="has-children"><span><a href="#">Men's Clothing</a><span class="sub-menu-toggle"></span></span>
+          <li class="has-children"><span><a href="#">남성 상의</a><span class="sub-menu-toggle"></span></span>
             <ul class="offcanvas-submenu">
-              <li><a href="#">Shirts &amp; Tops</a></li>
-              <li><a href="#">Pants</a></li>
-              <li><a href="#">Jackets</a></li>
-              <li><a href="#">View All</a></li>
+              <li><a href="shop_male_outer_list">남성 아우터</a></li>
+              <li><a href="shop_male_cardigan_list">남성 가디건</a></li>
+              <li><a href="shop_male_tshirt_list">남성 티셔츠</a></li>
             </ul>
           </li>
-          <li class="has-children"><span><a href="#">Women's Clothing</a><span class="sub-menu-toggle"></span></span>
+          <li class="has-children"><span><a href="#">남성 하의</a><span class="sub-menu-toggle"></span></span>
             <ul class="offcanvas-submenu">
-              <li><a href="#">Dresses</a></li>
-              <li><a href="#">Shirts &amp; Tops</a></li>
-              <li><a href="#">Shorts</a></li>
-              <li><a href="#">Swimwear</a></li>
-              <li><a href="#">View All</a></li>
-            </ul>
-          </li>
-          <li class="has-children"><span><a href="#">Kid's Shoes</a><span class="sub-menu-toggle"></span></span>
-            <ul class="offcanvas-submenu">
-              <li><a href="#">Boots</a></li>
-              <li><a href="#">Sandals</a></li>
-              <li><a href="#">Crib Shoes</a></li>
-              <li><a href="#">Loafers</a></li>
-              <li><a href="#">View All</a></li>
-            </ul>
-          </li>
-          <li class="has-children"><span><a href="#">Bags</a><span class="sub-menu-toggle"></span></span>
-            <ul class="offcanvas-submenu">
-              <li><a href="#">Handbags</a></li>
-              <li><a href="#">Backpacks</a></li>
-              <li><a href="#">Luggage</a></li>
-              <li><a href="#">Wallets</a></li>
-              <li><a href="#">View All</a></li>
-            </ul>
-          </li>
-          <li class="has-children"><span><a href="#">Accessories</a><span class="sub-menu-toggle"></span></span>
-            <ul class="offcanvas-submenu">
-              <li><a href="#">Sunglasses</a></li>
-              <li><a href="#">Hats</a></li>
-              <li><a href="#">Watches</a></li>
-              <li><a href="#">Jewelry</a></li>
-              <li><a href="#">Belts</a></li>
-              <li><a href="#">View All</a></li>
+              <li><a href="shop_male_longpants_list">남성 긴바지</a></li>
+              <li><a href="shop_male_shortpants_list">남성 반바지</a></li>
             </ul>
           </li>
         </ul>

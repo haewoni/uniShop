@@ -13,7 +13,7 @@
             <div class="d-flex justify-content-center">
               <div class="px-3 text-center">
                 <h2 class="display-4 text-white text-shadow">Male Outer</h2>
-                <h5 class="text-white text-normal mb-3 opacity-60 text-shadow">Starting from $56.00</h5>
+                <h5 class="text-white text-normal mb-3 opacity-60 text-shadow">Starting from $49,900</h5>
                 <div class="view-button"><a class="btn btn-primary" href=product_ManOuterList>View Collection</a></div>
               </div>
             </div>
@@ -23,7 +23,7 @@
             <div class="d-flex justify-content-center">
               <div class="px-3 text-center">
                 <h2 class="display-4 text-white text-shadow">Female Outer</h2>
-                <h5 class="text-white text-normal mb-3 opacity-60 text-shadow">Starting from $27.00</h5>
+                <h5 class="text-white text-normal mb-3 opacity-60 text-shadow">Starting from $29,900</h5>
                 <div class="view-button"><a class="btn btn-primary" href="product_FemaleOuter_list">View Collection</a></div>
               </div>
             </div>
@@ -35,7 +35,7 @@
             <div class="d-flex justify-content-center">
               <div class="px-3 text-center">
                 <h2 class="display-4 text-white text-shadow">Male Pants</h2>
-                <h5 class="text-white text-normal mb-3 opacity-60 text-shadow">Starting from $35.99</h5>
+                <h5 class="text-white text-normal mb-3 opacity-60 text-shadow">Starting from $29,900</h5>
                 <div class="view-button"><a class="btn btn-primary" href="product_ManPantslist">View Collection</a></div>
               </div>
             </div>
@@ -45,7 +45,7 @@
             <div class="d-flex justify-content-center">
               <div class="px-3 text-center">
                 <h2 class="display-4 text-white text-shadow">Female Skirts</h2>
-                <h5 class="text-white text-normal mb-3 opacity-60 text-shadow">Starting from $79.99.00</h5>
+                <h5 class="text-white text-normal mb-3 opacity-60 text-shadow">Starting from $29,900</h5>
                 <div class="view-button"><a class="btn btn-primary" href="product_FemaleSkirt_list">View Collection</a></div>
               </div>
             </div>
@@ -79,14 +79,13 @@
 	              </h4>
 	              
 	              <div class="product-buttons">
-	                	<button class="btn btn-outline-primary btn-sm add_wishlist_button" product_no="${product.product_no}" type="button">
-	                		<i class="icon-heart" product_no="${product.product_no}"></i>
-	                	</button>
+                	<button class="btn btn-outline-primary btn-sm add_wishlist_button" product_no="${product.product_no}" type="button">
+                		<i class="icon-heart" product_no="${product.product_no}"></i>
+                	</button>
                		<a href="shop_product_detail?product_no=${product.product_no}">
                 		<button class="btn btn-outline-primary btn-sm">detail</button>	
                 	</a>
-               		 
-                  </div>
+               	  </div>
             </div>
           </div>
 	            </c:forEach>  
