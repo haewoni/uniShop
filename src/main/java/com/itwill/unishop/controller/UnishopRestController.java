@@ -51,7 +51,7 @@ public class UnishopRestController {
 	private WishListService wishListService;
 	@Autowired
 	private DeliveryService deliveryService;
-	
+
 	/****************멤버 주문 리스트*******************/
 	@RequestMapping(value = "rest_jumun_detail")
 	public List<Jumun_Detail> jumun_detail(@RequestParam int jumun_no) throws Exception{
@@ -61,11 +61,11 @@ public class UnishopRestController {
 	public Delivery jumun_delivery_detail(@RequestParam String delivery_no) throws Exception{
 		return deliveryService.selectByNo(delivery_no);
 	}
-	
+
 	/**********제품 리뷰***********/
 	@RequestMapping("/rest_shop_product_review_list")
 	public List<Review> shop_product_review(@RequestParam String product_no) throws Exception{
-		
+
 		List<Review> reviewList = reviewService.selectReviewByNo(product_no);
 
 		return reviewList;
@@ -77,29 +77,21 @@ public class UnishopRestController {
 		return "shop_product_review_list";
 	}
 	@RequestMapping(value = "/rest_shop_product_review_action",method = RequestMethod.POST)
-	public String shop_product_review_action_POST(@ModelAttribute Review insertReview, @RequestParam String product_no,HttpSession session){
+	public String shop_product_review_action_POST(@ModelAttribute Review insertReview, @RequestParam String product_no,HttpSession session) throws Exception {
 		String forwardPath = "";
-		System.out.println("dsjkpfdsjfsj");
-		try {
-			String sMemberId = (String) session.getAttribute("sMemberId");
-			if(sMemberId == null || sMemberId == "") {
-				forwardPath = "member_login_register_form";
-			}	
-			Product product = productService.selectByNo(product_no);
-//			if(sMemberId.equals(insertReview.getMember_id()) && product.getProduct_no().equals(product_no)) {
-//			}
-			reviewService.insertReview(insertReview);
-			forwardPath = "redirect:shop_product_review_list";
-			
-		} catch (Exception e) {
-			//forwardPath="error_handle";
-			e.printStackTrace();
+		String sMemberId = (String) session.getAttribute("sMemberId");
+		if(sMemberId == null || sMemberId == "") {
+			forwardPath = "member_login_register_form";
 		}
+		Product product = productService.selectByNo(product_no);
+		if(sMemberId.equals(insertReview.getMember_id()) && product.getProduct_no().equals(product_no)) {
+			reviewService.insertReview(insertReview);
+		}
+		forwardPath = "redirect:shop_product_review_list";
 		return forwardPath;
-	}
-
-
+		}
 	
+
 	@RequestMapping(value = "rest_shop_add_cart_action")
 	public String shop_add_cart(Model model, HttpSession session, @RequestParam int cart_qty,
 			                                                      @RequestParam String cart_product_size, 
@@ -133,3 +125,4 @@ public class UnishopRestController {
 	}
 
 }
+
