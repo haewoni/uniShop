@@ -54,10 +54,10 @@ $(function() {
 
 				html = "";
 				if (resultStr.trim() == 'true') {
-					html += "			<div class=\"checkout-steps\"><a href=\"jumun_review_form\">4. 주문확인</a>";
-					html += "   <a href=\"jumun_payment_form\"><span class=\"angle\"></span>3. 결제정보</a>";
+					html += "			<div class=\"checkout-steps\"><a href=\"#\">4. 주문확인</a>";
+					html += "   <a href=\"#\"><span class=\"angle\"></span>3. 결제정보</a>";
 					html += "   <a class=\"active\" href=\"jumun_delivery_form\"><span class=\"angle\"></span>2. 배송방법</a>";
-					html += "   <a class=\"completed\" href=\"jumun_address_form\"><span class=\"angle\"></span><span class=\"step-indicator icon-circle-check\"></span>1. 주소</a></div>";
+					html += "   <a class=\"completed\" href=\"#\"><span class=\"angle\"></span><span class=\"step-indicator icon-circle-check\"></span>1. 주소</a></div>";
 					html += "   <h4>배송방법을 선택하시오</h4>";
 					html += "   <hr class=\"padding-bottom-1x\">";
 					html += "  <div class=\"table-responsive\">";
