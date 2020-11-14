@@ -3,10 +3,10 @@
     
 
           <div class="checkout-steps">
-            	<a href="jumun_review_form">4. 주문확인</a>
+            	<a href="#">4. 주문확인</a>
             	<a class="active" href="jumun_payment_form"><span class="angle"></span>3. 결제정보</a>
-            	<a class="completed" href="jumun_delivery_form"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>2. 배송확인</a>
-            	<a class="completed" href="jumun_address_form"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>1. 주소</a>
+            	<a class="completed" href="#"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>2. 배송확인</a>
+            	<a class="completed" href="#"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>1. 주소</a>
             </div>
             <h4>결제 방법을 선택하시오</h4>
             <hr class="padding-bottom-1x">
