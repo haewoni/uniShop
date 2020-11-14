@@ -210,7 +210,7 @@
 				varStatus="status">
 			 
               <!-- Product-->
-              <div class="grid-item">
+                <div class="grid-item">
                 <div class="product-card">
                   <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
                   	<img src="IMAGE/${product.product_image_1}" alt="Product">
@@ -220,11 +220,9 @@
                     <span style="size: 1px">￦ : ${product.product_price}</span>
                   </h4>
                   <div class="product-buttons">
-                    <a href="shop_add_wishlist_action?product_no=${product.product_no}">
-	                	<button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
-	                		<i class="icon-heart"></i>
+	                	<button class="btn btn-outline-primary btn-sm add_wishlist_button" product_no="${product.product_no}" type="button">
+	                		<i class="icon-heart" product_no="${product.product_no}"></i>
 	                	</button>
-                	</a>
                		<a href="shop_product_detail?product_no=${product.product_no}">
                 		<button class="btn btn-outline-primary btn-sm">detail</button>	
                 	</a>
@@ -259,16 +257,16 @@
               <section class="widget widget-categories">
                 <h3 class="widget-title">Shop Categories</h3>
                 <ul>
-                  <li class="has-children expanded"><a href="#">Women's</a><span>(1138)</span>
+                  <li class="has-children expanded"><a href="#">여성류</a><span>(1138)</span>
                     <ul>
-                      <li><a href="#">Top</a><span>(508)</span>
+                      <li><a href="#">상의</a><span>(508)</span>
                         <ul>
                           <li><a href="shop_female_outer_list">여성 아우터</a></li>
                           <li><a href="shop_female_cardigan_list">여성 가디건</a></li>
                           <li><a href="shop_female_tshirt_list">여성 티셔츠</a></li>
                         </ul>
                       </li>
-                      <li><a href="#">Bottom</a><span>(423)</span>
+                      <li><a href="#">하의</a><span>(423)</span>
                         <ul>
                           <li><a href="shop_female_longpants_list">여성 긴바지</a></li>
                           <li><a href="shop_female_skirt_list">여성 스커트</a></li>
@@ -276,9 +274,9 @@
                       </li>
                       </ul>
                   </li>
-                  <li class="has-children"><a href="#">Men's</a><span>(2356)</span>
+                  <li class="has-children"><a href="#">남성류</a><span>(2356)</span>
                     <ul>
-                      <li><a href="#">Top</a><span>(1032)</span>
+                      <li><a href="#">상의</a><span>(1032)</span>
                         <ul>
                           <li><a href="shop_male_outer_list">남성 아우터</a></li>
                           <li><a href="shop_male_cardigan_list">남성 가디건</a></li>
@@ -286,7 +284,7 @@
                         </ul>
                       </li>
                       
-                      <li><a href="#">Bottom</a><span>(937)</span>
+                      <li><a href="#">하의</a><span>(937)</span>
                         <ul>
                           <li><a href="shop_male_longpants_list">남성 긴바지</a></li>
                           <li><a href="shop_male_shortpants_list">남성 반바지</a></li>
@@ -384,5 +382,6 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/custom_product.js"></script>
   </body>
 </html>

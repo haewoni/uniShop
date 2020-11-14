@@ -52,7 +52,7 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th>Product Name</th>
+                    <th><i class="icon-heart"></i> 찜 목록</th>
                     <th class="text-center"><a class="btn btn-sm btn-outline-danger" href="member_wishlist_delete_all">찜 목록 삭제하기</a></th>
                   </tr>
                 </thead>

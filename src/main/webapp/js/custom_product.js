@@ -13,17 +13,17 @@ $(function() {
 
 
 	$('.add_wishlist_button').click(function(e) {
-
-		alert('test');
 		console.log($(e.target).attr('product_no'));
 		product_no = $(e.target).attr('product_no')
 		param = 'product_no='  + product_no
 		$.ajax({
 			url : 'shop_add_wishlist_action',
 			data : param,
-			method: 'POST'
+			method: 'POST',
+			success: function(){
+			alert('등록되었습니다');
+			}
 		});
-		alert('등록되었습니다');
 		e.preventDefault();
 	});
 

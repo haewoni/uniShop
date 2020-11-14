@@ -107,7 +107,7 @@
                 <c:forEach items="${jumunList}" var="jumun">
                   <tr>
 
-                    <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails"  delivery_no="${jumun.delivery_no}">${jumun.jumun_no}</a></td>
+                    <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails"  delivery_no="${jumun.delivery_no}"><i class="icon-bag"></i> ${jumun.jumun_no}</a></td>
                     <td>${jumun.jumun_date}</td>
                     <td><span class="text-danger">${jumun.jumun_status}</span></td>
                     <td><span class="text-medium">${jumun.jumun_tot_price}</span></td>

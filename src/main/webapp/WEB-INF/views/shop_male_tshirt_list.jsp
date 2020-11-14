@@ -213,22 +213,19 @@
 				varStatus="status">
 			 
               <!-- Product-->
-              <div class="grid-item">
+               <div class="grid-item">
                 <div class="product-card">
                   <a class="product-thumb" href="shop_product_detail?product_no=${product.product_no}">
                   	<img src="IMAGE/${product.product_image_1}" alt="Product">
                   </a>
-                  <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${fn:substring(product.product_name,1,20)}</a></h3>
+                  <h3 class="product-title"><a href="shop_product_detail?product_no=${product.product_no}">${product.product_name}</a></h3>
                   <h4 class="product-price">
-                    <!--<del>$ : ${product.product_price}</del>-->
-                    <span class="h4 d-block1"><fmt:formatNumber value="${product.product_price}" pattern="###,###,###"/>원</span>
+                    <span style="size: 1px">￦ : ${product.product_price}</span>
                   </h4>
                   <div class="product-buttons">
-                    <a href="shop_add_wishlist_action?product_no=${product.product_no}">
-	                	<button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
-	                		<i class="icon-heart"></i>
+	                	<button class="btn btn-outline-primary btn-sm add_wishlist_button" product_no="${product.product_no}" type="button">
+	                		<i class="icon-heart" product_no="${product.product_no}"></i>
 	                	</button>
-                	</a>
                		<a href="shop_product_detail?product_no=${product.product_no}">
                 		<button class="btn btn-outline-primary btn-sm">detail</button>	
                 	</a>
@@ -238,8 +235,8 @@
               </div>
               
              </c:forEach>
-              
             </div>
+              
             
             <!-- Pagination
             <nav class="pagination">
@@ -265,9 +262,9 @@
               <section class="widget widget-categories">
                 <h3 class="widget-title">Shop Categories</h3>
                 <ul>
-                  <li class="has-children expanded"><a href="#">Women's</a><span>(1138)</span>
+                  <li class="has-children"><a href="#">여성류</a><span>(1138)</span>
                     <ul>
-                      <li><a href="#">Top</a><span>(508)</span>
+                      <li><a href="#">상의</a><span>(508)</span>
                         <ul>
                         <!-- 
                           <li><a href="#">Sneakers</a></li>
@@ -280,7 +277,7 @@
                           <li><a href="shop_female_tshirt_list">여성 티셔츠</a></li>
                         </ul>
                       </li>
-                      <li><a href="#">Bottom</a><span>(423)</span>
+                      <li><a href="#">하의</a><span>(423)</span>
                         <ul>
                         <!-- 
                           <li><a href="#">Boots</a></li>
@@ -298,12 +295,12 @@
                        -->
                     </ul>
                   </li>
-                  <li class="has-children"><a href="#">Men's</a><span>(2356)</span>
+                  <li class="has-children expanded"><a href="#">남성류</a><span>(2356)</span>
                     <ul>
                     <!-- 
                       <li><a href="#">Men's</a><span>(1032)</span>
                      -->  
-                      <li><a href="#">Top</a><span>(1032)</span>
+                      <li><a href="#">상의</a><span>(1032)</span>
                       
                         <ul>
                           <!-- 
@@ -320,7 +317,7 @@
                       <!-- 
                       <li><a href="#">Men's</a><span>(937)</span>
                        -->
-                      <li><a href="#">Bottom</a><span>(937)</span>
+                      <li><a href="#">하의</a><span>(937)</span>
                         <ul>
                         <!-- 
                           <li><a href="#">Shirts &amp; Tops</a></li>
@@ -425,6 +422,7 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/custom_product.js"></script>
   </body>
->>>>>>> refs/heads/jongho
+
 </html>
