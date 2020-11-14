@@ -281,7 +281,7 @@
           <li><a href="shop_main"><span>Shop</span></a>
             <ul class="sub-menu">
                 <li><a href="shop-categories.html">Shop Categories</a></li>
-              <li class="has-children"><a href="shop-grid-ls.html"><span>여성</span></a>
+              <li class="has-children"><a href="shop_female_outer_list"><span>여성</span></a>
                 <ul class="sub-menu">
                     <li><a href="shop_female_outer_list">여성 아우터</a></li>
                     <li><a href="shop_female_cardigan_list">여성 가디건</a></li>
@@ -290,7 +290,7 @@
                     <li><a href="shop_female_skirt_list">여성 스커트</a></li>
                 </ul>
               </li>
-              <li class="has-children"><a href="shop-list-ls.html"><span>남성</span></a>
+              <li class="has-children"><a href="shop_male_outer_list"><span>남성</span></a>
                 <ul class="sub-menu">
                     <li><a href="shop_male_outer_list">남성 아우터</a></li>
                     <li><a href="shop_male_cardigan_list">남성 가디건</a></li>
