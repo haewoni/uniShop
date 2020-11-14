@@ -1,9 +1,23 @@
 $(function() {
+	// jumun_payment_form_action
+	$(document).on('click', '#jumun_review_button', function(e) {
+		$.ajax({
+			url: 'rest_jumun_payment_action',
+			method: 'POST',
+			data: $('#jumun_payment_form').serialize(),
+			success: function(str) {
+				alert('1111');
+				}
+		});
+
+	});
+	
+$(function() {
 	// jumun_payment ----> jumun_review
 	$(document).on('click', '#jumun_review_button', function(e) {
 		$.ajax({
 			url: 'f_jumun_review_form',
-			method: 'GET',
+			method: 'POST',
 			success: function(html) {
 				$('#check_out_display').html(html);
 			}
@@ -11,17 +25,50 @@ $(function() {
 
 	});
 	
+	// jumun_payment_form ---- side bar
+	$(document).on('click', '#jumun_payment_button', function(e) {
+		var cart_subtotal = "<%=session.getAttribute(\"cart_subtotal\")%>";
+		var delivery_fee = "${sessionScope.delivery_fee}";
+		var total_fee = cart_subtotal+delivery_fee;
+		$.ajax({
+			url: 'rest_jumun_delivery_form',
+			method: 'POST',
+			data: $('#jumun_delivery_form').serialize(),
+			success: function(resultStr) {
+				if(resultStr.trim() =='true'){
+					html ="";
+              			html+="<div class=\"padding-top-2x hidden-lg-up\"></div>";
+						html+="	 <section class=\"widget widget-order-summary\">";
+		                html+="<h3 class=\"widget-title\">주문 요약</h3>";
+		                html+="<table class=\"table\">";
+		                html+="  <tr>";
+		                html+="    <td>카트 합계:</td>";
+		                html+="    <td class=\"text-medium\">"+cart_subtotal+"</td>";
+		                html+="  </tr>";
+		                html+="  <tr>";
+		                html+="    <td>배송비:</td>";
+		                html+="    <td class=\"text-medium\">"+delivery_fee+"</td>";
+		                html+="  </tr>";
+		                html+="  <tr>";
+		                html+="    <td>총 금액:</td>";
+		                html+="    <td class=\"text-lg text-medium\">"+total_fee+"</td>";
+		                html+="  </tr>";
+		                html+="</table>";
+		                html+="</section>";
+
+						$('#sidebar').html(html);
+					}
+				
+			}
+		});
+	});
 	// jumun_delivery_form_action
 	$(document).on('click', '#jumun_payment_button', function(e) {
 		$.ajax({
 			url: 'rest_jumun_delivery_action',
 			method: 'POST',
-			data: $('#jumun_delivery_form').serialize(),
-			success: function(str) {
-				alert('1111');
-			}
+			data: $('#jumun_delivery_form').serialize()
 		});
-
 	});
 	
 	// jumun_delivery ----> jumun_payment
@@ -54,6 +101,8 @@ $(function() {
 
 				html = "";
 				if (resultStr.trim() == 'true') {
+					
+					html += " <form name=\"jumun_delivery_form\" id=\"jumun_delivery_form\">";
 					html += "			<div class=\"checkout-steps\"><a href=\"jumun_review_form\">4. 주문확인</a>";
 					html += "   <a href=\"jumun_payment_form\"><span class=\"angle\"></span>3. 결제정보</a>";
 					html += "   <a class=\"active\" href=\"jumun_delivery_form\"><span class=\"angle\"></span>2. 배송방법</a>";
@@ -100,6 +149,7 @@ $(function() {
 					html += "     <div class=\"column\"><a class=\"btn btn-outline-secondary\" href=\"checkout-address.html\"><i class=\"icon-arrow-left\"></i><span class=\"hidden-xs-down\">&nbsp;Back</span></a></div>";
 					html += "     <div class=\"column\"><a id=\"jumun_payment_button\" class=\"btn btn-primary\" href=\"#\"><span class=\"hidden-xs-down\">계속&nbsp;</span><i class=\"icon-arrow-right\"></i></a></div>";
 					html += "   </div>";
+					html += "  </form>";
 
 					$('#check_out_display').html(html);
 				}
@@ -113,6 +163,9 @@ $(function() {
 
 
 });
+});
+
+
 /*
 function jumun_address_form_action(){
 	alert('aaaaa')
