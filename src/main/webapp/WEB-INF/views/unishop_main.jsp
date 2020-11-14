@@ -9,7 +9,7 @@
       <div class="container-fluid px-0">
         <div class="row mx-0">
           <!-- Category-->
-          <div class="category-card col-md-6 col-sm-12 fw-section padding-top-7x padding-bottom-7x" style="background-image: url(img/banners/home05.jpg);"><span class="overlay" style="background-color: #000; opacity: .5;"></span>
+          <div class="category-card col-md-6 col-sm-12 fw-section padding-top-7x padding-bottom-7x" style="background-image: url(IMAGE/431345_1.png);"><span class="overlay" style="background-color: #000; opacity: .5;"></span>
             <div class="d-flex justify-content-center">
               <div class="px-3 text-center">
                 <h2 class="display-4 text-white text-shadow">Male Outer</h2>
@@ -19,7 +19,7 @@
             </div>
           </div>
           <!-- Category-->
-          <div class="category-card col-md-6 col-sm-12 fw-section padding-top-7x padding-bottom-7x" style="background-image: url(img/banners/home04.jpg);"><span class="overlay" style="background-color: #000; opacity: .5;"></span>
+          <div class="category-card col-md-6 col-sm-12 fw-section padding-top-7x padding-bottom-7x" style="background-image: url(IMAGE/432123_4.png);"><span class="overlay" style="background-color: #000; opacity: .5;"></span>
             <div class="d-flex justify-content-center">
               <div class="px-3 text-center">
                 <h2 class="display-4 text-white text-shadow">Female Outer</h2>
@@ -31,7 +31,7 @@
         </div>
         <div class="row mx-0">
           <!-- Category-->
-          <div class="category-card col-md-6 col-sm-12 fw-section padding-top-7x padding-bottom-7x" style="background-image: url(img/banners/home01.jpg);"><span class="overlay" style="background-color: #000; opacity: .5;"></span>
+          <div class="category-card col-md-6 col-sm-12 fw-section padding-top-7x padding-bottom-7x" style="background-image: url(IMAGE/418939_2.png);"><span class="overlay" style="background-color: #000; opacity: .5;"></span>
             <div class="d-flex justify-content-center">
               <div class="px-3 text-center">
                 <h2 class="display-4 text-white text-shadow">Male Pants</h2>
@@ -41,7 +41,7 @@
             </div>
           </div>
           <!-- Category-->
-          <div class="category-card col-md-6 col-sm-12 fw-section padding-top-7x padding-bottom-7x" style="background-image: url(img/banners/home06.jpg);"><span class="overlay" style="background-color: #000; opacity: .5;"></span>
+          <div class="category-card col-md-6 col-sm-12 fw-section padding-top-7x padding-bottom-7x" style="background-image: url(IMAGE/429211_1.png);"><span class="overlay" style="background-color: #000; opacity: .5;"></span>
             <div class="d-flex justify-content-center">
               <div class="px-3 text-center">
                 <h2 class="display-4 text-white text-shadow">Female Skirts</h2>
