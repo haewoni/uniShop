@@ -26,24 +26,22 @@ $(function() {
 	});
 	
 	// jumun_payment_form ---- side bar
+
 	$(document).on('click', '#jumun_payment_button', function(e) {
-		var cart_subtotal = "<%=session.getAttribute(\"cart_subtotal\")%>";
-		var delivery_fee = "${sessionScope.delivery_fee}";
-		var total_fee = cart_subtotal+delivery_fee;
 		$.ajax({
-			url: 'rest_jumun_delivery_form',
+			url: 'rest_jumun_sidebar',
 			method: 'POST',
 			data: $('#jumun_delivery_form').serialize(),
 			success: function(resultStr) {
-				if(resultStr.trim() =='true'){
 					html ="";
+				if(resultStr.trim() =='cart_subtotal'){
               			html+="<div class=\"padding-top-2x hidden-lg-up\"></div>";
 						html+="	 <section class=\"widget widget-order-summary\">";
 		                html+="<h3 class=\"widget-title\">주문 요약</h3>";
 		                html+="<table class=\"table\">";
 		                html+="  <tr>";
 		                html+="    <td>카트 합계:</td>";
-		                html+="    <td class=\"text-medium\">"+cart_subtotal+"</td>";
+		                html+="    <td class=\"text-medium\">"+resultStr+"</td>";
 		                html+="  </tr>";
 		                html+="  <tr>";
 		                html+="    <td>배송비:</td>";
