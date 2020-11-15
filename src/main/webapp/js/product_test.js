@@ -1,35 +1,7 @@
 
 $(function() {
-	$('#add_cart_button').click(function(e) {
-		alert('adsasas');
-		document.product_detail_cart.method = 'POST';
-		document.product_detail_cart.action = 'shop_add_cart_action';
-		document.product_detail_cart.submit();
-		e.preventDefault();
-
-		});
 	
-
-
-
-	$('.add_wishlist_button').click(function(e) {
-		console.log($(e.target).attr('product_no'));
-		product_no = $(e.target).attr('product_no')
-		param = 'product_no='  + product_no
-		$.ajax({
-			url : 'shop_add_wishlist_action',
-			data : param,
-			method: 'POST',
-			success: function(){
-			alert('등록되었습니다');
-			}
-		});
-		e.preventDefault();
-	});
-
-
 	$(document).on('submit', '#rest_shop_product_review_form', function(e) {
-		alert('start');
 		var product_no=$('#reviews_tab_a').attr('product_no')
 		$('#rest_shop_product_review_form #product_no').val(product_no);
 		params = $('#rest_shop_product_review_form').serializeArray();
@@ -37,12 +9,15 @@ $(function() {
 		$.ajax({
 			url: 'rest_shop_product_review_action',
 			data: params,
-			method: 'POST',
-			success: function(data){
-			if (data.trim()==('true'))
-			alert('finish');
+			method : 'POST',
+			contentType: 'text',
+			success: function(data) {
+				if (data.trim() == 'true') {
+					alert('등록되었습니다.');
+				}
 			}
 		});
+
 		e.preventDefault();
 	});
 
@@ -52,10 +27,7 @@ $(function() {
 		//console.log(e.relatedTarget);
 
 		product_no=$(e.relatedTarget).attr("product_no");
-		sMemberId=$(e.relatedTarget).attr("sMemberId");
-		
-		console.log(sMemberId);
-		param = 'product_no=' + product_no;
+		param = 'product_no='+ product_no;
 		$.ajax({
 			url: 'rest_shop_product_review_list',
 			data: param,
@@ -90,7 +62,6 @@ $(function() {
 				html += "<div class=\"form-group\">";
 				html += "<label for=\"review_name\">성함</label>";
 				html += "<input class=\"form-control form-control-rounded\" type=\"text\" name=\"review_name\" id=\"review_name\" required>";
-				html += "<input type=\"hidden\" name=\"sMemberId\"  id=\"sMemberId\"  name=\"sMemberId\" value="+sMemberId+">";
 				html += "<input type=\"hidden\" name=\"product_no\" id=\"product_no\" name=\"product_no\">";
 				html += "</div>";
 				html += "</div>";
@@ -125,7 +96,7 @@ $(function() {
 				html += "</div>";
 				html += "</div>";
 				html += "<div class=\"col-12 text-right\">";
-				html += "<button class=\"btn btn-outline-primary\" id=\"rest_shop_product_review_button\" name=\"rest_shop_product_review_button\" type=\"submit\">후기 작성</button>";
+				html += "<button class=\"btn btn-outline-primary\"  id=\"rest_shop_product_review_button\" type=\"submit\">후기 작성</button>";
 				html += "</div>";
 				html += "</form>";
 				

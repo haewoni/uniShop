@@ -56,7 +56,7 @@
             <div class="padding-top-2x mt-2 hidden-md-up"></div>
               <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star"></i>
               </div><span class="text-muted align-middle">&nbsp;&nbsp;4.2 | 3 customer reviews</span>
-            <h2 class="padding-top-1x text-normal">${product.product_name}</h2>
+            <h2 class="padding-top-1x text-normal">${product.product_name}, ${sMemberId}</h2>
             <span class="h2 d-block"><fmt:formatNumber value="${product.product_price}" pattern="###,###,###"/>원</span>
             <p>
             	${product.product_desc}
@@ -142,8 +142,8 @@
         <div class="row padding-top-3x mb-3">
           <div class="col-lg-10 offset-lg-1">
             <ul class="nav nav-tabs" role="tablist">
-              <li class="nav-item"><a id="description_tab_a" class="nav-link active" href="#description" data-toggle="tab" role="tab" product_no="${product.product_no}">Description</a></li>
-              <li class="nav-item"><a id="reviews_tab_a" class="nav-link" href="#reviews" data-toggle="tab" role="tab" product_no="${product.product_no}">Reviews (3)</a></li>
+              <li class="nav-item"><a id="description_tab_a" class="nav-link active" href="#description" data-toggle="tab" role="tab" product_no="${product.product_no}" sMemberId="${sMemberId}">상품 설명</a></li>
+              <li class="nav-item"><a id="reviews_tab_a" class="nav-link" href="#reviews" data-toggle="tab" role="tab" product_no="${product.product_no}" sMemberId="${sMemberId}">리뷰</a></li>
             </ul>
             <div class="tab-content">
               <div class="tab-pane fade show active" id="description" role="tabpanel">
@@ -324,5 +324,6 @@
     <script src="js/scripts.min.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/custom_product.js"></script>
+
   </body>
 </html>
