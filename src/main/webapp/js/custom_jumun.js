@@ -106,7 +106,7 @@ $(function() {
 					html += "   <a class=\"completed\" href=\"#\"><span class=\"angle\"></span><span class=\"step-indicator icon-circle-check\"></span>1. 주소</a></div>";
 					html += "   <h4>배송방법을 선택하시오</h4>";
 					html += "   <hr class=\"padding-bottom-1x\">";
-					html += "  <div class=\"table-responsive\">";
+					html += "  <div class=\"ta3ble-responsive\">";
 					html += "     <table class=\"table table-hover\">";
 					html += "       <thead class=\"thead-default\">";
 					html += "         <tr>";
