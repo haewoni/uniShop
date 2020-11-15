@@ -2,6 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.itwill.unishop.mapper.ReviewMapper">
 	<insert id="insertReview" parameterType="com.itwill.unishop.domain.Review">
+	<selectKey resultType="java.lang.Integer"
+			keyProperty="review_no" order="BEFORE">
+			SELECT review_review_no_seq.nextval FROM DUAL
+			</selectKey>
 		INSERT INTO review (review_no, review_name, review_email, review_title,
 		                    review_rating, review_content, member_id, product_no)
 		     VALUES (#{review_no}, #{review_name}, #{review_email}, #{review_title},

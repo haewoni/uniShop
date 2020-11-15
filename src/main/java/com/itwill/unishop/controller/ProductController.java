@@ -147,10 +147,12 @@ public class ProductController {
 
 	/**********제품 상세***********/
 	@RequestMapping("/shop_product_detail")
-	public String shop_product_detail_kyj(Model model, @RequestParam String product_no) throws Exception{
+	public String shop_product_detail_kyj(Model model, HttpSession session, @RequestParam String product_no) throws Exception{
 		String forwardPath = "";
+		String sMemberId = (String) session.getAttribute("sMemberId");
 		Product product = productService.selectByNo(product_no);
 		ArrayList<Product> recommendedProductList = productService.selectFour(product.getProduct_L_div());
+		model.addAttribute("sMemberId",sMemberId);
 		model.addAttribute("product",product);
 		model.addAttribute("recommendedProductList",recommendedProductList);
 		forwardPath = "shop_product_detail";
