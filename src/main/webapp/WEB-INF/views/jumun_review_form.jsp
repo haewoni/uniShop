@@ -9,7 +9,7 @@
 <%@ include file="login_check.jspf" %> 
    <jsp:include page="common_top.jsp"/>
     <!-- Off-Canvas Wrapper-->
-    <div class="offcanvas-wrapper">
+    <div class="offcanvas-wrapper" id="jumunReview">
       <!-- Page Title-->
       <div class="page-title">
         <div class="container">
