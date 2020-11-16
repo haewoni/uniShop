@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.itwill.unishop.domain.Jumun;
 import com.itwill.unishop.domain.Jumun_Detail;
@@ -13,14 +14,20 @@ import com.itwill.unishop.repository.JumunRepository;
 public class JumunServiceImpl implements JumunService{
 	@Autowired
 	private JumunRepository jumunRepository;
-
 	
 	
+	public int selectJumunNo(Jumun jumun) {
+		int jumun_no=jumunRepository.selectJumunNo(jumun);
+		return jumun_no;
+	}
+	@Transactional
 	@Override
 	public int insertJumun(Jumun jumun) {
-		jumunRepository.insertJumun(jumun);
-		return jumunRepository.selectJumunNo(jumun);
+		int insert_row=jumunRepository.insertJumun(jumun);
+		return insert_row;
 	}
+	
+	
 
 	@Override
 	public List<Jumun> selectAll() {
