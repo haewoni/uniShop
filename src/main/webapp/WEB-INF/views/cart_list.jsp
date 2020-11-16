@@ -37,9 +37,6 @@
         <div class="table-responsive shopping-cart">
         
         <table class="table">
-
-		  <!-- <form name="select" method="post" action="cart_update_action_get"> -->   
-
 	        <thead>
 	              <tr>
 	                <th>상품명</th>
@@ -59,7 +56,6 @@
 							varStatus="status">
 
               <tr>
-              
                  <td>
                   <div class="product-item"><a class="product-thumb" href="shop_product_detail?product_no=${cart.product_no}"><img src="IMAGE/${cart.product_image_1}" alt="Product"></a>
                     <div class="product-info">
@@ -111,13 +107,6 @@
          <div class="shopping-cart-footer">
           <div class="column"><a class="btn btn-outline-secondary" href="unishop_main"><i class="icon-arrow-left"></i>&nbsp;쇼핑계속하기</a></div>
           <div class="column">
-             				<%--
-                              <a class="btn btn-primary" href="#" data-toast data-toast-type="success" 
-                                                                  data-toast-position="topRight" 
-                                                                  data-toast-icon="icon-circle-check" 
-                                                                  data-toast-title="Your cart" 
-                                                                  data-toast-message="is updated successfully!">Update Cart</a>
-                            --%>
                               <a class="btn btn-success" href="jumun_address_form">주문하기</a></div>
         </div>
         
@@ -142,18 +131,6 @@
                 <!-- <del></del>${product.product_price} -->
                 <span class="text-center text-lg text-medium"><fmt:formatNumber value="${product.product_price}" pattern="###,###,###"/>원</span>
               </h4>
-              
-              <%-- 
-              <div class="product-buttons">
-                <button class="btn btn-outline-secondary btn-sm btn-wishlist" onclick="location.href = 'wishList_insert_action_get?product_no=${product.product_no}'"  data-toggle="tooltip" title="Wishlist"><i class="icon-heart"></i></button>
-                <button class="btn btn-outline-primary btn-sm" onclick="location.href = 'cart_insert_action_get?cart_tot_price=${product.product_price}&product_no=${product.product_no}'"  
-                                                               data-toast data-toast-type="success" 
-                                                               data-toast-position="topRight" 
-                                                               data-toast-icon="icon-circle-check" 
-                                                               data-toast-title="Product" 
-                                                               data-toast-message="successfuly added to cart!">카트 추가</button>
-              </div>
-              --%>
               <div class="product-buttons">
                 <button class="btn btn-outline-secondary btn-sm btn-wishlist" onclick="location.href = 'wishList_insert_action_get?product_no=${product.product_no}'"  data-toggle="tooltip" title="Wishlist"><i class="icon-heart"></i></button>
                 <button class="btn btn-outline-primary btn-sm" onclick="location.href = 'shop_product_detail?product_no=${product.product_no}'"  
@@ -180,6 +157,6 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
-    <script src="js/cart.js"></script>
+    <script src="js/custom_cart.js"></script>
   </body>
 </html>
