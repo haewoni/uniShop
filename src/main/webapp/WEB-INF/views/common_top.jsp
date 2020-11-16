@@ -298,7 +298,7 @@
                     <li><a href="shop_male_shortpants_list">남성 반바지</a></li>
                 </ul>
               </li>
-                <li><a href="cart_list">장바구니</a></li>
+                <li><c:choose><c:when test="${empty sMemberId}"><a href="member_login_register_form">장바구니</a></c:when><c:otherwise><a href="cart_list">장바구니</a></c:otherwise></c:choose></li>
             </ul>
           </li>
           <li class="active"><c:choose><c:when test="${empty sMemberId}"><a href="member_login_register_form"><span>Account</span></a></c:when><c:otherwise><a href="member_profile_form"><span>Account</span></a></c:otherwise></c:choose>

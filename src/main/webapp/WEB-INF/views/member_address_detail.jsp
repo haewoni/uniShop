@@ -61,7 +61,7 @@
                   <label for="account-country">국가</label>
                   <select class="form-control" name="member_address_country">
                     <option>국가 선택</option>
-                    <option selected>${loginMember.member_address_country}</option>
+                    <c:choose><c:when test="${empty loginMember.member_address_country}"><option selected>대한민국</option></c:when><c:otherwise><option selected>${loginMember.member_address_country}</option></c:otherwise></c:choose>
                     <option>캐나다</option>
                     <option>프랑스</option>
                     <option>독일</option>
@@ -75,7 +75,7 @@
                   <label for="account-city">도시</label>
                   <select class="form-control" name="member_address_city">
                     <option>도시 선택</option>
-                    <option selected>${loginMember.member_address_city}</option>
+                    <c:choose><c:when test="${empty loginMember.member_address_city}"><option selected>서울</option></c:when><c:otherwise><option selected>${loginMember.member_address_city}</option></c:otherwise></c:choose>
                     <option>인천</option>
                     <option>부산</option>
                     <option>대전</option>

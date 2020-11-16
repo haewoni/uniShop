@@ -66,7 +66,7 @@ $(function() {
 				$.each(reviewArray, function(i, review) {
 					//console.log(review.review_no+","+review.review_name)
 					html += "<div class=\"comment\">";
-					html += "<div class=\"comment-author-ava\"><img src=\"img/reviews/02.jpg\" alt=\"Review author\"></div>";
+					html += "<div class=\"comment-author-ava\"><img src=\"IMAGE/basic_profile.png\" alt=\"Review author\"></div>";
 					html += "<div class=\"comment-body\">";
 					html += "<div class=\"comment-header d-flex flex-wrap justify-content-between\">";
 					html += "<h4 class=\"comment-title\">" + review.review_title + "</h4>";
