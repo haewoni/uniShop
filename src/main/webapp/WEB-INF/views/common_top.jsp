@@ -245,11 +245,11 @@
       </div>
       <div class="topbar-column"><a class="hidden-md-down" href="#"><i class="icon-download"></i>&nbsp; Get mobile app</a>
         <div class="lang-currency-switcher-wrap">
-          <div class="lang-currency-switcher dropdown-toggle"><span class="language"><img alt="English" src="img/flags/GB.png"></span><span class="currency"> WON (원)</span></div>
+          <div class="lang-currency-switcher dropdown-toggle"><span class="language"><img alt="English" src="IMAGE/korea_flag.jpg"></span><span class="currency"> WON (₩)</span></div>
           <div class="dropdown-menu">
             <div class="currency-select">
               <select class="form-control form-control-rounded form-control-sm">
-                <option value="usd"> WON</option>
+                <option value="usd">₩ WON</option>
                 <option value="usd">€ EUR</option>
                 <option value="usd">$ USD</option>
                 <option value="usd">¥ JPY</option>
@@ -280,7 +280,6 @@
           <li class="has-megamenu"><a href="unishop_main"><span>Home</span></a></li>
           <li><a href="shop_main"><span>Shop</span></a>
             <ul class="sub-menu">
-                <li><a href="shop-categories.html">Shop Categories</a></li>
               <li class="has-children"><a href="shop_female_outer_list"><span>여성</span></a>
                 <ul class="sub-menu">
                     <li><a href="shop_female_outer_list">여성 아우터</a></li>
@@ -299,17 +298,24 @@
                     <li><a href="shop_male_shortpants_list">남성 반바지</a></li>
                 </ul>
               </li>
-                <li><a href="shop-single.html">Single Product</a></li>
-                <li><a href="cart.html">Cart</a></li>
-              <li class="has-children"><a href="jumun_address_form"><span>Checkout</span></a>
-                <ul class="sub-menu">             
-                    <li><a href="checkout-address.html">Address</a></li>
-                    <li><a href="checkout-shipping.html">Shipping</a></li>
-                    <li><a href="checkout-payment.html">Payment</a></li>
-                    <li><a href="checkout-review.html">Review</a></li>
-                    <li><a href="checkout-complete.html">Complete</a></li>
-                </ul>
-              </li>
+                <li><a href="cart_list">장바구니</a></li>
+            </ul>
+          </li>
+          <li class="active"><c:choose><c:when test="${empty sMemberId}"><a href="member_login_register_form"><span>Account</span></a></c:when><c:otherwise><a href="member_profile_form"><span>Account</span></a></c:otherwise></c:choose>
+            <ul class="sub-menu">
+                <c:choose>
+                	<c:when test="${empty sMemberId}">
+                		<li><a href="member_login_register_form">로그인 / 회원가입</a></li>
+                	</c:when>
+                	<c:otherwise>
+                		<li><a href="member_login_register_form">회원가입</a></li>
+                		<li class="active"><a href="member_jumun_list">주문 내역</a></li>
+                		<li><a href="member_wishlist_detail">찜 목록</a></li>
+                		<li><a href="member_profile_form">회원 정보</a></li>
+                		<li><a href="member_address_detail">회원 주소</a></li>
+                		<li><a href="member_question_list">질문 내역</a></li>
+                	</c:otherwise>
+                </c:choose>
             </ul>
           </li>
           <li class="has-megamenu"><a href="#"><span>Mega Menu</span></a>
@@ -353,102 +359,16 @@
               </li>
             </ul>
           </li>
-          <li class="active"><c:choose><c:when test="${empty sMemberId}"><a href="member_login_register_form"><span>Account</span></a></c:when><c:otherwise><a href="member_profile_form"><span>Account</span></a></c:otherwise></c:choose>
-            <ul class="sub-menu">
-                <c:choose>
-                	<c:when test="${empty sMemberId}">
-                		<li><a href="member_login_register_form">로그인 / 회원가입</a></li>
-                	</c:when>
-                	<c:otherwise>
-                		<li><a href="member_login_register_form">회원가입</a></li>
-                		<li><a href="account-password-recovery.html">Password Recovery</a></li>
-                		<li class="active"><a href="member_jumun_list">주문 내역</a></li>
-                		<li><a href="member_wishlist_detail">찜 목록</a></li>
-                		<li><a href="member_profile_form">회원 정보</a></li>
-                		<li><a href="member_address_detail">회원 주소</a></li>
-                		<li><a href="member_question_list">질문 내역</a></li>
-                	</c:otherwise>
-                </c:choose>
-            </ul>
-          </li>
-          <li><a href="blog-rs.html"><span>Blog</span></a>
-            <ul class="sub-menu">
-              <li class="has-children"><a href="blog-rs.html"><span>Blog Layout</span></a>
-                <ul class="sub-menu">
-                    <li><a href="blog-rs.html">Blog Right Sidebar</a></li>
-                    <li><a href="blog-ls.html">Blog Left Sidebar</a></li>
-                    <li><a href="blog-ns.html">Blog No Sidebar</a></li>
-                </ul>
-              </li>
-              <li class="has-children"><a href="blog-single-rs.html"><span>Single Post Layout</span></a>
-                <ul class="sub-menu">
-                    <li><a href="blog-single-rs.html">Post Right Sidebar</a></li>
-                    <li><a href="blog-single-ls.html">Post Left Sidebar</a></li>
-                    <li><a href="blog-single-ns.html">Post No Sidebar</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+          
+          
           <li><a href="#"><span>Pages</span></a>
             <ul class="sub-menu">
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-                <li><a href="faq.html">Help / FAQ</a></li>
-                <li><a href="order-tracking.html">Order Tracking</a></li>
-                <li><a href="search-results.html">Search Results</a></li>
-                <li><a href="404.html">404 Not Found</a></li>
-                <li><a href="coming-soon.html">Coming Soon</a></li>
-              <li><a class="text-danger" href="docs/dev-setup.html">Documentation</a></li>
+                <li><a href="about">About Us</a></li>
+                <li><a href="contacts">Contacts</a></li>
+                <li><a href="faq">Help / FAQ</a></li>
             </ul>
           </li>
-          <li class="has-megamenu"><a href="components/accordion.html"><span>Components</span></a>
-            <ul class="mega-menu">
-              <li><span class="mega-menu-title">A - F</span>
-                  <ul class="sub-menu">
-                    <li><a href="components/accordion.html">Accordion</a></li>
-                    <li><a href="components/alerts.html">Alerts</a></li>
-                    <li><a href="components/buttons.html">Buttons</a></li>
-                    <li><a href="components/cards.html">Cards</a></li>
-                    <li><a href="components/carousel.html">Carousel</a></li>
-                    <li><a href="components/countdown.html">Countdown</a></li>
-                    <li><a href="components/forms.html">Forms</a></li>
-                  </ul>
-              </li>
-              <li><span class="mega-menu-title">G - M</span>
-                  <ul class="sub-menu">
-                    <li><a href="components/gallery.html">Gallery</a></li>
-                    <li><a href="components/google-maps.html">Google Maps</a></li>
-                    <li><a href="components/images.html">Images &amp; Figures</a></li>
-                    <li><a href="components/list-group.html">List Group</a></li>
-                    <li><a href="components/market-social-buttons.html">Market &amp; Social Buttons</a></li>
-                    <li><a href="components/media.html">Media Object</a></li>
-                    <li><a href="components/modal.html">Modal</a></li>
-                  </ul>
-              </li>
-              <li><span class="mega-menu-title">P - T</span>
-                  <ul class="sub-menu">
-                    <li><a href="components/pagination.html">Pagination</a></li>
-                    <li><a href="components/pills.html">Pills</a></li>
-                    <li><a href="components/progress-bars.html">Progress Bars</a></li>
-                    <li><a href="components/shop-items.html">Shop Items</a></li>
-                    <li><a href="components/spinners.html">Spinners</a></li>
-                    <li><a href="components/steps.html">Steps</a></li>
-                    <li><a href="components/tables.html">Tables</a></li>
-                  </ul>
-              </li>
-              <li><span class="mega-menu-title">T - W</span>
-                  <ul class="sub-menu">
-                    <li><a href="components/tabs.html">Tabs</a></li>
-                    <li><a href="components/team.html">Team</a></li>
-                    <li><a href="components/toasts.html">Toast Notifications</a></li>
-                    <li><a href="components/tooltips-popovers.html">Tooltips &amp; Popovers</a></li>
-                    <li><a href="components/typography.html">Typography</a></li>
-                    <li><a href="components/video-player.html">Video Player</a></li>
-                    <li><a href="components/widgets.html">Widgets</a></li>
-                  </ul>
-              </li>
-            </ul>
-          </li>
+          
         </ul>
       </nav>
       <!-- Toolbar-->
@@ -469,7 +389,7 @@
 		                  </div>
 		                </li>
 		                  <li><a href="member_profile_form">회원 정보</a></li>
-		                  <li class="active"><a href="member_jumun_list">주문 내역</a></li>
+		                  <li><a href="member_jumun_list">주문 내역</a></li>
 		                  <li><a href="member_wishlist_detail">찜 목록</a></li>
 		                <li class="sub-menu-separator"></li>
 		                <li><a href="member_logout_action"> <i class="icon-unlock"></i>Logout</a></li>
@@ -477,15 +397,23 @@
               </c:choose>
               </ul>
             </div>
-            <div class="cart"><a href="cart_list"></a><i class="icon-bag"></i><span class="count">3</span><span class="subtotal">$289.68</span>
+            <c:choose><c:when test="${empty sMemberId}"><a href="member_login_register_form"></a></c:when>
+            <c:otherwise>
+            <div class="cart"><a href="cart_list"></a><i class="icon-bag"></i><span class="count"></span><span class="subtotal">${cart_subtotal}</span>
               <div class="toolbar-dropdown">
-                <div class="dropdown-product-item"><span class="dropdown-product-remove"><i class="icon-cross"></i></span><a class="dropdown-product-thumb" href="shop-single.html"><img src="img/cart-dropdown/01.jpg" alt="Product"></a>
-                  <div class="dropdown-product-info"><a class="dropdown-product-title" href="shop-single.html">Unionbay Park</a><span class="dropdown-product-details">1 x $43.90</span></div>
+              <c:forEach items="${cartList}" 
+							var="cart"  
+							begin="0"  
+							step="1" 
+							end="${cartList.size()}"
+							varStatus="status">
+                <div class="dropdown-product-item"><span class="dropdown-product-remove"><i class="icon-cross"></i></span><a class="dropdown-product-thumb" href="shop_product_detail?product_no=${cart.product_no}"><img src="IMAGE/${cart.product_image_1}" alt="Product"></a>
+                  <div class="dropdown-product-info"><a class="dropdown-product-title" href="shop_product_detail?product_no=${cart.product_no}">${cart.product_name}</a><span class="dropdown-product-details">${cart.cart_qty} x ${cart.cart_tot_price}</span></div>
                 </div>
-             
+             </c:forEach>
                 <div class="toolbar-dropdown-group">
                   <div class="column"><span class="text-lg">Total:</span></div>
-                  <div class="column text-right"><span class="text-lg text-medium">$289.68&nbsp;</span></div>
+                  <div class="column text-right"><span class="text-lg text-medium">${cart_subtotal} &nbsp;</span></div>
                 </div>
                 <div class="toolbar-dropdown-group">
                   <div class="column"><a class="btn btn-sm btn-block btn-secondary" href="cart_list">장바구니</a></div>
@@ -493,6 +421,8 @@
                 </div>
               </div>
             </div>
+            </c:otherwise>
+            </c:choose>
           </div>
         </div>
       </div>

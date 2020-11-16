@@ -43,20 +43,20 @@
       <div class="page-title">
         <div class="container">
           <div class="column">
-            <h1>Single Ticket</h1>
+            <h1>질문 상세</h1>
           </div>
           <div class="column">
             <ul class="breadcrumbs">
               <li><a href="unishop_main">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li><a href="member_jumun_list">Account</a>
+              <li><a href="member_profile_form">Account</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li><a href="member_question_list">My Tickets</a>
+              <li><a href="member_question_list">질문 내역</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li>Single Ticket</li>
+              <li>질문 상세</li>
             </ul>
           </div>
         </div>
@@ -70,7 +70,7 @@
                 <div class="info-label" data-toggle="tooltip" title="You currently have 290 Reward Points to spend"><i class="icon-medal"></i>290 points</div>
               </div>
               <div class="user-info">
-                <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="img/account/user-ava.jpg" alt="User"></div>
+                <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="IMAGE/basic_profile.png" alt="User"></div>
                 <div class="user-data">
                   <h4>${loginMember.member_name}</h4><span>${loginMember.member_id}</span>
                 </div>
@@ -107,7 +107,7 @@
             </div>
             <!-- Messages-->
             <div class="comment">
-              <div class="comment-author-ava"><img src="img/reviews/01.jpg" alt="Avatar"></div>
+              <div class="comment-author-ava"><img src="IMAGE/basic_profile.png" alt="Avatar"></div>
               <div class="comment-body">
                 <p class="comment-text">${question.question_content}</p>
                 <div class="comment-footer"><span class="comment-meta">${loginMember.member_name}</span></div>

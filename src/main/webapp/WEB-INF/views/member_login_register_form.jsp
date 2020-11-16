@@ -37,7 +37,7 @@
                 <input class="form-control" type="text" name="member_id" placeholder="아이디" required><span class="input-group-addon"><i class="icon-mail"></i></span>
               </div>
               <div class="form-group input-group">
-                <input class="form-control" type="text" name="member_password" placeholder="비밀번호" required><span class="input-group-addon"><i class="icon-lock"></i></span>
+                <input class="form-control" type="password" name="member_password" placeholder="비밀번호" required><span class="input-group-addon"><i class="icon-lock"></i></span>
               </div>
               <div class="d-flex flex-wrap justify-content-between padding-bottom-1x">
                 <div class="custom-control custom-checkbox">
