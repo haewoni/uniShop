@@ -143,14 +143,14 @@
                 <label class="custom-control-label" for="s2">S&nbsp;<span class="text-muted">(213)</span></label>
               </div>
             </section>
-            <!-- Promo Banner-->
-            <section class="promo-box" style="background-image: url(img/banners/02.jpg);">
-              <!-- Choose between .overlay-dark (#000) or .overlay-light (#fff) with default opacity of 50%. You can overrride default color and opacity values via 'style' attribute.--><span class="overlay-dark" style="opacity: .45;"></span>
-              <div class="promo-box-content text-center padding-top-3x padding-bottom-2x">
-                <h4 class="text-light text-thin text-shadow">New Collection of</h4>
-                <h3 class="text-bold text-light text-shadow">Sunglassess</h3><a class="btn btn-sm btn-primary" href="#">Shop Now</a>
-              </div>
-            </section>
+            <!-- Promo Banner
+              <section class="promo-box" style="background-image: url(img/banners/02.jpg);"> -->
+                <!-- Choose between .overlay-dark (#000) or .overlay-light (#fff) with default opacity of 50%. You can overrride default color and opacity values via 'style' attribute.<span class="overlay-dark" style="opacity: .45;"></span>
+                <div class="promo-box-content text-center padding-top-3x padding-bottom-2x">
+                  <h4 class="text-light text-thin text-shadow">New Collection of</h4>
+                  <h3 class="text-bold text-light text-shadow">Sunglassess</h3><a class="btn btn-sm btn-primary" href="#">Shop Now</a>
+                </div>
+              </section> -->
           </div>
         </div>
       </div>
@@ -161,14 +161,14 @@
       <div class="page-title">
         <div class="container">
           <div class="column">
-            <h1>Shop Grid Left Sidebar</h1>
+            <h1>상품 목록</h1>
           </div>
           <div class="column">
             <ul class="breadcrumbs">
               <li><a href="unishop_main">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li>Shop Grid Left Sidebar</li>
+              <li>여성 티셔츠</li>
             </ul>
           </div>
         </div>
@@ -194,7 +194,7 @@
                 </div>
               </div>
               <div class="column">
-                <div class="shop-view"><a class="grid-view active" href="shop-grid-ls.html"><span></span><span></span><span></span></a><a class="list-view" href="shop-list-ls.html"><span></span><span></span><span></span></a></div>
+               <!--  <div class="shop-view"><a class="grid-view active" href="shop-grid-ls.html"><span></span><span></span><span></span></a></div> -->
               </div>
             </div>
             <!-- Products Grid-->
@@ -234,7 +234,7 @@
              </c:forEach>
             </div>
               
-            <!-- Pagination-->
+            <!-- Pagination
             <nav class="pagination">
               <div class="column">
                 <ul class="pages">
@@ -248,6 +248,7 @@
               </div>
               <div class="column text-right hidden-xs-down"><a class="btn btn-outline-secondary btn-sm" href="#">Next&nbsp;<i class="icon-arrow-right"></i></a></div>
             </nav>
+            -->
           </div>
           <!-- Sidebar          -->
           <div class="col-xl-3 col-lg-4 order-lg-1">
@@ -257,16 +258,16 @@
               <section class="widget widget-categories">
                 <h3 class="widget-title">Shop Categories</h3>
                 <ul>
-                  <li class="has-children expanded"><a href="#">여성류</a><span>(1138)</span>
+                  <li class="has-children expanded"><a href="#">여성류</a><span></span>
                     <ul>
-                      <li><a href="#">상의</a><span>(508)</span>
+                      <li><a href="#">상의</a><span></span>
                         <ul>
                           <li><a href="shop_female_outer_list">여성 아우터</a></li>
                           <li><a href="shop_female_cardigan_list">여성 가디건</a></li>
                           <li><a href="shop_female_tshirt_list">여성 티셔츠</a></li>
                         </ul>
                       </li>
-                      <li><a href="#">하의</a><span>(423)</span>
+                      <li><a href="#">하의</a><span></span>
                         <ul>
                           <li><a href="shop_female_longpants_list">여성 긴바지</a></li>
                           <li><a href="shop_female_skirt_list">여성 스커트</a></li>
@@ -274,9 +275,9 @@
                       </li>
                       </ul>
                   </li>
-                  <li class="has-children"><a href="#">남성류</a><span>(2356)</span>
+                  <li class="has-children"><a href="#">남성류</a><span></span>
                     <ul>
-                      <li><a href="#">상의</a><span>(1032)</span>
+                      <li><a href="#">상의</a><span></span>
                         <ul>
                           <li><a href="shop_male_outer_list">남성 아우터</a></li>
                           <li><a href="shop_male_cardigan_list">남성 가디건</a></li>
@@ -284,7 +285,7 @@
                         </ul>
                       </li>
                       
-                      <li><a href="#">하의</a><span>(937)</span>
+                      <li><a href="#">하의</a><span></span>
                         <ul>
                           <li><a href="shop_male_longpants_list">남성 긴바지</a></li>
                           <li><a href="shop_male_shortpants_list">남성 반바지</a></li>
@@ -361,14 +362,14 @@
                   <label class="custom-control-label" for="s">S&nbsp;<span class="text-muted">(213)</span></label>
                 </div>
               </section>
-              <!-- Promo Banner-->
-              <section class="promo-box" style="background-image: url(img/banners/02.jpg);">
-                <!-- Choose between .overlay-dark (#000) or .overlay-light (#fff) with default opacity of 50%. You can overrride default color and opacity values via 'style' attribute.--><span class="overlay-dark" style="opacity: .45;"></span>
+              <!-- Promo Banner
+              <section class="promo-box" style="background-image: url(img/banners/02.jpg);"> -->
+                <!-- Choose between .overlay-dark (#000) or .overlay-light (#fff) with default opacity of 50%. You can overrride default color and opacity values via 'style' attribute.<span class="overlay-dark" style="opacity: .45;"></span>
                 <div class="promo-box-content text-center padding-top-3x padding-bottom-2x">
                   <h4 class="text-light text-thin text-shadow">New Collection of</h4>
                   <h3 class="text-bold text-light text-shadow">Sunglassess</h3><a class="btn btn-sm btn-primary" href="#">Shop Now</a>
                 </div>
-              </section>
+              </section> -->
             </aside>
           </div>
         </div>

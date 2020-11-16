@@ -145,14 +145,14 @@
                 <label class="custom-control-label" for="s2">S&nbsp;<span class="text-muted">(213)</span></label>
               </div>
             </section>
-            <!-- Promo Banner-->
-            <section class="promo-box" style="background-image: url(img/banners/02.jpg);">
-              <!-- Choose between .overlay-dark (#000) or .overlay-light (#fff) with default opacity of 50%. You can overrride default color and opacity values via 'style' attribute.--><span class="overlay-dark" style="opacity: .45;"></span>
-              <div class="promo-box-content text-center padding-top-3x padding-bottom-2x">
-                <h4 class="text-light text-thin text-shadow">New Collection of</h4>
-                <h3 class="text-bold text-light text-shadow">Sunglassess</h3><a class="btn btn-sm btn-primary" href="#">Shop Now</a>
-              </div>
-            </section>
+            <!-- Promo Banner
+              <section class="promo-box" style="background-image: url(img/banners/02.jpg);"> -->
+                <!-- Choose between .overlay-dark (#000) or .overlay-light (#fff) with default opacity of 50%. You can overrride default color and opacity values via 'style' attribute.<span class="overlay-dark" style="opacity: .45;"></span>
+                <div class="promo-box-content text-center padding-top-3x padding-bottom-2x">
+                  <h4 class="text-light text-thin text-shadow">New Collection of</h4>
+                  <h3 class="text-bold text-light text-shadow">Sunglassess</h3><a class="btn btn-sm btn-primary" href="#">Shop Now</a>
+                </div>
+              </section> -->
           </div>
         </div>
       </div>
@@ -163,14 +163,14 @@
       <div class="page-title">
         <div class="container">
           <div class="column">
-            <h1>Shop Grid Left Sidebar</h1>
+            <h1>상품 목록</h1>
           </div>
           <div class="column">
             <ul class="breadcrumbs">
-              <li><a href="index.html">Home</a>
+              <li><a href="unishop_main">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li>Shop Grid Left Sidebar</li>
+              <li>남성 반바지</li>
             </ul>
           </div>
         </div>
@@ -261,9 +261,9 @@
               <section class="widget widget-categories">
                 <h3 class="widget-title">Shop Categories</h3>
                 <ul>
-                  <li class="has-children"><a href="#">여성류</a><span>(1138)</span>
+                  <li class="has-children"><a href="#">여성류</a><span></span>
                     <ul>
-                      <li><a href="#">상의</a><span>(508)</span>
+                      <li><a href="#">상의</a><span></span>
                         <ul>
                           <!-- 
                           <li><a href="#">Sneakers</a></li>
@@ -276,7 +276,7 @@
                           <li><a href="shop_female_tshirt_list">여성 티셔츠</a></li>
                         </ul>
                       </li>
-                      <li><a href="#">하의</a><span>(423)</span>
+                      <li><a href="#">하의</a><span></span>
                         <ul>
                         <!-- 
                           <li><a href="#">Boots</a></li>
@@ -294,12 +294,12 @@
                        -->
                     </ul>
                   </li>
-                  <li class="has-children expanded"><a href="#">남성류</a><span>(2356)</span>
+                  <li class="has-children expanded"><a href="#">남성류</a><span></span>
                     <ul>
                     <!-- 
                       <li><a href="#">Men's</a><span>(1032)</span>
                      -->  
-                      <li><a href="#">상의</a><span>(1032)</span>
+                      <li><a href="#">상의</a><span></span>
                       
                         <ul>
                           <!-- 
@@ -316,7 +316,7 @@
                       <!-- 
                       <li><a href="#">Men's</a><span>(937)</span>
                        -->
-                      <li><a href="#">하의</a><span>(937)</span>
+                      <li><a href="#">하의</a><span></span>
                         <ul>
                         <!-- 
                           <li><a href="#">Shirts &amp; Tops</a></li>
@@ -354,7 +354,7 @@
                    -->
                 </ul>
               </section>
-              <!-- Widget Brand Filter
+              <!-- Widget Brand Filter-->
               <section class="widget">
                 <h3 class="widget-title">Filter by Brand</h3>
                 <div class="custom-control custom-checkbox">
@@ -378,8 +378,8 @@
                   <label class="custom-control-label" for="bahama">Tommy Bahama&nbsp;<span class="text-muted">(42)</span></label>
                 </div>
               </section>
-              -->
-              <!-- Widget Size Filter
+              
+              <!-- Widget Size Filter-->
               <section class="widget">
                 <h3 class="widget-title">Filter by Size</h3>
                 <div class="custom-control custom-checkbox">
@@ -399,15 +399,15 @@
                   <label class="custom-control-label" for="s">S&nbsp;<span class="text-muted">(213)</span></label>
                 </div>
               </section>
-              -->
-              <!-- Promo Banner-->
-              <section class="promo-box" style="background-image: url(img/banners/02.jpg);">
-                <!-- Choose between .overlay-dark (#000) or .overlay-light (#fff) with default opacity of 50%. You can overrride default color and opacity values via 'style' attribute.--><span class="overlay-dark" style="opacity: .45;"></span>
+              
+              <!-- Promo Banner
+              <section class="promo-box" style="background-image: url(img/banners/02.jpg);"> -->
+                <!-- Choose between .overlay-dark (#000) or .overlay-light (#fff) with default opacity of 50%. You can overrride default color and opacity values via 'style' attribute.<span class="overlay-dark" style="opacity: .45;"></span>
                 <div class="promo-box-content text-center padding-top-3x padding-bottom-2x">
                   <h4 class="text-light text-thin text-shadow">New Collection of</h4>
                   <h3 class="text-bold text-light text-shadow">Sunglassess</h3><a class="btn btn-sm btn-primary" href="#">Shop Now</a>
                 </div>
-              </section>
+              </section> -->
             </aside>
           </div>
         </div>

@@ -160,8 +160,20 @@ public class MainController {
 				
 		}
 		
+		/*****************pages*************/
+		@RequestMapping("/about")
+		public String about() {
+			return "about";
+		}
+		@RequestMapping("/faq")
+		public String faq() {
+			return "faq";
+		}
+		@RequestMapping("/contacts")
+		public String contacts() {
+			return "contacts";
+		}
 		
-	
 	
 	
 	

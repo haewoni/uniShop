@@ -14,13 +14,13 @@
           </div>
           <div class="column">
             <ul class="breadcrumbs">
-              <li><a href="index.html">Home</a>
+              <li><a href="unishop_main">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li><a href="shop-grid-ls.html">Shop</a>
+              <li><a href="shop_main">Shop</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li>Single Product</li>
+              <li>상품 상세</li>
             </ul>
           </div>
         </div>
@@ -143,7 +143,7 @@
           <div class="col-lg-10 offset-lg-1">
             <ul class="nav nav-tabs" role="tablist">
               <li class="nav-item"><a id="description_tab_a" class="nav-link active" href="#description" data-toggle="tab" role="tab" product_no="${product.product_no}">Description</a></li>
-              <li class="nav-item"><a id="reviews_tab_a" class="nav-link" href="#reviews" data-toggle="tab" role="tab" product_no="${product.product_no}">Reviews (3)</a></li>
+              <li class="nav-item"><a id="reviews_tab_a" class="nav-link" href="#reviews" data-toggle="tab" role="tab" product_no="${product.product_no}">Reviews</a></li>
             </ul>
             <div class="tab-content">
               <div class="tab-pane fade show active" id="description" role="tabpanel">
@@ -236,6 +236,7 @@
             </div>
           </div>
         </div>
+       </div>
         <!-- Related Products Carousel-->
         <h3 class="text-center padding-top-2x mt-2 padding-bottom-1x">You May Also Like</h3>
         <!-- Carousel-->
@@ -275,11 +276,9 @@
           </div>
           
          </c:forEach>
-
-      <!-- Site Footer-->
-
+		</div>
+       <!-- Site Footer-->
       <jsp:include page="common_bottom.jsp"/>
-
     </div>
     <!-- Photoswipe container-->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">

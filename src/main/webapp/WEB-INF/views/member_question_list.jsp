@@ -48,7 +48,7 @@
       <div class="page-title">
         <div class="container">
           <div class="column">
-            <h1>My Tickets</h1>
+            <h1>질문 내역</h1>
           </div>
           <div class="column">
             <ul class="breadcrumbs">
@@ -58,7 +58,7 @@
               <li><a href="member_profile_form">Account</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li>My Tickets</li>
+              <li>질문 내역</li>
             </ul>
           </div>
         </div>
@@ -72,7 +72,7 @@
                 <div class="info-label" data-toggle="tooltip" title="You currently have 290 Reward Points to spend"><i class="icon-medal"></i>290 points</div>
               </div>
               <div class="user-info">
-                <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="img/account/user-ava.jpg" alt="User"></div>
+                <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="IMAGE/basic_profile.png" alt="User"></div>
                 <div class="user-data">
                   <h4>${loginMember.member_name}</h4><span>${loginMember.member_id}</span>
                 </div>
