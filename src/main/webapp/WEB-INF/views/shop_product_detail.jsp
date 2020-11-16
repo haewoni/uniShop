@@ -10,17 +10,17 @@
       <div class="page-title">
         <div class="container">
           <div class="column">
-            <h1>Single Product</h1>
+            <h1>상품 상세</h1>
           </div>
           <div class="column">
             <ul class="breadcrumbs">
               <li><a href="unishop_main">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li><a href="shop_main">Shop</a>
+              <li><a href="shop-grid-ls.html">Shop</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li>상품 상세</li>
+              <li>Single Product</li>
             </ul>
           </div>
         </div>
@@ -137,15 +137,13 @@
             </div>
           </div>
         </div>
-
+		</div>
         <!-- Product Tabs-->
         <div class="row padding-top-3x mb-3">
           <div class="col-lg-10 offset-lg-1">
             <ul class="nav nav-tabs" role="tablist">
               <li class="nav-item"><a id="description_tab_a" class="nav-link active" href="#description" data-toggle="tab" role="tab" product_no="${product.product_no}" sMemberId="${sMemberId}">상품 설명</a></li>
               <li class="nav-item"><a id="reviews_tab_a" class="nav-link" href="#reviews" data-toggle="tab" role="tab" product_no="${product.product_no}" sMemberId="${sMemberId}">리뷰</a></li>
-              <li class="nav-item"><a id="description_tab_a" class="nav-link active" href="#description" data-toggle="tab" role="tab" product_no="${product.product_no}">Description</a></li>
-              <li class="nav-item"><a id="reviews_tab_a" class="nav-link" href="#reviews" data-toggle="tab" role="tab" product_no="${product.product_no}">Reviews</a></li>
             </ul>
             <div class="tab-content">
               <div class="tab-pane fade show active" id="description" role="tabpanel">
@@ -238,7 +236,6 @@
             </div>
           </div>
         </div>
-       </div>
         <!-- Related Products Carousel-->
         <h3 class="text-center padding-top-2x mt-2 padding-bottom-1x">You May Also Like</h3>
         <!-- Carousel-->
@@ -278,10 +275,12 @@
           </div>
           
          </c:forEach>
-		</div>
-       <!-- Site Footer-->
+
+      <!-- Site Footer-->
+
       <jsp:include page="common_bottom.jsp"/>
-    </div>
+	</div>
+   </div>
     <!-- Photoswipe container-->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="pswp__bg"></div>
