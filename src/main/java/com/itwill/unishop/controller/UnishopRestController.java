@@ -184,6 +184,12 @@ public class UnishopRestController {
 	      return "true";
 	   }
 	
+	/*************** 체크아웃-결제 폼 *****************/
+	@RequestMapping(value = "rest_jumun_payment_form", method = RequestMethod.POST)
+	public String jumun_payment_form() {
+		return "true";
+	}
+	
 	/*************** 체크아웃-결제카드 폼 액션 *****************/
 	@RequestMapping(value = "/rest_jumun_payment_action", method = RequestMethod.POST)
 	   public String jumun_payment_action_POST(HttpSession session, @ModelAttribute Jumun jumun) {

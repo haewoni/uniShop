@@ -110,7 +110,7 @@
 </div>
 <div class="checkout-footer margin-top-1x">
 	<div class="column hidden-xs-down">
-		<a class="btn btn-outline-secondary" href="jumun_payment_form"><i
+		<a  class="btn btn-outline-secondary" id="jumun_back_payment_button" href="#"><i
 			class="icon-arrow-left"></i>&nbsp;결제로 돌아가기</a>
 	</div>
 	<div class="column">

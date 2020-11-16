@@ -42,15 +42,15 @@ $(function() {
 		                html+="<table class=\"table\">";
 		                html+="  <tr>";
 		                html+="    <td>카트 합계:</td>";
-		                html+="    <td class=\"text-medium\">"+resultStr+"</td>";
+		                html+="    <td class=\"text-medium\">\"+resultStr+\"</td>";
 		                html+="  </tr>";
 		                html+="  <tr>";
 		                html+="    <td>배송비:</td>";
-		                html+="    <td class=\"text-medium\">"+delivery_fee+"</td>";
+		                html+="    <td class=\"text-medium\">\"+delivery_fee+\"</td>";
 		                html+="  </tr>";
 		                html+="  <tr>";
 		                html+="    <td>총 금액:</td>";
-		                html+="    <td class=\"text-lg text-medium\">"+total_fee+"</td>";
+		                html+="    <td class=\"text-lg text-medium\">\"+total_fee+\"</td>";
 		                html+="  </tr>";
 		                html+="</table>";
 		                html+="</section>";
@@ -209,23 +209,7 @@ $(function() {
 
 
 });
-	/*
 	
-		$(function() {
-			// jumun_delivery <----- jumun_payment
-			$(document).on('click', '#jumun_back_delivery_button', function(e) {
-				$.ajax({
-					url: 'f_jumun_delivery_form',
-					method: 'POST',
-					success: function(html) {
-						alert('2222222');
-						$('#check_out_display').html(html);
-					}
-				});
-
-			})
-		});
-	*/
 
 
 		// jumun_delivery_form_action
@@ -528,11 +512,9 @@ $(function() {
 					}
 				}
 			});
-
 			e.preventDefault();
-
-
 		});
+		
 		// jumun_delivery <----- jumun_payment
 		$(document).on('click', '#jumun_back_delivery_button', function(e) {
 			$.ajax({
@@ -591,12 +573,89 @@ $(function() {
 						html += "  </form>";
 
 						$('#check_out_display').html(html);
-		}
+					}
 				}
 			});
 
 			e.preventDefault();
 		});
+		
+		
+		// jumun_payment <----- jumun_review
+		$(document).on('click', '#jumun_back_payment_button', function(e) {
+			$.ajax({
+				url: 'rest_jumun_payment_form',
+				method: 'POST',
+				success: function(resultStr) {
+					html = "";
+					if (resultStr.trim() == 'true') {
+						
+	          		html += "<div class=\"checkout-steps\">";
+	            	html += "<a href=\"jumun_review_form\">4. 주문확인</a>";
+	            	html += "<a class=\"active\" href=\"jumun_payment_form\"><span class=\"angle\"></span>3. 결제정보</a>";
+	            	html += "<a class=\"completed\" href=\"jumun_delivery_form\"><span class=\"angle\"></span><span class=\"step-indicator icon-circle-check\"></span>2. 배송확인</a>";
+	            	html += "<a class=\"completed\" href=\"jumun_address_form\"><span class=\"angle\"></span><span class=\"step-indicator icon-circle-check\"></span>1. 주소</a>";
+            		html += "</div>";
+		            html += "<h4>결제 방법을 선택하시오</h4>";
+		            html += "<hr class=\"padding-bottom-1x\">";
+		            html += "<div class=\"accordion\" id=\"accordion\" role=\"tablist\">";
+              		html += "<div class=\"card\">";
+                	html += "<div class=\"card-header\" role=\"tab\">";
+                    html += "<h6><a href=\"#card\" data-toggle=\"collapse\"><i class=\"icon-columns\"></i>신용카드 결제</a></h6>";
+                	html += "</div>";
+                	html += "<div class=\"collapse show\" id=\"card\" data-parent=\"#accordion\" role=\"tabpanel\">";
+                    html += "<div class=\"card-body\">";
+                    html += "<p>결제 가능한 신용카드:&nbsp;<img class=\"d-inline-block align-middle\" src=\"img/credit-cards.png\" style=\"width: 120px;\" alt=\"Cerdit Cards\"></p>";
+                    html += "<div class=\"card-wrapper\"></div>";
+                    html += "<form class=\"interactive-credit-card row\"  id=\"jumun_payment_form\" name=\"jumun_payment_form\" >";
+                    html += "<div class=\"form-group col-sm-6\">";
+                    html += "<input class=\"form-control\" type=\"text\" name=\"card_no\"  placeholder=\"card_no\" required>";
+	                html += "</div>";
+	                html += "<div class=\"form-group col-sm-6\">";
+                    html += "<input class=\"form-control\" type=\"text\" name=\"card_member_name\"  placeholder=\"name\" required>";
+                    html += "</div>";
+                    html += "<div class=\"form-group col-sm-3\">";
+                    html += "<input class=\"form-control\" type=\"text\" name=\"card_expire_date\"  placeholder=\"MM/YY\" required>";
+                    html += "</div>";
+                    html += "<div class=\"form-group col-sm-3\">";
+                    html += "<input class=\"form-control\" type=\"text\" name=\"card_cvc\"  placeholder=\"CVC\" required>";
+                    html += "</div>";
+              		html += "<div class=\"col-sm-6\">";
+					html += "<button class=\"btn btn-outline-primary btn-block margin-top-none\" type=\"submit\">clear</button>";
+                    html += "</div>";
+                    html += "</form>";
+                    html += "</div>";
+                	html += "</div>";
+              		html += "</div>";
+            		html += "</div>";
+            		html += "<div class=\"checkout-footer margin-top-1x\">";
+	                html += "<div class=\"column\"><a id=\"jumun_back_delivery_button\" class=\"btn btn-outline-secondary\" href=\"#\"><i class=\"icon-arrow-left\"></i><span class=\"hidden-xs-down\">&nbsp;뒤로 가기</span></a></div>";
+	                html += "<div class=\"column\"><a id=\"jumun_payment_button\" class=\"btn btn-primary\"  href=\"#\"><span class=\"hidden-xs-down\">다음&nbsp;</span><i class=\"icon-arrow-right\"></i></a></div>";
+					html += "</div>";
+
+						$('#check_out_display').html(html);
+					}
+				}
+			});
+
+			e.preventDefault();
+		});
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	});
 });
 
