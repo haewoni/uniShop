@@ -20,6 +20,7 @@ import com.itwill.unishop.domain.Jumun_Detail;
 import com.itwill.unishop.domain.Member;
 import com.itwill.unishop.domain.Product;
 import com.itwill.unishop.domain.Review;
+import com.itwill.unishop.domain.WishList;
 import com.itwill.unishop.service.CartService;
 import com.itwill.unishop.service.DeliveryService;
 import com.itwill.unishop.service.JumunService;
@@ -212,6 +213,29 @@ public class UnishopRestController {
 	      return "true";
 	   }
 
+	
+	/**********위시리스트 추가***********/
+	@RequestMapping(value= "/shop_add_wishlist_action")
+	public String shop_add_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
+		String idCheck = "";
+		//String member_id = "uni1"; //session.getId();
+		try {
+			String sMemberId = (String) session.getAttribute("sMemberId");
+			if(sMemberId == null || sMemberId == "") {
+				idCheck = "flase";
+			}
+			int duplicateCount = wishListService.inspectDuplicateWishList(sMemberId, product_no);
+
+			if(duplicateCount==0) {
+				wishListService.insertWishList(new WishList(-1, sMemberId, product_no, null));
+			}
+			idCheck = "true";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return idCheck;
+	}
+	
 	
 	@RequestMapping(value = "/rest_cart_update_action_get")
 	public String cart_update_action_get(Model model, HttpSession session, @RequestParam int cart_no, @RequestParam int cart_qty) {

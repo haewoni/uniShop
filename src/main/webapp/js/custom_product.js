@@ -20,8 +20,13 @@ $(function() {
 			url : 'shop_add_wishlist_action',
 			data : param,
 			method: 'POST',
-			success: function(){
-			alert('등록되었습니다');
+			success: function(idCheck){
+				if(idCheck == "true"){
+					alert('등록되었습니다');
+				}else{
+					alert('로그인 하세요!!')
+					location.href = "member_login_register_form";
+				}
 			}
 		});
 		e.preventDefault();

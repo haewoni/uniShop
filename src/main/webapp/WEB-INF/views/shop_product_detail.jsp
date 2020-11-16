@@ -262,12 +262,9 @@
                 <span><fmt:formatNumber value="${product.product_price}" pattern="###,###,###"/>원</span>
               </h4>
               <div class="product-buttons">
-				<a href="shop_add_wishlist_action?product_no=${product.product_no}">
-					<button class="btn btn-outline-secondary btn-sm btn-wishlist"
-						data-toggle="tooltip" title="Whishlist">
-						<i class="icon-heart"></i>
-					</button>
-				</a> 
+				<button class="btn btn-outline-primary btn-sm add_wishlist_button" product_no="${product.product_no}" type="button">
+                		<i class="icon-heart" product_no="${product.product_no}"></i>
+                </button> 
 				<a href="shop_product_detail?product_no=${product.product_no}">
 					<button class="btn btn-outline-primary btn-sm">상품상세</button>
 				</a>
