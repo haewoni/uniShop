@@ -7,34 +7,36 @@ $(function() {
 			data: $('#jumun_payment_form').serialize(),
 			success: function(str) {
 				alert('1111');
-				}
-		});
-
-	});
-	
-$(function() {
-	// jumun_payment ----> jumun_review
-	$(document).on('click', '#jumun_review_button', function(e) {
-		$.ajax({
-			url: 'f_jumun_review_form',
-			method: 'POST',
-			success: function(html) {
-				$('#check_out_display').html(html);
 			}
 		});
 
 	});
-	
-	// jumun_payment_form ---- side bar
 
-	$(document).on('click', '#jumun_payment_button', function(e) {
-		$.ajax({
-			url: 'rest_jumun_sidebar',
-			method: 'POST',
-			data: $('#jumun_delivery_form').serialize(),
-			success: function(resultStr) {
+	$(function() {
+		// jumun_payment ----> jumun_review
+		$(document).on('click', '#jumun_review_button', function(e) {
+			$.ajax({
+				url: 'f_jumun_review_form',
+				method: 'POST',
+				success: function(html) {
+					$('#check_out_display').html(html);
+				}
+			});
+
+		});
+
+		// jumun_payment_form ---- side bar
+
+		$(document).on('click', '#jumun_payment_button', function(e) {
+			var cart_subtotal = "${cart_subtotal}";
+			param = cart_subtotal;
+			$.ajax({
+				url: 'rest_jumun_sidebar',
+				method: 'POST',
+				data: param,
+				success: function(resultStr) {
 					html ="";
-				if(resultStr.trim() =='cart_subtotal'){
+				if(resultStr.trim() =='true'){
               			html+="<div class=\"padding-top-2x hidden-lg-up\"></div>";
 						html+="	 <section class=\"widget widget-order-summary\">";
 		                html+="<h3 class=\"widget-title\">주문 요약</h3>";
@@ -56,7 +58,7 @@ $(function() {
 
 						$('#sidebar').html(html);
 					}
-				
+
 			}
 		});
 	});
@@ -68,7 +70,7 @@ $(function() {
 			data: $('#jumun_delivery_form').serialize()
 		});
 	});
-	
+
 	// jumun_delivery ----> jumun_payment
 	$(document).on('click', '#jumun_payment_button', function(e) {
 		$.ajax({
@@ -89,17 +91,15 @@ $(function() {
 			data: $('#jumun_address_form').serialize()
 		});
 	}));
-
 	// jumun_address----> jumun_delivery
 	$('#jumun_address_action_button').on('click', (function(e) {
 		$.ajax({
 			url: 'rest_jumun_delivery_form',
 			method: 'POST',
 			success: function(resultStr) {
-
 				html = "";
 				if (resultStr.trim() == 'true') {
-
+					html += "<form name=\"jumun_delivery_form\" id=\"jumun_delivery_form\">";
 					html += "			<div class=\"checkout-steps\"><a href=\"#\">4. 주문확인</a>";
 					html += "   <a href=\"#\"><span class=\"angle\"></span>3. 결제정보</a>";
 					html += "   <a class=\"active\" href=\"jumun_delivery_form\"><span class=\"angle\"></span>2. 배송방법</a>";
@@ -143,7 +143,7 @@ $(function() {
 					html += "    </table>";
 					html += "   </div>";
 					html += "   <div class=\"checkout-footer margin-top-1x\">";
-					html += "     <div class=\"column\"><a class=\"btn btn-outline-secondary\" href=\"checkout-address.html\"><i class=\"icon-arrow-left\"></i><span class=\"hidden-xs-down\">&nbsp;Back</span></a></div>";
+					html += "     <div class=\"column\"><a id=\"jumun_address_back_button\" class=\"btn btn-outline-secondary\" href=\"#\"><i class=\"icon-arrow-left\"></i><span class=\"hidden-xs-down\">&nbsp;Back</span></a></div>";
 					html += "     <div class=\"column\"><a id=\"jumun_payment_button\" class=\"btn btn-primary\" href=\"#\"><span class=\"hidden-xs-down\">계속&nbsp;</span><i class=\"icon-arrow-right\"></i></a></div>";
 					html += "   </div>";
 					html += "  </form>";
@@ -159,8 +159,11 @@ $(function() {
 	}));
 
 
+
 });
 });
+
+
 
 
 /*

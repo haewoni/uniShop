@@ -130,25 +130,9 @@
 								class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;카트로
 									돌아가기</span></a>
 						</div>
-						<!-- 
-						loginMember.setMember_name(member.getMember_name());
-		loginMember.setMember_phone(member.getMember_phone());
-		loginMember.setMember_address_name(member.getMember_address_name());
-		loginMember.setMember_address_country(member.getMember_address_country());
-		loginMember.setMember_address_city(member.getMember_address_city());
-		loginMember.setMember_address_zipcode(member.getMember_address_zipcode());
-		loginMember.setMember_address1(member.getMember_address1());
-		loginMember.setMember_address2(member.getMember_address2()); -->
+						
 						<div class="column">
 							<a class="btn btn-primary" 
-								member_name="${loginMember.member_name}"
-								member_phone="${loginMember.member_phone}"
-								member_address_name="${loginMember.member_address_name}"
-								member_address_country="${loginMember.member_address_country}"
-								member_address_city="${loginMember.member_address_city}"
-								member_address_zipcode="${loginMember.member_address_zipcode}"
-								member_address1="${loginMember.member_address1}"
-								member_address2="${loginMember.member_address2}"
 								id="jumun_address_action_button"
 								href="#"><span
 								class="hidden-xs-down">계속&nbsp;</span><i
