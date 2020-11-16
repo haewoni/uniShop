@@ -1,31 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="login_check.jspf" %> 
-	<jsp:include page="common_top.jsp"/>
-    <!-- Off-Canvas Wrapper-->
-    <div class="offcanvas-wrapper">
-      <!-- Page Title-->
-      <div class="page-title">
-        <div class="container">
-          <div class="column">
-            <h1>결제</h1>
-          </div>
-          <div class="column">
-            <ul class="breadcrumbs">
-              <li><a href="unishop_main">Home</a>
-              </li>
-              <li class="separator">&nbsp;</li>
-              <li>Checkout</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- Page Content-->
-      <div class="container padding-bottom-3x mb-2">
-        <div class="row">
-          <!-- Checkout Address-->
-          <div class="col-xl-9 col-lg-8" id = "jumun_delivery">
-          <form name="jumun_delivery_form" id="jumun_delivery_form">
+    
+    
+    
+    <form name="jumun_delivery_form" id="jumun_delivery_form">
             <div class="checkout-steps"><a href="jumun_review_form">4. 주문확인</a>
             <a href="jumun_payment_form"><span class="angle"></span>3. 결제정보</a>
             <a class="active" href="jumun_delivery_form"><span class="angle"></span>2. 배송방법</a>
@@ -69,47 +47,7 @@
               </table>
             </div>
             <div class="checkout-footer margin-top-1x">
-              <div class="column"><a class="btn btn-outline-secondary" href="checkout-address.html"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;뒤로</span></a></div>
+              <div class="column"><a class="btn btn-outline-secondary" href="#"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;Back</span></a></div>
               <div class="column"><a class="btn btn-primary" id="jumun_payment_button" name="jumun_payment_button" href="#"><span class="hidden-xs-down">계속&nbsp;</span><i class="icon-arrow-right"></i></a></div>
             </div>
-          </form>
-          </div>
-          <!-- Sidebar          -->
-          <div class="col-xl-3 col-lg-4">
-            <aside class="sidebar">
-              <div class="padding-top-2x hidden-lg-up"></div>
-               <!-- Order Summary Widget-->
-              <section class="widget widget-order-summary">
-                <h3 class="widget-title">주문 요약</h3>
-                <table class="table">
-                  <tr>
-                    <td>카트 합계:</td>
-                    <td class="text-medium">${cart_subtotal}</td>
-                  </tr>
-                  <tr>
-                    <td>배송비:</td>
-                    <td class="text-medium"></td>
-                  </tr>
-                  <tr>
-                    <td>총 금액:</td>
-                    <td class="text-lg text-medium">${cart_subtotal}</td>
-                  </tr>
-                </table>
-              </section>
-            </aside>
-          </div>
-        </div>
-      </div>
-      <!-- Site Footer-->
-      <jsp:include page="common_bottom.jsp"/>
-    </div>
-    <!-- Back To Top Button-->
-    <a class="scroll-to-top-btn" href="#"><i class="icon-arrow-up"></i></a>
-    <!-- Backdrop-->
-    <div class="site-backdrop"></div>
-    <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
-    <script src="js/vendor.min.js"></script>
-    <script src="js/scripts.min.js"></script>
-    <script src="js/common.js"></script>
-  </body>
-</html>
+           </form>

@@ -139,9 +139,8 @@ public class UnishopRestController {
 
 	/*************** 체크아웃-주소폼 *****************/
 	@RequestMapping("/rest_jumun_address_form")
-	public Member jumun_address_form(HttpSession session) {
-		String sMemberId = (String) session.getAttribute("sMemberId");
-		return memberService.selectMemberById(sMemberId);
+	public String jumun_address_form() {
+		return "true";
 	}
 
 	/*************** 체크아웃-주소폼 액션 *****************/
