@@ -212,7 +212,7 @@ public class UnishopRestController {
 	      return "true";
 	   }
 
-	
+	/*
 	@RequestMapping(value = "/rest_cart_update_action_get")
 	public String cart_update_action_get(Model model, HttpSession session, @RequestParam int cart_no, @RequestParam int cart_qty) {
 		String msg = " ";
@@ -227,5 +227,5 @@ public class UnishopRestController {
 		}
 		return msg;
 	}
-	
+	*/
 }
