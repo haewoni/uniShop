@@ -224,8 +224,9 @@ public class UnishopRestController {
 			if(sMemberId == null || sMemberId == "") {
 				idCheck = "flase";
 			}
+			
 			int duplicateCount = wishListService.inspectDuplicateWishList(sMemberId, product_no);
-
+ 
 			if(duplicateCount==0) {
 				wishListService.insertWishList(new WishList(-1, sMemberId, product_no, null));
 			}

@@ -22,7 +22,8 @@ $(function() {
 			method: 'POST',
 			success: function(idCheck){
 				if(idCheck == "true"){
-					alert('등록되었습니다');
+					alert('추가되었습니다');
+					location.href = "shop_product_detail?product_no="+product_no;
 				}else{
 					alert('로그인 하세요!!')
 					location.href = "member_login_register_form";
