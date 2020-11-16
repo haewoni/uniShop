@@ -25,166 +25,150 @@ import com.itwill.unishop.service.WishListService;
 public class MainController {
 	@Autowired
 	private ProductService productService;
-	
+
 	@Autowired
 	private WishListService wishListService;
-	
+
 	@Autowired
-	private JumunService jumunService; 
-	
+	private JumunService jumunService;
+
 	@Autowired
 	private QuestionService questionService;
-	
+
 	@Autowired
 	private CartService cartService;
-	
-	
-	
+
 	/********************** main **********************/
 
 	@RequestMapping("/unishop_main")
-	public String unishop_main(Model model) {
+	public String unishop_main(Model model, HttpSession session) {
 		String forwardPath = "";
 		ArrayList<Product> productList = productService.selectEight();
 		model.addAttribute("productList", productList);
+		String sMemberId = (String) session.getAttribute("sMemberId");
+		if (sMemberId != null) {
+			ArrayList<Cart> cartList = cartService.selectCartAll(sMemberId);
+			int cart_subtotal = 0;
+			for (Cart cart : cartList) {
+				cart_subtotal += cart.getCart_tot_price();
+			}
+			session.setAttribute("cart_subtotal", cart_subtotal);
+			session.setAttribute("cartList", cartList);
+		}
 		forwardPath = "unishop_main";
 		return forwardPath;
 
 	}
-	
-	
-	
+
 	/********************** 남성아우터 **********************/
 	@RequestMapping("/product_ManOuterList")
-	public String product_ManOuterList() throws Exception{
+	public String product_ManOuterList() throws Exception {
 		String forwardPath = "";
-			forwardPath = "redirect:shop_male_outer_list";
+		forwardPath = "redirect:shop_male_outer_list";
 		return forwardPath;
 	}
 
-	
 	/********************** 남성 긴바지 **********************/
 	@RequestMapping("/product_ManPantslist")
-	public String product_M_B_list() throws Exception{
+	public String product_M_B_list() throws Exception {
 		String forwardPath = "";
-			forwardPath = "redirect:shop_male_longpants_list";
+		forwardPath = "redirect:shop_male_longpants_list";
 		return forwardPath;
 	}
-	
+
 	/********************** 여성 아우터 **********************/
 	@RequestMapping("/product_FemaleOuter_list")
-	public String product_F_T_list() throws Exception{
+	public String product_F_T_list() throws Exception {
 		String forwardPath = "";
-			forwardPath = "redirect:shop_female_outer_list";
+		forwardPath = "redirect:shop_female_outer_list";
 		return forwardPath;
 	}
-	
+
 	/********************** 여성 스커트 **********************/
 	@RequestMapping("/product_FemaleSkirt_list")
-	public String product_F_B_list() throws Exception{
+	public String product_F_B_list() throws Exception {
 		String forwardPath = "";
-			forwardPath = "redirect:shop_female_skirt_list";
+		forwardPath = "redirect:shop_female_skirt_list";
 		return forwardPath;
 	}
-	
-	
-	
+
 	/********************** product selectAll **********************/
 	@RequestMapping("/product_All_List")
 	public String product_All_List(Model model) {
 		String forwardPath = "";
-			forwardPath = "redirect:shop_main";
-		return forwardPath;	
+		forwardPath = "redirect:shop_main";
+		return forwardPath;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/********************** ACCOUNT click 시  **********************/
-		@RequestMapping(value = "/account_member_detail")
-		public String account_member_detail(Model model, HttpSession session) {
-			String forwardPath = "";
-			String sMemberId = (String) session.getAttribute("sMemberId");
-			try {
-				if(sMemberId == null || sMemberId == "") {
-					forwardPath = "member_login_register_form";
-				}
-	//				memberService.selectMemberById(member_id);
-					ArrayList<Jumun> jumunList = (ArrayList<Jumun>) jumunService.selectById(sMemberId);
-					ArrayList<WishList> wishList = wishListService.selectWishListAll(sMemberId);
-					//Question question = questionService.selectByNo(question_no);
-					ArrayList<Question> questionList = questionService.selectById(sMemberId);
-					
-					//ArrayList<Question> questionList = questionService
-					//session.setAttribute("sMemberId", member_id);
-					//model.addAttribute("question", question);
-					model.addAttribute("jumunList", jumunList);
-					model.addAttribute("wishList", wishList);
-					model.addAttribute("questionList", questionList);
-					forwardPath = "member_profile_form";
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			return forwardPath;
-		}
-	
-	
-	
-	
-		
 
-		/********************** 장바구니 클릭시 해당 아이디의 카트 보기 **********************/
-		@RequestMapping("/main_cart_list")
-		public String main_cart_list(Model model, HttpSession session) {
-			String forwardPath = "";
-			try {
-				String sMemberId = (String) session.getAttribute("sMemberId");
-				if(sMemberId == null || sMemberId == "") {
-					
-					forwardPath = "member_login_register_form";
-				}
-				ArrayList<Cart> cartList = cartService.selectCartAll(sMemberId);
-				model.addAttribute("cartList", cartList);
-				
-				forwardPath = "cart_list";
-			} catch (Exception e) {
-				e.printStackTrace();
+	/********************** ACCOUNT click 시 **********************/
+	@RequestMapping(value = "/account_member_detail")
+	public String account_member_detail(Model model, HttpSession session) {
+		String forwardPath = "";
+		String sMemberId = (String) session.getAttribute("sMemberId");
+		try {
+			if (sMemberId == null || sMemberId == "") {
+				forwardPath = "member_login_register_form";
 			}
-			return forwardPath;
-				
+			// memberService.selectMemberById(member_id);
+			ArrayList<Jumun> jumunList = (ArrayList<Jumun>) jumunService.selectById(sMemberId);
+			ArrayList<WishList> wishList = wishListService.selectWishListAll(sMemberId);
+			// Question question = questionService.selectByNo(question_no);
+			ArrayList<Question> questionList = questionService.selectById(sMemberId);
+
+			// ArrayList<Question> questionList = questionService
+			// session.setAttribute("sMemberId", member_id);
+			// model.addAttribute("question", question);
+			model.addAttribute("jumunList", jumunList);
+			model.addAttribute("wishList", wishList);
+			model.addAttribute("questionList", questionList);
+			forwardPath = "member_profile_form";
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		
-		/*****************pages*************/
-		@RequestMapping("/about")
-		public String about() {
-			return "about";
+		return forwardPath;
+	}
+
+	/********************** 장바구니 클릭시 해당 아이디의 카트 보기 **********************/
+	@RequestMapping("/main_cart_list")
+	public String main_cart_list(Model model, HttpSession session) {
+		String forwardPath = "";
+		try {
+			String sMemberId = (String) session.getAttribute("sMemberId");
+			if (sMemberId == null || sMemberId == "") {
+
+				forwardPath = "member_login_register_form";
+			}
+			ArrayList<Cart> cartList = cartService.selectCartAll(sMemberId);
+			model.addAttribute("cartList", cartList);
+
+			forwardPath = "cart_list";
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		@RequestMapping("/faq")
-		public String faq() {
-			return "faq";
-		}
-		@RequestMapping("/contacts")
-		public String contacts() {
-			return "contacts";
-		}
-		
-	
-	
-	
-	//모든 Exception을 던지면 이곳으로 날라온다
+		return forwardPath;
+
+	}
+
+	/***************** pages *************/
+	@RequestMapping("/about")
+	public String about() {
+		return "about";
+	}
+
+	@RequestMapping("/faq")
+	public String faq() {
+		return "faq";
+	}
+
+	@RequestMapping("/contacts")
+	public String contacts() {
+		return "contacts";
+	}
+
+	// 모든 Exception을 던지면 이곳으로 날라온다
 	/*
-		@ExceptionHandler(Exception.class)
-		public String member_error_handle(Exception e) {
-			return "error_handle"; 
-		}
-	*/
-	
-	
-	
+	 * @ExceptionHandler(Exception.class) public String
+	 * member_error_handle(Exception e) { return "error_handle"; }
+	 */
+
 }
