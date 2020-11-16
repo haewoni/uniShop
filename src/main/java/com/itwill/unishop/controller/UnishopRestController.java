@@ -132,16 +132,16 @@ public class UnishopRestController {
 	
 	/*************** 체크아웃- side bar 총금액 *****************/
 	@RequestMapping(value = "rest_jumun_sidebar", method = RequestMethod.POST)
-	public int jumun_sidebar(HttpSession session) {
+	public String jumun_sidebar(HttpSession session, Model model) {
 		int cart_subtotal = (int)session.getAttribute("cart_subtotal");
-		return cart_subtotal;
+		model.addAttribute("cart_subtotal", cart_subtotal);
+		return "true";
 	}
 
 	/*************** 체크아웃-주소폼 *****************/
-	@RequestMapping("/rest_jumun_address_form")
-	public Member jumun_address_form(HttpSession session) {
-		String sMemberId = (String) session.getAttribute("sMemberId");
-		return memberService.selectMemberById(sMemberId);
+	@RequestMapping(value = "/rest_jumun_address_form", method = RequestMethod.POST)
+	public String jumun_address_form() {
+		return "true";
 	}
 
 	/*************** 체크아웃-주소폼 액션 *****************/
