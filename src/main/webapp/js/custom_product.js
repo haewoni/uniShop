@@ -90,7 +90,7 @@ $(function() {
 				html += "<div class=\"form-group\">";
 				html += "<label for=\"review_name\">성함</label>";
 				html += "<input class=\"form-control form-control-rounded\" type=\"text\" name=\"review_name\" id=\"review_name\" required>";
-				html += "<input type=\"hidden\" name=\"sMemberId\"  id=\"sMemberId\"  name=\"sMemberId\" value="+sMemberId+">";
+				html += "<input type=\"hidden\" name=\"sMemberId\"  id=\"sMemberId\"  name=\"sMemberId\">";
 				html += "<input type=\"hidden\" name=\"product_no\" id=\"product_no\" name=\"product_no\">";
 				html += "</div>";
 				html += "</div>";
