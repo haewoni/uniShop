@@ -172,4 +172,20 @@ public class UnishopRestController {
 	      return "true";
 	   }
 
+	
+	@RequestMapping(value = "/rest_cart_update_action_get")
+	public String cart_update_action_get(Model model, HttpSession session, @RequestParam int cart_no, @RequestParam int cart_qty) {
+		String msg = " ";
+		String sMemberId = (String) session.getAttribute("sMemberId");
+		
+		Cart updateCart = new Cart(cart_no, cart_qty, 1, "", "", "");
+		int update_Cartno = cartService.updateCart(updateCart);
+		if (update_Cartno == 1) {
+			msg = "true";
+		} else {
+			msg = "false";
+		}
+		return msg;
+	}
+	
 }
