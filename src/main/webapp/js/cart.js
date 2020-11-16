@@ -27,7 +27,29 @@ $(function() {
 			}
 		});
 	});
+	
 });
+
+function Check(index, cartNo){
+	   var index = index;
+	   var qty = $("#updateQty"+ index + " option:selected").val();
+	   params = 'cart_no=' + cartNo + '&cart_qty=' + qty;
+					alert('function Check : '+params);
+	   $.ajax({
+			url: 'rest_cart_update_action_get',
+			data: params,
+			contentType: 'text',
+			success:function(msg) {
+				if (msg.trim() == 'true') {
+					alert('수량변경 성공');
+				} else {
+					alert('수량변경 실패');
+				}
+
+			}
+		});
+}
+
 
 
 

@@ -8,8 +8,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page import="java.text.DecimalFormat"%>
 <%@ include file="login_check.jspf" %>  
-	<jsp:include page="common_top.jsp"/>
 
+	<jsp:include page="common_top.jsp"/>
     <!-- Off-Canvas Wrapper-->
     <div class="offcanvas-wrapper">
       <!-- Page Title-->
@@ -38,15 +38,14 @@
         
         <table class="table">
 
-		  <form method="post" action="cart_update_action_get">   
+		  <!-- <form name="select" method="post" action="cart_update_action_get"> -->   
 
-	            <thead>
+	        <thead>
 	              <tr>
 	                <th>상품명</th>
 	                <th class="text-center">수량</th>
 	                <th class="text-center">상품가격</th>
-	                <th class="text-center"><a class="btn btn-sm btn-outline-danger" href="cart_delete_memberId_action_get?member_id=${cart.member_id}" data-toggle="tooltip" title="카트 전체상품 삭제">전체상품 삭제</a></th>
-	                <th class="text-center">수량변경</th>
+	                <th class="text-center"><a class="btn btn-sm btn-outline-danger" href="cart_delete_memberId_action_get" data-toggle="tooltip" title="카트 전체상품 삭제">전체상품 삭제</a></th>
 	              </tr>
             </thead>
             <tbody>
@@ -71,8 +70,8 @@
 
                  <td class="text-center">
                   <div class="count-input">
-	                 <select name="cart_qty" class="form-control">
-					    <option value="0" selected="selected">${cart.cart_qty}</option>
+	                 <select name="cart_qty" id="updateQty${status.index}" class="form-control" onchange="Check(${status.index}, ${cart.cart_no})"> 
+					    <option value="${cart.cart_qty}" selected="selected">${cart.cart_qty}</option>
 					    <option value="1">1</option>
 					    <option value="2">2</option>
 					    <option value="3">3</option>
@@ -88,18 +87,13 @@
                  </td>
                 <td class="text-center text-lg text-medium"><fmt:formatNumber value="${cart.cart_tot_price}" pattern="###,###,###"/>원</td>
                 <td class="text-center"><a class="remove-from-cart" href="cart_delete_cartNo_action_get?cart_no=${cart.cart_no}" data-toggle="tooltip" title="선택상품 삭제"><i class="icon-cross"></i></a></td>
-                <td>
-	                <input type=submit value="수정" data-toggle="tooltip" title="수량변경" class=TXTFLD onclick="location.href = 'cart_update_action_get'" >
-				    <input type="hidden" name=cart_no value="${cart.cart_no}">
-                </td>
-                
               </tr>
             		
               <c:set var= "sum" value="${sum + cart.cart_tot_price}"/>
 			</c:forEach>
 			
             </tbody>
-          </form>
+          <!-- </form> -->
         </table>
         </div>
         
