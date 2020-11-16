@@ -79,9 +79,11 @@
 	              </h4>
 	              
 	              <div class="product-buttons">
+	              
                 	<button class="btn btn-outline-primary btn-sm add_wishlist_button" product_no="${product.product_no}" type="button">
                 		<i class="icon-heart" product_no="${product.product_no}"></i>
                 	</button>
+                   
                		<a href="shop_product_detail?product_no=${product.product_no}">
                 		<button class="btn btn-outline-primary btn-sm">detail</button>	
                 	</a>

@@ -192,29 +192,29 @@ public class ProductController {
 		}
 		return forwardPath;
 	}
-
-	/**********위시리스트 추가***********/
-	@RequestMapping(value= "/shop_add_wishlist_action")
-	public String shop_add_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
-		String forwardPath = "";
-		//String member_id = "uni1"; //session.getId();
-		try {
-			String sMemberId = (String) session.getAttribute("sMemberId");
-			if(sMemberId == null || sMemberId == "") {
-
-				forwardPath = "member_login_register_form";
-			}
-			int duplicateCount = wishListService.inspectDuplicateWishList(sMemberId, product_no);
-
-			if(duplicateCount==0) {
-				wishListService.insertWishList(new WishList(-1, sMemberId, product_no, null));
-			}
-			forwardPath = "redirect:shop_product_detail?product_no="+product_no;
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return forwardPath;
-	}
+	
+	
+//	/**********위시리스트 추가***********/
+//	@RequestMapping(value= "/shop_add_wishlist_action")
+//	public String shop_add_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
+//		String idCheck = "";
+//		//String member_id = "uni1"; //session.getId();
+//		try {
+//			String sMemberId = (String) session.getAttribute("sMemberId");
+//			if(sMemberId == null || sMemberId == "") {
+//				idCheck = "flase";
+//			}
+//			int duplicateCount = wishListService.inspectDuplicateWishList(sMemberId, product_no);
+//
+//			if(duplicateCount==0) {
+//				wishListService.insertWishList(new WishList(-1, sMemberId, product_no, null));
+//			}
+//			idCheck = "true";
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		return idCheck;
+//	}
 
 	/**********위시리스트 삭제***********/
 	@RequestMapping("/shop_delete_wishlist_action")
