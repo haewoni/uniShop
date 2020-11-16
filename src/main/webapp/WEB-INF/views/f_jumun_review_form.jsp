@@ -114,6 +114,6 @@
 			class="icon-arrow-left"></i>&nbsp;결제로 돌아가기</a>
 	</div>
 	<div class="column">
-		<a class="btn btn-primary" href="jumun_review_action">계속</a>
+		<a id = "jumun_complete_button" class="btn btn-primary" href="jumun_review_action">계속</a>
 	</div>
 </div>

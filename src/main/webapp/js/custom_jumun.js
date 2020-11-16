@@ -1,3 +1,8 @@
+$(function(){
+	$('#jumun_complete_button')
+})
+
+
 $(function() {
 	// jumun_payment_form_action
 	$(document).on('click', '#jumun_review_button', function(e) {
@@ -25,43 +30,7 @@ $(function() {
 
 		});
 
-		// jumun_payment_form ---- side bar
-
-		$(document).on('click', '#jumun_payment_button', function(e) {
-			var cart_subtotal = "${cart_subtotal}";
-			param = cart_subtotal;
-			$.ajax({
-				url: 'rest_jumun_sidebar',
-				method: 'POST',
-				data: param,
-				success: function(resultStr) {
-					html ="";
-				if(resultStr.trim() =='true'){
-              			html+="<div class=\"padding-top-2x hidden-lg-up\"></div>";
-						html+="	 <section class=\"widget widget-order-summary\">";
-		                html+="<h3 class=\"widget-title\">주문 요약</h3>";
-		                html+="<table class=\"table\">";
-		                html+="  <tr>";
-		                html+="    <td>카트 합계:</td>";
-		                html+="    <td class=\"text-medium\">"+resultStr+"</td>";
-		                html+="  </tr>";
-		                html+="  <tr>";
-		                html+="    <td>배송비:</td>";
-		                html+="    <td class=\"text-medium\">"+delivery_fee+"</td>";
-		                html+="  </tr>";
-		                html+="  <tr>";
-		                html+="    <td>총 금액:</td>";
-		                html+="    <td class=\"text-lg text-medium\">"+total_fee+"</td>";
-		                html+="  </tr>";
-		                html+="</table>";
-		                html+="</section>";
-
-						$('#sidebar').html(html);
-					}
-
-			}
-		});
-	});
+	
 	// jumun_delivery_form_action
 	$(document).on('click', '#jumun_payment_button', function(e) {
 		$.ajax({
@@ -71,13 +40,24 @@ $(function() {
 		});
 	});
 
-	// jumun_delivery ----> jumun_payment
+	// jumun_delivery ----> jumun_payment /  & sidebar(합계금액) 작업
 	$(document).on('click', '#jumun_payment_button', function(e) {
 		$.ajax({
 			url: 'f_jumun_payment_form',
 			method: 'GET',
 			success: function(html) {
 				$('#check_out_display').html(html);
+			}
+		});
+		$.ajax({
+			url: 'rest_jumun_sidebar',
+			method: 'GET',
+			success: function(html) {
+				var html = html.trim().split('-');
+				var tot = parseInt(html[0])+parseInt(html[1]);
+				
+				$(delivery_fee).html(html[1]);
+				$(total_fee).html(tot);
 			}
 		});
 
@@ -162,7 +142,6 @@ $(function() {
 
 });
 });
-
 
 
 

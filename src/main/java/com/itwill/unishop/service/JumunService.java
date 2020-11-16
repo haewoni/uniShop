@@ -11,6 +11,9 @@ public interface JumunService {
 	 	주문 추가
 	 */
 	public int insertJumun(Jumun jumun);
+	
+	public int selectJumunNo(Jumun jumun);
+	
 	/*
 	 	주문 전체목록 찾기
 	 */

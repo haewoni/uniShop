@@ -130,13 +130,7 @@ public class UnishopRestController {
 		return msg;
 	}
 	
-	/*************** 체크아웃- side bar 총금액 *****************/
-	@RequestMapping(value = "rest_jumun_sidebar", method = RequestMethod.POST)
-	public String jumun_sidebar(HttpSession session, Model model) {
-		int cart_subtotal = (int)session.getAttribute("cart_subtotal");
-		model.addAttribute("cart_subtotal", cart_subtotal);
-		return "true";
-	}
+
 
 	/*************** 체크아웃-주소폼 *****************/
 	@RequestMapping(value = "/rest_jumun_address_form", method = RequestMethod.POST)
@@ -173,10 +167,10 @@ public class UnishopRestController {
 	   public String jumun_delivery_action_POST(HttpSession session, @RequestParam String deliveryStr) {
 	      Jumun createJumun = new Jumun();
 	      if(deliveryStr.equalsIgnoreCase("일반")) {
-	         createJumun.setDelivery_no("3000");
+	         createJumun.setDelivery_no("GEN");
 	         session.setAttribute("delivery_fee", 3000);
 	      }else {
-	         createJumun.setDelivery_no("6000");
+	         createJumun.setDelivery_no("EX");
 	         session.setAttribute("delivery_fee", 6000);
 	      }
 	      System.out.println(createJumun);
@@ -184,6 +178,13 @@ public class UnishopRestController {
 	      return "true";
 	   }
 	
+	/*************** 체크아웃- side bar 총금액 *****************/
+	@RequestMapping(value = "rest_jumun_sidebar")
+	public String jumun_sidebar(HttpSession session, Model model) {
+		int cart_subtotal = (int)session.getAttribute("cart_subtotal");
+		int delivery_fee = (int)session.getAttribute("delivery_fee");
+		return cart_subtotal+"-"+delivery_fee;
+	}
 	/*************** 체크아웃-결제카드 폼 액션 *****************/
 	@RequestMapping(value = "/rest_jumun_payment_action", method = RequestMethod.POST)
 	   public String jumun_payment_action_POST(HttpSession session, @ModelAttribute Jumun jumun) {
@@ -192,7 +193,7 @@ public class UnishopRestController {
 	      int delivery_fee = (int)session.getAttribute("delivery_fee");
 	      
 	      Jumun createJumun = (Jumun)session.getAttribute("createJumun");
-	      createJumun.setJumun_no(1);
+	     
 	      createJumun.setJumun_status("주문");
 	      createJumun.setJumun_tot_price(cart_subtotal+delivery_fee);
 	      createJumun.setJumun_date(new Date());
@@ -203,6 +204,7 @@ public class UnishopRestController {
 	      createJumun.setCard_member_name(jumun.getCard_member_name());
 	      
 	      session.setAttribute("createJumun", createJumun);
+	      System.out.println(createJumun);
 	      return "true";
 	   }
 

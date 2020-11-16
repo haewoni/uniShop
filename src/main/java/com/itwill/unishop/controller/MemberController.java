@@ -56,10 +56,8 @@ public class MemberController {
 		String forwardPath = "";
 		try {
 			Member loginMember=memberService.loginMember(member_id, member_password);
-
 			session.setAttribute("loginMember",loginMember);//멤버의 객체반환
 			session.setAttribute("sMemberId", member_id);//멤버의아이디 보여줌
-			
 			forwardPath = "redirect:unishop_main";
 		} catch (PasswordMismatchException e) {
 			model.addAttribute("msg2", e.getMessage());
@@ -80,6 +78,7 @@ public class MemberController {
 	@RequestMapping(value = "/member_logout_action", method = RequestMethod.GET)
 	public String member_logout_action(HttpSession session) {
 		session.invalidate();
+		
 		return "redirect:unishop_main";
 	}
 
