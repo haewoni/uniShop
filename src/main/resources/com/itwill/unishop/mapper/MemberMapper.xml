@@ -9,7 +9,7 @@
 		WHERE member_id=#{member_id}
 	</select>
 	
-	<select id="isExistMember" parameterType="string" resultType="_int">
+	<select id="isExistMember" parameterType="string" resultType="java.lang.Integer">
 		select count(member_id) 
 		from member 
 		where member_id=#{member_id}

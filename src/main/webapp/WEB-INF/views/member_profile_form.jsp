@@ -81,7 +81,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="account-confirm-pass">비밀번호 재입력</label>
-                  <input class="form-control" type="password" name="member_pass">
+                  <input class="form-control" type="password" name="member_pass" id="member_pass">
                 </div>
               </div>
               <div class="col-12">
@@ -89,9 +89,9 @@
                 <div class="d-flex flex-wrap justify-content-between align-items-center">
                   <div class="custom-control custom-checkbox d-block">
                     <input class="custom-control-input" type="checkbox" id="subscribe_me" checked>
-                    <label class="custom-control-label" for="subscribe_me">Subscribe me to Newsletter</label>
+                    <label class="custom-control-label" for="subscribe_me">뉴스 소식 받기</label>
                   </div>
-                  <button class="btn btn-primary margin-right-none" type="submit" data-toast data-toast-position="topRight" data-toast-type="success" data-toast-icon="icon-circle-check" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Update Profile</button>
+                  <button class="btn btn-primary margin-right-none" type="submit" data-toast data-toast-position="topRight" data-toast-type="success" data-toast-icon="icon-circle-check" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">수정</button>
                 </div>
               </div>
            

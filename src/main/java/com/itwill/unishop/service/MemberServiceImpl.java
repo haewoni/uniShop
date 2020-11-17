@@ -72,7 +72,9 @@ public class MemberServiceImpl implements MemberService{
 
 		return memberRepository.deleteMember(member_id);
 	}
-
-
-
+	//아이디체크
+	@Override
+	public int isExistMember(String member_id) {
+		return memberRepository.isExistMember(member_id);
+	}
 }

@@ -1,10 +1,10 @@
 $(function() {
 	//event
 	$('#question_insert_button').click(function(e) {
-		alert('등록되었습니다');
 		document.openTicket.action = 'member_question_action';
 		document.openTicket.method = 'POST';
 		document.openTicket.submit();
+		alert('등록되었습니다.');
 		e.preventDefault();
 	});
 
@@ -42,26 +42,56 @@ $(function() {
 		});
 
 	});
+	$('#orderDetails').on('shown.bs.modal', function(e) {
+		delivery_no = $(e.relatedTarget).attr('delivery_no');
+		param = 'delivery_no=' + delivery_no
+		//alert(param)
+		$.ajax({
+			url: 'rest_jumun_delivery_detail',
+			data: param,
+			method: 'GET',
+			dataType: 'json',
+			success: function(delivery) {
+				console.log(delivery.delivery_fee);
+				$('#delivery_fee').html(delivery.delivery_fee);
+				$('#jumun_tot_price').html(parseInt($('#tot_price').text()) + parseInt($('#delivery_fee').text()));
+			}
+		});
 
-
-
-
-});
-$('#orderDetails').on('shown.bs.modal', function(e) {
-	delivery_no = $(e.relatedTarget).attr('delivery_no');
-	param = 'delivery_no=' + delivery_no
-	//alert(param)
-	$.ajax({
-		url: 'rest_jumun_delivery_detail',
-		data: param,
-		method: 'GET',
-		dataType: 'json',
-		success: function(delivery) {
-			console.log(delivery.delivery_fee);
-			$('#delivery_fee').html(delivery.delivery_fee);
-			$('#jumun_tot_price').html(parseInt($('#tot_price').text()) + parseInt($('#delivery_fee').text()));
-
-		}
 	});
-
+	$('#reg_member_id').blur(function(){
+		var member_id = $('#reg_member_id').val();
+		$.ajax({
+			url: 'member_isExistMember?member_id='+member_id,
+			type: 'GET',
+			success: function(data) {
+				console.log("1 = 중복O / 0 = 중복X: "+data);
+				if (data == 1) {
+					$("#id_check").text("중복된 아이디입니다.");
+					$("#id_check").css("color", "red");
+					$("#reg_submit").attr("disabled", true);
+				} else if(data == 0){
+					$("#id_check").text("사용 가능한 아이디입니다.");
+					$("#id_check").css("color", "red");
+					$("#reg_submit").attr("disabled", false);
+				}
+			}
+		});
+	});
+	$('#login_btn').on('click', function(){
+		alert('test');
+		$.ajax({
+			url: 'member_login_action',
+			type: 'POST',
+			success: function(data) {
+				if(data != "redirect:unishop_main"){
+					alert('올바르지 않은 정보입니다');
+					$("#password_check").text("올바르지 않은 정보입니다");
+					$("#password_check").css("color", "red");
+				}
+			}
+		});
+	});		
 });
+	
+
