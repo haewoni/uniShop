@@ -315,6 +315,14 @@ $(function() {
 
 
 
+	// jumun_address_form_action
+	$('#jumun_back_address_button').on('click', (function(e) {
+		$.ajax({
+			url: 'rest_jumun_address_action',
+			method: 'POST',
+			data: $('#jumun_address_form').serialize()
+		});
+	}));
 
 
 		// jumun_address <----- jumun_delivery 222222
@@ -384,7 +392,7 @@ $(function() {
 
 
 
-
+		
 
 
 		// jumun_address <----- jumun_delivery
@@ -514,6 +522,9 @@ $(function() {
 			});
 			e.preventDefault();
 		});
+		
+		
+		
 		
 		// jumun_delivery <----- jumun_payment
 		$(document).on('click', '#jumun_back_delivery_button', function(e) {
