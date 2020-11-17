@@ -119,12 +119,7 @@
 				  	
 			  	<button class="btn btn-outline-primary btn-sm add_wishlist_button" product_no="${product.product_no}" type="button">
                		<i class="icon-heart" product_no="${product.product_no}"></i>
-               	</button>
-				
-				<a href="shop_delete_wishlist_action?product_no=${product.product_no}">
-					<button class="btn btn-outline-primary btn-sm">DELETE FROM WISHLIST</button>
-				</a>
-				 
+               	</button>			 
 				 
 				<a  href="#">
 					<button id="rest_delete_wishlist_button" class="btn btn-outline-primary btn-sm" product_no="${product.product_no}" >DELETE FROM WISHLIST</button>

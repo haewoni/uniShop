@@ -35,18 +35,16 @@ $(function() {
 
 
 	$(document).on('submit', '#rest_shop_product_review_form', function(e) {
-		alert('start');
 		var product_no=$('#reviews_tab_a').attr('product_no')
 		$('#rest_shop_product_review_form #product_no').val(product_no);
 		params = $('#rest_shop_product_review_form').serializeArray();
-		console.log(params);
 		$.ajax({
 			url: 'rest_shop_product_review_action',
 			data: params,
 			method: 'POST',
 			success: function(data){
 			if (data.trim()==('true'))
-			alert('finish');
+				shop_detail_re("product_no="+product_no);
 			}
 		});
 		e.preventDefault();
@@ -60,8 +58,12 @@ $(function() {
 		product_no=$(e.relatedTarget).attr("product_no");
 		sMemberId=$(e.relatedTarget).attr("sMemberId");
 		
-		console.log(sMemberId);
 		param = 'product_no=' + product_no;
+		shop_detail_re(param);
+	
+	});
+	
+	function shop_detail_re(param){
 		$.ajax({
 			url: 'rest_shop_product_review_list',
 			data: param,
@@ -142,8 +144,7 @@ $(function() {
 
 			}
 		});
-
-	});
+	}
 
 });
 

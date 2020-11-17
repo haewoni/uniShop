@@ -77,21 +77,7 @@ $(function() {
 				}
 			}
 		});
-	});
-	$('#login_btn').on('click', function(){
-		alert('test');
-		$.ajax({
-			url: 'member_login_action',
-			type: 'POST',
-			success: function(data) {
-				if(data != "redirect:unishop_main"){
-					alert('올바르지 않은 정보입니다');
-					$("#password_check").text("올바르지 않은 정보입니다");
-					$("#password_check").css("color", "red");
-				}
-			}
-		});
-	});		
+	});	
 });
 	
 
