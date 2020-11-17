@@ -93,10 +93,11 @@ public class MemberController {
 
 	//회원가입 성공 => 로그인_등록 폼으로 이동
 	@RequestMapping(value="/member_register_action", method = RequestMethod.POST)
-	public String member_register_action(Model model, @ModelAttribute Member newMember, @RequestParam String member_pass) {
+	public String member_register_action(Model model,@RequestParam String reg_member_id, @ModelAttribute Member newMember, @RequestParam String member_pass) {
 		String forwardPath="";
 		try {
 			if(newMember.getMember_password().equals(member_pass)) {
+				newMember.setMember_id(reg_member_id);
 				memberService.insertMember(newMember);
 				forwardPath="redirect:member_login_register_form";
 			}else {
