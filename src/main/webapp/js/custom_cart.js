@@ -30,7 +30,10 @@ $(function() {
 
 });
 
-function Check(index, cartNo, memberId){
+/*
+function Check(index, cartNo){
+	
+	alert('function Check  '+index +"  "+ cartNo + "  "+ memberId);
 	
 	   var index = index;
        //$("#updateQty"+ index + " option:eq(0)").remove();
@@ -43,17 +46,15 @@ function Check(index, cartNo, memberId){
 			contentType: 'text',
 			success:function(msg) {
 				if (msg.trim() == 'true') {
-					window.location.href='cart_list?member_id='+memberId;
 					alert('수량변경 성공');
 				} else {
 					alert('수량변경 실패');
 				}
 			}
-		});
-	
+		});	
 }
 
-
+*/
 
 
 
