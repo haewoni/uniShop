@@ -11,7 +11,7 @@ $(function() {
 	
 
 
-
+/******************************* wishList 추가하기 *******************************/
 	$('.add_wishlist_button').click(function(e) {
 		console.log($(e.target).attr('product_no'));
 		product_no = $(e.target).attr('product_no')

@@ -118,12 +118,9 @@
               <div class="sp-buttons mt-2 mb-2">
 				 
               	<span>
-	              	<a href="shop_add_wishlist_action?product_no=${product.product_no}">
-						<button class="btn btn-outline-secondary btn-sm btn-wishlist"
-							data-toggle="tooltip" title="Whishlist">
-							<i class="icon-heart"></i>
-						</button>
-					</a>
+	              	<button class="btn btn-outline-primary btn-sm add_wishlist_button" product_no="${product.product_no}" type="button">
+                		<i class="icon-heart" product_no="${product.product_no}"></i>
+                	</button>
 				</span> 
 				<a href="shop_delete_wishlist_action?product_no=${product.product_no}">
 					<button class="btn btn-outline-primary btn-sm">DELETE FROM WISHLIST</button>

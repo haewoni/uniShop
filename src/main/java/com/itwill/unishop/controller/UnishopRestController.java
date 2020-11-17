@@ -158,7 +158,7 @@ public class UnishopRestController {
 	}
 
 	/*************** 체크아웃-배송 폼 *****************/
-	@RequestMapping(value = "rest_jumun_delivery_form", method = RequestMethod.POST)
+	@RequestMapping(value = "rest_jumun_delivery_form", method = RequestMethod.GET)
 	public String jumun_delivery_form() {
 		return "true";
 	}
@@ -167,15 +167,20 @@ public class UnishopRestController {
 	@RequestMapping(value = "/rest_jumun_delivery_action", method = RequestMethod.POST)
 	   public String jumun_delivery_action_POST(HttpSession session, @RequestParam String deliveryStr) {
 	      Jumun createJumun = new Jumun();
-	      if(deliveryStr.equalsIgnoreCase("일반")) {
-	         createJumun.setDelivery_no("GEN");
-	         session.setAttribute("delivery_fee", 3000);
-	      }else {
-	         createJumun.setDelivery_no("EX");
-	         session.setAttribute("delivery_fee", 6000);
-	      }
-	      System.out.println(createJumun);
-	      session.setAttribute("createJumun", createJumun);
+	      int delivery_fee = (int)session.getAttribute("delivery_fee");
+	       // 2. 일반 또는 특급 선택후, delivery_fee(배송비) set
+			if (deliveryStr.equalsIgnoreCase("일반")) {
+				createJumun.setDelivery_no("GEN");
+				session.setAttribute("delivery_fee", 3000);
+			} else {
+				createJumun.setDelivery_no("EX");
+				session.setAttribute("delivery_fee", 6000);
+			}
+	      
+	      System.out.println(createJumun); //test
+	      System.out.println("delivery fee = "+delivery_fee); //test
+	      
+	      session.setAttribute("createJumun", createJumun); 
 	      return "true";
 	   }
 	
@@ -188,10 +193,15 @@ public class UnishopRestController {
 	
 	/*************** 체크아웃- side bar 총금액 *****************/
 	@RequestMapping(value = "rest_jumun_sidebar")
-	public String jumun_sidebar(HttpSession session, Model model) {
-		int cart_subtotal = (int)session.getAttribute("cart_subtotal");
-		int delivery_fee = (int)session.getAttribute("delivery_fee");
-		return cart_subtotal+"-"+delivery_fee;
+	public String jumun_sidebar(HttpSession session) {
+		Integer cart_subtotal = (Integer)session.getAttribute("cart_subtotal");
+		Integer delivery_fee = (Integer)session.getAttribute("delivery_fee");
+		if(cart_subtotal!=0 && delivery_fee!=0 && cart_subtotal!=null && delivery_fee!=null ) {
+			return cart_subtotal+"-"+delivery_fee;
+		} else {
+			return cart_subtotal+"-"+0;
+		}
+		
 	}
 	
 	/*************** 체크아웃-결제카드 폼 액션 *****************/
@@ -218,7 +228,44 @@ public class UnishopRestController {
 	   }
 
 	
-	/**********위시리스트 추가***********/
+	
+	
+	@RequestMapping(value = "/rest_cart_update_action")
+	public String cart_update_action_get(Model model, HttpSession session, @RequestParam int cart_no, @RequestParam int cart_qty) {
+		String msg = " ";
+		String sMemberId = (String) session.getAttribute("sMemberId");
+
+		Cart updateCart = new Cart(cart_no, cart_qty, 1, "", "", "");
+		int update_Cartno = cartService.updateCart(updateCart);
+		if (update_Cartno == 1) {
+			msg = "true";
+		} else {
+			msg = "false";
+		}
+		return msg;
+	}
+
+	/**********위시리스트 삭제***********/
+	@RequestMapping("/rest_delete_wishlist_action")
+	public String shop_delete_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
+		String msg = " ";
+		try {
+			String sMemberId = (String) session.getAttribute("sMemberId");
+			int deleteCount = wishListService.deleteWishListById(sMemberId, product_no);
+			
+			System.out.println("deleteCount :"+deleteCount);
+			
+			if (deleteCount > 0) {
+				msg = "true";
+			} else {
+				msg = "false";
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return msg;
+	}
+	
 	@RequestMapping(value= "/shop_add_wishlist_action")
 	public String shop_add_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
 		String idCheck = "";
@@ -240,7 +287,8 @@ public class UnishopRestController {
 		}
 		return idCheck;
 	}
-	
-	
 
+
+
+	
 }
