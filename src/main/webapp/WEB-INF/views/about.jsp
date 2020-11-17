@@ -27,7 +27,10 @@
           <div class="col-md-7 text-md-left text-center">
             <div class="mt-30 hidden-md-up"></div>
             <h2>조장 이종호</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id purus at risus pellentesque faucibus a quis eros. In eu fermentum leo. Integer ut eros lacus. Proin ut accumsan leo. Morbi vitae est eget dolor consequat aliquam eget quis dolor. Mauris rutrum fermentum erat, at euismod lorem pharetra nec. Duis erat lectus, ultrices euismod sagittis at, pharetra eu nisl. Phasellus id ante at velit tincidunt hendrerit. Aenean dolor dolor, tristique nec placerat nec.</p><a class="text-medium text-decoration-none" href="shop-grid-ls.html">View Products&nbsp;<i class="icon-arrow-right"></i></a>
+            <p>세상 처음으로 완장 차본 조장.</p> 
+            <p>코인노래방 상당히 좋아함.</p> 
+            <p>그에게 코인노래방을 가자고 얘기할거라면 적어도 3000원은 준비를 해두자.</p> 
+            <p>담당업무: 회원가입/로그인, 회원정보 업데이트, 자잘한 환경설정, 스터디룸 예약, 응원</p>
           </div>
         </div>
         <hr>

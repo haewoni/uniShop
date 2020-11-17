@@ -56,7 +56,7 @@
             <div class="padding-top-2x mt-2 hidden-md-up"></div>
               <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star"></i>
               </div><span class="text-muted align-middle">&nbsp;&nbsp;4.2 | 3 customer reviews</span>
-            <h2 class="padding-top-1x text-normal">${product.product_name}, ${sMemberId}</h2>
+            <h2 class="padding-top-1x text-normal">${product.product_name}</h2>
             <span class="h2 d-block"><fmt:formatNumber value="${product.product_price}" pattern="###,###,###"/>원</span>
             <p>
             	${product.product_desc}
