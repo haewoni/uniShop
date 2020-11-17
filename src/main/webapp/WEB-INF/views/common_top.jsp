@@ -301,7 +301,7 @@
                 <li><c:choose><c:when test="${empty sMemberId}"><a href="member_login_register_form">장바구니</a></c:when><c:otherwise><a href="cart_list">장바구니</a></c:otherwise></c:choose></li>
             </ul>
           </li>
-          <li class="active"><c:choose><c:when test="${empty sMemberId}"><a href="member_login_register_form"><span>Account</span></a></c:when><c:otherwise><a href="member_profile_form"><span>Account</span></a></c:otherwise></c:choose>
+          <li><c:choose><c:when test="${empty sMemberId}"><a href="member_login_register_form"><span>Account</span></a></c:when><c:otherwise><a href="member_profile_form"><span>Account</span></a></c:otherwise></c:choose>
             <ul class="sub-menu">
                 <c:choose>
                 	<c:when test="${empty sMemberId}">
@@ -309,7 +309,7 @@
                 	</c:when>
                 	<c:otherwise>
                 		<li><a href="member_login_register_form">회원가입</a></li>
-                		<li class="active"><a href="member_jumun_list">주문 내역</a></li>
+                		<li><a href="member_jumun_list">주문 내역</a></li>
                 		<li><a href="member_wishlist_detail">찜 목록</a></li>
                 		<li><a href="member_profile_form">회원 정보</a></li>
                 		<li><a href="member_address_detail">회원 주소</a></li>
@@ -380,7 +380,7 @@
               <ul class="toolbar-dropdown">
               	<c:choose>
               		<c:when test="${empty sMemberId}">
-              			<li><a href="member_login_register_form">로그인</a></li>
+              			<li><a href="member_login_register_form">로그인 / 회원가입</a></li>
               		</c:when>
               		<c:otherwise>
 		                <li class="sub-menu-user">
