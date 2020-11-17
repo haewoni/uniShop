@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.itwill.unishop.domain.Cart;
 import com.itwill.unishop.domain.WishList;
 import com.itwill.unishop.service.MemberService;
 import com.itwill.unishop.service.WishListService;
@@ -23,16 +24,15 @@ public class WishlistController {
 	private WishListService wishListService;
 	//멤버 찜 리스트
 	@RequestMapping("/member_wishlist_detail")
-	public String member_wishlist(Model model, HttpSession session) {
+	public String member_wishlist(Model model, HttpSession session) throws Exception {
+		
+		System.out.println("member_wishlist_detail");
+		
 		String forwardPath="";
 		String sMemberId = (String) session.getAttribute("sMemberId");
-		try {
-			ArrayList<WishList> wishList = wishListService.selectWishListAll(sMemberId);
-			model.addAttribute("wishList", wishList);
-			forwardPath="member_wishlist_detail";
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		ArrayList<WishList> wishList = wishListService.selectWishListAll(sMemberId);
+		model.addAttribute("wishList", wishList);
+		forwardPath="member_wishlist_detail";
 		return forwardPath;
 	}
 	@RequestMapping("/member_wishlist_delete_one")
@@ -42,7 +42,7 @@ public class WishlistController {
 		model.addAttribute("product_no", product_no);
 		try {
 			wishListService.deleteWishListById(sMemberId, product_no);
-			forwardPath = "forward:member_wishlist_detail";
+			forwardPath = "redirect:member_wishlist_detail?member_id="+sMemberId;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -54,7 +54,7 @@ public class WishlistController {
 		String sMemberId = (String) session.getAttribute("sMemberId");
 		try {
 			wishListService.deleteWishListAll(sMemberId);
-			forwardPath = "member_wishlist_detail";
+			forwardPath = "redirect:member_wishlist_detail?member_id="+sMemberId;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

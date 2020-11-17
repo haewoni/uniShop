@@ -218,29 +218,44 @@ public class UnishopRestController {
 	   }
 
 	
-	/**********위시리스트 추가***********/
-	@RequestMapping(value= "/shop_add_wishlist_action")
-	public String shop_add_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
-		String idCheck = "";
-		//String member_id = "uni1"; //session.getId();
+	
+	
+	@RequestMapping(value = "/rest_cart_update_action")
+	public String cart_update_action_get(Model model, HttpSession session, @RequestParam int cart_no, @RequestParam int cart_qty) {
+		String msg = " ";
+		String sMemberId = (String) session.getAttribute("sMemberId");
+
+		Cart updateCart = new Cart(cart_no, cart_qty, 1, "", "", "");
+		int update_Cartno = cartService.updateCart(updateCart);
+		if (update_Cartno == 1) {
+			msg = "true";
+		} else {
+			msg = "false";
+		}
+		return msg;
+	}
+
+	/**********위시리스트 삭제***********/
+	@RequestMapping("/rest_delete_wishlist_action")
+	public String shop_delete_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
+		String msg = " ";
 		try {
 			String sMemberId = (String) session.getAttribute("sMemberId");
-			if(sMemberId == null || sMemberId == "") {
-				idCheck = "flase";
-			}
+			int deleteCount = wishListService.deleteWishListById(sMemberId, product_no);
 			
-			int duplicateCount = wishListService.inspectDuplicateWishList(sMemberId, product_no);
- 
-			if(duplicateCount==0) {
-				wishListService.insertWishList(new WishList(-1, sMemberId, product_no, null));
+			System.out.println("deleteCount :"+deleteCount);
+			
+			if (deleteCount > 0) {
+				msg = "true";
+			} else {
+				msg = "false";
 			}
-			idCheck = "true";
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return idCheck;
+		return msg;
 	}
 	
 	
-
+	
 }
