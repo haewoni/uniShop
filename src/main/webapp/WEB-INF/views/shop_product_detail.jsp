@@ -278,11 +278,9 @@
           </div>
           
          </c:forEach>
-
-      <!-- Site Footer-->
-
-      <jsp:include page="common_bottom.jsp"/>
 	</div>
+      <!-- Site Footer-->
+      <jsp:include page="common_bottom.jsp"/>
    </div>
     <!-- Photoswipe container-->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">

@@ -24,7 +24,7 @@ $(function() {
 				if(idCheck == "true"){
 					alert('추가되었습니다');
 					location.href = "shop_product_detail?product_no="+product_no;
-				}else if(idCheck == "false"){
+				}else{
 					alert('로그인 하세요!!')
 					location.href = "member_login_register_form";
 				}
