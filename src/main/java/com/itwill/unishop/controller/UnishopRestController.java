@@ -256,6 +256,29 @@ public class UnishopRestController {
 		return msg;
 	}
 	
-	
+	@RequestMapping(value= "/shop_add_wishlist_action")
+	public String shop_add_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
+		String idCheck = "";
+		//String member_id = "uni1"; //session.getId();
+		try {
+			String sMemberId = (String) session.getAttribute("sMemberId");
+			if(sMemberId == null || sMemberId == "") {
+				idCheck = "flase";
+			}
+			
+			int duplicateCount = wishListService.inspectDuplicateWishList(sMemberId, product_no);
+ 
+			if(duplicateCount==0) {
+				wishListService.insertWishList(new WishList(-1, sMemberId, product_no, null));
+			}
+			idCheck = "true";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return idCheck;
+	}
+
+
+
 	
 }

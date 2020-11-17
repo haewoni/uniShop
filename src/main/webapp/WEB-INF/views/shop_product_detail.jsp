@@ -17,7 +17,7 @@
               <li><a href="unishop_main">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li><a href="shop-grid-ls.html">Shop</a>
+              <li><a href="shop_main">Shop</a>
               </li>
               <li class="separator">&nbsp;</li>
               <li>Single Product</li>

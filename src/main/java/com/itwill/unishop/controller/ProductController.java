@@ -194,7 +194,7 @@ public class ProductController {
 	}
 	
 	
-	/**********위시리스트 추가***********/
+	/**********위시리스트 추가**********
 	@RequestMapping(value= "/shop_add_wishlist_action")
 	public String shop_add_wishlist_action(Model model, HttpSession session, @RequestParam String product_no) {
 		String forwardPath = "";
@@ -209,7 +209,7 @@ public class ProductController {
 			e.printStackTrace();
 		}
 		return forwardPath;
-	}
+	}*/
 
 
 	/*
