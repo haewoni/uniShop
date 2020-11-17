@@ -116,20 +116,15 @@
                 <div class="share-links"><a class="social-button shape-circle sb-facebook" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="socicon-facebook"></i></a><a class="social-button shape-circle sb-twitter" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="socicon-twitter"></i></a><a class="social-button shape-circle sb-instagram" href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="socicon-instagram"></i></a><a class="social-button shape-circle sb-google-plus" href="#" data-toggle="tooltip" data-placement="top" title="Google +"><i class="socicon-googleplus"></i></a></div>
               </div>
               <div class="sp-buttons mt-2 mb-2">
-				 
-              	<span>
-	              	<a href="shop_add_wishlist_action?product_no=${product.product_no}">
-						<button class="btn btn-outline-secondary btn-sm btn-wishlist"
-							data-toggle="tooltip" title="Whishlist">
-							<i class="icon-heart"></i>
-						</button>
-					</a>
-				</span>
-				<!--  
+				  	
+			  	<button class="btn btn-outline-primary btn-sm add_wishlist_button" product_no="${product.product_no}" type="button">
+               		<i class="icon-heart" product_no="${product.product_no}"></i>
+               	</button>
+				
 				<a href="shop_delete_wishlist_action?product_no=${product.product_no}">
 					<button class="btn btn-outline-primary btn-sm">DELETE FROM WISHLIST</button>
 				</a>
-				 -->
+				 
 				 
 				<a  href="#">
 					<button id="rest_delete_wishlist_button" class="btn btn-outline-primary btn-sm" product_no="${product.product_no}" >DELETE FROM WISHLIST</button>
