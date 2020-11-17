@@ -154,8 +154,10 @@ public class UnishopRestController {
 		loginMember.setMember_address2(member.getMember_address2());
 		session.setAttribute("loginMember", loginMember);
 		memberService.updateAddress(loginMember);
+		
 		return "true";
 	}
+	
 
 	/*************** 체크아웃-배송 폼 *****************/
 	@RequestMapping(value = "rest_jumun_delivery_form", method = RequestMethod.GET)
