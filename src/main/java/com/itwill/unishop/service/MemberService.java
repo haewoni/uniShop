@@ -24,6 +24,7 @@ public interface MemberService {
 	public int updateAddress(Member updateMember);
 	//회원 삭제
 	public int deleteMember(String member_id);
-	
+	//아이디 체크
+	public int isExistMember(String member_id);
 	
 }

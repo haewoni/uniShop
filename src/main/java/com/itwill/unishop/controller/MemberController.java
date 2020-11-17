@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.itwill.unishop.domain.Jumun;
 import com.itwill.unishop.domain.Jumun_Detail;
@@ -236,5 +237,10 @@ public class MemberController {
 		return "error_handle";
 	}
 	 */
-
+	//아이디 체크
+	@RequestMapping(value="/member_isExistMember", method=RequestMethod.GET)
+	@ResponseBody
+	public int member_isExistMember(@RequestParam String member_id) {
+		return memberService.isExistMember(member_id);
+	}
 }
