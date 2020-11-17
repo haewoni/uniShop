@@ -158,7 +158,7 @@ public class UnishopRestController {
 	}
 
 	/*************** 체크아웃-배송 폼 *****************/
-	@RequestMapping(value = "rest_jumun_delivery_form", method = RequestMethod.POST)
+	@RequestMapping(value = "rest_jumun_delivery_form", method = RequestMethod.GET)
 	public String jumun_delivery_form() {
 		return "true";
 	}
@@ -167,15 +167,20 @@ public class UnishopRestController {
 	@RequestMapping(value = "/rest_jumun_delivery_action", method = RequestMethod.POST)
 	   public String jumun_delivery_action_POST(HttpSession session, @RequestParam String deliveryStr) {
 	      Jumun createJumun = new Jumun();
-	      if(deliveryStr.equalsIgnoreCase("일반")) {
-	         createJumun.setDelivery_no("GEN");
-	         session.setAttribute("delivery_fee", 3000);
-	      }else {
-	         createJumun.setDelivery_no("EX");
-	         session.setAttribute("delivery_fee", 6000);
-	      }
-	      System.out.println(createJumun);
-	      session.setAttribute("createJumun", createJumun);
+	      int delivery_fee = (int)session.getAttribute("delivery_fee");
+	       // 2. 일반 또는 특급 선택후, delivery_fee(배송비) set
+			if (deliveryStr.equalsIgnoreCase("일반")) {
+				createJumun.setDelivery_no("GEN");
+				session.setAttribute("delivery_fee", 3000);
+			} else {
+				createJumun.setDelivery_no("EX");
+				session.setAttribute("delivery_fee", 6000);
+			}
+	      
+	      System.out.println(createJumun); //test
+	      System.out.println("delivery fee = "+delivery_fee); //test
+	      
+	      session.setAttribute("createJumun", createJumun); 
 	      return "true";
 	   }
 	
@@ -188,10 +193,15 @@ public class UnishopRestController {
 	
 	/*************** 체크아웃- side bar 총금액 *****************/
 	@RequestMapping(value = "rest_jumun_sidebar")
-	public String jumun_sidebar(HttpSession session, Model model) {
-		int cart_subtotal = (int)session.getAttribute("cart_subtotal");
-		int delivery_fee = (int)session.getAttribute("delivery_fee");
-		return cart_subtotal+"-"+delivery_fee;
+	public String jumun_sidebar(HttpSession session) {
+		Integer cart_subtotal = (Integer)session.getAttribute("cart_subtotal");
+		Integer delivery_fee = (Integer)session.getAttribute("delivery_fee");
+		if(cart_subtotal!=0 && delivery_fee!=0 && cart_subtotal!=null && delivery_fee!=null ) {
+			return cart_subtotal+"-"+delivery_fee;
+		} else {
+			return cart_subtotal+"-"+0;
+		}
+		
 	}
 	
 	/*************** 체크아웃-결제카드 폼 액션 *****************/

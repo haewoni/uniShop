@@ -25,6 +25,7 @@
     <link rel="stylesheet" media="screen" href="css/vendor.min.css">
     <!-- Main Template Styles-->
     <link id="mainStyles" rel="stylesheet" media="screen" href="css/styles.min.css">
+    <link  rel="stylesheet" media="screen" href="css/main.css">
     <!-- Modernizr-->
     <script src="js/modernizr.min.js"></script>
   </head>
