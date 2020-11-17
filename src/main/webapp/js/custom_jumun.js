@@ -114,7 +114,7 @@ $(function() {
 				html += "    </table>";
 				html += "   </div>";
 				html += "   <div class=\"checkout-footer margin-top-1x\">";
-				html += "     <div class=\"column\"><a id=\"jumun_address_back_button\" class=\"btn btn-outline-secondary\" href=\"#\"><i class=\"icon-arrow-left\"></i><span class=\"hidden-xs-down\">&nbsp;Back</span></a></div>";
+				html += "     <div class=\"column\"><a id=\"jumun_cancel_button\" class=\"btn btn-outline-secondary\" href=\"#\"></i><span class=\"hidden-xs-down\">&nbsp;주문취소</span></a></div>";
 				html += "     <div class=\"column\"><a id=\"jumun_payment_button\" class=\"btn btn-primary\" href=\"#\"><span class=\"hidden-xs-down\">계속&nbsp;</span><i class=\"icon-arrow-right\"></i></a></div>";
 				html += "   </div>";
 				html += "  </form>";
@@ -474,11 +474,16 @@ $(function() {
 			e.preventDefault();
 		});
 		
+// 주문 취소 버튼
+$(document).on('click', '#jumun_cancel_button', function(e) {
+	if(confirm('주문을 취소하겠습니까?')) {
+		location.href='unishop_main';
+	}else{
 		
-		
-		
-		
-		
+	}
+	
+});
+
 		
 		
 		
