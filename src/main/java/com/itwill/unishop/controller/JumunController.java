@@ -38,7 +38,9 @@ public class JumunController {
 	 * checkout(jumun) address 입력 폼
 	 */
 	@RequestMapping("/jumun_address_form")
-	public String jumun_address_form() {
+	public String jumun_address_form(HttpSession session) {
+		int delivery_fee=0;
+		session.setAttribute("delivery_fee", delivery_fee);
 		return "jumun_address_form";
 	}
 
@@ -190,7 +192,13 @@ public class JumunController {
 			jumun_Detail.setJumun_d_product_size(cartItem.getCart_product_size());
 			jumun_DetailService.insertJumunDetail(jumun_Detail);
 		}
-		forwardPath = "jumun_complete_form";
+		//5. 사용한 세션 삭제
+		session.removeAttribute("cartList");
+		session.removeAttribute("cart_subtotal");
+		session.removeAttribute("delivery_fee");
+		session.removeAttribute("createJumun");
+		
+		forwardPath = "forward:jumun_complete_form";
 		return forwardPath;
 	}
 
