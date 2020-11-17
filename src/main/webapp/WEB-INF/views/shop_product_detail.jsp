@@ -124,11 +124,17 @@
 							<i class="icon-heart"></i>
 						</button>
 					</a>
-				</span> 
+				</span>
+				<!--  
 				<a href="shop_delete_wishlist_action?product_no=${product.product_no}">
 					<button class="btn btn-outline-primary btn-sm">DELETE FROM WISHLIST</button>
 				</a>
-
+				 -->
+				 
+				<a  href="#">
+					<button id="rest_delete_wishlist_button" class="btn btn-outline-primary btn-sm" product_no="${product.product_no}" >DELETE FROM WISHLIST</button>
+				</a>
+				 
 				<a  href="#">
 					<button id="rest_add_cart_button" class="btn btn-outline-primary btn-sm" product_no="${product.product_no}" >Add to Cart</button>
 				</a>
@@ -321,6 +327,7 @@
     <script src="js/scripts.min.js"></script>
     <script src="js/custom_cart.js"></script>
     <script src="js/custom_product.js"></script>
+    <script src="js/custom_wishlist.js"></script>
 
   </body>
 </html>

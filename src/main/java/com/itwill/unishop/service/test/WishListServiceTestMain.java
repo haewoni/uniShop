@@ -13,16 +13,17 @@ public class WishListServiceTestMain {
 	public static void main(String[] args) throws Exception {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring/application-config.xml");
 		WishListService wishListService = (WishListService)applicationContext.getBean("wishListServiceImpl");
-		//ArrayList<WishList> wishList = wishListService.selectWishListAll("uni3");
+		
+		//ArrayList<WishList> wishList = wishListService.selectWishListAll("uni2");
 		//System.out.println(wishList);
 				
 
 		//System.out.println(wishListService.insertWishList(new WishList(6, "uni3", "425415", null)));
 
-		System.out.println(wishListService.insertWishList(new WishList(4, "uni3", "425415", null)));
+		//System.out.println(wishListService.insertWishList(new WishList(4, "uni3", "425415", null)));
 
 		
-		//System.out.println(wishListService.deleteWishListById("uni4", "429290"));
+		System.out.println(wishListService.deleteWishListById("uni4", "429290"));
 		
 		//System.out.println(wishListService.deleteWishListAll("uni3"));
 

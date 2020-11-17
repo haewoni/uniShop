@@ -8,7 +8,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page import="java.text.DecimalFormat"%>
 <%@ include file="login_check.jspf" %>  
-<<script type="text/javascript">
+<!-- <script type="text/javascript">
     function Check(index, cartNo){
 	   var index = index;
 	   var qty = $("#updateQty"+ index + " option:selected").val();
@@ -16,6 +16,7 @@
 	   location.href='cart_update_action_get?'+params;      
         }
 </script>
+ -->
 
 
 	<jsp:include page="common_top.jsp"/>
@@ -79,7 +80,10 @@
 
                  <td class="text-center">
                   <div class="count-input">
-	                 <select name="cart_qty" id="updateQty${status.index}" class="form-control" onchange="Check(${status.index}, ${cart.cart_no})">
+                  
+                  <a  href="#">
+	                 <select name="cart_qty" id="updateQty${status.index}" class="form-control"  
+	                          onchange="Check(${status.index}, ${cart.cart_no},'${cart.member_id}')" >
 					    <option value="${cart.cart_qty}" selected="selected">${cart.cart_qty}</option>
 					    <option value="1">1</option>
 					    <option value="2">2</option>
@@ -92,6 +96,8 @@
 					    <option value="9">9</option>
 					    <option value="10">10</option>
 					  </select>
+                  </a>
+                  
                   </div>
                  </td>
                 <td class="text-center text-lg text-medium"><fmt:formatNumber value="${cart.cart_tot_price}" pattern="###,###,###"/>원</td>
