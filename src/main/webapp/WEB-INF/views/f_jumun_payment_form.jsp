@@ -41,7 +41,7 @@
               </div>
             </div>
             <div class="checkout-footer margin-top-1x">
-              <div class="column"><a id="jumun_back_delivery_button" class="btn btn-outline-secondary" href="#"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;뒤로 가기</span></a></div>
+              <div class="column"><a id="jumun_cancel_button" class="btn btn-outline-secondary" href="#"></i><span class="hidden-xs-down">&nbsp;주문취소</span></a></div>
               <div class="column"><a id="jumun_review_button" class="btn btn-primary"  href="#"><span class="hidden-xs-down">다음&nbsp;</span><i class="icon-arrow-right"></i></a></div>
             
             </div>

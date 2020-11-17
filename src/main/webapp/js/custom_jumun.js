@@ -1,5 +1,5 @@
 $(function() {
-/********************** 3. jumun_payment ----> jumun_review *************************/
+	/********************** 3. jumun_payment ----> jumun_review *************************/
 	$(document).on('click', '#jumun_review_button', function(e) {
 		$.ajax({
 			url: 'rest_jumun_payment_action',
@@ -13,12 +13,12 @@ $(function() {
 						$('#check_out_display').html(html);
 					}
 				});
-			 }
+			}
 		});
 	});
 
 
-/********************** 2. jumun_delivery ----> jumun_payment /  & sidebar(합계금액) 작업 *************************/
+	/********************** 2. jumun_delivery ----> jumun_payment /  & sidebar(합계금액) 작업 *************************/
 	$(document).on('click', '#jumun_payment_button', function(e) {
 		console.log('jumun_delivery ---->jumun_delivery action');
 		$.ajax({
@@ -37,7 +37,7 @@ $(function() {
 			success: function(html) {
 				$('#check_out_display').html(html);
 				console.log('jumun_delivery ---->f_jumun_payment_form success');
-				
+
 				$.ajax({
 					url: 'rest_jumun_sidebar',
 					method: 'GET',
@@ -54,7 +54,7 @@ $(function() {
 	});
 
 
-/********************** 1. jumun_address----> jumun_delivery ****************************/
+	/********************** 1. jumun_address----> jumun_delivery ****************************/
 	$('#jumun_address_action_button').on('click', (function(e) {
 		$.ajax({
 			url: 'rest_jumun_address_action',
@@ -114,7 +114,7 @@ $(function() {
 				html += "    </table>";
 				html += "   </div>";
 				html += "   <div class=\"checkout-footer margin-top-1x\">";
-				html += "     <div class=\"column\"><a id=\"jumun_address_back_button\" class=\"btn btn-outline-secondary\" href=\"#\"><i class=\"icon-arrow-left\"></i><span class=\"hidden-xs-down\">&nbsp;Back</span></a></div>";
+				html += "     <div class=\"column\"><a id=\"jumun_cancel_button\" class=\"btn btn-outline-secondary\" href=\"#\"></i><span class=\"hidden-xs-down\">&nbsp;주문취소</span></a></div>";
 				html += "     <div class=\"column\"><a id=\"jumun_payment_button\" class=\"btn btn-primary\" href=\"#\"><span class=\"hidden-xs-down\">계속&nbsp;</span><i class=\"icon-arrow-right\"></i></a></div>";
 				html += "   </div>";
 				html += "  </form>";
@@ -136,7 +136,7 @@ $(function() {
 
 
 
-		
+
 
 /*
 		// jumun_address <----- jumun_delivery
@@ -407,14 +407,18 @@ $(function() {
 
 			e.preventDefault();
 		});
-		
-		
 */
-		
-		
-		
-		
-		
-		
-		
-		
+// 주문 취소 버튼
+$(document).on('click', '#jumun_cancel_button', function(e) {
+	if (confirm('주문을 취소하겠습니까?')) {
+		location.href = 'unishop_main';
+	} else {
+
+	}
+});
+
+
+
+
+
+
