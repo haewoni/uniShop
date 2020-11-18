@@ -401,7 +401,7 @@
             <c:choose><c:when test="${empty sMemberId}"><a href="member_login_register_form"></a></c:when>
             <c:otherwise>
             <div class="cart"><a href="cart_list"></a><i class="icon-bag"></i><span class="count"></span><span class="subtotal" id="subtotal">${cart_subtotal}</span>
-              <div class="toolbar-dropdown">
+              <div class="toolbar-dropdown" id = "cart_drop_down">
               <c:forEach items="${cartList}" 
 							var="cart"  
 							begin="0"  
@@ -409,12 +409,12 @@
 							end="${cartList.size()}"
 							varStatus="status">
                 <div class="dropdown-product-item"><span class="dropdown-product-remove"><i class="icon-cross"></i></span><a class="dropdown-product-thumb" href="shop_product_detail?product_no=${cart.product_no}"><img src="IMAGE/${cart.product_image_1}" alt="Product"></a>
-                  <div class="dropdown-product-info"><a class="dropdown-product-title" href="shop_product_detail?product_no=${cart.product_no}">${cart.product_name}</a><span class="dropdown-product-details">${cart.cart_qty} x ${cart.cart_tot_price}</span></div>
+                  <div class="dropdown-product-info"><a class="dropdown-product-title" href="shop_product_detail?product_no=${cart.product_no}">${cart.product_name}</a><span id="cart_qty_tot_price" class="dropdown-product-details">${cart.cart_qty} x ${cart.cart_tot_price}</span></div>
                 </div>
              </c:forEach>
                 <div class="toolbar-dropdown-group">
                   <div class="column"><span class="text-lg">Total:</span></div>
-                  <div class="column text-right"><span class="text-lg text-medium">${cart_subtotal} &nbsp;</span></div>
+                  <div class="column text-right"><span class="text-lg text-medium" id=subtotal_dropdown>${cart_subtotal} &nbsp;</span></div>
                 </div>
                 <div class="toolbar-dropdown-group">
                   <div class="column"><a class="btn btn-sm btn-block btn-secondary" href="cart_list">장바구니</a></div>
