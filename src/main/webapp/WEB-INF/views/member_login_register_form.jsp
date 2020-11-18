@@ -14,7 +14,7 @@
               <li><a href="unishop_main">Home</a>
               </li>
               <li class="separator">&nbsp;</li>
-              <li><a href="account-orders.html">계정</a>
+              <li><a href="member_profile_form">계정</a>
               </li>
               <li class="separator">&nbsp;</li>
               <li>로그인 / 회원가입</li>
@@ -94,7 +94,8 @@
                 </div>
               </div>
               <div class="col-12 text-center text-sm-right">
-                <button class="btn btn-primary margin-bottom-none" id="reg_submit" type="submit">회원가입</button>
+                <button class="btn btn-primary margin-bottom-none" name="reg_submit" id="reg_submit" type="submit">회원가입</button>
+                
               </div>
             </form>
           </div>
@@ -110,5 +111,6 @@
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
     <script src="js/custom_member.js"></script>
+    <script src="js/common.js"></script>
   </body>
 </html>
