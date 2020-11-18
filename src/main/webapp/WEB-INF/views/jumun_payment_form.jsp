@@ -56,7 +56,7 @@
                         <input class="form-control" type="text" name="card_cvc"  placeholder="CVC" required>
                       </div>
                   		<div class="col-sm-6">
-						<button class="btn btn-outline-primary btn-block margin-top-none" type="submit">clear</button>
+						<button class="btn btn-outline-primary btn-block margin-top-none" type="button" id="jumun_payment_form_reset_button">clear</button>
                       </div>
                     </form>
                   </div>
