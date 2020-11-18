@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 $(function() {
 	$('#rest_add_cart_button').click(function(e) {
 		product_no = $(e.target).attr('product_no');
@@ -20,9 +18,21 @@ $(function() {
 			success:function(msg) {
 				if (msg.trim() == 'true') {
 					alert('카드담기성공');
+					////common_top 변경
+					$.ajax({
+					url: 'rest_cart_common_top',
+					method: 'GET',
+					success: function(html) {
+						var resultStr = html.trim().split('-');
+						$(subtotal).html(resultStr[0]);
+						console.log('subtotal update 완료'+resultStr[0]);  //test
+					}
+				});
 				} else {
 					alert('카드담기실패');
 				}
+		
+				
 			}
 		});
 	});

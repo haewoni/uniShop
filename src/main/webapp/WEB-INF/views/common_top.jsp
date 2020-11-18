@@ -400,7 +400,7 @@
             </div>
             <c:choose><c:when test="${empty sMemberId}"><a href="member_login_register_form"></a></c:when>
             <c:otherwise>
-            <div class="cart"><a href="cart_list"></a><i class="icon-bag"></i><span class="count"></span><span class="subtotal">${cart_subtotal}</span>
+            <div class="cart"><a href="cart_list"></a><i class="icon-bag"></i><span class="count"></span><span class="subtotal" id="subtotal">${cart_subtotal}</span>
               <div class="toolbar-dropdown">
               <c:forEach items="${cartList}" 
 							var="cart"  
