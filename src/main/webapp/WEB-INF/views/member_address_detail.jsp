@@ -62,7 +62,7 @@
                   <select class="form-control" name="member_address_country">
                     <option>국가 선택</option>
                     <c:choose><c:when test="${empty loginMember.member_address_country}"><option selected>대한민국</option></c:when><c:otherwise><option selected>${loginMember.member_address_country}</option></c:otherwise></c:choose>
-                    <option>캐나다</option>
+                    <option>대한민국</option>
                     <option>프랑스</option>
                     <option>독일</option>
                     <option>미국</option>
@@ -110,7 +110,7 @@
                 </div>
                 <hr class="margin-top-1x margin-bottom-1x">
                 <div class="text-right">
-                  <button class="btn btn-primary margin-bottom-none" type="submit" data-toast data-toast-position="topRight" data-toast-type="success" data-toast-icon="icon-circle-check" data-toast-title="Success!" data-toast-message="Your address updated successfuly.">Update Address</button>
+                  <button class="btn btn-primary margin-bottom-none" type="submit" name="address_btn" id="address_btn" data-toast data-toast-position="topRight" data-toast-type="success" data-toast-icon="icon-circle-check" data-toast-title="Success!" data-toast-message="Your address updated successfuly.">수정</button>
                 </div>
               </div>
             </form>
@@ -126,5 +126,6 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/common.js"></script>
   </body>
 </html>
