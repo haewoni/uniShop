@@ -1,4 +1,3 @@
-
 function question_insert_action() {
    document.member_question_list.action='member_question_action';
    document.member_question_list.method='POST';
@@ -66,9 +65,15 @@ function login() {
       return;
       }
    }
-   
-   
+/**********************메시지**************************/
+ 	$('#reg_submit').click(function(){
+		alert('회원가입 되었습니다.');
+	});
 
-
-
-
+	$('#update_btn').click(function(){
+		alert('업데이트 되었습니다.');
+	});
+	
+	$('#address_btn').click(function(){
+		alert('업데이트 되었습니다.');
+	});

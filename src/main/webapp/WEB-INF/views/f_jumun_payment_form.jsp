@@ -21,7 +21,7 @@
                     <div class="card-wrapper"></div>
                     <form class="interactive-credit-card row"  id="jumun_payment_form" name="jumun_payment_form" >
                       <div class="form-group col-sm-6">
-                        <input class="form-control" type="text" name="card_no"  placeholder="card_no" required>
+                        <input class="form-control" type="text" name="card_no"  placeholder="card_no" id="card_no" required>
                       </div>
                       <div class="form-group col-sm-6">
                         <input class="form-control" type="text" name="card_member_name"  placeholder="name" required>
@@ -33,7 +33,7 @@
                         <input class="form-control" type="text" name="card_cvc"  placeholder="CVC" required>
                       </div>
                   		<div class="col-sm-6">
-						<button class="btn btn-outline-primary btn-block margin-top-none" type="submit">clear</button>
+						<button class="btn btn-outline-primary btn-block margin-top-none" type="button" id="jumun_payment_form_reset_button">clear</button>
                       </div>
                     </form>
                   </div>

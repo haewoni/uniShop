@@ -1,4 +1,11 @@
 $(function() {
+	
+	/********************** jumun_payment_form 리셋버튼*************************/
+	$(document).on('click','#jumun_payment_form_reset_button',function(e){
+		$('#jumun_payment_form')[0].reset();
+		$('#jumun_payment_form #card_no').focus();
+	});
+	
 	/********************** 3. jumun_payment ----> jumun_review *************************/
 	$(document).on('click', '#jumun_review_button', function(e) {
 		$.ajax({

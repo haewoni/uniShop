@@ -91,7 +91,7 @@
                     <input class="custom-control-input" type="checkbox" id="subscribe_me" checked>
                     <label class="custom-control-label" for="subscribe_me">뉴스 소식 받기</label>
                   </div>
-                  <button class="btn btn-primary margin-right-none" type="submit" data-toast data-toast-position="topRight" data-toast-type="success" data-toast-icon="icon-circle-check" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">수정</button>
+                  <button class="btn btn-primary margin-right-none" type="submit" name="update_btn" id="update_btn" data-toast data-toast-position="topRight" data-toast-type="success" data-toast-icon="icon-circle-check" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">수정</button>
                 </div>
               </div>
            
@@ -108,5 +108,6 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/common.js"></script>
   </body>
 </html>
