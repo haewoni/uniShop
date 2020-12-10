@@ -9,7 +9,6 @@
 
 ## 사용 예제
 
-![Unishop](https://user-images.githubusercontent.com/66353700/101789906-2f765b00-3b45-11eb-98cd-a3d999a2850c.gif)
 ![](UniShop.gif)
 
 
