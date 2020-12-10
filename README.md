@@ -9,9 +9,8 @@
 
 ## 사용 예제
 
-스크린 샷과 코드 예제를 통해 사용 방법을 자세히 설명합니다.
+![Unishop](https://user-images.githubusercontent.com/66353700/101789906-2f765b00-3b45-11eb-98cd-a3d999a2850c.gif)
 
-_더 많은 예제와 사용법은 [Wiki][wiki]를 참고하세요._
 
 ## 개발 환경 설정
 
