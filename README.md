@@ -1,7 +1,9 @@
+![logo](https://user-images.githubusercontent.com/66353700/101781894-b8889480-3b3b-11eb-8264-fac2b257292d.png)
+
 # uniShop
 
 > 의류 쇼핑몰 구축 프로젝트입니다
-![logo](https://user-images.githubusercontent.com/66353700/101781894-b8889480-3b3b-11eb-8264-fac2b257292d.png)
+
 
 프로젝트 소개--------
 
