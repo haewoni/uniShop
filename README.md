@@ -2,10 +2,6 @@
 
 > 의류 쇼핑몰 구축 프로젝트입니다
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
 프로젝트 소개--------
 
 ![](../header.png)
