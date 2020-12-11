@@ -23,11 +23,12 @@
 * 프론트: HTML, JS, JQUERY, AJAX
 
 
-## 구현 기능
+## 담당 기능
 
 * 주문(checkout) 서비스 구현
 * 주소입력, 배송방식, 카드정보입력, 주문확인 페이지
 * RestController, Ajax 이용한 비동기 통신 페이지 구현 - Product 추가시 common_top 가격 반영 & 주문 Process 
 * 제품(Product) 페이지 카트&찜 추가 기능
+* DB 관리
 
 
