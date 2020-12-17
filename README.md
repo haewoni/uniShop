@@ -18,6 +18,7 @@
 
 * 언어: JAVA, JSP
 * 개발툴: Eclipse, JDK 1.8
+* 빌드툴: Maven
 * DB: Oracle 19.2.1
 * 서버: Tomcat 9.0
 * 프레임워크: Spring Framework 4.3.16
