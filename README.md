@@ -11,6 +11,10 @@
 
 ## 사용 예제
 
+> 2021-21-22: AWS EC2 인스턴스로 배포
+
+http://3.35.150.132:8080/unishop/unishop_main
+
 ![](UniShop.gif)
 
 
