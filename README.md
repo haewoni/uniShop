@@ -37,5 +37,5 @@ http://3.35.150.132:8080/unishop/unishop_main
 * RestController, Ajax 이용한 비동기 통신 페이지 구현 - Product 추가시 common_top 가격 반영 & 주문 Process 
 * 제품(Product) 페이지 카트&찜 추가 기능
 * DB 관리
-
+* AWS - EC2 프로젝트 옮기기 및 배포
 
