@@ -23,8 +23,8 @@ http://3.35.150.132:8080/unishop/unishop_main
 * 언어: JAVA, JSP
 * 개발툴: Eclipse, JDK 1.8
 * 빌드툴: Maven
-* DB: Oracle 12.1.0.2 /ec2 ubuntu - Oracle xe 11
-* 서버: Tomcat 9.0
+* DB: Oracle 12.1.0.2 / ec2 ubuntu - Oracle xe 11
+* 서버: Tomcat 9.0 / e2 ubuntu - Tomcat 8.0
 * 프레임워크: Spring Framework 4.3.16
 * 형상관리: Git
 * 프론트: HTML, JS, JQUERY, AJAX
